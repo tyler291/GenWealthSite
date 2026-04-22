@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generational Wealth Trading Group</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --gold:#d6a83e;
+    --blue:#2563eb;
+    --bg:#070a12;
+}
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:var(--bg);
+    color:#e5e7eb;
+}
+
+/* TOP TICKER BAR */
+.ticker{
+    width:100%;
+    overflow:hidden;
+    background:rgba(8,12,20,0.98);
+    border-bottom:1px solid rgba(214,168,62,0.25);
+    position:fixed;
+    top:0;
+    z-index:999;
+    padding:0;              /* important fix */
+    height:42px;           /* fixed bar height = no clipping */
+    display:flex;
+    align-items:center;
+    backdrop-filter:blur(14px);
+}
+
+/* moving tape */
+.ticker-track{
+    display:flex;
+    align-items:center;
+    gap:110px; /* institutional spacing */
+    width:max-content;
+    padding-left:100%;
+    animation:scroll 55s linear infinite; /* slower = Bloomberg feel */
+}
+
+/* ticker item */
+.ticker-track span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    white-space:nowrap;
+    color:#e5e7eb;
+}
+
+/* symbol emphasis */
+.ticker-track .symbol{
+    color:#ffffff;
+    opacity:0.9;
+    font-weight:700;
+}
+
+/* price */
+.ticker-track .price{
+    color:#cbd5e1;
+}
+
+/* up/down colors */
+.up{
+    color:#22c55e !important;
+    font-weight:700;
+}
+
+.down{
+    color:#ef4444 !important;
+    font-weight:700;
+}
+
+/* smooth loop */
+@keyframes scroll{
+    0% { transform:translateX(0); }
+    100% { transform:translateX(-50%); }
+}
+
+.ticker-track{
+    opacity:0;
+    transition:opacity 0.4s ease;
+}
+
+.ticker-track.active{
+    opacity:1;
+}
+
+.ticker-track{
+    display:flex;
+    align-items:center;
+    gap:110px;
+    width:max-content;
+    padding-left:100%;
+    animation:scroll 55s linear infinite;
+    opacity:0;
+    transition:opacity 0.4s ease;
+    height:42px;
+}
+
+.ticker-track.active{
+    opacity:1;
+}
+
+/* PUSH CONTENT BELOW FIXED BAR */
+.hero{
+    padding:140px 20px 70px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:900px;
+    margin:18px auto;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+/* BUTTONS */
+.btn-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.btn{
+    padding:14px 26px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.25s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.gold{
+    background:var(--gold);
+    color:#111;
+}
+
+.gold:hover{
+    background:#f1c04c;
+}
+
+.blue{
+    background:var(--blue);
+    color:#fff;
+}
+
+.blue:hover{
+    background:#1d4ed8;
+}
+
+/* LAYOUT */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.section{
+    margin-bottom:70px;
+}
+
+.section h2{
+    font-size:34px;
+    margin-bottom:20px;
+    color:var(--gold);
+}
+
+/* DISCORD TEXT */
+.discord-info{
+    text-align:center;
+    font-size:19px;
+    color:#cbd5e1;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+/* STEPS */
+.steps{
+    background:#0f172a;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid rgba(214,168,62,0.2);
+}
+
+.steps ol{
+    list-style:none;
+    counter-reset:step;
+}
+
+.steps li{
+    counter-increment:step;
+    margin-bottom:12px;
+    padding:12px 14px;
+    background:rgba(255,255,255,0.03);
+    border-radius:10px;
+    padding-left:45px;
+    position:relative;
+}
+
+.steps li::before{
+    content:counter(step);
+    position:absolute;
+    left:12px;
+    top:50%;
+    transform:translateY(-50%);
+    width:24px;
+    height:24px;
+    background:var(--gold);
+    color:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:6px;
+    font-weight:800;
+}
+
+/* CENTER TEXT */
+.center{
+    text-align:center;
+    color:#cbd5e1;
+    margin-top:20px;
+}
+
+/* CARDS */
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#0f172a;
+    padding:25px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    background:#0b1220;
+    padding:30px;
+    border-radius:18px;
+    font-size:14px;
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px 20px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.05);
+    margin-top:40px;
+}
+</style>
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const API_KEY = "d7kfpjpr01qiqbcu7b50d7kfpjpr01qiqbcu7b5g";
+
+const symbols = [
+  { label: "USO", symbol: "USO", type: "etf" },
+  { label: "SPY", symbol: "SPY", type: "etf" },
+  { label: "QQQ", symbol: "QQQ", type: "etf" },
+  { label: "DOW", symbol: "DIA", type: "etf" },
+  { label: "AAPL", symbol: "AAPL", type: "etf" },
+  { label: "MSFT", symbol: "MSFT", type: "etf" },
+  { label: "AMZN", symbol: "AMZN", type: "etf" },
+  { label: "BTC/USD", symbol: "BINANCE:BTCUSDT", type: "crypto" }
+];
+
+async function fetchQuote(symbol){
+  const url = `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${API_KEY}`;
+  const res = await fetch(url);
+  return await res.json();
+}
+
+function safe(n){
+  return (typeof n === "number" && !isNaN(n)) ? n : 0;
+}
+
+function format(change){
+  return `${change >= 0 ? "+" : ""}${Math.abs(change).toFixed(2)}%`;
+}
+
+async function updateTicker(){
+  const track = document.getElementById("tickerTrack");
+  const loading = document.getElementById("tickerLoading");
+
+  let html = "";
+
+  for(const item of symbols){
+    try{
+      const data = await fetchQuote(item.symbol);
+
+      const price = safe(data.c);
+      const prev = safe(data.pc);
+
+      if(!price || !prev) continue;
+
+      const change = ((price - prev) / prev) * 100;
+      const isUp = change >= 0;
+
+      html += `
+        <span>
+          <span class="symbol">${item.label}</span>
+          <span class="price">${price.toFixed(2)}</span>
+          <span class="${isUp ? "up" : "down"}">
+            ${isUp ? "▲" : "▼"} ${Math.abs(change).toFixed(2)}%
+          </span>
+        </span>
+      `;
+
+    } catch(e){
+      html += `<span>${item.label} --</span>`;
+    }
+  }
+
+  track.innerHTML = html + html;
+
+  /* FIRST LOAD TRANSITION */
+  if(loading){
+    loading.style.display = "none";
+  }
+
+  track.classList.add("active");
+}
+
+/* INIT */
+updateTicker();
+
+/* REFRESH */
+setInterval(updateTicker, 15000);
+
+});
+</script>
+
+<body>
+
+<!-- TOP TICKER -->
+<div class="ticker">
+  <div style="
+      position:absolute;
+      width:100%;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12.5px;
+      font-weight:600;
+      color:#94a3b8;
+  " id="tickerLoading">
+    Loading market data...
+  </div>
+
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Generational <span>Wealth</span></h1>
+
+    <p>
+        Structured market education, disciplined trading systems, and long-term skill development. Built for traders who want consistency — not hype.
+    </p>
+
+    <p>
+        Become a <b>General Access</b> member on Patreon to gain access to our private Discord server.
+    </p>
+
+    <div class="btn-row">
+        <a class="btn gold" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank">
+            Our Patreon
+        </a>
+
+        <a class="btn gold" href="https://www.patreon.com/Generational_Wealth/join" target="_blank">
+            Get Basic Access
+        </a>
+    </div>
+</section>
+
+<div class="container">
+
+<!-- HOW TO GET VALUE -->
+<section class="section">
+    <h2>How To Get Value</h2>
+
+    <div class="card-grid">
+        <div class="card">
+            <h3>Read First</h3>
+            <p>Pinned resources and core education.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ask Questions</h3>
+            <p>Engage and learn through discussion.</p>
+        </div>
+
+        <div class="card">
+            <h3>Stay Disciplined</h3>
+            <p>Consistency over emotional trading.</p>
+        </div>
+
+        <div class="card">
+            <h3>Risk Management</h3>
+            <p><b style="color:#d6a83e;">Capital preservation first.</b></p>
+        </div>
+    </div>
+</section>
+
+<!-- DISCORD -->
+<section class="section">
+    <h2>Discord Access Setup</h2>
+
+    <p class="discord-info">
+        Once you have Basic Access, you may automatically be in the server. But if you don't have a Discord account connected to Patreon or a Discord account in general, this will help.
+    </p>
+
+    <div class="btn-row">
+        <a class="btn blue" href="https://discord.com/register" target="_blank">
+            Discord Registration
+        </a>
+
+        <a class="btn blue" href="https://discord.com/download" target="_blank">
+            Discord Download
+        </a>
+    </div>
+
+    <div class="steps" style="margin-top:25px;">
+        <ol>
+            <li>Go to Settings in Patreon</li>
+            <li>Click “More” dropdown</li>
+            <li>Select “Connected Apps”</li>
+            <li>Click Discord</li>
+            <li>Press Connect</li>
+        </ol>
+
+        <p class="center">
+            After connecting, our Discord server should appear automatically. Restart Discord if needed.
+        </p>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="section">
+    <h2>Disclaimer</h2>
+
+    <div class="disclaimer">
+        This server by Generational Wealth Holdings Corp. including its contractors and affiliates, is NOT an investment advisory service. We are not registered as a securities broker-dealer or an investment adviser either with the U.S Securities and Exchange Commission (SEC) or with any state securities regulatory authority. We are neither licensed nor qualified to provide investment advice. To the fullest extent of the law, we will not be liable to any person or entity for the quality, accuracy, completeness, reliability, or timeliness of the information provided in the report, or for any direct, indirect, consequential, incidental, special or punitive damages that may arise out of the use of information we provide to any person or entity (including, but not limited to, lost profits, loss of opportunities, trading losses, and damages that may result from any inaccuracy or incompleteness of this information). Every trade you make is your own trade and you are fully responsible for any gain or loss you shall incur. Generational Wealth Holdings Corp. nor any moderators are held liable for any losses you shall have at any time you are with our service or after. It should be not be assumed that the methods, techniques or indicators provided in the book will be profitable nor that they will not result in loss. All information is provided for educational purpose only. Investors and traders must always consult with their licensed advisors or tax advisors to determine the suitability of any investment. We are not liable for any consequences that may occur by using information in this server. 
+
+Trading and investing carry significant risk. By participating in this community, you acknowledge that you are solely responsible for your own financial decisions and trades. Always do your own research (DYOR) and consult with a licensed professional if needed.
+    </div>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Generational Wealth Holdings Corp. All Rights Reserved.
+</footer>
+
+</body>
+</html>
