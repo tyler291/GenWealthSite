@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generational Wealth | Trading Community</title>
+<meta name="description" content="Join Generational Wealth, a disciplined trading community focused on real-time setups, risk management, and long-term consistency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060708;
+  --bg-elev: #0d0f12;
+  --panel: #13161b;
+  --text: #edf2f7;
+  --text-soft: #a5adbb;
+  --line: rgba(255, 255, 255, 0.08);
+  --lime: #9fd663;
+  --lime-strong: #8bcf3e;
+  --red: #e05252;
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Manrope, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 10%, #11141a 0%, #07090d 35%, #050608 70%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.bg-orb.one {
+  width: 380px;
+  height: 380px;
+  background: #7ccf32;
+  top: -120px;
+  right: -80px;
+}
+
+.bg-orb.two {
+  width: 320px;
+  height: 320px;
+  background: #0e6ccf;
+  bottom: -120px;
+  left: -120px;
+}
+
+.ticker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 42px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(5, 7, 9, 0.92);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+}
+
+.ticker-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 88px;
+  width: max-content;
+  height: 100%;
+  padding-left: 100%;
+  animation: ticker-scroll 55s linear infinite;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.ticker-track.active {
+  opacity: 1;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.ticker-symbol {
+  color: #ffffff;
+}
+
+.ticker-price {
+  color: #c9d1de;
+}
+
+.up {
+  color: var(--lime);
+}
+
+.down {
+  color: var(--red);
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.shell {
+  width: min(1180px, calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.nav {
+  position: sticky;
+  top: 52px;
+  z-index: 999;
+  margin-top: 58px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: rgba(14, 17, 21, 0.78);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brand h1 {
+  font-family: Sora, Manrope, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  color: var(--text-soft);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-cta {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: #111;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.hero {
+  padding: 82px 0 40px;
+}
+
+.hero-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(19, 22, 27, 0.96), rgba(8, 10, 13, 0.92));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  padding: 40px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(159, 214, 99, 0.45);
+  background: rgba(159, 214, 99, 0.09);
+  color: #d8f3b8;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.hero h2 {
+  font-family: Sora, Manrope, sans-serif;
+  font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+}
+
+.hero h2 .accent {
+  color: var(--lime);
+}
+
+.hero-copy {
+  margin-top: 14px;
+  color: var(--text-soft);
+  line-height: 1.65;
+  font-size: 1.04rem;
+  max-width: 62ch;
+}
+
+.hero-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 13px 20px;
+  border: 1px solid transparent;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: #111;
+  box-shadow: 0 16px 30px rgba(159, 214, 99, 0.25);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--line);
+  color: #e8edf8;
+}
+
+.hero-panel {
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(165deg, rgba(12, 14, 18, 0.94), rgba(16, 19, 25, 0.86));
+  padding: 22px;
+}
+
+.hero-panel h3 {
+  font-family: Sora, Manrope, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.hero-panel p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.metric-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.metric strong {
+  display: block;
+  color: var(--lime);
+  font-size: 1.12rem;
+  font-family: Sora, Manrope, sans-serif;
+}
+
+.metric span {
+  font-size: 0.84rem;
+  color: var(--text-soft);
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-head {
+  margin-bottom: 24px;
+}
+
+.section-kicker {
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.section h3 {
+  font-family: Sora, Manrope, sans-serif;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 3.6vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.section-sub {
+  margin-top: 10px;
+  color: var(--text-soft);
+  max-width: 75ch;
+  line-height: 1.65;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.proof-shot {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+}
+
+.proof-shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center top;
+  background: #05070a;
+  border-radius: 12px;
+}
+
+.photo-showcase {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.photo {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #0a0d11;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 360ms ease;
+  background: #07090d;
+}
+
+.photo:hover img {
+  transform: scale(1.03);
+}
+
+.photo.portrait { grid-column: span 3; min-height: 360px; }
+.photo.large { grid-column: span 6; min-height: 270px; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.step {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.step-num {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--lime);
+  color: #101114;
+  font-weight: 900;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.step h4 {
+  font-family: Sora, Manrope, sans-serif;
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: var(--text-soft);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.cta {
+  border: 1px solid rgba(159, 214, 99, 0.3);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(159, 214, 99, 0.13), rgba(16, 20, 25, 0.86));
+  padding: 34px;
+  display: grid;
+  gap: 12px;
+}
+
+.cta h3 {
+  font-family: Sora, Manrope, sans-serif;
+  font-size: clamp(1.4rem, 3.8vw, 2.2rem);
+}
+
+.cta p {
+  color: #d5dceb;
+  max-width: 66ch;
+  line-height: 1.7;
+}
+
+.disclaimer {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(8, 10, 13, 0.95);
+  padding: 22px;
+  color: var(--text-soft);
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 24px 0 36px;
+  border-top: 1px solid var(--line);
+  color: #8f98a7;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1020px) {
+  .hero-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .photo.portrait,
+  .photo.large {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(1180px, calc(100% - 1.2rem));
+  }
+
+  .nav {
+    top: 48px;
+  }
+
+  .nav-inner {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-grid {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo.portrait,
+  .photo.large {
+    grid-column: span 12;
+    min-height: 230px;
+  }
+
+  .cta {
+    padding: 24px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="bg-orb one"></div>
+<div class="bg-orb two"></div>
+
+<div class="ticker" role="status" aria-live="polite">
+  <div class="ticker-loading" id="tickerLoading">Loading market data...</div>
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<div class="shell">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="Generational Wealth logo">
+        <h1>Generational Wealth</h1>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#wins">Trade Wins</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#join">How To Join</a>
+      </nav>
+      <a class="nav-cta" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener noreferrer">Gain Access</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero reveal">
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <span class="badge">Swing and Scalp Trading Group</span>
+            <h2>Trade With A <span class="accent">Disciplined Team</span>, Build Real Results.</h2>
+            <p class="hero-copy">
+              Generational Wealth is a focused trading community for people who want structure, consistency, and growth. Get market direction, setups, and a serious team culture built around smart risk management.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener noreferrer">Join on Patreon</a>
+              <a class="btn btn-secondary" href="https://www.instagram.com/genwealthtrade/" target="_blank" rel="noopener noreferrer">View Instagram</a>
+              <a class="btn btn-secondary" href="https://discord.com/download" target="_blank" rel="noopener noreferrer">Get Discord</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <h3>What You Get Inside</h3>
+            <p>Daily market commentary, intraday and swing ideas, and a community that values process over hype.</p>
+            <div class="metric-grid">
+              <div class="metric"><strong>Real-Time</strong><span>Trade callouts + updates</span></div>
+              <div class="metric"><strong>Risk First</strong><span>Discipline before entries</span></div>
+              <div class="metric"><strong>Community</strong><span>Private Discord access</span></div>
+              <div class="metric"><strong>Consistency</strong><span>Built for long-term growth</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="wins" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker">Proof Of Performance</p>
+        <h3>Recent Community Trade Wins</h3>
+        <p class="section-sub">Snapshots shared by the community across multiple tickers and trade types.</p>
+      </div>
+      <div class="proof-grid">
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9099.jpg" alt="HTCO realized profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9105.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9115.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9117.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9123.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9141.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9154.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9246.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9266.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9267.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9268.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9271.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9279.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9281.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9282.jpg" alt="Community profit screenshot"></figure>
+        <figure class="proof-shot"><img loading="lazy" src="IMG_9324.jpg" alt="Community profit screenshot"></figure>
+      </div>
+    </section>
+
+    <section id="lifestyle" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker">Lifestyle + Community</p>
+        <h3>Built Around Ambition On And Off The Charts</h3>
+        <p class="section-sub">From track days to watches and exotics, this gallery reflects the ambition, taste, and energy behind the Generational Wealth community.</p>
+      </div>
+      <div class="photo-showcase">
+        <figure class="photo large"><img loading="lazy" src="IMG_9322.jpg" alt="Red Ferrari in garage"></figure>
+        <figure class="photo large"><img loading="lazy" src="IMG_9047.jpg" alt="Cars lined up at race track"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_8749.jpg" alt="Black car parked at night"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9326.jpg" alt="Ferrari track shot with Lime Rock label"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9048.jpg" alt="Race paddock supercar scene"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9091.jpg" alt="Ferrari track motion shot"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9088.jpg" alt="Watch close-up"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9327.jpg" alt="Ferrari racetrack motion shot"></figure>
+        <figure class="photo portrait"><img loading="lazy" src="IMG_9325.jpg" alt="Ferrari design studio"></figure>
+      </div>
+    </section>
+
+    <section id="join" class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker">Start In Minutes</p>
+        <h3>How To Join The Group</h3>
+        <p class="section-sub">Clean onboarding flow inspired by top-performing trading community websites.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="step-num">1</div>
+          <h4>Choose Membership</h4>
+          <p>Join the General Access plan on Patreon to unlock your entry into the private community.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">2</div>
+          <h4>Connect Discord</h4>
+          <p>In Patreon settings, open Connected Apps and connect your Discord account.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">3</div>
+          <h4>Accept Invite</h4>
+          <p>Your Discord access appears automatically once your account is linked correctly.</p>
+        </article>
+        <article class="step">
+          <div class="step-num">4</div>
+          <h4>Turn On Alerts</h4>
+          <p>Enable Discord notifications so you do not miss setups, updates, and market shifts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="cta">
+        <h3>Ready To Build Your Trading Edge?</h3>
+        <p>Join Generational Wealth and plug into a high-accountability trading environment built around performance, process, and consistent execution.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener noreferrer">Get Basic Access</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/genwealthtrade/" target="_blank" rel="noopener noreferrer">Follow On Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <p class="section-kicker">Important</p>
+        <h3>Disclaimer</h3>
+      </div>
+      <div class="disclaimer">
+        Generational Wealth Holdings Inc., its contractors, and affiliates are not registered investment advisers or broker-dealers. All content is for educational purposes only and should not be treated as financial advice.
+        Trading and investing involve substantial risk, including loss of principal. Past performance does not guarantee future results. You are solely responsible for your own decisions, position sizing, risk management, gains, and losses.
+        Always do your own research and consult licensed financial or tax professionals before making investment decisions.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Generational Wealth Holdings Inc. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener noreferrer">Patreon</a>
+      <a href="https://www.instagram.com/genwealthtrade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://discord.com/download" target="_blank" rel="noopener noreferrer">Discord</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const API_KEY = "d7kfpjpr01qiqbcu7b50d7kfpjpr01qiqbcu7b5g";
+
+  const symbols = [
+    { label: "SPY", symbol: "SPY" },
+    { label: "QQQ", symbol: "QQQ" },
+    { label: "DIA", symbol: "DIA" },
+    { label: "AAPL", symbol: "AAPL" },
+    { label: "MSFT", symbol: "MSFT" },
+    { label: "TSLA", symbol: "TSLA" },
+    { label: "NVDA", symbol: "NVDA" },
+    { label: "BTC", symbol: "BINANCE:BTCUSDT" }
+  ];
+
+  const tickerTrack = document.getElementById("tickerTrack");
+  const tickerLoading = document.getElementById("tickerLoading");
+
+  function safeNumber(value) {
+    return typeof value === "number" && Number.isFinite(value) ? value : 0;
+  }
+
+  async function fetchQuote(symbol) {
+    const url = `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol)}&token=${API_KEY}`;
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Quote request failed");
+    return response.json();
+  }
+
+  function renderItems(items) {
+    const html = items.map((item) => {
+      const directionClass = item.change >= 0 ? "up" : "down";
+      const arrow = item.change >= 0 ? "&#9650;" : "&#9660;";
+      return `<span class="ticker-item"><span class="ticker-symbol">${item.label}</span><span class="ticker-price">${item.price.toFixed(2)}</span><span class="${directionClass}">${arrow} ${Math.abs(item.change).toFixed(2)}%</span></span>`;
+    }).join("");
+
+    tickerTrack.innerHTML = html + html;
+    tickerTrack.classList.add("active");
+    tickerLoading.style.display = "none";
+  }
+
+  async function updateTicker() {
+    const snapshots = [];
+
+    for (const item of symbols) {
+      try {
+        const data = await fetchQuote(item.symbol);
+        const price = safeNumber(data.c);
+        const prevClose = safeNumber(data.pc);
+        if (!price || !prevClose) continue;
+        const change = ((price - prevClose) / prevClose) * 100;
+        snapshots.push({ label: item.label, price, change });
+      } catch (_) {
+        continue;
+      }
+    }
+
+    if (snapshots.length) renderItems(snapshots);
+  }
+
+  updateTicker();
+  setInterval(updateTicker, 20000);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("is-visible");
+    });
+  }, { threshold: 0.16 });
+
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+})();
+</script>
+</body>
+</html>
+
