@@ -432,14 +432,16 @@
   .ig-head-block{text-align:center;max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
   .ig-follow{margin-top:24px}
 
-  .ig-wrap{--rx:0deg;--ry:0deg;--lift:0;perspective:1300px;margin-top:48px}
-  .ig-tilt{transform-style:preserve-3d;transform:rotateX(var(--rx)) rotateY(var(--ry));will-change:transform}
+  .ig-wrap{--rx:0deg;--ry:0deg;--lift:0;margin-top:48px}
+  .ig-tilt{position:relative}
   .ig-viewport{overflow:hidden;padding:38px 0}
   .ig-track{display:flex;gap:22px;transition:transform .6s var(--ease);will-change:transform}
   .ig-card{flex:0 0 300px;max-width:300px;background:linear-gradient(180deg,#0f1a33,#0b1124);border:1px solid var(--line);
     border-radius:18px;overflow:hidden;opacity:.5;box-shadow:0 26px 50px -28px rgba(0,0,0,.8);
-    transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease),opacity .5s var(--ease)}
-  .ig-card.is-active{transform:scale(1.04);opacity:1;border-color:rgba(212,175,55,.45);
+    transition:box-shadow .5s var(--ease),border-color .5s var(--ease),opacity .5s var(--ease)}
+  /* Only the active (center) card tilts in 3D. perspective() is self-contained so it works inside the clipped viewport. */
+  .ig-card.is-active{opacity:1;border-color:rgba(212,175,55,.45);will-change:transform;
+    transform:perspective(950px) rotateX(var(--rx)) rotateY(var(--ry)) scale(1.04);
     box-shadow:0 46px 84px -30px rgba(0,0,0,.9),0 0 0 1px rgba(212,175,55,.14)}
 
   .ig-card-head{display:flex;align-items:center;gap:10px;padding:12px 13px}
@@ -1474,7 +1476,7 @@
     var tX = 0, tY = 0, rX = 0, rY = 0, raf = 0;
     function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
     function onMove(e){
-      var r = tilt.getBoundingClientRect();
+      var r = cards[index].getBoundingClientRect(); // tilt only the active (center) card
       var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
       var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
       var dist = Math.hypot(dx, dy);
