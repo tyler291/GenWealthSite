@@ -32,8 +32,9 @@ npx serve .
 
 These are intentionally left as placeholders — search and replace:
 
-1. **Patreon URL** — every "Join on Patreon" button currently points to `https://www.patreon.com/`. Replace with the real Generational Wealth Patreon page (search `patreon.com/` in `index.html`).
+1. ~~**Patreon URL**~~ ✅ Done — all "Join on Patreon" buttons + the footer icon point to `https://www.patreon.com/cw/Generational_Wealth`.
 2. **Results screenshots** — the three cards in the `#results` section are styled placeholders (`▒▒▒`). Swap each `.shot` figure for a real member screenshot `<img>`.
+3. **Testimonials & Instagram media** — sample placeholders in the `GW_TESTIMONIALS` array and the `#instagram` cards (`.ig-media`). Replace quotes/authors and swap `.ig-media` for real `<img class="ig-photo">` post images.
 3. **Domain** — canonical/OG URLs use `https://gwhlds.com/`. Update if the domain changes.
 4. **Legal review** — `terms.html` and `privacy.html` are solid boilerplate for an educational trading community, but have them reviewed by counsel before relying on them.
 
