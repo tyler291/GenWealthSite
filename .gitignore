@@ -1,0 +1,21 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Logs
+*.log
+
+# Dependencies (none needed for this static site, but just in case)
+node_modules/
+
+# Local env / secrets
+.env
+.env.*
+.vercel
+
+# Build output (not used — static site)
+dist/
+.cache/
