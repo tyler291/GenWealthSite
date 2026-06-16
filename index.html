@@ -1373,12 +1373,28 @@
     setTimeout(function(){ animating = false; }, reduce ? 0 : SLIDE_MS);
   }
 
-  prevBtn.addEventListener('click', function(){ paginate(-1); });
-  nextBtn.addEventListener('click', function(){ paginate(1); });
+  /* Auto-advance every 4s, ping-ponging between ends so it never jumps.
+     Pauses on hover/focus and after manual use; off for reduced motion. */
+  var autoDir = 1, autoTimer = null;
+  function autoTick(){
+    if(index >= count - 1) autoDir = -1;
+    else if(index <= 0) autoDir = 1;
+    paginate(autoDir);
+  }
+  function startAuto(){ if(reduce || count < 2) return; stopAuto(); autoTimer = setInterval(autoTick, 4000); }
+  function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer = null; } }
+  function restartAuto(){ stopAuto(); startAuto(); }
+
+  prevBtn.addEventListener('click', function(){ paginate(-1); restartAuto(); });
+  nextBtn.addEventListener('click', function(){ paginate(1); restartAuto(); });
   root.addEventListener('keydown', function(e){
-    if(e.key === 'ArrowRight'){ e.preventDefault(); paginate(1); }
-    if(e.key === 'ArrowLeft'){ e.preventDefault(); paginate(-1); }
+    if(e.key === 'ArrowRight'){ e.preventDefault(); paginate(1); restartAuto(); }
+    if(e.key === 'ArrowLeft'){ e.preventDefault(); paginate(-1); restartAuto(); }
   });
+  root.addEventListener('mouseenter', stopAuto);
+  root.addEventListener('mouseleave', startAuto);
+  root.addEventListener('focusin', stopAuto);
+  root.addEventListener('focusout', startAuto);
 
   renderText(0);
   setDisabled();
@@ -1387,6 +1403,7 @@
      requestAnimationFrame is throttled (e.g. background/inactive tab). */
   requestAnimationFrame(function(){ requestAnimationFrame(function(){ mounted = true; }); });
   setTimeout(function(){ mounted = true; }, 150);
+  startAuto();
 })();
 </script>
 
