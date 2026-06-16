@@ -11,6 +11,9 @@ desktop.ini
 # Dependencies (none needed for this static site, but just in case)
 node_modules/
 
+# Local tooling / preview config
+.claude/
+
 # Local env / secrets
 .env
 .env.*
