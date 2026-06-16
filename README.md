@@ -34,9 +34,16 @@ These are intentionally left as placeholders — search and replace:
 
 1. ~~**Patreon URL**~~ ✅ Done — all "Join on Patreon" buttons + the footer icon point to `https://www.patreon.com/cw/Generational_Wealth`.
 2. **Results screenshots** — the three cards in the `#results` section are styled placeholders (`▒▒▒`). Swap each `.shot` figure for a real member screenshot `<img>`.
-3. **Testimonials & Instagram media** — sample placeholders in the `GW_TESTIMONIALS` array and the `#instagram` cards (`.ig-media`). Replace quotes/authors and swap `.ig-media` for real `<img class="ig-photo">` post images.
-3. **Domain** — canonical/OG URLs use `https://gwhlds.com/`. Update if the domain changes.
-4. **Legal review** — `terms.html` and `privacy.html` are solid boilerplate for an educational trading community, but have them reviewed by counsel before relying on them.
+3. **Testimonials** — sample placeholders in the `GW_TESTIMONIALS` array (in `index.html`). Replace quotes/authors with real ones.
+4. **Instagram feed** — set `BEHOLD_FEED_ID` in the `#instagram` script to your Behold JSON feed ID to pull real posts (free at app.behold.so). Empty = placeholder cards.
+5. **Domain** — canonical/OG/sitemap URLs use `https://gwhlds.com/`. Update if the domain changes.
+6. **Legal placeholders** — in `terms.html`, replace `[GOVERNING-LAW STATE]` (appears twice) with your jurisdiction and insert your registered legal entity name; in `privacy.html`, add a privacy contact email. Both pages are drafted to be highly protective but **must be reviewed by a licensed attorney** before you rely on them.
+7. **Google Search Console** — uncomment the `google-site-verification` meta in `index.html` and paste your token to verify the domain.
+
+## SEO
+
+- `index.html` has full meta (title/description/keywords), Open Graph + Twitter cards, and JSON-LD for **Organization + WebSite + FAQPage** (the FAQ is eligible for rich results — keep the schema in sync with the on-page FAQ).
+- `robots.txt` and `sitemap.xml` are at the site root (update the domain inside them if it changes).
 
 ## Deploy to Vercel
 

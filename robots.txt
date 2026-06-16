@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Legal pages are intentionally low-priority but crawlable
+# (they carry noindex via meta tag, which is the correct signal)
+
+Sitemap: https://gwhlds.com/sitemap.xml
