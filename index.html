@@ -1417,90 +1417,138 @@
   "use strict";
   var wrap = document.getElementById('igCarousel');
   if(!wrap) return;
-  var tilt = wrap.querySelector('.ig-tilt');
+
+  /* ============================================================
+     PASTE YOUR BEHOLD FEED ID BELOW to pull real Instagram posts.
+     Free at https://app.behold.so → connect @genwealthtrade →
+     create a JSON feed. The ID is the last part of the feed URL
+     https://feeds.behold.so/<ID>. Leave "" to keep sample cards.
+     (Remember to whitelist gwhlds.com in the Behold feed settings.)
+     ============================================================ */
+  var BEHOLD_FEED_ID = "";
+
   var viewport = wrap.querySelector('.ig-viewport');
   var track = wrap.querySelector('.ig-track');
-  var cards = Array.prototype.slice.call(track.children);
   var dotsWrap = wrap.querySelector('.ig-dots');
   var prevBtn = wrap.querySelector('.ig-prev');
   var nextBtn = wrap.querySelector('.ig-next');
-  var count = cards.length;
-  if(!count) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- carousel ---- */
-  var index = 0, GAP = 22;
-  var dots = cards.map(function(_, i){
-    var b = document.createElement('button');
-    b.className = 'ig-dot'; b.type = 'button';
-    b.setAttribute('aria-label', 'Go to post ' + (i + 1));
-    b.addEventListener('click', function(){ go(i); restart(); });
-    dotsWrap.appendChild(b);
-    return b;
-  });
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  function layout(){
-    var cardW = cards[0].getBoundingClientRect().width;
-    var vpW = viewport.getBoundingClientRect().width;
-    var x = (vpW / 2) - (cardW / 2) - index * (cardW + GAP);
-    track.style.transform = 'translateX(' + x + 'px)';
+  /* Replace the placeholder cards with real Instagram posts (Behold feed),
+     reusing the existing header + action-bar markup for a consistent look. */
+  function buildFromPosts(posts){
+    var head = track.querySelector('.ig-card-head');
+    var bar = track.querySelector('.ig-bar');
+    var headTpl = head ? head.outerHTML : '';
+    var barTpl = bar ? bar.outerHTML : '';
+    var html = posts.map(function(p){
+      var s = p.sizes || {};
+      var img = (s.medium && s.medium.mediaUrl) || (s.large && s.large.mediaUrl) || (s.small && s.small.mediaUrl) || (s.full && s.full.mediaUrl) || p.mediaUrl || p.thumbnailUrl || 'assets/logo.png';
+      var cap = p.prunedCaption || p.caption || '';
+      if(cap.length > 120) cap = cap.slice(0, 117) + '…';
+      var link = p.permalink || 'https://www.instagram.com/genwealthtrade';
+      var bg = (p.colorPalette && p.colorPalette.dominant) ? ('rgb(' + p.colorPalette.dominant + ')') : '#0c1730';
+      var alt = esc(p.altText || (p.prunedCaption || p.caption || 'Instagram post').slice(0, 100));
+      return '<a class="ig-card" href="' + esc(link) + '" target="_blank" rel="noopener">' +
+        headTpl +
+        '<div class="ig-media" style="background:' + bg + '"><img class="ig-photo" src="' + esc(img) + '" alt="' + alt + '" loading="lazy"></div>' +
+        barTpl +
+        '<div class="ig-cap"><b>generationalwealth</b> ' + esc(cap) + '</div>' +
+      '</a>';
+    }).join('');
+    if(html){ track.innerHTML = html; }
   }
-  function update(){
-    cards.forEach(function(c, i){ c.classList.toggle('is-active', i === index); });
-    dots.forEach(function(d, i){ d.classList.toggle('on', i === index); });
-    layout();
-  }
-  function go(i){ index = Math.max(0, Math.min(count - 1, i)); update(); }
 
-  prevBtn.addEventListener('click', function(){ go(index - 1); restart(); });
-  nextBtn.addEventListener('click', function(){ go(index + 1); restart(); });
-  window.addEventListener('resize', layout);
+  /* ---- carousel + per-card tilt (runs on whatever cards are in the track) ---- */
+  function setup(){
+    var cards = Array.prototype.slice.call(track.children);
+    var count = cards.length;
+    if(!count) return;
 
-  /* ping-pong autoplay (no clones, no jump) */
-  var dir = 1, timer = null;
-  function autoplay(){
-    if(index >= count - 1) dir = -1; else if(index <= 0) dir = 1;
-    go(index + dir);
-  }
-  function start(){ if(reduce) return; stop(); timer = setInterval(autoplay, 4200); }
-  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
-  function restart(){ stop(); start(); }
-  wrap.addEventListener('mouseenter', stop);
-  wrap.addEventListener('mouseleave', start);
-  wrap.addEventListener('focusin', stop);
-  wrap.addEventListener('focusout', start);
+    var index = 0, GAP = 22;
+    var dots = cards.map(function(_, i){
+      var b = document.createElement('button');
+      b.className = 'ig-dot'; b.type = 'button';
+      b.setAttribute('aria-label', 'Go to post ' + (i + 1));
+      b.addEventListener('click', function(){ go(i); restart(); });
+      dotsWrap.appendChild(b);
+      return b;
+    });
 
-  /* ---- 3D perspective tilt ---- */
-  if(!reduce){
-    var MAX_RX = 11, MAX_RY = 22, SMOOTH = 0.12;
-    var tX = 0, tY = 0, rX = 0, rY = 0, raf = 0;
-    function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
-    function onMove(e){
-      var r = cards[index].getBoundingClientRect(); // tilt only the active (center) card
-      var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
-      var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
-      var dist = Math.hypot(dx, dy);
-      var fall = dist <= 1 ? 1 : Math.max(0, 1 - (dist - 1) / 2);
-      tX = clamp(dy, -1, 1) * MAX_RX * fall;
-      tY = -clamp(dx, -1, 1) * MAX_RY * fall;
+    function layout(){
+      var cardW = cards[0].getBoundingClientRect().width;
+      var vpW = viewport.getBoundingClientRect().width;
+      var x = (vpW / 2) - (cardW / 2) - index * (cardW + GAP);
+      track.style.transform = 'translateX(' + x + 'px)';
     }
-    function onLeave(){ tX = 0; tY = 0; }
-    function tick(){
-      rX += (tX - rX) * SMOOTH;
-      rY += (tY - rY) * SMOOTH;
-      var lift = Math.min(1, Math.hypot(rX / MAX_RX, rY / MAX_RY));
-      wrap.style.setProperty('--rx', rX.toFixed(2) + 'deg');
-      wrap.style.setProperty('--ry', rY.toFixed(2) + 'deg');
-      wrap.style.setProperty('--lift', lift.toFixed(3));
-      raf = requestAnimationFrame(tick);
+    function update(){
+      cards.forEach(function(c, i){ c.classList.toggle('is-active', i === index); });
+      dots.forEach(function(d, i){ d.classList.toggle('on', i === index); });
+      layout();
     }
-    window.addEventListener('mousemove', onMove, {passive:true});
-    document.addEventListener('mouseleave', onLeave);
-    tick();
+    function go(i){ index = Math.max(0, Math.min(count - 1, i)); update(); }
+
+    prevBtn.addEventListener('click', function(){ go(index - 1); restart(); });
+    nextBtn.addEventListener('click', function(){ go(index + 1); restart(); });
+    window.addEventListener('resize', layout);
+
+    /* ping-pong autoplay (no clones, no jump) */
+    var dir = 1, timer = null;
+    function autoplay(){ if(index >= count - 1) dir = -1; else if(index <= 0) dir = 1; go(index + dir); }
+    function start(){ if(reduce || count < 2) return; stop(); timer = setInterval(autoplay, 4200); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    function restart(){ stop(); start(); }
+    wrap.addEventListener('mouseenter', stop);
+    wrap.addEventListener('mouseleave', start);
+    wrap.addEventListener('focusin', stop);
+    wrap.addEventListener('focusout', start);
+
+    /* 3D mouse-perspective tilt — only the active (center) card */
+    if(!reduce){
+      var MAX_RX = 11, MAX_RY = 22, SMOOTH = 0.12;
+      var tX = 0, tY = 0, rX = 0, rY = 0;
+      function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+      function onMove(e){
+        var r = cards[index].getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+        var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+        var dist = Math.hypot(dx, dy);
+        var fall = dist <= 1 ? 1 : Math.max(0, 1 - (dist - 1) / 2);
+        tX = clamp(dy, -1, 1) * MAX_RX * fall;
+        tY = -clamp(dx, -1, 1) * MAX_RY * fall;
+      }
+      function tick(){
+        rX += (tX - rX) * SMOOTH;
+        rY += (tY - rY) * SMOOTH;
+        wrap.style.setProperty('--rx', rX.toFixed(2) + 'deg');
+        wrap.style.setProperty('--ry', rY.toFixed(2) + 'deg');
+        requestAnimationFrame(tick);
+      }
+      window.addEventListener('mousemove', onMove, {passive:true});
+      document.addEventListener('mouseleave', function(){ tX = 0; tY = 0; });
+      tick();
+    }
+
+    update();
+    start();
   }
 
-  update();
-  start();
+  /* Pull from Instagram via Behold when a feed ID is set; otherwise use the
+     placeholder cards already in the markup. Always degrades gracefully. */
+  if(BEHOLD_FEED_ID){
+    fetch('https://feeds.behold.so/' + BEHOLD_FEED_ID)
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(data){
+        var posts = (data && data.posts) || (Array.isArray(data) ? data : []);
+        if(posts && posts.length){ buildFromPosts(posts); }
+        setup();
+      })
+      .catch(function(){ setup(); }); // network/feed error → keep placeholder cards
+  } else {
+    setup();
+  }
 })();
 </script>
 </body>
