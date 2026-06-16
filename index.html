@@ -1333,10 +1333,14 @@
 (function(){
   "use strict";
   var GW_TESTIMONIALS = [
-    { quote: "I stopped chasing every alert and started running a process. The risk-first sizing alone changed how I trade.", author: "Swing member" },
-    { quote: "First room where nobody's flexing — just levels, invalidation, and honest reviews after the close.", author: "Scalp member" },
-    { quote: "Posting my plan before the entry keeps me disciplined. The accountability is the real edge here.", author: "Intraday member" },
-    { quote: "I came for the callouts and stayed for the education. I can finally read the setups myself.", author: "New member" }
+    { quote: "I stopped chasing every alert and started running a process. The risk-first sizing alone changed how I trade.", author: "Wilson D.", image: "assets/member-1.webp", alt: "Member" },
+    { quote: "First room where nobody's flexing — just levels, invalidation, and honest reviews after the close.", author: "Antt L.", image: "assets/member-2.webp", alt: "Member" },
+    { quote: "Posting my plan before the entry keeps me disciplined. The accountability is the real edge here.", author: "Steve G.", image: "assets/member-3.webp", alt: "Member" },
+    { quote: "I came for the callouts and stayed for the education. I can finally read the setups myself.", author: "Mike R.", image: "assets/member-4.webp", alt: "Member" },
+    { quote: "Capital preservation first finally clicked. I survive the bad days now instead of blowing up.", author: "Dana K.", image: "assets/member-5.webp", alt: "Member" },
+    { quote: "The daily commentary sets up my whole session. I know what I'm watching before the bell.", author: "Priya S.", image: "assets/member-6.webp", alt: "Member" },
+    { quote: "Written invalidation has saved my account more times than any winner. Process over hype is real.", author: "Marcus T.", image: "assets/member-7.webp", alt: "Member" },
+    { quote: "Trading alone wrecked me. Having a disciplined team to answer to changed everything.", author: "Jordan B.", image: "assets/member-8.webp", alt: "Member" }
   ];
 
   var root = document.getElementById('gwTesti');
@@ -1363,7 +1367,7 @@
   function cell(){ var d = document.createElement('div'); d.className = 'reel-cell'; return d; }
   function featured(t){
     var d = document.createElement('div'); d.className = 'reel-feat';
-    if(t.image){ var img = new Image(); img.src = t.image; img.alt = t.alt || ''; img.loading = 'lazy'; d.appendChild(img); }
+    if(t.image){ var img = new Image(); img.alt = t.alt || ''; img.decoding = 'async'; img.src = t.image; d.appendChild(img); }
     else { var ph = document.createElement('div'); ph.className = 'ph'; ph.innerHTML = USER; d.appendChild(ph); }
     var sh = document.createElement('div'); sh.className = 'sheen'; d.appendChild(sh);
     return d;
@@ -1433,7 +1437,7 @@
     else if(index <= 0) autoDir = 1;
     paginate(autoDir);
   }
-  function startAuto(){ if(reduce || count < 2) return; stopAuto(); autoTimer = setInterval(autoTick, 4000); }
+  function startAuto(){ if(reduce || count < 2) return; stopAuto(); autoTimer = setInterval(autoTick, 3000); }
   function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer = null; } }
   function restartAuto(){ stopAuto(); startAuto(); }
 
