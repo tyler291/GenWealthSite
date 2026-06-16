@@ -1481,6 +1481,27 @@
      ============================================================ */
   var BEHOLD_FEED_ID = "";
 
+  /* Real Instagram posts hosted locally (used until a Behold feed ID is set).
+     Add/remove/reorder freely; each needs an image, and optionally a caption
+     and a link to the specific post. */
+  var GW_IG_LOCAL = [
+    { image: "assets/ig-1.jpg",  caption: "Another one called in the room. 📈" },
+    { image: "assets/ig-2.jpg",  caption: "Trade winner recap — risk-first, as always." },
+    { image: "assets/ig-3.jpg",  caption: "The plan, executed." },
+    { image: "assets/ig-4.jpg",  caption: "Off the watchlist, into the win column. 📈" },
+    { image: "assets/ig-5.jpg",  caption: "Process over hype — every session." },
+    { image: "assets/ig-6.jpg",  caption: "Real-time callout, real recap." },
+    { image: "assets/ig-7.jpg",  caption: "Disciplined entry, clean exit." },
+    { image: "assets/ig-8.jpg",  caption: "This is what the room runs on. 📈" },
+    { image: "assets/ig-9.jpg",  caption: "Called it. Followed the plan." },
+    { image: "assets/ig-10.jpg", caption: "Another recap from the room." },
+    { image: "assets/ig-11.jpg", caption: "Patience, then the entry. 📈" },
+    { image: "assets/ig-12.jpg", caption: "Levels held. The plan worked." },
+    { image: "assets/ig-13.jpg", caption: "From the watchlist to the win. 📈" },
+    { image: "assets/ig-14.jpg", caption: "Process over hype." }
+  ];
+  var IG_PROFILE = "https://www.instagram.com/genwealthtrade/";
+
   var viewport = wrap.querySelector('.ig-viewport');
   var track = wrap.querySelector('.ig-track');
   var dotsWrap = wrap.querySelector('.ig-dots');
@@ -1510,6 +1531,25 @@
         '<div class="ig-media" style="background:' + bg + '"><img class="ig-photo" src="' + esc(img) + '" alt="' + alt + '" loading="lazy"></div>' +
         barTpl +
         '<div class="ig-cap"><b>generationalwealth</b> ' + esc(cap) + '</div>' +
+      '</a>';
+    }).join('');
+    if(html){ track.innerHTML = html; }
+  }
+
+  /* Build cards from the locally-hosted Instagram posts (eager-loaded —
+     they're small, and lazy-load doesn't fire reliably inside the carousel). */
+  function buildFromLocal(items){
+    var head = track.querySelector('.ig-card-head');
+    var bar = track.querySelector('.ig-bar');
+    var headTpl = head ? head.outerHTML : '';
+    var barTpl = bar ? bar.outerHTML : '';
+    var html = items.map(function(p){
+      var link = p.link || IG_PROFILE;
+      return '<a class="ig-card" href="' + esc(link) + '" target="_blank" rel="noopener">' +
+        headTpl +
+        '<div class="ig-media"><img class="ig-photo" src="' + esc(p.image) + '" alt="' + esc(p.alt || 'Generational Wealth Instagram post') + '" decoding="async"></div>' +
+        barTpl +
+        '<div class="ig-cap"><b>generationalwealth</b> ' + esc(p.caption || '') + '</div>' +
       '</a>';
     }).join('');
     if(html){ track.innerHTML = html; }
@@ -1596,19 +1636,23 @@
     start();
   }
 
-  /* Pull from Instagram via Behold when a feed ID is set; otherwise use the
-     placeholder cards already in the markup. Always degrades gracefully. */
+  /* Source priority: Behold live feed (if an ID is set) → locally-hosted real
+     posts → the sample placeholder cards in the markup. Always degrades. */
+  function useLocalOrPlaceholder(){
+    if(GW_IG_LOCAL && GW_IG_LOCAL.length){ buildFromLocal(GW_IG_LOCAL); }
+    setup();
+  }
   if(BEHOLD_FEED_ID){
     fetch('https://feeds.behold.so/' + BEHOLD_FEED_ID)
       .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function(data){
         var posts = (data && data.posts) || (Array.isArray(data) ? data : []);
-        if(posts && posts.length){ buildFromPosts(posts); }
-        setup();
+        if(posts && posts.length){ buildFromPosts(posts); setup(); }
+        else { useLocalOrPlaceholder(); }
       })
-      .catch(function(){ setup(); }); // network/feed error → keep placeholder cards
+      .catch(function(){ useLocalOrPlaceholder(); }); // feed error → local posts
   } else {
-    setup();
+    useLocalOrPlaceholder();
   }
 })();
 </script>
