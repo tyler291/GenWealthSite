@@ -193,12 +193,25 @@
     white-space:nowrap;
   }
   .btn svg{width:16px;height:16px}
+  /* Rotating gold->green glow ring (adapted from a Uiverse conic-gradient button, rebranded) */
   .btn-primary{
-    background:linear-gradient(180deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));
-    color:#1a1406;box-shadow:var(--shadow-gold);
+    position:relative;isolation:isolate;overflow:hidden;border:none;
+    background:transparent;color:var(--cream);
+    transition:transform .25s var(--ease);
   }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 24px 60px -18px rgba(212,175,55,.6)}
-  .btn-primary:active{transform:translateY(0)}
+  .btn-primary::before{
+    content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;z-index:-2;
+    background:conic-gradient(from 0deg,#E8C766,#22C55E,#D4AF37,#16a34a,#FBF7EA,#22C55E,#E8C766);
+    filter:blur(9px);transform:rotate(0deg);transition:transform 1.4s ease-in-out;
+  }
+  .btn-primary:hover::before{transform:rotate(180deg)}
+  .btn-primary::after{
+    content:"";position:absolute;inset:3px;z-index:-1;border-radius:999px;
+    background:linear-gradient(180deg,#0b142b,#070B17);
+  }
+  .btn-primary:hover{transform:scale(1.03)}
+  .btn-primary:active{transform:scale(.99)}
+  @media (prefers-reduced-motion:reduce){.btn-primary::before{transition:none}.btn-primary:hover::before{transform:none}}
   .btn-ghost{background:rgba(255,255,255,.02);color:var(--ink-200);border-color:var(--line)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--cream);background:rgba(212,175,55,.06)}
   .btn-lg{--bh:60px;padding:0 34px;font-size:13.5px}
@@ -681,7 +694,7 @@
       <a class="link" href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="header">Join on Patreon</a>
+      <a class="btn btn-primary" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="header">Get Wealthy</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
       </button>
@@ -693,7 +706,7 @@
   <a href="#method">The Method</a>
   <a href="#join">How To Join</a>
   <a href="#faq">FAQ</a>
-  <a class="btn btn-primary btn-lg" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="mobile">Join on Patreon</a>
+  <a class="btn btn-primary btn-lg" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="mobile">Get Wealthy</a>
 </div>
 
 <main id="top">
@@ -727,7 +740,7 @@
     <p class="sub reveal d2">Generational Wealth is a swing &amp; scalp trading community where the edge isn&rsquo;t a hot tip &mdash; it&rsquo;s <strong>process over hype</strong>. Daily market commentary, real-time callouts, and a risk-first framework, with a team that holds you to it.</p>
     <div class="hero-actions reveal d3">
       <a class="btn btn-primary btn-lg" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="hero">
-        Join on Patreon
+        Get Wealthy
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="btn btn-ghost btn-lg" href="#method">See the method</a>
@@ -1014,7 +1027,7 @@
     </div>
     <div class="join-cta">
       <a class="btn btn-primary btn-lg" href="https://www.patreon.com/cw/Generational_Wealth" data-cta="join" rel="noopener" target="_blank">
-        Join on Patreon
+        Get Wealthy
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -1064,7 +1077,7 @@
     <h2 class="reveal d1" id="final-title">Trade the plan. With a <span class="serif gold">team.</span></h2>
     <p class="reveal d2">Join a room built on discipline instead of hype &mdash; and start treating your trading like the long game it is.</p>
     <a class="btn btn-primary btn-lg reveal d3" href="https://www.patreon.com/cw/Generational_Wealth" target="_blank" rel="noopener" data-cta="final">
-      Join on Patreon
+      Get Wealthy
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
