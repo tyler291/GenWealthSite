@@ -193,25 +193,30 @@
     white-space:nowrap;
   }
   .btn svg{width:16px;height:16px}
-  /* Rotating gold->green glow ring (adapted from a Uiverse conic-gradient button, rebranded) */
+  /* Dark pill with a spinning light-streak border + hover glow
+     (adapted from a Uiverse sparkle button, rebranded purple -> gold/green) */
   .btn-primary{
     position:relative;isolation:isolate;overflow:hidden;border:none;
     background:transparent;color:var(--cream);
-    transition:transform .25s var(--ease);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
   }
-  .btn-primary::before{
-    content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;z-index:-2;
-    background:conic-gradient(from 0deg,#E8C766,#22C55E,#D4AF37,#16a34a,#FBF7EA,#22C55E,#E8C766);
-    filter:blur(9px);transform:rotate(0deg);transition:transform 1.4s ease-in-out;
+  .btn-primary::before{ /* light streak traveling the border */
+    content:"";position:absolute;top:50%;left:50%;width:300%;height:300%;z-index:-2;
+    transform:translate(-50%,-50%) rotate(0deg);
+    background:conic-gradient(from 0deg,
+      rgba(212,175,55,.16) 0deg, rgba(212,175,55,.16) 250deg,
+      #E8C766 296deg, #FBF7EA 322deg, #22C55E 348deg, rgba(212,175,55,.16) 360deg);
+    animation:btnspin 3s linear infinite;
   }
-  .btn-primary:hover::before{transform:rotate(180deg)}
-  .btn-primary::after{
-    content:"";position:absolute;inset:3px;z-index:-1;border-radius:999px;
-    background:linear-gradient(180deg,#0b142b,#070B17);
+  .btn-primary::after{ /* dark core, leaves a thin glowing edge */
+    content:"";position:absolute;inset:2px;z-index:-1;border-radius:999px;
+    background:linear-gradient(180deg,#0d1630,#080e1d);
   }
-  .btn-primary:hover{transform:scale(1.03)}
+  .btn-primary:hover{transform:scale(1.04);
+    box-shadow:0 0 0 4px rgba(212,175,55,.15),0 14px 34px -12px rgba(34,197,94,.5)}
   .btn-primary:active{transform:scale(.99)}
-  @media (prefers-reduced-motion:reduce){.btn-primary::before{transition:none}.btn-primary:hover::before{transform:none}}
+  @keyframes btnspin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.btn-primary::before{animation:none}}
   .btn-ghost{background:rgba(255,255,255,.02);color:var(--ink-200);border-color:var(--line)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--cream);background:rgba(212,175,55,.06)}
   .btn-lg{--bh:60px;padding:0 34px;font-size:13.5px}
@@ -361,15 +366,13 @@
   /* icon badge with rings */
   .pillar-icon{position:relative;width:78px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
   .pillar-icon .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(212,175,55,.28)}
-  .pillar-icon .ring.r2{inset:-7px;border-color:rgba(212,175,55,.14);animation:pingring 3.4s var(--ease) infinite}
-  @keyframes pingring{0%{transform:scale(.9);opacity:.7}70%,100%{transform:scale(1.28);opacity:0}}
+  .pillar-icon .ring.r2{inset:-7px;border-color:rgba(212,175,55,.14)}
   .pillar-icon .badge{position:relative;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
     background:radial-gradient(circle at 50% 32%, rgba(212,175,55,.18), rgba(212,175,55,.05));
     border:1px solid rgba(212,175,55,.4);color:var(--gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
-    transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
-  .pillar:hover .pillar-icon .badge{transform:rotate(12deg) scale(1.08);box-shadow:0 0 26px -6px rgba(212,175,55,.55)}
-  .pillar-icon .badge svg{width:28px;height:28px;transition:transform .7s var(--ease)}
-  .pillar:hover .pillar-icon .badge svg{transform:rotate(180deg)}
+    transition:box-shadow .4s var(--ease)}
+  .pillar:hover .pillar-icon .badge{box-shadow:0 0 22px -8px rgba(212,175,55,.45)}
+  .pillar-icon .badge svg{width:28px;height:28px}
 
   .pillar .num{font-family:var(--font-mono);font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--gold);opacity:.65}
   .pillar h3{font-family:var(--font-sans);font-weight:800;font-size:18.5px;color:var(--ink-100);margin:9px 0 10px;letter-spacing:-.01em}
@@ -803,9 +806,7 @@
           <span class="num">01</span>
           <h3>Risk-First Sizing</h3>
           <p>Position size is decided before the entry, not after. We define what we&rsquo;re willing to lose first &mdash; the upside takes care of itself.</p>
-          <span class="divline" aria-hidden="true"></span>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
+          <span class="divline" aria-hidden="true"></span>        </div>
       </article>
       <article class="pillar reveal d2">
         <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
@@ -818,9 +819,7 @@
           <span class="num">02</span>
           <h3>Written Invalidation</h3>
           <p>Every idea ships with a line in the sand. If price proves the thesis wrong, we&rsquo;re out &mdash; no hoping, no averaging into losers.</p>
-          <span class="divline" aria-hidden="true"></span>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
+          <span class="divline" aria-hidden="true"></span>        </div>
       </article>
       <article class="pillar reveal d3">
         <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
@@ -833,9 +832,7 @@
           <span class="num">03</span>
           <h3>Process Over Hype</h3>
           <p>No moon-boy promises. We grade ourselves on whether we followed the plan, not whether a single trade printed.</p>
-          <span class="divline" aria-hidden="true"></span>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
+          <span class="divline" aria-hidden="true"></span>        </div>
       </article>
       <article class="pillar reveal d4">
         <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
@@ -848,9 +845,7 @@
           <span class="num">04</span>
           <h3>Journal &amp; Review</h3>
           <p>What gets measured gets better. We log entries, exits and emotion, then review as a team so the same mistake doesn&rsquo;t cost twice.</p>
-          <span class="divline" aria-hidden="true"></span>
-          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        </div>
+          <span class="divline" aria-hidden="true"></span>        </div>
       </article>
     </div>
   </div>
