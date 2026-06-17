@@ -1571,7 +1571,7 @@
     /* ping-pong autoplay (no clones, no jump) */
     var dir = 1, timer = null;
     function autoplay(){ if(index >= count - 1) dir = -1; else if(index <= 0) dir = 1; go(index + dir); }
-    function start(){ if(reduce || count < 2) return; stop(); timer = setInterval(autoplay, 4200); }
+    function start(){ if(reduce || count < 2) return; stop(); timer = setInterval(autoplay, 2000); }
     function stop(){ if(timer){ clearInterval(timer); timer = null; } }
     function restart(){ stop(); start(); }
     wrap.addEventListener('mouseenter', stop);
