@@ -337,7 +337,7 @@
      METHOD (pillars)
      ============================================================ */
   .head-block{max-width:760px}
-  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
   .pillar{
     position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-lg);
     border:1px solid var(--line);
@@ -361,7 +361,7 @@
   .pillar:hover .pillar-bg .shine{transform:translateX(330%) skewX(-12deg)}
   @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
-  .pillar-inner{position:relative;z-index:2;padding:34px 22px 28px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .pillar-inner{position:relative;z-index:2;padding:46px 34px 42px;display:flex;flex-direction:column;align-items:center;text-align:center}
 
   /* icon badge with rings */
   .pillar-icon{position:relative;width:78px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
@@ -375,8 +375,8 @@
   .pillar-icon .badge svg{width:28px;height:28px}
 
   .pillar .num{font-family:var(--font-mono);font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--gold);opacity:.65}
-  .pillar h3{font-family:var(--font-sans);font-weight:800;font-size:18.5px;color:var(--ink-100);margin:9px 0 10px;letter-spacing:-.01em}
-  .pillar p{font-size:14px;color:var(--ink-400);line-height:1.65}
+  .pillar h3{font-family:var(--font-sans);font-weight:800;font-size:21px;color:var(--ink-100);margin:10px 0 12px;letter-spacing:-.01em}
+  .pillar p{font-size:15px;color:var(--ink-400);line-height:1.7}
 
   /* growing divider */
   .pillar .divline{margin-top:18px;width:34%;height:2px;border-radius:999px;
@@ -816,11 +816,11 @@
         <div class="pillar-inner">
           <div class="pillar-icon" aria-hidden="true">
             <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/><circle cx="9" cy="8" r="2.6" fill="#0b1326"/><circle cx="15" cy="16" r="2.6" fill="#0b1326"/></svg></span>
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="15.5" x2="21" y2="15.5" stroke-dasharray="2.5 2.5"/><path d="M12 21V5"/><path d="m7 10 5-5 5 5"/></svg></span>
           </div>
           <span class="num">01</span>
-          <h3>Risk-First Sizing</h3>
-          <p>Position size is decided before the entry, not after. We define what we&rsquo;re willing to lose first &mdash; the upside takes care of itself.</p>
+          <h3>Break &amp; Hold</h3>
+          <p>We never chase. When a level is called &mdash; <em>&ldquo;STOCK must break $XX.XX&rdquo;</em> &mdash; price has to break clean through it <strong>and hold</strong> as the minute candle closes before we enter. Confirmation first, every single time.</p>
           <span class="divline" aria-hidden="true"></span>        </div>
       </article>
       <article class="pillar reveal d2">
@@ -829,11 +829,11 @@
         <div class="pillar-inner">
           <div class="pillar-icon" aria-hidden="true">
             <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4"/><path d="M4 4h13l-2.5 4 2.5 4H4"/></svg></span>
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/></svg></span>
           </div>
           <span class="num">02</span>
-          <h3>Written Invalidation</h3>
-          <p>Every idea ships with a line in the sand. If price proves the thesis wrong, we&rsquo;re out &mdash; no hoping, no averaging into losers.</p>
+          <h3>Know Your &lsquo;Next&rsquo;</h3>
+          <p>Every callout comes with defined targets &mdash; each <em>&ldquo;Next&rdquo;</em> level the stock is aiming for once it breaks. You always know exactly where price is headed before you ever click buy, so you trade a plan, not a feeling.</p>
           <span class="divline" aria-hidden="true"></span>        </div>
       </article>
       <article class="pillar reveal d3">
@@ -842,24 +842,11 @@
         <div class="pillar-inner">
           <div class="pillar-icon" aria-hidden="true">
             <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1"/><path d="m8.5 13 2 2 4-4.5"/></svg></span>
+            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
           </div>
           <span class="num">03</span>
-          <h3>Process Over Hype</h3>
-          <p>No moon-boy promises. We grade ourselves on whether we followed the plan, not whether a single trade printed.</p>
-          <span class="divline" aria-hidden="true"></span>        </div>
-      </article>
-      <article class="pillar reveal d4">
-        <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
-        <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
-        <div class="pillar-inner">
-          <div class="pillar-icon" aria-hidden="true">
-            <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.5 5 7.5 4.5 4 5v13c3.5-.5 6.5 0 8 1.5 1.5-1.5 4.5-2 8-1.5V5c-3.5-.5-6.5 0-8 1.5z"/><path d="M12 6.5V20"/></svg></span>
-          </div>
-          <span class="num">04</span>
-          <h3>Journal &amp; Review</h3>
-          <p>What gets measured gets better. We log entries, exits and emotion, then review as a team so the same mistake doesn&rsquo;t cost twice.</p>
+          <h3>Trail &amp; Protect</h3>
+          <p>As each target prints, your stop loss moves up behind the move to lock the gain in. Losses stay small, winners are left to run. <strong>Keep your losses small and your wins big</strong> &mdash; that&rsquo;s the whole game.</p>
           <span class="divline" aria-hidden="true"></span>        </div>
       </article>
     </div>
@@ -1178,7 +1165,7 @@
     </div>
 
     <p class="disclaimer">
-      <b>Risk Disclaimer.</b> Generational Wealth is an educational trading community. All content, commentary, trade ideas, and callouts are provided for educational and informational purposes only and do not constitute financial, investment, tax, or trading advice, nor an offer, solicitation, or recommendation to buy or sell any security. Generational Wealth is not a registered investment adviser or broker-dealer. Trading and investing involve substantial risk of loss, are not suitable for every investor, and you may lose some or all of your capital. Past performance is not indicative of future results, and results or testimonials shared by members are individual, not verified, and not typical. <b>You alone are responsible for your trading decisions, and to the maximum extent permitted by law, neither Generational Wealth nor its owners, operators, team, moderators, contributors, anyone who posts trade callouts, nor the developers of this website shall be liable for any trading or investment losses or any damages arising from your use of this site or community.</b> Consult a licensed financial professional before making any investment decision. See our full <a href="terms.html" style="color:var(--gold);text-decoration:underline">Terms &amp; Disclaimer</a>.
+      <b>Disclaimer — read before participating.</b> Generational Wealth Holdings Corp., including its contractors and affiliates, is <b>NOT an investment advisory service</b>. We are not registered as a securities broker-dealer or an investment adviser with the U.S. Securities and Exchange Commission (SEC) or with any state securities regulatory authority, and we are neither licensed nor qualified to provide investment advice. To the fullest extent of the law, we will not be liable to any person or entity for the quality, accuracy, completeness, reliability, or timeliness of the information provided, or for any direct, indirect, consequential, incidental, special, or punitive damages that may arise out of the use of information we provide (including, but not limited to, lost profits, loss of opportunities, trading losses, and damages that may result from any inaccuracy or incompleteness of this information). <b>Every trade you make is your own trade and you are fully responsible for any gain or loss you shall incur.</b> Neither Generational Wealth Holdings Corp. nor any moderators are held liable for any losses you shall have at any time you are with our service or after. It should not be assumed that the methods, techniques, or indicators provided will be profitable, nor that they will not result in loss. All information is provided for educational purposes only. Investors and traders must always consult with their licensed advisors or tax advisors to determine the suitability of any investment. Trading and investing carry significant risk. By participating in this community, you acknowledge that you are solely responsible for your own financial decisions and trades. Always do your own research (DYOR) and consult with a licensed professional if needed. See our full <a href="terms.html" style="color:var(--gold);text-decoration:underline">Terms &amp; Disclaimer</a>.
     </p>
 
     <div class="foot-bottom">
