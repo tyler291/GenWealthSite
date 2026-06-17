@@ -74,18 +74,6 @@
       "description": "Swing & scalp trading community — process over hype.",
       "publisher": { "@id": "https://gwhlds.com/#organization" },
       "inLanguage": "en-US"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://gwhlds.com/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "Is this financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. Generational Wealth is an educational trading community. Everything shared — commentary, callouts and breakdowns — is for educational purposes only and is not financial, investment, or trading advice. You are responsible for your own decisions." } },
-        { "@type": "Question", "name": "Do I need experience to join?", "acceptedAnswer": { "@type": "Answer", "text": "No. The room is built around a clear, risk-first process, so newer traders can learn the framework while experienced traders sharpen execution. The breakdowns are designed to teach the why, not just the what." } },
-        { "@type": "Question", "name": "What do I need to get started?", "acceptedAnswer": { "@type": "Answer", "text": "A Patreon account and a Discord account — both free to create. Choose a membership tier on Patreon, connect Discord, and you will be added to the private server automatically." } },
-        { "@type": "Question", "name": "How do the trade callouts work?", "acceptedAnswer": { "@type": "Answer", "text": "Ideas are posted in Discord as they set up — intraday and swing — with the levels that matter: entry, invalidation, and targets. You decide whether and how to act based on your own plan and risk tolerance." } },
-        { "@type": "Question", "name": "Can I cancel anytime?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Membership is managed entirely through Patreon, so you can cancel from your Patreon account at any time. Access continues through the end of your current billing period." } },
-        { "@type": "Question", "name": "Will I get rich quick?", "acceptedAnswer": { "@type": "Answer", "text": "No — and anyone promising that is lying to you. Trading carries substantial risk and most people who chase fast money lose it. Our entire philosophy is the opposite: discipline, risk management, and consistency over time." } }
-      ]
     }
   ]
 }
@@ -645,26 +633,6 @@
   @media(max-width:560px){.plan{padding:30px 22px}}
 
   /* ============================================================
-     FAQ
-     ============================================================ */
-  .faq-list{max-width:840px;margin:48px auto 0;border-top:1px solid var(--line)}
-  .qa{border-bottom:1px solid var(--line)}
-  .qa button.q{
-    width:100%;text-align:left;background:none;border:0;cursor:pointer;color:var(--ink-100);
-    font-family:var(--font-sans);font-weight:700;font-size:clamp(16px,2vw,19px);letter-spacing:-.01em;
-    padding:26px 44px 26px 0;position:relative;display:flex;justify-content:space-between;gap:20px;
-  }
-  .qa button.q:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
-  .qa .ic{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:20px;height:20px;flex:0 0 20px;transition:transform .3s var(--ease)}
-  .qa .ic::before,.qa .ic::after{content:"";position:absolute;background:var(--gold);border-radius:2px}
-  .qa .ic::before{top:9px;left:0;width:20px;height:2px}
-  .qa .ic::after{top:0;left:9px;width:2px;height:20px;transition:transform .3s var(--ease)}
-  .qa.open .ic::after{transform:scaleY(0)}
-  .qa .a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
-  .qa .a-inner{padding:0 44px 28px 0;font-size:15.5px;color:var(--ink-400);line-height:1.7}
-  .qa .a-inner a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
-
-  /* ============================================================
      FINAL CTA
      ============================================================ */
   .finalcta{position:relative;overflow:hidden;text-align:center;
@@ -769,7 +737,7 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a class="link" href="#method">The Method</a>
-      <a class="link" href="#faq">FAQ</a>
+      <a class="link" href="faq.html">FAQ</a>
     </nav>
     <div class="nav-cta">
       <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener" data-cta="header">Get Wealthy</a>
@@ -782,7 +750,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#method">The Method</a>
-  <a href="#faq">FAQ</a>
+  <a href="faq.html">FAQ</a>
   <a class="btn btn-primary btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener" data-cta="mobile">Get Wealthy</a>
 </div>
 
@@ -1097,42 +1065,6 @@
   </div>
 </section>
 
-<!-- ====================== FAQ ====================== -->
-<section id="faq" class="rule-top" aria-labelledby="faq-title">
-  <div class="wrap">
-    <div class="head-block" style="text-align:center;margin:0 auto;display:flex;flex-direction:column;align-items:center">
-      <span class="eyebrow center reveal">FAQ</span>
-      <h2 class="section-title reveal d1" id="faq-title">Questions, answered <span class="ital gold">straight.</span></h2>
-    </div>
-    <div class="faq-list">
-      <div class="qa">
-        <button class="q" aria-expanded="false">Is this financial advice?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">No. Generational Wealth is an educational trading community. Everything shared &mdash; commentary, callouts and breakdowns &mdash; is for educational purposes only and is not financial, investment, or trading advice. You are responsible for your own decisions. See our full <a href="terms.html">disclaimer</a>.</div></div>
-      </div>
-      <div class="qa">
-        <button class="q" aria-expanded="false">Do I need experience to join?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">No. The room is built around a clear, risk-first process, so newer traders can learn the framework while experienced traders sharpen execution. The breakdowns are designed to teach the &ldquo;why,&rdquo; not just the &ldquo;what.&rdquo;</div></div>
-      </div>
-      <div class="qa">
-        <button class="q" aria-expanded="false">What do I need to get started?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">A Patreon account and a Discord account &mdash; both free to create. Choose a membership tier on Patreon, connect Discord, and you&rsquo;ll be added to the private server automatically.</div></div>
-      </div>
-      <div class="qa">
-        <button class="q" aria-expanded="false">How do the trade callouts work?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">Ideas are posted in Discord as they set up &mdash; intraday and swing &mdash; with the levels that matter: entry, invalidation, and targets. You decide whether and how to act based on your own plan and risk tolerance.</div></div>
-      </div>
-      <div class="qa">
-        <button class="q" aria-expanded="false">Can I cancel anytime?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">Yes. Membership is managed entirely through Patreon, so you can cancel from your Patreon account at any time. Access continues through the end of your current billing period.</div></div>
-      </div>
-      <div class="qa">
-        <button class="q" aria-expanded="false">Will I get rich quick?<span class="ic" aria-hidden="true"></span></button>
-        <div class="a"><div class="a-inner">No &mdash; and anyone promising that is lying to you. Trading carries substantial risk and most people who chase fast money lose it. Our entire philosophy is the opposite: discipline, risk management, and consistency over time. That&rsquo;s the only edge that lasts.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ====================== FINAL CTA ====================== -->
 <section class="finalcta" aria-labelledby="final-title">
   <div class="wrap">
@@ -1174,7 +1106,7 @@
       <div class="foot-col">
         <h4>Explore</h4>
         <a href="#method">The Method</a>
-        <a href="#faq">FAQ</a>
+        <a href="faq.html">FAQ</a>
       </div>
       <div class="foot-col">
         <h4>Legal</h4>
@@ -1252,32 +1184,6 @@
   } else {
     reveals.forEach(function(el){ el.classList.add('in'); });
   }
-
-  // FAQ accordion
-  document.querySelectorAll('.qa .q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var qa = btn.closest('.qa');
-      var panel = qa.querySelector('.a');
-      var isOpen = qa.classList.contains('open');
-      // close others
-      document.querySelectorAll('.qa.open').forEach(function(other){
-        if(other !== qa){
-          other.classList.remove('open');
-          other.querySelector('.a').style.maxHeight = null;
-          other.querySelector('.q').setAttribute('aria-expanded','false');
-        }
-      });
-      if(isOpen){
-        qa.classList.remove('open');
-        panel.style.maxHeight = null;
-        btn.setAttribute('aria-expanded','false');
-      } else {
-        qa.classList.add('open');
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        btn.setAttribute('aria-expanded','true');
-      }
-    });
-  });
 
   // Duplicate marquee content for a seamless loop
   var track = document.getElementById('marquee');
@@ -1839,7 +1745,7 @@
     'assets/ig-5.jpg','assets/ig-6.jpg','assets/ig-7.jpg','assets/ig-8.jpg',
     'assets/ig-9.jpg','assets/ig-10.jpg','assets/ig-11.jpg','assets/ig-12.jpg'
   ];
-  var R = 9;
+  var R = 9, IMG_R = 11;
 
   var renderer;
   try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); }
@@ -1875,11 +1781,11 @@
   var loader = new THREE.TextureLoader();
   IMAGES.forEach(function(src, k){
     var ang = (k / IMAGES.length) * Math.PI * 2;
-    var x = R * Math.cos(ang), z = R * Math.sin(ang);
+    var x = IMG_R * Math.cos(ang), z = IMG_R * Math.sin(ang);
     var tex = loader.load(src);
     if(THREE.sRGBEncoding) tex.encoding = THREE.sRGBEncoding;
     var plane = new THREE.Mesh(
-      new THREE.PlaneGeometry(2.6, 2.6),
+      new THREE.PlaneGeometry(5.2, 5.2),
       new THREE.MeshBasicMaterial({ map: tex, side: THREE.DoubleSide, transparent: true })
     );
     plane.position.set(x, 0, z);
