@@ -677,7 +677,12 @@
   }
   @media (max-width:560px){
     .wrap{padding:0 18px}
-    .pillars,.features{grid-template-columns:1fr}
+    .features{grid-template-columns:1fr}
+    /* Method pillars become a swipeable, auto-advancing carousel on mobile */
+    .pillars{display:flex;grid-template-columns:none;gap:14px;margin-top:40px;
+      overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .pillars::-webkit-scrollbar{display:none}
+    .pillar{flex:0 0 85%;scroll-snap-align:center}
     .steps{grid-template-columns:1fr}
     .step{border-right:0;border-bottom:1px solid var(--line)}
     .step:last-child{border-bottom:0}
@@ -1560,6 +1565,53 @@
       });
     }, {threshold: 0.05}).observe(box);
   } else { loop(); }
+})();
+</script>
+
+<!-- ====================== METHOD PILLARS — MOBILE CAROUSEL ====================== -->
+<script>
+/* On mobile the Method pillars are a horizontal carousel: auto-advances
+   side to side every 3s, and pauses for 7s after any touch/interaction so
+   people can read. Desktop keeps the static 3-up grid. */
+(function(){
+  "use strict";
+  var track = document.querySelector('#method .pillars');
+  if(!track) return;
+  var mq = window.matchMedia('(max-width:560px)');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var timer = null, resume = null, idx = 0, dir = 1, st = null;
+
+  function cards(){ return track.querySelectorAll('.pillar'); }
+  function centerOf(card){ return card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2; }
+  function running(){ return mq.matches && !reduce.matches; }
+
+  function go(i){
+    var cs = cards(); if(!cs.length) return;
+    idx = Math.max(0, Math.min(cs.length - 1, i));
+    track.scrollTo({ left: centerOf(cs[idx]), behavior: 'smooth' });
+  }
+  function tick(){
+    var cs = cards(); if(cs.length < 2) return;
+    if(idx >= cs.length - 1) dir = -1; else if(idx <= 0) dir = 1;
+    go(idx + dir);
+  }
+  function start(){ stop(); if(running()){ timer = setInterval(tick, 3000); } }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  function pause(){ stop(); if(resume) clearTimeout(resume); if(running()){ resume = setTimeout(start, 7000); } }
+
+  // keep idx in sync with whatever card is nearest center
+  track.addEventListener('scroll', function(){
+    clearTimeout(st);
+    st = setTimeout(function(){
+      var cs = cards(), c = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
+      cs.forEach(function(el, i){ var m = el.offsetLeft + el.offsetWidth / 2, d = Math.abs(m - c); if(d < bd){ bd = d; best = i; } });
+      idx = best;
+    }, 90);
+  }, {passive:true});
+
+  ['pointerdown','touchstart','wheel'].forEach(function(ev){ track.addEventListener(ev, pause, {passive:true}); });
+  if(mq.addEventListener){ mq.addEventListener('change', start); }
+  start();
 })();
 </script>
 </body>
