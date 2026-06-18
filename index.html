@@ -513,57 +513,43 @@
   .ig-head-block{text-align:center;max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
   .ig-follow{margin-top:24px}
 
-  .ig-wrap{--rx:0deg;--ry:0deg;--lift:0;margin-top:48px}
-  .ig-tilt{position:relative}
-  .ig-viewport{overflow:hidden;padding:38px 0}
-  .ig-track{display:flex;gap:22px;transition:transform .6s var(--ease);will-change:transform}
-  .ig-card{flex:0 0 300px;max-width:300px;cursor:pointer;background:linear-gradient(180deg,#0f1a33,#0b1124);border:1px solid var(--line);
-    border-radius:18px;overflow:hidden;opacity:.5;box-shadow:0 26px 50px -28px rgba(0,0,0,.8);
-    transition:box-shadow .5s var(--ease),border-color .5s var(--ease),opacity .5s var(--ease)}
-  /* Only the active (center) card tilts in 3D. perspective() is self-contained so it works inside the clipped viewport. */
-  .ig-card.is-active{opacity:1;border-color:rgba(212,175,55,.45);will-change:transform;
-    transform:perspective(950px) rotateX(var(--rx)) rotateY(var(--ry)) scale(1.04);
-    box-shadow:0 46px 84px -30px rgba(0,0,0,.9),0 0 0 1px rgba(212,175,55,.14)}
+  .igstack{margin-top:48px;display:flex;flex-direction:column;align-items:center}
+  .igstack-deck{position:relative;width:320px;height:496px;max-width:88vw;touch-action:pan-y;user-select:none}
+  .igpost{position:absolute;left:50%;top:50%;width:320px;max-width:86vw;
+    background:linear-gradient(180deg,#0f1a33,#0b1124);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    box-shadow:0 30px 60px -28px rgba(0,0,0,.85);transform-origin:center center;will-change:transform,opacity;
+    transition:transform .5s var(--ease),opacity .5s var(--ease)}
+  .igpost.is-top{cursor:grab;box-shadow:0 46px 84px -30px rgba(0,0,0,.9),0 0 0 1px rgba(212,175,55,.16)}
+  .igpost.is-top:active{cursor:grabbing}
+  .igpost.dragging{transition:none}
 
-  .ig-card-head{display:flex;align-items:center;gap:10px;padding:12px 13px}
+  .ig-card-head{display:flex;align-items:center;gap:10px;padding:11px 12px}
   .ig-ava{width:34px;height:34px;border-radius:50%;padding:2px;flex-shrink:0;display:flex;
     background:conic-gradient(from 210deg,var(--gold),var(--green),var(--gold))}
   .ig-ava img{width:100%;height:100%;border-radius:50%;border:2px solid #0f1a33;object-fit:cover;background:#0b1124}
   .ig-meta{display:flex;flex-direction:column;line-height:1.25;min-width:0}
-  .ig-user{font-family:var(--font-sans);font-weight:700;font-size:13px;color:var(--cream)}
+  .ig-user{font-family:var(--font-sans);font-weight:700;font-size:13px;color:var(--cream);display:inline-flex;align-items:center;gap:5px}
+  .ig-verified{width:13px;height:13px;color:#3b9aef;flex-shrink:0}
   .ig-sub{font-family:var(--font-mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-500)}
   .ig-more{margin-left:auto;color:var(--ink-400);font-weight:800;letter-spacing:1px}
 
-  .ig-media{position:relative;aspect-ratio:1/1;overflow:hidden;display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(120% 120% at 50% 0%,rgba(212,175,55,.10),transparent 60%),linear-gradient(160deg,#0c1730,#0a1226)}
-  .ig-media .ig-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .ig-media .ig-wm{width:46%;opacity:.15}
-  .ig-media .ig-quote{padding:0 26px;text-align:center;font-family:var(--font-serif);font-style:italic;font-weight:600;font-size:clamp(18px,2.4vw,24px);line-height:1.3;color:var(--cream)}
-  .ig-media .ig-quote b{color:var(--gold);font-style:normal}
-  .ig-media .ig-spark{position:absolute;left:0;right:0;bottom:20%;height:38%;width:100%;opacity:.55}
-  .ig-tagpill{position:absolute;top:12px;left:12px;font-family:var(--font-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--gold);background:rgba(7,11,23,.55);border:1px solid rgba(212,175,55,.3);padding:5px 9px;border-radius:999px}
-  .ig-repl{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-family:var(--font-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-500)}
+  .igpost-frame{position:relative;margin:0 10px;border-radius:8px;overflow:hidden;
+    border:2px solid rgba(212,175,55,.6);box-shadow:0 0 18px rgba(212,175,55,.1) inset}
+  .igpost-img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#0a1226;pointer-events:none;-webkit-user-drag:none}
 
   .ig-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 13px 3px}
   .ig-actions{display:flex;gap:14px;color:var(--ink-200)}
-  .ig-actions svg,.ig-save svg{width:21px;height:21px;display:block}
+  .ig-actions svg,.ig-save svg{width:22px;height:22px;display:block}
   .ig-actions .heart{color:var(--green)}
   .ig-save{color:var(--ink-200);display:flex}
-  .ig-cap{padding:3px 13px 14px;font-size:12.5px;color:var(--ink-300);line-height:1.5}
+  .ig-cap{padding:4px 13px 14px;font-size:12.5px;color:var(--ink-300);line-height:1.5}
   .ig-cap b{color:var(--cream);font-weight:700;margin-right:5px}
 
-  .ig-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:32px}
-  .ig-dots{display:flex;gap:7px}
-  .ig-dot{width:7px;height:7px;border-radius:50%;background:var(--line);border:0;padding:0;cursor:pointer;transition:.3s var(--ease)}
-  .ig-dot.on{background:var(--gold);transform:scale(1.3)}
-  .ig-nav{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink-200);
-    border:1px solid var(--line);background:rgba(255,255,255,.02);transition:.2s var(--ease)}
-  .ig-nav:hover{border-color:var(--gold);color:var(--gold);transform:scale(1.07)}
-  .ig-nav svg{width:16px;height:16px}
-  .ig-nav:focus-visible,.ig-dot:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+  .igstack-hint{margin-top:30px;display:flex;align-items:center;gap:8px;
+    font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-500)}
+  .igstack-hint svg{opacity:.85}
 
-  @media (max-width:560px){.ig-card{flex-basis:80vw;max-width:80vw}}
+  @media (max-width:560px){.igstack-deck{width:300px;height:474px}.igpost{width:300px}}
 
   /* ============================================================
      PHILOSOPHY (long game)
@@ -878,138 +864,14 @@
       </a>
     </div>
 
-    <!-- 3D tilt carousel. To use a REAL post, replace a card's `.ig-media` inner with:
-         <img class="ig-photo" src="assets/your-post.jpg" alt="caption"> -->
-    <div class="ig-wrap reveal" id="igCarousel">
-      <div class="ig-tilt">
-        <div class="ig-viewport">
-          <div class="ig-track">
-
-            <article class="ig-card">
-              <header class="ig-card-head">
-                <span class="ig-ava"><img src="assets/logo.png" alt="" /></span>
-                <div class="ig-meta"><span class="ig-user">generationalwealth</span><span class="ig-sub">Swing &amp; Scalp</span></div>
-                <span class="ig-more" aria-hidden="true">&#8943;</span>
-              </header>
-              <div class="ig-media">
-                <span class="ig-tagpill">Trade recap</span>
-                <img class="ig-wm" src="assets/logo.png" alt="" />
-                <svg class="ig-spark" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,80 40,66 80,70 120,48 160,54 200,30 240,36 300,12" fill="none" stroke="#22C55E" stroke-width="2"/></svg>
-                <span class="ig-repl">Replace with post image</span>
-              </div>
-              <div class="ig-bar">
-                <div class="ig-actions">
-                  <span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                </div>
-                <span class="ig-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-              </div>
-              <div class="ig-cap"><b>generationalwealth</b> Clean swing off the level &mdash; risk-first, as always.</div>
-            </article>
-
-            <article class="ig-card">
-              <header class="ig-card-head">
-                <span class="ig-ava"><img src="assets/logo.png" alt="" /></span>
-                <div class="ig-meta"><span class="ig-user">generationalwealth</span><span class="ig-sub">Swing &amp; Scalp</span></div>
-                <span class="ig-more" aria-hidden="true">&#8943;</span>
-              </header>
-              <div class="ig-media">
-                <span class="ig-tagpill">Mindset</span>
-                <p class="ig-quote">&ldquo;Discipline <b>before</b> entries.&rdquo;</p>
-                <span class="ig-repl">Replace with post image</span>
-              </div>
-              <div class="ig-bar">
-                <div class="ig-actions">
-                  <span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                </div>
-                <span class="ig-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-              </div>
-              <div class="ig-cap"><b>generationalwealth</b> The part nobody runs ads about. #processoverhype</div>
-            </article>
-
-            <article class="ig-card">
-              <header class="ig-card-head">
-                <span class="ig-ava"><img src="assets/logo.png" alt="" /></span>
-                <div class="ig-meta"><span class="ig-user">generationalwealth</span><span class="ig-sub">Swing &amp; Scalp</span></div>
-                <span class="ig-more" aria-hidden="true">&#8943;</span>
-              </header>
-              <div class="ig-media">
-                <span class="ig-tagpill">Member win</span>
-                <img class="ig-wm" src="assets/logo.png" alt="" />
-                <svg class="ig-spark" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,76 40,60 80,64 120,40 160,46 200,26 240,30 300,8" fill="none" stroke="#22C55E" stroke-width="2"/></svg>
-                <span class="ig-repl">Replace with post image</span>
-              </div>
-              <div class="ig-bar">
-                <div class="ig-actions">
-                  <span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                </div>
-                <span class="ig-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-              </div>
-              <div class="ig-cap"><b>generationalwealth</b> Another member following the plan. That&rsquo;s the edge.</div>
-            </article>
-
-            <article class="ig-card">
-              <header class="ig-card-head">
-                <span class="ig-ava"><img src="assets/logo.png" alt="" /></span>
-                <div class="ig-meta"><span class="ig-user">generationalwealth</span><span class="ig-sub">Swing &amp; Scalp</span></div>
-                <span class="ig-more" aria-hidden="true">&#8943;</span>
-              </header>
-              <div class="ig-media">
-                <span class="ig-tagpill">Daily levels</span>
-                <img class="ig-wm" src="assets/logo.png" alt="" />
-                <svg class="ig-spark" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,70 40,58 80,62 120,52 160,40 200,44 240,24 300,16" fill="none" stroke="#22C55E" stroke-width="2"/></svg>
-                <span class="ig-repl">Replace with post image</span>
-              </div>
-              <div class="ig-bar">
-                <div class="ig-actions">
-                  <span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                </div>
-                <span class="ig-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-              </div>
-              <div class="ig-cap"><b>generationalwealth</b> Pre-market levels are posted. See you in the room.</div>
-            </article>
-
-            <article class="ig-card">
-              <header class="ig-card-head">
-                <span class="ig-ava"><img src="assets/logo.png" alt="" /></span>
-                <div class="ig-meta"><span class="ig-user">generationalwealth</span><span class="ig-sub">Swing &amp; Scalp</span></div>
-                <span class="ig-more" aria-hidden="true">&#8943;</span>
-              </header>
-              <div class="ig-media">
-                <span class="ig-tagpill">Education</span>
-                <p class="ig-quote">Plan the trade. <b>Trade the plan.</b></p>
-                <span class="ig-repl">Replace with post image</span>
-              </div>
-              <div class="ig-bar">
-                <div class="ig-actions">
-                  <span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg></span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
-                </div>
-                <span class="ig-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-              </div>
-              <div class="ig-cap"><b>generationalwealth</b> Written invalidation &gt; hope. Every time.</div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-      <div class="ig-controls">
-        <button class="ig-nav ig-prev" type="button" aria-label="Previous post">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <div class="ig-dots" aria-hidden="true"></div>
-        <button class="ig-nav ig-next" type="button" aria-label="Next post">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-      </div>
+    <!-- Instagram post stack — drag the top post to flip through. Images are
+         injected by the script below from the POSTS array (assets/ig-*.jpg). -->
+    <div class="igstack reveal">
+      <div class="igstack-deck" id="igDeck" aria-label="Recent Instagram posts"><!-- cards injected by JS --></div>
+      <p class="igstack-hint">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Drag a post to flip through
+      </p>
     </div>
   </div>
 </section>
@@ -1301,199 +1163,118 @@
 })();
 </script>
 
-<!-- ====================== INSTAGRAM CAROUSEL ====================== -->
+<!-- ====================== INSTAGRAM POST STACK ====================== -->
 <script>
-/* 3D mouse-perspective tilt (ported from the React Perspective component)
-   + a looping, ping-pong auto-advancing carousel of Instagram-style posts. */
+/* Draggable Instagram post stack (vanilla port of the framer-motion ImgStack):
+   tiled cards wrapped in IG-post chrome; drag the top post to send it to the
+   back and reveal the next. Images come from the POSTS array (assets/ig-*.jpg). */
 (function(){
   "use strict";
-  var wrap = document.getElementById('igCarousel');
-  if(!wrap) return;
-
-  /* ============================================================
-     PASTE YOUR BEHOLD FEED ID BELOW to pull real Instagram posts.
-     Free at https://app.behold.so → connect @genwealthtrade →
-     create a JSON feed. The ID is the last part of the feed URL
-     https://feeds.behold.so/<ID>. Leave "" to keep sample cards.
-     (Remember to whitelist gwhlds.com in the Behold feed settings.)
-     ============================================================ */
-  var BEHOLD_FEED_ID = "";
-
-  /* Real Instagram posts hosted locally (used until a Behold feed ID is set).
-     Add/remove/reorder freely; each needs an image, and optionally a caption
-     and a link to the specific post. */
-  var GW_IG_LOCAL = [
-    { image: "assets/ig-1.jpg",  caption: "Another one called in the room. 📈" },
-    { image: "assets/ig-2.jpg",  caption: "Trade winner recap — risk-first, as always." },
-    { image: "assets/ig-3.jpg",  caption: "The plan, executed." },
-    { image: "assets/ig-4.jpg",  caption: "Off the watchlist, into the win column. 📈" },
-    { image: "assets/ig-5.jpg",  caption: "Process over hype — every session." },
-    { image: "assets/ig-6.jpg",  caption: "Real-time callout, real recap." },
-    { image: "assets/ig-7.jpg",  caption: "Disciplined entry, clean exit." },
-    { image: "assets/ig-8.jpg",  caption: "This is what the room runs on. 📈" },
-    { image: "assets/ig-9.jpg",  caption: "Called it. Followed the plan." },
-    { image: "assets/ig-10.jpg", caption: "Another recap from the room." },
-    { image: "assets/ig-11.jpg", caption: "Patience, then the entry. 📈" },
-    { image: "assets/ig-12.jpg", caption: "Levels held. The plan worked." },
-    { image: "assets/ig-13.jpg", caption: "From the watchlist to the win. 📈" },
-    { image: "assets/ig-14.jpg", caption: "Process over hype." }
-  ];
-  var IG_PROFILE = "https://www.instagram.com/genwealthtrade/";
-
-  var viewport = wrap.querySelector('.ig-viewport');
-  var track = wrap.querySelector('.ig-track');
-  var dotsWrap = wrap.querySelector('.ig-dots');
-  var prevBtn = wrap.querySelector('.ig-prev');
-  var nextBtn = wrap.querySelector('.ig-next');
+  var deck = document.getElementById('igDeck');
+  if(!deck) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var POSTS = [
+    { image:"assets/ig-1.jpg",  caption:"Another one called in the room. 📈" },
+    { image:"assets/ig-2.jpg",  caption:"Trade winner recap — risk-first, as always." },
+    { image:"assets/ig-3.jpg",  caption:"The plan, executed." },
+    { image:"assets/ig-4.jpg",  caption:"Off the watchlist, into the win column. 📈" },
+    { image:"assets/ig-5.jpg",  caption:"Process over hype — every session." },
+    { image:"assets/ig-6.jpg",  caption:"Real-time callout, real recap." },
+    { image:"assets/ig-7.jpg",  caption:"Disciplined entry, clean exit." },
+    { image:"assets/ig-8.jpg",  caption:"This is what the room runs on. 📈" },
+    { image:"assets/ig-9.jpg",  caption:"Called it. Followed the plan." },
+    { image:"assets/ig-10.jpg", caption:"Another recap from the room." },
+    { image:"assets/ig-11.jpg", caption:"Patience, then the entry. 📈" },
+    { image:"assets/ig-12.jpg", caption:"Levels held. The plan worked." },
+    { image:"assets/ig-13.jpg", caption:"From the watchlist to the win. 📈" },
+    { image:"assets/ig-14.jpg", caption:"Process over hype." }
+  ];
 
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  /* Replace the placeholder cards with real Instagram posts (Behold feed),
-     reusing the existing header + action-bar markup for a consistent look. */
-  function buildFromPosts(posts){
-    var head = track.querySelector('.ig-card-head');
-    var bar = track.querySelector('.ig-bar');
-    var headTpl = head ? head.outerHTML : '';
-    var barTpl = bar ? bar.outerHTML : '';
-    var html = posts.map(function(p){
-      var s = p.sizes || {};
-      var img = (s.medium && s.medium.mediaUrl) || (s.large && s.large.mediaUrl) || (s.small && s.small.mediaUrl) || (s.full && s.full.mediaUrl) || p.mediaUrl || p.thumbnailUrl || 'assets/logo.png';
-      var cap = p.prunedCaption || p.caption || '';
-      if(cap.length > 120) cap = cap.slice(0, 117) + '…';
-      var link = p.permalink || 'https://www.instagram.com/genwealthtrade';
-      var bg = (p.colorPalette && p.colorPalette.dominant) ? ('rgb(' + p.colorPalette.dominant + ')') : '#0c1730';
-      var alt = esc(p.altText || (p.prunedCaption || p.caption || 'Instagram post').slice(0, 100));
-      return '<a class="ig-card" href="' + esc(link) + '" target="_blank" rel="noopener">' +
-        headTpl +
-        '<div class="ig-media" style="background:' + bg + '"><img class="ig-photo" src="' + esc(img) + '" alt="' + alt + '" loading="lazy"></div>' +
-        barTpl +
-        '<div class="ig-cap"><b>generationalwealth</b> ' + esc(cap) + '</div>' +
-      '</a>';
-    }).join('');
-    if(html){ track.innerHTML = html; }
+  var HEART='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 3.5C20 16.4 12 21 12 21z"/></svg>';
+  var COMMENT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>';
+  var SHARE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>';
+  var SAVE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
+  var VERIFIED='<svg class="ig-verified" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.39 1.79 2.99-.12.97 2.83 2.48 1.66-.93 2.84.93 2.84-2.48 1.66-.97 2.83-2.99-.12L12 22l-2.39-1.79-2.99.12-.97-2.83-2.48-1.66.93-2.84-.93-2.84 2.48-1.66.97-2.83 2.99.12L12 2zm-1.1 13.4l4.95-4.95-1.41-1.41-3.54 3.54-1.62-1.62-1.41 1.41 3.03 3.03z"/></svg>';
+
+  function buildCard(p){
+    var el = document.createElement('article');
+    el.className = 'igpost';
+    el.innerHTML =
+      '<header class="ig-card-head">' +
+        '<span class="ig-ava"><img src="assets/logo.png" alt=""></span>' +
+        '<div class="ig-meta"><span class="ig-user">genwealthtrade' + VERIFIED + '</span><span class="ig-sub">Swing &amp; Scalp</span></div>' +
+        '<span class="ig-more" aria-hidden="true">&#8943;</span>' +
+      '</header>' +
+      '<div class="igpost-frame"><img class="igpost-img" src="' + esc(p.image) + '" alt="Generational Wealth Instagram post" draggable="false"></div>' +
+      '<div class="ig-bar"><div class="ig-actions"><span class="heart">' + HEART + '</span>' + COMMENT + SHARE + '</div><span class="ig-save">' + SAVE + '</span></div>' +
+      '<div class="ig-cap"><b>genwealthtrade</b> ' + esc(p.caption || '') + '</div>';
+    return el;
   }
 
-  /* Build cards from the locally-hosted Instagram posts (eager-loaded —
-     they're small, and lazy-load doesn't fire reliably inside the carousel). */
-  function buildFromLocal(items){
-    var head = track.querySelector('.ig-card-head');
-    var bar = track.querySelector('.ig-bar');
-    var headTpl = head ? head.outerHTML : '';
-    var barTpl = bar ? bar.outerHTML : '';
-    var html = items.map(function(p){
-      var link = p.link || IG_PROFILE;
-      return '<a class="ig-card" href="' + esc(link) + '" target="_blank" rel="noopener">' +
-        headTpl +
-        '<div class="ig-media"><img class="ig-photo" src="' + esc(p.image) + '" alt="' + esc(p.alt || 'Generational Wealth Instagram post') + '" decoding="async"></div>' +
-        barTpl +
-        '<div class="ig-cap"><b>generationalwealth</b> ' + esc(p.caption || '') + '</div>' +
-      '</a>';
-    }).join('');
-    if(html){ track.innerHTML = html; }
+  var stack = POSTS.map(function(p){ var el = buildCard(p); deck.appendChild(el); return el; });
+  var VIS = 3;
+
+  function tf(depth){
+    var d = Math.min(depth, VIS);
+    return 'translate(-50%,-50%) translate(' + (d*12) + 'px,' + (d*9) + 'px) rotate(' + (d*2.4) + 'deg) scale(' + (1 - d*0.05).toFixed(3) + ')';
   }
-
-  /* ---- carousel + per-card tilt (runs on whatever cards are in the track) ---- */
-  function setup(){
-    var cards = Array.prototype.slice.call(track.children);
-    var count = cards.length;
-    if(!count) return;
-
-    var index = 0, GAP = 22;
-    var dots = cards.map(function(_, i){
-      var b = document.createElement('button');
-      b.className = 'ig-dot'; b.type = 'button';
-      b.setAttribute('aria-label', 'Go to post ' + (i + 1));
-      b.addEventListener('click', function(){ go(i); restart(); });
-      dotsWrap.appendChild(b);
-      return b;
+  function render(){
+    stack.forEach(function(el, depth){
+      el.style.zIndex = String(stack.length - depth);
+      el.style.transform = tf(depth);
+      el.style.opacity = depth <= VIS ? '1' : '0';
+      el.style.pointerEvents = depth === 0 ? 'auto' : 'none';
+      el.classList.toggle('is-top', depth === 0);
     });
-
-    function layout(){
-      var cardW = cards[0].getBoundingClientRect().width;
-      var vpW = viewport.getBoundingClientRect().width;
-      var x = (vpW / 2) - (cardW / 2) - index * (cardW + GAP);
-      track.style.transform = 'translateX(' + x + 'px)';
-    }
-    function update(){
-      cards.forEach(function(c, i){ c.classList.toggle('is-active', i === index); });
-      dots.forEach(function(d, i){ d.classList.toggle('on', i === index); });
-      layout();
-    }
-    function go(i){ index = Math.max(0, Math.min(count - 1, i)); update(); }
-
-    prevBtn.addEventListener('click', function(){ go(index - 1); restart(); });
-    nextBtn.addEventListener('click', function(){ go(index + 1); restart(); });
-    /* Click a non-active (side) card to bring it to center; clicking the
-       active card lets its link (a real Instagram post) open normally. */
-    cards.forEach(function(card, i){
-      card.addEventListener('click', function(e){
-        if(i !== index){ e.preventDefault(); go(i); restart(); }
-      });
-    });
-    window.addEventListener('resize', layout);
-
-    /* ping-pong autoplay (no clones, no jump) */
-    var dir = 1, timer = null;
-    function autoplay(){ if(index >= count - 1) dir = -1; else if(index <= 0) dir = 1; go(index + dir); }
-    function start(){ if(reduce || count < 2) return; stop(); timer = setInterval(autoplay, 2000); }
-    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
-    function restart(){ stop(); start(); }
-    wrap.addEventListener('mouseenter', stop);
-    wrap.addEventListener('mouseleave', start);
-    wrap.addEventListener('focusin', stop);
-    wrap.addEventListener('focusout', start);
-
-    /* 3D mouse-perspective tilt — only the active (center) card */
-    if(!reduce){
-      var MAX_RX = 11, MAX_RY = 22, SMOOTH = 0.12;
-      var tX = 0, tY = 0, rX = 0, rY = 0;
-      function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
-      function onMove(e){
-        var r = cards[index].getBoundingClientRect();
-        var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
-        var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
-        var dist = Math.hypot(dx, dy);
-        var fall = dist <= 1 ? 1 : Math.max(0, 1 - (dist - 1) / 2);
-        tX = clamp(dy, -1, 1) * MAX_RX * fall;
-        tY = -clamp(dx, -1, 1) * MAX_RY * fall;
-      }
-      function tick(){
-        rX += (tX - rX) * SMOOTH;
-        rY += (tY - rY) * SMOOTH;
-        wrap.style.setProperty('--rx', rX.toFixed(2) + 'deg');
-        wrap.style.setProperty('--ry', rY.toFixed(2) + 'deg');
-        requestAnimationFrame(tick);
-      }
-      window.addEventListener('mousemove', onMove, {passive:true});
-      document.addEventListener('mouseleave', function(){ tX = 0; tY = 0; });
-      tick();
-    }
-
-    update();
-    start();
   }
+  render();
 
-  /* Source priority: Behold live feed (if an ID is set) → locally-hosted real
-     posts → the sample placeholder cards in the markup. Always degrades. */
-  function useLocalOrPlaceholder(){
-    if(GW_IG_LOCAL && GW_IG_LOCAL.length){ buildFromLocal(GW_IG_LOCAL); }
-    setup();
+  if(reduce) return; // static stack, no drag
+
+  var dragging = false, sx = 0, sy = 0, card = null, busy = false;
+  var THRESH = 88;
+
+  function down(e){
+    if(busy) return;
+    var top = stack[0];
+    if(!top || !top.contains(e.target)) return;
+    dragging = true; card = top; sx = e.clientX; sy = e.clientY;
+    card.classList.add('dragging');
+    try { card.setPointerCapture(e.pointerId); } catch(_){}
   }
-  if(BEHOLD_FEED_ID){
-    fetch('https://feeds.behold.so/' + BEHOLD_FEED_ID)
-      .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function(data){
-        var posts = (data && data.posts) || (Array.isArray(data) ? data : []);
-        if(posts && posts.length){ buildFromPosts(posts); setup(); }
-        else { useLocalOrPlaceholder(); }
-      })
-      .catch(function(){ useLocalOrPlaceholder(); }); // feed error → local posts
-  } else {
-    useLocalOrPlaceholder();
+  function move(e){
+    if(!dragging || !card) return;
+    var dx = e.clientX - sx, dy = e.clientY - sy;
+    card.style.transform = 'translate(-50%,-50%) translate(' + dx + 'px,' + dy + 'px) rotate(' + (dx*0.06).toFixed(2) + 'deg)';
   }
+  function up(e){
+    if(!dragging || !card) return;
+    dragging = false;
+    var dx = e.clientX - sx, dy = e.clientY - sy;
+    var dist = Math.sqrt(dx*dx + dy*dy);
+    var c = card; card = null;
+    c.classList.remove('dragging');
+    if(dist > THRESH){
+      busy = true;
+      var dir = dx >= 0 ? 1 : -1;
+      var offX = dir * Math.max(560, Math.abs(dx) * 2.2);
+      c.style.transform = 'translate(-50%,-50%) translate(' + offX + 'px,' + (dy*1.3) + 'px) rotate(' + (dir*14) + 'deg)';
+      c.style.opacity = '0';
+      window.setTimeout(function(){ stack.push(stack.shift()); render(); busy = false; }, 300);
+    } else {
+      render();
+    }
+  }
+  deck.addEventListener('pointerdown', down);
+  window.addEventListener('pointermove', move, {passive:true});
+  window.addEventListener('pointerup', up);
+  window.addEventListener('pointercancel', up);
 })();
 </script>
+
 
 <!-- ====================== FOOTER WORD (cursor reveal) ====================== -->
 <script>
