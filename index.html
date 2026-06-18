@@ -321,6 +321,7 @@
      ============================================================ */
   .head-block{max-width:760px}
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+  .pillar-clone{display:none} /* loop clone — only shown in the mobile carousel */
   .pillar{
     position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r-lg);
     border:1px solid var(--line);
@@ -683,6 +684,7 @@
       overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .pillars::-webkit-scrollbar{display:none}
     .pillar{flex:0 0 85%;scroll-snap-align:center}
+    .pillar-clone{display:block}
     .steps{grid-template-columns:1fr}
     .step{border-right:0;border-bottom:1px solid var(--line)}
     .step:last-child{border-bottom:0}
@@ -1579,21 +1581,34 @@
   if(!track) return;
   var mq = window.matchMedia('(max-width:560px)');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var timer = null, resume = null, idx = 0, dir = 1, st = null;
+  var timer = null, resume = null, idx = 0, st = null;
+
+  /* Append a clone of the first card so the loop wraps forward seamlessly
+     (…3 → clone-of-1 → instant snap back to the real 1 → 2 → 3…). The clone
+     is hidden on desktop via .pillar-clone so the 3-up grid is unaffected. */
+  var first = track.querySelector('.pillar');
+  if(first){
+    var clone = first.cloneNode(true);
+    clone.className = 'pillar pillar-clone';
+    clone.setAttribute('aria-hidden', 'true');
+    clone.removeAttribute('id');
+    track.appendChild(clone);
+  }
+  var ORIG = track.querySelectorAll('.pillar:not(.pillar-clone)').length;
 
   function cards(){ return track.querySelectorAll('.pillar'); }
   function centerOf(card){ return card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2; }
   function running(){ return mq.matches && !reduce.matches; }
+  function jump(i, smooth){ var cs = cards(); if(cs[i]) track.scrollTo({ left: centerOf(cs[i]), behavior: smooth ? 'smooth' : 'auto' }); }
 
-  function go(i){
-    var cs = cards(); if(!cs.length) return;
-    idx = Math.max(0, Math.min(cs.length - 1, i));
-    track.scrollTo({ left: centerOf(cs[idx]), behavior: 'smooth' });
-  }
   function tick(){
-    var cs = cards(); if(cs.length < 2) return;
-    if(idx >= cs.length - 1) dir = -1; else if(idx <= 0) dir = 1;
-    go(idx + dir);
+    if(ORIG < 2) return;
+    if(idx >= ORIG){ idx = 0; jump(0, false); }   // safety: realign to the real first card
+    idx++;
+    jump(idx, true);                               // always move forward
+    if(idx >= ORIG){                               // landed on the clone of the first card
+      setTimeout(function(){ if(idx >= ORIG){ idx = 0; jump(0, false); } }, 700); // seamless snap to real first
+    }
   }
   function start(){ stop(); if(running()){ timer = setInterval(tick, 3000); } }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
