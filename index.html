@@ -650,11 +650,11 @@
   /* ============================================================
      SCROLL-REVEAL VIDEO (ported from Aceternity ContainerScroll/Inset)
      ============================================================ */
-  .vidreveal{display:flex;justify-content:center;align-items:center;height:min(420px,86vw);margin:18px 0 30px}
-  .vidreveal-inset{width:min(420px,86vw);height:min(420px,86vw);display:flex;align-items:center;justify-content:center;
-    overflow:hidden;background:#070B17;border-radius:50%;transform:scale(.26);will-change:transform,border-radius}
-  .vidreveal-video{width:74%;height:74%;object-fit:contain;display:block}
-  @media (prefers-reduced-motion:reduce){.vidreveal-inset{transform:scale(1);border-radius:18px}}
+  .vidreveal{margin:24px auto 30px;width:100%;max-width:640px}
+  .vidreveal-inset{position:relative;width:100%;aspect-ratio:1040/880;overflow:hidden;background:#070B17;
+    clip-path:inset(35% 42% 35% 42% round 1000px);will-change:clip-path}
+  .vidreveal-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#070B17;display:block}
+  @media (prefers-reduced-motion:reduce){.vidreveal-inset{clip-path:inset(0 0 0 0 round 16px)}}
 
   /* ============================================================
      SCROLL REVEAL
@@ -1665,19 +1665,18 @@
 
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var MIN = 0.26;  // small-circle scale
   var ticking = false;
   function update(){
     ticking = false;
     var rect = sec.getBoundingClientRect();
     var vh = window.innerHeight;
-    // 0 when the element enters at the viewport bottom, 1 once its top reaches the middle
+    // 0 when the panel enters at the viewport bottom, 1 once its top is ~40% down
     // (completes before max scroll, since the footer is the last thing on the page)
-    var p = Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.5)));
-    var scale = (MIN + (1 - MIN) * p).toFixed(3);
-    var radius = (50 - 46 * p).toFixed(1);   // 50% (circle) -> 4% (rounded rect)
-    inset.style.transform = 'scale(' + scale + ')';
-    inset.style.borderRadius = radius + '%';
+    var p = Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.6)));
+    var iy = (35 * (1 - p)).toFixed(2);
+    var ix = (42 * (1 - p)).toFixed(2);
+    var r  = Math.round(16 + 984 * (1 - p));
+    inset.style.clipPath = 'inset(' + iy + '% ' + ix + '% ' + iy + '% ' + ix + '% round ' + r + 'px)';
   }
   function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', onScroll, {passive:true});
