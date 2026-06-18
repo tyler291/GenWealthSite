@@ -395,8 +395,8 @@
   /* ============================================================
      CALLOUTS — scroll-tilt container (ported from Aceternity ContainerScroll)
      ============================================================ */
-  .cscroll{height:160vh;position:relative;margin-top:24px}
-  .cscroll-sticky{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .cscroll{height:112vh;position:relative;margin-top:8px}
+  .cscroll-sticky{position:sticky;top:0;height:82vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .cscroll-card{will-change:transform;width:min(100%,1040px);margin:0 auto;
     transform:perspective(1100px) rotateX(18deg);transform-origin:50% 0;
     border:4px solid #1f2a44;border-radius:30px;padding:14px;
@@ -412,14 +412,14 @@
   .cscroll-ph img{width:64px;height:auto;opacity:.5;border:0;filter:drop-shadow(0 4px 14px rgba(212,175,55,.3))}
   .cscroll-ph p{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;max-width:30ch}
   @media (max-width:768px){
-    .cscroll{height:130vh}
+    .cscroll{height:108vh}
     .cscroll-card{transform:perspective(1100px) rotateX(14deg);border-width:3px;border-radius:22px;padding:8px}
     .cscroll-screen{height:min(56vh,420px);padding:12px}
   }
   @media (prefers-reduced-motion:reduce){.cscroll{height:auto}.cscroll-sticky{position:static;height:auto;padding:20px 0}.cscroll-card{transform:none}}
 
   /* PROOF — orbiting particle sphere of wins (ported from a react-three-fiber ParticleSphere) */
-  .proof{margin-top:72px}
+  .proof{margin-top:8px}
   .proof-sphere{position:relative;height:560px;margin-top:8px}
   .proof-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
   @media (max-width:768px){.proof-sphere{height:420px}}
@@ -857,7 +857,6 @@
 <section id="callouts" class="rule-top" aria-labelledby="callouts-title">
   <div class="wrap">
     <div class="head-block" style="text-align:center;margin:0 auto;display:flex;flex-direction:column;align-items:center">
-      <span class="eyebrow center reveal">How It Works</span>
       <h2 class="section-title reveal d1" id="callouts-title">How the callouts <span class="ital gold">work.</span></h2>
       <p class="lede reveal d2" style="text-align:center">Every callout follows one format. A setup goes live as <em>&ldquo;$TICKER must break $XX.XX&rdquo;</em> &mdash; your trigger to enter on a break and hold. Below it, a row of <em>&ldquo;Next&rdquo;</em> &#127919; targets shows where price is headed. As each prints, the call updates &mdash; <em>&ldquo;move up SL&rdquo;</em> &mdash; so you trail your stop and lock gains in. Scroll to see the room in action.</p>
     </div>
