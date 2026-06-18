@@ -652,15 +652,6 @@
   .foot-bottom a:hover{color:var(--gold)}
 
   /* ============================================================
-     SCROLL-REVEAL VIDEO (ported from Aceternity ContainerScroll/Inset)
-     ============================================================ */
-  .vidreveal{margin:24px auto 30px;width:100%}
-  .vidreveal-inset{position:relative;width:100%;aspect-ratio:1040/880;overflow:hidden;background:#070B17;
-    clip-path:inset(35% 42% 35% 42% round 1000px);will-change:clip-path;transform:translateZ(0);backface-visibility:hidden}
-  .vidreveal-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#070B17;display:block}
-  @media (prefers-reduced-motion:reduce){.vidreveal-inset{clip-path:inset(0 0 0 0 round 16px)}}
-
-  /* ============================================================
      SCROLL REVEAL
      ============================================================ */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
@@ -964,13 +955,6 @@
         <h4>Legal</h4>
         <a href="terms.html">Terms &amp; Disclaimer</a>
         <a href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-
-    <!-- Scroll-reveal logo video: small circle (whole logo) that scales up as it enters view -->
-    <div class="vidreveal" id="vidReveal" aria-label="Generational Wealth">
-      <div class="vidreveal-inset">
-        <video class="vidreveal-video" src="assets/logo-vid.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
       </div>
     </div>
 
@@ -1639,62 +1623,6 @@
   ['pointerdown','touchstart','wheel'].forEach(function(ev){ track.addEventListener(ev, pause, {passive:true}); });
   if(mq.addEventListener){ mq.addEventListener('change', start); }
   start();
-})();
-</script>
-
-<!-- ====================== SCROLL-REVEAL VIDEO ====================== -->
-<script>
-/* Scroll-driven logo reveal: a small circle (whole logo) that scales up to a
-   rounded panel as it enters the viewport near the footer. Muted/looping. */
-(function(){
-  "use strict";
-  var sec = document.getElementById('vidReveal');
-  if(!sec) return;
-  var inset = sec.querySelector('.vidreveal-inset');
-  var video = sec.querySelector('.vidreveal-video');
-
-  if(video){
-    video.muted = true;
-    var play = video.play && video.play();
-    if(play && play.catch) play.catch(function(){});  // muted autoplay may be deferred; ignore
-  }
-
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var mobile = window.matchMedia('(max-width:560px)');
-
-  function progress(){
-    var rect = sec.getBoundingClientRect();
-    var vh = window.innerHeight;
-    // 0 when the panel enters at the viewport bottom, 1 once its top is ~40% down
-    // (completes before max scroll, since the footer is the last thing on the page)
-    return Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.6)));
-  }
-  function apply(p){
-    var iy = (35 * (1 - p)).toFixed(2);
-    var ix = (42 * (1 - p)).toFixed(2);
-    var r  = Math.round(16 + 984 * (1 - p));
-    inset.style.clipPath = 'inset(' + iy + '% ' + ix + '% ' + iy + '% ' + ix + '% round ' + r + 'px)';
-  }
-
-  /* Desktop updates directly (frequent scroll events keep it smooth). Mobile
-     eases the clip-path toward the scroll target every frame, which smooths
-     out sparse touch-scroll events and address-bar viewport-height jumps. */
-  var target = progress(), cur = target, raf = 0;
-  function loop(){
-    cur += (target - cur) * 0.2;
-    if(Math.abs(target - cur) < 0.0008) cur = target;
-    apply(cur);
-    raf = (cur === target) ? 0 : requestAnimationFrame(loop);
-  }
-  function onScroll(){
-    target = progress();
-    if(mobile.matches){ if(!raf) raf = requestAnimationFrame(loop); }
-    else { cur = target; apply(target); }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onScroll);
-  apply(cur);
 })();
 </script>
 
