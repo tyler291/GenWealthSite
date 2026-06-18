@@ -642,6 +642,8 @@
   .foot-soc a{width:42px;height:42px;border:1px solid var(--line);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--ink-300);transition:.25s var(--ease)}
   .foot-soc a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
   .foot-soc svg{width:18px;height:18px}
+  /* line the Explore/Legal headers up with the brand wordmark (not the logo top) */
+  .foot-col{padding-top:16px}
   .foot-col h4{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
   .foot-col a,.foot-col span{display:block;font-size:14px;color:var(--ink-400);padding:7px 0;transition:color .2s var(--ease)}
   .foot-col a:hover{color:var(--cream)}
@@ -671,6 +673,7 @@
     .longgame .wrap{grid-template-columns:1fr;gap:40px}
     .foot-top{grid-template-columns:1fr 1fr}
     .foot-brand{grid-column:1/-1}
+    .foot-col{padding-top:0}
   }
   @media (max-width:960px){
     .nav-links,.nav-cta .btn{display:none}
