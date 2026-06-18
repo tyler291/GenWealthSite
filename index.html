@@ -212,7 +212,7 @@
   /* soft scrim so the hero grid/hills don't bleed through behind the nav at the top */
   header.site::before{
     content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-    background:linear-gradient(180deg,rgba(7,11,23,.92) 0%,rgba(7,11,23,.55) 55%,transparent 100%);
+    background:linear-gradient(180deg,rgba(7,11,23,.99) 0%,rgba(7,11,23,.97) 65%,rgba(7,11,23,.94) 100%);
     transition:opacity .3s var(--ease);
   }
   header.site.scrolled::before{opacity:0}
@@ -287,7 +287,7 @@
   .hero-inner{position:relative;z-index:2;max-width:880px}
   .hero h1{
     font-family:var(--font-sans);font-weight:900;
-    font-size:clamp(48px,9vw,108px);line-height:.96;letter-spacing:-.035em;color:var(--ink-100);
+    font-size:clamp(44px,8.1vw,95px);line-height:.98;letter-spacing:-.035em;color:var(--ink-100);
     margin:0;
   }
   .hero h1 .serif{font-family:var(--font-serif);font-style:italic;font-weight:600;letter-spacing:-.01em}
