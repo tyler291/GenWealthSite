@@ -270,6 +270,12 @@
     position:relative;min-height:100svh;display:flex;align-items:center;
     padding:140px 0 80px;overflow:hidden;
   }
+  /* Edgeless top vignette: darkens behind the nav and fades smoothly into
+     the hero (no hard line/box), covering the hills behind the header. */
+  .hero::before{
+    content:"";position:absolute;left:0;right:0;top:0;height:260px;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(7,11,23,.96) 0%,rgba(7,11,23,.88) 26%,rgba(7,11,23,.5) 58%,rgba(7,11,23,0) 100%);
+  }
   /* Animated candlestick chart, decorative */
   .hero-hills{position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.4s var(--ease);pointer-events:none}
   .hero-hills.on{opacity:.9}
