@@ -207,15 +207,11 @@
   header.site{
     position:fixed;top:0;left:0;right:0;z-index:60;
     transition:background .3s var(--ease),border-color .3s var(--ease),backdrop-filter .3s var(--ease);
-    border-bottom:1px solid transparent;
+    border-bottom:1px solid transparent;background:transparent;
   }
-  /* soft scrim so the hero grid/hills don't bleed through behind the nav at the top */
-  header.site::before{
-    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-    background:linear-gradient(180deg,rgba(7,11,23,.99) 0%,rgba(7,11,23,.97) 65%,rgba(7,11,23,.94) 100%);
-    transition:opacity .3s var(--ease);
-  }
-  header.site.scrolled::before{opacity:0}
+  /* At the very top the header is fully transparent (no box) so the hero
+     gradient extends seamlessly behind the nav. The box below appears
+     once .scrolled is added (as soon as scrolling starts). */
   header.site.scrolled{
     background:rgba(7,11,23,.82);backdrop-filter:blur(14px) saturate(140%);
     -webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom-color:var(--line);
@@ -1130,7 +1126,7 @@
   // Sticky header state
   var header = document.getElementById('siteHeader');
   var onScroll = function(){
-    if(window.scrollY > 24){ header.classList.add('scrolled'); }
+    if(window.scrollY > 6){ header.classList.add('scrolled'); }
     else { header.classList.remove('scrolled'); }
   };
   window.addEventListener('scroll', onScroll, {passive:true});
