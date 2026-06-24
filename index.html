@@ -296,6 +296,8 @@
   .hero p.sub{font-size:clamp(16px,1.9vw,21px);color:var(--ink-400);max-width:60ch;margin-top:26px;line-height:1.6}
   .hero p.sub strong{color:var(--cream);font-weight:600}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  /* both hero CTAs identical size, desktop + mobile */
+  .hero-actions .btn-lg{width:min(248px,100%)}
   .hero-trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
   .trust-chip{
     display:inline-flex;align-items:center;gap:8px;
@@ -752,7 +754,6 @@
     <div class="hero-actions reveal d3">
       <a class="btn btn-primary btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener" data-cta="hero">
         Join the Room
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="btn btn-ghost btn-lg btn-pixel" href="#method">
         <pixel-canvas data-gap="6" data-speed="42" data-colors="#22C55E,#16A34A,#E8C766"></pixel-canvas>
