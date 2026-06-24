@@ -169,6 +169,9 @@
   .lede strong{color:var(--cream);font-weight:600}
 
   section{position:relative;padding:clamp(72px,11vw,140px) 0}
+  /* "How the callouts work": tighter top/bottom spacing — desktop -20%, mobile -50% */
+  #callouts{padding-top:clamp(58px,8.8vw,112px);padding-bottom:clamp(58px,8.8vw,112px)}
+  @media (max-width:768px){#callouts{padding-top:36px;padding-bottom:36px}}
   .rule-top{border-top:1px solid var(--line-soft)}
 
   /* Buttons */
