@@ -333,10 +333,7 @@
       radial-gradient(120% 120% at 50% 0%, rgba(212,175,55,.06), transparent 58%),
       linear-gradient(180deg,#0c1430,#080e1f);
     box-shadow:0 30px 60px -42px rgba(0,0,0,.9);
-    transition:transform .5s var(--ease),border-color .5s var(--ease),box-shadow .5s var(--ease);
   }
-  .pillar:hover{transform:translateY(-8px) rotate(-1deg) scale(1.02);border-color:rgba(212,175,55,.5);
-    box-shadow:0 44px 80px -38px rgba(0,0,0,.95),0 0 0 1px rgba(212,175,55,.12)}
 
   /* GlowCard: brand gold->green glow on the card border. The pointer is tracked
      RELATIVE to each card (--x/--y, card-local px) — no background-attachment:fixed —
@@ -365,13 +362,8 @@
   /* decorative background layer */
   .pillar-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;border-radius:inherit}
   .pillar-bg .blob{position:absolute;bottom:-52px;left:-52px;width:170px;height:170px;border-radius:50%;
-    background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);filter:blur(28px);opacity:.45;
-    animation:floaty 7s ease-in-out infinite}
-  .pillar-bg .shine{position:absolute;top:0;bottom:0;left:0;width:55%;
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent);
-    transform:translateX(-170%) skewX(-12deg);transition:transform 1s var(--ease)}
-  .pillar:hover .pillar-bg .shine{transform:translateX(330%) skewX(-12deg)}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);filter:blur(28px);opacity:.45}
+  .pillar-bg .shine{display:none}
 
   .pillar-inner{position:relative;z-index:2;padding:46px 34px 42px;display:flex;flex-direction:column;align-items:center;text-align:center}
 
@@ -381,9 +373,7 @@
   .pillar-icon .ring.r2{inset:-7px;border-color:rgba(212,175,55,.14)}
   .pillar-icon .badge{position:relative;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
     background:radial-gradient(circle at 50% 32%, rgba(212,175,55,.18), rgba(212,175,55,.05));
-    border:1px solid rgba(212,175,55,.4);color:var(--gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
-    transition:box-shadow .4s var(--ease)}
-  .pillar:hover .pillar-icon .badge{box-shadow:0 0 22px -8px rgba(212,175,55,.45)}
+    border:1px solid rgba(212,175,55,.4);color:var(--gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
   .pillar-icon .badge svg{width:28px;height:28px}
 
   .pillar .num{font-family:var(--font-mono);font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--gold);opacity:.65}
@@ -391,17 +381,13 @@
   .pillar p{font-size:15px;color:var(--ink-400);line-height:1.7}
 
   /* growing divider */
-  .pillar .divline{margin-top:18px;width:34%;height:2px;border-radius:999px;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width .5s var(--ease),height .5s var(--ease)}
-  .pillar:hover .divline{width:56%;height:3px}
+  .pillar .divline{margin-top:18px;width:46%;height:2px;border-radius:999px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 
   /* dot row */
-  .pillar .dots{display:flex;gap:7px;margin-top:14px;opacity:.5;transition:opacity .3s var(--ease)}
-  .pillar:hover .dots{opacity:1}
-  .pillar .dots i{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:dotb 1.5s var(--ease) infinite}
-  .pillar .dots i:nth-child(2){animation-delay:.15s;background:var(--green)}
-  .pillar .dots i:nth-child(3){animation-delay:.3s}
-  @keyframes dotb{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .pillar .dots{display:flex;gap:7px;margin-top:14px;opacity:.55}
+  .pillar .dots i{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .pillar .dots i:nth-child(2){background:var(--green)}
 
   /* corner glints */
   .pillar .corner{position:absolute;width:62px;height:62px;z-index:1;opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
