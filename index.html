@@ -332,9 +332,7 @@
   .pillar{
     position:relative;overflow:visible;isolation:isolate;border-radius:var(--r-lg);
     border:1px solid var(--line);
-    background:
-      radial-gradient(120% 120% at 50% 0%, rgba(212,175,55,.06), transparent 58%),
-      linear-gradient(180deg,#0c1430,#080e1f);
+    background:linear-gradient(180deg,#0d1528,#0a0f1e);
     box-shadow:0 30px 60px -42px rgba(0,0,0,.9);
   }
 
@@ -362,40 +360,11 @@
   }
   @media (prefers-reduced-motion:reduce){.pillar::before,.pillar::after{display:none}}
 
-  /* decorative background layer */
-  .pillar-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;border-radius:inherit}
-  .pillar-bg .blob{position:absolute;bottom:-52px;left:-52px;width:170px;height:170px;border-radius:50%;
-    background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);filter:blur(28px);opacity:.45}
-  .pillar-bg .shine{display:none}
-
-  .pillar-inner{position:relative;z-index:2;padding:46px 34px 42px;display:flex;flex-direction:column;align-items:center;text-align:center}
-
-  /* icon badge with rings */
-  .pillar-icon{position:relative;width:78px;height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .pillar-icon .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(212,175,55,.28)}
-  .pillar-icon .ring.r2{inset:-7px;border-color:rgba(212,175,55,.14)}
-  .pillar-icon .badge{position:relative;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-    background:radial-gradient(circle at 50% 32%, rgba(212,175,55,.18), rgba(212,175,55,.05));
-    border:1px solid rgba(212,175,55,.4);color:var(--gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
-  .pillar-icon .badge svg{width:28px;height:28px}
-
-  .pillar .num{font-family:var(--font-mono);font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--gold);opacity:.65}
-  .pillar h3{font-family:var(--font-sans);font-weight:800;font-size:21px;color:var(--ink-100);margin:10px 0 12px;letter-spacing:-.01em}
+  /* clean card content — mono tag, title, body, left-aligned */
+  .pillar-inner{position:relative;z-index:2;padding:30px 30px 32px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+  .pillar-tag{font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;color:var(--gold-bright);margin-bottom:16px}
+  .pillar h3{font-family:var(--font-sans);font-weight:800;font-size:21px;color:var(--ink-100);margin:0 0 12px;letter-spacing:-.01em}
   .pillar p{font-size:15px;color:var(--ink-400);line-height:1.7}
-
-  /* growing divider */
-  .pillar .divline{margin-top:18px;width:46%;height:2px;border-radius:999px;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-
-  /* dot row */
-  .pillar .dots{display:flex;gap:7px;margin-top:14px;opacity:.55}
-  .pillar .dots i{width:6px;height:6px;border-radius:50%;background:var(--gold)}
-  .pillar .dots i:nth-child(2){background:var(--green)}
-
-  /* corner glints */
-  .pillar .corner{position:absolute;width:62px;height:62px;z-index:1;opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
-  .pillar .corner.tl{top:0;left:0;background:linear-gradient(135deg,rgba(212,175,55,.20),transparent 62%);border-radius:var(--r-lg) 0 100% 0}
-  .pillar .corner.br{bottom:0;right:0;background:linear-gradient(315deg,rgba(34,197,94,.16),transparent 62%);border-radius:100% 0 var(--r-lg) 0}
 
   /* ============================================================
      CALLOUTS — scroll-tilt container (ported from Aceternity ContainerScroll)
@@ -809,43 +778,25 @@
     </div>
     <div class="pillars">
       <article class="pillar reveal d1">
-        <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
-        <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
         <div class="pillar-inner">
-          <div class="pillar-icon" aria-hidden="true">
-            <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="15.5" x2="21" y2="15.5" stroke-dasharray="2.5 2.5"/><path d="M12 21V5"/><path d="m7 10 5-5 5 5"/></svg></span>
-          </div>
-          <span class="num">01</span>
+          <span class="pillar-tag">[ 01 / break ]</span>
           <h3>Break &amp; Hold</h3>
           <p>We never chase. When a level is called &mdash; <em>&ldquo;STOCK must break $XX.XX&rdquo;</em> &mdash; price has to break clean through it <strong>and hold</strong> as the minute candle closes before we enter. Confirmation first, every single time.</p>
-          <span class="divline" aria-hidden="true"></span>        </div>
+        </div>
       </article>
       <article class="pillar reveal d2">
-        <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
-        <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
         <div class="pillar-inner">
-          <div class="pillar-icon" aria-hidden="true">
-            <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/></svg></span>
-          </div>
-          <span class="num">02</span>
+          <span class="pillar-tag">[ 02 / next ]</span>
           <h3>Know Your &lsquo;Next&rsquo;</h3>
           <p>Every callout comes with defined targets &mdash; each <em>&ldquo;Next&rdquo;</em> level the stock is aiming for once it breaks. You always know exactly where price is headed before you ever click buy, so you trade a plan, not a feeling.</p>
-          <span class="divline" aria-hidden="true"></span>        </div>
+        </div>
       </article>
       <article class="pillar reveal d3">
-        <div class="pillar-bg" aria-hidden="true"><span class="blob"></span><span class="shine"></span></div>
-        <span class="corner tl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
         <div class="pillar-inner">
-          <div class="pillar-icon" aria-hidden="true">
-            <span class="ring"></span><span class="ring r2"></span>
-            <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          </div>
-          <span class="num">03</span>
+          <span class="pillar-tag">[ 03 / trail ]</span>
           <h3>Trail &amp; Protect</h3>
           <p>As each target prints, your stop loss moves up behind the move to lock the gain in. Losses stay small, winners are left to run. <strong>Keep your losses small and your wins big</strong> &mdash; that&rsquo;s the whole game.</p>
-          <span class="divline" aria-hidden="true"></span>        </div>
+        </div>
       </article>
     </div>
   </div>
