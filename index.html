@@ -169,9 +169,9 @@
   .lede strong{color:var(--cream);font-weight:600}
 
   section{position:relative;padding:clamp(72px,11vw,140px) 0}
-  /* "How the callouts work": tighter top/bottom spacing — desktop -20%, mobile -50% */
-  #callouts{padding-top:clamp(58px,8.8vw,112px);padding-bottom:clamp(58px,8.8vw,112px)}
-  @media (max-width:768px){#callouts{padding-top:36px;padding-bottom:36px}}
+  /* Method / Callouts / Instagram: even, tighter top/bottom spacing — desktop -20%, mobile -50% */
+  #method,#callouts,#instagram{padding-top:clamp(58px,8.8vw,112px);padding-bottom:clamp(58px,8.8vw,112px)}
+  @media (max-width:768px){#method,#callouts,#instagram{padding-top:36px;padding-bottom:36px}}
   .rule-top{border-top:1px solid var(--line-soft)}
 
   /* Buttons */
@@ -855,7 +855,6 @@
 <section id="callouts" class="rule-top" aria-labelledby="callouts-title">
   <div class="wrap">
     <div class="head-block" style="text-align:center;margin:0 auto;display:flex;flex-direction:column;align-items:center">
-      <span class="eyebrow center reveal">Inside Look</span>
       <h2 class="section-title reveal d1" id="callouts-title">How the callouts <span class="ital gold">work.</span></h2>
     </div>
   </div>
@@ -886,10 +885,6 @@
   <div class="wrap">
     <div class="ig-head-block">
       <h2 class="section-title reveal d1" id="ig-title">Straight from <span class="ital gold">the feed.</span></h2>
-      <a class="btn btn-ghost ig-follow reveal d3" href="https://www.instagram.com/genwealthtrade" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        Follow @genwealthtrade
-      </a>
     </div>
 
     <!-- Instagram post stack — drag the top post to flip through. Images are
