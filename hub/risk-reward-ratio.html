@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#070B17" />
+<title>Risk-to-Reward Ratio: How to Actually Use It in Trading</title>
+<meta name="description" content="Risk-to-reward ratio matters more than win rate. Learn how to set R:R, the break-even win rates for 1:1, 1:2 and 1:3, and how to keep losses small and winners big." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/risk-reward-ratio.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Risk-to-Reward Ratio: How to Actually Use It" />
+<meta property="og:description" content="Why R:R beats win rate, the break-even math, and how to keep losses small and winners big." />
+<meta property="og:url" content="https://gwhlds.com/hub/risk-reward-ratio.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/risk-reward.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Risk-to-Reward Ratio: How to Actually Use It in Trading","description":"Why R:R beats win rate and how to use it.","image":"https://gwhlds.com/assets/hub/risk-reward.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/risk-reward-ratio.html","datePublished":"2026-06-25"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Risk-to-Reward Ratio","item":"https://gwhlds.com/hub/risk-reward-ratio.html"}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Risk-to-Reward Ratio</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk Management</span>
+        <h1>Risk-to-Reward Ratio: How to Actually Use It</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">June 25, 2026 · 5 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/risk-reward.jpg" alt="Risk and reward levels marked on a price chart" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Your <strong>risk-to-reward ratio</strong> (R:R) compares what you stand to lose against what you stand to gain on a trade. Risk $1 to make $2 and you're trading <strong>1:2</strong>. It sounds basic — but it's the single number that decides whether your strategy can survive a normal losing streak.</p>
+
+    <p>Most new traders obsess over win rate. They want to be <em>right</em>. But you can be right most of the time and still lose money if your losers are bigger than your winners. R:R is how you make sure being wrong stays cheap.</p>
+
+    <h2>How to measure it</h2>
+    <p>R:R is set the moment you plan the trade:</p>
+    <ul>
+      <li><strong>Risk</strong> = entry price − stop-loss (where the idea is wrong).</li>
+      <li><strong>Reward</strong> = target − entry (where you'll take profit).</li>
+      <li><strong>R:R</strong> = Reward ÷ Risk.</li>
+    </ul>
+    <p>If your stop is 20 pips away and your target is 60 pips away, that's a 1:3 trade. Decide both <em>before</em> you enter — never after, when emotion is driving.</p>
+
+    <h2>The math that matters: break-even win rate</h2>
+    <p>Every R:R has a minimum win rate you need just to break even. Beat it and you're profitable; fall below it and you bleed:</p>
+    <div class="kv"><table>
+      <tr><th>Risk : Reward</th><th>Break-even win rate</th><th>What it means</th></tr>
+      <tr><td>1 : 1</td><td>50%</td><td>You must be right half the time</td></tr>
+      <tr><td>1 : 2</td><td>33%</td><td>Win 1 in 3 and you're flat</td></tr>
+      <tr><td>1 : 3</td><td>25%</td><td>Win 1 in 4 and you're flat</td></tr>
+      <tr><td>2 : 1</td><td>67%</td><td>You must be right two-thirds of the time</td></tr>
+    </table></div>
+    <div class="callout"><b>Read that table again.</b> At 1:3, you can be <em>wrong 70% of the time</em> and still make money. That's the power of asymmetry — and why chasing 2:1-against "high probability" scalps quietly destroys accounts.</div>
+
+    <h2>Why R:R beats win rate</h2>
+    <p>A 90% win rate feels amazing — until the 1-in-10 loss is ten times the size of a win and erases the whole streak. Good traders accept being wrong often <em>because</em> their winners pay for many losers. They keep losses small and let winners run. That's not a slogan; it's the arithmetic above.</p>
+
+    <h2>Putting it together</h2>
+    <ol>
+      <li>Find a real level and a clean stop using <a href="support-and-resistance.html">support &amp; resistance</a>.</li>
+      <li>Set a target that gives you at least 1:2 — if it doesn't, skip the trade.</li>
+      <li>Size the position from your risk rule with the <a href="lot-size-calculator.html">position size calculator</a>.</li>
+      <li>As price moves to your first target, trail the stop to protect the gain.</li>
+    </ol>
+    <p>Notice that R:R, levels and position size are one connected system — change one and the others move. That's exactly how disciplined traders think about every single trade.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Every callout ships with defined targets and an invalidation, so the R:R is on the table before you enter. <em>Keep your losses small and your wins big</em> — that's the whole game. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>Bottom line</h2>
+    <p>Risk-to-reward is the asymmetry that lets you be wrong and still win. Plan your stop and target up front, demand at least 1:2, and let the math do the heavy lifting. Protect the downside and the upside takes care of itself.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="support-and-resistance.html">Support &amp; Resistance: Finding Real Levels</a>
+      <a href="lot-size-calculator.html">Lot Size &amp; Position Size Calculator</a>
+      <a href="what-is-a-lot-size.html">What Is a Lot Size in Trading?</a>
+      <a href="heikin-ashi-candles.html">Heikin Ashi Candles: How They Work</a>
+      <a href="day-trading-vs-swing-trading.html">Day Trading vs Swing Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Small losses, big winners. <span class="g">That's the whole game.</span></h2>
+  <p>Join a room that defines the risk and the reward before every trade — and trades a plan, not a feeling.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

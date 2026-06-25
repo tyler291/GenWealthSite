@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#070B17" />
+<title>Lot Size &amp; Position Size Calculator (Free) — Generational Wealth</title>
+<meta name="description" content="Free position size calculator. Enter your account, risk %, and stop in pips to get the exact lot size to trade. Plus the simple formula behind it, explained." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/lot-size-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Lot Size & Position Size Calculator (Free)" />
+<meta property="og:description" content="Enter your account, risk % and stop in pips — get the exact lot size to trade. Free, no signup." />
+<meta property="og:url" content="https://gwhlds.com/hub/lot-size-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Lot Size & Position Size Calculator (Free)","description":"Free position size calculator plus the formula behind it.","image":"https://gwhlds.com/assets/hub/calculator.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/lot-size-calculator.html","datePublished":"2026-06-25"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Lot Size Calculator","item":"https://gwhlds.com/hub/lot-size-calculator.html"}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Lot Size Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool · Position Sizing</span>
+        <h1>Lot Size &amp; Position Size Calculator</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">June 25, 2026 · 4 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/calculator.jpg" alt="Position size calculator on a trading desk" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Your position size should never be a guess. Enter your account, the percentage you're willing to risk, and how far away your stop is — and this calculator gives you the exact size to trade.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Position size calculator</h3>
+      <div class="row">
+        <div><label for="bal">Account balance ($)</label><input id="bal" type="number" inputmode="decimal" value="5000" min="0" step="100" /></div>
+        <div><label for="risk">Risk per trade (%)</label><input id="risk" type="number" inputmode="decimal" value="1" min="0" step="0.1" /></div>
+      </div>
+      <div class="row">
+        <div><label for="stop">Stop-loss (pips)</label><input id="stop" type="number" inputmode="decimal" value="25" min="0" step="1" /></div>
+        <div><label for="pv">Pip value per standard lot ($)</label><input id="pv" type="number" inputmode="decimal" value="10" min="0" step="0.5" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Amount at risk</div><div class="v" id="outRisk">$50.00</div></div>
+        <div class="stat"><div class="l">Lot size</div><div class="v" id="outLots">0.20 lots</div></div>
+        <div class="stat"><div class="l">Units</div><div class="v" id="outUnits">20,000</div></div>
+        <div class="stat"><div class="l">Micro lots</div><div class="v" id="outMicro">20</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">For most USD-quoted forex pairs the pip value per standard lot is about <strong>$10</strong>. For JPY pairs, indices and futures it differs — check your instrument and adjust the field. This tool is for education, not advice.</p>
+
+    <h2>The formula behind it</h2>
+    <p>There's no magic here — just one line you should know by heart:</p>
+    <div class="callout"><b>Lot size = (Account × Risk%) ÷ (Stop in pips × Pip value per lot)</b></div>
+    <p>Work it through with the defaults above: a $5,000 account risking 1% is <strong>$50</strong>. With a 25-pip stop and $10 pip value, that's $50 ÷ (25 × 10) = <strong>0.20 lots</strong> — two mini lots, or twenty micro lots. Widen the stop and the size shrinks; tighten it and the size grows. Your dollar risk stays fixed at $50 either way. That's the whole point.</p>
+
+    <h2>Why size from risk, not from conviction</h2>
+    <p>New traders size up when they "feel sure." That's exactly backwards. Conviction doesn't change the odds of a single trade — it just makes the loss bigger when you're wrong. Sizing from a fixed risk rule means no single trade can take a meaningful bite out of your account, no matter how confident you were.</p>
+    <p>If you want the deeper background on the units themselves, read <a href="what-is-a-lot-size.html">What Is a Lot Size?</a> first. Then pair this with a defined <a href="risk-reward-ratio.html">risk-to-reward ratio</a> so every trade has a planned downside <em>and</em> a planned upside.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> In the room, levels come with invalidations — so your stop distance is known, and your size falls right out of it. Disciplined sizing is the difference between a drawdown and a blow-up. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>Quick reference</h2>
+    <div class="kv"><table>
+      <tr><th>Account</th><th>Risk 1%</th><th>Stop 20 pips</th><th>Lot size</th></tr>
+      <tr><td>$2,000</td><td>$20</td><td>20 pips</td><td>0.10 lots</td></tr>
+      <tr><td>$5,000</td><td>$50</td><td>20 pips</td><td>0.25 lots</td></tr>
+      <tr><td>$10,000</td><td>$100</td><td>20 pips</td><td>0.50 lots</td></tr>
+      <tr><td>$25,000</td><td>$250</td><td>20 pips</td><td>1.25 lots</td></tr>
+    </table></div>
+    <p>Save the calculator, run it before every trade, and let your size be the boring, mechanical part of your process. The exciting part — the setups — is what we do together in the room.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-a-lot-size.html">What Is a Lot Size in Trading?</a>
+      <a href="risk-reward-ratio.html">Risk-to-Reward Ratio: How to Use It</a>
+      <a href="support-and-resistance.html">Support &amp; Resistance: Finding Real Levels</a>
+      <a href="heikin-ashi-candles.html">Heikin Ashi Candles: How They Work</a>
+      <a href="day-trading-vs-swing-trading.html">Day Trading vs Swing Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The math is easy. <span class="g">The discipline is the edge.</span></h2>
+  <p>Join a room that sizes every trade off a defined risk — and helps you do the same.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}
+  document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});
+  function num(id){var v=parseFloat(document.getElementById(id).value);return isFinite(v)?v:0;}
+  function fmt(n){return n.toLocaleString('en-US',{maximumFractionDigits:0});}
+  function calc(){
+    var bal=num('bal'),risk=num('risk'),stop=num('stop'),pv=num('pv');
+    var dollars=bal*risk/100;
+    var lots=(stop>0&&pv>0)?dollars/(stop*pv):0;
+    document.getElementById('outRisk').textContent='$'+dollars.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    document.getElementById('outLots').textContent=lots.toFixed(2)+' lots';
+    document.getElementById('outUnits').textContent=fmt(lots*100000);
+    document.getElementById('outMicro').textContent=fmt(lots*100);
+  }
+  ['bal','risk','stop','pv'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});
+  calc();
+})();
+</script>
+</body>
+</html>
