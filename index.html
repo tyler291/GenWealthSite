@@ -367,6 +367,33 @@
   .pillar-tag{font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:.05em;color:var(--gold-bright);margin-bottom:16px}
   .pillar p{font-size:15px;color:var(--ink-400);line-height:1.7}
 
+  /* ---- CometCard port (Aceternity): the card tilts in 3D toward the pointer with
+     a moving glare highlight; eases back to flat on leave ---- */
+  .pillar.comet{background:transparent;border:0;box-shadow:none;overflow:visible;
+    perspective:1000px;padding:0}
+  .pillar.comet::before,.pillar.comet::after{display:none}        /* kill the old glow ring on these */
+  .comet-card{position:relative;border-radius:16px;background:#11182b;border:1px solid #1f2a44;
+    box-shadow:0 30px 60px -32px rgba(0,0,0,.85);padding:26px 26px 20px;
+    display:flex;flex-direction:column;align-items:flex-start;text-align:left;
+    transform-style:preserve-3d;transition:transform .18s ease-out;
+    transform:translate3d(var(--tx,0),var(--ty,0),0) rotateX(calc(var(--ry,0)*1deg)) rotateY(calc(var(--rx,0)*1deg))}
+  .comet-glare{position:absolute;inset:0;z-index:30;border-radius:inherit;pointer-events:none;
+    mix-blend-mode:overlay;opacity:0;transition:opacity .25s ease;
+    background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.85) 8%,rgba(255,255,255,0) 60%)}
+  .pillar.comet.comet-active .comet-glare{opacity:.55}
+  .comet-title{font-family:var(--font-serif);font-weight:700;font-size:22px;color:var(--cream)}
+  .comet-intro{margin-top:13px;font-size:13.5px;color:var(--ink-300)}
+  .comet-list{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+  .comet-step{display:flex;gap:9px;align-items:flex-start}
+  .comet-step svg{width:16px;height:16px;color:var(--green);margin-top:2px;flex:0 0 16px}
+  .comet-step span{font-size:14px;line-height:1.4;color:var(--ink-100)}
+  .comet-desc{margin-top:15px;font-size:13px;line-height:1.6;color:var(--ink-300)}
+  .comet-desc strong{font-weight:600;color:var(--cream)}
+  .comet-foot{display:flex;width:100%;align-items:center;justify-content:space-between;
+    margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--font-mono);font-size:11px}
+  .comet-foot .l{color:var(--ink-400);letter-spacing:.14em;text-transform:uppercase}
+  .comet-foot .n{color:var(--gold-bright);opacity:.7}
+
   /* ============================================================
      CALLOUTS — scroll-tilt container (ported from Aceternity ContainerScroll)
      ============================================================ */
@@ -760,7 +787,7 @@
         Join the Room
       </a>
       <a class="btn btn-ghost btn-lg btn-pixel" href="#method">
-        <pixel-canvas data-gap="6" data-speed="42" data-colors="#22C55E,#16A34A,#E8C766"></pixel-canvas>
+        <pixel-canvas data-gap="4" data-speed="42" data-colors="#22C55E,#16A34A,#E8C766"></pixel-canvas>
         <span>See the method</span>
       </a>
     </div>
@@ -781,22 +808,49 @@
       <p class="lede reveal d2">Anyone can post a green candle. What lasts is a repeatable process you can run on your worst day. These three principles run under every callout, every session, every trade we take.</p>
     </div>
     <div class="pillars">
-      <article class="pillar reveal d1">
-        <div class="pillar-inner">
-          <span class="pillar-tag">[ 01 / break &amp; hold ]</span>
-          <p>We never chase. When a level is called &mdash; <em>&ldquo;STOCK must break $XX.XX&rdquo;</em> &mdash; price has to break clean through it <strong>and hold</strong> as the minute candle closes before we enter. Confirmation first, every single time.</p>
+      <article class="pillar comet reveal d1">
+        <div class="comet-card">
+          <div class="comet-glare"></div>
+          <p class="comet-title">Break &amp; hold</p>
+          <div class="comet-intro">How we enter a trade:</div>
+          <ul class="comet-list">
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Wait for the called level</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Price breaks clean through it</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>It holds as the candle closes</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Only then do we enter</span></li>
+          </ul>
+          <p class="comet-desc"><strong>Confirmation first, every single time</strong> &mdash; we never chase a move.</p>
+          <div class="comet-foot"><span class="l">The method</span><span class="n">#01</span></div>
         </div>
       </article>
-      <article class="pillar reveal d2">
-        <div class="pillar-inner">
-          <span class="pillar-tag">[ 02 / know your next ]</span>
-          <p>Every callout comes with defined targets &mdash; each <em>&ldquo;Next&rdquo;</em> level the stock is aiming for once it breaks. You always know where price is headed before you buy, so you trade a plan, not a feeling.</p>
+      <article class="pillar comet reveal d2">
+        <div class="comet-card">
+          <div class="comet-glare"></div>
+          <p class="comet-title">Know your next</p>
+          <div class="comet-intro">Every callout ships with:</div>
+          <ul class="comet-list">
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>A clear entry level</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Defined upside targets</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>The next level price aims for</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>A plan before you click buy</span></li>
+          </ul>
+          <p class="comet-desc">You always know where price is headed, so you <strong>trade a plan, not a feeling</strong>.</p>
+          <div class="comet-foot"><span class="l">The method</span><span class="n">#02</span></div>
         </div>
       </article>
-      <article class="pillar reveal d3">
-        <div class="pillar-inner">
-          <span class="pillar-tag">[ 03 / trail &amp; protect ]</span>
-          <p>As each target prints, your stop loss moves up behind the move to lock the gain in. Losses stay small, winners are left to run. <strong>Keep your losses small and your wins big</strong> &mdash; that&rsquo;s the whole game.</p>
+      <article class="pillar comet reveal d3">
+        <div class="comet-card">
+          <div class="comet-glare"></div>
+          <p class="comet-title">Trail &amp; protect</p>
+          <div class="comet-intro">As the trade works for you:</div>
+          <ul class="comet-list">
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Targets print one by one</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Your stop trails up behind</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Gains get locked in</span></li>
+            <li class="comet-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.3l2.5 2.5 4.7-5.3"/></svg><span>Losses stay small</span></li>
+          </ul>
+          <p class="comet-desc"><strong>Keep your losses small and your wins big</strong> &mdash; that&rsquo;s the whole game.</p>
+          <div class="comet-foot"><span class="l">The method</span><span class="n">#03</span></div>
         </div>
       </article>
     </div>
@@ -1569,7 +1623,7 @@
   var first = track.querySelector('.pillar');
   if(first){
     var clone = first.cloneNode(true);
-    clone.className = 'pillar pillar-clone';
+    clone.className = 'pillar comet pillar-clone';   /* keep the CometCard styling on the loop clone */
     clone.setAttribute('aria-hidden', 'true');
     clone.removeAttribute('id');
     track.appendChild(clone);
@@ -1579,23 +1633,38 @@
   function cards(){ return track.querySelectorAll('.pillar'); }
   function centerOf(card){ return card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2; }
   function running(){ return mq.matches && !reduce.matches; }
-  function jump(i, smooth){ var cs = cards(); if(cs[i]) track.scrollTo({ left: centerOf(cs[i]), behavior: smooth ? 'smooth' : 'auto' }); }
 
+  var prog = false;                                  // a programmatic scroll is in flight
+  function jump(i, smooth){ var cs = cards(); if(!cs[i]) return; prog = true; track.scrollTo({ left: centerOf(cs[i]), behavior: smooth ? 'smooth' : 'auto' }); }
+
+  /* Run cb once the scroll has actually settled (scrollend where supported,
+     else a timed fallback) so the wrap snap never fires mid-animation. */
+  function settle(cb){
+    var done = false;
+    function fin(){ if(done) return; done = true; track.removeEventListener('scrollend', fin); cb(); }
+    if('onscrollend' in window){ track.addEventListener('scrollend', fin); setTimeout(fin, 1100); }
+    else { setTimeout(fin, 620); }
+  }
+
+  /* Every step is the SAME single-card forward slide — including 3 → clone-of-1.
+     The clone is identical to card 1, so once that slide settles we snap back to
+     the real card 1 with no animation: invisible, and the loop stays uniform. */
   function tick(){
-    if(ORIG < 2) return;
-    if(idx >= ORIG){ idx = 0; jump(0, false); }   // safety: realign to the real first card
+    if(ORIG < 2 || !running()) return;
     idx++;
-    jump(idx, true);                               // always move forward
-    if(idx >= ORIG){                               // landed on the clone of the first card
-      setTimeout(function(){ if(idx >= ORIG){ idx = 0; jump(0, false); } }, 700); // seamless snap to real first
-    }
+    jump(idx, true);
+    settle(function(){
+      if(idx >= ORIG){ idx = 0; jump(0, false); }    // seamless wrap: clone -> real first
+      setTimeout(function(){ prog = false; }, 60);    // re-enable manual scroll sync
+    });
   }
   function start(){ stop(); if(running()){ timer = setInterval(tick, 3000); } }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
   function pause(){ stop(); if(resume) clearTimeout(resume); if(running()){ resume = setTimeout(start, 7000); } }
 
-  // keep idx in sync with whatever card is nearest center
+  // keep idx in sync with manual swipes (ignore our own programmatic scrolls)
   track.addEventListener('scroll', function(){
+    if(prog) return;
     clearTimeout(st);
     st = setTimeout(function(){
       var cs = cards(), c = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
@@ -1783,6 +1852,52 @@
     px = e.clientX; py = e.clientY;
     if(!raf) raf = requestAnimationFrame(apply);
   }, {passive:true});
+})();
+</script>
+
+<script>
+/* CometCard (Aceternity port): the card tilts in 3D toward the pointer (rotateX/Y
+   from the cursor's position over the card) with a glare highlight that tracks the
+   pointer, and eases back to flat on leave. Pure CSS-variable transforms (no rAF) —
+   a CSS transition smooths the motion. Pointer Events unify mouse + touch; skipped
+   for reduced-motion. */
+(function(){
+  "use strict";
+  var cards = document.querySelectorAll('#method .pillar.comet');
+  if(!cards.length) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ROT = 16, TR = 8;                                    // max tilt (deg) and translate (px)
+
+  Array.prototype.forEach.call(cards, function(card){
+    var inner = card.querySelector('.comet-card');
+    if(!inner) return;
+
+    function move(e){
+      var r = inner.getBoundingClientRect();
+      var xPct = (e.clientX - r.left) / r.width - 0.5;     // -0.5 … 0.5
+      var yPct = (e.clientY - r.top) / r.height - 0.5;
+      inner.style.setProperty('--rx', (xPct * 2 * ROT).toFixed(2));    // rotateY
+      inner.style.setProperty('--ry', (-yPct * 2 * ROT).toFixed(2));   // rotateX
+      inner.style.setProperty('--tx', (xPct * 2 * TR).toFixed(1) + 'px');
+      inner.style.setProperty('--ty', (yPct * 2 * TR).toFixed(1) + 'px');
+      inner.style.setProperty('--gx', ((xPct + 0.5) * 100).toFixed(1) + '%');
+      inner.style.setProperty('--gy', ((yPct + 0.5) * 100).toFixed(1) + '%');
+    }
+    function activate(){ card.classList.add('comet-active'); }
+    function reset(){
+      card.classList.remove('comet-active');
+      inner.style.setProperty('--rx', '0'); inner.style.setProperty('--ry', '0');
+      inner.style.setProperty('--tx', '0px'); inner.style.setProperty('--ty', '0px');
+      inner.style.setProperty('--gx', '50%'); inner.style.setProperty('--gy', '50%');
+    }
+
+    card.addEventListener('pointerenter', activate);
+    card.addEventListener('pointerdown', function(e){ activate(); move(e); });
+    card.addEventListener('pointermove', move, {passive:true});
+    card.addEventListener('pointerleave', reset);
+    card.addEventListener('pointerup', reset);
+    card.addEventListener('pointercancel', reset);
+  });
 })();
 </script>
 </body>
