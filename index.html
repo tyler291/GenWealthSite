@@ -1667,7 +1667,7 @@
       setTimeout(function(){ prog = false; }, 60);    // re-enable manual scroll sync
     });
   }
-  function start(){ stop(); if(running()){ timer = setInterval(tick, 3000); } }
+  function start(){ stop(); if(running()){ timer = setInterval(tick, 5000); } }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
   function pause(){ stop(); if(resume) clearTimeout(resume); if(running()){ resume = setTimeout(start, 7000); } }
 
