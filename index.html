@@ -270,7 +270,7 @@
     padding:16px 24px 30px;display:flex;flex-direction:column;gap:6px;
   }
   body.menu-open .mobile-menu{transform:translateY(0)}
-  .mobile-menu a{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--ink-300);padding:16px 4px;border-bottom:1px solid var(--line-soft)}
+  .mobile-menu a:not(.btn){font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--ink-300);padding:16px 4px;border-bottom:1px solid var(--line-soft)}
   .mobile-menu .btn{margin-top:18px}
 
   /* ============================================================
@@ -634,7 +634,7 @@
   .plan .btn{width:100%}
   .plan-fine{margin-top:14px;text-align:center;font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--ink-500)}
-  @media(max-width:560px){.plan{padding:30px 20px;max-width:none;margin-left:-16px;margin-right:-16px}}
+  @media(max-width:560px){.plan{padding:30px 20px;max-width:none;margin-left:-14px;margin-right:-14px}}
 
   /* ============================================================
      FOOTER
