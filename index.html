@@ -172,6 +172,10 @@
   /* Method / Callouts / Instagram: even, tighter top/bottom spacing — desktop -20%, mobile -50% */
   #method,#callouts,#instagram{padding-top:clamp(58px,8.8vw,112px);padding-bottom:clamp(58px,8.8vw,112px)}
   @media (max-width:768px){#method,#callouts,#instagram{padding-top:36px;padding-bottom:36px}}
+  /* Mobile safety net: clip any stray horizontal overflow (e.g. the fanned IG
+     stack) so the page never scrolls sideways. `clip` (not `hidden`) avoids
+     creating a scroll container. The Method carousel keeps its own overflow-x:auto. */
+  @media (max-width:768px){html,body{overflow-x:clip}}
   .rule-top{border-top:1px solid var(--line-soft)}
 
   /* Buttons */
@@ -418,8 +422,10 @@
        sticky frame, leaving a massive empty gap under the heading and above
        "the proof". Lay the tablet inline right beneath the heading instead. */
     .cscroll{height:auto;margin-top:44px}
-    .cscroll-sticky{position:static;height:auto;padding:0;overflow:visible}
-    .cscroll-card{transform:perspective(1100px) rotateX(14deg);transform-origin:50% 0;border-width:3px;border-radius:22px;padding:8px}
+    .cscroll-sticky{position:static;height:auto;padding:0;overflow:hidden}
+    /* flat + near-full-width on mobile so the tablet fits the screen (no 3D
+       perspective projecting its box past the viewport edges) */
+    .cscroll-card{transform:none;width:calc(100% - 4px);border-width:3px;border-radius:22px;padding:8px}
     .cscroll-screen{height:min(56vh,420px);padding:12px}
   }
   @media (prefers-reduced-motion:reduce){.cscroll{height:auto}.cscroll-sticky{position:static;height:auto;padding:20px 0}.cscroll-card{transform:none}}
@@ -628,7 +634,7 @@
   .plan .btn{width:100%}
   .plan-fine{margin-top:14px;text-align:center;font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--ink-500)}
-  @media(max-width:560px){.plan{padding:30px 22px}}
+  @media(max-width:560px){.plan{padding:30px 20px;max-width:none;margin-left:-16px;margin-right:-16px}}
 
   /* ============================================================
      FOOTER
@@ -700,8 +706,10 @@
   @media (max-width:560px){
     .wrap{padding:0 18px}
     .features{grid-template-columns:1fr}
-    /* Method pillars become a swipeable, auto-advancing carousel on mobile */
-    .pillars{display:flex;grid-template-columns:none;gap:14px;margin-top:40px;
+    /* Method pillars become a swipeable, auto-advancing carousel on mobile.
+       Negative margins break out of the wrap's 18px padding so each slide sits
+       ~2px from the screen edges, matching the membership card. */
+    .pillars{display:flex;grid-template-columns:none;gap:14px;margin-top:40px;margin-left:-16px;margin-right:-16px;
       overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .pillars::-webkit-scrollbar{display:none}
     .pillar{flex:0 0 100%;scroll-snap-align:center}   /* full-width slides, same width as the membership card */
@@ -1396,9 +1404,10 @@
   function update(){
     ticking = false;
     var rect = track.getBoundingClientRect();
+    /* Mobile lays the tablet flat and full-width (no scroll-pin) — never apply the
+       3D tilt there; its perspective would project the box past the screen edges. */
+    if(window.matchMedia && window.matchMedia('(max-width:768px)').matches){ card.style.transform = ''; return; }
     var max = track.offsetHeight - window.innerHeight;
-    /* Mobile lays the tablet inline (no scroll room) — let the CSS static tilt
-       stand instead of forcing it flat. */
     if(max <= 0){ card.style.transform = ''; return; }
     var p = Math.max(0, Math.min(1, (-rect.top) / max));
     var rot = (18 - 18 * p).toFixed(2);
