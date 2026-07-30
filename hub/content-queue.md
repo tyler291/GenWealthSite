@@ -61,12 +61,12 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Are day trading Discord groups worth it? An honest breakdown `(are-trading-discords-worth-it)`
 - [x] How to find a legit trading community (and 7 red flags to walk away from) `(how-to-find-a-legit-trading-community)`
 - [x] Free vs paid trading communities: what you actually get for the money `(free-vs-paid-trading-communities)`
-- [ ] What should a trading community cost? A pricing reality check
-- [ ] Trading alerts vs trading education: which one actually makes you better
-- [ ] Are trade alerts worth paying for? What to look for before subscribing
-- [ ] Trading mentorship: what real mentorship looks like vs what gets sold
-- [ ] How to vet a trading room before you pay a cent
-- [ ] Swing trading communities: what to look for if you have a day job
+- [x] What should a trading community cost? A pricing reality check `(trading-community-cost)`
+- [x] Trading alerts vs trading education: which one actually makes you better `(trading-alerts-vs-education)`
+- [x] Are trade alerts worth paying for? What to look for before subscribing `(are-trade-alerts-worth-it)`
+- [x] Trading mentorship: what real mentorship looks like vs what gets sold `(trading-mentorship)`
+- [x] How to vet a trading room before you pay a cent `(covered by how-to-find-a-legit-trading-community)`
+- [x] Swing trading communities: what to look for if you have a day job `(swing-trading-communities)`
 - [ ] Trading Discord vs Telegram vs private forum: which format works
 - [ ] What questions to ask before joining a trading room
 - [ ] Why most trading groups fail their members (and what to demand instead)
