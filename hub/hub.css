@@ -23,7 +23,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(7,11,23,.82);backdr
 .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
 .brand{display:flex;align-items:center;gap:14px}
 .brand img{height:64px;width:auto;filter:drop-shadow(0 4px 14px rgba(212,175,55,.3))}
-.brand .wm{font-family:var(--font-serif);font-weight:700;font-size:21px;line-height:1.2;color:var(--cream)}
+.brand .wm{font-family:var(--font-serif);font-weight:700;font-size:27px;line-height:1.2;color:var(--cream)}
 .brand .wm b{color:var(--gold);font-weight:700}.brand .wm i{color:var(--green);font-style:italic;font-weight:700}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-300)}
@@ -243,7 +243,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 /* ---- Footer ---- */
 footer.site{border-top:1px solid var(--line);padding:42px 0 48px;margin-top:0}
 .foot-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-.foot-row .brand .wm{font-size:18px}
+.foot-row .brand .wm{font-size:23px}
 .foot-row .brand img{height:48px}
 .foot-links{display:flex;flex-wrap:wrap;gap:22px;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-400)}
 .foot-links a{color:var(--ink-400)}.foot-links a:hover{color:var(--gold)}
