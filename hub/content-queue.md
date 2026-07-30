@@ -236,16 +236,29 @@ underneath so it ranks as content, not just a widget.
 
 ---
 
-## Refilling this queue
+## Refilling this queue — pull the next batch from the keyword map
 
-When fewer than 20 unchecked items remain, the routine refills it. Sources, in order:
+This queue is a **working set of ~100 titles**. The full keyword inventory — head
+("regular") keywords and long-tail spokes for the entire trading knowledge domain,
+sixteen clusters deep — lives in **[`keyword-map.md`](keyword-map.md)**.
 
-1. Google "People Also Ask" and autocomplete for the pillar phrases above.
-2. Reddit r/Daytrading, r/Forex, r/FuturesTrading — the questions that get asked weekly
-   are the ones with real demand and no good answer ranking.
-3. Gaps in our own clusters — any pillar with fewer than five spokes.
-4. Search Console (once the Hub has traffic): queries where we rank 5–20. Those are the
-   fastest wins and beat inventing new topics.
+**Trigger:** fewer than **20 unchecked items** left here.
 
-Add new items to the **end of the relevant phase**, never the top — the order encodes
-the strategy.
+**Then:**
+1. Open the **Batch ledger** at the bottom of `keyword-map.md` and take the next batch row.
+2. Convert its `MAP` spokes into real page titles — the way a person wants the question
+   answered, not the raw keyword.
+3. Drop any title that duplicates a live page's target phrase. Check the slug list first —
+   **one keyword, one page**, always.
+4. Append the ~100 titles to the **end of the relevant phase** below, never the top.
+   The order encodes the strategy.
+5. Flip the batch row to *In flight*; mark the previous batch *Done*.
+6. Report which batch was pulled and what was dropped for cannibalization.
+
+This is the "every 100 pages, another 100" loop. At 5 pages per run, one batch is
+roughly 20 run-days.
+
+**If the map itself runs low**, refill it from Search Console (queries ranking 5–20 —
+the fastest wins), Google PAA and autocomplete on each head keyword, Reddit
+r/Daytrading, r/Forex and r/FuturesTrading, gaps in clusters with fewer than five live
+spokes, and modifier crosses — but only where the answer genuinely differs.
