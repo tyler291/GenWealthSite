@@ -56,11 +56,11 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 
 ### Community cluster
 
-- [ ] Day trading community: what a good one actually does for you `[PILLAR]`
-- [ ] Best day trading Discord servers: what separates the real ones from the noise
-- [ ] Are day trading Discord groups worth it? An honest breakdown
-- [ ] How to find a legit trading community (and 7 red flags to walk away from)
-- [ ] Free vs paid trading communities: what you actually get for the money
+- [x] Day trading community: what a good one actually does for you `[PILLAR]` `(day-trading-community)`
+- [x] Best day trading Discord servers: what separates the real ones from the noise `(best-day-trading-discord-servers)`
+- [x] Are day trading Discord groups worth it? An honest breakdown `(are-trading-discords-worth-it)`
+- [x] How to find a legit trading community (and 7 red flags to walk away from) `(how-to-find-a-legit-trading-community)`
+- [x] Free vs paid trading communities: what you actually get for the money `(free-vs-paid-trading-communities)`
 - [ ] What should a trading community cost? A pricing reality check
 - [ ] Trading alerts vs trading education: which one actually makes you better
 - [ ] Are trade alerts worth paying for? What to look for before subscribing
@@ -75,7 +75,7 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [ ] Do trading communities work for beginners? An honest answer
 - [ ] What a trading callout should contain (entry, target, invalidation)
 - [ ] How to tell if a trading room's results are real
-- [ ] Trading community red flags: the seven we would walk away from
+- [x] Trading community red flags: the seven we would walk away from `(covered by how-to-find-a-legit-trading-community)`
 
 ### Comparison / alternatives
 
