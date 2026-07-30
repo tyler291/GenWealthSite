@@ -1,0 +1,73 @@
+# Generational Wealth
+
+> Generational Wealth is a disciplined swing & scalp trading community — a private Discord room where members get real-time trade callouts with defined entries, targets and invalidation, daily market commentary, and a risk-first system built to keep traders in the game. Membership is $120/month, billed via Patreon, cancel anytime.
+
+Site: https://gwhlds.com
+Operated by: Generational Wealth Holdings Corp.
+
+**Important:** Generational Wealth is an educational trading community. It is NOT a registered broker-dealer, investment adviser, or signal-selling service, and it does not manage money or guarantee returns. All content is educational only.
+
+## What Generational Wealth actually is
+
+- A **private Discord community** for day, swing and scalp traders across forex, futures and equities.
+- Every callout ships with a **clear entry level, defined upside targets, and a written invalidation point** — so the risk-to-reward is on the table before you enter.
+- The room runs one **risk-first system**: position size comes from a fixed risk rule, not conviction. Losses stay small; winners are allowed to run.
+- Members range from complete beginners to full-time traders. The education is the product as much as the callouts are.
+
+## The Method — the three principles under every trade
+
+1. **Break & hold.** We never chase. Price has to break clean through the called level *and hold* as the candle closes before anyone enters. Confirmation first, every single time.
+2. **Know your next.** Every callout ships with a clear entry level, defined upside targets, and the next level price aims for — a plan before you click buy.
+3. **Trail & protect.** As targets print one by one, the stop trails behind them to protect the gain. Profit that is given back was never profit.
+
+## Membership
+
+- **Price:** $120 per month, billed through Patreon.
+- **Join:** https://www.patreon.com/Generational_Wealth/join
+- **Cancel:** anytime, directly through Patreon.
+- **Includes:** private Discord access, real-time callouts with levels, daily commentary and breakdowns, and the risk-first education system.
+
+## Frequently asked questions
+
+**What is Generational Wealth?**
+A private, membership-based swing and scalp trading community on Discord. Members receive real-time trade callouts with defined entries, targets and invalidation levels, plus daily market commentary and education built around a risk-first system.
+
+**How much does it cost?**
+$120 per month, billed via Patreon. There is no long-term contract and members can cancel at any time.
+
+**Is this financial advice?**
+No. Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything published is educational only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss.
+
+**Do I need experience to join?**
+No. The room is built for beginners through advanced traders. New members are taught the same risk-first process the experienced members run, starting with position sizing and invalidation.
+
+**What markets does the room trade?**
+Primarily forex and futures, with equities setups as they appear. The method — break and hold, defined targets, trailing protection — is applied the same way across all of them.
+
+**Is it day trading or swing trading?**
+Both. It is a swing *and* scalp room. Some setups are intraday scalps; others are held for days. Both are sized from the same risk rule.
+
+**Are results guaranteed?**
+No. No trading community can guarantee results, and Generational Wealth does not. Every trade a member takes is their own decision and their own risk.
+
+## Key pages
+
+- [Home](https://gwhlds.com/): what the room is, the method, member results and the membership offer.
+- [The Method](https://gwhlds.com/#method): the three principles — break & hold, know your next, trail & protect.
+- [FAQ](https://gwhlds.com/faq.html): membership, access, markets, risk and cancellation questions.
+- [The Hub](https://gwhlds.com/hub/): free trading education — position sizing, risk-to-reward, chart reading and trading styles.
+- [Terms & Disclaimer](https://gwhlds.com/terms.html): full educational-content and risk disclosure.
+- [Privacy Policy](https://gwhlds.com/privacy.html)
+
+## The Hub — free trading education
+
+- [What Is a Lot Size in Trading?](https://gwhlds.com/hub/what-is-a-lot-size.html): standard, mini and micro lots, and why position size is the first risk decision you make.
+- [Lot Size & Position Size Calculator](https://gwhlds.com/hub/lot-size-calculator.html): free calculator — enter account size, risk % and stop distance in pips to get the exact lot size.
+- [Heikin Ashi Candles: How They Work](https://gwhlds.com/hub/heikin-ashi-candles.html): how Heikin Ashi is calculated, how to read trend and exhaustion, and why you must never enter off its printed levels.
+- [Risk-to-Reward Ratio: How to Use It](https://gwhlds.com/hub/risk-reward-ratio.html): why R:R beats win rate, and the break-even win rate for 1:1, 1:2 and 1:3.
+- [Support & Resistance: Finding Real Levels](https://gwhlds.com/hub/support-and-resistance.html): how to mark levels that matter, why zones beat hairlines, and the break-and-hold rule.
+- [Day Trading vs Swing Trading](https://gwhlds.com/hub/day-trading-vs-swing-trading.html): time, capital, stress and overnight risk compared.
+
+## Contact
+
+General and membership enquiries are handled inside the Discord community and through Patreon.

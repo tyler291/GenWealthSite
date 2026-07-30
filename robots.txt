@@ -4,4 +4,65 @@ Allow: /
 # Legal pages are intentionally low-priority but crawlable
 # (they carry noindex via meta tag, which is the correct signal)
 
+# ---------------------------------------------------------------
+# AI answer engines — explicitly welcome.
+# This is the file the AI crawlers actually read (llms.txt is barely
+# fetched by any of them), so allow them here, by name.
+# ---------------------------------------------------------------
+
+# OpenAI (ChatGPT search + browsing)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI Overviews / Gemini grounding
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot
+User-agent: BingBot
+Allow: /
+
+# Common Crawl (feeds many model training + retrieval sets)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ---------------------------------------------------------------
+
 Sitemap: https://gwhlds.com/sitemap.xml
