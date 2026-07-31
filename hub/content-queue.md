@@ -79,7 +79,7 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 
 ### Comparison / alternatives
 
-- [ ] Day trading vs swing trading `(covered by day-trading-vs-swing-trading)`
+- [x] Day trading vs swing trading `(covered by day-trading-vs-swing-trading)`
 - [ ] Scalping vs day trading: the real differences in time and temperament
 - [ ] Prop firm vs trading your own capital: the honest comparison
 - [ ] Are prop firm challenges worth it? The pass-rate reality
