@@ -67,11 +67,11 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Trading mentorship: what real mentorship looks like vs what gets sold `(trading-mentorship)`
 - [x] How to vet a trading room before you pay a cent `(covered by how-to-find-a-legit-trading-community)`
 - [x] Swing trading communities: what to look for if you have a day job `(swing-trading-communities)`
-- [ ] Trading Discord vs Telegram vs private forum: which format works
-- [ ] What questions to ask before joining a trading room
-- [ ] Why most trading groups fail their members (and what to demand instead)
-- [ ] Trading signals explained: how they work and where they go wrong
-- [ ] Copy trading vs learning to trade: the long-run math
+- [x] Trading Discord vs Telegram vs private forum: which format works `(trading-discord-vs-telegram)`
+- [x] What questions to ask before joining a trading room `(questions-to-ask-before-joining-a-trading-room)`
+- [x] Why most trading groups fail their members (and what to demand instead) `(why-trading-groups-fail)`
+- [x] Trading signals explained: how they work and where they go wrong `(trading-signals-explained)`
+- [x] Copy trading vs learning to trade: the long-run math `(copy-trading-vs-learning-to-trade)`
 - [ ] Do trading communities work for beginners? An honest answer
 - [ ] What a trading callout should contain (entry, target, invalidation)
 - [ ] How to tell if a trading room's results are real

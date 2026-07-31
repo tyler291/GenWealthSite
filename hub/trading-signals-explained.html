@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#070B17" />
+<title>Trading Signals Explained: How They Actually Work</title>
+<meta name="description" content="Trading signals explained: what a signal contains, how the delivery chain adds latency and slippage, where signals go wrong, and who is allowed to sell them." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/trading-signals-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Trading Signals Explained: How They Actually Work" />
+<meta property="og:description" content="What a trading signal contains, how it is produced and delivered, the four points where its edge leaks away, and who is allowed to sell one." />
+<meta property="og:url" content="https://gwhlds.com/hub/trading-signals-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/trading-signals-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Trading Signals Explained: How They Actually Work","description":"What a trading signal contains, how signals are produced and delivered, the four points where the edge leaks away, and the rules on who may sell them.","image":"https://gwhlds.com/assets/hub/trading-signals-explained.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/trading-signals-explained.html","datePublished":"2026-07-31"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Trading Signals Explained","item":"https://gwhlds.com/hub/trading-signals-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a trading signal?","acceptedAnswer":{"@type":"Answer","text":"A trading signal is an instruction to take a specific position: an instrument, a direction, an entry level, one or more targets and a stop or invalidation. Anything missing those five parts is a tip rather than a signal, because you cannot size the position or exit it from the information given."}},{"@type":"Question","name":"Why do trading signals stop working when a lot of people follow them?","acceptedAnswer":{"@type":"Answer","text":"Because the signal is one price and the followers are many orders. Every recipient sends a similar order into the same level within seconds, so later fills arrive worse than the published entry. The signal's stated risk-to-reward is measured from a price most subscribers never actually get."}},{"@type":"Question","name":"Are trading signal providers regulated?","acceptedAnswer":{"@type":"Answer","text":"It depends on the market and the jurisdiction. In the US, anyone who advises others for compensation on the advisability of trading futures, options on futures, swaps or retail forex may have to register with the CFTC as a commodity trading advisor and join the NFA, subject to exemptions. Equities and crypto sit under different rules."}},{"@type":"Question","name":"Can you learn to trade from following signals?","acceptedAnswer":{"@type":"Answer","text":"Only if the reasoning comes with the signal. A bare entry teaches nothing repeatable, because you never learn which condition made it a trade. A signal published with the level, the invalidation and why the level matters is a worked example, and worked examples do teach."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Trading Signals Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Community · Signals</span>
+        <h1>Trading Signals Explained: How They Actually Work</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">July 31, 2026 · 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/trading-signals-explained.jpg" alt="A signal tower casting a narrow beam across a dark sea of glowing candlestick waves with distant relay antennas" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A trading signal is an instruction to take a specific position: instrument, direction, entry level, targets and a stop. It is produced by a person or an algorithm, then delivered down a chain that adds delay at every step. Most of a signal's advertised edge is lost in that chain, not in the analysis.</p>
+
+    <p>Signals are the most-sold and least-explained product in retail trading. This page is the mechanics — how one is made, how it reaches you, and the four places its value leaks. Whether a subscription is worth paying for is a separate calculation, set out in <a href="are-trade-alerts-worth-it.html">are trade alerts worth paying for</a>.</p>
+
+    <h2>What a real signal contains</h2>
+    <p>Five parts, and a signal missing any of them is a tip:</p>
+    <ul>
+      <li><strong>Instrument and direction.</strong> What, and which way. The only part most free channels supply.</li>
+      <li><strong>Entry level.</strong> A price, not "now". "Now" is unrepeatable and unreviewable.</li>
+      <li><strong>Targets.</strong> Where the position is reduced or closed, ideally more than one.</li>
+      <li><strong>Invalidation or stop.</strong> The price at which the idea is wrong. Without it you cannot size the trade at all.</li>
+      <li><strong>Timestamp.</strong> When it was published, so it can be checked against the chart afterwards.</li>
+    </ul>
+    <p>The invalidation is the load-bearing one. Position size is derived from the distance between entry and stop — no stop, no size calculation, no risk control. That is why a channel posting directions without levels cannot be followed responsibly even if every call is right.</p>
+
+    <h2>Where signals come from</h2>
+    <div class="kv"><table>
+      <tr><th>Source</th><th>How it is produced</th><th>Main weakness</th></tr>
+      <tr><td>Discretionary trader</td><td>A person calling their own trades</td><td>Their context, account and tolerance are not yours</td></tr>
+      <tr><td>Algorithm or scanner</td><td>Rules applied to price data automatically</td><td>Fires in conditions it was never tested in</td></tr>
+      <tr><td>Aggregator or reseller</td><td>Signals bought or copied from elsewhere</td><td>You are last in a queue you cannot see</td></tr>
+      <tr><td>Marketing-first channel</td><td>Calls exist to sell the subscription</td><td>Record is curated; losers quietly vanish</td></tr>
+    </table></div>
+    <p>You can usually tell which you are looking at within a week. Discretionary callers explain themselves and sometimes hesitate. Algorithms are relentlessly consistent and never say "I don't like this one". Resellers post at odd, uniform delays. Marketing-first channels post the most and archive the least.</p>
+
+    <h2>The delivery chain, and where the edge leaks</h2>
+    <p>Between the decision and your fill sit at least four steps, and each one costs something:</p>
+    <ol>
+      <li><strong>Decision to publication.</strong> The caller sees the setup and types the message. Seconds to minutes.</li>
+      <li><strong>Publication to your screen.</strong> Push notification, phone in a pocket, meeting, commute. Seconds to hours.</li>
+      <li><strong>Your screen to your order.</strong> Reading, deciding, sizing, entering. Seconds to minutes.</li>
+      <li><strong>Your order to your fill.</strong> Spread, liquidity, and everyone else in the channel doing the same thing.</li>
+    </ol>
+    <p>Step four is the one nobody advertises. A signal is one price; its subscribers are many orders arriving at the same level within seconds of each other. The later fills are worse, and the published risk-to-reward was measured from a price a large share of subscribers never got. This is not fraud — it is arithmetic — but it means the advertised numbers describe the caller's trade, not the average subscriber's.</p>
+
+    <div class="callout"><b>Measure your own slippage.</b> For two weeks, log the published entry and your actual fill on every signal you take, in units of risk rather than currency. If your average fill is half an R worse than the call, then a strategy advertised at 1:2 is running at roughly 1:1.5 for you. That single number tells you more about a signal service than any win-rate screenshot.</div>
+
+    <h2>The five ways signals go wrong</h2>
+    <ul>
+      <li><strong>The level is stale by the time you act.</strong> The most common failure, and the reason chasing is so destructive. If price has already moved through the entry, the trade on offer is a different trade with a worse ratio.</li>
+      <li><strong>The stop is not part of the message.</strong> Members improvise exits, and improvised exits are where accounts break.</li>
+      <li><strong>Size is copied instead of calculated.</strong> "Two lots" means something completely different on a $2,000 account than on a $200,000 one. Size belongs to you, always — the mechanics are in <a href="risk-reward-ratio.html">how to use a risk-to-reward ratio</a>.</li>
+      <li><strong>The record is incomplete.</strong> If losers are removed, you cannot evaluate anything, and neither can the provider.</li>
+      <li><strong>Dependency sets in.</strong> After six months of following, many subscribers can still not identify a setup alone. That is a product outcome, not a personal failing — the pattern is examined in <a href="trading-alerts-vs-education.html">trading alerts versus trading education</a>.</li>
+    </ul>
+
+    <h2>Who is allowed to sell trading signals</h2>
+    <p>Selling trading advice is a regulated activity in many markets, and which rules apply depends on the instrument and your jurisdiction. In the United States, a <strong>commodity trading advisor</strong> is defined as a person who, for compensation or profit, advises others directly or indirectly on the value or advisability of trading futures contracts, options on futures, swaps or retail off-exchange forex. CTAs generally must register with the CFTC and become members of the National Futures Association before doing business, with narrow exemptions — including where advice has been provided to <strong>15 or fewer persons</strong> in the preceding 12 months and the person does not hold themselves out generally to the public as a CTA (<a href="https://www.nfa.futures.org/registration-membership/who-has-to-register/cta.html" target="_blank" rel="nofollow noopener">NFA, Who Has to Register</a>).</p>
+    <p>Equities, options and crypto signals sit under different regimes again, and in the EU a service that produces trades in a client's account can be treated as investment advice or portfolio management under MiFID II. Rules vary by country and by product, so check with a licensed professional in your jurisdiction rather than assuming — and treat any provider who cannot describe their own regulatory position as having answered the question.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We publish callouts, not bare signals, and the difference is deliberate. Every call carries an entry level, defined targets and the next level price aims for — know your next — so it can be checked afterwards against the chart. Break and hold means the level must break and hold as the candle closes before anyone acts, which removes the chase that stale signals create. And size is always yours, calculated from your own risk. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>How to use a signal without becoming dependent</h2>
+    <ol>
+      <li><strong>Read the reasoning before the level.</strong> If there is no reasoning, you are collecting outcomes, not learning.</li>
+      <li><strong>Mark the level on your own chart first.</strong> Two minutes. It converts a signal into a rehearsal.</li>
+      <li><strong>Size it yourself, every time.</strong> From your account and your risk rule, never from the caller's stated size.</li>
+      <li><strong>Skip stale calls without regret.</strong> A missed trade costs nothing. A chased one costs the difference.</li>
+      <li><strong>Review weekly against the archive.</strong> Your fills versus the published levels, in R. Do this for a month and you will know exactly what you are buying.</li>
+    </ol>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a trading signal?</h3>
+    <p>A trading signal is an instruction to take a specific position: an instrument, a direction, an entry level, one or more targets and a stop or invalidation. Anything missing those five parts is a tip rather than a signal, because you cannot size the position or exit it from the information given.</p>
+
+    <h3>Why do trading signals stop working when a lot of people follow them?</h3>
+    <p>Because the signal is one price and the followers are many orders. Every recipient sends a similar order into the same level within seconds, so later fills arrive worse than the published entry. The signal's stated risk-to-reward is measured from a price most subscribers never actually get.</p>
+
+    <h3>Are trading signal providers regulated?</h3>
+    <p>It depends on the market and the jurisdiction. In the US, anyone who advises others for compensation on the advisability of trading futures, options on futures, swaps or retail forex may have to register with the CFTC as a commodity trading advisor and join the NFA, subject to exemptions. Equities and crypto sit under different rules.</p>
+
+    <h3>Can you learn to trade from following signals?</h3>
+    <p>Only if the reasoning comes with the signal. A bare entry teaches nothing repeatable, because you never learn which condition made it a trade. A signal published with the level, the invalidation and why the level matters is a worked example, and worked examples do teach.</p>
+
+    <h2>Bottom line</h2>
+    <p>A signal is worth what survives the chain between the decision and your fill — and what survives depends far more on whether the call includes a level, a stop and a reason than on how good the analysis was. Judge providers on completeness and honesty of the record, size every position yourself, and skip anything stale. Then read <a href="day-trading-community.html">what a good trading community actually does</a> for the version of this that leaves you able to trade alone.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="are-trade-alerts-worth-it.html">Are Trade Alerts Worth Paying For?</a>
+      <a href="trading-alerts-vs-education.html">Trading Alerts vs Trading Education</a>
+      <a href="day-trading-community.html">Day Trading Community: What a Good One Does</a>
+      <a href="risk-reward-ratio.html">Risk-to-Reward Ratio: How to Use It</a>
+      <a href="how-to-find-a-legit-trading-community.html">How to Find a Legit Trading Community</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Callouts, not bare signals. <span class="g">Level, target, invalidation.</span></h2>
+  <p>The Hub stays free. When you want the reasoning attached to the level, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

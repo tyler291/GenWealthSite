@@ -77,6 +77,11 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Are Trade Alerts Worth Paying For?](https://gwhlds.com/hub/are-trade-alerts-worth-it.html): the five things an alert must contain, the latency and slippage gap that destroys most of its value, and the break-even maths in units of risk.
 - [Trading Mentorship: Real vs Sold](https://gwhlds.com/hub/trading-mentorship.html): what a real mentor does, the six things to demand before paying, how to verify the person, and group versus one-to-one.
 - [Swing Trading Communities With a Day Job](https://gwhlds.com/hub/swing-trading-communities.html): why live day trading rooms fail a working trader, what a swing room must do asynchronously, and the gap-risk trade-off.
+- [Trading Discord vs Telegram vs Private Forum](https://gwhlds.com/hub/trading-discord-vs-telegram.html): how each format handles searchable archives, call timestamps, moderation and platform risk, and the four things that matter more than the app.
+- [Questions to Ask Before Joining a Trading Room](https://gwhlds.com/hub/questions-to-ask-before-joining-a-trading-room.html): twelve questions to ask before paying, what a good answer sounds like, and the four evasions that should end the conversation.
+- [Why Most Trading Groups Fail Their Members](https://gwhlds.com/hub/why-trading-groups-fail.html): the six structural reasons rooms fail the people paying for them, the research on the underlying base rate, and what to demand instead.
+- [Trading Signals Explained](https://gwhlds.com/hub/trading-signals-explained.html): what a signal must contain, how signals are produced and delivered, where the edge leaks to latency and slippage, and who is allowed to sell them.
+- [Copy Trading vs Learning to Trade](https://gwhlds.com/hub/copy-trading-vs-learning-to-trade.html): what each path costs over five years, the four ways copied returns decay, the ESMA regulatory position, and when copying genuinely makes sense.
 
 ## Contact
 
