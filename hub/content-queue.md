@@ -72,16 +72,16 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Why most trading groups fail their members (and what to demand instead) `(why-trading-groups-fail)`
 - [x] Trading signals explained: how they work and where they go wrong `(trading-signals-explained)`
 - [x] Copy trading vs learning to trade: the long-run math `(copy-trading-vs-learning-to-trade)`
-- [ ] Do trading communities work for beginners? An honest answer
-- [ ] What a trading callout should contain (entry, target, invalidation)
-- [ ] How to tell if a trading room's results are real
+- [x] Do trading communities work for beginners? An honest answer `(do-trading-communities-work-for-beginners)`
+- [x] What a trading callout should contain (entry, target, invalidation) `(what-a-trading-callout-should-contain)`
+- [x] How to tell if a trading room's results are real `(how-to-tell-if-trading-results-are-real)`
 - [x] Trading community red flags: the seven we would walk away from `(covered by how-to-find-a-legit-trading-community)`
 
 ### Comparison / alternatives
 
 - [x] Day trading vs swing trading `(covered by day-trading-vs-swing-trading)`
-- [ ] Scalping vs day trading: the real differences in time and temperament
-- [ ] Prop firm vs trading your own capital: the honest comparison
+- [x] Scalping vs day trading: the real differences in time and temperament `(scalping-vs-day-trading)`
+- [x] Prop firm vs trading your own capital: the honest comparison `(prop-firm-vs-own-capital)`
 - [ ] Are prop firm challenges worth it? The pass-rate reality
 - [ ] Forex vs futures for a new day trader: which to pick
 - [ ] Forex vs stocks for day trading: hours, leverage and cost compared

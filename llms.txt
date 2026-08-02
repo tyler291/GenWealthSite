@@ -83,6 +83,12 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Trading Signals Explained](https://gwhlds.com/hub/trading-signals-explained.html): what a signal must contain, how signals are produced and delivered, where the edge leaks to latency and slippage, and who is allowed to sell them.
 - [Copy Trading vs Learning to Trade](https://gwhlds.com/hub/copy-trading-vs-learning-to-trade.html): what each path costs over five years, the four ways copied returns decay, the ESMA regulatory position, and when copying genuinely makes sense.
 
+- [Do Trading Communities Work for Beginners?](https://gwhlds.com/hub/do-trading-communities-work-for-beginners.html): what a room genuinely accelerates for a new trader, the four things no community can do for you, and when waiting is the better call.
+- [What a Trading Callout Should Contain](https://gwhlds.com/hub/what-a-trading-callout-should-contain.html): the five required fields — instrument, direction, entry, targets, invalidation — why invalidation goes missing, and how to grade a call in units of risk.
+- [How to Tell If a Trading Room's Results Are Real](https://gwhlds.com/hub/how-to-tell-if-trading-results-are-real.html): the six ways a track record gets flattered, the evidence hierarchy from screenshots to audited statements, and a 20-minute self-audit.
+- [Scalping vs Day Trading](https://gwhlds.com/hub/scalping-vs-day-trading.html): tempo, trade frequency, why transaction costs decide scalping, the 2026 FINRA intraday margin change, and which temperament fits each.
+- [Prop Firm vs Trading Your Own Capital](https://gwhlds.com/hub/prop-firm-vs-own-capital.html): what an evaluation actually buys, the drawdown rules that end most funded accounts, the fee-driven business model, and who each path suits.
+
 ## Contact
 
 General and membership enquiries are handled inside the Discord community and through Patreon.
