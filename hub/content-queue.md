@@ -82,11 +82,11 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Day trading vs swing trading `(covered by day-trading-vs-swing-trading)`
 - [x] Scalping vs day trading: the real differences in time and temperament `(scalping-vs-day-trading)`
 - [x] Prop firm vs trading your own capital: the honest comparison `(prop-firm-vs-own-capital)`
-- [ ] Are prop firm challenges worth it? The pass-rate reality
-- [ ] Forex vs futures for a new day trader: which to pick
-- [ ] Forex vs stocks for day trading: hours, leverage and cost compared
-- [ ] Paper trading vs live trading: what changes the day real money is on
-- [ ] Self-taught vs joining a room: what each path actually costs you
+- [x] Are prop firm challenges worth it? The pass-rate reality `(are-prop-firm-challenges-worth-it)`
+- [x] Forex vs futures for a new day trader: which to pick `(forex-vs-futures-day-trading)`
+- [x] Forex vs stocks for day trading: hours, leverage and cost compared `(forex-vs-stocks-day-trading)`
+- [x] Paper trading vs live trading: what changes the day real money is on `(paper-trading-vs-live-trading)`
+- [x] Self-taught vs joining a room: what each path actually costs you `(self-taught-vs-trading-room)`
 - [ ] Trading courses vs live trading rooms: which teaches faster
 - [ ] Full-time vs part-time trading: what each realistically requires
 

@@ -89,6 +89,12 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Scalping vs Day Trading](https://gwhlds.com/hub/scalping-vs-day-trading.html): tempo, trade frequency, why transaction costs decide scalping, the 2026 FINRA intraday margin change, and which temperament fits each.
 - [Prop Firm vs Trading Your Own Capital](https://gwhlds.com/hub/prop-firm-vs-own-capital.html): what an evaluation actually buys, the drawdown rules that end most funded accounts, the fee-driven business model, and who each path suits.
 
+- [Are Prop Firm Challenges Worth It?](https://gwhlds.com/hub/are-prop-firm-challenges-worth-it.html): what the largest independent dataset says about pass rates and payouts, the true cost across repeated attempts, and when an evaluation is a rational purchase.
+- [Forex vs Futures for a New Day Trader](https://gwhlds.com/hub/forex-vs-futures-day-trading.html): dealer versus clearing house counterparty, where costs actually come from, the CFTC leverage caps, market hours, and which suits a small account.
+- [Forex vs Stocks for Day Trading](https://gwhlds.com/hub/forex-vs-stocks-day-trading.html): the $25,000 pattern day trader rule stated precisely, session hours, leverage limits, where transaction costs hide, and which market fits a smaller account.
+- [Paper Trading vs Live Trading](https://gwhlds.com/hub/paper-trading-vs-live-trading.html): what a demo account genuinely teaches, the four things a simulator cannot reproduce, and the smallest-size bridge from practice to real money.
+- [Self-Taught vs Joining a Trading Room](https://gwhlds.com/hub/self-taught-vs-trading-room.html): the cost of each path in money, time and drawdown, what a room genuinely compresses, and the cases where learning alone is the better decision.
+
 ## Contact
 
 General and membership enquiries are handled inside the Discord community and through Patreon.
