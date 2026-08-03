@@ -94,6 +94,11 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Forex vs Stocks for Day Trading](https://gwhlds.com/hub/forex-vs-stocks-day-trading.html): the $25,000 pattern day trader rule stated precisely, session hours, leverage limits, where transaction costs hide, and which market fits a smaller account.
 - [Paper Trading vs Live Trading](https://gwhlds.com/hub/paper-trading-vs-live-trading.html): what a demo account genuinely teaches, the four things a simulator cannot reproduce, and the smallest-size bridge from practice to real money.
 - [Self-Taught vs Joining a Trading Room](https://gwhlds.com/hub/self-taught-vs-trading-room.html): the cost of each path in money, time and drawdown, what a room genuinely compresses, and the cases where learning alone is the better decision.
+- [The Pattern Day Trader Rule in 2026](https://gwhlds.com/hub/pattern-day-trader-rule.html): FINRA retired the PDT designation and its $25,000 minimum on June 4, 2026 — what the intraday margin standard replaced it with, and why brokers may still enforce the old gate through the phase-in to October 2027.
+- [How to Start Day Trading](https://gwhlds.com/hub/how-to-start-day-trading.html): the eight steps in the order that works — one market, then structure, then the rules, then a written plan, then risk-based sizing — and what to skip entirely.
+- [How Much Money Do You Need to Start Day Trading?](https://gwhlds.com/hub/how-much-money-to-start-day-trading.html): the regulatory, practical and survivable minimums by market, and how to calculate your own backwards from risk per trade.
+- [Trading Courses vs Trading Rooms](https://gwhlds.com/hub/trading-courses-vs-trading-rooms.html): courses teach concepts faster and rooms teach application faster — what each format is good at, how each fails, and the five questions to ask before paying either.
+- [Full-Time vs Part-Time Trading](https://gwhlds.com/hub/full-time-vs-part-time-trading.html): what each requires in capital, hours and temperament, and why withdrawing income from an account changes every decision you make.
 
 ## Contact
 

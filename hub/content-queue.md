@@ -87,8 +87,8 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Forex vs stocks for day trading: hours, leverage and cost compared `(forex-vs-stocks-day-trading)`
 - [x] Paper trading vs live trading: what changes the day real money is on `(paper-trading-vs-live-trading)`
 - [x] Self-taught vs joining a room: what each path actually costs you `(self-taught-vs-trading-room)`
-- [ ] Trading courses vs live trading rooms: which teaches faster
-- [ ] Full-time vs part-time trading: what each realistically requires
+- [x] Trading courses vs live trading rooms: which teaches faster `(trading-courses-vs-trading-rooms)`
+- [x] Full-time vs part-time trading: what each realistically requires `(full-time-vs-part-time-trading)`
 
 ---
 
@@ -96,9 +96,9 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 
 ### Getting started cluster
 
-- [ ] How to start day trading: a realistic step-by-step for beginners `[PILLAR]`
-- [ ] How much money do you need to start day trading?
-- [ ] The pattern day trader (PDT) rule explained, and how traders work around it
+- [x] How to start day trading: a realistic step-by-step for beginners `[PILLAR]` `(how-to-start-day-trading)`
+- [x] How much money do you need to start day trading? `(how-much-money-to-start-day-trading)`
+- [x] The pattern day trader (PDT) rule explained, and how traders work around it `(pattern-day-trader-rule)`
 - [ ] Can you day trade with $500? What is and isn't realistic
 - [ ] How long does it take to become a profitable trader?
 - [ ] Day trading for beginners: the first 30 days, week by week
