@@ -99,11 +99,11 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] How to start day trading: a realistic step-by-step for beginners `[PILLAR]` `(how-to-start-day-trading)`
 - [x] How much money do you need to start day trading? `(how-much-money-to-start-day-trading)`
 - [x] The pattern day trader (PDT) rule explained, and how traders work around it `(pattern-day-trader-rule)`
-- [ ] Can you day trade with $500? What is and isn't realistic
-- [ ] How long does it take to become a profitable trader?
-- [ ] Day trading for beginners: the first 30 days, week by week
-- [ ] What percentage of day traders are profitable? What the data says
-- [ ] Is day trading gambling? The line between the two
+- [x] Can you day trade with $500? What is and isn't realistic `(can-you-day-trade-with-500)`
+- [x] How long does it take to become a profitable trader? `(how-long-to-become-a-profitable-trader)`
+- [x] Day trading for beginners: the first 30 days, week by week `(day-trading-first-30-days)`
+- [x] What percentage of day traders are profitable? What the data says `(what-percentage-of-day-traders-are-profitable)`
+- [x] Is day trading gambling? The line between the two `(is-day-trading-gambling)`
 - [ ] Best time of day to trade: session by session
 - [ ] How many trades a day should a beginner take?
 - [ ] Do you need a license to day trade?
