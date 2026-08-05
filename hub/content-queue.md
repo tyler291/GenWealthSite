@@ -104,11 +104,11 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Day trading for beginners: the first 30 days, week by week `(day-trading-first-30-days)`
 - [x] What percentage of day traders are profitable? What the data says `(what-percentage-of-day-traders-are-profitable)`
 - [x] Is day trading gambling? The line between the two `(is-day-trading-gambling)`
-- [ ] Best time of day to trade: session by session
-- [ ] How many trades a day should a beginner take?
-- [ ] Do you need a license to day trade?
-- [ ] Day trading taxes: what new traders get wrong (ask a tax professional)
-- [ ] How to choose a broker for day trading
+- [x] Best time of day to trade: session by session `(best-time-of-day-to-trade)`
+- [x] How many trades a day should a beginner take? `(how-many-trades-per-day)`
+- [x] Do you need a license to day trade? `(do-you-need-a-license-to-day-trade)`
+- [x] Day trading taxes: what new traders get wrong (ask a tax professional) `(day-trading-taxes)`
+- [x] How to choose a broker for day trading `(how-to-choose-a-broker-for-day-trading)`
 - [ ] What is leverage in trading, and how much is too much
 - [ ] What is a margin call and how to never get one
 - [ ] Demo account to live account: when you are actually ready
