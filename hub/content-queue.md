@@ -109,12 +109,12 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] Do you need a license to day trade? `(do-you-need-a-license-to-day-trade)`
 - [x] Day trading taxes: what new traders get wrong (ask a tax professional) `(day-trading-taxes)`
 - [x] How to choose a broker for day trading `(how-to-choose-a-broker-for-day-trading)`
-- [ ] What is leverage in trading, and how much is too much
-- [ ] What is a margin call and how to never get one
-- [ ] Demo account to live account: when you are actually ready
-- [ ] The 10 mistakes that blow up new trading accounts
-- [ ] How to build a trading plan you will actually follow
-- [ ] What is a trading journal and how to keep one that helps
+- [x] What is leverage in trading, and how much is too much `(what-is-leverage-in-trading)`
+- [x] What is a margin call and how to never get one `(what-is-a-margin-call)`
+- [x] Demo account to live account: when you are actually ready `(covered by paper-trading-vs-live-trading)`
+- [x] The 10 mistakes that blow up new trading accounts `(mistakes-that-blow-up-trading-accounts)`
+- [x] How to build a trading plan you will actually follow `(how-to-build-a-trading-plan)`
+- [x] What is a trading journal and how to keep one that helps `(trading-journal)`
 - [ ] Why most new traders quit in the first year
 
 ---

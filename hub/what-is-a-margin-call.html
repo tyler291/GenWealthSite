@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is a Margin Call and How to Never Get One</title>
+<meta name="description" content="What a margin call is, the 50% and 25% rules that trigger it, why your broker can sell without notice, and the six habits that keep you from ever seeing one." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-a-margin-call.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is a Margin Call and How to Never Get One" />
+<meta property="og:description" content="A margin call is a demand for more collateral, and the firm can sell without asking. The arithmetic that triggers one, and the sizing habits that prevent it." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-a-margin-call.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-a-margin-call.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is a Margin Call and How to Never Get One","description":"A margin call is a broker's demand for additional funds or securities once account equity falls below the maintenance requirement. How Regulation T's 50% initial margin and FINRA's 25% maintenance floor interact, the exact price at which a call is triggered, why firms can liquidate without notice, how futures and forex differ, and the sizing habits that prevent calls entirely.","image":"https://gwhlds.com/assets/hub/what-is-a-margin-call.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-a-margin-call.html","datePublished":"2026-08-06"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is a Margin Call?","item":"https://gwhlds.com/hub/what-is-a-margin-call.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens if you can't meet a margin call?","acceptedAnswer":{"@type":"Answer","text":"The firm sells positions in your account until the requirement is met. It may do so without contacting you first, it chooses which holdings to sell, and you have no right to an extension. Any shortfall that remains after the liquidation is still a debt you owe the firm."}},{"@type":"Question","name":"At what point does a margin call happen?","acceptedAnswer":{"@type":"Answer","text":"In a US stock margin account, when your equity falls below 25% of the current market value of the securities held, which is FINRA's maintenance requirement. Many brokers set a house requirement higher than 25%, so the call can arrive earlier than the regulatory floor suggests. Futures and forex accounts use different triggers entirely."}},{"@type":"Question","name":"How much do you have to deposit to satisfy a margin call?","acceptedAnswer":{"@type":"Answer","text":"Enough cash to bring equity back up to the maintenance requirement, which is the amount of the deficiency itself. If you meet the call by selling instead, you generally need to sell about four times the deficiency, because each dollar of stock sold under a 25% requirement releases roughly four dollars of buying power."}},{"@type":"Question","name":"Can you avoid margin calls completely?","acceptedAnswer":{"@type":"Answer","text":"Yes, by never using enough of your available margin for a normal adverse move to reach the maintenance threshold. If a single position risks one to two percent of the account and a stop is working, price cannot travel far enough to trigger a call before you are already out of the trade. A margin call is usually a position-sizing failure that arrived late."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is a Margin Call?</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Getting Started · Risk</span>
+        <h1>What Is a Margin Call, and How to Never Get One</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 6, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-a-margin-call.jpg" alt="Dark water rising inside a narrow steel vault toward the lower rungs of a tall ladder, a warning lamp glowing just above the waterline" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A margin call is a demand from your broker for more money or securities after your account equity falls below the required minimum. In US stock accounts that floor is 25% of the position's current market value. Firms can sell your holdings to meet it — without notice, and without asking which ones.</p>
+
+    <p>Most traders first learn what a margin call is on the day they get one, which is the worst possible time. It is not a warning shot or a negotiation. By the time the message arrives, the decision about your account has usually already been made somewhere else, and your job is to fund a number you did not choose within a window you do not control.</p>
+
+    <h2>The two numbers that govern a margin account</h2>
+    <p>US stock margin runs on two separate requirements, set by two different bodies, and confusing them is where most of the trouble starts.</p>
+    <ul>
+      <li><strong>Initial margin — 50%.</strong> Under Federal Reserve Regulation T, a firm can lend a customer up to 50% of the purchase price of a stock on a new position. Buy $20,000 of stock and $10,000 must be yours.</li>
+      <li><strong>Maintenance margin — 25%.</strong> FINRA rules sit on top of Reg T and require that "your equity in the account must not fall below 25 percent of the current market value of the securities in the account" (<a href="https://www.finra.org/investors/investing/investment-accounts/brokerage-accounts/margin-accounts" target="_blank" rel="nofollow noopener">FINRA, Margin Accounts</a>).</li>
+    </ul>
+    <p>Almost every broker then imposes a <strong>house requirement</strong> stricter than 25% — often 30% to 40%, and much higher on volatile or thinly traded names. The regulatory floor is the floor. Your broker's number is the one that will actually call you, and it can be changed with little warning when a stock gets busy.</p>
+
+    <h2>The arithmetic: exactly when a call triggers</h2>
+    <p>Take a clean example. You put in $10,000, borrow $10,000, and buy $20,000 of stock. Your equity is the market value minus what you owe, and the loan does not shrink when the stock falls — only your equity does.</p>
+    <div class="kv"><table>
+      <tr><th>Stock value</th><th>Loan owed</th><th>Your equity</th><th>Equity %</th><th>Status</th></tr>
+      <tr><td>$20,000</td><td>$10,000</td><td>$10,000</td><td>50%</td><td>Opening position</td></tr>
+      <tr><td>$16,000</td><td>$10,000</td><td>$6,000</td><td>37.5%</td><td>Comfortable</td></tr>
+      <tr><td>$13,333</td><td>$10,000</td><td>$3,333</td><td>25%</td><td>At the FINRA floor</td></tr>
+      <tr><td>$12,000</td><td>$10,000</td><td>$2,000</td><td>16.7%</td><td>Margin call</td></tr>
+    </table></div>
+    <p>The stock only has to fall <strong>33.3%</strong> to reach the regulatory threshold — and your own equity has fallen 66.7% by that point, twice as fast, because leverage cuts in the same proportion on the way down. At $12,000 the required equity is $3,000 and you have $2,000, so the deficiency is $1,000.</p>
+    <p>You can fix that in one of two ways, and they are not the same size. Depositing cash requires the deficiency itself: <strong>$1,000</strong>. Selling stock requires roughly <strong>four times</strong> the deficiency — about $4,000 — because under a 25% requirement each dollar of stock liquidated releases four dollars of buying power. Selling $4,000 leaves $8,000 of stock against a $6,000 loan: $2,000 of equity, exactly 25%. That four-to-one ratio is why forced liquidations gut a position rather than trimming it.</p>
+
+    <h2>What actually happens when the call arrives</h2>
+    <p>This is the part that surprises people, and FINRA states it plainly on the same page: <strong>"The firm can sell your securities without notice."</strong> Specifically:</p>
+    <ul>
+      <li><strong>Notification is a courtesy, not a right.</strong> Most firms try to reach you. They are not required to, and you have no right to be told about a margin deficiency at all.</li>
+      <li><strong>You do not choose what gets sold.</strong> The firm decides. That often means the most liquid holding goes first — frequently the position you least wanted to lose.</li>
+      <li><strong>There is no right to an extension.</strong> A firm may grant one. It may also liquidate the same afternoon.</li>
+      <li><strong>The debt survives the liquidation.</strong> If the sale does not cover what you owe, the remainder is still yours to pay.</li>
+      <li><strong>Requirements can change on the position you already hold.</strong> A broker can raise its house requirement mid-trade, and a call can appear without the price moving at all.</li>
+    </ul>
+    <p>None of that is a broker behaving badly. It is written into the margin agreement everyone signs and nobody reads — which is a good argument for reading it before funding, alongside the other checks in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+
+    <h2>Futures and forex work differently</h2>
+    <p>The 50% and 25% figures are equity-specific. Elsewhere the mechanism has the same shape but different plumbing.</p>
+    <p>In <strong>futures</strong>, margin is a performance bond set per contract by the exchange, split into initial and maintenance amounts. Drop below maintenance and you must restore the account to the full <em>initial</em> level, not merely back over the maintenance line — so the top-up is larger than the deficiency looks. Intraday margin offered by a broker is a broker concession, not an exchange rule, and it typically evaporates before the session close.</p>
+    <p>In <strong>retail forex</strong>, most platforms operate a margin-close-out rule that liquidates automatically at a set margin percentage rather than issuing a call and waiting. The practical difference is that there is often no human step at all — the position is simply closed. What sets the size of that exposure in the first place is covered in <a href="what-is-leverage-in-trading.html">what leverage is and how much is too much</a>.</p>
+    <p>US stock day traders have one more layer to understand: the intraday margin standard FINRA moved to in 2026, explained in <a href="pattern-day-trader-rule.html">the pattern day trader rule</a>.</p>
+
+    <div class="callout"><b>A margin call is a lagging indicator.</b> By the time it fires, the mistake — too much size, no stop, or an idea held long past the point it was disproved — happened days or weeks earlier. Treat a call as a diagnosis of the process rather than a cash-flow problem to be solved with a deposit.</div>
+
+    <h2>How to never get one</h2>
+    <p>Six habits, in the order they matter:</p>
+    <ol>
+      <li><strong>Size from risk, not from buying power.</strong> If a single trade risks 1–2% of the account, price cannot reach a maintenance threshold before your stop has already removed you. Almost every margin call is a sizing failure that arrived late.</li>
+      <li><strong>Use a real stop, resting at the venue.</strong> A stop in your head does not liquidate anything at 4am.</li>
+      <li><strong>Know your broker's house requirement, per instrument.</strong> Not the 25% regulatory floor — the actual number on the actual ticker, before you buy it.</li>
+      <li><strong>Keep a genuine cash buffer.</strong> Deploying 100% of available buying power means the first adverse move has nowhere to land.</li>
+      <li><strong>Respect overnight and weekend exposure.</strong> Gaps skip straight past stops. Reduce size or flatten before events you cannot trade through — the point of <a href="day-trading-vs-swing-trading.html">the day trading vs swing trading comparison</a> is largely this distinction.</li>
+      <li><strong>Never meet a call by adding to a losing position.</strong> Funding a call to keep a trade alive is averaging down with borrowed money and a deadline. If the idea was invalidated, the correct response is to close it.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A margin call is what happens when a position outlives its invalidation. <em>Know your next</em> means the level where the idea is dead is written down before the entry, so the exit is a rule and not a decision made under pressure. And because <em>trail &amp; protect</em> moves the stop up behind each printed target, a trade that has worked can no longer become the trade that calls the account. Risk that is defined in advance never has to be renegotiated with your broker. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What happens if you can't meet a margin call?</h3>
+    <p>The firm sells positions in your account until the requirement is met. It may do so without contacting you first, it chooses which holdings to sell, and you have no right to an extension. Any shortfall that remains after the liquidation is still a debt you owe the firm.</p>
+
+    <h3>At what point does a margin call happen?</h3>
+    <p>In a US stock margin account, when your equity falls below 25% of the current market value of the securities held, which is FINRA's maintenance requirement. Many brokers set a house requirement higher than 25%, so the call can arrive earlier than the regulatory floor suggests. Futures and forex accounts use different triggers entirely.</p>
+
+    <h3>How much do you have to deposit to satisfy a margin call?</h3>
+    <p>Enough cash to bring equity back up to the maintenance requirement, which is the amount of the deficiency itself. If you meet the call by selling instead, you generally need to sell about four times the deficiency, because each dollar of stock sold under a 25% requirement releases roughly four dollars of buying power.</p>
+
+    <h3>Can you avoid margin calls completely?</h3>
+    <p>Yes, by never using enough of your available margin for a normal adverse move to reach the maintenance threshold. If a single position risks one to two percent of the account and a stop is working, price cannot travel far enough to trigger a call before you are already out of the trade. A margin call is usually a position-sizing failure that arrived late.</p>
+
+    <h2>Bottom line</h2>
+    <p>A margin call is not a market event. It is an arithmetic event with a published formula: 50% to open, 25% to hold, a house requirement that is usually stricter, and a firm that may liquidate without telling you which position it took. A 33% fall in a fully margined stock puts you at the regulatory floor, and clearing the resulting deficiency by selling costs four times what clearing it with cash does. All of that becomes irrelevant the moment your position size comes out of a risk budget instead of a buying-power figure. Traders who size from risk do not manage margin calls — they never generate them. The rest of the setup sequence is in <a href="how-to-start-day-trading.html">how to start day trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-leverage-in-trading.html">What Is Leverage in Trading?</a>
+      <a href="pattern-day-trader-rule.html">The Pattern Day Trader Rule in 2026</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+      <a href="lot-size-calculator.html">Lot Size &amp; Position Size Calculator</a>
+      <a href="day-trading-vs-swing-trading.html">Day Trading vs Swing Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Never renegotiate risk. <span class="g">Define it first.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
