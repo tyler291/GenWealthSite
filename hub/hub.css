@@ -279,8 +279,16 @@ body.menu-open .mobile-menu{transform:translateY(0)}
 @media (max-width:760px){
   .card-grid{grid-template-columns:1fr;gap:18px}
   .art-side{flex-direction:column}
+  /* The 980px rule sets flex:1 1 280px to lay these out as two columns. Once the
+     sidebar flips to `column` that basis becomes a HEIGHT, pinning the card to
+     280px and letting overflow:hidden eat the Join button. Size to content. */
+  .side-cta,.side-related{flex:0 0 auto}
   .calc .row,.calc-out{grid-template-columns:1fr}
   .wrap{padding:0 16px}
+  /* main is both .wrap and .art-layout, so the shorthand above wipes the article
+     layout's vertical padding. Restore it with longhands so the sidebar isn't
+     flush against the CTA band and footer. */
+  .art-layout{padding-top:36px;padding-bottom:56px}
   .hub-plan-wrap{padding:48px 0 56px;margin-top:48px}
   .plan{padding:30px 22px}
   .pg-edge span{display:none}
