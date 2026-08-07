@@ -115,7 +115,7 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 - [x] The 10 mistakes that blow up new trading accounts `(mistakes-that-blow-up-trading-accounts)`
 - [x] How to build a trading plan you will actually follow `(how-to-build-a-trading-plan)`
 - [x] What is a trading journal and how to keep one that helps `(trading-journal)`
-- [ ] Why most new traders quit in the first year
+- [x] Why most new traders quit in the first year `(why-new-traders-quit)`
 
 ---
 
@@ -123,13 +123,13 @@ Google and the AIs. Name real trade-offs, including who we are *not* right for.
 
 This cluster is where we prove the room is worth joining. Be specific and show the math.
 
-- [ ] Risk management in trading: the system that keeps you in the game `[PILLAR]`
-- [ ] What is a lot size in trading `(covered by what-is-a-lot-size)`
-- [ ] Risk-to-reward ratio: how to use it `(covered by risk-reward-ratio)`
-- [ ] The 1% rule in trading: what it is and why it works
-- [ ] How to set a stop loss that isn't just a guess
-- [ ] Where to place your stop loss: four methods compared
-- [ ] What is invalidation and why every trade needs one in writing
+- [x] Risk management in trading: the system that keeps you in the game `[PILLAR]` `(risk-management-trading)`
+- [x] What is a lot size in trading `(covered by what-is-a-lot-size)`
+- [x] Risk-to-reward ratio: how to use it `(covered by risk-reward-ratio)`
+- [x] The 1% rule in trading: what it is and why it works `(the-1-percent-rule-in-trading)`
+- [x] How to set a stop loss that isn't just a guess `(how-to-set-a-stop-loss)`
+- [x] Where to place your stop loss: four methods compared `(covered by how-to-set-a-stop-loss)`
+- [x] What is invalidation and why every trade needs one in writing `(what-is-invalidation-in-trading)`
 - [ ] How to size a position from risk instead of conviction
 - [ ] What is a trailing stop and when to actually use one
 - [ ] How to take partial profits without capping your winners

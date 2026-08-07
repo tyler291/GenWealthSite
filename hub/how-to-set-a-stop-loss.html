@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Set a Stop Loss That Isn't Just a Guess</title>
+<meta name="description" content="How to set a stop loss from structure instead of feel: four placement methods compared, order-type mechanics, and the four places a stop should never go." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-set-a-stop-loss.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Set a Stop Loss That Isn't Just a Guess" />
+<meta property="og:description" content="Put the stop where the idea is wrong, then size the position so that distance costs your fixed risk. Four placement methods compared, plus the order-type traps." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-set-a-stop-loss.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-set-a-stop-loss.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Set a Stop Loss That Isn't Just a Guess","description":"A stop belongs where the trade idea is proven wrong, not where the loss feels tolerable. The four placement methods compared — structure, volatility, fixed percentage and time — how to give a stop room without oversizing, what a stop order does and does not guarantee at execution, the four places a stop should never sit, and the only direction a stop should move once you are in.","image":"https://gwhlds.com/assets/hub/how-to-set-a-stop-loss.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-set-a-stop-loss.html","datePublished":"2026-08-07"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How to Set a Stop Loss","item":"https://gwhlds.com/hub/how-to-set-a-stop-loss.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where should you place a stop loss?","acceptedAnswer":{"@type":"Answer","text":"Beyond the structure that defines the trade — past the swing low, the level, or a volatility band wide enough that ordinary noise cannot reach it. Place the stop first, then size the position so that distance costs your fixed risk. Setting the stop from how much you are willing to lose puts it at a price the market has no reason to respect."}},{"@type":"Question","name":"How far away should a stop loss be?","acceptedAnswer":{"@type":"Answer","text":"Far enough that normal fluctuation cannot reach it and close enough that the idea is genuinely disproved when it trades. A common volatility approach is one to two times the average true range of your timeframe beyond the structure. There is no universal percentage, because the correct distance is a property of the instrument and the setup, not of your account."}},{"@type":"Question","name":"Does a stop loss guarantee you exit at that price?","acceptedAnswer":{"@type":"Answer","text":"No. The SEC states plainly that the stop price is not the guaranteed execution price — it is a trigger that turns the order into a market order, and in a fast-moving market the fill can deviate significantly. A stop-limit order controls the price instead, but may not execute at all if price moves away from the limit."}},{"@type":"Question","name":"Should you move your stop loss?","acceptedAnswer":{"@type":"Answer","text":"Only toward profit, never away from it. Trailing a stop up behind printed targets reduces risk on a working trade. Widening a stop because price is approaching it converts a planned loss into an unplanned larger one and tells you the position was too big for the setup in the first place."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>How to Set a Stop Loss</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Execution</span>
+        <h1>How to Set a Stop Loss That Isn't Just a Guess</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 7, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-set-a-stop-loss.jpg" alt="A taut woven safety net stretched across a dark space beneath a thin high wire, lit by a single narrow spotlight" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Set a stop where the idea is wrong, not where the loss feels tolerable. That means placing it beyond the structure that defines the trade — the swing, the level, the volatility band — and then sizing the position so that distance costs you your fixed risk. The stop comes first; the size follows.</p>
+
+    <p>Most bad stops come from one inverted step. The trader picks a position size, notices the loss would be uncomfortable, and puts the stop somewhere that makes the number look acceptable. That price has no relationship to the chart, so the market runs through it on ordinary noise and then goes where the trade said it would. The trade was right; the stop was arbitrary.</p>
+
+    <h2>The rule that fixes most bad stops</h2>
+    <p>Reverse the order. Find the price at which your reason for being in the trade stops being true, put the stop beyond it, measure that distance, and let the distance decide how big the position is. Your loss is then fixed by your risk budget rather than by the stop's location — which is what makes wide stops perfectly survivable.</p>
+    <div class="callout"><b>The three-step version.</b> 1) Mark the level that invalidates the idea. 2) Place the stop just beyond it, with room for noise. 3) Position size = risk budget ÷ that distance. If the resulting size feels too small, the answer is a better setup, not a tighter stop. Run it through the <a href="lot-size-calculator.html">position size calculator</a>.</div>
+
+    <h2>Four ways to place a stop, compared</h2>
+    <div class="kv"><table>
+      <tr><th>Method</th><th>Where the stop goes</th><th>Best for</th><th>Weakness</th></tr>
+      <tr><td><strong>Structure</strong></td><td>Beyond the swing high/low or the level being traded</td><td>Level-based and breakout trading</td><td>Obvious to everyone, so it attracts sweeps</td></tr>
+      <tr><td><strong>Volatility (ATR)</strong></td><td>1–2× average true range beyond entry or structure</td><td>Adapting one rule across instruments</td><td>Ignores where the chart actually matters</td></tr>
+      <tr><td><strong>Fixed percentage</strong></td><td>A set % or point distance from entry</td><td>Simplicity; systematic testing</td><td>Same distance in calm and violent markets</td></tr>
+      <tr><td><strong>Time-based</strong></td><td>Exit if the move has not happened by a set time</td><td>Intraday setups with a catalyst window</td><td>Caps risk in time, not in price</td></tr>
+    </table></div>
+    <p>In practice the strongest approach combines the first two: <strong>structure decides where, volatility decides how far beyond.</strong> Find the swing low that would break the thesis, then add one ATR of the timeframe you are trading so an ordinary wick cannot reach you. The chart chooses the location; the volatility measure chooses the buffer.</p>
+    <p>Time-based stops are the most underused of the four. If you entered on the expectation of a move at the open and it is 11:15 with nothing happening, the setup has failed even though the price stop has not been touched. Closing it frees capital and attention, and it is how you avoid drifting into holding an intraday idea overnight — a distinction covered in <a href="day-trading-vs-swing-trading.html">day trading vs swing trading</a>.</p>
+
+    <h2>Giving the stop room without giving away the account</h2>
+    <p>"Wide stops are risky" is one of the most persistent errors in retail trading. Stop distance and risk are independent once you size correctly:</p>
+    <div class="kv"><table>
+      <tr><th>Stop distance</th><th>Position size (1% of $20,000 = $200)</th><th>Amount at risk</th></tr>
+      <tr><td>10 points</td><td>20 units</td><td>$200</td></tr>
+      <tr><td>25 points</td><td>8 units</td><td>$200</td></tr>
+      <tr><td>50 points</td><td>4 units</td><td>$200</td></tr>
+      <tr><td>100 points</td><td>2 units</td><td>$200</td></tr>
+    </table></div>
+    <p>The risk column never moves. What a wide stop actually costs you is <em>reward relative to risk</em> — the target has to be proportionally further away to keep the ratio intact, which is the arithmetic in <a href="risk-reward-ratio.html">the risk-to-reward ratio</a>. A wide stop is not dangerous. A wide stop with the position size of a tight one is.</p>
+
+    <h2>What a stop order actually does at execution</h2>
+    <p>A stop is an instruction, not a guarantee, and the difference shows up on exactly the days you need it most. The SEC's investor bulletin on order types states it directly: <strong>"The stop price is not the guaranteed execution price for a stop order."</strong> The stop price is a trigger that converts the order into a market order, and in a fast-moving market the execution "can deviate significantly from the stop price" (<a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-15" target="_blank" rel="nofollow noopener">SEC Office of Investor Education, Investor Bulletin: Stop, Stop-Limit, and Trailing Stop Orders</a>).</p>
+    <p>The same bulletin flags the other side of the trade-off: a stop-limit order fixes the worst price you will accept, but "may not be executed if the stock's price moves away from the specified limit price, which may occur in a fast-moving market." So you are choosing which risk to carry:</p>
+    <ul>
+      <li><strong>Stop-market</strong> — you will almost certainly get out, at an unknown price. Correct default for risk control.</li>
+      <li><strong>Stop-limit</strong> — you control the price and may not get out at all. Dangerous as a protective stop, because the scenario where it fails to fill is the scenario where you most needed it.</li>
+      <li><strong>Where the stop rests</strong> — a stop held on your broker's server depends on that server. One resting at the exchange does not. Worth asking before you fund an account, alongside the other checks in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</li>
+    </ul>
+    <p>The practical consequence: your calculated 1% is a planning figure, not a hard ceiling. Gaps and fast markets can exceed it, which is a reason to size conservatively rather than a reason to skip the stop.</p>
+
+    <h2>Four places a stop should never go</h2>
+    <ol>
+      <li><strong>Exactly at the obvious level.</strong> Everyone's stop sits just under the swing low, which is precisely why price reaches down and takes them before turning. Add the buffer.</li>
+      <li><strong>On a round number.</strong> Whole figures attract resting orders. Place stops a few ticks beyond, not on them.</li>
+      <li><strong>At your pain threshold.</strong> "I can afford to lose $300, so the stop goes at $300" is the inversion this whole page is about.</li>
+      <li><strong>Nowhere — a stop "in your head".</strong> A mental stop is not a stop. It depends on you being at the screen, unemotional, and willing to click at the worst moment. Two of those three are usually false.</li>
+    </ol>
+
+    <h2>Once you're in: the only direction a stop moves</h2>
+    <p>Toward profit. Never away from it.</p>
+    <p>Trailing a stop behind structure as the trade works converts an open risk into a locked result — first to break-even once a target prints, then behind each new swing. Widening a stop because price is approaching it does the opposite: it turns a planned 1% loss into an unplanned 3% one and, worse, teaches you that your invalidation is negotiable. If you find yourself needing more room, the honest reading is that the position was too large for the setup, and the lesson applies to the next trade rather than this one. It is the third of the ten failures in <a href="mistakes-that-blow-up-trading-accounts.html">the mistakes that blow up new accounts</a> for a reason.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A stop is the execution of an idea's invalidation, and <em>know your next</em> requires that invalidation to be written before the entry — so the stop location is decided when nothing is at stake. <em>Break &amp; hold</em> then does quiet work on stop quality: entering after the candle closes and the level holds means the structure that defines your stop already exists on the chart, rather than being guessed at mid-move. And <em>trail &amp; protect</em> is the only stop movement we make — behind targets as they print, never backwards. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Where should you place a stop loss?</h3>
+    <p>Beyond the structure that defines the trade — past the swing low, the level, or a volatility band wide enough that ordinary noise cannot reach it. Place the stop first, then size the position so that distance costs your fixed risk. Setting the stop from how much you are willing to lose puts it at a price the market has no reason to respect.</p>
+
+    <h3>How far away should a stop loss be?</h3>
+    <p>Far enough that normal fluctuation cannot reach it and close enough that the idea is genuinely disproved when it trades. A common volatility approach is one to two times the average true range of your timeframe beyond the structure. There is no universal percentage, because the correct distance is a property of the instrument and the setup, not of your account.</p>
+
+    <h3>Does a stop loss guarantee you exit at that price?</h3>
+    <p>No. The SEC states plainly that the stop price is not the guaranteed execution price — it is a trigger that turns the order into a market order, and in a fast-moving market the fill can deviate significantly. A stop-limit order controls the price instead, but may not execute at all if price moves away from the limit.</p>
+
+    <h3>Should you move your stop loss?</h3>
+    <p>Only toward profit, never away from it. Trailing a stop up behind printed targets reduces risk on a working trade. Widening a stop because price is approaching it converts a planned loss into an unplanned larger one and tells you the position was too big for the setup in the first place.</p>
+
+    <h2>Bottom line</h2>
+    <p>A stop loss is not a guess about how much you can stand to lose. It is a statement about where your reason for being in the trade stops being true, placed beyond the structure that defines it, with a volatility buffer so ordinary noise cannot reach it. Size follows the stop, never the reverse — and once you accept that, wide stops become perfectly manageable rather than frightening. Remember what the order can and cannot do: the SEC is explicit that a stop price is a trigger, not a guaranteed fill, so treat your calculated risk as a plan rather than a promise. The concept the stop is executing is covered in <a href="what-is-invalidation-in-trading.html">what invalidation is and why every trade needs one</a>, and where it sits in the wider framework is in <a href="risk-management-trading.html">risk management in trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-invalidation-in-trading.html">What Is Invalidation in Trading?</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+      <a href="support-and-resistance.html">Support &amp; Resistance: Finding Real Levels</a>
+      <a href="risk-reward-ratio.html">Risk-to-Reward Ratio: How to Use It</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The chart picks the stop. <span class="g">Your account picks the size.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
