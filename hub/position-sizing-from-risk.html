@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Size a Position From Risk, Not Conviction</title>
+<meta name="description" content="Position size is arithmetic, not a feeling: dollars at risk divided by the distance to your stop. The formula worked through for stocks, forex and futures." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/position-sizing-from-risk.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Size a Position From Risk, Not Conviction" />
+<meta property="og:description" content="The size of a trade should fall out of the stop distance, not out of how much you like the setup. One formula, three worked examples, and the failure modes." />
+<meta property="og:url" content="https://gwhlds.com/hub/position-sizing-from-risk.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/position-sizing-from-risk.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Size a Position From Risk, Not Conviction","description":"Position size is arithmetic rather than judgement: the dollars you are willing to lose divided by the distance from entry to stop, converted into whatever unit the instrument trades in. The formula worked through for stocks, forex and futures, why conviction sizing quietly destroys accounts, and what to do when the answer comes out below one tradeable unit.","image":"https://gwhlds.com/assets/hub/position-sizing-from-risk.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/position-sizing-from-risk.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How to Size a Position From Risk","item":"https://gwhlds.com/hub/position-sizing-from-risk.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate position size from risk?","acceptedAnswer":{"@type":"Answer","text":"Divide the money you are willing to lose on the trade by the distance from your entry to your stop, then convert that into the instrument's trading unit. If you will risk $200 and your stop sits $0.80 below entry, you buy 250 shares. The same arithmetic works for forex and futures once you substitute pip value or tick value for the per-share distance."}},{"@type":"Question","name":"Should you trade bigger when you are more confident?","acceptedAnswer":{"@type":"Answer","text":"Conviction is not a measurable input, so sizing from it means your largest losses land on your most confident trades. Because confidence tends to peak after a run of winners and after the move has already started, conviction sizing systematically puts the most money on the trades taken latest and chased hardest. Fixed fractional risk removes the variable."}},{"@type":"Question","name":"What if the position size works out to less than one share or contract?","acceptedAnswer":{"@type":"Answer","text":"Take the trade smaller or do not take it. The three legitimate options are a smaller instrument such as a micro futures contract, a setup with a tighter invalidation, or passing on the trade. Rounding up so the trade is possible means accepting more risk than your rule allows, which is the same as having no rule."}},{"@type":"Question","name":"Does position sizing change with account size?","acceptedAnswer":{"@type":"Answer","text":"The percentage stays fixed; the dollar amount moves with the account. Risking 1% of a $5,000 account is $50 and 1% of a $20,000 account is $200. Because the risk scales down automatically after losses and up after gains, a fixed fraction shrinks your exposure exactly when the account can least afford it."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Position Sizing From Risk</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Sizing</span>
+        <h1>How to Size a Position From Risk Instead of Conviction</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/position-sizing-from-risk.jpg" alt="A brass balance scale weighing a stack of coins against a measuring caliper on a dark desk" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Position size is arithmetic, not judgement. Take the money you are willing to lose on the trade, divide it by the distance from your entry to your stop, and convert the answer into shares, lots or contracts. Conviction never enters the calculation — it is not a number, and it cannot be measured.</p>
+
+    <p>Most traders reverse the order of operations. They decide how much to buy first, place a stop somewhere afterwards, and end up with a risk figure they never chose. Sizing from risk runs the other way: the loss is fixed before anything else moves, and the size is whatever the stop distance permits.</p>
+
+    <h2>The formula</h2>
+    <div class="kv"><table>
+      <tr><th>Step</th><th>What you decide</th></tr>
+      <tr><td>1 · Risk amount</td><td>A fixed fraction of the account, in dollars</td></tr>
+      <tr><td>2 · Stop distance</td><td>Entry price minus invalidation price</td></tr>
+      <tr><td>3 · Position size</td><td>Risk amount ÷ stop distance, in trading units</td></tr>
+    </table></div>
+    <p>Only step one is a choice you make repeatedly, and most traders settle it once — commonly at 1% or less, for the survival reasons set out in <a href="the-1-percent-rule-in-trading.html">the 1% rule in trading</a>. Step two comes from the chart, not from you: it is the distance to the level that proves the idea wrong, which is why <a href="what-is-invalidation-in-trading.html">writing the invalidation before entry</a> has to happen first. Step three is division.</p>
+
+    <h2>Worked example: stocks</h2>
+    <p>A $20,000 account risking 1% has <strong>$200</strong> on the line. The setup is a reclaim of $48.20 with invalidation at $47.40, so the stop distance is <strong>$0.80 per share</strong>. Position size is $200 ÷ $0.80 = <strong>250 shares</strong>, a $12,050 position. If the stop fills as intended, the loss is $200 — 1% of the account, exactly as decided.</p>
+    <p>Change one variable and watch the size move without the risk moving. If the invalidation sits at $46.60 instead, the stop distance doubles to $1.60 and the size halves to 125 shares. The wider stop does not cost more; it buys fewer shares. That is the whole point of the method — the risk is constant and the size absorbs the difference.</p>
+
+    <h2>Worked example: forex</h2>
+    <p>Forex substitutes pip value for per-share distance. On a standard lot of EUR/USD, one pip is worth $10; on a mini lot, $1; on a micro lot, $0.10. With $200 of risk and a 25-pip stop, the maximum loss per standard lot would be 25 × $10 = $250, which is already too much. Step down: at $1 per pip, 25 pips costs $25 per mini lot, so $200 ÷ $25 = <strong>8 mini lots</strong>.</p>
+    <p>The mechanics of lots and the pip-value arithmetic behind them are covered in <a href="what-is-a-lot-size.html">what is a lot size in trading</a>, and you can check your own numbers against the <a href="lot-size-calculator.html">lot size calculator</a> before the session starts.</p>
+
+    <h2>Worked example: futures</h2>
+    <p>Futures are the least forgiving case because the contract size is fixed and you cannot buy half of one. The E-mini S&amp;P 500 (ES) has a contract unit of <strong>$50 × the index</strong>, and a minimum price fluctuation of <strong>0.25 index points, worth $12.50 per contract</strong> (<a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, E-mini S&amp;P 500 contract specifications</a>). A 10-point stop is therefore 40 ticks, or $500 of risk per contract.</p>
+    <p>With $200 of risk, one ES contract is impossible — $500 is two and a half times the budget. The honest options are a smaller instrument (the Micro E-mini is one-tenth the size, so a 10-point stop costs $50 and four contracts fit), a setup with a tighter invalidation, or no trade. Rounding up to one ES contract because you like the chart is exactly the decision this method exists to prevent.</p>
+
+    <div class="callout"><b>Size is an output, never an input.</b> If you find yourself asking "how many should I buy?" before you know where the trade is wrong, you are sizing from conviction. The order is invalidation → stop distance → size. Reversing it means the market, not you, decides what a loss costs.</div>
+
+    <h2>Why conviction sizing quietly destroys accounts</h2>
+    <p>Sizing up on the trades you believe in sounds like putting money where the edge is. The problem is that conviction is not observable and does not correlate with outcome in any way you can verify. What it does correlate with is recency: confidence peaks after a run of winners and after a move is already well underway.</p>
+    <p>That produces a specific, predictable failure. Your largest positions land on the trades taken latest, chased hardest, and entered furthest from the level — the trades with the worst reward-to-risk of the week. A single one of them can undo a month, because the loss is not 1% but 4% or 6%, and the recovery arithmetic in <a href="drawdown-explained.html">drawdown explained</a> is unforgiving above 10%.</p>
+    <p>There is a second, quieter cost. When size varies with feeling, your results stop being a readable signal. You cannot tell whether a losing month came from a bad edge or from three oversized trades, so nothing in your <a href="trading-journal.html">trading journal</a> can be acted on. Fixed fractional risk makes every trade one unit of the same thing, which is what turns a sample of trades into evidence.</p>
+
+    <h2>When the answer comes out below one unit</h2>
+    <p>This happens constantly on small accounts and it is where most rules quietly die. There are exactly three legitimate responses:</p>
+    <ol>
+      <li><strong>Trade a smaller instrument.</strong> Micro futures, mini and micro forex lots, and fractional shares where your broker offers them all exist for this. A Micro E-mini is one-tenth of an ES contract, which turns an impossible trade into a routine one.</li>
+      <li><strong>Find a tighter invalidation.</strong> Sometimes the same idea has a closer level that still genuinely disproves it — an entry on the retest rather than the break, for instance. This is legitimate only if the level is real, not if you moved the stop closer to make the size work.</li>
+      <li><strong>Pass.</strong> The trade does not fit the account. That is information, not failure.</li>
+    </ol>
+    <p>What is not on the list is taking it anyway at a size your rule forbids. That converts a written system into a suggestion, and it is one of <a href="mistakes-that-blow-up-trading-accounts.html">the mistakes that blow up new trading accounts</a>.</p>
+
+    <h2>Four things that break the arithmetic</h2>
+    <ul>
+      <li><strong>Slippage and gaps.</strong> The formula assumes the stop fills at the stop price. It usually does on liquid instruments in regular hours; it does not on illiquid names, on the open, or through news. Treat the calculated loss as the best case, not the guaranteed case.</li>
+      <li><strong>Correlated positions.</strong> Three trades at 1% each in instruments that move together is one 3% trade wearing a disguise. Size the exposure, not the ticket.</li>
+      <li><strong>Fees and financing.</strong> Commissions, spread and overnight financing sit outside the stop distance and eat into the planned loss. On small accounts and tight stops they are not a rounding error.</li>
+      <li><strong>Moving the stop after entry.</strong> Widening a stop invalidates the size you calculated for it. Once you are in, the only direction a stop should travel is toward the entry, which is what <a href="what-is-a-trailing-stop.html">a trailing stop</a> formalises.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> is why our callouts carry an entry, targets and an invalidation before price moves — those three numbers are precisely the inputs this calculation needs, so a member can size the trade to their own account rather than copying someone else's ticket. <em>Trail &amp; protect</em> handles the other end: as targets print, the stop moves up behind them, which shrinks the risk on a position that was already sized correctly at entry. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate position size from risk?</h3>
+    <p>Divide the money you are willing to lose on the trade by the distance from your entry to your stop, then convert that into the instrument's trading unit. If you will risk $200 and your stop sits $0.80 below entry, you buy 250 shares. The same arithmetic works for forex and futures once you substitute pip value or tick value for the per-share distance.</p>
+
+    <h3>Should you trade bigger when you are more confident?</h3>
+    <p>Conviction is not a measurable input, so sizing from it means your largest losses land on your most confident trades. Because confidence tends to peak after a run of winners and after the move has already started, conviction sizing systematically puts the most money on the trades taken latest and chased hardest. Fixed fractional risk removes the variable.</p>
+
+    <h3>What if the position size works out to less than one share or contract?</h3>
+    <p>Take the trade smaller or do not take it. The three legitimate options are a smaller instrument such as a micro futures contract, a setup with a tighter invalidation, or passing on the trade. Rounding up so the trade is possible means accepting more risk than your rule allows, which is the same as having no rule.</p>
+
+    <h3>Does position sizing change with account size?</h3>
+    <p>The percentage stays fixed; the dollar amount moves with the account. Risking 1% of a $5,000 account is $50 and 1% of a $20,000 account is $200. Because the risk scales down automatically after losses and up after gains, a fixed fraction shrinks your exposure exactly when the account can least afford it.</p>
+
+    <h2>Bottom line</h2>
+    <p>Sizing from risk is one division problem placed in the right order. Decide the dollars first, read the stop distance off the chart second, and let the size be whatever falls out — 250 shares, 8 mini lots, four Micro E-minis, or nothing at all when the trade does not fit. The discipline is not in the maths, which is trivial; it is in refusing to round up when the answer is inconvenient. Where this sits inside the wider framework is in <a href="risk-management-trading.html">risk management in trading</a>, and the stop distance it depends on comes from <a href="how-to-set-a-stop-loss.html">setting a stop loss that isn't just a guess</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't a Guess</a>
+      <a href="what-is-a-lot-size.html">What Is a Lot Size in Trading?</a>
+      <a href="lot-size-calculator.html">Lot Size Calculator</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Fix the risk first. <span class="g">The size follows.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Risk of Ruin: The Math Nobody Shows New Traders</title>
+<meta name="description" content="Risk of ruin is the probability an account never recovers. See how bet size, not win rate, drives it — and why no edge means ruin is only a matter of time." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/risk-of-ruin.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Risk of Ruin: The Math Nobody Shows New Traders" />
+<meta property="og:description" content="The same edge can be a business or a certainty of failure, depending only on how much you risk per trade. The table that shows why, and what it means for size." />
+<meta property="og:url" content="https://gwhlds.com/hub/risk-of-ruin.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/risk-of-ruin.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Risk of Ruin: The Math Nobody Shows New Traders","description":"Risk of ruin is the probability that an account falls to a level it cannot recover from. Worked from the classical gambler's ruin result, it shows that the size of each bet relative to the account matters far more than the win rate, that without a genuine edge ruin becomes certain given enough trades, and what that implies for per-trade risk, drawdown limits and how long a strategy needs to be given.","image":"https://gwhlds.com/assets/hub/risk-of-ruin.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/risk-of-ruin.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Risk of Ruin","item":"https://gwhlds.com/hub/risk-of-ruin.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is risk of ruin in trading?","acceptedAnswer":{"@type":"Answer","text":"Risk of ruin is the probability that an account falls to a point it cannot realistically come back from, given a particular edge and a particular bet size. It is not a measure of how likely you are to lose a trade — it is the chance that a normal run of losses arrives before your edge has had time to pay, and takes the account with it."}},{"@type":"Question","name":"What drives risk of ruin the most?","acceptedAnswer":{"@type":"Answer","text":"Bet size relative to the account, by a wide margin. In the classical gambler's ruin model, a 52% win rate at even money carries roughly a 45% chance of ruin when each bet is a tenth of the account, but under 0.1% when each bet is a hundredth. The edge is identical in both cases; only the size changed."}},{"@type":"Question","name":"Can you have a positive edge and still go broke?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it is the most common way traders lose. A positive edge only pays over a large number of trades, and a losing streak long enough to end the account can arrive well before that number is reached. Betting too large is what makes the ordinary streak fatal rather than uncomfortable."}},{"@type":"Question","name":"What happens to risk of ruin without an edge?","acceptedAnswer":{"@type":"Answer","text":"It becomes certainty. In the classical model, when the odds are even or against you, ruin occurs with probability one given enough bets, no matter how large the starting balance. Smaller position sizes only delay it. This is why risk management alone cannot rescue a strategy that has no edge in the first place."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Risk of Ruin</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Math</span>
+        <h1>Risk of Ruin: The Math Nobody Shows New Traders</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/risk-of-ruin.jpg" alt="A single gold coin standing on edge on a chessboard, casting a long shadow toward the board's edge" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Risk of ruin is the probability that an account falls to a level it cannot come back from, given a particular edge and a particular bet size. It is not the chance of losing a trade. It is the chance that an ordinary run of losses arrives before your edge has had time to pay, and finishes the account first.</p>
+
+    <p>The number is uncomfortable to look at, which is why almost nobody shows it to beginners. It is also the most useful thing in risk management, because it demonstrates something no amount of chart study will: the same strategy, with the same win rate, can be a business or a near-certain failure depending only on how much you put on each trade.</p>
+
+    <h2>The classical result</h2>
+    <p>The underlying maths is older than markets. In the gambler's ruin problem, a player with a fixed number of units bets one unit at a time against an opponent with effectively unlimited funds. If the player's chance of winning each bet is <em>p</em> and losing is <em>q</em>, the probability of eventually being wiped out is <strong>(q/p)<sup>N</sup></strong>, where N is the number of units they hold — provided <em>p</em> is greater than <em>q</em>. If it is not, ruin happens with probability 1.</p>
+    <p>Translated into trading: your "units" are how many times your per-trade risk fits into the account. Risking 1% per trade means 100 units. Risking 10% means 10. The table below applies that formula to even-money outcomes — a 1:1 reward-to-risk trade — at three different win rates.</p>
+    <div class="kv"><table>
+      <tr><th>Risk per trade</th><th>Win rate 50%</th><th>Win rate 52%</th><th>Win rate 55%</th></tr>
+      <tr><td>10% (10 units)</td><td>Certain</td><td>~45%</td><td>~13%</td></tr>
+      <tr><td>5% (20 units)</td><td>Certain</td><td>~20%</td><td>~1.8%</td></tr>
+      <tr><td>2% (50 units)</td><td>Certain</td><td>~1.8%</td><td>~0.004%</td></tr>
+      <tr><td>1% (100 units)</td><td>Certain</td><td>~0.03%</td><td>Effectively nil</td></tr>
+    </table></div>
+
+    <h2>Read the rows, not the columns</h2>
+    <p>Move down the 52% column. Nothing about the strategy changed — same setups, same win rate, same reward-to-risk. Only the position size moved, and the probability of losing everything fell from roughly <strong>45% to about 0.03%</strong>. That is a factor of more than a thousand, bought entirely with bet size.</p>
+    <p>Now move across the 10% row. Improving your win rate from 52% to 55% — a genuinely hard thing to do, and more than most traders ever achieve — takes ruin from 45% to 13%. Real progress, but still a one-in-eight chance of losing the account. Sizing did more, faster, and it is available today.</p>
+    <p>This is the whole argument behind <a href="the-1-percent-rule-in-trading.html">the 1% rule</a>, expressed as a probability rather than a preference. It is also why <a href="position-sizing-from-risk.html">sizing from risk rather than conviction</a> is not a stylistic choice: conviction sizing means your effective unit count changes trade to trade, and the trades where it drops are the ones taken in exactly the conditions that produce streaks.</p>
+
+    <div class="callout"><b>Without an edge, size only buys time.</b> The 50% column is not a rounding artefact. When the odds are even or against you, the classical result says ruin arrives with probability one given enough bets — a larger account and smaller bets change how long it takes, not whether it happens. Risk management cannot rescue a strategy that has no edge; it can only keep you solvent long enough to find out whether you have one.</div>
+
+    <h2>What the model gets wrong, honestly</h2>
+    <p>This table is a teaching model, not a forecast for your account. Four things separate it from reality, and all four make the real picture worse rather than better:</p>
+    <ul>
+      <li><strong>Fixed fractional sizing never reaches exactly zero.</strong> If you always risk 1% of the current balance, the bet shrinks as the account does. Mathematically you approach zero without arriving; practically, "ruin" is the point below which the account can no longer trade its strategy or you stop being willing to — the level you should be setting in <a href="drawdown-explained.html">your drawdown rules</a>.</li>
+      <li><strong>Reward-to-risk is rarely 1:1.</strong> Winning 40% of the time at 2:1 is a strong system that this table would misread. The direction of the conclusion does not change, but the exact numbers only apply to even-money outcomes.</li>
+      <li><strong>Trades are not independent.</strong> Correlated positions, one market regime driving several setups, and the tendency to trade worse after losses all cluster the bad outcomes. Streaks in real trading are longer than the model's.</li>
+      <li><strong>Your edge is not a constant.</strong> The model assumes a fixed <em>p</em>. Live, it drifts with conditions and with your own discipline — and the estimate you are using probably came from too small a sample to trust.</li>
+    </ul>
+    <p>Every one of those pushes the honest number higher than the table shows. Treat the figures as a floor.</p>
+
+    <h2>Why this is not an abstract concern</h2>
+    <p>Regulators have measured the outcome distribution directly. When the Central Bank of Ireland reviewed retail contract-for-difference trading, it found that of the more than <strong>39,000 retail clients</strong> who traded CFDs with Irish-authorised firms during 2013 and 2014, <strong>75% lost money, with an average loss of €6,900</strong>; a follow-up review of the largest providers found 74% of retail clients lost money in the two years to the end of 2016, averaging €2,700 (<a href="https://www.centralbank.ie/docs/default-source/publications/Consultation-Papers/cp107/consultation-paper-107.pdf" target="_blank" rel="nofollow noopener">Central Bank of Ireland, Consultation Paper 107</a>).</p>
+    <p>Those are leveraged products where position sizes are routinely a large fraction of the account — the top rows of the table, in other words. The wider picture of who actually finishes ahead is in <a href="what-percentage-of-day-traders-are-profitable.html">what percentage of day traders are profitable</a>. Note what the figures do not say: they do not prove nobody succeeds, and they are not a claim about any particular trader. They establish the base rate that any sizing decision is being made against.</p>
+
+    <h2>What to do with the number</h2>
+    <ol>
+      <li><strong>Count your units before you count your setups.</strong> Divide your account by your typical per-trade risk. If the answer is under 20, the table says your survival depends on not hitting an ordinary streak — which is not a plan.</li>
+      <li><strong>Define your own ruin level.</strong> Zero is not the threshold that matters. Pick the drawdown at which you would stop, write it down, and treat that as the bottom of the table.</li>
+      <li><strong>Assume your edge is smaller than you think.</strong> Run the numbers at a win rate a few points below your measured one. If the system only survives at your optimistic estimate, it does not survive.</li>
+      <li><strong>Cap concurrent risk, not just per-trade risk.</strong> Three correlated positions at 1% is a 3% bet. Your unit count is set by exposure, not by ticket count.</li>
+      <li><strong>Give the sample time.</strong> An edge shows up over hundreds of trades. Sizing small is what buys you enough of them to find out — the reason <a href="how-long-to-become-a-profitable-trader.html">becoming consistently profitable takes as long as it does</a>.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Everything in the Method is aimed at the unit count. <em>Break &amp; hold</em> means we do not chase, so entries sit near the level and the invalidation stays tight — a smaller stop distance is a smaller bet for the same conviction. <em>Know your next</em> puts the invalidation in writing so no single trade can quietly grow into a multi-unit loss. <em>Trail &amp; protect</em> removes risk from trades that are already working. None of that is about being right more often; it is about staying in the game long enough for being right to matter. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is risk of ruin in trading?</h3>
+    <p>Risk of ruin is the probability that an account falls to a point it cannot realistically come back from, given a particular edge and a particular bet size. It is not a measure of how likely you are to lose a trade — it is the chance that a normal run of losses arrives before your edge has had time to pay, and takes the account with it.</p>
+
+    <h3>What drives risk of ruin the most?</h3>
+    <p>Bet size relative to the account, by a wide margin. In the classical gambler's ruin model, a 52% win rate at even money carries roughly a 45% chance of ruin when each bet is a tenth of the account, but under 0.1% when each bet is a hundredth. The edge is identical in both cases; only the size changed.</p>
+
+    <h3>Can you have a positive edge and still go broke?</h3>
+    <p>Yes, and it is the most common way traders lose. A positive edge only pays over a large number of trades, and a losing streak long enough to end the account can arrive well before that number is reached. Betting too large is what makes the ordinary streak fatal rather than uncomfortable.</p>
+
+    <h3>What happens to risk of ruin without an edge?</h3>
+    <p>It becomes certainty. In the classical model, when the odds are even or against you, ruin occurs with probability one given enough bets, no matter how large the starting balance. Smaller position sizes only delay it. This is why risk management alone cannot rescue a strategy that has no edge in the first place.</p>
+
+    <h2>Bottom line</h2>
+    <p>Risk of ruin reframes position sizing from a matter of comfort into a matter of probability. Count how many times your per-trade risk fits into the account; that number, far more than your win rate, decides whether an ordinary losing streak is an inconvenience or the end. Keep it high, define the drawdown you will stop at, assume your edge is smaller than your sample suggests, and remember that no amount of careful sizing creates an edge that was never there. The complete framework is in <a href="risk-management-trading.html">risk management in trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="drawdown-explained.html">Drawdown Explained: How Much Is Normal?</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="what-percentage-of-day-traders-are-profitable.html">What Percentage of Day Traders Are Profitable?</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

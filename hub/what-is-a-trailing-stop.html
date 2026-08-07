@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is a Trailing Stop, and When to Actually Use One</title>
+<meta name="description" content="A trailing stop follows price up and never moves back down. How the three types differ, when trailing helps, and the two situations where it costs you money." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-a-trailing-stop.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is a Trailing Stop, and When to Actually Use One" />
+<meta property="og:description" content="Trailing turns an open profit into a floor. It also caps a trend if you trail too tight. The mechanics, the three methods, and when to leave the stop alone." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-a-trailing-stop.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-a-trailing-stop.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is a Trailing Stop, and When to Actually Use One","description":"A trailing stop is an exit order that follows price in your favour and never moves back against you. How fixed-distance, percentage and structure-based trailing differ, why a triggered trailing stop guarantees no execution price, when trailing genuinely helps, and the two situations where trailing too early or too tight costs more than it protects.","image":"https://gwhlds.com/assets/hub/what-is-a-trailing-stop.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-a-trailing-stop.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is a Trailing Stop?","item":"https://gwhlds.com/hub/what-is-a-trailing-stop.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a trailing stop in trading?","acceptedAnswer":{"@type":"Answer","text":"A trailing stop is an exit order set a fixed distance behind price that moves in your favour as price advances and never moves back. On a long position it ratchets upward with each new high and then stays put; if price falls back by the trailing distance, the order triggers. The effect is to convert an open profit into a floor you cannot give back."}},{"@type":"Question","name":"When should you start trailing a stop?","acceptedAnswer":{"@type":"Answer","text":"Once the trade has cleared its first defined target or a new structural level has formed behind price. Trailing before either has happened tightens the stop inside normal noise and turns winning trades into scratches. The trigger should be an event on the chart, not a dollar figure in your profit and loss."}},{"@type":"Question","name":"Is a trailing stop better than a fixed stop?","acceptedAnswer":{"@type":"Answer","text":"Neither is better; they do different jobs. A fixed stop defines what the idea costs if it is wrong, and every trade needs one at entry. A trailing stop manages an idea that is already working. Trailing does not improve your win rate — it reduces the average size of your winners in exchange for protecting more of them."}},{"@type":"Question","name":"Does a trailing stop guarantee your exit price?","acceptedAnswer":{"@type":"Answer","text":"No. A trailing stop becomes a market order when triggered and fills at whatever price is available, which can be far worse in a fast market. On 6 May 2010, the SEC and CFTC found that over 20,000 trades across more than 300 securities executed at prices 60% or more away from their 2:40 p.m. values within a twenty-minute window."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is a Trailing Stop?</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Trade Management</span>
+        <h1>What Is a Trailing Stop, and When to Actually Use One</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-a-trailing-stop.jpg" alt="A climbing ratchet device locked onto a steel cable, able to slide upward but not back down" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A trailing stop is an exit order set a fixed distance behind price that moves in your favour as the trade works and never moves back. On a long position it ratchets up with each new high, then stays put. Its job is to turn an open profit into a floor you cannot give back.</p>
+
+    <p>That is the whole mechanism, and it is genuinely useful. What gets traders into trouble is treating it as a strictly better stop rather than a different tool with its own cost — trailing does not make you right more often. It reduces the average size of your winners in exchange for protecting more of them.</p>
+
+    <h2>How it differs from a fixed stop</h2>
+    <div class="kv"><table>
+      <tr><th></th><th>Fixed stop</th><th>Trailing stop</th></tr>
+      <tr><td>Set at</td><td>Entry, from the invalidation level</td><td>After the trade is working</td></tr>
+      <tr><td>Answers</td><td>What does being wrong cost?</td><td>How much of this gain do I keep?</td></tr>
+      <tr><td>Moves</td><td>Never, until the idea changes</td><td>One direction only, with price</td></tr>
+      <tr><td>Needed on every trade?</td><td>Yes</td><td>No</td></tr>
+    </table></div>
+    <p>The bottom row matters. A fixed stop placed at the level that disproves your idea is mandatory — that is what <a href="how-to-set-a-stop-loss.html">setting a stop loss that isn't just a guess</a> is about, and it exists before you know whether the trade will work. Trailing is optional trade management applied to a position that is already in profit.</p>
+
+    <h2>The three ways to trail</h2>
+    <ol>
+      <li><strong>Fixed distance.</strong> The stop sits a set number of points, pips or ticks behind the highest price reached. Simple, mechanical, and completely blind to what the chart is doing — it will trail straight through a support level that price was always going to bounce off.</li>
+      <li><strong>Percentage.</strong> The same idea expressed as a percentage of price, which keeps the distance proportional as the instrument moves. Common on longer-horizon positions; too coarse for intraday work where a 2% move is the whole trade.</li>
+      <li><strong>Structure-based.</strong> The stop moves up behind each new confirmed swing low (or below each swing high when short). Slower and requires judgement, but it is the only method that respects why price is moving. This is the version most discretionary traders end up on.</li>
+    </ol>
+    <p>Structure-based trailing has an obvious advantage: the level it hides behind is the same kind of level that produced the trade in the first place. If price takes out the last higher low, something has actually changed, which is a real reason to be out. A fixed 20-point trail carries no such meaning.</p>
+
+    <h2>A trailing stop does not guarantee your exit price</h2>
+    <p>This is the most misunderstood part. A trailing stop is a resting instruction; when the trailing distance is breached it becomes a <strong>market order</strong> and fills at whatever price is available. In calm conditions that is a cent or a tick away from where you expected. In a fast market it is not.</p>
+    <p>The reference case is 6 May 2010. In the twenty minutes between 2:40 p.m. and 3:00 p.m., the staffs of the SEC and CFTC found that <strong>over 20,000 trades across more than 300 separate securities executed at prices 60% or more away from their 2:40 p.m. values</strong>, many of them originating from retail customer orders; the exchanges and FINRA later cancelled them under their clearly-erroneous trade rules (<a href="https://www.sec.gov/files/marketevents-report.pdf" target="_blank" rel="nofollow noopener">SEC &amp; CFTC staff report, "Findings Regarding the Market Events of May 6, 2010", 30 September 2010</a>). Stop orders resting in the book were a documented part of that cascade.</p>
+    <p>The practical lesson is not that stops are dangerous — it is that the protected amount is an expectation, not a contract. Position sizing has to assume the stop might fill worse than planned, which is one reason the calculation in <a href="position-sizing-from-risk.html">sizing a position from risk</a> treats the computed loss as a best case.</p>
+
+    <div class="callout"><b>Trail on an event, not on a feeling.</b> "Price has gone up a lot" is not a trigger. "The first target printed" or "a new higher low has formed and held" is. If you cannot name what happened on the chart, the stop stays where it is.</div>
+
+    <h2>When trailing genuinely helps</h2>
+    <ul>
+      <li><strong>Trending instruments with clear structure.</strong> When each leg leaves a defined higher low behind it, trailing has something real to hide behind and can carry a position much further than a fixed target would.</li>
+      <li><strong>Positions you cannot watch.</strong> Swing trades held overnight, or any trade you hold while at work. A trailing stop is a decision made in advance and delegated to the broker, which is exactly what you want when you cannot be at the screen.</li>
+      <li><strong>After the first target prints.</strong> Once part of the position is off and the remainder is playing with realised gains behind it, trailing the rest is close to free. The interaction between the two is covered in <a href="how-to-take-partial-profits.html">how to take partial profits without capping your winners</a>.</li>
+      <li><strong>Runners in a strong session.</strong> When you genuinely do not know where the move ends, a trail answers the question the market would otherwise ask you every thirty seconds.</li>
+    </ul>
+
+    <h2>The two ways trailing costs you money</h2>
+    <p><strong>Trailing too tight.</strong> Every instrument has a normal amount of noise, and a trail set inside it will be hit by ordinary retracement rather than by a change in trend. The result is a stream of trades that stop out at small gains while the move they were positioned for continues without you. If your journal shows a habit of exiting a few ticks before the real leg, the trail distance is too small — not the market's fault.</p>
+    <p><strong>Trailing too early.</strong> Moving the stop to breakeven the moment a trade is green feels like risk management and is usually the opposite. A pullback to the entry area is one of the most common things price does after a break, so a breakeven stop applied in the first minutes converts a normal retest into a scratch. Give the trade room to do the thing you entered it to do, then protect it.</p>
+    <p>Both failures come from the same source: the trail was set to relieve anxiety about giving back an unrealised gain, rather than to reflect anything happening on the chart. That is the psychology that <a href="why-new-traders-quit.html">drives most new traders out</a> — the discomfort of watching profit fluctuate is real, but a tighter trail treats the symptom and shrinks the edge.</p>
+
+    <h2>Rules that keep a trail honest</h2>
+    <ul>
+      <li>The trail only ever moves toward the current price and never away from it. Widening a trailing stop is just cancelling it.</li>
+      <li>Decide the trailing rule before entry, in the same breath as the invalidation, so it is not being invented mid-trade.</li>
+      <li>Match the trail distance to the timeframe you entered on. A 5-minute entry does not get an hourly trail, and vice versa.</li>
+      <li>Log where the trail took you out versus where the move actually ended. Over thirty trades that comparison tells you whether your distance is too tight far better than any single trade can — a use for <a href="trading-journal.html">a trading journal</a> most people never get to.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Trail &amp; protect</em> is the third principle for a reason: as targets print, the stop trails behind them, so a trade that has already paid cannot turn into a loser. It is the second half of a callout, not the first — the stop only starts moving once a defined target has been reached, which keeps the trail tied to something that happened rather than to how the position feels. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a trailing stop in trading?</h3>
+    <p>A trailing stop is an exit order set a fixed distance behind price that moves in your favour as price advances and never moves back. On a long position it ratchets upward with each new high and then stays put; if price falls back by the trailing distance, the order triggers. The effect is to convert an open profit into a floor you cannot give back.</p>
+
+    <h3>When should you start trailing a stop?</h3>
+    <p>Once the trade has cleared its first defined target or a new structural level has formed behind price. Trailing before either has happened tightens the stop inside normal noise and turns winning trades into scratches. The trigger should be an event on the chart, not a dollar figure in your profit and loss.</p>
+
+    <h3>Is a trailing stop better than a fixed stop?</h3>
+    <p>Neither is better; they do different jobs. A fixed stop defines what the idea costs if it is wrong, and every trade needs one at entry. A trailing stop manages an idea that is already working. Trailing does not improve your win rate — it reduces the average size of your winners in exchange for protecting more of them.</p>
+
+    <h3>Does a trailing stop guarantee your exit price?</h3>
+    <p>No. A trailing stop becomes a market order when triggered and fills at whatever price is available, which can be far worse in a fast market. On 6 May 2010, the SEC and CFTC found that over 20,000 trades across more than 300 securities executed at prices 60% or more away from their 2:40 p.m. values within a twenty-minute window.</p>
+
+    <h2>Bottom line</h2>
+    <p>Use a trailing stop to manage a trade that is already working, never to define what being wrong costs — that job belongs to the fixed stop you set at entry from your invalidation. Trail behind structure rather than behind a number where you can, start only after a defined event, and accept that the exit price is an expectation rather than a promise. Done well it lets a good trade run without asking you to guess where the move ends. Where it fits in the wider system is in <a href="risk-management-trading.html">risk management in trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't a Guess</a>
+      <a href="how-to-take-partial-profits.html">How to Take Partial Profits</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="what-is-invalidation-in-trading.html">What Is Invalidation in Trading?</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Let it run. <span class="g">Protect it as it does.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

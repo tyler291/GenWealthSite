@@ -130,11 +130,11 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] How to set a stop loss that isn't just a guess `(how-to-set-a-stop-loss)`
 - [x] Where to place your stop loss: four methods compared `(covered by how-to-set-a-stop-loss)`
 - [x] What is invalidation and why every trade needs one in writing `(what-is-invalidation-in-trading)`
-- [ ] How to size a position from risk instead of conviction
-- [ ] What is a trailing stop and when to actually use one
-- [ ] How to take partial profits without capping your winners
-- [ ] Drawdown explained: how much is normal and when to stop trading
-- [ ] Risk of ruin: the math nobody shows new traders
+- [x] How to size a position from risk instead of conviction `(position-sizing-from-risk)`
+- [x] What is a trailing stop and when to actually use one `(what-is-a-trailing-stop)`
+- [x] How to take partial profits without capping your winners `(how-to-take-partial-profits)`
+- [x] Drawdown explained: how much is normal and when to stop trading `(drawdown-explained)`
+- [x] Risk of ruin: the math nobody shows new traders `(risk-of-ruin)`
 - [ ] Why win rate is the most overrated number in trading
 - [ ] Expectancy: the one formula that tells you if your system works
 - [ ] How to survive a losing streak without blowing up

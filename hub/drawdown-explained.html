@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Drawdown Explained: How Much Is Normal in Trading?</title>
+<meta name="description" content="Drawdown is the peak-to-trough fall in your account. The recovery maths, what depth is normal for a strategy, and where the line is for stopping trading." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/drawdown-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Drawdown Explained: How Much Is Normal in Trading?" />
+<meta property="og:description" content="A 50% drawdown needs a 100% gain to undo. What drawdown measures, how deep is normal, and how to set a stopping rule before you need one." />
+<meta property="og:url" content="https://gwhlds.com/hub/drawdown-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/drawdown-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Drawdown Explained: How Much Is Normal and When to Stop Trading","description":"Drawdown is the percentage fall from an account's peak equity to its lowest point before a new peak is made. The recovery arithmetic that makes deep drawdowns so expensive, the difference between peak-to-valley and maximum drawdown, what depth is normal for different strategies, why regulators require commodity trading advisors to disclose their worst-case drawdown, and how to write a stopping rule before you need one.","image":"https://gwhlds.com/assets/hub/drawdown-explained.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/drawdown-explained.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Drawdown Explained","item":"https://gwhlds.com/hub/drawdown-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is drawdown in trading?","acceptedAnswer":{"@type":"Answer","text":"Drawdown is the fall from an account's highest equity point to its lowest point before a new high is made, expressed as a percentage of that peak. An account that grows to $12,000, falls to $9,600, then recovers has had a 20% drawdown. It measures the depth of the hole rather than the loss on any single trade."}},{"@type":"Question","name":"How much drawdown is normal?","acceptedAnswer":{"@type":"Answer","text":"There is no universal figure — it depends on the strategy and the risk taken per trade, and any specific percentage quoted without a system attached is meaningless. What is generally true is that a strategy risking 1% per trade will see materially shallower drawdowns than one risking 5%, and that a drawdown roughly two to three times your worst expected losing streak is worth planning for."}},{"@type":"Question","name":"Why is a big drawdown so hard to recover from?","acceptedAnswer":{"@type":"Answer","text":"Because the gain needed is calculated on a smaller base. A 20% fall needs a 25% gain to get back to even, a 50% fall needs 100%, and an 80% fall needs 400%. The required recovery accelerates far faster than the loss, which is why keeping drawdowns shallow matters more than any effort to make them back quickly."}},{"@type":"Question","name":"When should you stop trading during a drawdown?","acceptedAnswer":{"@type":"Answer","text":"At a level you set in advance, in writing, before the drawdown starts. A common structure is a daily limit, a weekly limit and a monthly limit, each triggering a longer pause. The point of writing it down beforehand is that the moment you are actually in a drawdown is the moment you are least able to judge whether to keep going."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Drawdown Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Fundamentals</span>
+        <h1>Drawdown Explained: How Much Is Normal, and When to Stop</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/drawdown-explained.jpg" alt="A deep valley between two ridges at dusk with a faint glowing line tracing the descent and the climb back" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Drawdown is the fall from your account's highest equity point to its lowest point before a new high is made, measured as a percentage of that peak. An account that grows to $12,000, drops to $9,600, then recovers has taken a 20% drawdown. It measures the depth of the hole, not the size of any single loss.</p>
+
+    <p>It is the number that decides whether a strategy is survivable, and the one most new traders never calculate. Two systems can produce identical annual returns while one of them takes its owner through a 12% dip and the other through a 45% collapse. Only one of those gets traded to the end of the year by an actual human being.</p>
+
+    <h2>The recovery arithmetic</h2>
+    <p>The reason drawdown deserves this much attention is that losses and the gains needed to undo them are not symmetrical. A 20% fall is not undone by a 20% rise, because the rise is calculated on a smaller base.</p>
+    <div class="kv"><table>
+      <tr><th>Drawdown</th><th>Gain needed to get back to even</th></tr>
+      <tr><td>5%</td><td>5.3%</td></tr>
+      <tr><td>10%</td><td>11.1%</td></tr>
+      <tr><td>20%</td><td>25%</td></tr>
+      <tr><td>30%</td><td>42.9%</td></tr>
+      <tr><td>50%</td><td>100%</td></tr>
+      <tr><td>70%</td><td>233%</td></tr>
+      <tr><td>90%</td><td>900%</td></tr>
+    </table></div>
+    <p>The formula is simply the drawdown divided by what remains: a 50% loss leaves half the account, and half has to double. Notice where the curve turns. Below about 15% the required recovery is barely worse than the loss; past 30% it starts to run away; past 50% you need a better year than most professionals have to get back to where you already were.</p>
+    <p>This is the entire argument for small per-trade risk, and it is why the <a href="the-1-percent-rule-in-trading.html">1% rule</a> is not timidity but arithmetic. Ten consecutive losses at 1% leaves you down about 9.6% and needing roughly 10.6% to recover — an ordinary month. Ten consecutive losses at 5% leaves you down 40% and needing 66.7%.</p>
+
+    <h2>The terms, precisely</h2>
+    <div class="kv"><table>
+      <tr><th>Term</th><th>What it means</th></tr>
+      <tr><td>Peak-to-valley drawdown</td><td>The fall from one equity high to the low before the next high</td></tr>
+      <tr><td>Maximum drawdown</td><td>The deepest peak-to-valley fall in the whole record</td></tr>
+      <tr><td>Current drawdown</td><td>How far below your all-time high equity sits right now</td></tr>
+      <tr><td>Drawdown duration</td><td>How long you spent below the old peak before reclaiming it</td></tr>
+      <tr><td>Closed vs open drawdown</td><td>Measured on realised equity only, or including open positions</td></tr>
+    </table></div>
+    <p>Duration is the one traders skip and regulators do not. A 15% drawdown that lasts three days is an event; a 15% drawdown that lasts seven months is a different experience entirely, and it is the one that ends careers — not because the money is gone, but because seven months of grinding below your old high is where discipline quietly erodes.</p>
+
+    <h2>Regulators treat drawdown as a headline number</h2>
+    <p>If you want a sense of how seriously professionals take this, look at what US law requires managed-futures professionals to disclose. Under CFTC rules, a commodity trading advisor's disclosure document must state the <strong>worst peak-to-valley drawdown for the trading program over the most recent five calendar years and year-to-date</strong>, as a percentage of net asset value, together with the months and years in which it occurred (<a href="https://www.law.cornell.edu/cfr/text/17/4.35" target="_blank" rel="nofollow noopener">17 CFR § 4.35, Performance disclosures</a>).</p>
+    <p>The definition in the rule is worth borrowing for your own record-keeping: the greatest cumulative percentage decline in month-end net asset value during any period where the starting month-end value is not equalled or exceeded by a later one. That is a strict measure — it does not let a good week interrupt the count — and applying it to your own equity curve gives you a number that means the same thing as the one a professional would quote.</p>
+
+    <div class="callout"><b>Track it from the first trade.</b> Drawdown is one of the few numbers you cannot reconstruct later from memory. Record equity at the close of every day; the peak, the valley and the duration all fall out of that single column. A <a href="trading-journal.html">trading journal</a> without an equity curve is missing the measurement that matters most.</div>
+
+    <h2>How much is normal?</h2>
+    <p>Any specific percentage quoted without a strategy attached is noise, so treat the following as a way to reason rather than as a benchmark:</p>
+    <ul>
+      <li><strong>Your worst drawdown will be deeper than your worst losing streak.</strong> Streaks compound with the partial recoveries between them. A system with a realistic worst streak of eight losses should plan for a drawdown well beyond eight times the per-trade risk.</li>
+      <li><strong>Risk per trade sets the scale.</strong> Double the risk per trade and you roughly double the drawdown for the same sequence of outcomes. This is the single lever with the most influence, and it is fully under your control through <a href="position-sizing-from-risk.html">sizing positions from risk</a>.</li>
+      <li><strong>Lower win rates mean deeper drawdowns.</strong> A system that wins 35% of the time with large winners is perfectly viable and will spend long periods underwater. If that is your system, the drawdown is a feature to be financed, not a fault to be fixed.</li>
+      <li><strong>A drawdown outside anything in your record is a signal.</strong> Not proof the edge is gone, but a reason to reduce size and audit the process rather than to trade harder.</li>
+    </ul>
+    <p>What you are looking for is not a magic number but a match between the drawdown your strategy can produce and the drawdown you will actually sit through without abandoning the plan. Most strategies do not fail; the people running them stop following them somewhere around the point the account has stopped feeling recoverable.</p>
+
+    <h2>Writing a stopping rule before you need one</h2>
+    <p>The moment you are in a deep drawdown is the moment you are least equipped to decide whether to keep trading. So the rule gets written when nothing is at stake. A workable three-tier structure:</p>
+    <ol>
+      <li><strong>Daily limit.</strong> Two or three losses, or a set percentage — whichever comes first. Hit it and the screens go off for the day. No exceptions on the day you most want one.</li>
+      <li><strong>Weekly limit.</strong> Roughly double the daily figure. Hitting it means the week is finished and the weekend is for review rather than revenge.</li>
+      <li><strong>Monthly or account-level limit.</strong> The number at which you stop trading live entirely, drop to minimum size, or go back to <a href="paper-trading-vs-live-trading.html">paper trading</a> until the process is clean again. For most retail traders this sits somewhere well under 20%, precisely because of the recovery table above.</li>
+    </ol>
+    <p>The limits are not there to prevent losses; they are there to prevent one bad sequence from becoming an unrecoverable one. Trading through a stopping rule because the setup looked good is one of <a href="mistakes-that-blow-up-trading-accounts.html">the mistakes that blow up trading accounts</a>, and the deeper hole it creates is the subject of <a href="risk-of-ruin.html">risk of ruin</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A drawdown rule only works if it is decided in advance and applied without argument — the same logic as <em>know your next</em>, moved up from the individual trade to the account. Every callout carries a written invalidation so no single trade can quietly become a large one, and <em>trail &amp; protect</em> keeps trades that have already worked from adding to a drawdown on the way back down. Shallow drawdowns are not luck; they are what a risk-first process produces. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is drawdown in trading?</h3>
+    <p>Drawdown is the fall from an account's highest equity point to its lowest point before a new high is made, expressed as a percentage of that peak. An account that grows to $12,000, falls to $9,600, then recovers has had a 20% drawdown. It measures the depth of the hole rather than the loss on any single trade.</p>
+
+    <h3>How much drawdown is normal?</h3>
+    <p>There is no universal figure — it depends on the strategy and the risk taken per trade, and any specific percentage quoted without a system attached is meaningless. What is generally true is that a strategy risking 1% per trade will see materially shallower drawdowns than one risking 5%, and that a drawdown roughly two to three times your worst expected losing streak is worth planning for.</p>
+
+    <h3>Why is a big drawdown so hard to recover from?</h3>
+    <p>Because the gain needed is calculated on a smaller base. A 20% fall needs a 25% gain to get back to even, a 50% fall needs 100%, and an 80% fall needs 400%. The required recovery accelerates far faster than the loss, which is why keeping drawdowns shallow matters more than any effort to make them back quickly.</p>
+
+    <h3>When should you stop trading during a drawdown?</h3>
+    <p>At a level you set in advance, in writing, before the drawdown starts. A common structure is a daily limit, a weekly limit and a monthly limit, each triggering a longer pause. The point of writing it down beforehand is that the moment you are actually in a drawdown is the moment you are least able to judge whether to keep going.</p>
+
+    <h2>Bottom line</h2>
+    <p>Drawdown is the number that decides whether you get to keep trading a strategy long enough for its edge to show up. Keep it shallow by keeping per-trade risk small, measure it from the first day rather than reconstructing it later, and set the stopping levels while the account is at a high rather than in the middle of the fall. The recovery table is not a warning, it is a design constraint: everything about how you size and stop should be aimed at never needing the bottom rows. The system this sits inside is <a href="risk-management-trading.html">risk management in trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="risk-of-ruin.html">Risk of Ruin: The Math Nobody Shows You</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+      <a href="mistakes-that-blow-up-trading-accounts.html">Mistakes That Blow Up Trading Accounts</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Shallow holes. <span class="g">Long careers.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
