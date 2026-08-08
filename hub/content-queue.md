@@ -255,8 +255,8 @@ sixteen clusters deep — lives in **[`keyword-map.md`](keyword-map.md)**.
 5. Flip the batch row to *In flight*; mark the previous batch *Done*.
 6. Report which batch was pulled and what was dropped for cannibalization.
 
-This is the "every 100 pages, another 100" loop. At 5 pages per run, one batch is
-roughly 20 run-days.
+This is the "every 100 pages, another 100" loop. At 3 pages per run, one batch is
+roughly 33 run-days.
 
 **If the map itself runs low**, refill it from Search Console (queries ranking 5–20 —
 the fastest wins), Google PAA and autocomplete on each head keyword, Reddit
