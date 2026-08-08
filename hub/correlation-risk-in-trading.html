@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Correlation Risk: Why Your Five Trades Are One Trade</title>
+<meta name="description" content="Five positions at 1% each are not five 1% risks when they share a driver. How to spot correlated trades, measure your real exposure, and cap it before it bites." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/correlation-risk-in-trading.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Correlation Risk: Why Your Five Trades Are One Trade" />
+<meta property="og:description" content="The dollar is on one side of 89% of all FX trades. Your diversification may be an illusion — how to measure combined exposure and cap it with a written rule." />
+<meta property="og:url" content="https://gwhlds.com/hub/correlation-risk-in-trading.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/correlation-risk-in-trading.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Correlation Risk: Why Your Five Trades Are Secretly One Trade","description":"Correlation risk is the exposure created when several open positions respond to the same underlying driver, so that per-trade risk limits understate the real worst case. This guide explains where hidden correlation comes from in forex, index and sector trades, how to estimate combined exposure across positions, why correlations rise during stress exactly when diversification is needed most, and the written rules that cap total open risk rather than counting tickets.","image":"https://gwhlds.com/assets/hub/correlation-risk-in-trading.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/correlation-risk-in-trading.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Correlation Risk","item":"https://gwhlds.com/hub/correlation-risk-in-trading.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is correlation risk in trading?","acceptedAnswer":{"@type":"Answer","text":"Correlation risk is the exposure that appears when several open positions move together because they respond to the same underlying driver. It matters because per-trade risk limits are set on individual tickets. If five positions at 1% each are all long the same theme, the account is carrying something much closer to a single 5% bet than five independent ones."}},{"@type":"Question","name":"Are EUR/USD and GBP/USD correlated?","acceptedAnswer":{"@type":"Answer","text":"They frequently move together, because both are quoted against the US dollar and a dollar move pushes both in the same direction at once. Being long EUR/USD and long GBP/USD is largely one short-dollar position expressed twice. The correlation is not fixed and can weaken when a euro-specific or sterling-specific event dominates, so it should be checked rather than assumed."}},{"@type":"Question","name":"How much total risk should I have open at once?","acceptedAnswer":{"@type":"Answer","text":"Set a total open-risk cap as well as a per-trade one. A common structure is 1% per trade with a hard ceiling of 3% across all open positions, and correlated positions counted as one trade toward that ceiling. The exact figures matter less than having a written total, because without one the ceiling is set by how many setups you happen to notice."}},{"@type":"Question","name":"Why do correlations rise when markets fall?","acceptedAnswer":{"@type":"Answer","text":"In stressed markets participants sell what they can rather than what they want to, and broad risk sentiment overwhelms the individual characteristics that normally separate instruments. The practical consequence is that diversification thins out at exactly the moment it is needed, so a portfolio that looked spread out in calm conditions can behave like one position during a sell-off."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Correlation Risk</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Exposure</span>
+        <h1>Correlation Risk: Why Your Five Trades Are Secretly One Trade</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/correlation-risk-in-trading.jpg" alt="Five glowing parallel cords braiding together into one single thick cable disappearing into shadow" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Correlation risk is the exposure you take when several positions move together. Five trades at 1% each are not five 1% risks if they respond to the same driver — they are closer to one 5% risk. Position sizing that counts tickets instead of exposure quietly multiplies your worst case.</p>
+
+    <p>This is the risk that survives good position sizing, because it hides in the gap between how risk is measured and how it arrives. Every trade obeyed the rule. The account still took a single, oversized loss.</p>
+
+    <h2>Where hidden correlation comes from</h2>
+    <p>You rarely choose correlated positions on purpose. You choose them because the same market condition generates the same signal across several instruments at once, which is exactly what a good screening process is supposed to do.</p>
+    <ul>
+      <li><strong>Shared quote currency.</strong> Long EUR/USD, long GBP/USD and long AUD/USD is one short-dollar position wearing three tickets. A dollar move hits all three at the same moment.</li>
+      <li><strong>Same index, different wrapper.</strong> An S&amp;P 500 futures contract, an S&amp;P ETF and a basket of large-cap names are the same trade at different levels of granularity.</li>
+      <li><strong>Sector clustering.</strong> Three semiconductor names on the same breakout pattern are one bet on semiconductors, not three stock-picking decisions.</li>
+      <li><strong>One catalyst.</strong> Several positions all resolving on the same central bank decision or the same monthly jobs number are a single event bet.</li>
+      <li><strong>One setup type.</strong> Even across unrelated instruments, if every open position is the same breakout pattern, they share a dependence on the market continuing to trend.</li>
+    </ul>
+
+    <h2>The dollar is in almost every forex trade</h2>
+    <p>Forex traders carry the sharpest version of this problem, and the scale of it is measurable. In the BIS Triennial Central Bank Survey for April 2025, the <strong>US dollar was on one side of 89% of all FX trades</strong>, out of total turnover of <strong>$9.6 trillion per day</strong> (<a href="https://www.bis.org/press/p250930.htm" target="_blank" rel="nofollow noopener">Bank for International Settlements, Triennial Survey, September 2025</a>).</p>
+    <p>Nine out of ten trades in the largest market on earth have the same instrument on one leg. If your open positions are mostly dollar pairs, you do not have a diversified book — you have a view on the dollar, and the other currencies are details. That is not automatically wrong; it is only dangerous when you believe you have spread the risk. The pair-selection consequences are covered in <a href="forex-vs-stocks-day-trading.html">forex versus stocks for day trading</a>.</p>
+
+    <h2>How to estimate your real exposure</h2>
+    <p>Two numbers matter, and traders usually only know one of them.</p>
+    <p>The first is the <strong>worst case</strong>: if every open position hits its stop, what does the account lose? Five positions at 1% is 5%, always, regardless of correlation. Correlation does not change that ceiling — it changes how likely you are to reach it. Uncorrelated, hitting all five stops is a coincidence. Perfectly correlated, it is a single event.</p>
+    <p>The second is the <strong>typical combined swing</strong>, which is what you actually feel day to day. For five equally sized positions, combined variability scales roughly with the square root of (n + n(n−1)ρ), where ρ is the average correlation between them:</p>
+    <div class="kv"><table>
+      <tr><th>Average correlation</th><th>Combined swing (5 positions at 1%)</th><th>Effectively how many independent trades</th></tr>
+      <tr><td>0.0 (independent)</td><td>≈2.2%</td><td>5</td></tr>
+      <tr><td>0.3</td><td>≈3.3%</td><td>≈2.3</td></tr>
+      <tr><td>0.6</td><td>≈4.1%</td><td>≈1.5</td></tr>
+      <tr><td>0.9</td><td>≈4.8%</td><td>≈1.1</td></tr>
+      <tr><td>1.0 (identical)</td><td>5.0%</td><td>1</td></tr>
+    </table></div>
+    <p>At an average correlation of 0.6 — unremarkable for a handful of dollar pairs or same-sector equities — five positions behave like about one and a half. You are carrying the position count of a diversified book and the risk profile of a concentrated one.</p>
+
+    <div class="callout"><b>Count exposure, not tickets.</b> Before entering, ask one question: if this idea is wrong, how many of my open positions lose money? If the answer is more than one, the new trade is an addition to an existing position, and it should be sized as one. This is the correction to the most common failure mode of a good sizing rule — obeying it per trade while the account quietly builds a single large bet. The per-trade method itself is in <a href="position-sizing-from-risk.html">sizing from risk, not conviction</a>.</div>
+
+    <h2>Correlation rises exactly when you need it not to</h2>
+    <p>The most expensive property of correlation is that it is not stable. In calm conditions, instruments separate and their individual characteristics dominate. Under stress, participants sell what is liquid rather than what they intended to sell, broad risk sentiment overrides everything, and things that normally move independently start moving as one.</p>
+    <p>The practical consequence is that the historical correlation you measured in normal conditions understates what you will experience in the sell-off, which is the only session where it truly matters. Any risk framework built on calm-period correlations is measuring the wrong regime. Plan on the assumption that in a bad hour, everything in the same direction is one position — and remember that a cluster of correlated losses is also what turns an ordinary streak into a long one, as covered in <a href="how-to-survive-a-losing-streak.html">surviving a losing streak</a>.</p>
+
+    <h2>Rules that cap it</h2>
+    <ol>
+      <li><strong>Set a total open-risk ceiling.</strong> A per-trade limit without a portfolio limit is half a rule. Something like 1% per trade and 3% total open is a common, defensible structure.</li>
+      <li><strong>Count correlated positions as one.</strong> Three dollar-shorts at 1% each consume 3% of your ceiling, or you take one at 1% and skip the others.</li>
+      <li><strong>Cap positions per theme.</strong> One per sector, one per currency leg, one per catalyst. This is cruder than a correlation matrix and works better in a live session.</li>
+      <li><strong>Treat a shared catalyst as a shared position.</strong> Two trades resolving on the same data release are one trade with two entries.</li>
+      <li><strong>Log correlation in your review.</strong> When several trades lose on the same day, note whether they were genuinely separate ideas. The pattern shows up fast in <a href="trading-journal.html">a trading journal</a> and almost never shows up in memory.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Correlation is one of the reasons callouts in the room are deliberate rather than constant. <em>Break &amp; hold</em> filters the setups that all fire at once when the whole market gaps in one direction — the moment correlated entries are most tempting and least reliable. <em>Know your next</em> means each call has its own written invalidation, so overlapping ideas are visible as overlapping risk rather than hidden behind separate tickets. <em>Trail &amp; protect</em> takes exposure down as targets print, which shrinks the correlated book from the top. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is correlation risk in trading?</h3>
+    <p>Correlation risk is the exposure that appears when several open positions move together because they respond to the same underlying driver. It matters because per-trade risk limits are set on individual tickets. If five positions at 1% each are all long the same theme, the account is carrying something much closer to a single 5% bet than five independent ones.</p>
+
+    <h3>Are EUR/USD and GBP/USD correlated?</h3>
+    <p>They frequently move together, because both are quoted against the US dollar and a dollar move pushes both in the same direction at once. Being long EUR/USD and long GBP/USD is largely one short-dollar position expressed twice. The correlation is not fixed and can weaken when a euro-specific or sterling-specific event dominates, so it should be checked rather than assumed.</p>
+
+    <h3>How much total risk should I have open at once?</h3>
+    <p>Set a total open-risk cap as well as a per-trade one. A common structure is 1% per trade with a hard ceiling of 3% across all open positions, and correlated positions counted as one trade toward that ceiling. The exact figures matter less than having a written total, because without one the ceiling is set by how many setups you happen to notice.</p>
+
+    <h3>Why do correlations rise when markets fall?</h3>
+    <p>In stressed markets participants sell what they can rather than what they want to, and broad risk sentiment overwhelms the individual characteristics that normally separate instruments. The practical consequence is that diversification thins out at exactly the moment it is needed, so a portfolio that looked spread out in calm conditions can behave like one position during a sell-off.</p>
+
+    <h2>Bottom line</h2>
+    <p>Correlation risk is what turns a well-sized book into a single oversized bet without breaking a single rule. Before every entry, check how many open positions lose if this idea is wrong; count correlated trades as one against a written total-risk ceiling; and assume correlations will be higher in the sell-off than in the backtest. Doing that costs you a few trades a month and removes the specific failure that ends otherwise-disciplined accounts. The complete framework is in <a href="risk-management-trading.html">risk management in trading</a>, and the drawdown maths it protects is in <a href="drawdown-explained.html">drawdown explained</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="drawdown-explained.html">Drawdown Explained: How Much Is Normal?</a>
+      <a href="how-to-survive-a-losing-streak.html">How to Survive a Losing Streak</a>
+      <a href="forex-vs-stocks-day-trading.html">Forex vs Stocks for Day Trading</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

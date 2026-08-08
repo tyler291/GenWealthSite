@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Position Sizing for a Small Account: Make the Trade Fit</title>
+<meta name="description" content="On a $2,000 account, 1% is $20 — smaller than most instruments allow. The minimum-risk table by instrument, and four honest ways to make a trade actually fit." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/position-sizing-small-account.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Position Sizing for a Small Account: Make the Trade Fit" />
+<meta property="og:description" content="The small-account problem is granularity, not maths: 1% of your account is often smaller than one contract. Here is the table, and the four ways round it." />
+<meta property="og:url" content="https://gwhlds.com/hub/position-sizing-small-account.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/position-sizing-small-account.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Position Sizing for a Small Account","description":"Position sizing on a small account follows the same fixed-percentage rule as any account, but runs into a granularity problem: one percent of a two thousand dollar account is smaller than the risk on one contract in most markets. This guide gives the minimum-risk figures by instrument, the smallest account each one suits, four legitimate ways to make a trade fit, what the 2026 replacement of the pattern day trader rule changed for small accounts, why costs weigh more heavily at this size, and the shortcuts to refuse.","image":"https://gwhlds.com/assets/hub/position-sizing-small-account.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/position-sizing-small-account.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Position Sizing for a Small Account","item":"https://gwhlds.com/hub/position-sizing-small-account.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What percentage should I risk per trade on a small account?","acceptedAnswer":{"@type":"Answer","text":"The same percentage you would use on a large one, typically 1% or less. Small accounts are not a reason to risk more; they are a reason to trade smaller instruments. Risking 5% because 1% feels like too little money is how a small account becomes no account, since twenty consecutive losses at 5% is a realistic sequence over a first year."}},{"@type":"Question","name":"What is the smallest account that can trade futures properly?","acceptedAnswer":{"@type":"Answer","text":"With Micro E-mini contracts, a 10-point stop on the Micro E-mini S&P 500 risks about 50 dollars, which is 1% of a 5,000 dollar account. Below roughly 4,000 to 5,000 dollars, most index futures stops no longer fit inside a 1% rule, and micro-lot forex or fractional shares give finer control."}},{"@type":"Question","name":"Do I still need $25,000 to day trade US stocks?","acceptedAnswer":{"@type":"Answer","text":"Not under the current rule. FINRA retired the pattern day trader framework on June 4, 2026 and replaced it with an intraday margin standard that applies to all margin accounts. Firms may phase the change in until October 2027 and may keep stricter house requirements, so the threshold that binds you is your own broker's, not FINRA's."}},{"@type":"Question","name":"Should I use more leverage to make a small account grow faster?","acceptedAnswer":{"@type":"Answer","text":"No. Leverage changes how large a position your capital can control; it does not change your edge, and it multiplies the drawdown from an ordinary losing run. The way a small account grows is by surviving long enough for a positive expectancy to compound, which requires the risk per trade to stay small precisely when it feels least satisfying."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Position Sizing for a Small Account</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Position Sizing</span>
+        <h1>Position Sizing for a Small Account</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/position-sizing-small-account.jpg" alt="A precision caliper measuring a single small gold coin beside a short stack of coins on a dark polished surface" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Position sizing for a small account follows the same rule as any account: risk a fixed percentage per trade. The constraint is different. On a $2,000 account, 1% is $20, and many instruments cannot be traded that small. The job is to pick instruments whose minimum size fits your risk, not to raise your risk to fit the instrument.</p>
+
+    <p>That sentence is the whole article, and almost every small account that fails does so by inverting it. The trade is available, the capital is not quite enough, and the risk gets stretched to close the gap. Six weeks later the account is gone and the strategy gets the blame.</p>
+
+    <h2>The rule does not change; the granularity does</h2>
+    <p>The arithmetic is identical at every account size. Decide the percentage of capital you are willing to lose on one trade, divide it by the distance from entry to invalidation, and the answer is your position size. That process is set out in full in <a href="position-sizing-from-risk.html">sizing a position from risk rather than conviction</a>.</p>
+    <p>What changes on a small account is that the answer often comes back as a fraction of the smallest unit you can actually buy. You cannot trade 0.4 of a futures contract. When the maths says less than one, the correct output is not "round up" — it is a different instrument or no trade.</p>
+
+    <h2>The minimum-risk table by instrument</h2>
+    <p>Below is the risk on a single unit at a realistic stop distance, and the smallest account for which that risk is 1% of capital. Values per point come from the exchange contract specifications.</p>
+    <div class="kv"><table>
+      <tr><th>Instrument</th><th>Value per point / pip</th><th>Risk on a typical stop</th><th>1% of what account</th></tr>
+      <tr><td>E-mini S&amp;P 500 (ES), 10-point stop</td><td>$50 per point</td><td>$500</td><td>$50,000</td></tr>
+      <tr><td>Micro E-mini S&amp;P 500 (MES), 10-point stop</td><td>$5 per point</td><td>$50</td><td>$5,000</td></tr>
+      <tr><td>Micro E-mini Nasdaq-100 (MNQ), 20-point stop</td><td>$2 per point</td><td>$40</td><td>$4,000</td></tr>
+      <tr><td>Forex mini lot (10,000), 20-pip stop</td><td>≈$1 per pip</td><td>$20</td><td>$2,000</td></tr>
+      <tr><td>Forex micro lot (1,000), 20-pip stop</td><td>≈$0.10 per pip</td><td>$2</td><td>$200</td></tr>
+    </table></div>
+    <p>The Micro E-mini S&amp;P 500 is one-tenth the size of the standard E-mini, with a contract multiplier of <strong>$5 per index point</strong> and a minimum tick of 0.25 points worth $1.25 (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, Micro E-mini S&amp;P 500 contract specifications</a>). That single design decision is what put index futures within reach of a four-figure account at a sane risk level; before micros existed, the honest advice to a $5,000 account was to trade something else.</p>
+    <p>Read the right-hand column as a floor, not a target. If your account is below the figure listed, that instrument cannot be traded at 1% risk with that stop — no technique changes it.</p>
+
+    <div class="callout"><b>Small account, same percentage.</b> The most common small-account mistake is treating the percentage as negotiable because the dollar amount feels trivial. Losing $20 on a $2,000 account is exactly as significant as losing $2,000 on a $200,000 account — the percentages are what compound. Ten losses at 1% costs you just under 10% of the account. Ten losses at 5% costs you 40% and needs a 67% gain to undo. The rule that keeps this bounded is <a href="the-1-percent-rule-in-trading.html">the 1% rule</a>.</div>
+
+    <h2>Four legitimate ways to make a trade fit</h2>
+    <ol>
+      <li><strong>Trade the smaller instrument.</strong> Micro futures instead of minis, micro lots instead of mini lots, fractional shares instead of whole ones. This is the first answer and it solves most cases outright.</li>
+      <li><strong>Take the setup with the tighter invalidation.</strong> A structurally valid stop three points away rather than twelve is not a smaller stop — it is a different, better-located trade. The invalidation must still be somewhere the idea is genuinely wrong, which is the whole subject of <a href="how-to-set-a-stop-loss.html">setting a stop that is not a guess</a>.</li>
+      <li><strong>Reduce the number of open positions instead of their size.</strong> One position at full planned risk beats three at a third each, because the three are rarely independent — see <a href="correlation-risk-in-trading.html">correlation risk</a>.</li>
+      <li><strong>Skip it.</strong> "No trade" is a position size, and on a small account it is the one that gets used least and earns most. There will be another setup this week.</li>
+    </ol>
+
+    <h2>What the 2026 rule change means for small accounts</h2>
+    <p>For twenty-five years, the binding constraint on a small US stock-trading account was the pattern day trader rule and its $25,000 equity threshold. FINRA retired that framework on <strong>June 4, 2026</strong> and replaced it with an intraday margin standard that applies to every margin account rather than counting day trades (<a href="https://www.finra.org/rules-guidance/notices/26-10" target="_blank" rel="nofollow noopener">FINRA Regulatory Notice 26-10</a>).</p>
+    <p>Two practical points follow. First, the old threshold no longer decides whether a small account can day trade stocks, which removes the main historic reason small accounts migrated to futures and forex. Second, firms may phase the change in and are free to keep stricter house rules, so the number that binds you is your broker's, not FINRA's — check before you plan around it. The detail is in <a href="pattern-day-trader-rule.html">the pattern day trader rule explained</a>.</p>
+
+    <h2>Costs weigh more at this size</h2>
+    <p>A $6 round turn is 0.3% of a $2,000 account and 0.003% of a $200,000 one. Identical trade, hundredfold difference in drag. On a small account, commissions, spread and slippage are a genuine component of expectancy rather than a rounding error, and they push in one direction: fewer, better trades.</p>
+    <ul>
+      <li><strong>Count costs inside your expectancy</strong>, not beside it — the method is in <a href="trading-expectancy.html">expectancy</a>.</li>
+      <li><strong>Prefer instruments with tight spreads</strong> at the times you actually trade, rather than the times the marketing screenshots were taken.</li>
+      <li><strong>Watch minimum commissions</strong>, which fall hardest on small positions and can make a micro-sized trade uneconomic even when the risk fits.</li>
+    </ul>
+
+    <h2>The shortcuts to refuse</h2>
+    <p>Each of these is a way of getting a bigger position without more capital, and each one trades a survivable account for a faster ending.</p>
+    <ul>
+      <li><strong>Raising leverage to compensate for size.</strong> Leverage changes what your capital can control, not whether your strategy makes money. See <a href="what-is-leverage-in-trading.html">what leverage actually is</a>.</li>
+      <li><strong>Trading without a stop</strong> so the position "cannot" be stopped out. The loss still happens; you have only removed your say in how big it is.</li>
+      <li><strong>Averaging down</strong> into a losing position, which converts a defined 1% loss into an undefined one.</li>
+      <li><strong>One big swing to get to a "real" account size.</strong> The distribution of outcomes for that plan is well documented in <a href="mistakes-that-blow-up-trading-accounts.html">the mistakes that blow up trading accounts</a>.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A small account is exactly where the Method earns its keep. <em>Break &amp; hold</em> means waiting for the level to be taken and held rather than chasing, so entries sit close to the invalidation and the risked amount stays small — which is the only lever a small account really has. <em>Know your next</em> gives every call a written invalidation, so the size calculation is possible before the trade rather than improvised during it. <em>Trail &amp; protect</em> takes risk off as targets print. None of it requires a large account; all of it requires the discipline to size down and pass. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What percentage should I risk per trade on a small account?</h3>
+    <p>The same percentage you would use on a large one, typically 1% or less. Small accounts are not a reason to risk more; they are a reason to trade smaller instruments. Risking 5% because 1% feels like too little money is how a small account becomes no account, since twenty consecutive losses at 5% is a realistic sequence over a first year.</p>
+
+    <h3>What is the smallest account that can trade futures properly?</h3>
+    <p>With Micro E-mini contracts, a 10-point stop on the Micro E-mini S&amp;P 500 risks about 50 dollars, which is 1% of a 5,000 dollar account. Below roughly 4,000 to 5,000 dollars, most index futures stops no longer fit inside a 1% rule, and micro-lot forex or fractional shares give finer control.</p>
+
+    <h3>Do I still need $25,000 to day trade US stocks?</h3>
+    <p>Not under the current rule. FINRA retired the pattern day trader framework on June 4, 2026 and replaced it with an intraday margin standard that applies to all margin accounts. Firms may phase the change in until October 2027 and may keep stricter house requirements, so the threshold that binds you is your own broker's, not FINRA's.</p>
+
+    <h3>Should I use more leverage to make a small account grow faster?</h3>
+    <p>No. Leverage changes how large a position your capital can control; it does not change your edge, and it multiplies the drawdown from an ordinary losing run. The way a small account grows is by surviving long enough for a positive expectancy to compound, which requires the risk per trade to stay small precisely when it feels least satisfying.</p>
+
+    <h2>Bottom line</h2>
+    <p>A small account does not need a different risk rule; it needs instruments fine-grained enough to obey the rule it already has. Work out the risk on one unit at your normal stop, compare it to 1% of your capital, and let that decide what you trade — micros, micro lots, fractional shares, or nothing today. Keep costs inside your expectancy, check your broker's own margin requirements rather than assuming the old thresholds, and resist every shortcut that makes the position bigger without making the edge better. The wider framework is <a href="risk-management-trading.html">risk management in trading</a>, and the realistic starting-capital question is answered in <a href="how-much-money-to-start-day-trading.html">how much money you need to start day trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="can-you-day-trade-with-500.html">Can You Day Trade With $500?</a>
+      <a href="how-much-money-to-start-day-trading.html">How Much Money to Start Day Trading</a>
+      <a href="pattern-day-trader-rule.html">The Pattern Day Trader Rule Explained</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

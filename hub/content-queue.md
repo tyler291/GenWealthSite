@@ -135,11 +135,11 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] How to take partial profits without capping your winners `(how-to-take-partial-profits)`
 - [x] Drawdown explained: how much is normal and when to stop trading `(drawdown-explained)`
 - [x] Risk of ruin: the math nobody shows new traders `(risk-of-ruin)`
-- [ ] Why win rate is the most overrated number in trading
-- [ ] Expectancy: the one formula that tells you if your system works
-- [ ] How to survive a losing streak without blowing up
-- [ ] Position sizing for a small account
-- [ ] Correlation risk: why your five trades are secretly one trade
+- [x] Why win rate is the most overrated number in trading `(why-win-rate-is-overrated)`
+- [x] Expectancy: the one formula that tells you if your system works `(trading-expectancy)`
+- [x] How to survive a losing streak without blowing up `(how-to-survive-a-losing-streak)`
+- [x] Position sizing for a small account `(position-sizing-small-account)`
+- [x] Correlation risk: why your five trades are secretly one trade `(correlation-risk-in-trading)`
 - [ ] Overnight and weekend gap risk for swing traders
 - [ ] How to scale up position size safely as your account grows
 - [ ] Daily loss limits: how to set one and actually respect it

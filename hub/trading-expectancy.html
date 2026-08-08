@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Trading Expectancy: The Formula That Tells You If It Works</title>
+<meta name="description" content="Expectancy is what one trade is worth on average. The formula, a worked example in dollars and in R, the sample size you need, and why positive is not enough." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/trading-expectancy.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Trading Expectancy: The Formula That Tells You If It Works" />
+<meta property="og:description" content="One number combines win rate, average win and average loss into what a trade is worth. How to calculate it, how to read it in R, and what it cannot tell you." />
+<meta property="og:url" content="https://gwhlds.com/hub/trading-expectancy.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/trading-expectancy.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Expectancy: The One Formula That Tells You If Your System Works","description":"Expectancy is the average amount a trading system makes or loses per trade, combining win rate with the average size of wins and losses. This guide gives the formula, a worked comparison of two systems in dollars, how to express expectancy in R so it survives changes in position size, why costs must be inside the number, how large a sample it takes before the figure means anything, and why a positive expectancy still does not guarantee survival.","image":"https://gwhlds.com/assets/hub/trading-expectancy.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/trading-expectancy.html","datePublished":"2026-08-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Trading Expectancy","item":"https://gwhlds.com/hub/trading-expectancy.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate trading expectancy?","acceptedAnswer":{"@type":"Answer","text":"Multiply your win rate by your average winning trade, then subtract your loss rate multiplied by your average losing trade. If you win 40% of trades with an average win of 300 dollars and lose 60% with an average loss of 150 dollars, expectancy is 120 minus 90, or 30 dollars per trade. Use closed trades only, and take costs out first."}},{"@type":"Question","name":"What is a good expectancy in trading?","acceptedAnswer":{"@type":"Answer","text":"Expressed in R, where one R is the amount risked per trade, an expectancy above 0.2R is a genuinely useful system and anything above 0.5R is unusual and deserves suspicion until the sample is large. What matters more than the level is that the figure is positive after all costs and stable across different market conditions rather than produced by a handful of outliers."}},{"@type":"Question","name":"How many trades do you need to trust your expectancy?","acceptedAnswer":{"@type":"Answer","text":"Treat anything under 30 trades as noise and 100 as the point where a figure starts to be indicative rather than decorative. Systems with low win rates and large winners need more, because the result depends on catching rare big moves. Splitting your record into blocks of 50 and comparing them tells you more than one number from the whole sample."}},{"@type":"Question","name":"Can a system with positive expectancy still blow up an account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Expectancy is an average per trade and says nothing about the order the results arrive in. A positive-expectancy system sized too large can be finished by an ordinary losing streak before the average has time to assert itself. Expectancy tells you whether a system is worth trading; position sizing decides whether you are still there when it pays."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Trading Expectancy</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Metrics</span>
+        <h1>Expectancy: The One Formula That Tells You If Your System Works</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 8, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/trading-expectancy.jpg" alt="An antique brass calculating machine beside an open leather ledger with a glowing rising curve above it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Expectancy is the average amount a system makes or loses per trade: the win rate times the average win, minus the loss rate times the average loss. A positive expectancy means the strategy makes money over enough trades. It is the one number that decides whether a system works, and win rate cannot replace it.</p>
+
+    <p>Most traders never calculate it, which is strange, because it takes four numbers they already have and answers the only question that matters. It also stops the two arguments that consume the most time in trading forums — whether a high win rate is good and whether a big reward-to-risk is better — by folding both into a single figure.</p>
+
+    <h2>The formula</h2>
+    <p>Expectancy = (win rate × average win) − (loss rate × average loss).</p>
+    <p>Four inputs, all taken from closed trades in your own record: how often you win, how much you make when you do, how often you lose, and how much you lose when you do. The result is what one more trade is worth to you on average, in advance of knowing anything about it. If the number is negative, no amount of discipline, journalling or screen time changes the destination — only the strategy can.</p>
+
+    <h2>A worked example: two systems that look nothing alike</h2>
+    <p>Here are two records, both real shapes you will meet. One wins nearly two trades out of three. The other loses nearly two out of three.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>System A</th><th>System B</th></tr>
+      <tr><td>Win rate</td><td>65%</td><td>35%</td></tr>
+      <tr><td>Average win</td><td>$120</td><td>$400</td></tr>
+      <tr><td>Average loss</td><td>$200</td><td>$150</td></tr>
+      <tr><td>Expected gain per trade</td><td>$78</td><td>$140</td></tr>
+      <tr><td>Expected loss per trade</td><td>$70</td><td>$97.50</td></tr>
+      <tr><td><strong>Expectancy</strong></td><td><strong>+$8</strong></td><td><strong>+$42.50</strong></td></tr>
+    </table></div>
+    <p>System A wins almost twice as often and is worth roughly a fifth as much per trade. Over 200 trades that is $1,600 against $8,500 — from the strategy that <em>feels</em> far worse to trade. This is the entire case for why <a href="why-win-rate-is-overrated.html">win rate is the most overrated number in trading</a>, expressed as arithmetic rather than opinion.</p>
+    <p>Notice also how thin System A's margin is. An extra $10 of average loss, or two percentage points off the win rate, turns it negative. A system whose expectancy sits within rounding distance of zero is not a system; it is a hobby with commissions.</p>
+
+    <h2>Express it in R, not dollars</h2>
+    <p>Dollar expectancy breaks the moment you change position size, so professionals state it in <strong>R</strong> — multiples of the amount risked on each trade. One R is your standard risk. A winner that returns twice what you risked is +2R; a trade stopped out at your invalidation is −1R.</p>
+    <p>In R, System B above becomes: 0.35 × 2.67R − 0.65 × 1R = +0.28R. Every trade is worth a little over a quarter of what you risk. Risk 1% of the account per trade and that is about 0.28% per trade in expectation, before compounding and before the variance that makes any individual month look nothing like the average.</p>
+    <ul>
+      <li><strong>R expectancy is comparable across accounts.</strong> A $2,000 account and a $200,000 account running the same strategy have the same R expectancy and wildly different dollar figures.</li>
+      <li><strong>It survives your growth.</strong> Scaling up size changes the dollars and leaves the R untouched, so you can tell whether performance actually changed.</li>
+      <li><strong>It plugs straight into planning.</strong> Expectancy in R multiplied by trades per month gives you an expected R per month, which is the only honest way to set an expectation.</li>
+    </ul>
+
+    <div class="callout"><b>Costs belong inside the number, not beside it.</b> Spread, commission, exchange fees, financing and slippage all come out of the winners and get added to the losers, and they are charged on every trade whether it works or not. Calculate expectancy from net closed P&amp;L, never from chart-to-chart entry and exit prices. Plenty of strategies have a positive gross expectancy and a negative net one; that difference is the single most common reason a backtest does not survive contact with a live account, and it is the argument for <a href="how-many-trades-per-day.html">taking fewer, better trades</a>.</div>
+
+    <h2>How many trades before the number means anything</h2>
+    <p>Expectancy is an estimate drawn from a sample, and small samples lie confidently. Thirty trades tells you almost nothing. A hundred starts to be indicative. Several hundred, spread across different market conditions, is where the figure earns trust.</p>
+    <p>Two checks are worth more than a bigger number. First, split your record into blocks of fifty and calculate each block separately — if expectancy swings from +0.4R to −0.3R between blocks, you have variance rather than an edge. Second, delete your single best trade and recalculate. If the system only works because of one outlier, the honest reading is that you do not yet know whether it works. Keeping the record that makes both checks possible is what <a href="trading-journal.html">a trading journal</a> is actually for.</p>
+
+    <h2>Why a positive expectancy still is not enough</h2>
+    <p>Expectancy is an average, and averages say nothing about the order results arrive in. A system worth +0.3R per trade will still hand you eight losers in a row at some point, and if each of those is 8% of the account, the average never gets the chance to pay. The maths behind that is set out in <a href="risk-of-ruin.html">risk of ruin</a>, and the practical answer is <a href="position-sizing-from-risk.html">sizing from risk rather than conviction</a>.</p>
+    <p>There is also a growth-rate wrinkle. Because losses compound against you, the size that maximises long-run growth is a fraction of what the raw expectancy might tempt you into — the point J. L. Kelly made in his 1956 Bell System Technical Journal paper on optimal bet sizing (<a href="https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf" target="_blank" rel="nofollow noopener">Kelly, "A New Interpretation of Information Rate"</a>). Most traders who use it at all trade a half or a quarter of the Kelly fraction, because the full figure produces drawdowns that no human sits through calmly.</p>
+    <p>And the base rate is unkind. In a study of every individual who began day trading Brazilian equity futures between 2013 and 2015, Chague and Giovannetti found that of those who persisted for more than 300 days, <strong>97% lost money</strong> and only <strong>0.4% earned more than a bank teller</strong>, defined as US$54 per day (<a href="https://ideas.repec.org/p/spa/wpaper/2019wpecon47.html" target="_blank" rel="nofollow noopener">Chague &amp; Giovannetti, "Day Trading for a Living?", University of São Paulo working paper, 2019</a>). Persistence alone does not create expectancy. Measuring honestly, and stopping when the number says stop, is the part almost nobody does.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Expectancy can only be measured if trades are defined before they happen, which is why every callout in the room carries an entry, defined targets and a written invalidation. <em>Know your next</em> makes the R of a trade knowable at the moment it is taken rather than reconstructed afterwards. <em>Break &amp; hold</em> protects the denominator by keeping entries near the level so the risked amount stays small. <em>Trail &amp; protect</em> works on the numerator, letting winners run past the first target instead of capping them. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate trading expectancy?</h3>
+    <p>Multiply your win rate by your average winning trade, then subtract your loss rate multiplied by your average losing trade. If you win 40% of trades with an average win of 300 dollars and lose 60% with an average loss of 150 dollars, expectancy is 120 minus 90, or 30 dollars per trade. Use closed trades only, and take costs out first.</p>
+
+    <h3>What is a good expectancy in trading?</h3>
+    <p>Expressed in R, where one R is the amount risked per trade, an expectancy above 0.2R is a genuinely useful system and anything above 0.5R is unusual and deserves suspicion until the sample is large. What matters more than the level is that the figure is positive after all costs and stable across different market conditions rather than produced by a handful of outliers.</p>
+
+    <h3>How many trades do you need to trust your expectancy?</h3>
+    <p>Treat anything under 30 trades as noise and 100 as the point where a figure starts to be indicative rather than decorative. Systems with low win rates and large winners need more, because the result depends on catching rare big moves. Splitting your record into blocks of 50 and comparing them tells you more than one number from the whole sample.</p>
+
+    <h3>Can a system with positive expectancy still blow up an account?</h3>
+    <p>Yes. Expectancy is an average per trade and says nothing about the order the results arrive in. A positive-expectancy system sized too large can be finished by an ordinary losing streak before the average has time to assert itself. Expectancy tells you whether a system is worth trading; position sizing decides whether you are still there when it pays.</p>
+
+    <h2>Bottom line</h2>
+    <p>Expectancy turns four numbers you already have into the only verdict that counts: what one more trade is worth. Calculate it net of costs, state it in R so it survives changes in size, insist on a sample large enough to mean something, and check that it does not depend on a single trade. Then size so that the average has time to arrive. The wider framework this sits inside is <a href="risk-management-trading.html">risk management in trading</a>, and the discipline that produces measurable trades in the first place is <a href="how-to-build-a-trading-plan.html">a written trading plan</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="why-win-rate-is-overrated.html">Why Win Rate Is the Most Overrated Number</a>
+      <a href="risk-reward-ratio.html">Risk-to-Reward Ratio: How to Use It</a>
+      <a href="risk-of-ruin.html">Risk of Ruin: The Math Nobody Shows You</a>
+      <a href="trading-journal.html">The Trading Journal That Actually Helps</a>
+      <a href="risk-management-trading.html">Risk Management in Trading: The Full System</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
