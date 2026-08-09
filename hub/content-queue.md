@@ -140,9 +140,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] How to survive a losing streak without blowing up `(how-to-survive-a-losing-streak)`
 - [x] Position sizing for a small account `(position-sizing-small-account)`
 - [x] Correlation risk: why your five trades are secretly one trade `(correlation-risk-in-trading)`
-- [ ] Overnight and weekend gap risk for swing traders
-- [ ] How to scale up position size safely as your account grows
-- [ ] Daily loss limits: how to set one and actually respect it
+- [x] Overnight and weekend gap risk for swing traders `(overnight-and-weekend-gap-risk)`
+- [x] How to scale up position size safely as your account grows `(how-to-scale-up-position-size)`
+- [x] Daily loss limits: how to set one and actually respect it `(daily-loss-limits)`
 
 ---
 

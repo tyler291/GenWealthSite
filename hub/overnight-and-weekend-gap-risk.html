@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Overnight &amp; Weekend Gap Risk: What Swing Traders Face</title>
+<meta name="description" content="Swing traders hold through the 81% of the week the US market is closed. How overnight and weekend gaps form, why stops fail, and how to size for gap risk." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/overnight-and-weekend-gap-risk.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Overnight &amp; Weekend Gap Risk: What Swing Traders Face" />
+<meta property="og:description" content="The US stock market is open for 32.5 of the week's 168 hours. Everything that happens in the other 135.5 is gap risk — and your stop does not cover it." />
+<meta property="og:url" content="https://gwhlds.com/hub/overnight-and-weekend-gap-risk.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/overnight-and-weekend-gap-risk.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Overnight and Weekend Gap Risk for Swing Traders","description":"Gap risk is the exposure a swing trader carries while the market is closed, when price can reopen far away from the previous close and skip straight past a resting stop. This guide explains how many hours a week the US equity market is actually shut, why a stop order becomes a market order and therefore offers no protection through a gap, what causes overnight and weekend gaps, and how to size positions against the plausible gap rather than the stop distance.","image":"https://gwhlds.com/assets/hub/overnight-and-weekend-gap-risk.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/overnight-and-weekend-gap-risk.html","datePublished":"2026-08-09"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Overnight and Weekend Gap Risk","item":"https://gwhlds.com/hub/overnight-and-weekend-gap-risk.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is gap risk in trading?","acceptedAnswer":{"@type":"Answer","text":"Gap risk is the exposure created when a market reopens at a price meaningfully different from where it closed. Because no trading happens in between, price does not travel through the levels in the gap — it arrives on the other side of them. Any order resting inside that range, including a stop loss, is skipped and filled at the new price instead."}},{"@type":"Question","name":"Does a stop loss protect you overnight?","acceptedAnswer":{"@type":"Answer","text":"Not through a gap. A stop order becomes a market order once the stop price is touched, so it is filled at the best available price at that moment, not at the stop price. If a stock closes at 50 with a stop at 48 and reopens at 43, the stop triggers and fills near 43. The stop controlled the decision to exit, not the loss."}},{"@type":"Question","name":"How much bigger are weekend gaps than overnight gaps?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed multiple, but the exposure window is roughly four times longer. A weeknight closure runs 17.5 hours from the 4:00 p.m. ET close to the 9:30 a.m. open, while a normal weekend runs 65.5 hours from Friday's close to Monday's open. More hours means more scheduled news, more unscheduled news and more time for sentiment to shift before you can act."}},{"@type":"Question","name":"How do you size a position for gap risk?","acceptedAnswer":{"@type":"Answer","text":"Size against the gap you could plausibly face, not the stop distance you chose. Estimate a realistic adverse gap for the instrument and the catalyst calendar, treat that as the true loss on the position, and reduce size until that number fits your risk budget. On a name reporting earnings, that often means a position a fraction of the size the stop distance alone would suggest, or no position at all."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Gap Risk</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Swing Trading</span>
+        <h1>Overnight and Weekend Gap Risk for Swing Traders</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 9, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/overnight-and-weekend-gap-risk.jpg" alt="A wide chasm splitting a stone trading floor with a glowing candlestick path broken across the gap" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Gap risk is the chance that a market reopens at a price far from where it closed, skipping straight past your stop. Swing traders carry it because the US stock market is only open about 19% of the week. Your stop is an instruction, not a guarantee — size the position for the gap, not the stop.</p>
+
+    <p>This is the risk that separates swing trading from day trading, and it is the one most often left out of the position-sizing calculation. A day trader who is flat at the bell has an easily-defined worst case. A swing trader does not, because the worst case is decided while the exchange is dark and nobody can trade.</p>
+
+    <h2>How long the market is actually closed</h2>
+    <p>The New York Stock Exchange core trading session runs from <strong>9:30 a.m. to 4:00 p.m. ET</strong> (<a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="nofollow noopener">NYSE, Hours &amp; Calendars</a>). That is 6.5 hours a day, or <strong>32.5 of the week's 168 hours</strong>. The market is closed for the other 135.5 — roughly <strong>81% of the week</strong>.</p>
+    <p>Broken down, a swing trader holding a position is exposed across two kinds of dark window:</p>
+    <ul>
+      <li><strong>The weeknight gap: 17.5 hours.</strong> From the 4:00 p.m. close to the 9:30 a.m. open the next morning.</li>
+      <li><strong>The weekend gap: 65.5 hours.</strong> From Friday's 4:00 p.m. close to Monday's 9:30 a.m. open — nearly four times as long, and covering two days on which governments, central banks and companies still make announcements.</li>
+    </ul>
+    <p>Extended-hours sessions narrow the window but do not remove the problem. FINRA requires firms to disclose that in extended hours <em>"there may be lower liquidity"</em> and that prices there <em>"may not reflect the prices either at the end of regular trading hours, or upon the opening the next morning"</em> (<a href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/2265" target="_blank" rel="nofollow noopener">FINRA Rule 2265</a>). A thin pre-market print is information, not an exit.</p>
+
+    <h2>Why your stop does not protect you through a gap</h2>
+    <p>A stop loss is an instruction to sell once a price is touched. When it triggers, it becomes a market order — filled at the best price available at that instant, which in a gap is the new price, not your stop price.</p>
+    <p>Work the arithmetic. You buy at $50 with a stop at $48, sized so that $2 of risk equals 1% of the account. The company reports after the close and the stock opens at $43. Your stop triggers immediately and fills near $43. You planned to lose 1%; you lost about 3.5%. Nothing malfunctioned. The stop did exactly what a stop does, which is decide <em>when</em> you exit, not <em>at what price</em>. That distinction is the whole of gap risk, and it is why <a href="how-to-set-a-stop-loss.html">setting a stop loss</a> is a necessary but insufficient defence for a held position.</p>
+
+    <h2>What creates the gaps</h2>
+    <ul>
+      <li><strong>Scheduled company news.</strong> Earnings, guidance updates and investor days are almost always released outside the session, precisely so the market has time to digest them.</li>
+      <li><strong>Scheduled macro releases.</strong> Inflation and jobs data, central bank decisions and overseas market opens land at fixed times, many of them before the US bell.</li>
+      <li><strong>Unscheduled news.</strong> Regulatory action, litigation, a resignation, an accident, a geopolitical event. The weekend is where these cluster, because that is when they can be announced with the least immediate market reaction.</li>
+      <li><strong>Overseas repricing.</strong> Asian and European sessions trade through the US night. By 9:30 a.m. ET the rest of the world has already had its opinion.</li>
+      <li><strong>Mechanical flows.</strong> Index rebalances, options expiry and quarter-end positioning concentrate volume into the open and close.</li>
+    </ul>
+
+    <h2>Gap exposure by holding style</h2>
+    <div class="kv"><table>
+      <tr><th>Holding style</th><th>Hours held while market closed</th><th>Opens carried per position</th></tr>
+      <tr><td>Scalp (minutes)</td><td>0</td><td>0</td></tr>
+      <tr><td>Day trade, flat by the bell</td><td>0</td><td>0</td></tr>
+      <tr><td>Overnight hold</td><td>17.5</td><td>1</td></tr>
+      <tr><td>Three-day swing, Mon–Wed</td><td>35</td><td>2</td></tr>
+      <tr><td>Swing held over a weekend</td><td>~100</td><td>3+ (one of them the weekend)</td></tr>
+      <tr><td>Position trade, four weeks</td><td>~540</td><td>20</td></tr>
+    </table></div>
+    <p>Read the right-hand column as the number of separate opportunities for the market to reprice your position without you. This is the honest cost of the longer timeframe, and it is worth weighing against the benefits when choosing between <a href="day-trading-vs-swing-trading.html">day trading and swing trading</a>.</p>
+
+    <div class="callout"><b>Size for the gap, not the stop.</b> The standard sizing formula divides your risk budget by the distance to your stop. For a held position, replace the stop distance with the <em>plausible adverse gap</em> for that instrument. If a stock can reasonably open 8% lower on earnings, then 8% is your real risk per share, and the position has to shrink until 8% fits your budget — often to a quarter of what the stop distance alone would allow. The underlying method is in <a href="position-sizing-from-risk.html">sizing a position from risk instead of conviction</a>.</div>
+
+    <h2>Six practical ways to manage overnight exposure</h2>
+    <ol>
+      <li><strong>Know the calendar before you hold.</strong> Check the earnings date and the macro schedule before the close, not after. Holding through a known binary event is a decision; holding through one you did not check is an accident.</li>
+      <li><strong>Cut size for the hold, not just for the entry.</strong> A position sized correctly for an intraday stop is usually oversized for an overnight one. Trimming into the close is a legitimate risk decision, not weakness.</li>
+      <li><strong>Take partials before the bell.</strong> Booking part of a winner reduces the notional exposed to the gap while leaving the idea alive. See <a href="how-to-take-partial-profits.html">taking partial profits</a>.</li>
+      <li><strong>Treat Friday differently.</strong> A weekend hold is a 65.5-hour hold. Some traders simply do not carry risk over a weekend; that is a defensible rule, not a lack of conviction.</li>
+      <li><strong>Cap the number of correlated overnight positions.</strong> A gap driven by macro news hits every position pointing the same way at once, which is <a href="correlation-risk-in-trading.html">correlation risk</a> arriving in a single print.</li>
+      <li><strong>Write down what you will do if it gaps against you.</strong> Decide before the open whether you exit at the print, wait for the first thirty minutes, or scale out. In the moment, without a written plan, most traders freeze.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Gaps are exactly why invalidation is written before the position is held, not improvised at the open. <em>Know your next</em> means every callout carries the level that ends the idea, so a gap through it is a decision already made rather than a decision made in shock. <em>Trail &amp; protect</em> matters most on multi-day holds — as targets print, the stop trails behind them, so a gap finds a smaller and better-protected position than the one that was opened. And <em>break &amp; hold</em> keeps us out of the chase-the-gap trade at 9:31, which is where a bad night turns into a bad week. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is gap risk in trading?</h3>
+    <p>Gap risk is the exposure created when a market reopens at a price meaningfully different from where it closed. Because no trading happens in between, price does not travel through the levels in the gap — it arrives on the other side of them. Any order resting inside that range, including a stop loss, is skipped and filled at the new price instead.</p>
+
+    <h3>Does a stop loss protect you overnight?</h3>
+    <p>Not through a gap. A stop order becomes a market order once the stop price is touched, so it is filled at the best available price at that moment, not at the stop price. If a stock closes at 50 with a stop at 48 and reopens at 43, the stop triggers and fills near 43. The stop controlled the decision to exit, not the loss.</p>
+
+    <h3>How much bigger are weekend gaps than overnight gaps?</h3>
+    <p>There is no fixed multiple, but the exposure window is roughly four times longer. A weeknight closure runs 17.5 hours from the 4:00 p.m. ET close to the 9:30 a.m. open, while a normal weekend runs 65.5 hours from Friday's close to Monday's open. More hours means more scheduled news, more unscheduled news and more time for sentiment to shift before you can act.</p>
+
+    <h3>How do you size a position for gap risk?</h3>
+    <p>Size against the gap you could plausibly face, not the stop distance you chose. Estimate a realistic adverse gap for the instrument and the catalyst calendar, treat that as the true loss on the position, and reduce size until that number fits your risk budget. On a name reporting earnings, that often means a position a fraction of the size the stop distance alone would suggest, or no position at all.</p>
+
+    <h2>Bottom line</h2>
+    <p>Swing trading buys you time and charges you gap risk for it. The market is shut for about 81% of the week, a stop is an exit instruction rather than a loss cap, and a weekend hold is nearly four times the dark window of a weeknight one. The fix is not to avoid holding — it is to check the calendar before the close, size against the plausible gap rather than the stop distance, and write down in advance what you do if the open goes against you. The full framework this sits inside is <a href="risk-management-trading.html">risk management in trading</a>, and the damage it is designed to prevent is quantified in <a href="drawdown-explained.html">drawdown explained</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="day-trading-vs-swing-trading.html">Day Trading vs Swing Trading</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't a Guess</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="correlation-risk-in-trading.html">Correlation Risk: Five Trades, One Bet</a>
+      <a href="swing-trading-communities.html">Swing Trading Communities: What to Look For</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

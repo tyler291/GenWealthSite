@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Scale Up Position Size Safely as You Grow</title>
+<meta name="description" content="Growing an account changes the math. How to scale position size in steps you can survive, when to size up, when to freeze, and why doubling ends accounts." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-scale-up-position-size.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Scale Up Position Size Safely as You Grow" />
+<meta property="og:description" content="A 50% drawdown needs a 100% gain to undo. Scale the fraction you risk in quarter-steps, on evidence, and let fixed-fractional sizing grow the dollars for you." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-scale-up-position-size.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-scale-up-position-size.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Scale Up Position Size Safely as Your Account Grows","description":"Scaling position size is the decision to raise the fraction of the account risked per trade, distinct from the dollar growth that fixed-fractional sizing produces automatically. This guide sets out the evidence required before increasing risk, a quarter-step schedule instead of doubling, the drawdown arithmetic that makes large jumps unrecoverable, the conditions that should trigger scaling back down, and the liquidity and margin ceilings a growing account eventually meets.","image":"https://gwhlds.com/assets/hub/how-to-scale-up-position-size.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-scale-up-position-size.html","datePublished":"2026-08-09"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Scaling Up Position Size","item":"https://gwhlds.com/hub/how-to-scale-up-position-size.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should you increase your position size?","acceptedAnswer":{"@type":"Answer","text":"Increase the fraction of the account you risk only when three things are true at once: the account has grown from trading profits rather than deposits, you have a sample of at least 50 to 100 trades at the current size showing positive expectancy, and you executed that sample to plan without skipped stops or improvised entries. Growth in the balance alone is not evidence."}},{"@type":"Question","name":"How much should you increase position size by?","acceptedAnswer":{"@type":"Answer","text":"In steps of roughly 20 to 25% of your current risk fraction, not by doubling. Moving from 0.5% to 0.6% of the account per trade is a step you can evaluate and reverse. Moving from 0.5% to 1% doubles every drawdown at the same time it doubles every gain, and it usually happens right after a winning streak, which is when the sample is least representative."}},{"@type":"Question","name":"Why is doubling position size dangerous?","acceptedAnswer":{"@type":"Answer","text":"Because losses and gains are not symmetric. A 20% drawdown needs a 25% gain to recover, a 40% drawdown needs 66.7%, and a 50% drawdown needs 100%. Doubling risk doubles the depth of a normal losing streak, and each extra point of depth costs disproportionately more to undo. The same doubling that shortens the path up lengthens the path back far more."}},{"@type":"Question","name":"Does position size have to increase as an account grows?","acceptedAnswer":{"@type":"Answer","text":"No, and often it should not. If you risk a fixed percentage per trade, your dollar risk already rises automatically with the balance, which is compounding without any decision. Raising the percentage itself is a separate and much more aggressive choice. Many traders never change their fraction and simply let the account do the scaling."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Scaling Up Position Size</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Risk · Position Sizing</span>
+        <h1>How to Scale Up Position Size Safely as Your Account Grows</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 9, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-scale-up-position-size.jpg" alt="An ascending staircase of polished brass steps rising out of shadow with a single glowing gold sphere resting on a middle step" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Scale position size by raising the percentage of your account you risk only after your current size has produced a profitable, well-executed sample — and raise it in increments of about a quarter, never by doubling. Fixed-fractional sizing already grows your dollars automatically as the account grows; the fraction itself should move slowly.</p>
+
+    <p>Almost every trader who blows up a working account does it while scaling. Not with a bad idea — with the right idea at the wrong size, taken on at the wrong moment. The mechanics of scaling are simple. The discipline of <em>when</em> is the entire problem.</p>
+
+    <h2>Two different things get called "scaling up"</h2>
+    <p>These are worth separating, because one is automatic and the other is a real decision.</p>
+    <ul>
+      <li><strong>Dollar scaling happens on its own.</strong> If you risk 1% per trade, a $10,000 account risks $100 and a $40,000 account risks $400. You did not change anything; the arithmetic did. This is compounding, and it is the whole point of <a href="position-sizing-from-risk.html">sizing from risk rather than conviction</a>.</li>
+      <li><strong>Fraction scaling is a choice.</strong> Moving from 1% to 1.5% per trade changes your risk profile permanently, in every market condition, on every trade. This is the decision that needs rules.</li>
+    </ul>
+    <p>Most traders who say "I need to size up" have already got the first one working and are reaching for the second without noticing the difference.</p>
+
+    <h2>Three tests before you raise the fraction</h2>
+    <ol>
+      <li><strong>The growth came from trading.</strong> A balance that grew because you deposited more is not evidence of anything. Only equity produced by closed trades counts as a vote for your process.</li>
+      <li><strong>The sample is big enough to mean something.</strong> Fifty to a hundred trades at the current size, showing positive <a href="trading-expectancy.html">expectancy</a> — not a good month. Twelve winning trades is well within what a coin-flip system produces, and scaling on it is scaling on noise.</li>
+      <li><strong>You executed that sample cleanly.</strong> No moved stops, no unplanned entries, no revenge trades. If discipline is already leaking at the current size, more money per trade will widen the leak, not close it. Size magnifies behaviour; it does not improve it.</li>
+    </ol>
+    <p>If all three are true, you have earned a step. If one is false, you have earned another sample at the current size.</p>
+
+    <h2>Why doubling is the mistake that ends accounts</h2>
+    <p>Losses and gains are not symmetric, and the asymmetry gets brutal fast. Here is what each drawdown costs to undo:</p>
+    <div class="kv"><table>
+      <tr><th>Drawdown</th><th>Gain required to get back to flat</th></tr>
+      <tr><td>10%</td><td>11.1%</td></tr>
+      <tr><td>20%</td><td>25%</td></tr>
+      <tr><td>30%</td><td>42.9%</td></tr>
+      <tr><td>40%</td><td>66.7%</td></tr>
+      <tr><td>50%</td><td>100%</td></tr>
+      <tr><td>60%</td><td>150%</td></tr>
+    </table></div>
+    <p>Doubling your risk fraction roughly doubles the depth of your normal losing streak. It does not double the cost of recovering from it — it more than triples it, because you have moved into the steep part of that table. A trader whose usual bad stretch is a 15% dip now has a 30% dip, and the repair job goes from a 17.6% gain to a 42.9% one. The mechanism is laid out in full in <a href="drawdown-explained.html">drawdown explained</a>.</p>
+    <p>The timing makes it worse. Nobody doubles size after a losing month. Doubling happens after a winning streak — the exact moment when the recent sample most overstates the edge and confidence is furthest ahead of evidence.</p>
+
+    <div class="callout"><b>The quarter-step schedule.</b> Raise your risk fraction by about 20–25% of its current value, then trade a full sample before touching it again. From 0.5%, the ladder is 0.5 → 0.6 → 0.75 → 0.9 → 1.1%. Each rung is small enough that a bad sample at the new size costs you a fraction of a step, not a year. And write the ladder down in advance, before there is a P&amp;L on the screen arguing with you. The starting rung for most traders is covered in <a href="the-1-percent-rule-in-trading.html">the 1% rule in trading</a>.</div>
+
+    <h2>The ratchet has to work both ways</h2>
+    <p>A scaling plan with only an up arrow is not a plan, it is optimism. Define in advance what sends you back down a rung:</p>
+    <ul>
+      <li><strong>A defined drawdown from your equity high.</strong> Many traders step down one rung at −10% and another at −15%. Reducing size in a drawdown lowers the dollar cost of every subsequent loss and flattens the curve exactly when it needs flattening.</li>
+      <li><strong>A discipline breach.</strong> One moved stop, one unplanned entry — back a rung until you have rebuilt a clean sample. This makes the rule about behaviour, not just balance.</li>
+      <li><strong>A change in conditions.</strong> A strategy built for trending markets in a range-bound month is not the same strategy. Smaller size while you find out is cheap information.</li>
+      <li><strong>Anything happening off the charts.</strong> Illness, a house move, a new job. Reduced attention is a real reason to reduce size, and the traders who last are the ones who say so out loud. There is more on this in <a href="how-to-survive-a-losing-streak.html">surviving a losing streak</a>.</li>
+    </ul>
+
+    <h2>The ceilings a growing account eventually hits</h2>
+    <p>Scaling is not infinite, and the limits arrive from outside your risk rules.</p>
+    <p><strong>Liquidity and slippage.</strong> Your fills stop looking like the chart. On thin small-caps, low-volume futures contracts and the first minute of the session, a size that used to fill on the bid now moves the price against you. The strategy did not stop working; your own order became part of the market. Track your average slippage per trade as you scale — if it is growing faster than your size, you have found your ceiling.</p>
+    <p><strong>Margin.</strong> Under Regulation T, brokers <em>"can lend a customer up to 50 percent of the total purchase price of a margin equity security for new purchases"</em> (<a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts" target="_blank" rel="nofollow noopener">FINRA, Margin Regulation</a>). Past that, additional size is not additional conviction — it is borrowed money with a maintenance requirement attached, and a maintenance call forces liquidation at the worst possible moment. What that looks like in practice is in <a href="what-is-a-margin-call.html">what is a margin call</a>.</p>
+    <p><strong>Your own nervous system.</strong> The percentage stayed the same; the dollar figure did not. A 1% loss is $100 on a $10,000 account and $1,000 on a $100,000 one. The same rule, the same trade, a very different feeling at 9:45 a.m. If you start managing positions differently at the new size — cutting winners early, hesitating on entries — that is the real ceiling, and it moves slowly with experience rather than instantly with account size.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Size discipline is the reason a callout is worth following at all. <em>Break &amp; hold</em> means we do not chase — and a chased entry at a bigger size is the single fastest way to undo a good month. <em>Know your next</em> gives every call a written entry, targets and invalidation, so the risk per trade is a known number you can scale deliberately instead of a guess you scale by feel. <em>Trail &amp; protect</em> takes exposure off as targets print, which is what lets a larger position stay survivable. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>When should you increase your position size?</h3>
+    <p>Increase the fraction of the account you risk only when three things are true at once: the account has grown from trading profits rather than deposits, you have a sample of at least 50 to 100 trades at the current size showing positive expectancy, and you executed that sample to plan without skipped stops or improvised entries. Growth in the balance alone is not evidence.</p>
+
+    <h3>How much should you increase position size by?</h3>
+    <p>In steps of roughly 20 to 25% of your current risk fraction, not by doubling. Moving from 0.5% to 0.6% of the account per trade is a step you can evaluate and reverse. Moving from 0.5% to 1% doubles every drawdown at the same time it doubles every gain, and it usually happens right after a winning streak, which is when the sample is least representative.</p>
+
+    <h3>Why is doubling position size dangerous?</h3>
+    <p>Because losses and gains are not symmetric. A 20% drawdown needs a 25% gain to recover, a 40% drawdown needs 66.7%, and a 50% drawdown needs 100%. Doubling risk doubles the depth of a normal losing streak, and each extra point of depth costs disproportionately more to undo. The same doubling that shortens the path up lengthens the path back far more.</p>
+
+    <h3>Does position size have to increase as an account grows?</h3>
+    <p>No, and often it should not. If you risk a fixed percentage per trade, your dollar risk already rises automatically with the balance, which is compounding without any decision. Raising the percentage itself is a separate and much more aggressive choice. Many traders never change their fraction and simply let the account do the scaling.</p>
+
+    <h2>Bottom line</h2>
+    <p>Let fixed-fractional sizing do the scaling for you, and treat any increase in the fraction itself as a rare, evidence-led decision. Demand trading-generated growth, a 50–100 trade sample and clean execution before you step up; step up by a quarter rather than a double; and write down the drawdown and discipline triggers that step you back down. Scaling is not the reward for a good month — it is the consequence of a proven process, and the traders still trading in five years are the ones who moved that number slowly. The system it belongs to is <a href="risk-management-trading.html">risk management in trading</a>, and if you want to see how we handle it live, start with <a href="../faq.html">our FAQ</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="position-sizing-small-account.html">Position Sizing for a Small Account</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading</a>
+      <a href="drawdown-explained.html">Drawdown Explained: How Much Is Normal?</a>
+      <a href="trading-expectancy.html">Expectancy: The One Formula That Matters</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

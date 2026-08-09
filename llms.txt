@@ -129,6 +129,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [How to Survive a Losing Streak Without Blowing Up](https://gwhlds.com/hub/how-to-survive-a-losing-streak.html): how often runs of four, six and eight losses are expected at each win rate, the three ways a normal streak becomes a blow-up, the written limits that cap it, and how to scale back up.
 - [Position Sizing for a Small Account](https://gwhlds.com/hub/position-sizing-small-account.html): the minimum risk per trade by instrument and the smallest account each suits, four ways to make a trade fit, what the 2026 intraday margin rule changed, and the shortcuts to refuse.
 - [Correlation Risk: Why Your Five Trades Are Secretly One Trade](https://gwhlds.com/hub/correlation-risk-in-trading.html): where hidden correlation comes from, why the dollar is on one side of 89% of FX trades, how to estimate combined exposure, and the rules that cap total open risk.
+- [Overnight and Weekend Gap Risk for Swing Traders](https://gwhlds.com/hub/overnight-and-weekend-gap-risk.html): how many hours a week the US market is actually closed, why a stop becomes a market order and cannot cover a gap, what causes overnight and weekend gaps, and how to size against the gap instead of the stop.
+- [How to Scale Up Position Size Safely as Your Account Grows](https://gwhlds.com/hub/how-to-scale-up-position-size.html): the difference between dollar scaling and fraction scaling, the three tests to pass before raising risk, a quarter-step ladder instead of doubling, the drawdown recovery table, and the triggers that scale you back down.
+- [Daily Loss Limits: How to Set One and Actually Respect It](https://gwhlds.com/hub/daily-loss-limits.html): how to size a daily limit from per-trade risk, why exchanges run market-wide circuit breakers at 7%, 13% and 20%, the mechanical enforcement that works, and why a daily profit target usually hurts.
 
 ## Contact
 
