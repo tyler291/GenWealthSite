@@ -149,8 +149,8 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 # PHASE 4 — Charts & technical analysis · volume + education proof
 
 - [ ] Technical analysis basics: what actually matters `[PILLAR]`
-- [ ] Support and resistance `(covered by support-and-resistance)`
-- [ ] Heikin Ashi candles `(covered by heikin-ashi-candles)`
+- [x] Support and resistance `(covered by support-and-resistance)`
+- [x] Heikin Ashi candles `(covered by heikin-ashi-candles)`
 - [ ] How to read a candlestick chart
 - [ ] The candlestick patterns that are actually worth knowing
 - [ ] What is a breakout, and how to tell a real one from a fake
@@ -223,7 +223,7 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 Each tool page needs working vanilla-JS math, a worked example, and an explainer
 underneath so it ranks as content, not just a widget.
 
-- [ ] Lot size calculator `(covered by lot-size-calculator)`
+- [x] Lot size calculator `(covered by lot-size-calculator)`
 - [ ] Position size calculator (stocks and futures)
 - [ ] Pip value calculator
 - [ ] Risk-to-reward calculator
