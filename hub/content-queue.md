@@ -148,11 +148,11 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 
 # PHASE 4 — Charts & technical analysis · volume + education proof
 
-- [ ] Technical analysis basics: what actually matters `[PILLAR]`
+- [x] Technical analysis basics: what actually matters `[PILLAR]` `(technical-analysis-basics)`
 - [x] Support and resistance `(covered by support-and-resistance)`
 - [x] Heikin Ashi candles `(covered by heikin-ashi-candles)`
-- [ ] How to read a candlestick chart
-- [ ] The candlestick patterns that are actually worth knowing
+- [x] How to read a candlestick chart `(how-to-read-a-candlestick-chart)`
+- [x] The candlestick patterns that are actually worth knowing `(candlestick-patterns-worth-knowing)`
 - [ ] What is a breakout, and how to tell a real one from a fake
 - [ ] Break and hold: why confirmation beats anticipation
 - [ ] What is a retest and why it is the cleanest entry

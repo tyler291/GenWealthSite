@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Read a Candlestick Chart: A Practical Guide</title>
+<meta name="description" content="Every candlestick holds four prices. How to read a candlestick chart: body for control, wick for failure, close for the verdict — plus choosing a time frame." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-read-a-candlestick-chart.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Read a Candlestick Chart: A Practical Guide" />
+<meta property="og:description" content="The body is control, the wick is failure, the close is the verdict. How to actually read the four prices inside every candle." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-read-a-candlestick-chart.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-read-a-candlestick-chart.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Read a Candlestick Chart","description":"A candlestick encodes four prices — open, high, low and close — for one interval of time. This guide explains what the body and the wick each represent, why the close is the only price that settles an argument, how to choose a time frame and how many candles a session produces, why candles must be read in sequence rather than alone, and the limits of what a single bar can tell you.","image":"https://gwhlds.com/assets/hub/how-to-read-a-candlestick-chart.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-read-a-candlestick-chart.html","datePublished":"2026-08-10"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How to Read a Candlestick Chart","item":"https://gwhlds.com/hub/how-to-read-a-candlestick-chart.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What do the four prices in a candlestick mean?","acceptedAnswer":{"@type":"Answer","text":"Every candlestick records the open, high, low and close for one interval of time. The open is the first traded price of the interval and the close is the last; the high and low are the extremes reached in between. The rectangular body spans the open and the close, and the thin wicks extend to the high and the low."}},{"@type":"Question","name":"What does a long wick on a candle mean?","acceptedAnswer":{"@type":"Answer","text":"A long wick means price travelled to that extreme and was pushed back before the interval ended. It marks an attempt that failed. A long upper wick shows buyers reached higher and could not hold it; a long lower wick shows sellers reached lower and could not hold it. Wicks matter most when they form at a level that already mattered."}},{"@type":"Question","name":"Which candlestick time frame should a beginner use?","acceptedAnswer":{"@type":"Answer","text":"Use two: a higher time frame to set bias and mark levels, and a lower one to time entries. A daily or 1-hour chart paired with a 5-minute chart is a common combination for intraday work. A single US equity session runs 9:30 a.m. to 4:00 p.m. Eastern, which is 390 minutes, so a 5-minute chart produces 78 candles a day and a 1-minute chart produces 390."}},{"@type":"Question","name":"Do candle colours mean the same thing on every platform?","acceptedAnswer":{"@type":"Answer","text":"No. Colour is a display setting, not data. Green-and-red is the common default, but blue-and-white, black-and-white and hollow-versus-filled schemes are all in use, and some platforms colour by change from the previous close rather than from the current open. The reliable reading is the relationship between the open and the close, not the colour on your screen."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>How to Read a Candlestick Chart</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts · Foundations</span>
+        <h1>How to Read a Candlestick Chart</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 10, 2026 · 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-read-a-candlestick-chart.jpg" alt="A large glowing green glass candlestick with wicks above and below, standing among a row of smaller candlesticks on a dark reflective surface" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Each candlestick shows four prices for one slice of time: the open, the high, the low and the close. The body spans the open to the close and is coloured by direction; the thin wicks show how far price reached and was rejected. Read the body for control, the wick for failure, the close for the verdict.</p>
+
+    <p>That is the entire encoding. Everything else people do with candlesticks — patterns, colour schemes, three-bar formations — is interpretation layered on top of those four numbers. Get comfortable with the four numbers and the interpretation gets much easier, and much less mystical.</p>
+
+    <h2>The four prices in every candle</h2>
+    <div class="kv"><table>
+      <tr><th>Price</th><th>What it is</th><th>What it tells you</th></tr>
+      <tr><td><strong>Open</strong></td><td>First trade of the interval</td><td>Where the argument started</td></tr>
+      <tr><td><strong>High</strong></td><td>Highest trade of the interval</td><td>The furthest buyers could push</td></tr>
+      <tr><td><strong>Low</strong></td><td>Lowest trade of the interval</td><td>The furthest sellers could push</td></tr>
+      <tr><td><strong>Close</strong></td><td>Last trade of the interval</td><td>Who held the ground when time ran out</td></tr>
+    </table></div>
+    <p>The body is the rectangle between the open and the close. The wicks — also called shadows or tails — are the thin lines running from the body out to the high and the low. If the close is above the open the candle is conventionally drawn as up; if below, as down.</p>
+    <p>Note what is missing. A candle does not record the <em>order</em> in which the high and the low happened. A bar that ran up first and then collapsed and a bar that collapsed first and then recovered can produce the identical shape. This is the single most useful limitation to hold in mind, and the reason experienced traders drop to a lower time frame when a bar looks decisive.</p>
+
+    <h2>Body vs wick: control and failure</h2>
+    <p><strong>The body measures control.</strong> A long body means one side moved price a long way from the open and kept it there until the interval closed. A short body means the interval ended roughly where it started — a lot of activity, no resolution.</p>
+    <p><strong>The wick measures failure.</strong> A long wick is a record of an attempt that did not stick: price got to that price, and by the end of the interval it had been pushed back out. A long upper wick means buyers reached higher and could not hold it. A long lower wick means sellers reached lower and could not hold it.</p>
+    <p>Combining the two gives you four readings that cover most of what a single bar can say:</p>
+    <ul>
+      <li><strong>Long body, short wicks</strong> — one-sided interval, little argument. The direction was paid for.</li>
+      <li><strong>Small body, long wicks both sides</strong> — genuine indecision. Both sides tried and neither closed the deal.</li>
+      <li><strong>Small body at the top of a long lower wick</strong> — sellers pushed down and were absorbed. Meaningful at support, meaningless in mid-range.</li>
+      <li><strong>Small body at the bottom of a long upper wick</strong> — buyers pushed up and were absorbed. Meaningful at resistance, meaningless in mid-range.</li>
+    </ul>
+    <p>Notice how often the word "level" appears in the useful readings. A wick is a fact; a wick <em>at a place where price has already reacted twice</em> is information. This is why <a href="support-and-resistance.html">marking levels that actually matter</a> comes before candle reading in practice, even though the candle is the smaller unit.</p>
+
+    <div class="callout"><b>The close is the only price that settles anything.</b> While a candle is forming, its body and wicks change constantly, and a bar that looks decisive with two minutes left can finish as its own opposite. Anything you decide from an unclosed candle is a decision made on incomplete data. Wait for the close — that is not patience for its own sake, it is refusing to act on a number that has not been fixed yet.</div>
+
+    <h2>Choosing a time frame</h2>
+    <p>The interval is your choice, and it changes everything about what the chart shows. A candlestick on a 5-minute chart summarises five minutes; on a daily chart it summarises an entire session.</p>
+    <p>The arithmetic is worth knowing because it sets your workload. A regular US equity session runs <strong>9:30 a.m. to 4:00 p.m. Eastern</strong>, which is six and a half hours, or <strong>390 minutes</strong> (<a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="nofollow noopener">NYSE, Hours &amp; Calendars</a>). So one session produces <strong>390 one-minute candles, 78 five-minute candles, or 26 fifteen-minute candles</strong>. On a half-day session ending at 1:00 p.m. ET, those numbers drop to 210, 42 and 14.</p>
+    <p>That is not trivia — it is a decision about how many times a day you will be asked to have an opinion. The standard working setup is two charts:</p>
+    <ol>
+      <li><strong>A higher time frame for bias and levels.</strong> Daily or 1-hour. This is where you mark support and resistance and read structure, before the session starts.</li>
+      <li><strong>A lower time frame for timing.</strong> 5-minute or 15-minute. This is where you watch a marked level for a reaction and take the entry.</li>
+    </ol>
+    <p>What does not work is drifting between six time frames until one of them agrees with you. Pick the pair, mark the higher one before the open, and let the lower one only answer the question of <em>when</em>, never <em>whether</em>. If you are choosing your holding period in the first place, <a href="day-trading-vs-swing-trading.html">day trading versus swing trading</a> covers what each demands of your schedule.</p>
+
+    <h2>Reading candles in sequence</h2>
+    <p>A single candle is a sentence fragment. The reading that matters is what the current bar does relative to the last few — and to the levels around it.</p>
+    <p>Three sequences worth recognising, none of which requires a pattern name:</p>
+    <ul>
+      <li><strong>Bodies expanding in one direction</strong> — each candle closing beyond the last, wicks staying small. Participation is increasing. Chasing here is how traders buy the last tick of a move.</li>
+      <li><strong>Bodies shrinking into a level</strong> — successive candles getting smaller as price approaches support or resistance. The move is running out of fuel before it arrives.</li>
+      <li><strong>A break followed by a close back inside</strong> — a candle that pushes through a level and closes on the wrong side of it. That is the classic false break, and it is the reason a break alone is not a signal.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> That third sequence is exactly why our first principle is <em>break &amp; hold</em>: price must break the called level <b>and</b> hold it as the candle closes before there is anything to act on. A wick through a level is not a break — it is the record of an attempt that failed, which is often a reason to look the other way. <em>Know your next</em> then turns the closed candle into an entry, defined targets and a written invalidation. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>Colour conventions and what they do not mean</h2>
+    <p>Green-up and red-down is a default, not a standard. Plenty of platforms use blue and white, hollow and filled, or black and white; some traders deliberately run a monochrome chart to stop colour driving the decision. More subtly, a few platforms colour a candle by its change from the <em>previous close</em> rather than from its own open, which can show you a "red" candle that closed above its open.</p>
+    <p>The dependable reading is always the geometry: where is the close relative to the open, and where are the wicks. If you want to see trend rather than individual bars, <a href="heikin-ashi-candles.html">Heikin Ashi candles</a> smooth the data deliberately — but they average across bars, so the prices they display are not real traded prices and cannot be used to place a stop.</p>
+
+    <h2>What a candle cannot tell you</h2>
+    <ul>
+      <li><strong>Order of events inside the bar.</strong> As above — the same shape has multiple histories.</li>
+      <li><strong>Volume.</strong> Candles carry no participation data. A huge bar on nothing and a huge bar on record volume look identical.</li>
+      <li><strong>Why.</strong> A candle records the result of a repricing, not its cause. A bar formed around a scheduled release is a different animal from the same bar in quiet conditions.</li>
+      <li><strong>What happens next.</strong> No candle is a forecast. It is a completed record you use to place an entry and, more importantly, a place to be wrong — see <a href="what-is-invalidation-in-trading.html">what invalidation is and why every trade needs one in writing</a>.</li>
+    </ul>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What do the four prices in a candlestick mean?</h3>
+    <p>Every candlestick records the open, high, low and close for one interval of time. The open is the first traded price of the interval and the close is the last; the high and low are the extremes reached in between. The rectangular body spans the open and the close, and the thin wicks extend to the high and the low.</p>
+
+    <h3>What does a long wick on a candle mean?</h3>
+    <p>A long wick means price travelled to that extreme and was pushed back before the interval ended. It marks an attempt that failed. A long upper wick shows buyers reached higher and could not hold it; a long lower wick shows sellers reached lower and could not hold it. Wicks matter most when they form at a level that already mattered.</p>
+
+    <h3>Which candlestick time frame should a beginner use?</h3>
+    <p>Use two: a higher time frame to set bias and mark levels, and a lower one to time entries. A daily or 1-hour chart paired with a 5-minute chart is a common combination for intraday work. A single US equity session runs 9:30 a.m. to 4:00 p.m. Eastern, which is 390 minutes, so a 5-minute chart produces 78 candles a day and a 1-minute chart produces 390.</p>
+
+    <h3>Do candle colours mean the same thing on every platform?</h3>
+    <p>No. Colour is a display setting, not data. Green-and-red is the common default, but blue-and-white, black-and-white and hollow-versus-filled schemes are all in use, and some platforms colour by change from the previous close rather than from the current open. The reliable reading is the relationship between the open and the close, not the colour on your screen.</p>
+
+    <h2>Bottom line</h2>
+    <p>A candlestick is four numbers and nothing more: body for control, wick for failure, close for the verdict. Read it on two time frames, read it in sequence rather than in isolation, and treat it as meaningful only where it forms at a level that already mattered. Wait for the close before you decide anything, because an unclosed candle is not yet a fact. From here, <a href="candlestick-patterns-worth-knowing.html">the handful of candlestick patterns worth knowing</a> is the natural next step, and <a href="technical-analysis-basics.html">technical analysis basics</a> puts candle reading in its place alongside structure, levels and volume.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics: What Matters</a>
+      <a href="candlestick-patterns-worth-knowing.html">Candlestick Patterns Worth Knowing</a>
+      <a href="support-and-resistance.html">Support &amp; Resistance: Finding Real Levels</a>
+      <a href="heikin-ashi-candles.html">Heikin Ashi Candles Explained</a>
+      <a href="best-time-of-day-to-trade.html">Best Time of Day to Trade, Session by Session</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
