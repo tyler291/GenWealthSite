@@ -153,9 +153,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] Heikin Ashi candles `(covered by heikin-ashi-candles)`
 - [x] How to read a candlestick chart `(how-to-read-a-candlestick-chart)`
 - [x] The candlestick patterns that are actually worth knowing `(candlestick-patterns-worth-knowing)`
-- [ ] What is a breakout, and how to tell a real one from a fake
-- [ ] Break and hold: why confirmation beats anticipation
-- [ ] What is a retest and why it is the cleanest entry
+- [x] What is a breakout, and how to tell a real one from a fake `(what-is-a-breakout)`
+- [x] Break and hold: why confirmation beats anticipation `(break-and-hold-confirmation)`
+- [x] What is a retest and why it is the cleanest entry `(what-is-a-retest)`
 - [ ] How to draw a trendline correctly
 - [ ] Moving averages explained: which ones and why
 - [ ] What is RSI and how to use it without getting chopped up
