@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Moving Averages Explained: Which Ones and Why</title>
+<meta name="description" content="Moving averages explained without the mysticism: SMA vs EMA, which periods matter, why lag is the point, and what 90 years of Dow data says about crossovers." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/moving-averages-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Moving Averages Explained: Which Ones and Why" />
+<meta property="og:description" content="A moving average is a summary, not a signal. SMA vs EMA, the periods worth having on a chart, why lag is structural, and the honest research on crossovers." />
+<meta property="og:url" content="https://gwhlds.com/hub/moving-averages-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/moving-averages-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Moving Averages Explained: Which Ones, and Why","description":"A moving average is the average closing price over the last N candles, redrawn each candle. This guide explains what the line is actually measuring, the real difference between a simple and an exponential moving average, which periods are worth having on a chart and why, why lag is a structural property rather than a defect, how crossover systems fail in ranges, and what ninety years of Dow Jones data and a later data-snooping correction say about whether any of it is an edge.","image":"https://gwhlds.com/assets/hub/moving-averages-explained.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/moving-averages-explained.html","datePublished":"2026-08-12"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Moving Averages Explained","item":"https://gwhlds.com/hub/moving-averages-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an SMA and an EMA?","acceptedAnswer":{"@type":"Answer","text":"A simple moving average weights every candle in its window equally. An exponential moving average weights recent candles more heavily, so it turns sooner after a change in price. Neither is more accurate, because they are answering different questions: the SMA asks where price has been on average, the EMA asks where it has been lately. The EMA reacts faster and therefore also reacts to more noise."}},{"@type":"Question","name":"Which moving average periods should I use?","acceptedAnswer":{"@type":"Answer","text":"Use as few as you can and keep them constant. Common defaults are 9 or 20 for short-term direction, 50 for the intermediate trend, and 200 for the long-term picture. What matters far more than the exact numbers is that many participants are watching the same widely-used settings, and that you stop changing yours whenever a trade goes against you."}},{"@type":"Question","name":"Do moving average crossovers actually work?","acceptedAnswer":{"@type":"Answer","text":"They work in trending markets and lose steadily in ranging ones, which is most of the time. A crossover is a lagging confirmation that a change already happened, so in a sideways market it produces a stream of late entries that reverse. Crossovers are best treated as a description of trend state rather than as an entry trigger."}},{"@type":"Question","name":"Do moving averages act as support and resistance?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, and for a reason worth understanding: a widely-watched average becomes a place where a large number of participants have decided to act, so their orders cluster near it. That makes it a soft zone rather than a real level. Horizontal support and resistance is built from prices where the market actually transacted and reversed, and it is the stronger of the two."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Moving Averages Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts · Indicators</span>
+        <h1>Moving Averages Explained: Which Ones, and Why</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 12, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/moving-averages-explained.jpg" alt="Three translucent ribbons of light of different thicknesses flowing over a jagged crystalline ridge, the thickest one lagging furthest behind the peaks" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A moving average is the average closing price over the last N candles, recalculated on every candle. It smooths price into a single line so you can see direction without the noise. It does not predict anything — it is a summary of what already happened, and it will always turn after price does.</p>
+
+    <p>That last sentence is the whole subject. Nearly every problem traders have with moving averages comes from expecting a lagging summary to behave like a leading signal, and then adjusting the settings forever when it does not.</p>
+
+    <h2>What the line is actually measuring</h2>
+    <p>A 20-period simple moving average adds the last 20 closes and divides by 20. Next candle, the oldest close drops out, the newest drops in, and the line is redrawn. That is the entire calculation. Everything a moving average can tell you follows from it.</p>
+    <p>Two consequences matter in practice. First, the line's slope tells you whether the recent average is rising or falling — that is a genuine, if crude, read on trend. Second, the distance between price and the line tells you how far the market has travelled from its own recent normal, which is why price tends to come back toward a moving average after a sharp move. Neither of those is a forecast. Both are descriptions.</p>
+
+    <h2>SMA vs EMA: the real difference</h2>
+    <p>A simple moving average (SMA) weights all candles in its window equally. An exponential moving average (EMA) weights recent candles more heavily, with the weight of older candles decaying smoothly. The EMA therefore turns sooner after price changes direction.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>Simple (SMA)</th><th>Exponential (EMA)</th></tr>
+      <tr><td><strong>Weighting</strong></td><td>Every candle in the window counts equally</td><td>Recent candles count more, older ones decay</td></tr>
+      <tr><td><strong>Reaction speed</strong></td><td>Slower to turn</td><td>Faster to turn</td></tr>
+      <tr><td><strong>Behaviour on a spike</strong></td><td>Jumps again when the spike leaves the window</td><td>Absorbs it once, then fades it away</td></tr>
+      <tr><td><strong>Suits</strong></td><td>Longer horizons, trend context</td><td>Intraday, faster time frames</td></tr>
+      <tr><td><strong>Costs you</strong></td><td>Later signals</td><td>More false turns</td></tr>
+    </table></div>
+    <p>Neither is better. They are trading the same thing against each other: responsiveness versus stability. Choosing an EMA to react faster is choosing to react more often to noise as well, and that trade-off does not disappear at any setting. It is the same trade-off you make when you decide how much confirmation to require before an entry — the subject of <a href="break-and-hold-confirmation.html">break and hold confirmation</a>.</p>
+    <p>One SMA quirk is worth knowing because it surprises people. When a large candle from 20 sessions ago finally drops out of a 20-period SMA's window, the line can jump noticeably even though today's price barely moved. That is not the market doing something — it is arithmetic leaving the back of the window.</p>
+
+    <h2>Which periods, and why those</h2>
+    <p>There is nothing magic about any period. The reason 20, 50 and 200 keep appearing is round-number convention and the fact that a great many participants watch them, which makes them worth knowing regardless of whether they are optimal.</p>
+    <ul>
+      <li><strong>9 or 20</strong> — short-term direction. Useful intraday for answering "which way is this session leaning right now".</li>
+      <li><strong>50</strong> — the intermediate trend. Widely used as a rough dividing line between a pullback and a change of character.</li>
+      <li><strong>200</strong> — the long-term picture, and the one most institutions and financial media reference. Its main practical use is a bias filter: above it, you favour longs; below it, you favour shorts.</li>
+    </ul>
+    <p>Two on a chart is plenty; three is the maximum before you are reading the indicators instead of the market. Whatever you choose, freeze the settings. A trader who optimises the periods after every losing week is not refining a system, they are curve-fitting to the last twenty candles — and the research below explains exactly why that fails.</p>
+
+    <div class="callout"><b>Lag is not a bug.</b> Every complaint about moving averages being late is a complaint about the thing they are for. A line that did not lag would not be smoothing anything. If you find yourself shortening periods to reduce lag, notice what you are actually asking for: a line that looks more like price. You already have price on the chart.</div>
+
+    <h2>Crossovers: what they can and cannot do</h2>
+    <p>A crossover is one average crossing another — a faster line moving above a slower one, or below it. As a description of trend state it is fine and quite readable. As an entry trigger it has a structural problem: it is two lagging measures compared to each other, so it can only report a change after that change is well underway.</p>
+    <p>In a strong trend that is tolerable, because the move continues long enough to pay for the late entry. In a range it is corrosive. Price oscillates, the lines cross repeatedly, and each crossover produces an entry near one edge of the range that is stopped out as price returns to the other. Because markets spend a large share of their time going sideways, a naive crossover system spends most of its life in the mode where it loses.</p>
+    <p>The fix is not a better crossover. It is a regime filter — deciding whether the market is trending before you allow trend logic to generate trades at all — plus risk control that keeps the ranging periods survivable. That is what <a href="risk-management-trading.html">risk management</a> is for, and it matters far more here than the choice between 9/21 and 12/26.</p>
+
+    <h2>Do moving averages act as support and resistance?</h2>
+    <p>Sometimes, and the mechanism is worth being clear about because it is not the same as real support. A widely-watched average is a price a very large number of participants have publicly decided to act on. Their orders cluster near it, and the cluster produces reactions. That is a genuine effect, but it is a soft one: the level moves every candle, and it exists only because people are watching it.</p>
+    <p>Horizontal <a href="support-and-resistance.html">support and resistance</a> is different in kind. Those prices are where the market actually transacted heavily and reversed — evidence of what happened, not of what people intend. When a moving average and a horizontal level coincide, the horizontal level is doing the work. Trade the level; treat the average as context.</p>
+
+    <h2>What the research actually found</h2>
+    <p>Moving average rules have one of the longest test records in finance, and the honest summary is a two-part story.</p>
+    <p>Part one: Brock, Lakonishok and LeBaron tested moving average and trading-range-break rules on the Dow Jones Index across <strong>90 years of daily data, 1897 to 1986</strong>, using bootstrap methods to compare against random walk, AR(1), GARCH-M and exponential GARCH null models. They reported that "buy signals consistently generate higher returns than sell signals," that returns after buy signals were less volatile than those after sell signals, and that returns following sell signals were negative — results the four null models could not account for (<a href="https://ideas.repec.org/a/bla/jfinan/v47y1992i5p1731-64.html" target="_blank" rel="nofollow noopener">Brock, Lakonishok &amp; LeBaron, <em>Journal of Finance</em> 47(5), 1992, pp. 1731–1764</a>).</p>
+    <p>Part two, and this is the part that gets left out. Sullivan, Timmermann and White later asked what happens when you account for how many rules had been searched to find those winners. They expanded the universe from <strong>26 rules to 7,846</strong> and applied a bootstrap reality check across roughly a century of Dow data. Once data-snooping bias was corrected for, the case for simple technical trading rules did not survive out of sample (<a href="https://ideas.repec.org/a/bla/jfinan/v54y1999i5p1647-1691.html" target="_blank" rel="nofollow noopener">Sullivan, Timmermann &amp; White, "Data-Snooping, Technical Trading Rule Performance, and the Bootstrap", <em>Journal of Finance</em> 54(5), 1999, pp. 1647–1691</a>).</p>
+    <p>The practical lesson is not "moving averages do not work." It is that the search for the moving average that works is itself the trap. Test enough combinations against enough history and something will look excellent by chance. That is precisely what a trader does when they cycle through settings looking for the pair that would have caught last month's move.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We use moving averages as context and nothing else — a quick read on which way a session is leaning before levels are marked. A callout is never "the 9 crossed the 21." It is a price level, with a target and a written invalidation. <em>Break &amp; hold</em> requires a close beyond a level, not an indicator crossing. <em>Know your next</em> requires a destination, and a moving average cannot give you one because it has no fixed price. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the difference between an SMA and an EMA?</h3>
+    <p>A simple moving average weights every candle in its window equally. An exponential moving average weights recent candles more heavily, so it turns sooner after a change in price. Neither is more accurate, because they are answering different questions: the SMA asks where price has been on average, the EMA asks where it has been lately. The EMA reacts faster and therefore also reacts to more noise.</p>
+
+    <h3>Which moving average periods should I use?</h3>
+    <p>Use as few as you can and keep them constant. Common defaults are 9 or 20 for short-term direction, 50 for the intermediate trend, and 200 for the long-term picture. What matters far more than the exact numbers is that many participants are watching the same widely-used settings, and that you stop changing yours whenever a trade goes against you.</p>
+
+    <h3>Do moving average crossovers actually work?</h3>
+    <p>They work in trending markets and lose steadily in ranging ones, which is most of the time. A crossover is a lagging confirmation that a change already happened, so in a sideways market it produces a stream of late entries that reverse. Crossovers are best treated as a description of trend state rather than as an entry trigger.</p>
+
+    <h3>Do moving averages act as support and resistance?</h3>
+    <p>Sometimes, and for a reason worth understanding: a widely-watched average becomes a place where a large number of participants have decided to act, so their orders cluster near it. That makes it a soft zone rather than a real level. Horizontal support and resistance is built from prices where the market actually transacted and reversed, and it is the stronger of the two.</p>
+
+    <h2>Bottom line</h2>
+    <p>Put one or two moving averages on the chart, pick conventional periods, and then leave them alone. Use the slope for direction and the distance from price for stretch, and stop asking the line for entries it cannot give. The line is a summary of the past written in a way that is easy to read — valuable for orientation, useless as a trigger. Pair it with a real level and a written invalidation and it earns its place. Start with <a href="technical-analysis-basics.html">technical analysis basics</a>, then read <a href="what-is-rsi.html">what RSI actually measures</a> to see the same lesson from the oscillator side.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics: What Matters</a>
+      <a href="what-is-rsi.html">What Is RSI, and How to Use It</a>
+      <a href="how-to-draw-a-trendline.html">How to Draw a Trendline Correctly</a>
+      <a href="support-and-resistance.html">Support &amp; Resistance: Finding Real Levels</a>
+      <a href="risk-management-trading.html">Risk Management: The System That Keeps You In</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

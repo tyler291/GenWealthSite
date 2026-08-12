@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is RSI? How to Use It Without Getting Chopped</title>
+<meta name="description" content="What RSI is, what the 70 and 30 lines really mean, why overbought is not a sell signal, and how to read the indicator in a trend instead of fighting it." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-rsi.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is RSI? How to Use It Without Getting Chopped" />
+<meta property="og:description" content="RSI measures the speed of recent gains against recent losses. Overbought means strong, not finished. How to read it in a trend, and where divergence fails." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-rsi.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-rsi.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is RSI, and How to Use It Without Getting Chopped Up","description":"The Relative Strength Index compares the size of recent gains to the size of recent losses over a lookback window and expresses the result on a 0 to 100 scale. This guide explains what the number is actually measuring, why the 70 and 30 lines are misread as sell and buy signals, how RSI ranges shift between trending and sideways markets, what divergence can and cannot tell you, and what the published research says about which settings held up in which markets.","image":"https://gwhlds.com/assets/hub/what-is-rsi.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-rsi.html","datePublished":"2026-08-12"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is RSI","item":"https://gwhlds.com/hub/what-is-rsi.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does RSI actually measure?","acceptedAnswer":{"@type":"Answer","text":"RSI compares the average size of gains to the average size of losses over a lookback window, usually 14 periods, and scales the result from 0 to 100. A reading of 70 means recent up-moves have been substantially larger than recent down-moves. It is a measure of the character of recent price movement, not of value, and it says nothing about whether an instrument is expensive."}},{"@type":"Question","name":"Is an RSI above 70 a sell signal?","acceptedAnswer":{"@type":"Answer","text":"No. Above 70 means momentum is strong, and strong markets stay above 70 for long stretches. Selling every time RSI crosses 70 in an uptrend means shorting the strongest part of the move repeatedly. Overbought describes what has already happened; it carries no information about when it will stop. Treat a high reading as a reason to manage an existing position, never as a reason to open a new one against the trend."}},{"@type":"Question","name":"What RSI settings should I use?","acceptedAnswer":{"@type":"Answer","text":"Start with the 14-period default that Welles Wilder published in 1978 and change it only for a stated reason. A shorter lookback such as 7 reaches the extremes more often and suits scalping; a longer one such as 21 is steadier and suits swing time frames. There is no universally correct setting, and cycling through settings until one fits the last month of chart is how traders manufacture edges that do not exist."}},{"@type":"Question","name":"Does RSI divergence work?","acceptedAnswer":{"@type":"Answer","text":"Divergence is a real observation with poor timing. When price makes a higher high while RSI makes a lower high, the second push was genuinely weaker in momentum terms. But a trend can produce three or four divergences before it turns, and each one that fails costs money if traded directly. Use divergence as a reason to tighten risk or take partial profits, not as a standalone reversal entry."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is RSI</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts · Indicators</span>
+        <h1>What Is RSI, and How to Use It Without Getting Chopped Up</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 12, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-rsi.jpg" alt="A brass pressure gauge with its needle pinned at the top of the arc while an emerald pressure wave surges past it unaffected" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">RSI — the Relative Strength Index — compares the average size of recent gains to the average size of recent losses and scales the result from 0 to 100. It measures how one-sided recent price movement has been. It does not measure value, and a high reading means a market is strong, not that it is finished.</p>
+
+    <p>That distinction is where almost all RSI losses come from. The indicator is a momentum thermometer, and traders keep reading it as a price tag.</p>
+
+    <h2>How the number is built</h2>
+    <p>Over a lookback window — 14 periods by default — RSI takes the average gain on up candles and the average loss on down candles, forms the ratio between them, and converts it to a 0–100 scale. The mechanics matter less than what they imply:</p>
+    <ul>
+      <li><strong>RSI 50</strong> means average gains and average losses have been roughly equal over the window. It is the balance point.</li>
+      <li><strong>RSI 70</strong> means up-moves have been substantially larger than down-moves recently. Buyers have been in control.</li>
+      <li><strong>RSI 30</strong> means the reverse. Sellers have been in control.</li>
+      <li><strong>RSI 100</strong> would require every candle in the window to close up. It is an arithmetic limit, not a prophecy.</li>
+    </ul>
+    <p>The 14-period default comes from Welles Wilder, who introduced the indicator in <em>New Concepts in Technical Trading Systems</em> in 1978. Nothing about 14 is optimal; it was a sensible starting point for daily charts in an era of hand calculation, and it stuck because enough people use it that it has become a shared reference.</p>
+
+    <h2>Why "overbought" gets people short in uptrends</h2>
+    <p>The word overbought sounds like a verdict. It is a description of the recent past with no forward content whatsoever. A market in a genuine trend will spend long stretches above 70, and each of those candles is one where the RSI-based short seller is losing money.</p>
+    <p>The correct reading is the opposite of the intuitive one. <strong>Sustained readings above 70 are evidence of trend strength, not evidence of exhaustion.</strong> If an instrument reaches 70 and stays there for two weeks while grinding higher, the indicator is telling you the trend is real. Fading it is a decision to be systematically wrong during the part of the move that pays most.</p>
+
+    <div class="callout"><b>Overbought is a description, not an instruction.</b> An RSI of 78 tells you what already happened. It tells you nothing about the next candle. The only defensible uses of a high reading are managing risk on a position you already hold and declining to chase a fresh long into it. Opening a countertrend short on a number alone is not a strategy — it is a bet against the only thing on the chart that is currently working.</div>
+
+    <h2>Read the range, not the line</h2>
+    <p>The most useful RSI technique gets the least attention: watch which part of the 0–100 scale the indicator is living in, because that band shifts with the market's regime.</p>
+    <div class="kv"><table>
+      <tr><th>Regime</th><th>Where RSI tends to travel</th><th>What that tells you</th></tr>
+      <tr><td><strong>Uptrend</strong></td><td>Roughly 40 to 80; pullbacks stall near 40–50</td><td>Dips are being bought; 40 acts as a floor</td></tr>
+      <tr><td><strong>Downtrend</strong></td><td>Roughly 20 to 60; rallies stall near 50–60</td><td>Rallies are being sold; 60 acts as a ceiling</td></tr>
+      <tr><td><strong>Range</strong></td><td>Full swings between 30 and 70</td><td>Neither side in control; extremes mean more here</td></tr>
+    </table></div>
+    <p>Two things follow. First, the classic buy-30 / sell-70 approach only makes sense in the third row — a genuine range — and applying it in the first two rows is what produces the endless chop traders complain about. Second, the moment a market breaks its established RSI band is genuinely informative. When an uptrend that had been holding 40 on every pullback suddenly closes at 28, the character of the market has changed before the price structure has confirmed it. That is the one place RSI is close to leading rather than lagging.</p>
+
+    <h2>Divergence, honestly</h2>
+    <p>Divergence is when price makes a higher high but RSI makes a lower high — or price makes a lower low while RSI makes a higher low. The observation is real: the second push was weaker in momentum terms than the first.</p>
+    <p>The problem is timing. Strong trends routinely print three or four divergences before anything reverses, and there is no way to know from the divergence itself which one is the last. Every failed divergence traded as a reversal is a loss taken against the prevailing trend, which is the most expensive way to be wrong. Treat it as a state change worth respecting — a reason to trail a stop closer or <a href="how-to-take-partial-profits.html">take partial profits</a> on a position you already hold in the direction of the trend. Not a reason to open a new position in the opposite one.</p>
+
+    <h2>Settings, and the trap in choosing them</h2>
+    <p>A shorter lookback (7) reaches the extremes far more often and suits fast intraday work. A longer one (21) is steadier and better for swing time frames. Neither is more correct. The trap is not the number itself — it is the process of hunting for it.</p>
+    <p>The published evidence makes this concrete. Chong, Ng and Liew revisited two widely-used oscillator rules across several developed markets and found the result depends heavily on both the market and the parameter set: <strong>MACD(12,26,0) and RSI(21,50) consistently generated significant abnormal returns in the Milan Comit General and the S&amp;P/TSX Composite Index, while RSI(14,30/70) was the profitable configuration in the Dow Jones Industrials</strong> (<a href="https://mpra.ub.uni-muenchen.de/54149/" target="_blank" rel="nofollow noopener">Chong, Ng &amp; Liew, "Revisiting the Performance of MACD and RSI Oscillators", <em>Journal of Risk and Financial Management</em> 7(1), 2014, pp. 1–12</a>).</p>
+    <p>Notice what that actually says. Different settings worked in different markets — which is exactly the pattern you would expect from a search across many parameter combinations, and exactly why a result that holds in one index is not a promise about the next. Pick a setting for a reason you can state, then leave it alone. If you find yourself testing your fifth RSI configuration this month, you are not improving the tool; you are fitting it to history, the same failure documented for <a href="moving-averages-explained.html">moving average rules</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> RSI never generates a callout in our room. A callout is a level, a target and a written invalidation — an oscillator reading is none of those things. Where RSI earns its place is as context: <em>break &amp; hold</em> is more convincing when momentum is expanding with the break rather than fading into it, and <em>trail &amp; protect</em> is where a stretched reading genuinely helps, by prompting you to move the stop up behind a target that has already printed. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What does RSI actually measure?</h3>
+    <p>RSI compares the average size of gains to the average size of losses over a lookback window, usually 14 periods, and scales the result from 0 to 100. A reading of 70 means recent up-moves have been substantially larger than recent down-moves. It is a measure of the character of recent price movement, not of value, and it says nothing about whether an instrument is expensive.</p>
+
+    <h3>Is an RSI above 70 a sell signal?</h3>
+    <p>No. Above 70 means momentum is strong, and strong markets stay above 70 for long stretches. Selling every time RSI crosses 70 in an uptrend means shorting the strongest part of the move repeatedly. Overbought describes what has already happened; it carries no information about when it will stop. Treat a high reading as a reason to manage an existing position, never as a reason to open a new one against the trend.</p>
+
+    <h3>What RSI settings should I use?</h3>
+    <p>Start with the 14-period default that Welles Wilder published in 1978 and change it only for a stated reason. A shorter lookback such as 7 reaches the extremes more often and suits scalping; a longer one such as 21 is steadier and suits swing time frames. There is no universally correct setting, and cycling through settings until one fits the last month of chart is how traders manufacture edges that do not exist.</p>
+
+    <h3>Does RSI divergence work?</h3>
+    <p>Divergence is a real observation with poor timing. When price makes a higher high while RSI makes a lower high, the second push was genuinely weaker in momentum terms. But a trend can produce three or four divergences before it turns, and each one that fails costs money if traded directly. Use divergence as a reason to tighten risk or take partial profits, not as a standalone reversal entry.</p>
+
+    <h2>Bottom line</h2>
+    <p>RSI is a well-built momentum gauge that most traders point in the wrong direction. Stop reading 70 and 30 as instructions, start reading which band the indicator is living in, and let a break of that band tell you the regime has changed. Use divergence to protect profit rather than to call tops. Above all, put the indicator behind the level: the trade is decided by a price with a defined invalidation, and RSI is only there to tell you how the market got to it. Read <a href="technical-analysis-basics.html">technical analysis basics</a> for how the pieces fit together, <a href="what-is-a-breakout.html">what makes a breakout real</a> for the price side of the same question, and <a href="../faq.html">how the room's callouts are structured</a> if you want to see what we actually trade from.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="moving-averages-explained.html">Moving Averages Explained: Which Ones</a>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics: What Matters</a>
+      <a href="how-to-draw-a-trendline.html">How to Draw a Trendline Correctly</a>
+      <a href="what-is-a-breakout.html">What Is a Breakout? Real vs Fake</a>
+      <a href="how-to-take-partial-profits.html">How to Take Partial Profits</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

@@ -156,9 +156,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] What is a breakout, and how to tell a real one from a fake `(what-is-a-breakout)`
 - [x] Break and hold: why confirmation beats anticipation `(break-and-hold-confirmation)`
 - [x] What is a retest and why it is the cleanest entry `(what-is-a-retest)`
-- [ ] How to draw a trendline correctly
-- [ ] Moving averages explained: which ones and why
-- [ ] What is RSI and how to use it without getting chopped up
+- [x] How to draw a trendline correctly `(how-to-draw-a-trendline)`
+- [x] Moving averages explained: which ones and why `(moving-averages-explained)`
+- [x] What is RSI and how to use it without getting chopped up `(what-is-rsi)`
 - [ ] What is MACD and what it actually tells you
 - [ ] Volume analysis: what volume confirms and what it doesn't
 - [ ] What is VWAP and why intraday traders watch it
