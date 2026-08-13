@@ -159,9 +159,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] How to draw a trendline correctly `(how-to-draw-a-trendline)`
 - [x] Moving averages explained: which ones and why `(moving-averages-explained)`
 - [x] What is RSI and how to use it without getting chopped up `(what-is-rsi)`
-- [ ] What is MACD and what it actually tells you
-- [ ] Volume analysis: what volume confirms and what it doesn't
-- [ ] What is VWAP and why intraday traders watch it
+- [x] What is MACD and what it actually tells you `(what-is-macd)`
+- [x] Volume analysis: what volume confirms and what it doesn't `(volume-analysis-trading)`
+- [x] What is VWAP and why intraday traders watch it `(what-is-vwap)`
 - [ ] Multi-timeframe analysis: how to line up the big and small picture
 - [ ] Supply and demand zones vs support and resistance
 - [ ] What is a liquidity grab (stop hunt) and how to avoid being the liquidity

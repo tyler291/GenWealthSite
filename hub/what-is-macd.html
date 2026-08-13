@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is MACD, and What It Actually Tells You</title>
+<meta name="description" content="What MACD measures, how the line, signal and histogram differ, why crossovers arrive late, and how to read the histogram as momentum rather than a buy signal." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-macd.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is MACD, and What It Actually Tells You" />
+<meta property="og:description" content="MACD is the gap between two moving averages. It measures whether momentum is expanding or fading — not whether price is cheap, and not when to buy." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-macd.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-macd.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is MACD, and What It Actually Tells You","description":"MACD is the distance between two exponential moving averages, plotted with a signal line and a histogram. This guide explains what each of the three components measures, why crossover signals arrive after the move has started, how to read the histogram as the rate of change of momentum, the difference between the zero line and the signal line, and what the published research on MACD rules actually found.","image":"https://gwhlds.com/assets/hub/what-is-macd.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-macd.html","datePublished":"2026-08-13"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is MACD","item":"https://gwhlds.com/hub/what-is-macd.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does MACD actually measure?","acceptedAnswer":{"@type":"Answer","text":"MACD measures the distance between two exponential moving averages, usually the 12-period and the 26-period. When the faster average pulls away from the slower one, the MACD line rises and momentum is expanding. When the two averages converge, the line falls and momentum is fading. It is a measure of the rate of change of a trend, not of price level or value."}},{"@type":"Question","name":"Is a MACD crossover a buy signal?","acceptedAnswer":{"@type":"Answer","text":"A crossover is confirmation that momentum has already turned, not a prediction that it is about to. MACD is built from two lagging averages and then smoothed a third time by the signal line, so the cross prints after the turn in price. It is useful for telling you which side of the market currently has the momentum. It is a poor entry trigger on its own, especially in a sideways market where the two lines cross repeatedly with no follow-through."}},{"@type":"Question","name":"What is the difference between the MACD line crossing zero and crossing the signal line?","acceptedAnswer":{"@type":"Answer","text":"They answer different questions. The MACD line crossing zero means the 12-period average has crossed the 26-period average, which is a change in the direction of the trend itself. The MACD line crossing the signal line means momentum has turned relative to its own recent average, which happens far more often and is a much weaker event. Zero-line crosses are rarer and more meaningful; signal-line crosses are frequent and noisy."}},{"@type":"Question","name":"What MACD settings should I use?","acceptedAnswer":{"@type":"Answer","text":"The 12, 26, 9 default published by Gerald Appel is the standard and there is no evidence that a different combination is universally better. Shorter inputs react faster and produce more false crosses; longer inputs are steadier and later. Pick one for a reason you can state and leave it alone, because cycling through settings until one fits the last month of chart is curve fitting, not research."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is MACD</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts · Indicators</span>
+        <h1>What Is MACD, and What It Actually Tells You</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 13, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-macd.jpg" alt="Two ribbons of gold and emerald light weaving together and pulling apart above a row of glowing vertical bars" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">MACD — Moving Average Convergence Divergence — is the gap between two exponential moving averages, usually the 12-period and the 26-period, drawn as a line with a 9-period signal line and a histogram of the difference between the two. It measures whether a trend's momentum is expanding or fading. It says nothing about value.</p>
+
+    <p>Almost every mistake made with MACD comes from treating a momentum reading as a timing instruction. The indicator is genuinely good at one job — telling you whether the move currently on the chart is gaining strength or running out of it — and genuinely bad at the job most people give it, which is deciding when to press the button.</p>
+
+    <h2>The three parts, and what each one is for</h2>
+    <p>MACD is not one line. It is three separate readings stacked in the same pane, and confusing them is the source of most bad MACD trades.</p>
+    <ul>
+      <li><strong>The MACD line</strong> is the 12-period EMA minus the 26-period EMA. It is a distance. When it is above zero, the short average is above the long one and the trend is up on those two horizons.</li>
+      <li><strong>The signal line</strong> is a 9-period EMA <em>of the MACD line</em> — an average of an average. Its only job is to give the MACD line something to cross.</li>
+      <li><strong>The histogram</strong> is the MACD line minus the signal line, drawn as bars. It shows the gap between the two, and its bars shrink before they cross.</li>
+    </ul>
+    <p>Gerald Appel introduced the indicator in the late 1970s, and the 12, 26, 9 combination is his. Those numbers date from a period when a trading month was roughly 21 sessions and a fortnight roughly ten, so 12 and 26 were rough stand-ins for two weeks and one month. Nothing about them is optimal. They are simply the settings enough people share that MACD readings mean the same thing to different traders — which is worth more than a marginally better parameter would be.</p>
+
+    <h2>What MACD is really measuring</h2>
+    <p>Think of the 26-period EMA as where price has been and the 12-period EMA as where price is going. MACD measures how far apart they are. That distance is a direct measure of the <em>speed</em> of the trend, not its direction.</p>
+    <p>This produces the single most useful reading on the indicator, and one most traders never take: a rising price with a falling MACD line means price is still going up but going up more slowly than it was. The trend is intact and decelerating. That is a completely different market state from a rising price with a rising MACD line, and it demands a different decision — protect what you have rather than add to it.</p>
+
+    <div class="callout"><b>MACD is a speedometer, not a map.</b> It tells you how fast the car is going and whether it is accelerating. It does not tell you where the road turns. A high MACD reading in a strong uptrend is exactly what a strong uptrend is supposed to look like — it is not a warning. The level on the chart tells you where the trade is; MACD only tells you how forcefully price arrived there.</div>
+
+    <h2>Why crossovers arrive late</h2>
+    <p>The MACD line is built from two lagging averages. The signal line then smooths that result a third time. By the time the two cross, price has already turned, moved, and given up part of the move. This is not a flaw to be tuned away — it is arithmetic, and it is the price of the smoothing that makes the indicator readable in the first place.</p>
+    <p>The consequence is severe in sideways markets. When price is ranging, the 12 and 26 EMAs sit almost on top of each other, the MACD line hovers near zero, and it crosses the signal line every few candles. Each cross looks like a signal and none of them lead anywhere. That is the same failure mode that destroys naive <a href="moving-averages-explained.html">moving average crossover systems</a>, for the same reason: an indicator built to follow a trend has nothing to follow when there is no trend.</p>
+
+    <h2>Zero line versus signal line: two different questions</h2>
+    <p>These get treated as interchangeable and they are not remotely equivalent.</p>
+    <div class="kv"><table>
+      <tr><th>Event</th><th>What it means</th><th>How often it happens</th></tr>
+      <tr><td><strong>MACD crosses zero</strong></td><td>The 12 EMA has crossed the 26 EMA — the trend itself has changed on those horizons</td><td>Rarely; a genuine regime event</td></tr>
+      <tr><td><strong>MACD crosses signal</strong></td><td>Momentum has turned relative to its own recent average</td><td>Constantly; mostly noise in a range</td></tr>
+      <tr><td><strong>Histogram peaks and turns down</strong></td><td>Momentum is still positive but decelerating</td><td>Often; useful for managing an open position</td></tr>
+    </table></div>
+    <p>Rank them by how much they should change your behaviour. A zero-line cross is worth marking on the chart. A histogram turn is worth using to tighten risk on something you already hold. A signal-line cross, taken alone, is worth very little.</p>
+
+    <h2>The histogram is the part worth watching</h2>
+    <p>The histogram is the derivative of the derivative — the rate of change of momentum. When its bars are growing, the move is accelerating. When the bars start shrinking while price still makes new highs, the move is being carried by fewer and less forceful pushes.</p>
+    <p>That shrinking is the earliest signal MACD produces, because the histogram has to shrink to zero before the lines can cross. It is also the least reliable if you trade it directly: a trend can produce several rounds of shrinking bars and reassert itself each time. Use it the way you would use a fuel gauge — as a reason to plan, not a reason to swerve. In practice that means moving a stop up behind a printed target rather than closing a working position because the bars got smaller.</p>
+
+    <h2>MACD divergence, and where it overlaps with RSI</h2>
+    <p>MACD divergence — price making a higher high while MACD makes a lower one — is the same observation as <a href="what-is-rsi.html">RSI divergence</a>, computed a different way, and it carries the same warning: the observation is real, the timing is poor. Because MACD is slower than RSI, its divergences form later and are correspondingly less frequent, which some traders read as higher quality. There is no evidence for that. Both indicators tell you the second push was weaker. Neither tells you it was the last one.</p>
+
+    <h2>What the research actually found</h2>
+    <p>MACD has been tested more than most indicators, and the honest summary is that the results are market-dependent and sensitive to how costs are treated. The most-cited direct test of the rule covers six decades of the London Stock Exchange: Chong and Ng examined MACD and RSI trading rules against the FT30 Index and reported that <strong>both rules generated returns higher than a buy-and-hold strategy in most of the cases they tested</strong> (<a href="https://ideas.repec.org/a/taf/apeclt/v15y2008i14p1111-1114.html" target="_blank" rel="nofollow noopener">Chong &amp; Ng, "Technical analysis and the London stock exchange: testing the MACD and RSI rules using the FT30", <em>Applied Economics Letters</em> 15(14), 2008, pp. 1111–1114</a>).</p>
+    <p>Read that carefully before you get excited. "In most cases" is not "reliably". A rule that beat buy-and-hold on a British index over sixty years is not a promise about a five-minute chart on a US index next Tuesday, and later work applying the same rules to other markets found the profitable parameter set changed from market to market — which is the signature of a result that partly reflects the search rather than the market. The defensible conclusion is that MACD carries some real information about trend momentum, and that the information is not large enough to trade mechanically without a risk framework around it.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> No callout in our room is ever generated by a MACD cross. A callout needs a level, defined targets and a written invalidation, and an indicator supplies none of those. Where MACD earns a place is as context around the level: <em>break &amp; hold</em> is a more convincing break when momentum is expanding into it rather than fading, and <em>trail &amp; protect</em> is exactly what a shrinking histogram should prompt on a position that is already working. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What does MACD actually measure?</h3>
+    <p>MACD measures the distance between two exponential moving averages, usually the 12-period and the 26-period. When the faster average pulls away from the slower one, the MACD line rises and momentum is expanding. When the two averages converge, the line falls and momentum is fading. It is a measure of the rate of change of a trend, not of price level or value.</p>
+
+    <h3>Is a MACD crossover a buy signal?</h3>
+    <p>A crossover is confirmation that momentum has already turned, not a prediction that it is about to. MACD is built from two lagging averages and then smoothed a third time by the signal line, so the cross prints after the turn in price. It is useful for telling you which side of the market currently has the momentum. It is a poor entry trigger on its own, especially in a sideways market where the two lines cross repeatedly with no follow-through.</p>
+
+    <h3>What is the difference between the MACD line crossing zero and crossing the signal line?</h3>
+    <p>They answer different questions. The MACD line crossing zero means the 12-period average has crossed the 26-period average, which is a change in the direction of the trend itself. The MACD line crossing the signal line means momentum has turned relative to its own recent average, which happens far more often and is a much weaker event. Zero-line crosses are rarer and more meaningful; signal-line crosses are frequent and noisy.</p>
+
+    <h3>What MACD settings should I use?</h3>
+    <p>The 12, 26, 9 default published by Gerald Appel is the standard and there is no evidence that a different combination is universally better. Shorter inputs react faster and produce more false crosses; longer inputs are steadier and later. Pick one for a reason you can state and leave it alone, because cycling through settings until one fits the last month of chart is curve fitting, not research.</p>
+
+    <h2>Bottom line</h2>
+    <p>MACD answers one question well: is the move on the chart right now gaining strength or losing it? Read the histogram for that answer, treat zero-line crosses as regime information, and stop treating signal-line crosses as entries. The trade itself should still be decided by a price level with a written invalidation, with the indicator only describing how the market arrived there. For the framework those levels sit inside, read <a href="technical-analysis-basics.html">technical analysis basics</a>; for the other half of confirmation, read <a href="volume-analysis-trading.html">what volume actually confirms</a>; and if you want to see how a structured callout is built, our <a href="../faq.html">FAQ</a> lays out what goes into one.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-rsi.html">What Is RSI, and How to Use It</a>
+      <a href="moving-averages-explained.html">Moving Averages Explained: Which Ones</a>
+      <a href="volume-analysis-trading.html">Volume Analysis: What It Confirms</a>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics: What Matters</a>
+      <a href="break-and-hold-confirmation.html">Break and Hold: Confirmation Beats Guessing</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

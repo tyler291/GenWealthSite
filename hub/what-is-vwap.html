@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is VWAP, and Why Intraday Traders Watch It</title>
+<meta name="description" content="What VWAP is, how the volume-weighted average price is calculated, why institutions are measured against it, and how intraday traders use it as a bias line." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-vwap.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is VWAP, and Why Intraday Traders Watch It" />
+<meta property="og:description" content="VWAP is the average price of the session weighted by volume — the benchmark institutions are graded against, which is why price reacts to it." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-vwap.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-vwap.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is VWAP, and Why Intraday Traders Watch It","description":"VWAP is the volume-weighted average price of a session — the average price paid across the day with every trade weighted by its size. This guide explains how it is calculated, why it originated as an institutional execution benchmark rather than as a chart indicator, why that origin is the reason price reacts around it, how it differs from a moving average, why it becomes less responsive as the session progresses, and where anchored VWAP is more useful than the daily version.","image":"https://gwhlds.com/assets/hub/what-is-vwap.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-vwap.html","datePublished":"2026-08-13"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is VWAP","item":"https://gwhlds.com/hub/what-is-vwap.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is VWAP in simple terms?","acceptedAnswer":{"@type":"Answer","text":"VWAP is the average price everyone paid so far today, weighted by how much traded at each price. A price where a million shares changed hands pulls the line much harder than a price where a thousand did. Because it resets at the session open and includes every trade since, it represents the session's centre of gravity rather than a smoothed version of recent price."}},{"@type":"Question","name":"How is VWAP different from a moving average?","acceptedAnswer":{"@type":"Answer","text":"Three ways. A moving average weights every period equally regardless of how much traded; VWAP weights by volume, so busy prices count more. A moving average uses a rolling window; VWAP uses everything since the session open and resets each day. And a moving average is a chart tool, while VWAP is the benchmark institutional execution is formally measured against, which is why order flow genuinely clusters around it."}},{"@type":"Question","name":"Why does price react around VWAP?","acceptedAnswer":{"@type":"Answer","text":"Because large orders are graded against it. An institutional trader filling a big order is judged on whether the average fill beat VWAP, which creates a real incentive to buy below the line and sell above it. That incentive turns VWAP into a self-reinforcing reference point, unlike an indicator that only exists on a chart. The reaction is a consequence of how the industry measures execution quality, not a property of the maths."}},{"@type":"Question","name":"Is VWAP useful for swing trading?","acceptedAnswer":{"@type":"Answer","text":"Standard daily VWAP is not, because it resets every session and therefore knows nothing about the past week. Anchored VWAP is the version that helps: you anchor the calculation to a specific event such as an earnings release, a swing low or a gap, and the line then shows the average price paid by everyone who traded since that event. That gives a reference point with meaning on multi-day charts."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is VWAP</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts · Intraday</span>
+        <h1>What Is VWAP, and Why Intraday Traders Watch It</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 13, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-vwap.jpg" alt="A single level beam of golden light running through a swirling cloud of emerald and amber particles drawn toward it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">VWAP is the volume-weighted average price — the average price paid across the session so far, with every trade weighted by its size. It resets at the open each day. Traders watch it because it is the benchmark institutional execution is formally graded against, which makes it one of the few lines on a chart with real money behind it.</p>
+
+    <p>That last point is what separates VWAP from almost every other indicator. RSI, MACD and moving averages exist because someone drew them. VWAP exists because the industry needed a fair way to score whether a large order was filled well, and the scoring itself changes behaviour.</p>
+
+    <h2>How VWAP is calculated</h2>
+    <p>The formula is a weighted average and nothing more exotic. For each period since the session open, multiply the typical price by the volume traded, add those products up, then divide by the total volume.</p>
+    <ul>
+      <li><strong>Typical price</strong> is usually (high + low + close) ÷ 3 for the period.</li>
+      <li><strong>Cumulative</strong> means everything since the open, not a rolling window.</li>
+      <li><strong>Weighted</strong> means a price where 900,000 shares traded moves the line roughly nine times as much as a price where 100,000 did.</li>
+    </ul>
+    <p>The weighting is the whole point. A five-minute bar where nothing happened barely registers; the opening range and the closing auction dominate. That is why VWAP tracks where the market actually did business rather than where price merely visited.</p>
+
+    <h2>Why it exists: the benchmark nobody chose to be an indicator</h2>
+    <p>VWAP was not invented for retail charts. It came out of an academic and institutional problem — how do you tell whether a trader who spent all day filling a 500,000-share order did a good job or a bad one? Comparing the fills to the closing price is unfair, because the trader could not have transacted the whole order at the close.</p>
+    <p>The answer, published by Berkowitz, Logue and Noser in <em>The Journal of Finance</em> in 1988, was to compare the fills to the volume-weighted average price over the trading day. Their study of <strong>more than 14,000 actual NYSE trades found total transaction costs — commissions plus market impact — averaged twenty-three basis points of principal value, of which commissions were roughly eighteen basis points and execution costs about five</strong> (<a href="https://afajof.org/issue/volume-43-issue-1/" target="_blank" rel="nofollow noopener">Berkowitz, Logue &amp; Noser, "The Total Cost of Transactions on the NYSE", <em>The Journal of Finance</em> 43(1), 1988, pp. 97–112</a>). The measurement framework outlasted the specific numbers: nearly four decades on, "did we beat VWAP?" is still the standard question asked of an execution desk.</p>
+
+    <div class="callout"><b>This is why VWAP behaves differently from other lines.</b> A desk filling a large buy order is scored on whether its average price came in under VWAP. That gives it a direct, career-relevant reason to buy when price is below the line and to slow down when price is above it. The reaction you see around VWAP is a consequence of how the industry measures execution — not a property of the arithmetic, and not magic.</div>
+
+    <h2>VWAP versus a moving average</h2>
+    <div class="kv"><table>
+      <tr><th></th><th>VWAP</th><th>Moving average</th></tr>
+      <tr><td><strong>Weighting</strong></td><td>By volume — busy prices count more</td><td>By time — every period counts the same</td></tr>
+      <tr><td><strong>Window</strong></td><td>Cumulative from the session open</td><td>Rolling and fixed length</td></tr>
+      <tr><td><strong>Resets</strong></td><td>Every session</td><td>Never</td></tr>
+      <tr><td><strong>Behaviour late in the day</strong></td><td>Increasingly slow — hard to move</td><td>Constant responsiveness</td></tr>
+      <tr><td><strong>Why price responds</strong></td><td>It is a formal execution benchmark</td><td>Widely watched, but no external incentive</td></tr>
+    </table></div>
+    <p>The row that catches people out is the fourth. VWAP at 9:45 sits on a handful of bars and swings around freely. VWAP at 3:30 sits on an entire session's volume and barely moves no matter what price does. The same "reclaim of VWAP" means something quite different at those two times of day: early, it is nearly meaningless; late, it is price recovering ground against a stubborn reference. Compare that with how a fixed-length <a href="moving-averages-explained.html">moving average</a> behaves identically at every hour.</p>
+
+    <h2>How intraday traders actually use it</h2>
+    <p>Reduced to what is defensible, VWAP does three jobs.</p>
+    <ol>
+      <li><strong>A bias line.</strong> Price persistently above VWAP means buyers have paid up all session; persistently below means the reverse. Many traders use it as nothing more than a filter on which direction they will take setups in that day.</li>
+      <li><strong>A mean-reversion reference.</strong> When price stretches far from VWAP in a range-bound session, it tends to be pulled back toward it. This works in balance and fails badly in trend, which is the same trap that ruins every mean-reversion tool.</li>
+      <li><strong>A support and resistance level.</strong> The first test of VWAP after a strong move is a genuine decision point, and it is the cleanest of the three uses because it is <a href="what-is-a-retest.html">a retest</a> — a level being re-examined rather than a signal being generated.</li>
+    </ol>
+    <p>What VWAP is not is an entry trigger. "Price crossed VWAP" happens dozens of times on a chopping day and every one of those crosses looks meaningful in hindsight while none of them are tradeable in advance without a level and an invalidation attached.</p>
+
+    <h2>Anchored VWAP: the version worth learning</h2>
+    <p>Daily VWAP has an obvious limitation — it forgets everything at the opening bell. Anchored VWAP fixes that by letting you start the calculation from a point you choose: an earnings gap, a major swing low, the day a downtrend began.</p>
+    <p>The resulting line answers a specific and useful question: <em>what is the average price paid by everyone who has traded since that event?</em> If price is above it, the cohort who bought since that event is collectively ahead. If price is below, they are collectively underwater — and that is a real, structural reason for supply to appear as price returns to the line. Anchored VWAP is the version that carries meaning onto multi-day and swing charts, where the daily reset makes standard VWAP useless.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> VWAP does not create a callout in our room. A callout is a level, defined targets and a written invalidation. What VWAP does is inform the level: a break of a called level that also reclaims VWAP is a stronger <em>break &amp; hold</em>, and knowing where the session's volume-weighted average sits is often part of <em>know your next</em> — because it is one of the places price is most likely to pause on the way to a target. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is VWAP in simple terms?</h3>
+    <p>VWAP is the average price everyone paid so far today, weighted by how much traded at each price. A price where a million shares changed hands pulls the line much harder than a price where a thousand did. Because it resets at the session open and includes every trade since, it represents the session's centre of gravity rather than a smoothed version of recent price.</p>
+
+    <h3>How is VWAP different from a moving average?</h3>
+    <p>Three ways. A moving average weights every period equally regardless of how much traded; VWAP weights by volume, so busy prices count more. A moving average uses a rolling window; VWAP uses everything since the session open and resets each day. And a moving average is a chart tool, while VWAP is the benchmark institutional execution is formally measured against, which is why order flow genuinely clusters around it.</p>
+
+    <h3>Why does price react around VWAP?</h3>
+    <p>Because large orders are graded against it. An institutional trader filling a big order is judged on whether the average fill beat VWAP, which creates a real incentive to buy below the line and sell above it. That incentive turns VWAP into a self-reinforcing reference point, unlike an indicator that only exists on a chart. The reaction is a consequence of how the industry measures execution quality, not a property of the maths.</p>
+
+    <h3>Is VWAP useful for swing trading?</h3>
+    <p>Standard daily VWAP is not, because it resets every session and therefore knows nothing about the past week. Anchored VWAP is the version that helps: you anchor the calculation to a specific event such as an earnings release, a swing low or a gap, and the line then shows the average price paid by everyone who traded since that event. That gives a reference point with meaning on multi-day charts.</p>
+
+    <h2>Bottom line</h2>
+    <p>VWAP is the session's volume-weighted centre of gravity, and it matters because institutions are measured against it rather than because the formula is clever. Use it as a bias filter and a level, respect that it is nearly meaningless in the first thirty minutes and nearly immovable in the last, and reach for anchored VWAP the moment your time frame stretches past a single day. As always, the trade is the level plus the invalidation — VWAP just tells you where the market's money has actually been. Read <a href="volume-analysis-trading.html">what volume does and does not confirm</a> for the raw input, <a href="technical-analysis-basics.html">technical analysis basics</a> for how it fits the wider framework, and our <a href="../faq.html">FAQ</a> if you want to see how a callout is structured around a level.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="volume-analysis-trading.html">Volume Analysis: What It Confirms</a>
+      <a href="moving-averages-explained.html">Moving Averages Explained: Which Ones</a>
+      <a href="what-is-a-retest.html">What Is a Retest? The Cleanest Entry</a>
+      <a href="best-time-of-day-to-trade.html">Best Time of Day to Trade</a>
+      <a href="support-and-resistance.html">Support and Resistance, Properly Drawn</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
