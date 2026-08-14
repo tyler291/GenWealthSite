@@ -162,9 +162,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] What is MACD and what it actually tells you `(what-is-macd)`
 - [x] Volume analysis: what volume confirms and what it doesn't `(volume-analysis-trading)`
 - [x] What is VWAP and why intraday traders watch it `(what-is-vwap)`
-- [ ] Multi-timeframe analysis: how to line up the big and small picture
-- [ ] Supply and demand zones vs support and resistance
-- [ ] What is a liquidity grab (stop hunt) and how to avoid being the liquidity
+- [x] Multi-timeframe analysis: how to line up the big and small picture `(multi-timeframe-analysis)`
+- [x] Supply and demand zones vs support and resistance `(supply-and-demand-zones)`
+- [x] What is a liquidity grab (stop hunt) and how to avoid being the liquidity `(liquidity-grab-stop-hunt)`
 - [ ] Chart patterns: flags, triangles and wedges that actually resolve
 - [ ] Fibonacci retracement: how to use it without overfitting
 - [ ] Why indicators lag, and what to do about it
