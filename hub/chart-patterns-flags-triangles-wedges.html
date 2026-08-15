@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Chart Patterns: Flags, Triangles and Wedges</title>
+<meta name="description" content="How flags, triangles and wedges actually resolve, the two things a continuation pattern needs, and why the pattern matters far less than the level it breaks." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/chart-patterns-flags-triangles-wedges.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Chart Patterns: Flags, Triangles and Wedges" />
+<meta property="og:description" content="A pattern is a picture of a pause. What it resolves into is decided by the break, not by the shape — here is how to trade the difference." />
+<meta property="og:url" content="https://gwhlds.com/hub/chart-patterns-flags-triangles-wedges.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/chart-patterns-flags-triangles-wedges.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Chart Patterns: Flags, Triangles and Wedges","description":"Flags, triangles and wedges are all pictures of the same thing — a pause in which one side runs out of sellers or buyers. This guide explains what each shape is actually describing, the two ingredients a continuation pattern needs before it is worth anything, how to measure a target without inventing one, why most pattern trades fail on the entry rather than the pattern, and what the published research does and does not support.","image":"https://gwhlds.com/assets/hub/chart-patterns-flags-triangles-wedges.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/chart-patterns-flags-triangles-wedges.html","datePublished":"2026-08-15"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Chart Patterns: Flags, Triangles and Wedges","item":"https://gwhlds.com/hub/chart-patterns-flags-triangles-wedges.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which chart pattern is the most reliable?","acceptedAnswer":{"@type":"Answer","text":"The question is slightly wrong, because reliability lives in the break rather than in the shape. That said, the bull flag and bear flag are the most tradeable for intraday work, for one structural reason: the consolidation is short and shallow, so the invalidation price sits close to the entry and the position can be sized properly without an oversized loss. A triangle that has been forming for three hours has a wide invalidation and therefore a small position, which changes the arithmetic of the trade regardless of how pretty the shape is."}},{"@type":"Question","name":"How do you set a price target from a flag or triangle?","acceptedAnswer":{"@type":"Answer","text":"The conventional measured move projects the height of the move that preceded the pattern from the point of the breakout. For a triangle, project the height of the widest part of the triangle from the break. Treat that as a rough distance rather than a promise. In practice it is more useful to check where the measured move lands relative to the next real level on the chart — a prior swing high, a session high, a round number. If the projection sits beyond an obvious level, the level will usually decide the outcome first."}},{"@type":"Question","name":"Do chart patterns actually work, or are they just pattern-matching on noise?","acceptedAnswer":{"@type":"Answer","text":"The academic evidence is genuinely mixed and it is worth being honest about that. Lo, Mamaysky and Wang built an automated kernel-regression pattern recognizer and applied it to US stocks from 1962 to 1996, concluding that several technical indicators do provide incremental information and may have some practical value. A later survey by Park and Irwin reviewed 95 modern studies of technical trading and found 56 with positive results, 20 negative and 19 mixed. Neither is a licence to trade a shape on sight. Both are consistent with the practical view: patterns describe where a decision is likely to happen, and the decision itself still has to be confirmed."}},{"@type":"Question","name":"What is the difference between a wedge and a triangle?","acceptedAnswer":{"@type":"Answer","text":"Both narrow, but they lean differently. A triangle has at least one roughly horizontal boundary — a flat top with a rising floor, a flat floor with a falling ceiling, or two lines converging symmetrically. A wedge has both boundaries sloping the same way while still converging, so a rising wedge climbs with a ceiling that rises more slowly than its floor. That slope is the whole point: a rising wedge shows buyers making progressively less headway on each push, which is why it more often resolves downward even inside an uptrend."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Chart Patterns</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts</span>
+        <h1>Chart Patterns: Flags, Triangles and Wedges That Actually Resolve</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 15, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/chart-patterns-flags-triangles-wedges.jpg" alt="A tall emerald column of light followed by a small tight parallelogram of golden bars drifting sideways, with a narrowing triangle of light converging beside it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Flags, triangles and wedges are all pictures of a pause. Price has made a move, then stopped and coiled while the two sides reprice. The shape tells you a decision is coming and roughly where the line is. It does not tell you which way. Only the break — and the hold — does that.</p>
+
+    <p>That distinction is why most pattern trading goes wrong. Traders learn to name the shape and then treat the name as a prediction. A bull flag is not a forecast; it is a boundary drawn around indecision, with a level on each side. What makes the trade is the same thing that makes every trade: a level that breaks, holds, and gives you a price at which you were wrong.</p>
+
+    <h2>What each shape is actually describing</h2>
+    <p>Strip the vocabulary away and every continuation pattern is one sentence: after a strong directional move, price stopped going anywhere, and the pullback that followed was weaker than the move that preceded it. The differences between the shapes are differences in how the pause is behaving.</p>
+
+    <div class="kv"><table>
+      <tr><th>Pattern</th><th>What it looks like</th><th>What it is saying</th><th>Typical resolution</th></tr>
+      <tr><td><strong>Bull flag</strong></td><td>Sharp rise, then a shallow drift down or sideways in a tight channel</td><td>Buyers took profit; nobody is aggressively selling</td><td>Continuation up</td></tr>
+      <tr><td><strong>Bear flag</strong></td><td>Sharp drop, then a shallow drift up in a tight channel</td><td>Shorts covered; no real demand appeared</td><td>Continuation down</td></tr>
+      <tr><td><strong>Ascending triangle</strong></td><td>Flat ceiling, rising floor</td><td>A fixed supply level is being tested by progressively more urgent buyers</td><td>Usually up, but the ceiling has to go</td></tr>
+      <tr><td><strong>Descending triangle</strong></td><td>Flat floor, falling ceiling</td><td>A fixed demand level is being tested by progressively more urgent sellers</td><td>Usually down, same caveat</td></tr>
+      <tr><td><strong>Symmetrical triangle</strong></td><td>Both boundaries converging</td><td>Genuine two-sided indecision, narrowing</td><td>Direction unknown — wait</td></tr>
+      <tr><td><strong>Rising wedge</strong></td><td>Both boundaries rising, ceiling rising slower</td><td>Each push higher is achieving less</td><td>Often down</td></tr>
+      <tr><td><strong>Falling wedge</strong></td><td>Both boundaries falling, floor falling slower</td><td>Each push lower is achieving less</td><td>Often up</td></tr>
+    </table></div>
+
+    <p>Notice that the two triangles with a flat side are saying something concrete: there is a specific price where a large, patient order keeps appearing. That is genuinely useful information because it names a level. The symmetrical triangle names two levels and no bias, which is why it deserves less confidence, not more, despite being the shape most often drawn on charts.</p>
+
+    <h2>The two ingredients that make a continuation pattern worth trading</h2>
+    <p>A shape on its own is a Rorschach test. Two things separate a pattern that resolves from a rectangle you drew because you wanted a trade.</p>
+    <ol>
+      <li><strong>A real move into it.</strong> A flag needs a pole. If the move before the consolidation was slow and choppy, there is no imbalance to continue and the "flag" is just range. The pattern inherits its meaning from the impulse that preceded it.</li>
+      <li><strong>A pullback that is proportionally shallow.</strong> A bull flag that retraces most of the pole has stopped being a flag and become a reversal in progress. As a working rule of thumb, once the consolidation gives back more than about half the impulse, treat it as a range and re-evaluate rather than as continuation.</li>
+    </ol>
+    <p>Volume adds a third, softer signal: consolidation usually thins out and the break usually does not. Treat that as confirmation, never as a trigger on its own — see <a href="volume-analysis-trading.html">what volume actually confirms</a> for why turnout is not the same as direction.</p>
+
+    <div class="callout"><b>The most common failure is the entry, not the pattern.</b> Traders identify a correct bull flag and then buy inside the flag "before it goes." That converts a defined-risk setup into an open-ended one, because inside the consolidation there is no level that proves you wrong — price can drift for an hour and take the position with it. The pattern's value is that it gives you a boundary. Buying before the boundary breaks throws away the only thing the pattern was giving you.</div>
+
+    <h2>How to set a target without inventing one</h2>
+    <p>The textbook measured move takes the height of the impulse leading into the pattern and projects it from the breakout point. For a triangle, project the height of the widest part of the triangle. This is a reasonable first estimate and a terrible final answer.</p>
+    <p>The better habit is to draw the measured move and then look at what is between you and it. If a prior swing high, the session high, or a round number sits in the way, that level will resolve first and it is the more honest target. A projection is arithmetic; a level is a place where orders actually exist. When the two disagree, take the level. This is exactly the reasoning behind <a href="how-to-take-partial-profits.html">taking partials at defined levels</a> rather than at a computed price.</p>
+
+    <h2>Why the same pattern fails constantly</h2>
+    <p>Patterns fail for three specific reasons, and all three are fixable.</p>
+    <ul>
+      <li><strong>The break was a poke, not a break.</strong> Price traded through the boundary intrabar and closed back inside. This is the single most common way a "textbook flag" turns into a loss, and it is a <a href="liquidity-grab-stop-hunt.html">liquidity grab</a>, not a failed pattern.</li>
+      <li><strong>The pattern was drawn to fit a bias.</strong> Trendlines are hand-placed, and hands are biased. If you had to ignore two wicks to make the line work, the line is not there. <a href="how-to-draw-a-trendline.html">Drawing the trendline correctly</a> is a prerequisite for trusting anything built on it.</li>
+      <li><strong>The context was wrong.</strong> A bull flag on the 5-minute chart forming directly underneath the daily resistance is not a continuation setup; it is a queue at a wall. <a href="multi-timeframe-analysis.html">Checking the higher timeframe</a> first removes most of these.</li>
+    </ul>
+
+    <h2>What the research actually says</h2>
+    <p>It is worth knowing how thin the ground is here, because most pattern content presents folklore as fact. Two pieces of published work are genuinely relevant.</p>
+    <p>Lo, Mamaysky and Wang built an automated pattern recognizer using nonparametric kernel regression — an attempt to remove the human eye from pattern identification entirely — and applied it to US stocks from 1962 to 1996. Their conclusion was measured: several technical indicators "do provide incremental information and may have some practical value" (<a href="https://www.nber.org/papers/w7613" target="_blank" rel="nofollow noopener">Lo, Mamaysky &amp; Wang, "Foundations of Technical Analysis", NBER Working Paper 7613, 2000</a>). Incremental information is a long way from an edge you can trade blind, but it is not nothing.</p>
+    <p>The broader survey is less flattering and more useful. Park and Irwin reviewed the literature and reported that <strong>of 95 modern studies of technical trading, 56 found positive results, 20 found negative results and 19 were mixed</strong> (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-6419.2007.00519.x" target="_blank" rel="nofollow noopener">Park &amp; Irwin, "What Do We Know About the Profitability of Technical Analysis?", Journal of Economic Surveys 21(4), 2007</a>). Read that honestly: a clear majority found something, and roughly four in ten studies did not. That is the profile of a tool that works in some hands and some conditions, not a rule of nature. Trade accordingly — with defined risk on every attempt.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We do not call a flag. We call the level the flag is pressing against, and the trade only exists once price <em>breaks and holds</em> it as the candle closes — never on the poke. The pattern is how we found the level; the close is what makes it a trade. And because every callout carries a written invalidation before entry, a pattern that fails costs one planned loss instead of an argument with the chart. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Which chart pattern is the most reliable?</h3>
+    <p>The question is slightly wrong, because reliability lives in the break rather than in the shape. That said, the bull flag and bear flag are the most tradeable for intraday work, for one structural reason: the consolidation is short and shallow, so the invalidation price sits close to the entry and the position can be sized properly without an oversized loss. A triangle that has been forming for three hours has a wide invalidation and therefore a small position, which changes the arithmetic of the trade regardless of how pretty the shape is.</p>
+
+    <h3>How do you set a price target from a flag or triangle?</h3>
+    <p>The conventional measured move projects the height of the move that preceded the pattern from the point of the breakout. For a triangle, project the height of the widest part of the triangle from the break. Treat that as a rough distance rather than a promise. In practice it is more useful to check where the measured move lands relative to the next real level on the chart — a prior swing high, a session high, a round number. If the projection sits beyond an obvious level, the level will usually decide the outcome first.</p>
+
+    <h3>Do chart patterns actually work, or are they just pattern-matching on noise?</h3>
+    <p>The academic evidence is genuinely mixed and it is worth being honest about that. Lo, Mamaysky and Wang built an automated kernel-regression pattern recognizer and applied it to US stocks from 1962 to 1996, concluding that several technical indicators do provide incremental information and may have some practical value. A later survey by Park and Irwin reviewed 95 modern studies of technical trading and found 56 with positive results, 20 negative and 19 mixed. Neither is a licence to trade a shape on sight. Both are consistent with the practical view: patterns describe where a decision is likely to happen, and the decision itself still has to be confirmed.</p>
+
+    <h3>What is the difference between a wedge and a triangle?</h3>
+    <p>Both narrow, but they lean differently. A triangle has at least one roughly horizontal boundary — a flat top with a rising floor, a flat floor with a falling ceiling, or two lines converging symmetrically. A wedge has both boundaries sloping the same way while still converging, so a rising wedge climbs with a ceiling that rises more slowly than its floor. That slope is the whole point: a rising wedge shows buyers making progressively less headway on each push, which is why it more often resolves downward even inside an uptrend.</p>
+
+    <h2>Bottom line</h2>
+    <p>Learn the shapes so you can find the boundary quickly, then forget the names and trade the boundary. A flag is a pause with a lid on it; a triangle is a pause with a fixed price on one side; a wedge is a pause where one side is visibly tiring. In every case the trade is the same: mark the line, wait for a close through it, place invalidation where the idea genuinely dies, and size from that distance. For the confirmation rule itself, read <a href="break-and-hold-confirmation.html">break and hold</a>; for telling real breaks from fakes, read <a href="what-is-a-breakout.html">what a breakout actually is</a>; and for where all of this sits in a wider toolkit, start with <a href="technical-analysis-basics.html">technical analysis basics</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-a-breakout.html">What Is a Breakout? Real vs Fake</a>
+      <a href="break-and-hold-confirmation.html">Break and Hold: Confirmation First</a>
+      <a href="how-to-draw-a-trendline.html">How to Draw a Trendline Correctly</a>
+      <a href="candlestick-patterns-worth-knowing.html">Candlestick Patterns Worth Knowing</a>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

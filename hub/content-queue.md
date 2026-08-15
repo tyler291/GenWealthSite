@@ -165,9 +165,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] Multi-timeframe analysis: how to line up the big and small picture `(multi-timeframe-analysis)`
 - [x] Supply and demand zones vs support and resistance `(supply-and-demand-zones)`
 - [x] What is a liquidity grab (stop hunt) and how to avoid being the liquidity `(liquidity-grab-stop-hunt)`
-- [ ] Chart patterns: flags, triangles and wedges that actually resolve
-- [ ] Fibonacci retracement: how to use it without overfitting
-- [ ] Why indicators lag, and what to do about it
+- [x] Chart patterns: flags, triangles and wedges that actually resolve `(chart-patterns-flags-triangles-wedges)`
+- [x] Fibonacci retracement: how to use it without overfitting `(fibonacci-retracement)`
+- [x] Why indicators lag, and what to do about it `(why-indicators-lag)`
 - [ ] How to mark up a chart before the session starts
 - [ ] What is market structure (higher highs, lower lows) and how to read it
 

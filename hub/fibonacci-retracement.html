@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Fibonacci Retracement: How to Use It Properly</title>
+<meta name="description" content="What Fibonacci retracement levels are, why 50% is not even a Fibonacci number, how to anchor the tool honestly, and how to use it without overfitting a chart." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/fibonacci-retracement.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fibonacci Retracement: How to Use It Properly" />
+<meta property="og:description" content="Draw enough levels and one of them is always near price. Here is how to use the Fibonacci tool as a filter instead of a fortune teller." />
+<meta property="og:url" content="https://gwhlds.com/hub/fibonacci-retracement.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/fibonacci-retracement.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Fibonacci Retracement: How to Use It Properly","description":"Fibonacci retracement draws horizontal levels at fixed percentages of a prior move to mark where a pullback might stall. This guide explains where the ratios come from, why 50 percent is not a Fibonacci ratio at all, how anchoring choices quietly decide the output, what published testing has and has not found, and how to use the tool as a filter on levels you already had rather than as a source of new ones.","image":"https://gwhlds.com/assets/hub/fibonacci-retracement.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/fibonacci-retracement.html","datePublished":"2026-08-15"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Fibonacci Retracement","item":"https://gwhlds.com/hub/fibonacci-retracement.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which Fibonacci retracement level is the most important?","acceptedAnswer":{"@type":"Answer","text":"In practice traders watch 0.5 and 0.618 most closely, and it is worth knowing that only one of those is actually a Fibonacci ratio. Fifty percent is simply the halfway point of the move; it is on the tool by convention, not by mathematics. The zone between them is where a healthy pullback in a trending market often stalls, which is a reasonable place to look for a setup — but the level does not create the reaction. If nothing else on the chart agrees with it, a Fibonacci level on its own is just a horizontal line."}},{"@type":"Question","name":"Where do you anchor a Fibonacci retracement?","acceptedAnswer":{"@type":"Answer","text":"From the start of the impulse move to its end: the swing low to the swing high in an uptrend, or the swing high to the swing low in a downtrend, using the extreme of the wick rather than the candle body. The important discipline is to pick the anchors before you look at where the levels land. If you find yourself re-anchoring until a level lines up with current price, you have stopped measuring and started drawing the answer you wanted."}},{"@type":"Question","name":"Does Fibonacci retracement actually work?","acceptedAnswer":{"@type":"Answer","text":"The honest answer is that testing has produced modest and inconsistent results rather than a clear edge. One published study applied Fibonacci retracement strategies to ten leading US energy stocks and four energy cryptocurrencies between November 2017 and January 2020, and found positive returns in six of the ten stocks, ranging from 4 percent to 177 percent, but with weak risk-adjusted performance — the highest Sharpe ratio reported was 0.139. That is the profile of a tool that sometimes helps rather than a rule that predicts. Treat it as one input among several, never as a reason to take a trade on its own."}},{"@type":"Question","name":"What is the difference between Fibonacci retracement and Fibonacci extension?","acceptedAnswer":{"@type":"Answer","text":"Retracement measures backwards into a move that already happened, marking levels between 0 and 100 percent of it, and is used to find where a pullback might end. Extension measures forwards beyond the move, marking levels such as 1.272 and 1.618 of the original leg, and is used to guess where a continuation might stall. Extensions are the weaker of the two because they project into price that has never traded, meaning there is no order history at those prices — no one has an unfilled position there yet."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Fibonacci Retracement</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts</span>
+        <h1>Fibonacci Retracement: How to Use It Without Overfitting</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 15, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/fibonacci-retracement.jpg" alt="A golden nautilus spiral resting on dark glass beneath a ladder of thin horizontal light beams at uneven spacings, one glowing brighter than the rest" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Fibonacci retracement draws horizontal lines at fixed percentages of a move that already happened — commonly 23.6%, 38.2%, 50%, 61.8% and 78.6% — to mark where a pullback might stall. It is a measuring tool, not a forecast. Its usefulness comes almost entirely from whether those lines land on levels the chart already respected.</p>
+
+    <p>Used that way it is a genuinely helpful filter. Used the way it is usually taught — draw the levels, wait for price to touch one, take the trade — it is one of the fastest ways to overfit a chart, because with five lines stretched across a move, price is almost always near one of them.</p>
+
+    <h2>Where the ratios come from, and the one that is fake</h2>
+    <p>The Fibonacci sequence adds each number to the one before it: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. Divide any number by the next one and the answer converges on 0.618 as you go further out — 34 ÷ 55 = 0.6182, 55 ÷ 89 = 0.6180. Skip one place and you converge on 0.382; skip two and you get 0.236. Those three ratios are where 61.8%, 38.2% and 23.6% come from. The 78.6% level is the square root of 0.618.</p>
+    <p><strong>The 50% level is not a Fibonacci ratio at all.</strong> It is simply the halfway point of the move, inherited from Dow Theory and left on the tool because traders found it useful. This matters more than it sounds. The most-watched line on the most-watched confluence zone in retail trading has no mathematical relationship to the sequence the tool is named after — which is a strong hint about where the tool's actual power comes from.</p>
+
+    <div class="callout"><b>The uncomfortable but useful explanation.</b> Fibonacci levels most plausibly work, when they work, because a very large number of traders have the same tool open, anchored to the same obvious swing, and place orders in the same narrow band. That is a self-fulfilling clustering effect, not a property of markets. It is still tradeable — orders are orders — but it changes how you should treat the tool. It means the levels are worth more on liquid, heavily-watched instruments and on obvious swings, and worth very little on a thin instrument or an anchor only you can see.</div>
+
+    <h2>How to anchor it honestly</h2>
+    <p>Anchoring is where almost all of the damage is done, because the tool is completely determined by two clicks and nobody audits their own clicks.</p>
+    <ol>
+      <li><strong>Pick the impulse, not the whole chart.</strong> Anchor from the start of a clean directional move to its end — swing low to swing high in an uptrend, swing high to swing low in a downtrend.</li>
+      <li><strong>Use wicks, consistently.</strong> Wick extreme to wick extreme, or body to body, but the same choice every time. Alternating between them is how you generate whatever answer you want.</li>
+      <li><strong>Choose the anchors before you look at the levels.</strong> This is the whole discipline. If you re-anchor because the first attempt did not put a line near current price, you are no longer measuring anything.</li>
+      <li><strong>One anchor per timeframe, not five.</strong> Stacking three retracements from three different swings produces a chart where every price is a Fibonacci level, which is the same as no price being one.</li>
+    </ol>
+
+    <h2>The only use that survives scrutiny: confluence</h2>
+    <p>A Fibonacci level by itself is a line you drew. A Fibonacci level sitting on top of a prior swing low, a round number, or the session's <a href="what-is-vwap.html">VWAP</a> is a place where several independent reasons to transact overlap. The second one is worth watching; the first one is not.</p>
+
+    <div class="kv"><table>
+      <tr><th></th><th>Weak use</th><th>Strong use</th></tr>
+      <tr><td><strong>Order of operations</strong></td><td>Draw fibs, then look for a trade</td><td>Mark levels first, then check whether a fib agrees</td></tr>
+      <tr><td><strong>What triggers entry</strong></td><td>Price touches the line</td><td>Price breaks and holds a level the fib happened to confirm</td></tr>
+      <tr><td><strong>Number of anchors</strong></td><td>Several, re-drawn until one fits</td><td>One, chosen before looking</td></tr>
+      <tr><td><strong>Where the stop goes</strong></td><td>Just under the fib level</td><td>At structural invalidation, wherever that is</td></tr>
+      <tr><td><strong>If nothing lines up</strong></td><td>Trade the fib anyway</td><td>No trade</td></tr>
+    </table></div>
+
+    <p>That fourth row deserves emphasis. Placing a stop a few ticks under a Fibonacci line is placing it in the most crowded, most arbitrary place available — exactly the behaviour described in <a href="liquidity-grab-stop-hunt.html">how liquidity grabs work</a>. The level that invalidates your idea is a structural one: the swing that must not break. Find that first, then size the position to afford it.</p>
+
+    <h2>What the testing actually shows</h2>
+    <p>There is far less published evidence on Fibonacci retracement than its popularity suggests, and what exists is modest. One peer-reviewed study applied Fibonacci retracement trading strategies to ten leading US energy stocks and four energy cryptocurrencies over November 2017 to January 2020. It reported <strong>positive returns in six of the ten energy stocks, ranging from 4% for one name to 177% for another, but with weak risk-adjusted performance — the highest Sharpe ratio reported was 0.139</strong>, and results for the cryptocurrencies were substantially worse (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8752186/" target="_blank" rel="nofollow noopener">Gurrib, Nourani &amp; Bhaskaran, "Energy crypto currencies and leading U.S. energy stock prices: are Fibonacci retracements profitable?", Financial Innovation, 2022</a>).</p>
+    <p>A Sharpe ratio of 0.139 is a long way from a reliable edge. Read the study for what it is — a narrow sample, one asset class, one window — but read the shape of the result too: sometimes it helped, the dispersion was enormous, and the risk-adjusted numbers were thin. That is consistent with a tool that adds information at the margin and dangerous as a standalone system.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We do not call trades off a retracement level. We call the level, and the trade only exists once price <em>breaks and holds</em> it on the close. If a Fibonacci line happens to sit on that level, it is one more reason the level matters — never the reason by itself. Every callout still carries an entry, defined targets and a written invalidation, and none of those four numbers is decided by where a drawing tool landed. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Which Fibonacci retracement level is the most important?</h3>
+    <p>In practice traders watch 0.5 and 0.618 most closely, and it is worth knowing that only one of those is actually a Fibonacci ratio. Fifty percent is simply the halfway point of the move; it is on the tool by convention, not by mathematics. The zone between them is where a healthy pullback in a trending market often stalls, which is a reasonable place to look for a setup — but the level does not create the reaction. If nothing else on the chart agrees with it, a Fibonacci level on its own is just a horizontal line.</p>
+
+    <h3>Where do you anchor a Fibonacci retracement?</h3>
+    <p>From the start of the impulse move to its end: the swing low to the swing high in an uptrend, or the swing high to the swing low in a downtrend, using the extreme of the wick rather than the candle body. The important discipline is to pick the anchors before you look at where the levels land. If you find yourself re-anchoring until a level lines up with current price, you have stopped measuring and started drawing the answer you wanted.</p>
+
+    <h3>Does Fibonacci retracement actually work?</h3>
+    <p>The honest answer is that testing has produced modest and inconsistent results rather than a clear edge. One published study applied Fibonacci retracement strategies to ten leading US energy stocks and four energy cryptocurrencies between November 2017 and January 2020, and found positive returns in six of the ten stocks, ranging from 4 percent to 177 percent, but with weak risk-adjusted performance — the highest Sharpe ratio reported was 0.139. That is the profile of a tool that sometimes helps rather than a rule that predicts. Treat it as one input among several, never as a reason to take a trade on its own.</p>
+
+    <h3>What is the difference between Fibonacci retracement and Fibonacci extension?</h3>
+    <p>Retracement measures backwards into a move that already happened, marking levels between 0 and 100 percent of it, and is used to find where a pullback might end. Extension measures forwards beyond the move, marking levels such as 1.272 and 1.618 of the original leg, and is used to guess where a continuation might stall. Extensions are the weaker of the two because they project into price that has never traded, meaning there is no order history at those prices — no one has an unfilled position there yet.</p>
+
+    <h2>Bottom line</h2>
+    <p>Fibonacci retracement is a ruler with a good story attached. The ratios are real mathematics, the 50% line everyone watches is not part of that mathematics, and the published testing is thin and mixed. None of that makes the tool useless — it makes it a filter. Mark the levels that matter first, anchor once, and let a Fibonacci line either agree with a level you already had or say nothing. Then trade the level, not the line. For how to identify those levels in the first place, read <a href="support-and-resistance.html">support and resistance</a>; for the entry rule that keeps you out of the poke, read <a href="what-is-a-retest.html">what a retest is</a>; and for where drawing tools sit in the wider toolkit, start with <a href="technical-analysis-basics.html">technical analysis basics</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="support-and-resistance.html">Support and Resistance Explained</a>
+      <a href="what-is-a-retest.html">What Is a Retest?</a>
+      <a href="supply-and-demand-zones.html">Supply and Demand Zones vs Support</a>
+      <a href="how-to-draw-a-trendline.html">How to Draw a Trendline Correctly</a>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
