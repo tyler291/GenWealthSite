@@ -168,8 +168,8 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] Chart patterns: flags, triangles and wedges that actually resolve `(chart-patterns-flags-triangles-wedges)`
 - [x] Fibonacci retracement: how to use it without overfitting `(fibonacci-retracement)`
 - [x] Why indicators lag, and what to do about it `(why-indicators-lag)`
-- [ ] How to mark up a chart before the session starts
-- [ ] What is market structure (higher highs, lower lows) and how to read it
+- [x] How to mark up a chart before the session starts `(how-to-mark-up-a-chart)`
+- [x] What is market structure (higher highs, lower lows) and how to read it `(what-is-market-structure)`
 
 ---
 
@@ -177,7 +177,7 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 
 ### Forex
 
-- [ ] Forex trading guide: how the market actually works `[PILLAR]`
+- [x] Forex trading guide: how the market actually works `[PILLAR]` `(forex-trading-guide)`
 - [ ] What is a pip and how to calculate pip value
 - [ ] Forex sessions explained: London, New York, Tokyo overlap
 - [ ] The best forex pairs to trade as a beginner
