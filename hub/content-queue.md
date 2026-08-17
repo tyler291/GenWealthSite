@@ -178,9 +178,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 ### Forex
 
 - [x] Forex trading guide: how the market actually works `[PILLAR]` `(forex-trading-guide)`
-- [ ] What is a pip and how to calculate pip value
-- [ ] Forex sessions explained: London, New York, Tokyo overlap
-- [ ] The best forex pairs to trade as a beginner
+- [x] What is a pip and how to calculate pip value `(what-is-a-pip)`
+- [x] Forex sessions explained: London, New York, Tokyo overlap `(forex-sessions-explained)`
+- [x] The best forex pairs to trade as a beginner `(best-forex-pairs-for-beginners)`
 - [ ] What is the spread in forex and how it eats your edge
 - [ ] What is swap / overnight financing in forex
 - [ ] How news events move forex pairs (and how to trade around them)

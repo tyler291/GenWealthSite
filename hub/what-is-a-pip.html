@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is a Pip? How to Calculate Pip Value</title>
+<meta name="description" content="What a pip is, why yen pairs use a different decimal, and how to calculate pip value for any pair, lot size and account currency — with worked examples." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-a-pip.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is a Pip? How to Calculate Pip Value" />
+<meta property="og:description" content="A pip is a unit of distance, not a unit of money. Here is what one is worth on your account — and the two-line formula that works for every pair." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-a-pip.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/what-is-a-pip.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is a Pip, and How Do You Calculate Pip Value?","description":"A practical guide to the pip: what the unit is, why most pairs use the fourth decimal place while yen pairs use the second, what a pipette is, the two-line formula that converts a pip into money for any pair and lot size, how to handle pairs where the quote currency is not your account currency, a pip value reference table, and why pip value only matters as an input to position sizing.","image":"https://gwhlds.com/assets/hub/what-is-a-pip.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-a-pip.html","datePublished":"2026-08-17"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is a Pip?","item":"https://gwhlds.com/hub/what-is-a-pip.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a pip in forex?","acceptedAnswer":{"@type":"Answer","text":"A pip is the standard smallest quoted increment of a currency pair's price. For most pairs it is 0.0001, the fourth decimal place, so EUR/USD moving from 1.1509 to 1.1510 is one pip. For pairs quoted against the Japanese yen the pip is 0.01, the second decimal place. The pip is a unit of distance, not a unit of money — what it is worth depends entirely on your position size."}},{"@type":"Question","name":"How do you calculate pip value?","acceptedAnswer":{"@type":"Answer","text":"Multiply the pip size by your position size in units of the base currency. That gives the pip value in the quote currency. A standard lot of 100,000 units at a pip size of 0.0001 is 10 units of the quote currency per pip. If the quote currency is the US dollar and your account is in dollars, that is $10 a pip. If it is anything else, convert it into your account currency at the current rate."}},{"@type":"Question","name":"Why is a pip different for yen pairs?","acceptedAnswer":{"@type":"Answer","text":"Because the yen trades at a very different order of magnitude. In the Federal Reserve's H.10 release for the week ending August 12, 2026, the euro was quoted around 1.15 and the yen around 157. A 0.0001 move on a price near 157 would be a vanishingly small fraction of the price, so yen pairs put the pip at the second decimal place instead. It keeps one pip roughly comparable in economic significance across pairs."}},{"@type":"Question","name":"How many pips should my stop loss be?","acceptedAnswer":{"@type":"Answer","text":"There is no universal number, and any source that gives you one is guessing. The stop belongs at the price that proves the trade idea wrong, and the pip distance is simply whatever that turns out to be. You then choose a position size so that distance costs an acceptable percentage of the account. Choosing the pip distance first and the invalidation second is backwards, and it is a common reason stops get hit on noise."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>What Is a Pip?</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Forex</span>
+        <h1>What Is a Pip, and How Do You Calculate Pip Value?</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 17, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/what-is-a-pip.jpg" alt="A macro view of a glowing price quote in dark space with the fourth decimal place magnified above fine measurement marks of gold and emerald light" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A pip is the standard unit of price movement in forex — 0.0001 for most pairs, or 0.01 for pairs quoted against the Japanese yen. Pip value is what one pip is worth in money, and it depends on just two things: your position size and the currency the pair is quoted in.</p>
+
+    <p>That distinction is the whole lesson. A pip measures <em>distance</em>, the way a centimetre does. It tells you nothing about money until you attach a position size to it. "I made 40 pips" is not a statement about profit, and a trader who thinks in pips instead of percentages will eventually take a position whose pip risk looks modest and whose dollar risk is a quarter of the account.</p>
+
+    <h2>What a pip actually is</h2>
+    <p>A pip is the smallest standard increment in which a currency pair is conventionally quoted. For the large majority of pairs that is <strong>0.0001 — the fourth decimal place</strong>. EUR/USD moving from 1.1509 to 1.1510 is one pip. From 1.1509 to 1.1609 is 100 pips.</p>
+    <p>The convention exists so traders can talk about moves without reciting decimals, and so brokers can express spreads and stops in a unit that means the same thing on every chart of that pair. It is a communication standard, not a law of the market — which is why the exception below is not really an exception, just a different order of magnitude.</p>
+
+    <h2>Why yen pairs use the second decimal place</h2>
+    <p>Pairs quoted against the Japanese yen put the pip at <strong>0.01 — the second decimal place</strong>. USD/JPY moving from 157.54 to 157.55 is one pip.</p>
+    <p>The reason is arithmetic. In the Federal Reserve's H.10 foreign exchange release for the week ending <strong>August 12, 2026</strong>, the euro was quoted <strong>around 1.15</strong> and the yen <strong>around 157</strong> (<a href="https://www.federalreserve.gov/releases/h10/current/" target="_blank" rel="nofollow noopener">Federal Reserve Statistical Release H.10, Foreign Exchange Rates</a>). A 0.0001 move on a price of 1.15 is roughly one hundredth of one percent. The same 0.0001 move on a price of 157 is less than one ten-thousandth of a percent — far too small to be a useful unit. Shifting the pip two decimal places to the left restores it to a comparable size.</p>
+    <p>The practical takeaway: whenever you switch to a yen pair, your pip counting changes and so does your pip value. Traders who carry a "50-pip stop" habit from EUR/USD onto USD/JPY without rechecking the arithmetic are not using the same risk at all.</p>
+
+    <h2>Pipettes: the extra decimal your broker shows</h2>
+    <p>Most platforms now quote one more decimal place than the pip convention — five decimals on standard pairs, three on yen pairs. That final digit is a <strong>pipette</strong>, or fractional pip: one tenth of a pip.</p>
+    <p>So a EUR/USD quote of 1.15094 is 1.1509 and 4 pipettes. A spread displayed as "0.8" on a five-decimal platform means 0.8 of a pip, not 8 pips. This trips up beginners constantly, usually in the direction of thinking spreads are ten times wider than they are — or, worse, setting a stop ten times tighter than intended.</p>
+
+    <h2>How to calculate pip value: the two-line formula</h2>
+    <p>Every pip value calculation is the same two steps, regardless of pair:</p>
+    <ol>
+      <li><strong>Pip value in the quote currency</strong> = pip size × position size in units of the base currency.</li>
+      <li><strong>Convert</strong> that amount into your account currency at the current rate — if it is not already in your account currency.</li>
+    </ol>
+    <p>Step one is trivial. Step two is where every mistake happens, and it only applies to some pairs. There are three cases.</p>
+
+    <h3>Case 1: the quote currency is your account currency</h3>
+    <p>EUR/USD, GBP/USD, AUD/USD and NZD/USD on a US dollar account. A standard lot is 100,000 units, so 100,000 × 0.0001 = <strong>$10 per pip</strong>. No conversion needed. This is the case beginners learn first, and the reason so many assume a pip is "always ten dollars".</p>
+
+    <h3>Case 2: the base currency is your account currency</h3>
+    <p>USD/JPY, USD/CHF and USD/CAD on a dollar account. Here the pip value comes out in the <em>other</em> currency and has to be converted back, which means the pip value moves as the exchange rate moves.</p>
+    <p>USD/JPY at 157.54, one standard lot: 100,000 × 0.01 = ¥1,000 per pip. Convert: ¥1,000 ÷ 157.54 = <strong>$6.35 per pip</strong>. Not $10 — about 36% less. A trader assuming $10 a pip on that trade is under-risking by a third, which sounds harmless until they size up to "fix" it.</p>
+
+    <h3>Case 3: neither currency is your account currency</h3>
+    <p>A cross like EUR/GBP on a dollar account. One standard lot: 100,000 × 0.0001 = £10 per pip. Convert sterling to dollars at the prevailing GBP/USD rate — at 1.2800, that is <strong>$12.80 per pip</strong>. The conversion rate is a live number, so the pip value on a cross drifts throughout the position's life.</p>
+
+    <div class="callout"><b>You do not have to do this by hand.</b> Every serious platform shows the money value of a position before you commit to it, and it recalculates as you drag the stop. Use it. The point of understanding the arithmetic is not to compute it manually under pressure — it is so you notice when a number on the screen looks wrong. Run your own scenarios with our free <a href="lot-size-calculator.html">lot size and position size calculator</a>.</div>
+
+    <h2>Pip value by lot size: the reference table</h2>
+    <p>For pairs quoted in US dollars, on a US dollar account:</p>
+
+    <div class="kv"><table>
+      <tr><th>Lot</th><th>Units</th><th>Value of one pip</th><th>30-pip stop</th><th>80-pip stop</th></tr>
+      <tr><td>Standard</td><td>100,000</td><td>$10.00</td><td>$300</td><td>$800</td></tr>
+      <tr><td>Mini</td><td>10,000</td><td>$1.00</td><td>$30</td><td>$80</td></tr>
+      <tr><td>Micro</td><td>1,000</td><td>$0.10</td><td>$3</td><td>$8</td></tr>
+      <tr><td>Nano</td><td>100</td><td>$0.01</td><td>$0.30</td><td>$0.80</td></tr>
+    </table></div>
+
+    <p>Read the two right-hand columns and the practical meaning of lot size becomes obvious: the same trade idea, on the same chart, costs a hundred times more on a standard lot than on a micro. Nothing about the analysis changed. Only the sizing did. There is a fuller treatment in <a href="what-is-a-lot-size.html">what a lot size is</a>.</p>
+
+    <h2>What pip value is actually for</h2>
+    <p>Pip value has exactly one job: it converts the distance between your entry and your invalidation into a number of dollars, so you can choose a position size that keeps that number inside your risk budget.</p>
+    <p>The sequence runs in one direction only:</p>
+    <ol>
+      <li><strong>Decide what one loss may cost.</strong> A fixed percentage of the account — commonly 1% or less. See <a href="the-1-percent-rule-in-trading.html">the 1% rule</a>.</li>
+      <li><strong>Find the invalidation on the chart.</strong> The price that says the idea was wrong. Measure the distance from entry in pips.</li>
+      <li><strong>Divide.</strong> Risk in dollars ÷ (pip distance × pip value per lot) = the number of lots.</li>
+    </ol>
+    <p>Worked through: a $5,000 account risking 1% is $50. A EUR/USD setup with a 25-pip invalidation, at $1 per pip on a mini lot, gives $50 ÷ (25 × $1) = 2 mini lots. If the same setup needed a 50-pip stop, the answer would be 1 mini lot — same account, same risk, half the size, because the chart demanded a wider stop. That is <a href="position-sizing-from-risk.html">position sizing from risk</a>, and it is the habit that outlasts every setup you will ever learn.</p>
+    <p>Notice what never appears in that calculation: how confident you feel. Conviction has no unit, so it cannot enter an equation.</p>
+
+    <h2>Pips, points and ticks are not the same thing</h2>
+    <ul>
+      <li><strong>Pip</strong> — the forex convention: 0.0001 on most pairs, 0.01 on yen pairs.</li>
+      <li><strong>Pipette</strong> — one tenth of a pip; the fifth decimal (third on yen pairs).</li>
+      <li><strong>Point</strong> — used loosely. In stocks it usually means one dollar of share price; on some platforms it means the last quoted decimal, which is a pipette. Ask what a platform means before you trust the number.</li>
+      <li><strong>Tick</strong> — the futures term: the smallest price increment the exchange permits for a contract. Tick size and tick value are fixed by the contract specification, not by your position size, which is a genuine structural difference from forex. If you are weighing the two markets, see <a href="forex-vs-futures-day-trading.html">forex vs futures for a new day trader</a>.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Pips are how a plan gets written down in numbers. <em>Break &amp; hold</em> decides whether the level is real before there is an entry at all. <em>Know your next</em> means the callout already names the entry, the targets and the level price aims for after that — all measurable distances, not feelings. <em>Trail &amp; protect</em> moves the stop up behind each target as it prints, which is only possible because the distances were defined in advance. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a pip in forex?</h3>
+    <p>A pip is the standard smallest quoted increment of a currency pair's price. For most pairs it is 0.0001, the fourth decimal place, so EUR/USD moving from 1.1509 to 1.1510 is one pip. For pairs quoted against the Japanese yen the pip is 0.01, the second decimal place. The pip is a unit of distance, not a unit of money — what it is worth depends entirely on your position size.</p>
+
+    <h3>How do you calculate pip value?</h3>
+    <p>Multiply the pip size by your position size in units of the base currency. That gives the pip value in the quote currency. A standard lot of 100,000 units at a pip size of 0.0001 is 10 units of the quote currency per pip. If the quote currency is the US dollar and your account is in dollars, that is $10 a pip. If it is anything else, convert it into your account currency at the current rate.</p>
+
+    <h3>Why is a pip different for yen pairs?</h3>
+    <p>Because the yen trades at a very different order of magnitude. In the Federal Reserve's H.10 release for the week ending August 12, 2026, the euro was quoted around 1.15 and the yen around 157. A 0.0001 move on a price near 157 would be a vanishingly small fraction of the price, so yen pairs put the pip at the second decimal place instead. It keeps one pip roughly comparable in economic significance across pairs.</p>
+
+    <h3>How many pips should my stop loss be?</h3>
+    <p>There is no universal number, and any source that gives you one is guessing. The stop belongs at the price that proves the trade idea wrong, and the pip distance is simply whatever that turns out to be. You then choose a position size so that distance costs an acceptable percentage of the account. Choosing the pip distance first and the invalidation second is backwards, and it is a common reason stops get hit on noise.</p>
+
+    <h2>Bottom line</h2>
+    <p>A pip is 0.0001 on most pairs and 0.01 on yen pairs, and its value in money is pip size × position size, converted into your account currency where needed. Learn the three cases once — quote currency matches your account, base currency matches your account, neither does — and you will never be surprised by a position that risks more than you intended. Then stop counting pips as a scorecard and start using them as an input: measure the invalidation, convert it to dollars, and let that set the size. The wider mechanics of the market sit in the <a href="forex-trading-guide.html">forex trading guide</a>, the pairs worth learning on are covered in <a href="best-forex-pairs-for-beginners.html">the best forex pairs for beginners</a>, and the timing that decides how far price travels is in <a href="forex-sessions-explained.html">forex sessions explained</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="forex-trading-guide.html">Forex Trading Guide: How the Market Works</a>
+      <a href="what-is-a-lot-size.html">What Is a Lot Size in Trading?</a>
+      <a href="lot-size-calculator.html">Lot Size &amp; Position Size Calculator</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+      <a href="best-forex-pairs-for-beginners.html">Best Forex Pairs for Beginners</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
