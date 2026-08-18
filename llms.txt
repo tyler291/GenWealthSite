@@ -156,6 +156,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [What Is a Pip? How to Calculate Pip Value](https://gwhlds.com/hub/what-is-a-pip.html): the pip as a unit of distance rather than money, why yen pairs use the second decimal place, what a pipette is, the two-line formula for pip value in all three account-currency cases, a pip value table by lot size, and how pip distance feeds position sizing.
 - [Forex Sessions Explained: London, NY, Tokyo](https://gwhlds.com/hub/forex-sessions-explained.html): the four sessions with hours in UTC and Eastern Time, BIS data on where FX trading actually takes place, why the London–New York overlap carries the tightest spreads and largest ranges, how daylight saving shifts every session table, and how to choose a session around a job.
 - [Best Forex Pairs for Beginners](https://gwhlds.com/hub/best-forex-pairs-for-beginners.html): the four criteria that make a pair beginner-friendly, dollar pairs ranked by BIS April 2025 spot turnover, a pair-by-pair shortlist, why exotics and high-range crosses cost more than they appear to, and why one pair traded properly beats five watched badly.
+- [What Is the Spread in Forex?](https://gwhlds.com/hub/what-is-the-spread-in-forex.html): the bid-ask gap you pay on every trade, how it is quoted in pips, and what it costs over a year.
+- [What Is Swap in Forex?](https://gwhlds.com/hub/what-is-swap-in-forex.html): overnight financing and rollover explained — the interest rate differential, triple-swap Wednesday, and swap-free accounts.
+- [How News Events Move Forex Pairs](https://gwhlds.com/hub/how-news-moves-forex-pairs.html): why price trades the surprise not the number, what happens to spreads and stops, and three ways to handle a release.
 
 ## Contact
 

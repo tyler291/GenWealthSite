@@ -181,9 +181,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] What is a pip and how to calculate pip value `(what-is-a-pip)`
 - [x] Forex sessions explained: London, New York, Tokyo overlap `(forex-sessions-explained)`
 - [x] The best forex pairs to trade as a beginner `(best-forex-pairs-for-beginners)`
-- [ ] What is the spread in forex and how it eats your edge
-- [ ] What is swap / overnight financing in forex
-- [ ] How news events move forex pairs (and how to trade around them)
+- [x] What is the spread in forex and how it eats your edge `(what-is-the-spread-in-forex)`
+- [x] What is swap / overnight financing in forex `(what-is-swap-in-forex)`
+- [x] How news events move forex pairs (and how to trade around them) `(how-news-moves-forex-pairs)`
 - [ ] Forex leverage explained: why 500:1 is a trap
 - [ ] Major, minor and exotic pairs: which to actually trade
 - [ ] How to trade the London open
