@@ -159,6 +159,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [What Is the Spread in Forex?](https://gwhlds.com/hub/what-is-the-spread-in-forex.html): the bid-ask gap you pay on every trade, how it is quoted in pips, and what it costs over a year.
 - [What Is Swap in Forex?](https://gwhlds.com/hub/what-is-swap-in-forex.html): overnight financing and rollover explained — the interest rate differential, triple-swap Wednesday, and swap-free accounts.
 - [How News Events Move Forex Pairs](https://gwhlds.com/hub/how-news-moves-forex-pairs.html): why price trades the surprise not the number, what happens to spreads and stops, and three ways to handle a release.
+- [Forex Leverage Explained: Why 500:1 Is a Trap](https://gwhlds.com/hub/forex-leverage-explained.html): leverage as a margin requirement rather than buying power, the move that erases the deposit at each ratio, the ESMA 30:1 and CFTC 2%/5% caps, what offshore leverage costs you in protections, and why effective leverage comes from stop distance and position size.
+- [Major, Minor and Exotic Pairs: Which to Actually Trade](https://gwhlds.com/hub/major-minor-and-exotic-pairs.html): the test that defines each of the three tiers, why the dollar sits on one side of 89.2% of global turnover, why a cross is really two trades on one ticket, and how the tier sets spread, swap, slippage and tradable hours.
+- [How to Trade the London Open](https://gwhlds.com/hub/how-to-trade-the-london-open.html): why London carries roughly 38% of global FX turnover, how to mark the Asian range before 08:00, the sweep that traps first-candle entries, two entries that survive it, and a two-hour session plan.
 
 ## Contact
 

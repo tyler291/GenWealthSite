@@ -184,9 +184,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] What is the spread in forex and how it eats your edge `(what-is-the-spread-in-forex)`
 - [x] What is swap / overnight financing in forex `(what-is-swap-in-forex)`
 - [x] How news events move forex pairs (and how to trade around them) `(how-news-moves-forex-pairs)`
-- [ ] Forex leverage explained: why 500:1 is a trap
-- [ ] Major, minor and exotic pairs: which to actually trade
-- [ ] How to trade the London open
+- [x] Forex leverage explained: why 500:1 is a trap `(forex-leverage-explained)`
+- [x] Major, minor and exotic pairs: which to actually trade `(major-minor-and-exotic-pairs)`
+- [x] How to trade the London open `(how-to-trade-the-london-open)`
 
 ### Futures
 
