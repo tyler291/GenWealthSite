@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Futures Trading Guide: Contracts, Margin and Expiry</title>
+<meta name="description" content="A futures trading guide that starts with the contract itself: what you actually control, how performance bond margin works, and why every contract expires." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/futures-trading-guide.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Futures Trading Guide: Contracts, Margin and Expiry" />
+<meta property="og:description" content="Futures are the cleanest market a retail trader can access and the least forgiving. The contract, the margin, the tick and the expiry, explained from the specs." />
+<meta property="og:url" content="https://gwhlds.com/hub/futures-trading-guide.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/futures-trading-guide.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Futures Trading Guide: Contracts, Margin and Expiry","description":"A plain guide to how futures actually work: the standardised contract and the four specs that define it, why futures margin is a performance bond rather than a loan, how tick size fixes profit and loss per increment, what expiry and physical delivery mean for a day trader, and why the pattern day trader rule does not reach the futures market.","image":"https://gwhlds.com/assets/hub/futures-trading-guide.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/futures-trading-guide.html","datePublished":"2026-08-20"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Futures Trading Guide","item":"https://gwhlds.com/hub/futures-trading-guide.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much money do you need to trade futures?","acceptedAnswer":{"@type":"Answer","text":"There is no legal minimum, but there are two separate numbers. The exchange sets a performance bond per contract, and your broker sets its own day-trade margin, which is often far lower for positions closed before the session ends. The number that actually matters is neither of those: it is the account size at which one contract's tick value lets you take a sensible stop for a small percentage of the account. Micro contracts exist precisely because that number used to price most people out."}},{"@type":"Question","name":"Does the pattern day trader rule apply to futures?","acceptedAnswer":{"@type":"Answer","text":"No. The pattern day trader rule sits in FINRA Rule 4210, which governs margin accounts trading securities. Futures are not securities; they are regulated by the Commodity Futures Trading Commission and traded through a futures commission merchant, so the $25,000 equity requirement and the four-day-trades-in-five-days test do not reach them. That does not make small futures accounts safe. It removes a speed limit, not a risk."}},{"@type":"Question","name":"What happens if you hold a futures contract to expiry?","acceptedAnswer":{"@type":"Answer","text":"It depends on the settlement method in the contract specs. Equity index futures such as the E-mini S&P 500 are financially settled, so the position simply cashes out against a final settlement value. Crude oil futures are deliverable, meaning the contract is an obligation on 1,000 barrels of physical oil. Day traders avoid the question entirely by closing before termination or rolling into the next contract month."}},{"@type":"Question","name":"Are futures better than stocks for day trading?","acceptedAnswer":{"@type":"Answer","text":"They are different, not better. Futures offer near-24-hour access, one central order book with visible volume, standardised specs and no pattern day trader restriction. Against that, leverage is high by default, the contract expires, and losses compound faster because tick values are fixed and unforgiving. Futures suit a trader who already has a written plan and sizes from risk. They punish improvisation harder than stocks do."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Futures Trading Guide</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Futures</span>
+        <h1>Futures Trading Guide: Contracts, Margin and Expiry</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 20, 2026 · 11 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/futures-trading-guide.jpg" alt="An engraved brass contract seal on a dark trading desk beside a quarterly calendar, an hourglass and stacked metal weights" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A futures contract is a standardised, exchange-traded agreement to buy or sell a fixed quantity of something at a set price on a set date. Trading one means posting a performance bond instead of the full value, working with a tick size that fixes your profit and loss per increment, and closing or rolling the position before it expires.</p>
+
+    <p>That is the whole machine. Everything else — margin calls, rollover, delivery, tick value, the reason a two-point move costs one trader $100 and another trader $10 — falls out of those four ideas. Futures confuse new traders not because they are complicated but because nobody reads the contract specification first. It is a public document, it is about two screens long, and it answers most of the questions people spend months guessing at.</p>
+
+    <h2>What a futures contract actually is</h2>
+    <p>When you buy a share, you own a slice of a company. When you buy a futures contract, you own an obligation: to take or make delivery of a specified quantity of an underlying asset at a specified time. Nothing changes hands at the moment of the trade except a margin deposit and a position on the clearing house's books.</p>
+    <p>Two features make this work as a tradeable instrument. First, the contracts are <strong>standardised</strong> — every E-mini S&amp;P 500 contract is identical to every other one, which is what allows them to trade in one deep central order book rather than being negotiated one at a time. Second, they are <strong>centrally cleared</strong>, meaning the exchange's clearing house stands between buyer and seller so neither has to assess the other's creditworthiness.</p>
+    <p>The scale of that single order book is why day traders care. CME Group reported record average daily volume of <strong>28.1 million contracts</strong> across 2025, an increase of 6% over 2024, with Equity Index average daily volume up 8% to 7.4 million contracts (<a href="https://www.marketsmedia.com/cme-reports-record-annual-adv-3/" target="_blank" rel="nofollow noopener">CME Group full-year 2025 market statistics</a>). In a market where every participant is looking at the same book, volume means something — a point covered in <a href="volume-analysis-trading.html">volume analysis and what it actually tells you</a>.</p>
+
+    <h2>The four specs that define every contract</h2>
+    <p>Before trading any futures contract, read four lines of its specification: the contract unit, the minimum price fluctuation, the settlement method and the termination of trading. Those four decide how much you are exposed to, what a one-tick move costs you, and what happens if you fall asleep holding it.</p>
+
+    <div class="kv"><table>
+      <tr><th>Contract</th><th>Contract unit</th><th>Minimum tick</th><th>Tick value</th><th>Settlement</th></tr>
+      <tr><td>E-mini S&amp;P 500 (ES)</td><td>$50 × S&amp;P 500 Index</td><td>0.25 index points</td><td>$12.50</td><td>Financially settled</td></tr>
+      <tr><td>Micro E-mini S&amp;P 500 (MES)</td><td>$5 × S&amp;P 500 Index</td><td>0.25 index points</td><td>$1.25</td><td>Financially settled</td></tr>
+      <tr><td>Micro E-mini Nasdaq-100 (MNQ)</td><td>$2 × Nasdaq-100 Index</td><td>0.25 index points</td><td>$0.50</td><td>Financially settled</td></tr>
+      <tr><td>Crude Oil (CL)</td><td>1,000 barrels</td><td>$0.01 per barrel</td><td>$10.00</td><td>Deliverable</td></tr>
+    </table></div>
+    <p>Source: CME Group contract specifications for <a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.contractSpecs.html" target="_blank" rel="nofollow noopener">E-mini S&amp;P 500</a>, <a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">Micro E-mini S&amp;P 500</a> and <a href="https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.contractSpecs.html" target="_blank" rel="nofollow noopener">Light Sweet Crude Oil</a>.</p>
+    <p>Read the last row again. Crude oil is <em>deliverable</em>. The contract is a claim on a thousand barrels of physical oil, and CME's specification states that trading terminates three business days before the 25th calendar day of the month prior to the contract month. That is not a trivia detail. It is the difference between a market you can hold overnight without thinking and one where the calendar is a live risk.</p>
+    <p>Notice too that contract unit and tick value are what set your exposure — not the margin your broker asks for. With the S&amp;P 500 near 7,700 in August 2026, one ES contract represents roughly <strong>$385,000</strong> of index exposure and one MES contract about <strong>$38,500</strong>. Those are the numbers your risk is measured against.</p>
+
+    <h2>Futures margin is a performance bond, not a loan</h2>
+    <p>This is the most misunderstood part of the market, and the misunderstanding costs money.</p>
+    <p>In a stock margin account, margin is borrowed money. You put up half, the broker lends the other half, and you pay interest on the loan. In futures, <strong>margin is a good-faith deposit against the position's daily settlement — a performance bond.</strong> Nothing is borrowed and no interest is charged, because you have not bought anything yet. The exchange is holding collateral against the possibility that the position moves against you before it is closed.</p>
+    <p>Three numbers follow from that, and they are not the same number:</p>
+    <ul>
+      <li><strong>Initial margin</strong> — what the exchange requires to open a contract, set by the clearing house and raised when volatility rises.</li>
+      <li><strong>Maintenance margin</strong> — the level your equity must stay above. Fall below it and you receive a margin call, which is <a href="what-is-a-margin-call.html">the situation to design your account around rather than react to</a>.</li>
+      <li><strong>Day-trade margin</strong> — a broker-set number, often a fraction of exchange initial margin, offered only for positions closed before the session ends. This is a commercial decision by your broker, not an exchange rule, and it can be withdrawn without notice around major news.</li>
+    </ul>
+    <p>Day-trade margin is where accounts die. A broker advertising "$50 day margin" on a contract representing $38,500 of exposure is quoting you roughly 770:1 on notional. That number tells you nothing about whether the trade is sensible. It only tells you the size of the door you are allowed to walk through. The exposure that matters is the one in the contract unit column, which is why <a href="position-sizing-from-risk.html">sizing a position from your risk rather than from available margin</a> is the skill — not hunting for the cheapest margin.</p>
+
+    <div class="callout"><b>Margin is permission, not a plan.</b> The exchange's performance bond tells you what you are allowed to open. It says nothing about what you should open. If your stop distance and your one-percent risk limit say a quarter of that size, then that is the size — and the leftover margin is not opportunity, it is the buffer that keeps you trading next month.</div>
+
+    <h2>Expiry, rollover and why the calendar matters</h2>
+    <p>Every futures contract has a death date. Equity index futures list on a quarterly cycle — March, June, September and December — and CME lists the E-mini S&amp;P 500 for 21 consecutive quarters, the Micro E-mini for five. Trading in both terminates at 9:30 a.m. Eastern on the third Friday of the contract month.</p>
+    <p>For a day trader this creates one recurring housekeeping job called <strong>rollover</strong>. As expiry approaches, volume migrates from the expiring contract to the next one. Trade the wrong one and you find yourself in a thin book with wide spreads, looking at a chart that has stopped representing where the market actually is. The fix is mechanical: check which contract month is carrying the volume, and move with it a few days before expiry.</p>
+    <p>Rollover also explains a chart artefact that confuses people. A continuous futures chart stitches contract months together, and because the new month usually trades at a slightly different price, a gap appears at the join. That gap is an accounting join, not a market event — unlike the real thing described in <a href="overnight-and-weekend-gap-risk.html">overnight and weekend gap risk</a>.</p>
+
+    <h2>Why day traders end up in futures</h2>
+    <p>Futures pull in active traders for four structural reasons, none of which are about the market being easier.</p>
+    <ol>
+      <li><strong>Near-continuous access.</strong> CME Globex runs equity index futures from Sunday 6:00 p.m. to Friday 5:00 p.m. Eastern with a one-hour daily maintenance break. The <a href="how-to-trade-the-london-open.html">London session</a> and the Asian session are tradeable rather than something you wake up to.</li>
+      <li><strong>One order book.</strong> Every contract trades on one venue, so the volume you see is the volume that exists — not a fragment spread across a dozen exchanges and dark pools.</li>
+      <li><strong>No pattern day trader rule.</strong> The $25,000 equity requirement lives in FINRA Rule 4210 and applies to margin accounts trading <em>securities</em> (<a href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/4210" target="_blank" rel="nofollow noopener">FINRA Rule 4210, Margin Requirements</a>). Futures are regulated by the CFTC, so it does not reach them — a distinction laid out in <a href="pattern-day-trader-rule.html">the pattern day trader rule explained</a>.</li>
+      <li><strong>Section 1256 tax treatment.</strong> In the United States, regulated futures contracts fall under <a href="https://www.law.cornell.edu/uscode/text/26/1256" target="_blank" rel="nofollow noopener">26 U.S. Code § 1256</a>, which marks positions to market at year end and splits gains 60% long-term and 40% short-term regardless of holding period. Rules vary by jurisdiction and by circumstance — ask a tax professional before planning around this.</li>
+    </ol>
+
+    <h2>What futures do not fix</h2>
+    <p>Be honest about the trade. Removing the PDT rule removes a restriction, not a risk. The same account that could not day trade stocks under $25,000 can now take four trades an hour in a contract worth $38,500, and the arithmetic of <a href="risk-of-ruin.html">risk of ruin</a> does not care which regulator is watching.</p>
+    <p>Fixed tick values also cut both ways. In forex you can size a position in fractions of a lot; in futures the smallest unit is one contract, and until micro contracts existed that made small-account risk control close to impossible. Even now, a trader with $2,000 and one MNQ contract is risking real percentages of the account on ordinary intraday swings. That is a position sizing problem rather than a market problem, and it is the same one addressed in <a href="position-sizing-small-account.html">position sizing on a small account</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A futures contract does not care about your conviction; it settles every day at a price. That is why we run the same three rules here as anywhere else. <em>Break &amp; hold</em> — we wait for price to break the level and close beyond it before the contract goes on. <em>Know your next</em> — entry, targets and written invalidation exist before the order does, so contract count is arithmetic rather than appetite. <em>Trail &amp; protect</em> — as targets print, the stop follows behind them. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How much money do you need to trade futures?</h3>
+    <p>There is no legal minimum, but there are two separate numbers. The exchange sets a performance bond per contract, and your broker sets its own day-trade margin, which is often far lower for positions closed before the session ends. The number that actually matters is neither of those: it is the account size at which one contract's tick value lets you take a sensible stop for a small percentage of the account. Micro contracts exist precisely because that number used to price most people out.</p>
+
+    <h3>Does the pattern day trader rule apply to futures?</h3>
+    <p>No. The pattern day trader rule sits in FINRA Rule 4210, which governs margin accounts trading securities. Futures are not securities; they are regulated by the Commodity Futures Trading Commission and traded through a futures commission merchant, so the $25,000 equity requirement and the four-day-trades-in-five-days test do not reach them. That does not make small futures accounts safe. It removes a speed limit, not a risk.</p>
+
+    <h3>What happens if you hold a futures contract to expiry?</h3>
+    <p>It depends on the settlement method in the contract specs. Equity index futures such as the E-mini S&amp;P 500 are financially settled, so the position simply cashes out against a final settlement value. Crude oil futures are deliverable, meaning the contract is an obligation on 1,000 barrels of physical oil. Day traders avoid the question entirely by closing before termination or rolling into the next contract month.</p>
+
+    <h3>Are futures better than stocks for day trading?</h3>
+    <p>They are different, not better. Futures offer near-24-hour access, one central order book with visible volume, standardised specs and no pattern day trader restriction. Against that, leverage is high by default, the contract expires, and losses compound faster because tick values are fixed and unforgiving. Futures suit a trader who already has a written plan and sizes from risk. They punish improvisation harder than stocks do.</p>
+
+    <h2>Bottom line</h2>
+    <p>Futures are the most transparent market a retail trader can reach: one order book, published specifications, and a clearing house behind every trade. The price of that transparency is that nothing is soft. The contract unit sets your exposure whether you looked at it or not, the tick value converts every increment into dollars automatically, and the calendar closes the contract on a date the exchange chose. Read the specs before the chart, size from your stop rather than your margin, and the market becomes workable. Start with <a href="e-mini-and-micro-e-mini-futures.html">the difference between E-mini and Micro E-mini contracts</a>, then learn to <a href="futures-tick-value.html">calculate futures profit and loss from tick value</a>. If you are still choosing a market, <a href="forex-vs-futures-day-trading.html">forex versus futures for a new day trader</a> compares them honestly.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="e-mini-and-micro-e-mini-futures.html">E-mini vs Micro E-mini Futures</a>
+      <a href="futures-tick-value.html">Tick Value and Futures P&amp;L</a>
+      <a href="forex-vs-futures-day-trading.html">Forex vs Futures for a New Day Trader</a>
+      <a href="pattern-day-trader-rule.html">The Pattern Day Trader Rule Explained</a>
+      <a href="what-is-a-margin-call.html">What Is a Margin Call?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

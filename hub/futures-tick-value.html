@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Tick Value Explained: How to Calculate Futures P&amp;L</title>
+<meta name="description" content="How to calculate futures P&L from tick value: the multiplier formula, worked examples on Micro Nasdaq and crude oil, and turning a stop into a contract count." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/futures-tick-value.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tick Value Explained: How to Calculate Futures P&amp;L" />
+<meta property="og:description" content="One formula covers every futures contract: multiplier times tick size. Worked examples on MNQ and crude oil, and how to run it backwards into a contract count." />
+<meta property="og:url" content="https://gwhlds.com/hub/futures-tick-value.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/futures-tick-value.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tick Value Explained: How to Calculate Futures P&L","description":"How tick value works in futures and how to turn it into profit and loss: the multiplier times tick size formula, the difference between tick size, tick value and point value, worked long and short examples on Micro E-mini Nasdaq-100 and crude oil, and how to run the calculation backwards from a stop distance to a contract count.","image":"https://gwhlds.com/assets/hub/futures-tick-value.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/futures-tick-value.html","datePublished":"2026-08-20"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Tick Value and Futures P&L","item":"https://gwhlds.com/hub/futures-tick-value.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate profit and loss on a futures trade?","acceptedAnswer":{"@type":"Answer","text":"Take the number of ticks the price moved, multiply by the contract's tick value, then multiply by the number of contracts. Ticks moved is the price difference divided by the tick size. On a Micro E-mini Nasdaq-100 contract, a 50-point move is 200 ticks, and at $0.50 per tick that is $100 per contract. Subtract commission and exchange fees to get the figure that actually reaches your account."}},{"@type":"Question","name":"What is the difference between tick size and tick value?","acceptedAnswer":{"@type":"Answer","text":"Tick size is a price increment; tick value is money. Tick size is the smallest amount a contract's price is allowed to move, such as 0.25 index points on the E-mini S&P 500. Tick value is what that increment is worth in dollars, which is $12.50 on the same contract. Tick value equals the contract multiplier times the tick size, so the two are linked but they are not interchangeable."}},{"@type":"Question","name":"Why is a tick worth $10 in crude oil but only 50 cents in Micro Nasdaq?","acceptedAnswer":{"@type":"Answer","text":"Because the contract unit differs. A crude oil futures contract covers 1,000 barrels, so a one-cent move in the price per barrel is worth $10. A Micro E-mini Nasdaq-100 contract is $2 per index point, so a 0.25-point tick is worth 50 cents. Tick value always comes from the size of the underlying quantity, never from how volatile the market feels."}},{"@type":"Question","name":"How do you work out how many futures contracts to trade?","acceptedAnswer":{"@type":"Answer","text":"Run the calculation backwards. Decide the dollar amount you are willing to lose, measure the stop distance in ticks, and multiply the ticks by the tick value to get the risk per contract. Dividing your dollar risk by the risk per contract gives the contract count, rounded down. Rounding down matters: rounding up quietly pushes you over your own risk limit on every trade."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Tick Value and Futures P&amp;L</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Futures</span>
+        <h1>Tick Value Explained: How to Calculate Futures P&amp;L</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 20, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/futures-tick-value.jpg" alt="A precision brass ruler with fine engraved increments laid across a glowing price ladder with a single gold coin on one mark" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Tick value is the dollar amount one minimum price increment is worth on a futures contract, and it equals the contract multiplier times the tick size. Multiply tick value by the number of ticks the market moved and by the number of contracts you held, and you have the exact profit or loss on the trade.</p>
+
+    <p>That one formula covers every futures contract in existence — index, energy, metals, grains, rates. Nothing about it changes between markets. What changes is the multiplier, and that number is published in the contract specification before you ever place a trade. A trader who cannot state the tick value of the contract they are in is not trading a plan; they are watching a number move and hoping.</p>
+
+    <h2>The formula, and the three terms people mix up</h2>
+    <p>Three words get used interchangeably in trading rooms and they mean different things.</p>
+    <ul>
+      <li><strong>Tick size</strong> is a <em>price</em>: the smallest increment the contract is allowed to move. On the E-mini S&amp;P 500 it is 0.25 index points. On crude oil it is one cent per barrel.</li>
+      <li><strong>Tick value</strong> is <em>money</em>: what one of those increments is worth. Tick value = contract multiplier × tick size.</li>
+      <li><strong>Point value</strong> is also money, but for a full point rather than a tick. On the E-mini S&amp;P 500 one point is four ticks, so $12.50 × 4 = $50 — which is the multiplier, as it must be.</li>
+    </ul>
+    <p>From there, profit and loss is one line:</p>
+    <p><strong>P&amp;L = (price change ÷ tick size) × tick value × number of contracts</strong></p>
+
+    <div class="kv"><table>
+      <tr><th>Contract</th><th>Contract unit</th><th>Tick size</th><th>Tick value</th><th>Ticks per point</th></tr>
+      <tr><td>E-mini S&amp;P 500 (ES)</td><td>$50 × index</td><td>0.25 pts</td><td>$12.50</td><td>4</td></tr>
+      <tr><td>Micro E-mini S&amp;P 500 (MES)</td><td>$5 × index</td><td>0.25 pts</td><td>$1.25</td><td>4</td></tr>
+      <tr><td>Micro E-mini Nasdaq-100 (MNQ)</td><td>$2 × index</td><td>0.25 pts</td><td>$0.50</td><td>4</td></tr>
+      <tr><td>Crude Oil (CL)</td><td>1,000 barrels</td><td>$0.01 / barrel</td><td>$10.00</td><td>100 per $1</td></tr>
+      <tr><td>Micro WTI Crude Oil (MCL)</td><td>100 barrels</td><td>$0.01 / barrel</td><td>$1.00</td><td>100 per $1</td></tr>
+    </table></div>
+    <p>Specifications from CME Group for <a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.contractSpecs.html" target="_blank" rel="nofollow noopener">E-mini S&amp;P 500</a>, <a href="https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html" target="_blank" rel="nofollow noopener">Micro E-mini Nasdaq-100</a> and <a href="https://www.cmegroup.com/markets/energy/crude-oil/micro-wti-crude-oil.contractSpecs.html" target="_blank" rel="nofollow noopener">Micro WTI Crude Oil</a>.</p>
+    <p>Note what the table exposes: tick value has nothing to do with how volatile a market feels. Crude oil's tick is worth twenty times a Micro Nasdaq tick purely because the contract covers 1,000 barrels. Size of the underlying quantity, nothing else.</p>
+
+    <h2>Worked example: a long Micro Nasdaq trade</h2>
+    <p>Say the Nasdaq-100 is trading near 29,600 and you take a long on <strong>3 MNQ contracts</strong> at 29,600.00, with a stop at 29,580.00 and a target at 29,650.00.</p>
+    <ol>
+      <li><strong>Risk.</strong> The stop is 20 points away. At 4 ticks per point that is 80 ticks. 80 × $0.50 = <strong>$40 per contract</strong>, so $120 across three contracts.</li>
+      <li><strong>Reward.</strong> The target is 50 points away, or 200 ticks. 200 × $0.50 = <strong>$100 per contract</strong>, so $300 across three.</li>
+      <li><strong>Ratio.</strong> $300 against $120 is a 2.5:1 <a href="risk-reward-ratio.html">risk-to-reward ratio</a> before costs.</li>
+    </ol>
+    <p>Now subtract the part most examples leave out. If your broker charges, say, $1.50 round turn per Micro contract, three contracts cost $4.50 to enter and exit. That is 3.75% of the winning trade and it lands on the losing ones too. Small, until you take four trades a day for a year.</p>
+
+    <h2>Worked example: crude oil, where a tick is a cent</h2>
+    <p>Crude oil catches people out because the price is quoted in dollars per barrel and the tick is a cent, so the arithmetic feels smaller than it is.</p>
+    <p>Long <strong>1 CL contract</strong> at $68.40, stop $68.10, target $69.00:</p>
+    <ul>
+      <li>Stop distance: $0.30 = <strong>30 ticks</strong> × $10.00 = <strong>$300 at risk</strong>.</li>
+      <li>Target distance: $0.60 = 60 ticks × $10.00 = <strong>$600 potential</strong>.</li>
+      <li>Notional exposure: 1,000 barrels × $68.40 = <strong>$68,400</strong>.</li>
+    </ul>
+    <p>A thirty-cent stop sounds trivial. It is $300, and on a $10,000 account that is 3% on a single trade — three times what a <a href="the-1-percent-rule-in-trading.html">one percent risk rule</a> would allow. The Micro WTI contract exists for exactly this reason: same tick size, one tenth the tick value, so the same thirty-cent stop costs $30 instead of $300.</p>
+    <p>One more difference worth knowing before you hold either overnight. CME's specifications list standard Crude Oil futures as <strong>deliverable</strong> and Micro WTI Crude Oil as <strong>financially settled</strong>. Same market, same tick size, materially different obligation at expiry — which is one of the reasons <a href="futures-trading-guide.html">the futures trading guide</a> insists on reading the specification before the chart.</p>
+
+    <div class="callout"><b>Tick value is not a difficulty setting.</b> A contract with a big tick value is not a "faster" market. It is a bigger unit of the same market. The correct response to a large tick value is a smaller contract count, not a tighter stop — because a stop shortened to make the dollars comfortable is a stop placed where the market can reach it by accident.</div>
+
+    <h2>Run it backwards: from stop distance to contract count</h2>
+    <p>This is the version of the formula you should actually use, because it fixes your risk before the trade rather than discovering it afterwards.</p>
+    <ol>
+      <li><strong>Set the dollar risk.</strong> $10,000 account, 1% per trade = <strong>$100</strong>.</li>
+      <li><strong>Measure the stop in ticks.</strong> The level that invalidates the setup is 25 points below entry on MNQ. 25 × 4 = <strong>100 ticks</strong>.</li>
+      <li><strong>Risk per contract.</strong> 100 ticks × $0.50 = <strong>$50</strong>.</li>
+      <li><strong>Contract count.</strong> $100 ÷ $50 = <strong>2 contracts</strong>.</li>
+    </ol>
+    <p>Always round <em>down</em>. If the arithmetic gives 2.8 contracts, you trade two. Rounding up is a 40% overshoot on your own risk limit, taken silently, on every trade you round.</p>
+    <p>Notice the order of operations: the stop comes from the chart, and the size comes from the stop. Never the other way round. Deciding the contract count first and then finding somewhere to put the stop is how a plan quietly becomes a hope — the failure mode described in <a href="position-sizing-from-risk.html">how to size a position from risk</a> and in <a href="how-to-set-a-stop-loss.html">how to set a stop loss that isn't a guess</a>.</p>
+
+    <h2>Where traders get this wrong</h2>
+    <ul>
+      <li><strong>Reading the platform's dollar figure instead of computing it.</strong> Your platform shows unrealised P&amp;L, but it shows it after the trade is on. Knowing the number beforehand is what lets you decline the trade.</li>
+      <li><strong>Assuming all Micros have the same tick value.</strong> Three of the four Micro E-minis have a 50-cent tick and the Micro S&amp;P 500 has a $1.25 tick. Details in <a href="e-mini-and-micro-e-mini-futures.html">E-mini vs Micro E-mini futures</a>.</li>
+      <li><strong>Forgetting fees are per contract.</strong> Commission scales with contract count, not with exposure, so a ten-Micro position costs roughly ten times a one-Micro position in fees.</li>
+      <li><strong>Confusing tick value with pip value.</strong> They are the same idea in different markets. If you came from forex, <a href="what-is-a-pip.html">what a pip is and how to calculate pip value</a> is the equivalent calculation.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means the entry, the targets and the written invalidation are fixed before the order exists — and once the invalidation is fixed, tick value turns it into a contract count with no judgement required. <em>Break &amp; hold</em> keeps us out until price closes beyond the level, so the stop is placed against structure rather than against a dollar figure we can stomach. <em>Trail &amp; protect</em> moves the stop up behind each target as it prints. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate profit and loss on a futures trade?</h3>
+    <p>Take the number of ticks the price moved, multiply by the contract's tick value, then multiply by the number of contracts. Ticks moved is the price difference divided by the tick size. On a Micro E-mini Nasdaq-100 contract, a 50-point move is 200 ticks, and at $0.50 per tick that is $100 per contract. Subtract commission and exchange fees to get the figure that actually reaches your account.</p>
+
+    <h3>What is the difference between tick size and tick value?</h3>
+    <p>Tick size is a price increment; tick value is money. Tick size is the smallest amount a contract's price is allowed to move, such as 0.25 index points on the E-mini S&amp;P 500. Tick value is what that increment is worth in dollars, which is $12.50 on the same contract. Tick value equals the contract multiplier times the tick size, so the two are linked but they are not interchangeable.</p>
+
+    <h3>Why is a tick worth $10 in crude oil but only 50 cents in Micro Nasdaq?</h3>
+    <p>Because the contract unit differs. A crude oil futures contract covers 1,000 barrels, so a one-cent move in the price per barrel is worth $10. A Micro E-mini Nasdaq-100 contract is $2 per index point, so a 0.25-point tick is worth 50 cents. Tick value always comes from the size of the underlying quantity, never from how volatile the market feels.</p>
+
+    <h3>How do you work out how many futures contracts to trade?</h3>
+    <p>Run the calculation backwards. Decide the dollar amount you are willing to lose, measure the stop distance in ticks, and multiply the ticks by the tick value to get the risk per contract. Dividing your dollar risk by the risk per contract gives the contract count, rounded down. Rounding down matters: rounding up quietly pushes you over your own risk limit on every trade.</p>
+
+    <h2>Bottom line</h2>
+    <p>One formula does all of it: multiplier × tick size gives tick value, and tick value × ticks moved × contracts gives profit and loss. Learn the multiplier of whatever you trade and the rest is arithmetic you can do in your head at the moment it matters. Then reverse it — dollar risk divided by risk per contract, rounded down — and position size stops being a feeling. Contract specs are published free by the exchange; read them before the chart. Next, see <a href="e-mini-and-micro-e-mini-futures.html">how E-mini and Micro E-mini contracts compare</a>, or step back to <a href="futures-trading-guide.html">the futures trading guide</a> for margin, expiry and rollover. The risk framework that sits above all of it is in <a href="risk-management-trading.html">risk management for traders</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-trading-guide.html">Futures Trading Guide: Contracts, Margin and Expiry</a>
+      <a href="e-mini-and-micro-e-mini-futures.html">E-mini vs Micro E-mini Futures</a>
+      <a href="position-sizing-from-risk.html">How to Size a Position From Risk</a>
+      <a href="what-is-a-pip.html">What Is a Pip and How to Calculate Pip Value</a>
+      <a href="risk-reward-ratio.html">Risk-to-Reward Ratio Explained</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

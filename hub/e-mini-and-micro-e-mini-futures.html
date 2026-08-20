@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>E-mini vs Micro E-mini Futures: The Real Difference</title>
+<meta name="description" content="E-mini vs Micro E-mini futures: the one-tenth size rule, the multiplier and tick value behind MES, MNQ, MYM and M2K, and which one a small account can hold." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/e-mini-and-micro-e-mini-futures.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="E-mini vs Micro E-mini Futures: The Real Difference" />
+<meta property="og:description" content="A Micro is one tenth of an E-mini — same index, same book, one tenth the dollars per point. What that changes for a small account, and what it does not change." />
+<meta property="og:url" content="https://gwhlds.com/hub/e-mini-and-micro-e-mini-futures.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/e-mini-and-micro-e-mini-futures.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"E-mini vs Micro E-mini Futures: The Real Difference","description":"What separates a Micro E-mini futures contract from its E-mini counterpart: the one-tenth contract multiplier, the tick value that follows from it, the notional exposure each contract actually carries, the costs that do not shrink with the contract, and how to decide which size an account can support.","image":"https://gwhlds.com/assets/hub/e-mini-and-micro-e-mini-futures.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/e-mini-and-micro-e-mini-futures.html","datePublished":"2026-08-20"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"E-mini vs Micro E-mini Futures","item":"https://gwhlds.com/hub/e-mini-and-micro-e-mini-futures.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between E-mini and Micro E-mini futures?","acceptedAnswer":{"@type":"Answer","text":"Size, and only size. CME Group states that all four Micro E-mini contracts are one tenth the size of their E-mini counterparts. They track the same index, trade in the same tick increments, expire on the same quarterly schedule and settle the same way. What changes is the contract multiplier, and therefore the dollars gained or lost per point. A Micro E-mini S&P 500 contract is $5 per index point against $50 for the E-mini."}},{"@type":"Question","name":"Are Micro E-mini futures worth trading, or should you just trade one E-mini?","acceptedAnswer":{"@type":"Answer","text":"For most accounts under roughly $25,000, Micros are the only way to take a normal stop for a small percentage of the account. They also allow partial exits, because ten Micros can be scaled out in tenths where one E-mini can only be closed all at once. The trade-off is cost: commission is charged per contract, so ten Micros usually cost more in fees than one E-mini."}},{"@type":"Question","name":"How much is one point worth in Micro E-mini futures?","acceptedAnswer":{"@type":"Answer","text":"It equals the contract multiplier. One index point is worth $5 on the Micro E-mini S&P 500 and Micro E-mini Russell 2000, $2 on the Micro E-mini Nasdaq-100 and 50 cents on the Micro E-mini Dow. Tick value is the multiplier times the minimum tick, so a 0.25-point tick on the Micro E-mini S&P 500 is $1.25 and a 0.25-point tick on the Micro E-mini Nasdaq-100 is 50 cents."}},{"@type":"Question","name":"When should you move from Micro E-mini to E-mini contracts?","acceptedAnswer":{"@type":"Answer","text":"When you are consistently trading ten or more Micros per position and the commission difference has become material, and when the account is large enough that one E-mini's risk on a normal stop is still a small percentage of it. Both conditions matter. Sizing up because the account grew is reasonable; sizing up to make a losing month back is the decision that ends accounts."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>E-mini vs Micro E-mini Futures</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Futures</span>
+        <h1>E-mini vs Micro E-mini Futures: The Real Difference</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 20, 2026 · 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/e-mini-and-micro-e-mini-futures.jpg" alt="One large polished gold cube beside a row of ten identical miniature gold cubes on a dark reflective surface" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A Micro E-mini futures contract is exactly one tenth the size of its E-mini equivalent. Same index, same tick increment, same order book, same quarterly expiry — one tenth the contract multiplier, so one tenth the profit or loss per point. The Micro exists so a trader can size a position properly on a small account.</p>
+
+    <p>That is the entire difference, and it is worth being blunt about it because a lot of writing on the subject implies the two are different instruments with different behaviour. They are not. CME Group's own product overview states plainly that all four Micro E-mini futures are one tenth the size of their respective E-mini counterparts (<a href="https://www.cmegroup.com/education/courses/micro-e-mini-futures/micro-e-mini-futures-products-overview" target="_blank" rel="nofollow noopener">CME Group, Micro E-mini Equity Index futures products overview</a>). Everything else about them is inherited.</p>
+
+    <h2>The multiplier is the whole story</h2>
+    <p>Every equity index futures contract is defined by a multiplier: the number of dollars one index point is worth. The E-mini S&amp;P 500 is $50 per point. The Micro is $5 per point. Divide the notional exposure, divide the tick value, divide the profit and loss — all by ten, all from that single number.</p>
+    <p>Where it gets confusing is that the multiplier is <em>not</em> the same across the four indices, so the Micros do not all have the same tick value. CME confirms the multipliers directly: the Micro E-mini S&amp;P 500 and Micro E-mini Russell 2000 both use $5, the Micro E-mini Nasdaq-100 uses $2, and the Micro E-mini Dow uses 50 cents.</p>
+
+    <div class="kv"><table>
+      <tr><th>Index</th><th>E-mini</th><th>Micro E-mini</th><th>Micro multiplier</th><th>Micro tick</th><th>Micro tick value</th></tr>
+      <tr><td>S&amp;P 500</td><td>ES ($50/pt)</td><td>MES</td><td>$5 per point</td><td>0.25 pts</td><td>$1.25</td></tr>
+      <tr><td>Nasdaq-100</td><td>NQ ($20/pt)</td><td>MNQ</td><td>$2 per point</td><td>0.25 pts</td><td>$0.50</td></tr>
+      <tr><td>Russell 2000</td><td>RTY ($50/pt)</td><td>M2K</td><td>$5 per point</td><td>0.10 pts</td><td>$0.50</td></tr>
+      <tr><td>Dow Jones Industrial Average</td><td>YM ($5/pt)</td><td>MYM</td><td>$0.50 per point</td><td>1.00 pt</td><td>$0.50</td></tr>
+    </table></div>
+    <p>Three of the four Micros have a 50-cent tick and one has a $1.25 tick, but that similarity is a coincidence of arithmetic rather than a design rule. The number you should memorise for any contract you trade is the multiplier, because tick value is simply multiplier × tick size. That relationship is worked through properly in <a href="futures-tick-value.html">tick value and how to calculate futures P&amp;L</a>.</p>
+
+    <h2>What one contract actually exposes you to</h2>
+    <p>Notional exposure is multiplier × index level, and it is the number your risk should be measured against rather than the margin your broker asks for. Using August 2026 levels, with the S&amp;P 500 near 7,700 and the Nasdaq-100 near 29,600:</p>
+    <ul>
+      <li><strong>One ES contract</strong> ≈ $385,000 of S&amp;P 500 exposure. <strong>One MES</strong> ≈ $38,500.</li>
+      <li><strong>One NQ contract</strong> ≈ $592,000 of Nasdaq-100 exposure. <strong>One MNQ</strong> ≈ $59,200.</li>
+    </ul>
+    <p>Read those against a $5,000 account. A single MNQ contract is already carrying about twelve times the account in notional exposure. That is not a reason to avoid it — futures are a margined market and notional leverage is inherent — but it is a reason to size from your stop distance rather than from what the platform will let you click. The same principle, in a different market, is set out in <a href="what-is-leverage-in-trading.html">what leverage in trading is and how much is too much</a>.</p>
+
+    <h2>Why the Micros exist at all</h2>
+    <p>CME launched the four Micro E-mini contracts on <strong>6 May 2019</strong>, and more than 310,000 contracts traded across the four indices on the first day (<a href="https://www.prnewswire.com/news-releases/cme-group-announces-launch-of-new-micro-e-mini-equity-index-futures-300843857.html" target="_blank" rel="nofollow noopener">CME Group launch announcement, May 2019</a>). The problem they solved was arithmetic. As the S&amp;P 500 climbed, a single E-mini contract grew into an instrument that a five-figure account could not hold with any sensible stop, and the smallest tradeable unit in futures is one contract. There is no half-contract.</p>
+    <p>The market's answer has been emphatic. In CME Group's full-year 2025 statistics, <strong>Micro E-mini Nasdaq-100 futures set a record average daily volume of 1.6 million contracts</strong> and Micro E-mini S&amp;P 500 futures ADV rose 35% to 1.2 million, against total Equity Index ADV of 7.4 million (<a href="https://www.marketsmedia.com/cme-reports-record-annual-adv-3/" target="_blank" rel="nofollow noopener">CME Group full-year 2025 market statistics</a>). Those two Micro contracts alone account for roughly 38% of all Equity Index volume on the exchange.</p>
+    <p>The practical consequence for a retail trader is liquidity. A Micro is not a thin, second-tier product you get filled badly in; it is one of the most actively traded contracts on the exchange.</p>
+
+    <div class="callout"><b>The tenth that matters most is granularity.</b> Ten Micros and one E-mini are the same exposure. They are not the same trade. Ten Micros can be scaled out in tenths as targets print; one E-mini is all-or-nothing. If you take partial profits at all — and <a href="how-to-take-partial-profits.html">taking partials is what turns a good entry into a managed trade</a> — the Micro is the contract that lets you do it.</div>
+
+    <h2>The costs that do not shrink by ten</h2>
+    <p>Here is the honest downside, and it is the reason nobody should trade Micros forever by default.</p>
+    <p><strong>Commission is charged per contract, not per dollar of exposure.</strong> If your broker charges roughly the same round-turn fee on a Micro as on an E-mini, then ten Micros cost about ten times what one E-mini costs for identical exposure. On an active day that difference is real money, and it is a drag that compounds against you in exactly the way described in <a href="what-is-the-spread-in-forex.html">how trading costs quietly eat an edge</a>.</p>
+    <p><strong>The spread does not scale either.</strong> Both ES and MES quote a 0.25-point minimum tick, so crossing the spread costs one tick of the respective contract — proportionally identical, but you pay it on every one of your ten Micros if you are legging in.</p>
+    <p>So the comparison is: Micros buy you precision and cost you fees; E-minis buy you cheaper execution and cost you granularity. Neither is the right answer in the abstract. The right answer depends on the account.</p>
+
+    <h2>Which one your account can actually support</h2>
+    <p>Work it backwards from risk, not forwards from margin. Take a $10,000 account, a 1% risk limit ($100 per trade) and a typical intraday stop of 15 S&amp;P 500 points.</p>
+    <ol>
+      <li><strong>One MES:</strong> 15 points × $5 = $75 at risk. That fits inside the $100 limit, with room to spare.</li>
+      <li><strong>One ES:</strong> 15 points × $50 = $750 at risk — <strong>7.5% of the account on one trade.</strong> Four losing trades in a row and roughly a quarter of the account is gone.</li>
+    </ol>
+    <p>The E-mini is not a more aggressive product. It is simply too large a unit for that account and that stop, and no amount of conviction changes the arithmetic. That is the calculation set out in full in <a href="position-sizing-from-risk.html">how to size a position from risk</a>, and it is the same reason <a href="can-you-day-trade-with-500.html">a $500 account has such a narrow set of realistic options</a>.</p>
+    <p>Step up when two things are true at once: you are routinely trading ten or more Micros so the commission gap has become material, and one E-mini on a normal stop is still a small percentage of the account. Sizing up because the account grew is reasonable. Sizing up to recover a bad month is the decision that ends accounts — see <a href="how-to-scale-up-position-size.html">how to scale up position size without blowing up</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Contract count is an output, never an input. <em>Know your next</em> means the entry, the targets and the written invalidation exist before the order does — and once the stop distance is fixed, the number of Micros is arithmetic. <em>Break &amp; hold</em> keeps us out of the trade until price has closed beyond the level, and <em>trail &amp; protect</em> moves the stop up behind each target as it prints. Micros are what let a smaller account run that process properly rather than approximate it. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the difference between E-mini and Micro E-mini futures?</h3>
+    <p>Size, and only size. CME Group states that all four Micro E-mini contracts are one tenth the size of their E-mini counterparts. They track the same index, trade in the same tick increments, expire on the same quarterly schedule and settle the same way. What changes is the contract multiplier, and therefore the dollars gained or lost per point. A Micro E-mini S&amp;P 500 contract is $5 per index point against $50 for the E-mini.</p>
+
+    <h3>Are Micro E-mini futures worth trading, or should you just trade one E-mini?</h3>
+    <p>For most accounts under roughly $25,000, Micros are the only way to take a normal stop for a small percentage of the account. They also allow partial exits, because ten Micros can be scaled out in tenths where one E-mini can only be closed all at once. The trade-off is cost: commission is charged per contract, so ten Micros usually cost more in fees than one E-mini.</p>
+
+    <h3>How much is one point worth in Micro E-mini futures?</h3>
+    <p>It equals the contract multiplier. One index point is worth $5 on the Micro E-mini S&amp;P 500 and Micro E-mini Russell 2000, $2 on the Micro E-mini Nasdaq-100 and 50 cents on the Micro E-mini Dow. Tick value is the multiplier times the minimum tick, so a 0.25-point tick on the Micro E-mini S&amp;P 500 is $1.25 and a 0.25-point tick on the Micro E-mini Nasdaq-100 is 50 cents.</p>
+
+    <h3>When should you move from Micro E-mini to E-mini contracts?</h3>
+    <p>When you are consistently trading ten or more Micros per position and the commission difference has become material, and when the account is large enough that one E-mini's risk on a normal stop is still a small percentage of it. Both conditions matter. Sizing up because the account grew is reasonable; sizing up to make a losing month back is the decision that ends accounts.</p>
+
+    <h2>Bottom line</h2>
+    <p>A Micro is an E-mini divided by ten. Same index, same book, same expiry, one tenth the dollars per point — and in 2025 the two largest Micro contracts made up roughly 38% of CME's entire Equity Index volume, so liquidity is not the concern it once was. What the Micro buys you is the ability to take a proper stop and scale out of a position on an account that could not hold a full E-mini. What it costs you is per-contract commission that does not shrink with the contract. Decide from the arithmetic of your own stop, then read <a href="futures-trading-guide.html">the futures trading guide</a> for how margin and expiry work around it, and <a href="../faq.html">our FAQ</a> for how we call levels in the room.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-trading-guide.html">Futures Trading Guide: Contracts, Margin and Expiry</a>
+      <a href="futures-tick-value.html">Tick Value and Futures P&amp;L</a>
+      <a href="position-sizing-small-account.html">Position Sizing on a Small Account</a>
+      <a href="how-to-scale-up-position-size.html">How to Scale Up Position Size</a>
+      <a href="can-you-day-trade-with-500.html">Can You Day Trade With $500?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
