@@ -194,9 +194,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] What are E-mini and Micro E-mini futures? `(e-mini-and-micro-e-mini-futures)`
 - [x] Futures vs forex: which suits a small account `(covered by forex-vs-futures-day-trading)`
 - [x] What is tick value and how to calculate futures P&L `(futures-tick-value)`
-- [ ] Futures margin explained: day margin vs overnight margin
-- [ ] How to trade the ES (S&P 500 futures) as a beginner
-- [ ] Futures contract rollover: what it is and when it matters
+- [x] Futures margin explained: day margin vs overnight margin `(futures-margin-explained)`
+- [x] How to trade the ES (S&P 500 futures) as a beginner `(how-to-trade-es-futures)`
+- [x] Futures contract rollover: what it is and when it matters `(futures-contract-rollover)`
 - [ ] Why futures traders care about the cash open
 
 ---

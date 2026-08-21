@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Futures Rollover: What It Is and When It Matters</title>
+<meta name="description" content="Futures contract rollover explained: why contracts expire, when liquidity moves to the next month, how to read month codes, and why your chart gapped overnight." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/futures-contract-rollover.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Futures Rollover: What It Is and When It Matters" />
+<meta property="og:description" content="Every futures contract expires. Here is how the roll works, how to spot the day volume moves to the next month, and why continuous charts lie about old prices." />
+<meta property="og:url" content="https://gwhlds.com/hub/futures-contract-rollover.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/futures-contract-rollover.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Futures Rollover: What It Is and When It Matters","description":"How futures contract rollover works: why every contract has a fixed expiry, how to read the month and year codes on a futures symbol, when liquidity migrates from the front month to the next, what the roll does to continuous charts and to levels drawn on them, the extra spot-month margin charge on physically delivered contracts, and how to roll a position without paying for the same mistake twice.","image":"https://gwhlds.com/assets/hub/futures-contract-rollover.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/futures-contract-rollover.html","datePublished":"2026-08-21"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Futures Contract Rollover","item":"https://gwhlds.com/hub/futures-contract-rollover.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does rolling over a futures contract mean?","acceptedAnswer":{"@type":"Answer","text":"Rolling over means closing a position in an expiring futures contract and reopening the equivalent position in the next listed month. It is two trades, not an automatic transfer. Traders roll because every futures contract has a fixed expiry date, and liquidity drains out of the expiring month in the days beforehand and reappears in the next one."}},{"@type":"Question","name":"When should you roll a futures contract?","acceptedAnswer":{"@type":"Answer","text":"Roll when the volume and open interest of the next month overtake the expiring one, which for equity index futures generally happens in the week before the third-Friday expiry. CME Group publishes official roll dates for equity index products. Rather than relying on a date alone, put both contracts on screen and watch the volume flip — that is the signal that the market you want to trade has moved."}},{"@type":"Question","name":"Why did my futures chart gap overnight?","acceptedAnswer":{"@type":"Answer","text":"Most likely your platform switched the continuous chart from the expiring contract to the next one. Different contract months trade at different prices because of financing and, for equities, expected dividends, so the switch shows up as a gap that no trade actually happened at. Levels drawn before the roll sit at the old contract's prices and need to be re-checked against the new front month."}},{"@type":"Question","name":"Do you have to roll if you are a day trader?","acceptedAnswer":{"@type":"Answer","text":"No. If you finish each session flat, there is no position to roll. What still matters is trading the right contract: once volume has migrated, the expiring month has a thinner book and wider spreads, so an order there can fill badly even though the chart looks familiar. Check your platform is on the front month rather than assuming its default is current."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Futures Contract Rollover</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Futures</span>
+        <h1>Futures Rollover: What It Is and When It Matters</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 21, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/futures-contract-rollover.jpg" alt="A glowing gold relay baton passing between two hands above a dark desk, one chart fading behind and a brighter chart rising ahead" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Futures rollover is moving a position out of an expiring contract and into the next listed month. Every futures contract has a fixed expiry, so in the days beforehand liquidity drains from the front month and reappears in the next one. Rolling is two trades — close the old contract, open the new — not an automatic transfer.</p>
+
+    <p>For a day trader who finishes every session flat, rollover sounds like someone else's problem. It is not. Four times a year for equity index futures, and every single month for energy contracts, the market you have been trading quietly relocates. Traders who do not notice keep placing orders in a book that has emptied out, and wonder why their fills got worse.</p>
+
+    <h2>Why futures expire at all</h2>
+    <p>A futures contract is an agreement to settle at a specific date. That date is the whole point: it is what lets a producer lock in a price for October and a fund hedge exposure through December. A contract that ran forever could not do either job.</p>
+    <p>The consequence is that "the ES chart" is not one continuous instrument. It is a relay of separate contracts, each listed, traded, and retired in turn. What you see on a continuous chart is your platform stitching them together — a convenience, not a market.</p>
+
+    <h2>Reading the contract code</h2>
+    <p>Every listed month has a letter. Five of them cover almost everything a retail futures trader touches:</p>
+
+    <div class="kv"><table>
+      <tr><th>Code</th><th>Month</th><th>Used by</th></tr>
+      <tr><td>H</td><td>March</td><td>Equity index quarterly cycle</td></tr>
+      <tr><td>M</td><td>June</td><td>Equity index quarterly cycle</td></tr>
+      <tr><td>U</td><td>September</td><td>Equity index quarterly cycle</td></tr>
+      <tr><td>Z</td><td>December</td><td>Equity index quarterly cycle</td></tr>
+      <tr><td>F, G, J, K, N, Q, V, X</td><td>Jan, Feb, Apr, May, Jul, Aug, Oct, Nov</td><td>Energy, grains and other monthly contracts</td></tr>
+    </table></div>
+
+    <p>So <strong>ESZ6</strong> is the E-mini S&amp;P 500 expiring December 2026, and <strong>CLV6</strong> is October 2026 crude oil. Equity index futures are listed five months out on the March quarterly cycle and stop trading on the third Friday of the contract month, per <a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group's contract specifications</a> — which means four rolls a year. Crude oil expires monthly, so it rolls twelve times.</p>
+
+    <h2>When the roll actually happens</h2>
+    <p>There is the calendar date, and there is the day the market moves. They are related but not identical.</p>
+    <p>CME Group publishes <a href="https://www.cmegroup.com/trading/equity-index/rolldates.html" target="_blank" rel="nofollow noopener">official roll dates for equity index products</a>, and that calendar is the reference point. In practice, volume and open interest start migrating to the next quarter roughly a week ahead of the third-Friday expiry, and the flip is usually complete within a day or two.</p>
+    <p>Which gives a rule that works regardless of what the calendar says: <strong>put both contract months on screen and watch the volume</strong>. The day the next month's volume exceeds the expiring month's is the day the market you want to be trading has moved. That signal never lies and never needs updating.</p>
+
+    <div class="callout"><b>Trade where the volume is, not where the habit is.</b> A thin book does not announce itself on a candlestick chart. The expiring contract still prints prices, still looks tradeable, and still fills your market order — just further from where you expected. Checking the front month takes five seconds and is the cheapest risk control in futures.</div>
+
+    <h2>What the roll does to your chart</h2>
+    <p>Different contract months trade at different prices. That is not a mispricing — it reflects financing costs over the extra time and, for equity index contracts, the dividends expected before the later expiry. So when your platform switches the continuous chart to the new front month, the price series jumps.</p>
+    <p>Two practical consequences:</p>
+    <ul>
+      <li><strong>Your levels are now slightly wrong.</strong> Support and resistance drawn on the old contract sit at the old contract's prices. Re-mark the important ones against the new front month rather than trusting the stitched history. <a href="support-and-resistance.html">Support and resistance</a> covers what makes a level worth keeping.</li>
+      <li><strong>Historical gaps may not be real.</strong> A "gap" on a continuous chart at a roll date is an artefact of the splice, not a market event, so it will not behave like a genuine <a href="overnight-and-weekend-gap-risk.html">overnight gap</a>. Back-testing a gap strategy on unadjusted continuous data quietly counts them anyway.</li>
+    </ul>
+    <p>Most platforms offer back-adjusted continuous contracts that shift older prices to remove the splice. That fixes the shape of the chart but changes historical price levels, so the absolute numbers no longer match what traded. Neither version is wrong; you just need to know which one you are looking at.</p>
+
+    <h2>The one that can really bite: physical delivery</h2>
+    <p>Cash-settled contracts — the equity index family — cannot deliver anything to you. Worst case you end up settled out at the final price. Physically deliverable contracts are a different matter. Standard crude oil futures are deliverable, and a position held far enough into the delivery period stops being a trade and becomes an obligation involving actual barrels.</p>
+    <p>Exchanges price that risk in. The CFTC's review of the SPAN margin system describes a <strong>spot-month add-on charge</strong>, an extra margin requirement applied to open positions in the spot month that is "usually for physically deliverable products" (<a href="https://www.cftc.gov/sites/default/files/files/tm/tmspan_margining043001.pdf" target="_blank" rel="nofollow noopener">CFTC Division of Trading and Markets, April 2001</a>). In other words, holding into the delivery month costs more margin by design — a nudge from the clearing house to roll early rather than late. Brokers add their own liquidation-by policy on top, usually well before first notice day.</p>
+    <p>The safe habit for a retail trader is simple: never be in a physically deliverable contract in its delivery month. The Micro version of a contract is often financially settled where the full-size version is not, which is one of the differences covered in <a href="futures-tick-value.html">tick value and futures P&amp;L</a>.</p>
+
+    <h2>How to roll without paying twice</h2>
+    <ol>
+      <li><strong>Check the volume flip first.</strong> Roll into a liquid book, not ahead of one.</li>
+      <li><strong>Use a calendar spread order if your platform supports it.</strong> It trades the two legs as one instrument at a quoted spread, rather than leaving you briefly flat or briefly doubled.</li>
+      <li><strong>Otherwise, close then open, deliberately.</strong> Two market orders in a fast tape is how a routine roll becomes an unplanned loss.</li>
+      <li><strong>Move the stop with the position.</strong> A stop left on the old contract protects nothing at all.</li>
+      <li><strong>Re-price your targets.</strong> The new contract trades at a different level; your written invalidation needs to be restated in the new contract's prices, not carried across unchanged.</li>
+      <li><strong>Log it in the journal.</strong> Roll costs are real costs. See <a href="trading-journal.html">how to keep a trading journal</a>.</li>
+    </ol>
+    <p>And be honest about whether the position deserves to be rolled at all. Rolling a losing swing position into the next quarter is not patience; it is paying a fee to keep an idea that has already been invalidated. <a href="what-is-invalidation-in-trading.html">Invalidation</a> is the test, and expiry is a natural moment to apply it.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means the entry, the targets and the written invalidation exist before the order does — and at a roll, those numbers get restated in the new contract's prices rather than assumed to carry over. <em>Break &amp; hold</em> keeps us out of levels that only exist as artefacts of a stitched chart. <em>Trail &amp; protect</em> means the stop follows the position across the roll, never gets left behind on an expiring contract. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What does rolling over a futures contract mean?</h3>
+    <p>Rolling over means closing a position in an expiring futures contract and reopening the equivalent position in the next listed month. It is two trades, not an automatic transfer. Traders roll because every futures contract has a fixed expiry date, and liquidity drains out of the expiring month in the days beforehand and reappears in the next one.</p>
+
+    <h3>When should you roll a futures contract?</h3>
+    <p>Roll when the volume and open interest of the next month overtake the expiring one, which for equity index futures generally happens in the week before the third-Friday expiry. CME Group publishes official roll dates for equity index products. Rather than relying on a date alone, put both contracts on screen and watch the volume flip — that is the signal that the market you want to trade has moved.</p>
+
+    <h3>Why did my futures chart gap overnight?</h3>
+    <p>Most likely your platform switched the continuous chart from the expiring contract to the next one. Different contract months trade at different prices because of financing and, for equities, expected dividends, so the switch shows up as a gap that no trade actually happened at. Levels drawn before the roll sit at the old contract's prices and need to be re-checked against the new front month.</p>
+
+    <h3>Do you have to roll if you are a day trader?</h3>
+    <p>No. If you finish each session flat, there is no position to roll. What still matters is trading the right contract: once volume has migrated, the expiring month has a thinner book and wider spreads, so an order there can fill badly even though the chart looks familiar. Check your platform is on the front month rather than assuming its default is current.</p>
+
+    <h2>Bottom line</h2>
+    <p>Rollover is the price of a market built on fixed expiry dates, and it costs nothing to handle correctly. Learn the month codes, know how often your contract rolls — four times a year for equity index, monthly for energy — and let the volume flip rather than the calendar tell you when the market has moved. If you carry positions, roll deliberately, move the stop with them, and restate your levels in the new contract's prices. If you are flat every night, just make sure your platform is pointed at the front month. Next, read <a href="futures-margin-explained.html">futures margin: day vs overnight</a> for the requirement that rises in the delivery month, or step back to <a href="futures-trading-guide.html">the futures trading guide</a> for contracts, settlement and expiry in full. The wider framework is in <a href="risk-management-trading.html">risk management for traders</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-trading-guide.html">Futures Trading Guide: Contracts, Margin and Expiry</a>
+      <a href="futures-margin-explained.html">Futures Margin: Day vs Overnight</a>
+      <a href="how-to-trade-es-futures.html">How to Trade ES Futures</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight and Weekend Gap Risk</a>
+      <a href="e-mini-and-micro-e-mini-futures.html">E-mini vs Micro E-mini Futures</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

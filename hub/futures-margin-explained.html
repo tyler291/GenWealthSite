@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Futures Margin Explained: Day vs Overnight Margin</title>
+<meta name="description" content="Futures margin explained: why it is a performance bond and not a loan, how initial and maintenance margin differ, and why day margin vanishes at the close." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/futures-margin-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Futures Margin Explained: Day vs Overnight Margin" />
+<meta property="og:description" content="Day margin is your broker's number. Overnight margin is the exchange's. Understanding the gap between them is what keeps a small futures account alive." />
+<meta property="og:url" content="https://gwhlds.com/hub/futures-margin-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/futures-margin-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Futures Margin Explained: Day vs Overnight Margin","description":"What futures margin really is: a performance bond rather than a loan, the difference between exchange initial margin and maintenance margin, how brokers set a much smaller intraday day-trade margin that expires at the close, how margin levels are calculated under SPAN, and why the day margin figure is the most misread number on a futures platform.","image":"https://gwhlds.com/assets/hub/futures-margin-explained.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/futures-margin-explained.html","datePublished":"2026-08-21"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Futures Margin Explained","item":"https://gwhlds.com/hub/futures-margin-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between day margin and overnight margin in futures?","acceptedAnswer":{"@type":"Answer","text":"Overnight margin is the exchange's requirement for carrying a position through the daily settlement, and it is the real number. Day margin is a discounted amount your broker allows while you are flat by the close, and it is a private arrangement between you and the broker, not an exchange rule. Day margin can be a fraction of the overnight figure, and it disappears at a published cut-off time each afternoon."}},{"@type":"Question","name":"Is futures margin a loan like stock margin?","acceptedAnswer":{"@type":"Answer","text":"No. Stock margin is borrowed money and you pay interest on it. Futures margin is a performance bond, a good-faith deposit that both the buyer and the seller post so the clearing house knows each side can cover a day's adverse move. Nothing is borrowed, no interest accrues on it, and the money stays in your account as collateral rather than being spent."}},{"@type":"Question","name":"What happens if I hold a futures position past the day-margin cut-off?","acceptedAnswer":{"@type":"Answer","text":"Your account is measured against the full exchange overnight requirement instead of the discounted intraday one. If your balance does not cover it, most brokers auto-liquidate the position at market, often without a phone call, and any resulting loss is yours. Some brokers close positions a few minutes before the cut-off as a matter of policy, so the exit price is whatever the market offers at that moment."}},{"@type":"Question","name":"How are futures margin levels decided?","acceptedAnswer":{"@type":"Answer","text":"Exchanges set minimum maintenance margin using the SPAN risk model, which estimates the largest one-day loss a portfolio is likely to take. A CFTC review of SPAN (April 2001) records that CME and CBOT aimed to cover between 95% and 99% of one-day price moves, and noted that even a level covering 99% of moves would still be exceeded two to three days in a 250-day trading year. Margin is a risk estimate, not a ceiling on loss."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Futures Margin Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Futures</span>
+        <h1>Futures Margin Explained: Day vs Overnight Margin</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 21, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/futures-margin-explained.jpg" alt="Brass balance scales holding a small stack of gold coins against a much larger glowing glass block, showing how a small deposit controls a large position" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Futures margin is not a loan or a down payment. It is a performance bond — a good-faith deposit the clearing house requires from both sides of a contract so each can cover a day's adverse move. Day margin is a smaller amount your broker allows intraday only; overnight margin is the exchange's full requirement for holding past the close.</p>
+
+    <p>That single distinction accounts for a large share of the accounts that die in their first futures month. A platform advertising "$50 day margin" on a contract with a five-figure notional value is not offering you cheap access to the market. It is telling you what it will let you do between the opening bell and a cut-off time it chose, on the assumption that you will be flat before the clock runs out.</p>
+
+    <h2>What futures margin actually is</h2>
+    <p>When you buy 100 shares of stock on margin, your broker lends you money and charges interest on the balance. Futures margin works nothing like that. Nothing is borrowed, no interest accrues, and the money never leaves your account — it is set aside as collateral against the obligation you have taken on.</p>
+    <p>The reason is structural. A futures contract is an agreement between two parties with a clearing house standing in the middle guaranteeing both. The clearing house does not care about your opinion on the market; it cares that if the contract moves against you tonight, the money to cover that move is already on deposit. Both the long and the short post margin, because either one can be the loser.</p>
+    <p>Practically, this means the deposit is small relative to the exposure. A contract controlling several hundred thousand dollars of index value may require only a few thousand dollars to hold. That is <a href="what-is-leverage-in-trading.html">leverage</a>, and it works identically in both directions — the deposit does not cap your loss, it only starts the trade.</p>
+
+    <h2>Initial margin vs maintenance margin</h2>
+    <p>Two exchange-set numbers govern a position held overnight, and they are not the same.</p>
+    <ul>
+      <li><strong>Initial margin</strong> is what you must have on deposit to <em>open</em> the position.</li>
+      <li><strong>Maintenance margin</strong> is the lower level your equity must stay <em>above</em> once the position is on. Fall below it and you get a margin call for the amount needed to return to the initial level — not merely back to the maintenance level.</li>
+    </ul>
+    <p>The relationship between them is a published ratio. The CFTC's review of the SPAN margin system records that the initial-to-maintenance ratio ran <strong>1.25 to 1.50 depending on the product at CME</strong>, and a flat 1.35 at the Chicago Board of Trade (<a href="https://www.cftc.gov/sites/default/files/files/tm/tmspan_margining043001.pdf" target="_blank" rel="nofollow noopener">CFTC Division of Trading and Markets, April 2001</a>). Ratios and dollar levels are revised over time, so the live figures for any contract come from the exchange's own margin page — for the E-mini S&amp;P 500, <a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.margins.html" target="_blank" rel="nofollow noopener">CME publishes them here</a>. The structure, though, has not changed: a higher bar to enter, a lower bar to stay.</p>
+
+    <h2>Day margin vs overnight margin: the number that changes at the close</h2>
+    <p>Here is the part platforms explain badly. The exchange sets one requirement. Your broker may voluntarily accept less than that <em>during the session only</em>, because a position closed before settlement never reaches the clearing house's overnight risk calculation. That discounted figure is day-trade margin, and it is a commercial decision by your broker, not an exchange rule.</p>
+
+    <div class="kv"><table>
+      <tr><th></th><th>Day (intraday) margin</th><th>Overnight (initial) margin</th></tr>
+      <tr><td>Who sets it</td><td>Your broker</td><td>The exchange / clearing house</td></tr>
+      <tr><td>When it applies</td><td>During the session, until a published cut-off</td><td>Through the daily settlement</td></tr>
+      <tr><td>Typical size</td><td>A fraction of the overnight figure</td><td>The full requirement</td></tr>
+      <tr><td>Can it change without much notice</td><td>Yes — brokers raise it around events</td><td>Yes, but by exchange advisory notice</td></tr>
+      <tr><td>What happens if you breach it</td><td>Auto-liquidation, often at market</td><td>Margin call, then liquidation</td></tr>
+    </table></div>
+
+    <p>Two consequences follow, and both catch new traders.</p>
+    <p>First, <strong>the cut-off is a hard deadline, not a guideline</strong>. If you are still holding when your broker's intraday window closes, your account is instantly measured against the full exchange requirement. If it does not cover, the position is closed at market — whatever market means at that moment.</p>
+    <p>Second, <strong>day margin is not a risk measurement</strong>. It tells you the smallest deposit that permits a trade. It says nothing about how much that trade can lose. Sizing a position from the day margin figure is the futures equivalent of choosing a stop because it is close, rather than because it is where the idea is wrong.</p>
+
+    <div class="callout"><b>The margin number and the risk number are unrelated.</b> If a broker permits one contract on a $500 deposit, that does not make the trade a $500 risk. The risk is the stop distance in ticks multiplied by the tick value — a figure you compute yourself, before the order exists. See <a href="futures-tick-value.html">tick value and how to calculate futures P&amp;L</a> for the arithmetic.</div>
+
+    <h2>How margin levels get set — and why they move</h2>
+    <p>Exchange margin is not a guess. Minimum maintenance levels come out of SPAN, a risk model CME built that estimates the largest loss a portfolio is likely to take from one trading day to the next. The CFTC's review describes the target plainly: CME and CBOT set maintenance levels intended to cover <strong>between 95% and 99% of one-day price moves</strong>, based on statistical analysis of historical daily changes over windows ranging from a month to, in some cases, ten years.</p>
+    <p>The same document contains the sentence every futures trader should read once a year: even where margin is set to cover 99% of one-day losses, <strong>"the losses will exceed the margin level two to three days over the course of a year"</strong> of 250 trading days. Margin is a probability estimate, not a wall. Roughly a dozen days a year at the 95% setting, two or three at the 99% setting, the market moves further than the deposit anticipated.</p>
+    <p>That is also why margin changes. Exchanges review parameters at least monthly and can raise requirements at short notice when volatility rises — which is precisely when a leveraged account can least afford a bigger deposit. Physically deliverable contracts carry an extra <strong>spot-month add-on charge</strong> for positions still open in the delivery month, one of several reasons traders roll out of the front contract early rather than late. <a href="futures-contract-rollover.html">Futures contract rollover</a> covers that timing.</p>
+
+    <h2>What this means for a small account</h2>
+    <p>The practical playbook is short and unglamorous.</p>
+    <ol>
+      <li><strong>Size from your stop, never from the margin.</strong> Decide the dollar risk, measure the invalidation in ticks, divide. <a href="position-sizing-from-risk.html">Position sizing from risk</a> walks through it.</li>
+      <li><strong>Know your broker's cut-off time and set an alarm before it.</strong> Not at it — before it.</li>
+      <li><strong>Assume you will not be allowed to hold overnight.</strong> If the overnight requirement is well above your balance, your account is an intraday account regardless of what you intended.</li>
+      <li><strong>Trade the Micro if the maths is tight.</strong> One-tenth the size means one-tenth the margin and one-tenth the damage. See <a href="e-mini-and-micro-e-mini-futures.html">E-mini vs Micro E-mini futures</a>.</li>
+      <li><strong>Keep a buffer above maintenance.</strong> A balance sitting exactly at the requirement is one adverse tick from a forced exit at the worst available price.</li>
+    </ol>
+    <p>And treat a margin call as information, not paperwork. It means your own risk framework failed before your broker's did. <a href="what-is-a-margin-call.html">What a margin call is and how to avoid one</a> covers the sequence in detail.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means the entry, the targets and the written invalidation exist before the order does — so position size falls out of the stop, and the margin figure never enters the decision. <em>Break &amp; hold</em> keeps us out until price closes beyond the level, which cuts the impulse trades leverage punishes hardest. <em>Trail &amp; protect</em> pulls the stop up behind each target as it prints, so a position that has to be closed at a cut-off is closed from a defended price rather than a hopeful one. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the difference between day margin and overnight margin in futures?</h3>
+    <p>Overnight margin is the exchange's requirement for carrying a position through the daily settlement, and it is the real number. Day margin is a discounted amount your broker allows while you are flat by the close, and it is a private arrangement between you and the broker, not an exchange rule. Day margin can be a fraction of the overnight figure, and it disappears at a published cut-off time each afternoon.</p>
+
+    <h3>Is futures margin a loan like stock margin?</h3>
+    <p>No. Stock margin is borrowed money and you pay interest on it. Futures margin is a performance bond, a good-faith deposit that both the buyer and the seller post so the clearing house knows each side can cover a day's adverse move. Nothing is borrowed, no interest accrues on it, and the money stays in your account as collateral rather than being spent.</p>
+
+    <h3>What happens if I hold a futures position past the day-margin cut-off?</h3>
+    <p>Your account is measured against the full exchange overnight requirement instead of the discounted intraday one. If your balance does not cover it, most brokers auto-liquidate the position at market, often without a phone call, and any resulting loss is yours. Some brokers close positions a few minutes before the cut-off as a matter of policy, so the exit price is whatever the market offers at that moment.</p>
+
+    <h3>How are futures margin levels decided?</h3>
+    <p>Exchanges set minimum maintenance margin using the SPAN risk model, which estimates the largest one-day loss a portfolio is likely to take. A CFTC review of SPAN (April 2001) records that CME and CBOT aimed to cover between 95% and 99% of one-day price moves, and noted that even a level covering 99% of moves would still be exceeded two to three days in a 250-day trading year. Margin is a risk estimate, not a ceiling on loss.</p>
+
+    <h2>Bottom line</h2>
+    <p>Margin answers one question — what the clearing house needs on deposit to guarantee your side of a contract — and it answers no others. It is not your risk, not a loss limit, and not a verdict on whether a trade is a good idea. Day margin is a courtesy your broker extends inside the session; overnight margin is the number that was always real. Learn both figures for the contract you trade, set an alarm before the cut-off, and size every position from the stop instead of from the deposit. Next, step back to <a href="futures-trading-guide.html">the futures trading guide</a> for contracts, expiry and settlement, or read <a href="risk-management-trading.html">risk management for traders</a> for the framework that sits above all of it. If you would rather learn this alongside people calling levels in real time, <a href="../faq.html">our FAQ</a> explains how the room works.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-trading-guide.html">Futures Trading Guide: Contracts, Margin and Expiry</a>
+      <a href="what-is-a-margin-call.html">What Is a Margin Call?</a>
+      <a href="futures-tick-value.html">Tick Value and Futures P&amp;L</a>
+      <a href="what-is-leverage-in-trading.html">What Is Leverage in Trading?</a>
+      <a href="position-sizing-from-risk.html">How to Size a Position From Risk</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
