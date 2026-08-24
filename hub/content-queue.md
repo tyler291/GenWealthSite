@@ -197,14 +197,14 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] Futures margin explained: day margin vs overnight margin `(futures-margin-explained)`
 - [x] How to trade the ES (S&P 500 futures) as a beginner `(how-to-trade-es-futures)`
 - [x] Futures contract rollover: what it is and when it matters `(futures-contract-rollover)`
-- [ ] Why futures traders care about the cash open
+- [x] Why futures traders care about the cash open `(futures-cash-open)`
 
 ---
 
 # PHASE 6 — Trading psychology & discipline
 
-- [ ] Trading psychology: why discipline beats analysis `[PILLAR]`
-- [ ] Revenge trading: why it happens and how to stop
+- [x] Trading psychology: why discipline beats analysis `[PILLAR]` `(trading-psychology)`
+- [x] Revenge trading: why it happens and how to stop `(revenge-trading)`
 - [ ] FOMO in trading: how to stop chasing candles
 - [ ] How to handle a big loss without spiralling
 - [ ] Why you cut winners early and let losers run
@@ -233,6 +233,74 @@ underneath so it ranks as content, not just a widget.
 - [ ] Drawdown recovery calculator (how much you need to gain back)
 - [ ] Margin requirement calculator
 - [ ] Trading expectancy calculator
+
+---
+
+---
+
+# PHASE 8 — Stocks & equities day trading · batch 002, cluster 9
+
+New cluster. Pillar first, then spokes. Every spoke links up to the pillar and
+sideways to two siblings.
+
+- [ ] Day trading stocks: what is different about equities `[PILLAR]`
+- [ ] How to find stocks to day trade the night before
+- [ ] What a stock scanner should actually filter for
+- [ ] How to read Level 2 without being fooled by it
+- [ ] What the tape actually tells you (and what it does not)
+- [ ] Float and short interest: why they decide how a stock moves
+- [ ] Why low-float stocks move the way they do
+- [ ] Trading halts: what happens, and what to do while you wait
+- [ ] Pre-market vs regular hours: the liquidity difference that matters
+- [ ] Earnings gaps: the honest odds on trading them
+- [ ] Power hour explained: why the last hour trades differently
+- [ ] Trading SPY vs trading ES: which suits which account
+- [ ] Short selling basics and the locate problem
+- [ ] Settlement, T+1 and good-faith violations
+
+---
+
+# PHASE 9 — Prop firms & funded accounts · batch 002, cluster 10
+
+Highest commercial intent left in the map. Be scrupulously honest here — this is
+the cluster where a thinly-veiled ad gets ignored by Google and the AIs alike.
+Never quote a pass rate we cannot source.
+
+- [ ] Prop firms explained: how funded trading accounts really work `[PILLAR]`
+- [ ] How prop firm challenges actually make their money
+- [ ] One-step vs two-step evaluations: which is really easier
+- [ ] Trailing drawdown explained properly (the rule that fails most accounts)
+- [ ] Prop firm daily loss limits compared: how the rules differ
+- [ ] Consistency rules: the clause most traders miss until payout
+- [ ] What actually happens on payout day
+- [ ] Prop firm vs broker account: who is holding the risk
+- [ ] Can you fail a challenge and still come out ahead?
+- [ ] Prop firm scaling plans explained
+- [ ] Red flags to look for in a prop firm's terms
+- [ ] News trading restrictions: why they exist and what they cost you
+- [ ] Prop firms for futures vs prop firms for forex
+- [ ] How to size a $50k evaluation account
+
+---
+
+# PHASE 10 — Brokers, platforms & execution · batch 002, cluster 11
+
+Pillar is already live: `how-to-choose-a-broker-for-day-trading.html`. Every spoke
+below links up to it.
+
+- [ ] Market vs limit vs stop orders: when each one is right
+- [ ] Stop-limit orders: the order type that does not fill
+- [ ] OCO and bracket orders explained
+- [ ] How to place a bracket order (TradingView and NinjaTrader)
+- [ ] What slippage actually costs you over a year
+- [ ] Commission vs spread: the true cost of a round turn
+- [ ] How to test a new broker with a small deposit
+- [ ] What "segregated funds" actually means at a regulated broker
+- [ ] Platform latency: how much it matters for scalping vs swing trading
+- [ ] Charting on TradingView vs your broker's platform
+- [ ] Trading from a phone: what breaks and what does not
+- [ ] The one-monitor setup that actually works
+- [ ] Trading hotkeys worth learning
 
 ---
 

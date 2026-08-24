@@ -168,6 +168,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Futures Margin Explained: Day vs Overnight Margin](https://gwhlds.com/hub/futures-margin-explained.html): why futures margin is a performance bond rather than a loan, how exchange initial and maintenance margin differ, why a broker's discounted day-trade margin expires at a daily cut-off, and how SPAN sets the levels.
 - [How to Trade ES Futures: A Beginner's Guide](https://gwhlds.com/hub/how-to-trade-es-futures.html): the E-mini S&P 500 contract in full — $50 per point, $12.50 per tick, quarterly expiry and third-Friday cash settlement — plus session timing, the honest ES-versus-MES comparison, and a first-trade sequence.
 - [Futures Rollover: What It Is and When It Matters](https://gwhlds.com/hub/futures-contract-rollover.html): why every futures contract expires, how to read month codes, when liquidity migrates to the next contract, what the roll does to continuous charts and drawn levels, and the extra spot-month margin on deliverable contracts.
+- [Why Futures Traders Watch the Cash Open](https://gwhlds.com/hub/futures-cash-open.html): why 9:30am ET matters when index futures already trade all night.
+- [Trading Psychology: Why Discipline Beats Analysis](https://gwhlds.com/hub/trading-psychology.html): the four biases that cost traders most, and the rules that remove them.
+- [Revenge Trading: Why It Happens and How to Stop](https://gwhlds.com/hub/revenge-trading.html): the break-even effect, the warning signs, and the rules that shut it down.
 
 ## Contact
 
