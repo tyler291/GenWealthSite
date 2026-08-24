@@ -205,9 +205,9 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 
 - [x] Trading psychology: why discipline beats analysis `[PILLAR]` `(trading-psychology)`
 - [x] Revenge trading: why it happens and how to stop `(revenge-trading)`
-- [ ] FOMO in trading: how to stop chasing candles
-- [ ] How to handle a big loss without spiralling
-- [ ] Why you cut winners early and let losers run
+- [x] FOMO in trading: how to stop chasing candles `(fomo-in-trading)`
+- [x] How to handle a big loss without spiralling `(how-to-handle-a-big-loss)`
+- [x] Why you cut winners early and let losers run `(cutting-winners-early)`
 - [ ] Overtrading: the signs and the fix
 - [ ] How to trade with confidence after a losing streak
 - [ ] Analysis paralysis: when more research makes you worse
