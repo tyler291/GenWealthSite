@@ -208,11 +208,11 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] FOMO in trading: how to stop chasing candles `(fomo-in-trading)`
 - [x] How to handle a big loss without spiralling `(how-to-handle-a-big-loss)`
 - [x] Why you cut winners early and let losers run `(cutting-winners-early)`
-- [ ] Overtrading: the signs and the fix
-- [ ] How to trade with confidence after a losing streak
-- [ ] Analysis paralysis: when more research makes you worse
-- [ ] The discipline of sitting on your hands
-- [ ] How professional traders think about being wrong
+- [x] Overtrading: the signs and the fix `(covered by how-many-trades-per-day)`
+- [x] How to trade with confidence after a losing streak `(covered by how-to-survive-a-losing-streak)`
+- [x] Analysis paralysis: when more research makes you worse `(analysis-paralysis-in-trading)`
+- [x] The discipline of sitting on your hands `(patience-in-trading)`
+- [x] How professional traders think about being wrong `(how-traders-think-about-being-wrong)`
 - [ ] Building a pre-market routine that sets up your session
 - [ ] Why trading alone is harder than trading with a team
 
