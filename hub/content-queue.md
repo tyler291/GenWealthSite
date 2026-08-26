@@ -213,8 +213,8 @@ This cluster is where we prove the room is worth joining. Be specific and show t
 - [x] Analysis paralysis: when more research makes you worse `(analysis-paralysis-in-trading)`
 - [x] The discipline of sitting on your hands `(patience-in-trading)`
 - [x] How professional traders think about being wrong `(how-traders-think-about-being-wrong)`
-- [ ] Building a pre-market routine that sets up your session
-- [ ] Why trading alone is harder than trading with a team
+- [x] Building a pre-market routine that sets up your session `(pre-market-routine)`
+- [x] Why trading alone is harder than trading with a team `(trading-alone-vs-with-a-team)`
 
 ---
 
@@ -224,7 +224,7 @@ Each tool page needs working vanilla-JS math, a worked example, and an explainer
 underneath so it ranks as content, not just a widget.
 
 - [x] Lot size calculator `(covered by lot-size-calculator)`
-- [ ] Position size calculator (stocks and futures)
+- [x] Position size calculator (stocks and futures) `(position-size-calculator)`
 - [ ] Pip value calculator
 - [ ] Risk-to-reward calculator
 - [ ] Profit and loss calculator

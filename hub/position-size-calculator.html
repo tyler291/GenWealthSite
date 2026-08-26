@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Position Size Calculator for Stocks &amp; Futures</title>
+<meta name="description" content="Turn a dollar risk into a share or contract count. Free position size calculator for stocks and futures, plus the formula, worked examples and real tick values." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/position-size-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Position Size Calculator for Stocks &amp; Futures" />
+<meta property="og:description" content="Your stop distance decides your size. Enter the account, the risk percentage and the stop, and the share or contract count falls out of it." />
+<meta property="og:url" content="https://gwhlds.com/hub/position-size-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/position-size-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Position Size Calculator for Stocks & Futures", "description": "A free position size calculator for equities and futures that converts a fixed dollar risk into a share count or a contract count, with the two formulas behind it, worked examples using real CME tick values, a quick-reference table, and an honest account of the costs the arithmetic does not capture.", "image": "https://gwhlds.com/assets/hub/position-size-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/position-size-calculator.html", "datePublished": "2026-08-26"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Position Size Calculator", "item": "https://gwhlds.com/hub/position-size-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate position size for stocks?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the dollars you are willing to lose by the distance from your entry to your stop, then round down. On a $10,000 account risking 1 percent, that is $100 of risk; with an entry at $52.40 and a stop at $51.60 the distance is $0.80 per share, so $100 divided by $0.80 gives 125 shares. Always round down rather than up, because rounding up quietly raises the risk above the number you chose."}}, {"@type": "Question", "name": "How do you calculate position size for futures?", "acceptedAnswer": {"@type": "Answer", "text": "Convert the stop into ticks, multiply by the tick value to get the risk per contract, then divide your dollar risk by that figure. A Micro E-mini S&P 500 contract moves in 0.25 index-point ticks worth $1.25 each, so an eight-tick stop risks $10 per contract; a $100 risk budget therefore allows 10 contracts. Because contracts are whole units, small accounts often find the answer is one contract or none."}}, {"@type": "Question", "name": "What percentage of my account should I risk per trade?", "acceptedAnswer": {"@type": "Answer", "text": "Most risk-first frameworks use 1 percent or less of account equity per trade, and many traders working a small account use less than that. There is no universally correct figure, and this is an educational tool rather than advice. What matters more than the exact percentage is that it is fixed in advance, applied identically to every trade, and small enough that a normal losing run does not force you to change it mid-drawdown."}}, {"@type": "Question", "name": "Why does the calculator round down instead of up?", "acceptedAnswer": {"@type": "Answer", "text": "Because rounding up breaks the only promise the calculation makes. If the arithmetic says 4.7 contracts and you take 5, your actual loss at the stop is about 6 percent more than the amount you decided to risk. Rounded down to 4, you risk slightly less than planned, which is a harmless error. The calculator therefore shows the actual risk of the rounded size so you can see the difference rather than assume it away."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Position Size Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Stocks &amp; Futures</span>
+        <h1>Position Size Calculator for Stocks &amp; Futures</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 26, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/position-size-calculator.jpg" alt="A brass dial caliper on a dark polished desk with its jaws closed precisely around a small stack of gold coins, an emerald-lit candlestick chart glowing on a screen behind" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">This calculator turns a dollar risk into a share count or a contract count. Enter your account size, the percentage you are willing to lose on one trade, your entry and your stop, and it returns the position size that makes that loss exactly what you decided it would be.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Position size calculator</h3>
+      <div class="row">
+        <div><label for="bal">Account balance ($)</label><input id="bal" type="number" inputmode="decimal" value="10000" min="0" step="100" /></div>
+        <div><label for="risk">Risk per trade (%)</label><input id="risk" type="number" inputmode="decimal" value="1" min="0" step="0.1" /></div>
+      </div>
+      <div style="margin-top:16px">
+        <label for="mode">Instrument type</label>
+        <select id="mode">
+          <option value="stocks">Stocks / ETFs (shares)</option>
+          <option value="futures">Futures (contracts)</option>
+        </select>
+      </div>
+      <div class="row" id="grpStocks">
+        <div><label for="entry">Entry price ($)</label><input id="entry" type="number" inputmode="decimal" value="52.40" min="0" step="0.01" /></div>
+        <div><label for="stop">Stop-loss price ($)</label><input id="stop" type="number" inputmode="decimal" value="51.60" min="0" step="0.01" /></div>
+      </div>
+      <div class="row" id="grpFut" style="display:none">
+        <div><label for="ticks">Stop distance (ticks)</label><input id="ticks" type="number" inputmode="decimal" value="8" min="0" step="1" /></div>
+        <div><label for="tval">Tick value ($)</label><input id="tval" type="number" inputmode="decimal" value="1.25" min="0" step="0.25" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Amount at risk</div><div class="v" id="outRisk">$100.00</div></div>
+        <div class="stat"><div class="l" id="lblSize">Shares</div><div class="v" id="outSize">125</div></div>
+        <div class="stat"><div class="l">Risk per unit</div><div class="v" id="outUnit">$0.80</div></div>
+        <div class="stat"><div class="l">Actual risk at stop</div><div class="v" id="outAct">$100.00</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">Sizes are rounded down to whole shares or whole contracts, so the actual risk is at or below the amount you chose &mdash; never above it. This tool is for education, not advice, and it does not account for commissions, slippage or gap risk.</p>
+
+    <h2>The two formulas behind it</h2>
+    <p>There is no modelling here, just division. The only thing that changes between asset classes is how you measure the distance to your stop.</p>
+    <div class="callout"><b>Stocks:</b> Shares = (Account &times; Risk%) &divide; (Entry price &minus; Stop price)<br /><b>Futures:</b> Contracts = (Account &times; Risk%) &divide; (Stop in ticks &times; Tick value)</div>
+    <p>Both are the same statement: your dollar risk is fixed, so the size is whatever makes the stop cost exactly that. Notice what is <em>not</em> in either formula &mdash; how good the setup looks, how sure you are, or what happened on the last trade. None of those change the arithmetic, and letting them change the size is how an ordinary losing run turns into a serious one.</p>
+
+    <h2>A worked example of each</h2>
+
+    <h3>Stocks</h3>
+    <p>A $10,000 account risking 1% has <strong>$100</strong> on the line. You want in at $52.40 with a stop at $51.60, so the distance is <strong>$0.80 per share</strong>. That gives $100 &divide; $0.80 = <strong>125 shares</strong>, a position worth $6,550. If the stop fills, you lose $100. If your analysis changes and the stop belongs at $51.00 instead, the distance becomes $1.40 and the size drops to 71 shares &mdash; the risk is still $100.</p>
+
+    <h3>Futures</h3>
+    <p>Same $100 of risk, this time on Micro E-mini S&amp;P 500 futures. The contract is <strong>$5 &times; the S&amp;P 500 Index</strong>, its minimum price fluctuation is <strong>0.25 index points</strong>, and one tick is therefore worth <strong>$1.25</strong> (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, Micro E-mini S&amp;P 500 contract specifications</a>). An eight-tick stop risks 8 &times; $1.25 = <strong>$10 per contract</strong>, so $100 &divide; $10 = <strong>10 contracts</strong>.</p>
+    <p>Run the same stop on the full-size E-mini instead, where a 0.25-point tick is worth $12.50, and the risk per contract becomes $100 &mdash; the entire budget for a single contract. That is the whole argument for micros on a small account, and it is arithmetic rather than opinion. <a href="futures-tick-value.html">Tick value explained</a> covers the mechanics for other contracts.</p>
+
+    <h2>Why the stop decides the size, not your confidence</h2>
+    <p>The instinct most new traders bring is to pick a size first and then place a stop where it feels tolerable. That reverses the logic and produces the two worst outcomes in trading: a stop placed for comfort rather than for structure, and a size that varies with mood.</p>
+    <p>Sizing from risk inverts it. The stop goes where the trade is genuinely invalidated &mdash; below the level, outside the range, wherever the idea stops being true &mdash; and the size is then whatever keeps the loss at your fixed number. A wide, structurally-correct stop is not a problem; it just means a smaller position. This is the same principle at work in <a href="position-sizing-from-risk.html">sizing a position from risk, not conviction</a>, and it is why <a href="how-to-set-a-stop-loss.html">setting a stop loss properly</a> has to happen before you touch this calculator, not after.</p>
+
+    <h2>Quick reference: what 1% buys you</h2>
+    <p>Dollar risk at 1%, and the resulting size at a few common stop distances.</p>
+    <div class="kv"><table>
+      <tr><th>Account</th><th>Risk at 1%</th><th>Shares ($0.50 stop)</th><th>Shares ($1.00 stop)</th><th>MES contracts (8-tick stop)</th></tr>
+      <tr><td>$2,000</td><td>$20</td><td>40</td><td>20</td><td>2</td></tr>
+      <tr><td>$5,000</td><td>$50</td><td>100</td><td>50</td><td>5</td></tr>
+      <tr><td>$10,000</td><td>$100</td><td>200</td><td>100</td><td>10</td></tr>
+      <tr><td>$25,000</td><td>$250</td><td>500</td><td>250</td><td>25</td></tr>
+    </table></div>
+    <p>The futures column is the one worth staring at. On a $2,000 account, a $10-per-contract stop leaves room for two contracts &mdash; and if you widen the stop to 16 ticks, it leaves room for one. Whole-unit instruments do not scale smoothly on small accounts, which is a real constraint rather than a rounding annoyance. <a href="position-sizing-small-account.html">Position sizing for a small account</a> deals with what to do when the answer keeps coming back as one or zero.</p>
+
+    <h2>What this calculator does not account for</h2>
+    <p>Worth being straight about, because a tool that hides its assumptions is worse than no tool:</p>
+    <ul>
+      <li><strong>Slippage.</strong> Your stop is a trigger, not a guarantee of price. In fast conditions the fill can be worse, and the realised loss exceeds the figure shown.</li>
+      <li><strong>Gaps.</strong> A stock that opens below your stop fills at the open, not at your level. Overnight and weekend exposure is a separate risk with its own rules.</li>
+      <li><strong>Commissions and spread.</strong> Round-turn costs sit on top of the calculated risk. On small futures positions they are a meaningful percentage of it.</li>
+      <li><strong>Correlation.</strong> Three positions each risking 1% are not risking 1%. If they move together, you are effectively in one 3% trade &mdash; see <a href="correlation-risk-in-trading.html">correlation risk</a>.</li>
+      <li><strong>Margin.</strong> The size that fits your risk rule may still exceed what your account can hold. Risk-based size is a ceiling on loss, not a check on buying power.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Every callout carries a written invalidation, which means the stop distance is known before the trade exists &mdash; and once the stop distance is known, the size is not a judgement call, it is this division. <em>Trail &amp; protect</em> then moves the stop up behind printed targets, which reduces the risk on the position but never raises it. Size set once at entry, risk only ever shrinking from there. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate position size for stocks?</h3>
+    <p>Divide the dollars you are willing to lose by the distance from your entry to your stop, then round down. On a $10,000 account risking 1 percent, that is $100 of risk; with an entry at $52.40 and a stop at $51.60 the distance is $0.80 per share, so $100 divided by $0.80 gives 125 shares. Always round down rather than up, because rounding up quietly raises the risk above the number you chose.</p>
+
+    <h3>How do you calculate position size for futures?</h3>
+    <p>Convert the stop into ticks, multiply by the tick value to get the risk per contract, then divide your dollar risk by that figure. A Micro E-mini S&amp;P 500 contract moves in 0.25 index-point ticks worth $1.25 each, so an eight-tick stop risks $10 per contract; a $100 risk budget therefore allows 10 contracts. Because contracts are whole units, small accounts often find the answer is one contract or none.</p>
+
+    <h3>What percentage of my account should I risk per trade?</h3>
+    <p>Most risk-first frameworks use 1 percent or less of account equity per trade, and many traders working a small account use less than that. There is no universally correct figure, and this is an educational tool rather than advice. What matters more than the exact percentage is that it is fixed in advance, applied identically to every trade, and small enough that a normal losing run does not force you to change it mid-drawdown.</p>
+
+    <h3>Why does the calculator round down instead of up?</h3>
+    <p>Because rounding up breaks the only promise the calculation makes. If the arithmetic says 4.7 contracts and you take 5, your actual loss at the stop is about 6 percent more than the amount you decided to risk. Rounded down to 4, you risk slightly less than planned, which is a harmless error. The calculator therefore shows the actual risk of the rounded size so you can see the difference rather than assume it away.</p>
+
+    <h2>Bottom line</h2>
+    <p>Position size is the one part of a trade that never has to be a judgement call. Fix the percentage, place the stop where the idea is genuinely invalidated, divide, round down. Do that on every trade and no single loss can change what you are able to do next week &mdash; which is the entire job of <a href="risk-management-trading.html">risk management in trading</a>. If you trade forex rather than shares or contracts, the same logic in lots and pips is in the <a href="lot-size-calculator.html">lot size calculator</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="position-sizing-from-risk.html">How to Size a Position From Risk, Not Conviction</a>
+      <a href="futures-tick-value.html">Tick Value Explained: How to Calculate Futures P&amp;L</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't Just a Guess</a>
+      <a href="position-sizing-small-account.html">Position Sizing for a Small Account</a>
+      <a href="lot-size-calculator.html">Lot Size &amp; Position Size Calculator (Forex)</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['bal','risk','mode','entry','stop','ticks','tval'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.bal) return;
+  var outRisk = document.getElementById('outRisk'),
+      outSize = document.getElementById('outSize'),
+      outUnit = document.getElementById('outUnit'),
+      outAct  = document.getElementById('outAct'),
+      lblSize = document.getElementById('lblSize'),
+      grpS    = document.getElementById('grpStocks'),
+      grpF    = document.getElementById('grpFut');
+  function num(v){ var n = parseFloat(v); return isFinite(n) && n > 0 ? n : 0; }
+  function money(v){ return '$' + v.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  function calc(){
+    var stocks = el.mode.value === 'stocks';
+    grpS.style.display = stocks ? '' : 'none';
+    grpF.style.display = stocks ? 'none' : '';
+    lblSize.textContent = stocks ? 'Shares' : 'Contracts';
+    var dollarRisk = num(el.bal.value) * num(el.risk.value) / 100;
+    var perUnit = stocks
+      ? Math.abs(num(el.entry.value) - num(el.stop.value))
+      : num(el.ticks.value) * num(el.tval.value);
+    var size = perUnit > 0 ? Math.floor(dollarRisk / perUnit) : 0;
+    outRisk.textContent = money(dollarRisk);
+    outSize.textContent = size.toLocaleString('en-US');
+    outUnit.textContent = perUnit > 0 ? money(perUnit) : '—';
+    outAct.textContent = money(size * perUnit);
+  }
+  ['bal','risk','entry','stop','ticks','tval'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  el.mode.addEventListener('change', calc);
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
