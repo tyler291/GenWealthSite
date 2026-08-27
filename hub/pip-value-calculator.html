@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Pip Value Calculator for Any Pair and Lot Size</title>
+<meta name="description" content="Free pip value calculator for any currency pair and lot size. See what one pip is worth in dollars, the formula behind it, and why JPY pairs are different." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/pip-value-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pip Value Calculator for Any Pair and Lot Size" />
+<meta property="og:description" content="A pip is only a number until you attach a lot size to it. Enter the pair, the size and the rate, and see what one pip is actually worth in dollars." />
+<meta property="og:url" content="https://gwhlds.com/hub/pip-value-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/pip-value-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Pip Value Calculator for Any Pair and Lot Size", "description": "A free pip value calculator that converts a lot size into the dollar value of one pip on any currency pair, with the formula, worked examples for USD-quoted, JPY and cross pairs, a quick-reference table, and an honest account of the costs that sit on top of the pip.", "image": "https://gwhlds.com/assets/hub/pip-value-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/pip-value-calculator.html", "datePublished": "2026-08-27"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Pip Value Calculator", "item": "https://gwhlds.com/hub/pip-value-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate the value of one pip?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the pip size by the number of currency units in your position to get the pip value in the quote currency, then convert that into your account currency. On a 100,000-unit position in a pair quoted to four decimals, one pip of 0.0001 is worth 10 units of the quote currency. If the quote currency is the US dollar, that is simply 10 dollars per pip."}}, {"@type": "Question", "name": "Why is a pip worth exactly 10 dollars on EUR/USD?", "acceptedAnswer": {"@type": "Answer", "text": "Because the quote currency is already the US dollar and no conversion step is needed. A standard lot is 100,000 units and a pip is 0.0001, so 100,000 multiplied by 0.0001 gives 10 dollars per pip. The same arithmetic gives 1 dollar per pip on a mini lot of 10,000 units and 10 cents per pip on a micro lot of 1,000 units. This clean number only holds while the dollar is the quote currency."}}, {"@type": "Question", "name": "Why are JPY pairs calculated differently?", "acceptedAnswer": {"@type": "Answer", "text": "Yen pairs are quoted to two or three decimal places rather than four or five, so one pip is 0.01 rather than 0.0001. A standard lot therefore moves 1,000 yen per pip instead of 10 units of the quote currency, and that yen figure has to be converted into your account currency at the current rate. The pip value on a yen pair changes as the exchange rate moves, which is why it is never a fixed round number."}}, {"@type": "Question", "name": "What is the difference between a pip and a pipette?", "acceptedAnswer": {"@type": "Answer", "text": "A pipette is one tenth of a pip, shown as the fifth decimal place on most pairs and the third on yen pairs. Brokers quote it for finer pricing, and it matters mainly because it makes spreads look smaller than they are. A spread displayed as 8 is often 0.8 pips, so read the decimal places before you compare one broker to another."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Pip Value Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Forex</span>
+        <h1>Pip Value Calculator for Any Pair and Lot Size</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 27, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/pip-value-calculator.jpg" alt="A polished brass micrometer on a dark slate desk with its jaws framing a single tiny glowing gold droplet of light, a blurred currency board behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">One pip is worth the pip size multiplied by your position in currency units, converted into your account currency. On a standard 100,000-unit lot with a pip of 0.0001, that is 10 units of the quote currency per pip &mdash; exactly $10 when the quote currency is the dollar, and something else on every other pair.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Pip value calculator</h3>
+      <div class="row">
+        <div><label for="lot">Lot size</label>
+          <select id="lot">
+            <option value="100000">Standard lot &mdash; 100,000 units</option>
+            <option value="10000">Mini lot &mdash; 10,000 units</option>
+            <option value="1000">Micro lot &mdash; 1,000 units</option>
+            <option value="custom">Custom units&hellip;</option>
+          </select>
+        </div>
+        <div><label for="pipsz">Pip size</label>
+          <select id="pipsz">
+            <option value="0.0001">0.0001 &mdash; most pairs (4 decimals)</option>
+            <option value="0.01">0.01 &mdash; JPY pairs (2 decimals)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" id="grpUnits" style="display:none">
+        <div><label for="units">Position size (currency units)</label><input id="units" type="number" inputmode="decimal" value="100000" min="0" step="1000" /></div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div><label for="qrate">Quote currency in USD (1 quote unit = ? USD)</label><input id="qrate" type="number" inputmode="decimal" value="1" min="0" step="0.0001" /></div>
+        <div><label for="stopp">Stop distance (pips)</label><input id="stopp" type="number" inputmode="decimal" value="20" min="0" step="1" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Pip value (quote currency)</div><div class="v" id="outQ">10.00</div></div>
+        <div class="stat"><div class="l">Pip value (USD)</div><div class="v" id="outUsd">$10.00</div></div>
+        <div class="stat"><div class="l">Risk at that stop</div><div class="v" id="outStop">$200.00</div></div>
+        <div class="stat"><div class="l">Pips per $100 of risk</div><div class="v" id="outPer">10.0</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">Set the quote-currency rate to <strong>1</strong> for any pair ending in USD. For USD/JPY at 150.00, one yen is 1 &divide; 150 = <strong>0.006667</strong> USD. This tool is for education, not advice, and it ignores spread, commission, swap and slippage &mdash; all of which sit on top of the pip.</p>
+
+    <h2>The formula behind it</h2>
+    <p>There are only two steps, and the second one is the one people skip.</p>
+    <div class="callout"><b>Step 1 &mdash; pip value in the quote currency:</b> Pip size &times; position size in units.<br /><b>Step 2 &mdash; convert to your account currency:</b> multiply by the current value of one quote-currency unit in your account currency.</div>
+    <p>If your account is in dollars and the pair ends in USD, step two multiplies by 1 and disappears. That is the entire reason EUR/USD, GBP/USD and AUD/USD all give the tidy $10 per standard lot, and why traders wrongly generalise that figure to every pair on the platform. On EUR/GBP or USD/CHF the second step is doing real work, and the answer moves as the market moves.</p>
+
+    <h2>Three worked examples</h2>
+
+    <h3>EUR/USD &mdash; the easy case</h3>
+    <p>A standard lot is 100,000 euros. A pip is 0.0001. So 100,000 &times; 0.0001 = <strong>10 US dollars per pip</strong>, and no conversion is needed because the quote currency is already the dollar. A 20-pip stop therefore risks $200 on a standard lot, $20 on a mini lot and $2 on a micro lot.</p>
+
+    <h3>USD/JPY &mdash; the two-decimal case</h3>
+    <p>Yen pairs are quoted to two or three decimals, so a pip is <strong>0.01</strong>, not 0.0001. A standard lot gives 100,000 &times; 0.01 = <strong>1,000 yen per pip</strong>. Convert at 150.00 and that is 1,000 &divide; 150 = <strong>$6.67 per pip</strong>. Notice that this number drifts: at 130.00 the same pip is worth $7.69. Anyone quoting a fixed pip value on a yen pair is quoting a snapshot.</p>
+
+    <h3>EUR/GBP &mdash; the cross case</h3>
+    <p>A pip is 0.0001 and the quote currency is the pound, so a standard lot is <strong>10 GBP per pip</strong>. With the pound at 1.27 dollars, that is <strong>$12.70 per pip</strong> &mdash; 27% more expensive than the EUR/USD position that looks identical in size on your platform. Sizing both at one lot because they are both &quot;one lot&quot; is a real and common error.</p>
+
+    <h2>Quick reference: pip value on USD-quoted pairs</h2>
+    <p>These figures are exact and fixed for any pair whose second currency is the US dollar.</p>
+    <div class="kv"><table>
+      <tr><th>Lot</th><th>Units</th><th>Pip value</th><th>10-pip stop</th><th>50-pip stop</th></tr>
+      <tr><td>Standard</td><td>100,000</td><td>$10.00</td><td>$100</td><td>$500</td></tr>
+      <tr><td>Mini</td><td>10,000</td><td>$1.00</td><td>$10</td><td>$50</td></tr>
+      <tr><td>Micro</td><td>1,000</td><td>$0.10</td><td>$1</td><td>$5</td></tr>
+      <tr><td>Nano</td><td>100</td><td>$0.01</td><td>$0.10</td><td>$0.50</td></tr>
+    </table></div>
+    <p>Read the right-hand columns rather than the pip column. Nobody loses &quot;a pip&quot;; they lose a stop distance multiplied by a size. That is the number that should decide what you trade, which is what the <a href="lot-size-calculator.html">lot size calculator</a> works out from a fixed risk budget.</p>
+
+    <h2>Pips, pipettes and the spread trick</h2>
+    <p>Most brokers now quote a fifth decimal place on standard pairs and a third on yen pairs. That extra digit is a <strong>pipette</strong> &mdash; one tenth of a pip. It exists for finer pricing, but its side effect is that spreads get advertised in units that look ten times smaller than a pip.</p>
+    <p>A pair showing 1.08421 rather than 1.0842 has a pipette on the end. If a broker advertises a &quot;spread from 6&quot;, check whether that is six pips or six pipettes, because the difference on a standard lot is $60 versus $6 per round turn. <a href="what-is-the-spread-in-forex.html">How the spread works in forex</a> goes through what you are actually paying at the moment of entry.</p>
+
+    <h2>What the pip value does not include</h2>
+    <p>Pip value tells you what price movement is worth. It says nothing about what the trade costs. Three things sit on top of it:</p>
+    <ul>
+      <li><strong>Spread.</strong> You enter at the worse side of the quote, so a position is negative by the spread the instant it opens. On a standard lot, a 1.2-pip spread is $12 before the market has done anything.</li>
+      <li><strong>Swap.</strong> Positions held past the daily rollover are credited or debited a financing amount, which is why the same trade can cost nothing intraday and drain slowly over a week &mdash; see <a href="what-is-swap-in-forex.html">how swap and rollover work</a>.</li>
+      <li><strong>Slippage.</strong> A stop is a trigger, not a guaranteed price. In fast conditions the fill is worse than the level, and the realised loss exceeds the pip arithmetic.</li>
+    </ul>
+
+    <h2>A pip is not a tick: the futures comparison</h2>
+    <p>Traders moving between spot forex and currency futures often assume the units transfer. They do not. A CME Euro FX futures contract represents <strong>125,000 euros</strong> with a minimum price fluctuation of <strong>0.00005</strong>, worth <strong>$6.25</strong> per tick (<a href="https://www.cmegroup.com/markets/fx/g10/euro-fx.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, Euro FX futures contract specifications</a>). That tick is half a pip, so one full pip on that contract is $12.50 &mdash; a different number from the $10 a 100,000-unit spot position gives, because the contract is a different size.</p>
+    <p>The unit is set by the venue, not by the currency. Spot forex is the larger arena by a wide margin: the Bank for International Settlements measured global OTC foreign exchange turnover at <strong>$9.6 trillion per day in April 2025</strong>, up 28% from $7.5 trillion in 2022 (<a href="https://www.bis.org/statistics/rpfx25_fx.htm" target="_blank" rel="nofollow noopener">BIS Triennial Central Bank Survey</a>). Size does not make it simpler. <a href="forex-vs-futures-day-trading.html">Forex versus futures for day trading</a> compares the two structures properly.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means a callout arrives with an entry, a target and a written invalidation &mdash; which is a pip distance before it is anything else. Once that distance exists, pip value turns it into a dollar figure, and the dollar figure decides the size. The order runs level first, distance second, size last. Never size first and reason backwards. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate the value of one pip?</h3>
+    <p>Multiply the pip size by the number of currency units in your position to get the pip value in the quote currency, then convert that into your account currency. On a 100,000-unit position in a pair quoted to four decimals, one pip of 0.0001 is worth 10 units of the quote currency. If the quote currency is the US dollar, that is simply 10 dollars per pip.</p>
+
+    <h3>Why is a pip worth exactly 10 dollars on EUR/USD?</h3>
+    <p>Because the quote currency is already the US dollar and no conversion step is needed. A standard lot is 100,000 units and a pip is 0.0001, so 100,000 multiplied by 0.0001 gives 10 dollars per pip. The same arithmetic gives 1 dollar per pip on a mini lot of 10,000 units and 10 cents per pip on a micro lot of 1,000 units. This clean number only holds while the dollar is the quote currency.</p>
+
+    <h3>Why are JPY pairs calculated differently?</h3>
+    <p>Yen pairs are quoted to two or three decimal places rather than four or five, so one pip is 0.01 rather than 0.0001. A standard lot therefore moves 1,000 yen per pip instead of 10 units of the quote currency, and that yen figure has to be converted into your account currency at the current rate. The pip value on a yen pair changes as the exchange rate moves, which is why it is never a fixed round number.</p>
+
+    <h3>What is the difference between a pip and a pipette?</h3>
+    <p>A pipette is one tenth of a pip, shown as the fifth decimal place on most pairs and the third on yen pairs. Brokers quote it for finer pricing, and it matters mainly because it makes spreads look smaller than they are. A spread displayed as 8 is often 0.8 pips, so read the decimal places before you compare one broker to another.</p>
+
+    <h2>Bottom line</h2>
+    <p>Pip value is the bridge between a chart distance and a dollar amount, and it is the step most new forex traders skip. Work it out before you size, not after, and never assume the $10 figure travels to pairs that do not end in USD. If you want the concept rather than the arithmetic, <a href="what-is-a-pip.html">what a pip actually is</a> covers it, <a href="what-is-a-lot-size.html">lot sizes explained</a> covers the other half, and the <a href="forex-trading-guide.html">forex trading guide</a> puts both in context.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-a-pip.html">What Is a Pip in Forex Trading?</a>
+      <a href="lot-size-calculator.html">Lot Size &amp; Position Size Calculator (Forex)</a>
+      <a href="what-is-a-lot-size.html">Lot Sizes Explained: Standard, Mini and Micro</a>
+      <a href="what-is-the-spread-in-forex.html">What Is the Spread in Forex?</a>
+      <a href="forex-trading-guide.html">The Forex Trading Guide for Day Traders</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var lot = document.getElementById('lot'), pipsz = document.getElementById('pipsz'),
+      units = document.getElementById('units'), qrate = document.getElementById('qrate'),
+      stopp = document.getElementById('stopp'), grpUnits = document.getElementById('grpUnits');
+  if(!lot) return;
+  var outQ = document.getElementById('outQ'), outUsd = document.getElementById('outUsd'),
+      outStop = document.getElementById('outStop'), outPer = document.getElementById('outPer');
+  function num(v){ var n = parseFloat(v); return isFinite(n) && n > 0 ? n : 0; }
+  function money(v){ return '$' + v.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  function calc(){
+    var custom = lot.value === 'custom';
+    grpUnits.style.display = custom ? '' : 'none';
+    var u = custom ? num(units.value) : num(lot.value);
+    var pv = u * num(pipsz.value);
+    var usd = pv * num(qrate.value);
+    var risk = usd * num(stopp.value);
+    outQ.textContent = pv.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+    outUsd.textContent = money(usd);
+    outStop.textContent = money(risk);
+    outPer.textContent = usd > 0 ? (100 / usd).toLocaleString('en-US', {maximumFractionDigits:1}) : '—';
+  }
+  [units, qrate, stopp].forEach(function(i){ i.addEventListener('input', calc); });
+  [lot, pipsz].forEach(function(i){ i.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

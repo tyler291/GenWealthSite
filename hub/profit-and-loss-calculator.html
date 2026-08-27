@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Trading Profit and Loss Calculator (Net of Costs)</title>
+<meta name="description" content="Free trading profit and loss calculator for stocks, futures and forex. Get gross P&amp;L, net P&amp;L after real fees, return on account and your result in R." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/profit-and-loss-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Trading Profit and Loss Calculator (Net of Costs)" />
+<meta property="og:description" content="Gross P&amp;L is the easy number. Enter the fill prices, the size and the costs, and see what the trade actually returned after friction." />
+<meta property="og:url" content="https://gwhlds.com/hub/profit-and-loss-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/profit-and-loss-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Trading Profit and Loss Calculator (Net of Costs)", "description": "A free profit and loss calculator for stocks, futures and forex that reports gross P&L, net P&L after commissions and fees, the return as a percentage of the account, and the result expressed in R, with worked examples and the real regulatory fees that apply to US equity sales.", "image": "https://gwhlds.com/assets/hub/profit-and-loss-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/profit-and-loss-calculator.html", "datePublished": "2026-08-27"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Profit and Loss Calculator", "item": "https://gwhlds.com/hub/profit-and-loss-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate profit and loss on a trade?", "acceptedAnswer": {"@type": "Answer", "text": "Take the exit price minus the entry price for a long, or the entry price minus the exit price for a short, multiply by the position size and by the value of one price unit, then subtract all costs. On 200 shares bought at 41.20 and sold at 42.05, the gross figure is 0.85 multiplied by 200, which is 170 dollars. Commissions and regulatory fees come out of that to give the net result."}}, {"@type": "Question", "name": "How do you calculate profit and loss on futures?", "acceptedAnswer": {"@type": "Answer", "text": "Convert the price move into ticks, multiply by the tick value and by the number of contracts. A Micro E-mini S and P 500 contract moves in 0.25 index-point ticks worth 1.25 dollars each, so a 6-point move is 24 ticks, worth 30 dollars per contract. Three contracts therefore make 90 dollars gross, before the round-turn commission and exchange fees are deducted."}}, {"@type": "Question", "name": "What is the difference between gross and net profit on a trade?", "acceptedAnswer": {"@type": "Answer", "text": "Gross profit is the price difference multiplied by the size. Net profit is what is left after commissions, exchange and clearing fees, regulatory fees, spread and financing. The gap between the two is small on a single large trade and large on many small ones, which is why an active scalper can show a positive gross record and a negative account balance over the same period."}}, {"@type": "Question", "name": "Should I track my results in dollars or in R?", "acceptedAnswer": {"@type": "Answer", "text": "Track both, but judge yourself in R. R is one unit of risk, so a 2R result is the same quality of trade whether the account is 2,000 dollars or 200,000. Dollars tell you what happened to the balance; R tells you whether the decisions were any good, and it makes a run of trades comparable even as the account size changes underneath them."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Profit and Loss Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Stocks, Futures &amp; Forex</span>
+        <h1>Trading Profit and Loss Calculator (Net of Costs)</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 27, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/profit-and-loss-calculator.jpg" alt="A vintage brass adding machine on a dark walnut trading desk with a long paper tape curling out of it catching warm gold light" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Profit and loss on a trade is the price difference multiplied by the size and by the value of one price unit, minus costs. This calculator does that for shares, contracts and lots, then shows what is left after commissions and fees, what it is worth as a percentage of the account, and what it is worth in R.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Profit and loss calculator</h3>
+      <div class="row">
+        <div><label for="dir">Direction</label>
+          <select id="dir">
+            <option value="long">Long &mdash; bought first</option>
+            <option value="short">Short &mdash; sold first</option>
+          </select>
+        </div>
+        <div><label for="mult">Value of a 1.00 price move, per unit ($)</label><input id="mult" type="number" inputmode="decimal" value="1" min="0" step="0.01" /></div>
+      </div>
+      <div class="row">
+        <div><label for="entry">Entry fill price</label><input id="entry" type="number" inputmode="decimal" value="41.20" min="0" step="0.01" /></div>
+        <div><label for="exitp">Exit fill price</label><input id="exitp" type="number" inputmode="decimal" value="42.05" min="0" step="0.01" /></div>
+      </div>
+      <div class="row">
+        <div><label for="qty">Size (shares / contracts / units)</label><input id="qty" type="number" inputmode="decimal" value="200" min="0" step="1" /></div>
+        <div><label for="fees">Total costs, round turn ($)</label><input id="fees" type="number" inputmode="decimal" value="2.40" min="0" step="0.01" /></div>
+      </div>
+      <div class="row">
+        <div><label for="acct">Account balance ($)</label><input id="acct" type="number" inputmode="decimal" value="10000" min="0" step="100" /></div>
+        <div><label for="rrisk">Risk on this trade, 1R ($)</label><input id="rrisk" type="number" inputmode="decimal" value="100" min="0" step="10" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Gross P&amp;L</div><div class="v" id="outGross">$170.00</div></div>
+        <div class="stat"><div class="l">Net P&amp;L after costs</div><div class="v" id="outNet">$167.60</div></div>
+        <div class="stat"><div class="l">Return on account</div><div class="v" id="outPct">1.68%</div></div>
+        <div class="stat"><div class="l">Result in R</div><div class="v" id="outR">1.68R</div></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">Set the price-move value to <strong>1</strong> for shares, to the <strong>tick value divided by the tick size</strong> for futures (for example $1.25 &divide; 0.25 = <strong>$5</strong> on Micro E-mini S&amp;P 500), and to your <strong>pip value &times; 10,000</strong> for a four-decimal forex pair. Educational tool, not advice, and it does not calculate tax.</p>
+
+    <h2>The formula, one line at a time</h2>
+    <div class="callout"><b>Gross:</b> (Exit &minus; Entry) &times; size &times; value of a 1.00 move &mdash; reverse the first bracket for a short.<br /><b>Net:</b> gross &minus; commissions &minus; exchange, clearing and regulatory fees &minus; financing.<br /><b>In R:</b> net &divide; the dollar amount that was at risk when you entered.</div>
+    <p>The only part that varies between markets is the middle term. A share moves a dollar and you make a dollar per share. A futures contract moves a point and you make whatever the exchange says a point is worth. A forex lot moves a pip and you make the pip value. Everything else is identical, which is why one calculator handles all three.</p>
+
+    <h2>Three worked examples</h2>
+
+    <h3>Stocks</h3>
+    <p>Long 200 shares at $41.20, out at $42.05. The move is $0.85, so gross is 0.85 &times; 200 = <strong>$170.00</strong>. Take off $2.40 of round-turn commission and fees and the net is <strong>$167.60</strong>. On a $10,000 account that is 1.68%, and if the entry risked $100 it is a <strong>1.68R</strong> result.</p>
+
+    <h3>Futures</h3>
+    <p>Long 3 Micro E-mini S&amp;P 500 contracts, entering at 5,412.00 and exiting at 5,418.00. The move is 6.00 index points. Micro E-mini S&amp;P 500 futures move in minimum increments of 0.25 index points worth <strong>$1.25</strong> per tick (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group contract specifications</a>), so a 1.00-point move is worth $5.00 per contract. Gross is 6.00 &times; 3 &times; $5.00 = <strong>$90.00</strong>, less roughly $4 to $8 in round-turn commissions and exchange fees.</p>
+
+    <h3>Forex</h3>
+    <p>Short one mini lot of EUR/USD at 1.0842, covering at 1.0818. That is 24 pips in your favour, and a mini lot is $1 per pip, so gross is <strong>$24.00</strong>. Subtract the spread you paid on entry and any commission; the <a href="pip-value-calculator.html">pip value calculator</a> handles the per-pip figure for pairs that do not end in USD.</p>
+
+    <h2>The costs the gross number hides</h2>
+    <p>On US equities the fees are small individually and public, which makes them easy to check and easy to underestimate. Two apply on the sell side of every trade:</p>
+    <ul>
+      <li><strong>FINRA Trading Activity Fee</strong> &mdash; <strong>$0.000166 per share</strong> sold, capped at <strong>$8.30 per trade</strong> (<a href="https://www.finra.org/rules-guidance/rulebooks/corporate-organization/section-1-member-regulatory-fees" target="_blank" rel="nofollow noopener">FINRA Schedule A, Section 1</a>).</li>
+      <li><strong>SEC Section 31 fee</strong> &mdash; <strong>$20.60 per million dollars</strong> of covered sales, effective 4 April 2026 (<a href="https://www.finra.org/rules-guidance/notices/information-notice-20260317" target="_blank" rel="nofollow noopener">FINRA Information Notice, 17 March 2026</a>). Rates are reset periodically, so check the current figure.</li>
+      <li><strong>Commission and spread</strong> &mdash; the largest of the three for most retail traders, and the one that scales with how often you trade rather than how much you make.</li>
+    </ul>
+    <p>None of these will decide a single trade. Fifty round turns a week is a different story: friction is a fixed tax on activity and a variable one on profit, which is the arithmetic behind <a href="how-many-trades-per-day.html">how many trades a day is too many</a>.</p>
+
+    <h2>Why R belongs next to the dollars</h2>
+    <p>A dollar figure tells you what happened to the balance. It does not tell you whether the trade was any good, because the same decision produces a different number on a different account. R fixes that: it divides the result by the amount you had at risk, so a 2R win is a 2R win at any account size.</p>
+    <p>Logging both is what makes a record readable a year later. Twenty trades in dollars on a growing account is a chart of your deposits. Twenty trades in R is a chart of your judgement, and it is the input <a href="trading-expectancy.html">expectancy</a> needs. Keep it in the <a href="trading-journal.html">trading journal</a> alongside the reason for entry.</p>
+
+    <h2>Quick reference: what a 1.00 move is worth</h2>
+    <div class="kv"><table>
+      <tr><th>Instrument</th><th>Unit</th><th>Value of a 1.00 move</th><th>Set the multiplier to</th></tr>
+      <tr><td>US stock or ETF</td><td>1 share</td><td>$1.00</td><td>1</td></tr>
+      <tr><td>Micro E-mini S&amp;P 500</td><td>1 contract</td><td>$5.00 per index point</td><td>5</td></tr>
+      <tr><td>E-mini S&amp;P 500</td><td>1 contract</td><td>$50.00 per index point</td><td>50</td></tr>
+      <tr><td>Forex standard lot</td><td>100,000 units</td><td>$100,000 per 1.00 of rate</td><td>100000</td></tr>
+      <tr><td>Forex mini lot</td><td>10,000 units</td><td>$10,000 per 1.00 of rate</td><td>10000</td></tr>
+    </table></div>
+    <p>The forex rows look alarming until you remember that a 1.00 move in EUR/USD is 10,000 pips. The multiplier is large because the price unit is enormous relative to how the pair actually moves.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A callout that arrives with an entry, defined targets and a written invalidation gives you every input this calculator needs before the trade is live &mdash; so the P&amp;L is a range you accepted in advance rather than a surprise you audit afterwards. <em>Trail &amp; protect</em> is the part that shows up here: as targets print and the stop follows, the worst case on the remaining position keeps improving. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate profit and loss on a trade?</h3>
+    <p>Take the exit price minus the entry price for a long, or the entry price minus the exit price for a short, multiply by the position size and by the value of one price unit, then subtract all costs. On 200 shares bought at 41.20 and sold at 42.05, the gross figure is 0.85 multiplied by 200, which is 170 dollars. Commissions and regulatory fees come out of that to give the net result.</p>
+
+    <h3>How do you calculate profit and loss on futures?</h3>
+    <p>Convert the price move into ticks, multiply by the tick value and by the number of contracts. A Micro E-mini S and P 500 contract moves in 0.25 index-point ticks worth 1.25 dollars each, so a 6-point move is 24 ticks, worth 30 dollars per contract. Three contracts therefore make 90 dollars gross, before the round-turn commission and exchange fees are deducted.</p>
+
+    <h3>What is the difference between gross and net profit on a trade?</h3>
+    <p>Gross profit is the price difference multiplied by the size. Net profit is what is left after commissions, exchange and clearing fees, regulatory fees, spread and financing. The gap between the two is small on a single large trade and large on many small ones, which is why an active scalper can show a positive gross record and a negative account balance over the same period.</p>
+
+    <h3>Should I track my results in dollars or in R?</h3>
+    <p>Track both, but judge yourself in R. R is one unit of risk, so a 2R result is the same quality of trade whether the account is 2,000 dollars or 200,000. Dollars tell you what happened to the balance; R tells you whether the decisions were any good, and it makes a run of trades comparable even as the account size changes underneath them.</p>
+
+    <h2>Bottom line</h2>
+    <p>Gross P&amp;L is arithmetic anyone can do in their head. Net P&amp;L, as a percentage of the account and expressed in R, is the number that actually tells you how the month went. Run every closed trade through all four figures and the picture stops flattering you. Tax treatment is a separate question and varies by jurisdiction &mdash; <a href="day-trading-taxes.html">day trading taxes</a> covers the shape of it, and a licensed tax professional should cover your specific case. To size the next trade rather than measure the last one, use the <a href="position-size-calculator.html">position size calculator</a>, and to judge the plan before you take it, use the <a href="risk-reward-calculator.html">risk to reward calculator</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-tick-value.html">Tick Value Explained: How to Calculate Futures P&amp;L</a>
+      <a href="position-size-calculator.html">Position Size Calculator for Stocks &amp; Futures</a>
+      <a href="risk-reward-calculator.html">Risk to Reward Calculator: Ratio, R and Targets</a>
+      <a href="trading-journal.html">How to Keep a Trading Journal That Works</a>
+      <a href="trading-expectancy.html">Trading Expectancy: The Only Number That Matters</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['dir','mult','entry','exitp','qty','fees','acct','rrisk'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.entry) return;
+  var outGross = document.getElementById('outGross'), outNet = document.getElementById('outNet'),
+      outPct = document.getElementById('outPct'), outR = document.getElementById('outR');
+  function num(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+  function money(v){ return (v < 0 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+  function calc(){
+    var lng = el.dir.value === 'long',
+        move = lng ? (num(el.exitp.value) - num(el.entry.value)) : (num(el.entry.value) - num(el.exitp.value)),
+        gross = move * Math.max(0, num(el.qty.value)) * Math.max(0, num(el.mult.value)),
+        net = gross - Math.max(0, num(el.fees.value)),
+        acct = num(el.acct.value), r = num(el.rrisk.value);
+    outGross.textContent = money(gross);
+    outNet.textContent = money(net);
+    outPct.textContent = acct > 0 ? (net / acct * 100).toFixed(2) + '%' : '—';
+    outR.textContent = r > 0 ? (net / r).toFixed(2) + 'R' : '—';
+  }
+  ['mult','entry','exitp','qty','fees','acct','rrisk'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  el.dir.addEventListener('change', calc);
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

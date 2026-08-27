@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Risk to Reward Calculator: Ratio, R and Targets</title>
+<meta name="description" content="Free risk to reward calculator. Enter your entry, stop and target to get the ratio, the R multiple and the win rate that trade needs just to break even." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/risk-reward-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Risk to Reward Calculator: Ratio, R and Targets" />
+<meta property="og:description" content="Three prices decide whether a trade is worth taking. Enter entry, stop and target, and see the ratio, the R multiple and the break-even win rate." />
+<meta property="og:url" content="https://gwhlds.com/hub/risk-reward-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/risk-reward-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Risk to Reward Calculator: Ratio, R and Targets", "description": "A free risk to reward calculator that turns an entry, a stop and a target into a ratio, an R multiple and the break-even win rate that trade implies, with worked long and short examples, a reference table, and an honest account of why a good ratio on paper is not the same as a good ratio after costs.", "image": "https://gwhlds.com/assets/hub/risk-reward-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/risk-reward-calculator.html", "datePublished": "2026-08-27"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Risk to Reward Calculator", "item": "https://gwhlds.com/hub/risk-reward-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate risk to reward on a trade?", "acceptedAnswer": {"@type": "Answer", "text": "Measure the distance from your entry to your stop, measure the distance from your entry to your target, and divide the second by the first. An entry at 100 with a stop at 98 and a target at 106 risks 2 points to make 6, which is a ratio of 3 to 1. The ratio is a property of the three prices only, so it is fixed the moment you place the trade and does not change with your position size."}}, {"@type": "Question", "name": "What is a good risk to reward ratio?", "acceptedAnswer": {"@type": "Answer", "text": "There is no universally correct figure, because the ratio is only half of the equation. A ratio of 2 to 1 needs to be right more than 33.3 percent of the time to break even, while 1 to 1 needs more than 50 percent and 3 to 1 needs more than 25 percent. The right ratio is whichever one your actual win rate can support, which you only learn from a record of your own trades rather than from a rule of thumb."}}, {"@type": "Question", "name": "What does R mean in trading?", "acceptedAnswer": {"@type": "Answer", "text": "R is one unit of risk, meaning the amount you lose if the stop fills. A target at 3R is a target worth three times that amount. Expressing results in R rather than dollars lets you compare a small trade with a large one, because a 2R win is a 2R win whether the account is 2,000 dollars or 200,000. It also stops a run of small wins from disguising one oversized loss."}}, {"@type": "Question", "name": "Does a high risk to reward ratio guarantee profit?", "acceptedAnswer": {"@type": "Answer", "text": "No. A ratio is only a plan, and it becomes real only if the target actually prints before the stop does. Setting a distant target raises the ratio on paper and lowers the probability of reaching it, and costs such as spread, commission and slippage come out of the reward side while adding to the risk side. Nothing in trading guarantees a profit, and any source that suggests otherwise should be treated with suspicion."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Risk to Reward Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Risk</span>
+        <h1>Risk to Reward Calculator: Ratio, R and Targets</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 27, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/risk-reward-calculator.jpg" alt="An antique brass balance scale on a dark desk holding one gold coin against three stacked emerald chips, a blurred candlestick chart glowing behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Risk to reward is the distance from entry to target divided by the distance from entry to stop. Enter those three prices below and the calculator returns the ratio, the R multiple, the dollar risk and reward at your position size, and the win rate that trade would need just to break even.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Risk to reward calculator</h3>
+      <div class="row">
+        <div><label for="dir">Direction</label>
+          <select id="dir">
+            <option value="long">Long &mdash; buying</option>
+            <option value="short">Short &mdash; selling</option>
+          </select>
+        </div>
+        <div><label for="size">Position size (shares / contracts / units)</label><input id="size" type="number" inputmode="decimal" value="100" min="0" step="1" /></div>
+      </div>
+      <div class="row">
+        <div><label for="entry">Entry price</label><input id="entry" type="number" inputmode="decimal" value="100.00" min="0" step="0.01" /></div>
+        <div><label for="stop">Stop price</label><input id="stop" type="number" inputmode="decimal" value="98.00" min="0" step="0.01" /></div>
+      </div>
+      <div class="row">
+        <div><label for="targ">Target price</label><input id="targ" type="number" inputmode="decimal" value="106.00" min="0" step="0.01" /></div>
+        <div><label for="cost">Round-turn cost per unit ($)</label><input id="cost" type="number" inputmode="decimal" value="0" min="0" step="0.01" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Risk to reward</div><div class="v" id="outRR">1 : 3.00</div></div>
+        <div class="stat"><div class="l">Reward in R</div><div class="v" id="outR">3.00R</div></div>
+        <div class="stat"><div class="l">Risk / reward in $</div><div class="v" id="outDol">$200 / $600</div></div>
+        <div class="stat"><div class="l">Break-even win rate</div><div class="v" id="outBE">25.0%</div></div>
+      </div>
+      <p id="outWarn" style="margin-top:14px;font-size:13px;color:var(--ink-400)"></p>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">The cost field lets you see the ratio after friction: it is subtracted from the reward and added to the risk. Educational tool, not advice. A ratio describes a plan, not an outcome &mdash; the target only counts if it actually prints.</p>
+
+    <h2>The formula, and what R means</h2>
+    <p>Two lines of arithmetic, and one idea that makes every other trading number comparable.</p>
+    <div class="callout"><b>Ratio:</b> (Target &minus; Entry) &divide; (Entry &minus; Stop) for a long; reverse the subtractions for a short.<br /><b>R:</b> one R is the distance from entry to stop. A 3R target is three times that distance.</div>
+    <p><strong>R</strong> is the unit that makes trades of different sizes comparable. If you always risk the same fraction of the account, then a 2R win on a $2,000 account and a 2R win on a $200,000 account are the same result expressed in the same units. Twenty trades logged in R tell you something; twenty trades logged in dollars tell you mostly about how your account size changed. That is why the <a href="trading-journal.html">trading journal</a> is worth keeping in R.</p>
+
+    <h2>Two worked examples</h2>
+
+    <h3>A long</h3>
+    <p>Entry 100.00, stop 98.00, target 106.00. Risk is 2.00 per share; reward is 6.00 per share. The ratio is <strong>1 : 3</strong> and the target is <strong>3R</strong>. At 100 shares that is $200 at risk against $600 of planned reward, and the trade needs to work more than <strong>25%</strong> of the time to break even.</p>
+
+    <h3>A short</h3>
+    <p>Entry 4,510 on an index future, stop 4,522, target 4,480. Risk is 12 points; reward is 30 points. The ratio is <strong>1 : 2.5</strong>, or <strong>2.5R</strong>, needing a win rate above <strong>28.6%</strong> to break even. On Micro E-mini S&amp;P 500 futures, where the minimum price fluctuation is 0.25 index points worth <strong>$1.25</strong> per tick (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group contract specifications</a>), 12 points is 48 ticks, so one contract risks $60 to make $150.</p>
+
+    <h2>The break-even win rate table</h2>
+    <p>This is the part of the ratio that most people never work out. Every ratio implies a minimum win rate, and the arithmetic is <em>1 &divide; (1 + ratio)</em>.</p>
+    <div class="kv"><table>
+      <tr><th>Ratio</th><th>Break-even win rate</th><th>Result at 40% wins</th><th>Result at 60% wins</th></tr>
+      <tr><td>1 : 1</td><td>50.0%</td><td>Losing</td><td>Winning</td></tr>
+      <tr><td>1 : 1.5</td><td>40.0%</td><td>Break-even</td><td>Winning</td></tr>
+      <tr><td>1 : 2</td><td>33.3%</td><td>Winning</td><td>Winning</td></tr>
+      <tr><td>1 : 3</td><td>25.0%</td><td>Winning</td><td>Winning</td></tr>
+      <tr><td>1 : 5</td><td>16.7%</td><td>Winning</td><td>Winning</td></tr>
+    </table></div>
+    <p>Read the table in both directions. A 1 : 3 trader can be wrong three times out of four and still grind forward. A 1 : 1 trader has to be right more than half the time forever, which is a far harder standard than it sounds. That is the whole argument behind <a href="why-win-rate-is-overrated.html">why win rate is overrated</a> as a headline number.</p>
+
+    <h2>Why a good ratio on the screen is not a good ratio in the account</h2>
+    <p>The calculator gives you the ratio your three prices imply. Reality applies three deductions to it.</p>
+    <ul>
+      <li><strong>Costs come off the reward and go onto the risk.</strong> A 1 : 2 trade risking $100 that pays $12 in round-turn costs is really risking $112 to make $188 &mdash; a 1 : 1.68 trade. On small positions this is not a rounding error.</li>
+      <li><strong>Distant targets are less likely to print.</strong> You can manufacture any ratio you like by moving the target further away. The probability of reaching it falls at the same time, and the ratio on its own will not tell you that.</li>
+      <li><strong>Stops slip; targets do not.</strong> A limit target fills at your price or not at all, while a stop is a trigger that becomes a market order. The downside tail is longer than the upside one.</li>
+    </ul>
+    <p>The evidence on retail outcomes is a useful reality check here. Analyses by national regulators across the EU found that <strong>74% to 89% of retail investor accounts lose money</strong> trading contracts for difference, with average losses per client ranging from &euro;1,600 to &euro;29,000 (<a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" target="_blank" rel="nofollow noopener">ESMA product intervention measures, 2018</a>). Those accounts were not all using 1 : 1 targets. A ratio is a necessary condition for an edge, not a sufficient one.</p>
+
+    <h2>How to set the target so the ratio means something</h2>
+    <p>The order matters. Set the stop first, at the price where the idea is genuinely wrong &mdash; below the reclaimed level, outside the range, wherever <a href="what-is-invalidation-in-trading.html">invalidation</a> actually lives. Then set the target at the next structural level price is realistically travelling to, not at whatever number makes the ratio look impressive. Only then read the ratio, and let it decide whether the trade is worth taking at all.</p>
+    <p>Trades that fail this test should be skipped rather than improved. Widening a target to rescue a ratio is the same error as tightening a stop to reduce risk: it changes the number without changing the trade. If the honest ratio is 1 : 0.8, the setup is telling you something.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> is exactly this calculation done before the trade exists &mdash; every callout carries an entry, defined targets and a written invalidation, which means the ratio is knowable in advance rather than rationalised afterwards. <em>Trail &amp; protect</em> then changes the arithmetic in your favour: as the first target prints and the stop trails behind it, the R at risk shrinks while the remaining upside stays open. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate risk to reward on a trade?</h3>
+    <p>Measure the distance from your entry to your stop, measure the distance from your entry to your target, and divide the second by the first. An entry at 100 with a stop at 98 and a target at 106 risks 2 points to make 6, which is a ratio of 3 to 1. The ratio is a property of the three prices only, so it is fixed the moment you place the trade and does not change with your position size.</p>
+
+    <h3>What is a good risk to reward ratio?</h3>
+    <p>There is no universally correct figure, because the ratio is only half of the equation. A ratio of 2 to 1 needs to be right more than 33.3 percent of the time to break even, while 1 to 1 needs more than 50 percent and 3 to 1 needs more than 25 percent. The right ratio is whichever one your actual win rate can support, which you only learn from a record of your own trades rather than from a rule of thumb.</p>
+
+    <h3>What does R mean in trading?</h3>
+    <p>R is one unit of risk, meaning the amount you lose if the stop fills. A target at 3R is a target worth three times that amount. Expressing results in R rather than dollars lets you compare a small trade with a large one, because a 2R win is a 2R win whether the account is 2,000 dollars or 200,000. It also stops a run of small wins from disguising one oversized loss.</p>
+
+    <h3>Does a high risk to reward ratio guarantee profit?</h3>
+    <p>No. A ratio is only a plan, and it becomes real only if the target actually prints before the stop does. Setting a distant target raises the ratio on paper and lowers the probability of reaching it, and costs such as spread, commission and slippage come out of the reward side while adding to the risk side. Nothing in trading guarantees a profit, and any source that suggests otherwise should be treated with suspicion.</p>
+
+    <h2>Bottom line</h2>
+    <p>The ratio is the cheapest filter in trading: three prices, one division, and a clear answer about whether a setup deserves your risk. Pair it with an honest record of how often you are actually right and you have the two halves of <a href="trading-expectancy.html">expectancy</a>. For the concept in full, read <a href="risk-reward-ratio.html">the risk-reward ratio explained</a>; for where the ratio sits in the wider framework, start at <a href="risk-management-trading.html">risk management in trading</a>; and to turn the risk side into a size, use the <a href="position-size-calculator.html">position size calculator</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="risk-reward-ratio.html">Risk-Reward Ratio: How to Use It Properly</a>
+      <a href="trading-expectancy.html">Trading Expectancy: The Only Number That Matters</a>
+      <a href="why-win-rate-is-overrated.html">Why Win Rate Is Overrated</a>
+      <a href="position-size-calculator.html">Position Size Calculator for Stocks &amp; Futures</a>
+      <a href="what-is-invalidation-in-trading.html">What Invalidation Means in Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['dir','size','entry','stop','targ','cost'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.entry) return;
+  var outRR = document.getElementById('outRR'), outR = document.getElementById('outR'),
+      outDol = document.getElementById('outDol'), outBE = document.getElementById('outBE'),
+      outWarn = document.getElementById('outWarn');
+  function num(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+  function money(v){ return '$' + v.toLocaleString('en-US', {maximumFractionDigits:0}); }
+  function calc(){
+    var lng = el.dir.value === 'long',
+        e = num(el.entry.value), s = num(el.stop.value), t = num(el.targ.value),
+        qty = Math.max(0, num(el.size.value)), c = Math.max(0, num(el.cost.value));
+    var riskUnit = lng ? (e - s) : (s - e);
+    var rewUnit  = lng ? (t - e) : (e - t);
+    var msg = '';
+    if (riskUnit <= 0) msg = lng ? 'For a long, the stop must sit below the entry.' : 'For a short, the stop must sit above the entry.';
+    else if (rewUnit <= 0) msg = lng ? 'For a long, the target must sit above the entry.' : 'For a short, the target must sit below the entry.';
+    outWarn.textContent = msg;
+    if (msg) { outRR.textContent = '—'; outR.textContent = '—'; outDol.textContent = '—'; outBE.textContent = '—'; return; }
+    var riskNet = riskUnit + c, rewNet = Math.max(0, rewUnit - c);
+    var ratio = riskNet > 0 ? rewNet / riskNet : 0;
+    outRR.textContent = '1 : ' + ratio.toFixed(2);
+    outR.textContent = ratio.toFixed(2) + 'R';
+    outDol.textContent = money(riskNet * qty) + ' / ' + money(rewNet * qty);
+    outBE.textContent = (100 / (1 + ratio)).toFixed(1) + '%';
+  }
+  ['size','entry','stop','targ','cost'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  el.dir.addEventListener('change', calc);
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

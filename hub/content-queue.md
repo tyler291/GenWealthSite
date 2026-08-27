@@ -225,10 +225,10 @@ underneath so it ranks as content, not just a widget.
 
 - [x] Lot size calculator `(covered by lot-size-calculator)`
 - [x] Position size calculator (stocks and futures) `(position-size-calculator)`
-- [ ] Pip value calculator
-- [ ] Risk-to-reward calculator
-- [ ] Profit and loss calculator
-- [ ] Break-even win rate calculator
+- [x] Pip value calculator `(pip-value-calculator)`
+- [x] Risk-to-reward calculator `(risk-reward-calculator)`
+- [x] Profit and loss calculator `(profit-and-loss-calculator)`
+- [x] Break-even win rate calculator `(covered by risk-reward-calculator)`
 - [ ] Compounding / account growth calculator
 - [ ] Drawdown recovery calculator (how much you need to gain back)
 - [ ] Margin requirement calculator
