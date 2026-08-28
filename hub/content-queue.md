@@ -229,9 +229,9 @@ underneath so it ranks as content, not just a widget.
 - [x] Risk-to-reward calculator `(risk-reward-calculator)`
 - [x] Profit and loss calculator `(profit-and-loss-calculator)`
 - [x] Break-even win rate calculator `(covered by risk-reward-calculator)`
-- [ ] Compounding / account growth calculator
-- [ ] Drawdown recovery calculator (how much you need to gain back)
-- [ ] Margin requirement calculator
+- [x] Compounding / account growth calculator `(compounding-calculator)`
+- [x] Drawdown recovery calculator (how much you need to gain back) `(drawdown-recovery-calculator)`
+- [x] Margin requirement calculator `(margin-requirement-calculator)`
 - [ ] Trading expectancy calculator
 
 ---

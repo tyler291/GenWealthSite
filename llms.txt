@@ -183,6 +183,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Analysis Paralysis in Trading: How to Break It](https://gwhlds.com/hub/analysis-paralysis-in-trading.html): the difference between analysis paralysis and fear, why stacked confirmations stop resolving, and how to cut a setup back to one rule.
 - [Patience in Trading: Why Doing Nothing Is a Position](https://gwhlds.com/hub/patience-in-trading.html): why waiting is structurally cheap, how to design a session that assumes no trade, and how to score a no-trade day.
 - [How Professional Traders Think About Being Wrong](https://gwhlds.com/hub/how-traders-think-about-being-wrong.html): outcome bias measured across 692 participants, the four boxes a trade lands in, and why an unplanned winner is the costly one.
+- [Trading Compounding Calculator: Account Growth](https://gwhlds.com/hub/compounding-calculator.html): free compounding calculator with deposits and withdrawals, plus volatility drag, sequence risk and what an advertised 1% a day really compounds to.
+- [Drawdown Recovery Calculator: The Gain You Need](https://gwhlds.com/hub/drawdown-recovery-calculator.html): free calculator turning a peak-to-current loss into the exact gain, dollars and time needed to reach break-even, with the forced-liquidation floor underneath it.
+- [Margin Requirement Calculator: Stocks & Futures](https://gwhlds.com/hub/margin-requirement-calculator.html): free margin calculator returning notional value, initial margin, effective leverage and the maintenance call price across stocks, futures and retail forex.
 
 ## Contact
 

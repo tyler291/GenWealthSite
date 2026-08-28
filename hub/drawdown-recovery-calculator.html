@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Drawdown Recovery Calculator: The Gain You Need</title>
+<meta name="description" content="Free drawdown recovery calculator. Enter your peak and current balance to get the exact percentage gain needed to reach break-even, and how long that takes." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/drawdown-recovery-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Drawdown Recovery Calculator: The Gain You Need" />
+<meta property="og:description" content="A loss of 20% needs a gain of 25% to undo. A loss of 50% needs 100%. Work out the exact gain, the dollars and the time your own drawdown demands." />
+<meta property="og:url" content="https://gwhlds.com/hub/drawdown-recovery-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/drawdown-recovery-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Drawdown Recovery Calculator: The Gain You Need", "description": "A free drawdown recovery calculator that converts a peak-to-current loss into the exact percentage gain, dollar amount and number of periods needed to return to break-even, with the asymmetry table, the forced-liquidation thresholds that sit underneath it, and why cutting size beats pressing after a loss.", "image": "https://gwhlds.com/assets/hub/drawdown-recovery-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/drawdown-recovery-calculator.html", "datePublished": "2026-08-28"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Drawdown Recovery Calculator", "item": "https://gwhlds.com/hub/drawdown-recovery-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate the gain needed to recover from a drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the drawdown by one minus the drawdown, both expressed as decimals. A 20 percent drawdown is 0.20 divided by 0.80, which is 0.25, or a 25 percent gain. A 50 percent drawdown is 0.50 divided by 0.50, which is 1.00, or a 100 percent gain. The required gain is always larger than the loss because it has to be earned on a smaller balance."}}, {"@type": "Question", "name": "Why does a 50% loss need a 100% gain to recover?", "acceptedAnswer": {"@type": "Answer", "text": "Because the gain is calculated on what is left, not on what you had. Losing half of 10,000 dollars leaves 5,000, and getting from 5,000 back to 10,000 means doubling. The percentage is measured against a base that the loss itself shrank, which is why the required gain accelerates far faster than the loss that caused it."}}, {"@type": "Question", "name": "What is a normal drawdown for a day trader?", "acceptedAnswer": {"@type": "Answer", "text": "There is no published figure that applies to an individual account, and any source quoting one without a study behind it is guessing. What can be said is that drawdown is a function of risk per trade and losing streak length rather than of the market, so it is largely a number you choose in advance. Traders who cap risk per trade at 1 percent see far shallower drawdowns than traders who do not cap it at all."}}, {"@type": "Question", "name": "Should you increase position size to recover from a drawdown faster?", "acceptedAnswer": {"@type": "Answer", "text": "Raising size after a loss increases the probability of ruin rather than the probability of recovery, because a larger position is applied to a smaller account. The account that recovers is usually the one that reduced size, kept the same rules and let the arithmetic work slowly. Nothing in trading guarantees a recovery, and no position size makes one certain."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Drawdown Recovery Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Risk</span>
+        <h1>Drawdown Recovery Calculator: The Gain You Need</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 28, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/drawdown-recovery-calculator.jpg" alt="A deep dark canyon cut into a polished floor with a long climbing rope stretching from its floor back up to a lantern at the rim" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A drawdown recovery calculator converts a loss into the gain required to get back to flat. The formula is drawdown divided by one minus the drawdown, so a 20% loss needs a 25% gain and a 50% loss needs 100%. Enter your peak and current balance below for the exact figure, in percent, dollars and time.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Drawdown recovery calculator</h3>
+      <div class="row">
+        <div><label for="peak">Peak (high-water) balance ($)</label><input id="peak" type="number" inputmode="decimal" value="25000" min="0" step="100" /></div>
+        <div><label for="cur">Current balance ($)</label><input id="cur" type="number" inputmode="decimal" value="18750" min="0" step="100" /></div>
+      </div>
+      <div class="row">
+        <div><label for="ret">Average return per period (%)</label><input id="ret" type="number" inputmode="decimal" value="1" step="0.01" /></div>
+        <div><label for="per">Period</label>
+          <select id="per">
+            <option value="trading day" selected>Trading day</option>
+            <option value="week">Week</option>
+            <option value="month">Month</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div><label for="lim">Maximum drawdown you will accept (%)</label><input id="lim" type="number" inputmode="decimal" value="20" min="0" max="100" step="1" /></div>
+        <div><label for="elapsed">Periods already spent in this drawdown</label><input id="elapsed" type="number" inputmode="decimal" value="0" min="0" step="1" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Drawdown from peak</div><div class="v" id="outDD">25.0%</div></div>
+        <div class="stat"><div class="l">Gain needed to break even</div><div class="v" id="outGain">+33.3%</div></div>
+        <div class="stat"><div class="l">Dollars to recover</div><div class="v" id="outDol">$6,250</div></div>
+        <div class="stat"><div class="l">Periods to recover</div><div class="v" id="outPer">29 trading days</div></div>
+      </div>
+      <p id="outWarn" style="margin-top:14px;font-size:13px;color:var(--ink-400)"></p>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">The time estimate assumes the same return every period with no further losses, which is the most optimistic case that exists. Treat it as a floor on how long recovery takes, never as a forecast. Educational tool, not advice.</p>
+
+    <h2>The formula, and why it is not symmetric</h2>
+    <p>A drawdown is the fall from an account&rsquo;s high-water mark to its current value, expressed as a percentage of the peak. The gain required to undo it is always larger than the loss, because the gain is earned on the smaller balance the loss left behind.</p>
+    <div class="callout"><b>Drawdown:</b> (Peak &minus; Current) &divide; Peak<br /><b>Recovery gain:</b> Drawdown &divide; (1 &minus; Drawdown)</div>
+    <p>This is the same asymmetry that drives volatility drag in the <a href="compounding-calculator.html">compounding calculator</a>, seen from the other side. Lose 10% and you need 11.1% back. Lose 40% and you need 66.7%. The gap widens the deeper you go, which is why a rule that caps the size of a single loss is worth more than any rule about how to make gains.</p>
+
+    <h2>The recovery table every trader should know</h2>
+    <p>The right-hand column assumes an unusually good 1% per trading day with no further losses. It is deliberately optimistic, and it is still sobering.</p>
+    <div class="kv"><table>
+      <tr><th>Drawdown</th><th>Gain needed</th><th>$25,000 falls to</th><th>Trading days at 1% a day</th></tr>
+      <tr><td>5%</td><td>+5.3%</td><td>$23,750</td><td>6</td></tr>
+      <tr><td>10%</td><td>+11.1%</td><td>$22,500</td><td>11</td></tr>
+      <tr><td>20%</td><td>+25.0%</td><td>$20,000</td><td>23</td></tr>
+      <tr><td>30%</td><td>+42.9%</td><td>$17,500</td><td>36</td></tr>
+      <tr><td>50%</td><td>+100.0%</td><td>$12,500</td><td>70</td></tr>
+      <tr><td>70%</td><td>+233.3%</td><td>$7,500</td><td>121</td></tr>
+      <tr><td>90%</td><td>+900.0%</td><td>$2,500</td><td>232</td></tr>
+    </table></div>
+    <p>Read the last two rows carefully. A 90% drawdown does not need nine times the effort of a 10% one, it needs roughly eighty times the gain and twenty times the calendar. Deep drawdowns are not a worse version of shallow ones; they are a different category of problem, and most accounts that reach them never come back because the trader runs out of patience or capital first.</p>
+
+    <h2>The floor underneath the arithmetic</h2>
+    <p>On a margin account, the drawdown that matters is not the one that upsets you. It is the one that triggers a forced liquidation, and that level is set by rule rather than by your judgment. FINRA requires equity of at least <strong>25% of the current market value</strong> of long margin-eligible securities, maintained throughout the trading day, and a minimum of <strong>$2,000</strong> to trade on margin at all (<a href="https://www.finra.org/investors/insights/intraday-margin-requirements" target="_blank" rel="nofollow noopener">FINRA, intraday margin requirements</a>). A position opened with the standard 50% initial margin therefore hits maintenance after roughly a <strong>33% adverse move</strong>, at which point the broker can sell to bring the account back into line.</p>
+    <p>Two dates matter here. The new intraday margin standard took effect on <strong>June 4, 2026</strong>, with firms permitted a transition through <strong>October 20, 2027</strong>, and it replaced the old pattern day trader framework and its $25,000 minimum. Repeatedly failing to satisfy an intraday margin deficit can restrict an account for up to <strong>90 days</strong>. The practical consequence is that a leveraged drawdown can be closed out for you before your recovery plan gets a chance to run. The background is in <a href="pattern-day-trader-rule.html">the pattern day trader rule and what changed in 2026</a> and in <a href="what-is-a-margin-call.html">what a margin call actually is</a>, and you can size the requirement itself with the <a href="margin-requirement-calculator.html">margin requirement calculator</a>.</p>
+
+    <h2>What actually gets an account back</h2>
+    <p>The instinct after a drawdown is to trade bigger, because the required gain looks impossible at normal size. That instinct is precisely backwards: a larger position applied to a smaller account raises the odds of ruin faster than it raises the odds of recovery. The arithmetic of <a href="risk-of-ruin.html">risk of ruin</a> does not care how badly you want the money back.</p>
+    <ul>
+      <li><strong>Cut size before you cut rules.</strong> Halving risk per trade roughly halves the depth of the next drawdown while leaving the strategy intact.</li>
+      <li><strong>Cap the day, not just the trade.</strong> A hard <a href="daily-loss-limits.html">daily loss limit</a> is what stops a bad session from becoming the row you never climb out of.</li>
+      <li><strong>Separate a drawdown from a broken system.</strong> A losing streak inside historical norms is variance; a drawdown past anything your record has produced is a signal to stop and review. That distinction is the whole subject of <a href="how-to-survive-a-losing-streak.html">surviving a losing streak</a>.</li>
+      <li><strong>Count the deficit in R, not dollars.</strong> "Down 14R" tells you how many good trades the hole represents. "Down $6,250" mostly tells you how to feel.</li>
+    </ul>
+    <p>Context is worth keeping in view: analyses by national regulators across the EU found that <strong>74% to 89% of retail investor accounts lose money</strong> trading contracts for difference, with average losses per client between &euro;1,600 and &euro;29,000 (<a href="https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors" target="_blank" rel="nofollow noopener">ESMA product intervention measures, 2018</a>). Most of those accounts were not undone by a single catastrophic trade. They were ground down by a series of ordinary ones that were never capped.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Trail &amp; protect</em> exists because the cheapest drawdown is the one that never deepens. When a first target prints and the stop trails behind it, the worst case on that trade stops being a full loss, which is the single most effective way to keep the left-hand column of the table above in single digits. Recovery is mostly a problem you avoid rather than one you solve. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate the gain needed to recover from a drawdown?</h3>
+    <p>Divide the drawdown by one minus the drawdown, both expressed as decimals. A 20 percent drawdown is 0.20 divided by 0.80, which is 0.25, or a 25 percent gain. A 50 percent drawdown is 0.50 divided by 0.50, which is 1.00, or a 100 percent gain. The required gain is always larger than the loss because it has to be earned on a smaller balance.</p>
+
+    <h3>Why does a 50% loss need a 100% gain to recover?</h3>
+    <p>Because the gain is calculated on what is left, not on what you had. Losing half of 10,000 dollars leaves 5,000, and getting from 5,000 back to 10,000 means doubling. The percentage is measured against a base that the loss itself shrank, which is why the required gain accelerates far faster than the loss that caused it.</p>
+
+    <h3>What is a normal drawdown for a day trader?</h3>
+    <p>There is no published figure that applies to an individual account, and any source quoting one without a study behind it is guessing. What can be said is that drawdown is a function of risk per trade and losing streak length rather than of the market, so it is largely a number you choose in advance. Traders who cap risk per trade at 1 percent see far shallower drawdowns than traders who do not cap it at all.</p>
+
+    <h3>Should you increase position size to recover from a drawdown faster?</h3>
+    <p>Raising size after a loss increases the probability of ruin rather than the probability of recovery, because a larger position is applied to a smaller account. The account that recovers is usually the one that reduced size, kept the same rules and let the arithmetic work slowly. Nothing in trading guarantees a recovery, and no position size makes one certain.</p>
+
+    <h2>Bottom line</h2>
+    <p>The recovery formula is not a motivational tool, it is a cost estimate. Run your current drawdown through it before you decide what to do next, and let the number argue for smaller size rather than larger. Then set the cap that keeps you out of the bottom rows of the table permanently, using <a href="drawdown-explained.html">drawdown explained</a> for what counts as normal, <a href="risk-management-trading.html">risk management in trading</a> for the framework it sits inside, and the <a href="position-size-calculator.html">position size calculator</a> to make the cap real on the next trade.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="drawdown-explained.html">Drawdown Explained: How Much Is Normal</a>
+      <a href="risk-of-ruin.html">Risk of Ruin: The Math Nobody Shows You</a>
+      <a href="daily-loss-limits.html">Daily Loss Limits That Actually Hold</a>
+      <a href="how-to-survive-a-losing-streak.html">How to Survive a Losing Streak</a>
+      <a href="compounding-calculator.html">Trading Compounding Calculator: Account Growth</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['peak','cur','ret','per','lim','elapsed'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.peak) return;
+  var outDD = document.getElementById('outDD'), outGain = document.getElementById('outGain'),
+      outDol = document.getElementById('outDol'), outPer = document.getElementById('outPer'),
+      outWarn = document.getElementById('outWarn');
+  function num(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+  function money(v){ return '$' + v.toLocaleString('en-US', {maximumFractionDigits:0}); }
+  function calc(){
+    var pk = Math.max(0, num(el.peak.value)),
+        cu = Math.max(0, num(el.cur.value)),
+        r  = num(el.ret.value) / 100,
+        lim = Math.max(0, num(el.lim.value)) / 100,
+        el0 = Math.max(0, Math.round(num(el.elapsed.value))),
+        unit = el.per.value;
+    if (pk <= 0) {
+      outWarn.textContent = 'Enter a peak balance above zero.';
+      outDD.textContent = '—'; outGain.textContent = '—'; outDol.textContent = '—'; outPer.textContent = '—';
+      return;
+    }
+    if (cu >= pk) {
+      outDD.textContent = '0.0%'; outGain.textContent = '+0.0%'; outDol.textContent = '$0'; outPer.textContent = '0';
+      outWarn.textContent = 'The current balance is at or above the peak, so there is no drawdown to recover.';
+      return;
+    }
+    var dd = (pk - cu) / pk;
+    var gain = dd / (1 - dd);
+    outDD.textContent = (dd * 100).toFixed(1) + '%';
+    outGain.textContent = '+' + (gain * 100).toLocaleString('en-US', {maximumFractionDigits: gain >= 10 ? 0 : 1}) + '%';
+    outDol.textContent = money(pk - cu);
+    var msg = '';
+    if (cu <= 0) {
+      outPer.textContent = 'never';
+      msg = 'A balance of zero cannot be recovered by a percentage gain. This is what risk of ruin means in practice.';
+    } else if (r <= 0) {
+      outPer.textContent = '—';
+      msg = 'Recovery needs a positive average return per period.';
+    } else {
+      var n = Math.ceil(Math.log(pk / cu) / Math.log(1 + r));
+      outPer.textContent = n.toLocaleString('en-US') + ' ' + unit + (n === 1 ? '' : 's');
+      msg = 'At ' + (r * 100).toFixed(2) + '% per ' + unit + ' with no further losses, break-even arrives in ' + n + ' ' + unit + (n === 1 ? '' : 's') + '.';
+      if (el0 > 0) msg += ' You are already ' + el0 + ' ' + unit + (el0 === 1 ? '' : 's') + ' into this drawdown.';
+    }
+    if (lim > 0 && dd > lim) {
+      msg += ' You are ' + ((dd - lim) * 100).toFixed(1) + ' percentage points past the maximum drawdown you set for yourself.';
+    }
+    outWarn.textContent = msg;
+  }
+  ['peak','cur','ret','lim','elapsed'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  el.per.addEventListener('change', calc);
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

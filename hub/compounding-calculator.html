@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Trading Compounding Calculator: Account Growth</title>
+<meta name="description" content="Free trading compounding calculator. Enter a starting balance, a return per period and withdrawals to see real account growth, and why 1% a day is fiction." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/compounding-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Trading Compounding Calculator: Account Growth" />
+<meta property="og:description" content="Compound a trading account forward day by day, week by week or month by month, with withdrawals, deposits and an honest look at what the curve leaves out." />
+<meta property="og:url" content="https://gwhlds.com/hub/compounding-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/compounding-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Trading Compounding Calculator: Account Growth", "description": "A free compounding calculator for trading accounts that projects a balance forward per trading day, week or month with deposits and withdrawals, plus a plain explanation of volatility drag, sequence risk and why the smooth curve almost never arrives.", "image": "https://gwhlds.com/assets/hub/compounding-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/compounding-calculator.html", "datePublished": "2026-08-28"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Trading Compounding Calculator", "item": "https://gwhlds.com/hub/compounding-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate compounding on a trading account?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the balance by one plus the return for each period in turn, rather than adding the returns together. A 2 percent gain on 10,000 dollars leaves 10,200, and the next 2 percent is earned on 10,200 rather than on 10,000. Over many periods the ending balance is the starting balance multiplied by one plus the periodic return raised to the power of the number of periods, adjusted for any money you add or take out along the way."}}, {"@type": "Question", "name": "Is 1% a day realistic in trading?", "acceptedAnswer": {"@type": "Answer", "text": "No. One percent a day compounded across a 252-day trading year multiplies an account by more than twelve times, which would turn 5,000 dollars into roughly 61,000 in a single year and into more than 9 million in four. Nothing in the public record supports that rate being sustained. In a study of Brazilian equity futures day traders who persisted for more than 300 days, 97 percent lost money and only 0.4 percent earned more than a bank teller."}}, {"@type": "Question", "name": "Why does my account not compound the way the calculator shows?", "acceptedAnswer": {"@type": "Answer", "text": "Because real returns vary, and variance costs you. A 50 percent gain followed by a 50 percent loss leaves 75 percent of what you started with even though the two returns average to zero. This gap between the average return and the compounded return is called volatility drag, and it grows with the size of the swings. A smoother equity curve compounds faster than a jagged one with the same average."}}, {"@type": "Question", "name": "Should you compound a trading account or withdraw the profits?", "acceptedAnswer": {"@type": "Answer", "text": "That is a personal financial decision rather than a trading one, and a licensed professional is the right person to ask about your own circumstances. Mechanically, withdrawals slow compounding because every dollar taken out stops earning, while leaving profits in raises the dollar value of every future percentage move, which raises the dollar value of the losses too. Many traders withdraw a fixed share of profits and compound the rest so both sides are bounded."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Trading Compounding Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Risk</span>
+        <h1>Trading Compounding Calculator: Account Growth</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 28, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/compounding-calculator.jpg" alt="A spiral staircase built from stacked gold coins rising out of darkness with a faint glowing equity curve behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Compounding means each period&rsquo;s return is earned on the balance the previous period left behind, so gains and losses both multiply rather than add. Enter a starting balance, an average return per period and any deposits or withdrawals below, and the calculator returns the ending balance, the total growth and the equivalent annual rate.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Compounding calculator</h3>
+      <div class="row">
+        <div><label for="start">Starting balance ($)</label><input id="start" type="number" inputmode="decimal" value="5000" min="0" step="100" /></div>
+        <div><label for="per">Period</label>
+          <select id="per">
+            <option value="252">Per trading day (252 / year)</option>
+            <option value="52">Per week (52 / year)</option>
+            <option value="12" selected>Per month (12 / year)</option>
+            <option value="1">Per year</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div><label for="ret">Average return per period (%)</label><input id="ret" type="number" inputmode="decimal" value="3" step="0.01" /></div>
+        <div><label for="yrs">Number of years</label><input id="yrs" type="number" inputmode="decimal" value="3" min="0" max="50" step="0.5" /></div>
+      </div>
+      <div class="row">
+        <div><label for="dep">Deposit each period ($)</label><input id="dep" type="number" inputmode="decimal" value="0" min="0" step="50" /></div>
+        <div><label for="wd">Withdrawal each period ($)</label><input id="wd" type="number" inputmode="decimal" value="0" min="0" step="50" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Ending balance</div><div class="v" id="outEnd">$14,491</div></div>
+        <div class="stat"><div class="l">Total growth</div><div class="v" id="outTot">+189.8%</div></div>
+        <div class="stat"><div class="l">Equivalent per year</div><div class="v" id="outCagr">+42.6%</div></div>
+        <div class="stat"><div class="l">Cash withdrawn</div><div class="v" id="outCash">$0</div></div>
+      </div>
+      <p id="outWarn" style="margin-top:14px;font-size:13px;color:var(--ink-400)"></p>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">The model applies the return, then the deposit, then the withdrawal, once per period. It assumes the same return every period, which no trading account has ever produced. Educational tool, not advice, and not a projection of what any account will do.</p>
+
+    <h2>The formula, and the one thing it hides</h2>
+    <p>Compounding is a single line of arithmetic. The ending balance equals the starting balance multiplied by (1 + r) raised to the power of n, where r is the return per period and n is the number of periods. With $5,000 at 3% a month for three years, that is 5,000 &times; 1.03<sup>36</sup>, or about $14,500.</p>
+    <div class="callout"><b>Compound:</b> Balance<sub>n</sub> = Balance<sub>0</sub> &times; (1 + r)<sup>n</sup><br /><b>Volatility drag:</b> compounded return &asymp; average return &minus; (variance &divide; 2)</div>
+    <p>The second line is the one a growth curve never shows you. Percentage moves are not symmetric: a 50% gain followed by a 50% loss leaves you with 75 cents on the dollar, even though the two returns average to zero. The wider your results swing, the further your actual compounded return falls below your average return. That is why a boring, consistent month beats a spectacular one followed by a bad one, and why <a href="risk-management-trading.html">risk management in trading</a> is a growth strategy rather than a defensive one.</p>
+
+    <h2>What 1% a day actually compounds to</h2>
+    <p>The most common claim in trading marketing is a small daily percentage. Run it through the arithmetic and it stops sounding modest. A US equity year contains roughly 252 trading days, so a 1% daily return is 1.01<sup>252</sup>, a multiple of about 12.3 on the starting balance.</p>
+    <div class="kv"><table>
+      <tr><th>Claimed return</th><th>Multiple after 252 trading days</th><th>$5,000 becomes</th><th>$5,000 after 4 years</th></tr>
+      <tr><td>0.25% per day</td><td>1.88&times;</td><td>$9,379</td><td>$30,900</td></tr>
+      <tr><td>0.5% per day</td><td>3.51&times;</td><td>$17,571</td><td>$216,900</td></tr>
+      <tr><td>1% per day</td><td>12.27&times;</td><td>$61,372</td><td>$9.2 million</td></tr>
+      <tr><td>2% per day</td><td>146.9&times;</td><td>$734,500</td><td>$15.8 billion</td></tr>
+    </table></div>
+    <p>The last row is the tell. If 2% a day were repeatable, four years of it would make a single retail account larger than most listed companies, which is its own proof that it is not. The useful reading of this table is not that compounding is fake. It is that any advertised daily percentage should be multiplied out to a year before you believe it.</p>
+    <p>The evidence on what persistence alone produces is unkind. In a study of Brazilian equity futures day traders who kept trading for more than 300 days between 2013 and 2015, <strong>97% lost money</strong> and only <strong>0.4% earned more than a bank teller</strong>, with the single best performer averaging US$310 a day against a US$2,560 daily standard deviation (<a href="https://ideas.repec.org/p/spa/wpaper/2019wpecon47.html" target="_blank" rel="nofollow noopener">Chague, De-Losso &amp; Giovannetti, University of S&atilde;o Paulo working paper, 2019</a>). A compounding curve describes arithmetic. It does not forecast skill.</p>
+
+    <h2>Sequence matters more than the average</h2>
+    <p>Two traders can finish a year with the same average monthly return and very different balances, because the order of the returns changes the base each later return is applied to. A large loss early does more damage than the same loss late, since it shrinks the capital every subsequent gain is calculated on.</p>
+    <ul>
+      <li><strong>Losses need back more than they took.</strong> Down 20% requires +25% to return to flat; down 50% requires +100%. Work the exact number for your own account with the <a href="drawdown-recovery-calculator.html">drawdown recovery calculator</a>.</li>
+      <li><strong>Fixed-fractional sizing compounds on its own.</strong> Risking a set percentage of the balance means position size rises with the account and falls after a drawdown, which is the mechanism behind <a href="the-1-percent-rule-in-trading.html">the 1% rule in trading</a>.</li>
+      <li><strong>Size that outruns skill undoes the curve.</strong> A bigger balance is not by itself a reason to raise risk per trade at the same pace. See <a href="how-to-scale-up-position-size.html">how to scale up position size</a>.</li>
+    </ul>
+
+    <h2>Withdrawals, deposits and the honest version of the curve</h2>
+    <p>Most compounding calculators assume nothing ever leaves the account. Real traders take money out, which is why the tool above has a withdrawal field. Every dollar withdrawn stops earning, so a steady withdrawal flattens the curve sharply over long horizons. The same is true in reverse for regular deposits, which do far more work in the early years than a higher return does.</p>
+    <p>There is also a ceiling nobody models: liquidity. A strategy that scalps a thin instrument cannot be run at fifty times the size without moving the market against itself. Compounding assumes the same return is available at every account size, and for most short-term strategies that assumption breaks long before the curve does. To sanity-check the mechanics of compound growth outside a trading context, the SEC investor education site publishes a free <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="nofollow noopener">compound interest calculator</a> that applies the same formula to savings.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Compounding is what happens to an account that survives long enough for a positive <a href="trading-expectancy.html">expectancy</a> to show up. <em>Trail &amp; protect</em> is the part that keeps the multiplier above 1: as targets print, the stop trails behind them, so periods that would have been large negatives become small ones. You cannot compound a balance you have already handed back. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate compounding on a trading account?</h3>
+    <p>Multiply the balance by one plus the return for each period in turn, rather than adding the returns together. A 2 percent gain on 10,000 dollars leaves 10,200, and the next 2 percent is earned on 10,200 rather than on 10,000. Over many periods the ending balance is the starting balance multiplied by one plus the periodic return raised to the power of the number of periods, adjusted for any money you add or take out along the way.</p>
+
+    <h3>Is 1% a day realistic in trading?</h3>
+    <p>No. One percent a day compounded across a 252-day trading year multiplies an account by more than twelve times, which would turn 5,000 dollars into roughly 61,000 in a single year and into more than 9 million in four. Nothing in the public record supports that rate being sustained. In a study of Brazilian equity futures day traders who persisted for more than 300 days, 97 percent lost money and only 0.4 percent earned more than a bank teller.</p>
+
+    <h3>Why does my account not compound the way the calculator shows?</h3>
+    <p>Because real returns vary, and variance costs you. A 50 percent gain followed by a 50 percent loss leaves 75 percent of what you started with even though the two returns average to zero. This gap between the average return and the compounded return is called volatility drag, and it grows with the size of the swings. A smoother equity curve compounds faster than a jagged one with the same average.</p>
+
+    <h3>Should you compound a trading account or withdraw the profits?</h3>
+    <p>That is a personal financial decision rather than a trading one, and a licensed professional is the right person to ask about your own circumstances. Mechanically, withdrawals slow compounding because every dollar taken out stops earning, while leaving profits in raises the dollar value of every future percentage move, which raises the dollar value of the losses too. Many traders withdraw a fixed share of profits and compound the rest so both sides are bounded.</p>
+
+    <h2>Bottom line</h2>
+    <p>Use the calculator as a bad-claim detector first and a plan second. Multiply any advertised daily or weekly return out to a full year and most of them fall apart without any argument from you. Then run your own honest numbers, halve them, and see whether the curve still justifies the risk it requires. The inputs that actually move it are consistency and survival rather than ambition, which is why the useful next reads are <a href="drawdown-explained.html">drawdown explained</a>, <a href="position-sizing-from-risk.html">position sizing from risk</a> and the <a href="position-size-calculator.html">position size calculator</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="drawdown-recovery-calculator.html">Drawdown Recovery Calculator: The Gain You Need</a>
+      <a href="the-1-percent-rule-in-trading.html">The 1% Rule in Trading, and Why It Works</a>
+      <a href="how-to-scale-up-position-size.html">How to Scale Up Position Size Safely</a>
+      <a href="trading-expectancy.html">Trading Expectancy: The Only Number That Matters</a>
+      <a href="risk-of-ruin.html">Risk of Ruin: The Math Nobody Shows You</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['start','per','ret','yrs','dep','wd'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.start) return;
+  var outEnd = document.getElementById('outEnd'), outTot = document.getElementById('outTot'),
+      outCagr = document.getElementById('outCagr'), outCash = document.getElementById('outCash'),
+      outWarn = document.getElementById('outWarn');
+  function num(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+  function money(v){
+    if (!isFinite(v)) return '—';
+    if (Math.abs(v) >= 1e9) return '$' + (v/1e9).toFixed(2) + 'bn';
+    if (Math.abs(v) >= 1e6) return '$' + (v/1e6).toFixed(2) + 'm';
+    return '$' + v.toLocaleString('en-US', {maximumFractionDigits:0});
+  }
+  function pct(v){
+    if (!isFinite(v)) return '—';
+    return (v >= 0 ? '+' : '') + v.toLocaleString('en-US', {maximumFractionDigits: Math.abs(v) >= 1000 ? 0 : 1}) + '%';
+  }
+  function calc(){
+    var b0 = Math.max(0, num(el.start.value)),
+        pp = num(el.per.value) || 12,
+        r  = num(el.ret.value) / 100,
+        yr = Math.min(50, Math.max(0, num(el.yrs.value))),
+        dp = Math.max(0, num(el.dep.value)),
+        wd = Math.max(0, num(el.wd.value));
+    var n = Math.round(pp * yr);
+    var msg = '';
+    if (b0 <= 0) msg = 'Enter a starting balance above zero.';
+    else if (n <= 0) msg = 'Enter a number of years above zero.';
+    if (msg) { outWarn.textContent = msg; outEnd.textContent = '—'; outTot.textContent = '—'; outCagr.textContent = '—'; outCash.textContent = '—'; return; }
+    var bal = b0, taken = 0, added = 0, busted = false;
+    for (var i = 0; i < n; i++) {
+      bal = bal * (1 + r) + dp;
+      added += dp;
+      var take = Math.min(wd, Math.max(0, bal));
+      bal -= take; taken += take;
+      if (bal <= 0) { bal = 0; busted = true; break; }
+      if (!isFinite(bal)) break;
+    }
+    var invested = b0 + added;
+    var totalValue = bal + taken;
+    outEnd.textContent = money(bal);
+    outTot.textContent = invested > 0 ? pct((totalValue / invested - 1) * 100) : '—';
+    outCagr.textContent = (yr > 0 && invested > 0 && totalValue > 0)
+      ? pct((Math.pow(totalValue / invested, 1 / yr) - 1) * 100) : '—';
+    outCash.textContent = money(taken);
+    outWarn.textContent = busted
+      ? 'The balance reached zero before the end of the period, so compounding stops there. That is what a withdrawal rate or a negative return beyond the account tolerance actually does.'
+      : (dp > 0 || wd > 0 ? 'Growth figures include cash flows: they compare the total value created against every dollar put in.' : '');
+  }
+  ['start','ret','yrs','dep','wd'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  el.per.addEventListener('change', calc);
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

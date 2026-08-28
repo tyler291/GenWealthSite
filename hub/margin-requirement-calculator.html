@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Margin Requirement Calculator: Stocks &amp; Futures</title>
+<meta name="description" content="Free margin requirement calculator for stocks, futures and forex. Get the notional value, initial margin, effective leverage and the price that triggers a call." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/margin-requirement-calculator.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Margin Requirement Calculator: Stocks &amp; Futures" />
+<meta property="og:description" content="Margin means three different things in three markets. Work out what a position ties up, what it controls, and how far price can move before the call arrives." />
+<meta property="og:url" content="https://gwhlds.com/hub/margin-requirement-calculator.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/margin-requirement-calculator.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Margin Requirement Calculator: Stocks and Futures", "description": "A free margin requirement calculator for stocks, futures and forex that returns the notional value a position controls, the initial margin it ties up, the effective leverage that implies and the price at which a maintenance call is triggered, with the current US rules and dates behind each figure.", "image": "https://gwhlds.com/assets/hub/margin-requirement-calculator.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/margin-requirement-calculator.html", "datePublished": "2026-08-28"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Margin Requirement Calculator", "item": "https://gwhlds.com/hub/margin-requirement-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate a margin requirement?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the price by the quantity and by the contract multiplier to get the notional value, then multiply that notional value by the initial margin percentage. Two hundred shares at 50 dollars is 10,000 dollars of notional, and at a 50 percent initial requirement the position ties up 5,000 dollars of your own equity. Futures margin is usually quoted as a fixed dollar amount per contract instead, which you can convert to a percentage by dividing it by the notional value."}}, {"@type": "Question", "name": "What is the maintenance margin requirement in the US?", "acceptedAnswer": {"@type": "Answer", "text": "FINRA requires equity of at least 25 percent of the current market value of long margin-eligible equity securities, maintained throughout the trading day, and a minimum of 2,000 dollars in equity to trade on margin at all. Brokerage firms are free to set stricter house requirements, and many do on volatile or low-priced stocks."}}, {"@type": "Question", "name": "At what price do you get a margin call?", "acceptedAnswer": {"@type": "Answer", "text": "For a long position, the maintenance call price is the entry price multiplied by one minus the initial margin rate, divided by one minus the maintenance margin rate. A stock bought at 100 dollars with 50 percent initial margin and a 25 percent maintenance requirement triggers at about 66.67 dollars, which is a fall of one third. Raising the initial margin you post moves that trigger further away."}}, {"@type": "Question", "name": "Is futures margin the same as stock margin?", "acceptedAnswer": {"@type": "Answer", "text": "No. Stock margin is a loan from the broker, and you pay interest on the borrowed portion. Futures margin is a performance bond: a good-faith deposit set by the exchange and clearing house so both sides of the contract can cover a day of adverse movement. No money is borrowed, nothing is lent, and the requirement can be raised by the exchange at short notice when volatility rises."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Margin Requirement Calculator</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Tool &middot; Risk</span>
+        <h1>Margin Requirement Calculator: Stocks &amp; Futures</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">August 28, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/margin-requirement-calculator.jpg" alt="A brass vault door ajar on dark marble with a small stack of gold bars on a scale beside a much larger translucent emerald cube" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A margin requirement is the equity a broker or clearing house demands before you can hold a position. Enter the price, quantity, contract multiplier and margin rates below and the calculator returns the notional value the position controls, the cash it ties up, the effective leverage that implies, and the price at which a maintenance call is triggered.</p>
+
+    <div class="calc">
+      <h3 style="font-family:var(--font-serif);color:var(--cream);font-size:20px">Margin requirement calculator</h3>
+      <div class="row">
+        <div><label for="mkt">Market</label>
+          <select id="mkt">
+            <option value="stock" selected>US stocks &mdash; Regulation T</option>
+            <option value="futures">Futures &mdash; performance bond</option>
+            <option value="forex">Retail forex &mdash; leverage cap</option>
+          </select>
+        </div>
+        <div><label for="price">Price</label><input id="price" type="number" inputmode="decimal" value="50.00" min="0" step="0.01" /></div>
+      </div>
+      <div class="row">
+        <div><label for="qty">Quantity (shares / contracts / lots)</label><input id="qty" type="number" inputmode="decimal" value="200" min="0" step="1" /></div>
+        <div><label for="mult">Contract multiplier</label><input id="mult" type="number" inputmode="decimal" value="1" min="0" step="1" /></div>
+      </div>
+      <div class="row">
+        <div><label for="init">Initial margin (% of notional)</label><input id="init" type="number" inputmode="decimal" value="50" min="0.01" max="100" step="0.01" /></div>
+        <div><label for="maint">Maintenance margin (% of notional)</label><input id="maint" type="number" inputmode="decimal" value="25" min="0" max="100" step="0.01" /></div>
+      </div>
+      <div class="calc-out">
+        <div class="stat"><div class="l">Notional value</div><div class="v" id="outNot">$10,000</div></div>
+        <div class="stat"><div class="l">Initial margin required</div><div class="v" id="outInit">$5,000</div></div>
+        <div class="stat"><div class="l">Effective leverage</div><div class="v" id="outLev">2.0 : 1</div></div>
+        <div class="stat"><div class="l">Margin call price (long)</div><div class="v" id="outCall">$33.33</div></div>
+      </div>
+      <p id="outWarn" style="margin-top:14px;font-size:13px;color:var(--ink-400)"></p>
+    </div>
+    <p style="font-size:13px;color:var(--ink-500)">Selecting a market loads typical inputs so you can see the shape of each one. They are illustrative defaults, not live requirements &mdash; your broker and, for futures, the exchange set the real numbers, and they change. Educational tool, not advice.</p>
+
+    <h2>The formulas behind the four boxes</h2>
+    <p>All four outputs come from three multiplications and one division. Notional value is what the position controls. Initial margin is what it costs you to control it. Leverage is the ratio between them.</p>
+    <div class="callout"><b>Notional:</b> Price &times; Quantity &times; Multiplier<br /><b>Initial margin:</b> Notional &times; initial rate<br /><b>Leverage:</b> Notional &divide; Initial margin<br /><b>Long call price:</b> Entry &times; (1 &minus; initial rate) &divide; (1 &minus; maintenance rate)</div>
+    <p>The last line is the one worth memorising. It says that the distance between your entry and a maintenance call depends only on the two margin rates, not on the size of the position. At a 50% initial rate and a 25% maintenance rate, the trigger sits exactly one third below the entry, whether you bought 20 shares or 20,000.</p>
+
+    <h2>Margin means three different things in three markets</h2>
+    <p>Traders move between markets and carry the wrong mental model with them. These are genuinely different mechanisms that happen to share a word.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>US stocks</th><th>Futures</th><th>Retail forex</th></tr>
+      <tr><td>What margin is</td><td>A loan from the broker</td><td>A performance bond</td><td>Collateral against a leveraged position</td></tr>
+      <tr><td>Who sets it</td><td>Regulation T, FINRA, plus house rules</td><td>The exchange and clearing house</td><td>The broker, within regulatory leverage caps</td></tr>
+      <tr><td>Interest charged</td><td>Yes, on the borrowed portion</td><td>No, nothing is borrowed</td><td>Via overnight swap rather than margin interest</td></tr>
+      <tr><td>Quoted as</td><td>A percentage of position value</td><td>A dollar amount per contract</td><td>A percentage, or as a leverage ratio</td></tr>
+      <tr><td>Changes when</td><td>The firm revises house requirements</td><td>Volatility rises &mdash; often at short notice</td><td>Around events, or by regulation</td></tr>
+    </table></div>
+
+    <h3>Stocks: Regulation T and the 25% floor</h3>
+    <p>A standard US margin account lets you buy roughly twice your equity, and FINRA requires that equity stay at or above <strong>25% of the current market value</strong> of long margin-eligible securities, maintained throughout the trading day, with a minimum of <strong>$2,000</strong> to trade on margin at all (<a href="https://www.finra.org/investors/insights/intraday-margin-requirements" target="_blank" rel="nofollow noopener">FINRA, intraday margin requirements</a>). The intraday standard took effect on <strong>June 4, 2026</strong>, with firms allowed a transition through <strong>October 20, 2027</strong>, and it replaced the old pattern day trader framework and its $25,000 minimum. Failing repeatedly to meet an intraday deficit can restrict an account for up to <strong>90 days</strong>. What changed and what did not is set out in <a href="pattern-day-trader-rule.html">the pattern day trader rule in 2026</a>.</p>
+
+    <h3>Futures: a performance bond, not a down payment</h3>
+    <p>Futures margin is a good-faith deposit the clearing house requires from both sides so each can cover a day of adverse movement, calculated portfolio-wide by a risk model rather than as a flat percentage &mdash; the CFTC's technical description of the SPAN methodology sets out how those scenarios are built (<a href="https://www.cftc.gov/sites/default/files/files/tm/tmspan_margining043001.pdf" target="_blank" rel="nofollow noopener">CFTC, standard portfolio analysis of risk</a>). Because it is quoted per contract in dollars, you convert it to a percentage by dividing by notional. E-mini S&amp;P 500 futures carry a multiplier of <strong>$50 per index point</strong> (<a href="https://www.cmegroup.com/markets/equities/sp/e-mini-sandp500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group contract specifications</a>), so at an index level of 5,500 one contract represents $275,000 of notional exposure. If your broker quotes $18,000 of initial margin on that contract, the requirement is 6.5% of notional and the leverage is about 15 to 1. Check the current figure before you rely on it &mdash; exchange margins are reset regularly, and the mechanics are covered in <a href="futures-margin-explained.html">futures margin explained</a>.</p>
+
+    <h3>Forex: the same number wearing a leverage ratio</h3>
+    <p>Retail forex brokers usually quote leverage instead of margin, and the two are reciprocals: 50:1 leverage is a 2% margin requirement, 30:1 is 3.33%, 20:1 is 5%. A standard lot is 100,000 units of the base currency, so a single lot of a pair trading at 1.0850 is $108,500 of notional and needs $2,170 at 2%. The caps differ sharply by jurisdiction, so confirm the rules that apply where your account is held.</p>
+
+    <h2>Why the margin number is not a risk number</h2>
+    <p>This is the most expensive misunderstanding in the tool above. Margin tells you what a position <em>costs to open</em>. It says nothing about what it can <em>lose</em>, and the two are unrelated for anything leveraged. A futures position requiring $18,000 can lose far more than $18,000 in a fast market, because the loss is a function of the notional value, not of the deposit.</p>
+    <ul>
+      <li><strong>Size from the stop, not from the requirement.</strong> The correct question is how many units make your stop distance equal your risk budget &mdash; the arithmetic is in <a href="position-sizing-from-risk.html">position sizing from risk</a> and the <a href="position-size-calculator.html">position size calculator</a>.</li>
+      <li><strong>Maximum affordable size is a trap.</strong> "The account allows six contracts" is a statement about margin. It is never a statement about how many you should hold.</li>
+      <li><strong>Requirements move against you at the worst time.</strong> Exchanges raise margin when volatility spikes, which is exactly when open positions are already under pressure.</li>
+      <li><strong>A call is not the same as a loss limit.</strong> By the time the call arrives you are usually already deep into the territory mapped by the <a href="drawdown-recovery-calculator.html">drawdown recovery calculator</a>.</li>
+    </ul>
+    <p>The relationship between margin, leverage and the size of a loss is unpacked in <a href="what-is-leverage-in-trading.html">what leverage in trading really is</a>, and what happens when the requirement is breached is in <a href="what-is-a-margin-call.html">what a margin call is and how to avoid one</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means the entry, the targets and the written invalidation exist before the position does &mdash; which means position size is decided by the distance to invalidation, and the margin requirement is only a check that the trade is possible at all. A requirement you can meet is a permission, never a plan. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do you calculate a margin requirement?</h3>
+    <p>Multiply the price by the quantity and by the contract multiplier to get the notional value, then multiply that notional value by the initial margin percentage. Two hundred shares at 50 dollars is 10,000 dollars of notional, and at a 50 percent initial requirement the position ties up 5,000 dollars of your own equity. Futures margin is usually quoted as a fixed dollar amount per contract instead, which you can convert to a percentage by dividing it by the notional value.</p>
+
+    <h3>What is the maintenance margin requirement in the US?</h3>
+    <p>FINRA requires equity of at least 25 percent of the current market value of long margin-eligible equity securities, maintained throughout the trading day, and a minimum of 2,000 dollars in equity to trade on margin at all. Brokerage firms are free to set stricter house requirements, and many do on volatile or low-priced stocks.</p>
+
+    <h3>At what price do you get a margin call?</h3>
+    <p>For a long position, the maintenance call price is the entry price multiplied by one minus the initial margin rate, divided by one minus the maintenance margin rate. A stock bought at 100 dollars with 50 percent initial margin and a 25 percent maintenance requirement triggers at about 66.67 dollars, which is a fall of one third. Raising the initial margin you post moves that trigger further away.</p>
+
+    <h3>Is futures margin the same as stock margin?</h3>
+    <p>No. Stock margin is a loan from the broker, and you pay interest on the borrowed portion. Futures margin is a performance bond: a good-faith deposit set by the exchange and clearing house so both sides of the contract can cover a day of adverse movement. No money is borrowed, nothing is lent, and the requirement can be raised by the exchange at short notice when volatility rises.</p>
+
+    <h2>Bottom line</h2>
+    <p>Use the calculator to answer two questions before a trade, and only two: what does this position actually control, and how far can price travel before somebody else starts making decisions for me. Then put the number away and size the trade from your stop instead. Margin sets the ceiling on what is possible; <a href="risk-management-trading.html">risk management in trading</a> sets the floor under what survives.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="futures-margin-explained.html">Futures Margin Explained: Day vs Overnight</a>
+      <a href="what-is-a-margin-call.html">What Is a Margin Call, and How to Avoid One</a>
+      <a href="what-is-leverage-in-trading.html">What Is Leverage in Trading?</a>
+      <a href="pattern-day-trader-rule.html">The Pattern Day Trader Rule: What Changed in 2026</a>
+      <a href="position-size-calculator.html">Position Size Calculator for Stocks &amp; Futures</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Survive first. <span class="g">Compound second.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el = {};
+  ['mkt','price','qty','mult','init','maint'].forEach(function(i){ el[i] = document.getElementById(i); });
+  if(!el.price) return;
+  var outNot = document.getElementById('outNot'), outInit = document.getElementById('outInit'),
+      outLev = document.getElementById('outLev'), outCall = document.getElementById('outCall'),
+      outWarn = document.getElementById('outWarn');
+  var presets = {
+    stock:   {price:'50.00', qty:'200', mult:'1', init:'50', maint:'25'},
+    futures: {price:'5500', qty:'1', mult:'50', init:'6.5', maint:'6'},
+    forex:   {price:'1.0850', qty:'1', mult:'100000', init:'2', maint:'1'}
+  };
+  function num(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+  function money(v){
+    if (!isFinite(v)) return '—';
+    return '$' + v.toLocaleString('en-US', {maximumFractionDigits: v < 100 ? 2 : 0});
+  }
+  function calc(){
+    var p = Math.max(0, num(el.price.value)),
+        q = Math.max(0, num(el.qty.value)),
+        m = Math.max(0, num(el.mult.value)),
+        mi = num(el.init.value) / 100,
+        mm = num(el.maint.value) / 100;
+    var notional = p * q * m;
+    var msg = '';
+    if (notional <= 0) msg = 'Enter a price, a quantity and a multiplier above zero.';
+    else if (mi <= 0) msg = 'The initial margin rate must be above zero.';
+    else if (mm >= mi) msg = 'The maintenance rate should sit below the initial rate, otherwise the position starts in deficit.';
+    else if (mm >= 1) msg = 'The maintenance rate cannot be 100% or more.';
+    var margin = notional * mi;
+    outNot.textContent = money(notional);
+    outInit.textContent = margin > 0 ? money(margin) : '—';
+    outLev.textContent = (mi > 0 && mi <= 1) ? (1 / mi).toFixed(1) + ' : 1' : '—';
+    if (mi > 0 && mm < 1 && mm < mi && p > 0) {
+      var callPrice = p * (1 - mi) / (1 - mm);
+      outCall.textContent = '$' + callPrice.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits: callPrice < 10 ? 4 : 2});
+      if (!msg) {
+        msg = 'A long entered here meets the maintenance requirement until price falls ' +
+              (((p - callPrice) / p) * 100).toFixed(1) + '%. Margin is what the position costs to hold, not what it can lose.';
+      }
+    } else {
+      outCall.textContent = '—';
+    }
+    outWarn.textContent = msg;
+  }
+  el.mkt.addEventListener('change', function(){
+    var d = presets[el.mkt.value];
+    if (d) { el.price.value = d.price; el.qty.value = d.qty; el.mult.value = d.mult; el.init.value = d.init; el.maint.value = d.maint; }
+    calc();
+  });
+  ['price','qty','mult','init','maint'].forEach(function(i){ el[i].addEventListener('input', calc); });
+  calc();
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
