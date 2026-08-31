@@ -232,7 +232,7 @@ underneath so it ranks as content, not just a widget.
 - [x] Compounding / account growth calculator `(compounding-calculator)`
 - [x] Drawdown recovery calculator (how much you need to gain back) `(drawdown-recovery-calculator)`
 - [x] Margin requirement calculator `(margin-requirement-calculator)`
-- [ ] Trading expectancy calculator
+- [x] Trading expectancy calculator `(expectancy-calculator)`
 
 ---
 
@@ -243,8 +243,8 @@ underneath so it ranks as content, not just a widget.
 New cluster. Pillar first, then spokes. Every spoke links up to the pillar and
 sideways to two siblings.
 
-- [ ] Day trading stocks: what is different about equities `[PILLAR]`
-- [ ] How to find stocks to day trade the night before
+- [x] Day trading stocks: what is different about equities `[PILLAR]` `(day-trading-stocks)`
+- [x] How to find stocks to day trade the night before `(how-to-find-stocks-to-day-trade)`
 - [ ] What a stock scanner should actually filter for
 - [ ] How to read Level 2 without being fooled by it
 - [ ] What the tape actually tells you (and what it does not)

@@ -186,6 +186,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Trading Compounding Calculator: Account Growth](https://gwhlds.com/hub/compounding-calculator.html): free compounding calculator with deposits and withdrawals, plus volatility drag, sequence risk and what an advertised 1% a day really compounds to.
 - [Drawdown Recovery Calculator: The Gain You Need](https://gwhlds.com/hub/drawdown-recovery-calculator.html): free calculator turning a peak-to-current loss into the exact gain, dollars and time needed to reach break-even, with the forced-liquidation floor underneath it.
 - [Margin Requirement Calculator: Stocks & Futures](https://gwhlds.com/hub/margin-requirement-calculator.html): free margin calculator returning notional value, initial margin, effective leverage and the maintenance call price across stocks, futures and retail forex.
+- [Trading Expectancy Calculator: Your Edge Per Trade](https://gwhlds.com/hub/expectancy-calculator.html): free expectancy calculator turning win rate, average win, average loss and costs into expectancy per trade in dollars and R, plus the break-even win rate.
+- [Day Trading Stocks: What Is Different About Equities](https://gwhlds.com/hub/day-trading-stocks.html): the equities pillar - instrument selection, limit up-limit down halts, the short-sale locate, the 2026 margin rules and where equity cost really sits.
+- [How to Find Stocks to Day Trade the Night Before](https://gwhlds.com/hub/how-to-find-stocks-to-day-trade.html): the four watchlist filters in order, workable thresholds, why trending lists mislead, and the five lines to write for every name.
 
 ## Contact
 
