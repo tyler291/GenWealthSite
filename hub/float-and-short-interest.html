@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Float and Short Interest: Why a Stock Moves</title>
+<meta name="description" content="Float sets how much stock is really available to trade; short interest shows what is sold against it. What both numbers mean, and how stale they truly are." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/float-and-short-interest.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Float and Short Interest: Why a Stock Moves" />
+<meta property="og:description" content="Two numbers decide how far a stock travels per dollar of buying. Here is what each one measures, where it comes from, and how far behind reality it is." />
+<meta property="og:url" content="https://gwhlds.com/hub/float-and-short-interest.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Float and Short Interest: Why a Stock Moves", "description": "What free float and short interest actually measure, where each number comes from, why FINRA short interest data is already days old when you read it, what days to cover does and does not tell you, and why short interest can exceed 100 percent of float.", "image": "https://gwhlds.com/assets/logo.png", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/float-and-short-interest.html", "datePublished": "2026-09-01"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Float and Short Interest: Why a Stock Moves", "item": "https://gwhlds.com/hub/float-and-short-interest.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the float of a stock?", "acceptedAnswer": {"@type": "Answer", "text": "The float is the number of shares actually available for the public to trade. It is shares outstanding minus the shares that are effectively locked up, which typically means insider and founder holdings, large strategic stakes and restricted stock. Two companies can have identical share counts and completely different floats, and the float is the number that governs how far price travels for a given amount of buying."}}, {"@type": "Question", "name": "How current is short interest data?", "acceptedAnswer": {"@type": "Answer", "text": "It is not current. Under FINRA Rule 4560 member firms report short positions twice a month, as of the settlement date around the 15th and the last settlement date of the month. Firms must file by 6 p.m. Eastern on the second business day after that date, and FINRA compiles the data for publication on the seventh business day after the settlement date. The figure you are reading is a snapshot that is already more than a week old."}}, {"@type": "Question", "name": "How can short interest be more than 100% of the float?", "acceptedAnswer": {"@type": "Answer", "text": "Because a borrowed share can be sold to a new buyer, who can then lend it out to be shorted again. The same underlying share supports more than one short position. SEC staff reported that GameStop short interest reached 122.97% of float in January 2021, and had hovered around 100% of public float through most of 2020. It is a real measurement, not an error, and it signals crowding rather than a guaranteed squeeze."}}, {"@type": "Question", "name": "Is high short interest a buy signal?", "acceptedAnswer": {"@type": "Answer", "text": "No. High short interest tells you a lot of shares have been sold against a stock, which can mean the position is crowded or simply that many participants have a negative view that turns out to be correct. Stocks with heavy short interest often keep falling. Treat it as a description of risk conditions, such as the potential for violent counter-moves, rather than as a reason to enter a trade."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Float and Short Interest</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Stocks &middot; Fundamentals of Movement</span>
+        <h1>Float and Short Interest: Why a Stock Moves</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 1, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Float is the number of shares genuinely available to trade; short interest is how many shares have been sold against them. Together they describe how much stock has to change hands to move price. Both are useful for judging how violent a name can be &mdash; and neither is a signal to enter.</p>
+
+    <p>These two numbers get treated very differently than they deserve. Float is usually ignored because it looks like a static fundamental. Short interest is usually over-weighted because a handful of famous episodes made it feel like a trigger. The truth is closer to the reverse: float shapes almost every intraday move, and short interest is a stale, backward-looking figure that mostly describes risk conditions.</p>
+
+    <h2>What float actually is</h2>
+    <p>Shares outstanding is every share the company has issued. <strong>Float</strong> is the subset that can actually be traded on the open market &mdash; outstanding shares minus the holdings that are effectively locked away: insider and founder stakes, strategic corporate holders, and restricted stock that has not vested or come off a lockup.</p>
+    <p>Two companies can report the same share count and behave nothing alike. If 85% of one company&rsquo;s stock sits with founders and a strategic partner, its tradeable supply is a fraction of the headline number. Every dollar of buying pressure lands on a much smaller pool, and price has to travel further to find sellers.</p>
+    <p>That is the whole mechanism, and it is worth stating without embellishment: <strong>a smaller float means the same order size moves price more.</strong> It is not a prediction about direction. It is a statement about sensitivity &mdash; the same reason your stop needs different room in different names, which is the practical point behind <a href="how-to-set-a-stop-loss.html">how to set a stop loss that isn't just a guess</a>.</p>
+
+    <h2>Float is not the same thing as liquidity</h2>
+    <p>This trips people up constantly. Float is a supply figure; liquidity is a flow figure. A stock can have a modest float and enormous daily volume because the same shares turn over repeatedly, and it can have a huge float that barely trades because nobody wants it.</p>
+    <p>For a trade you are about to place, average daily volume and the width of the spread matter more than float, because they determine whether your exit exists. Float matters for a different question: <em>if</em> flow arrives, how far will price have to go to satisfy it. Screen for both &mdash; the filter set in <a href="how-to-find-stocks-to-day-trade.html">how to find stocks to day trade the night before</a> covers the volume side.</p>
+
+    <h2>Short interest: what the number is, and how old it is</h2>
+    <p>Short interest is the aggregate number of shares sold short and not yet covered. It is not scraped from the market in real time &mdash; it is a regulatory filing, and the timeline is the single most important thing to understand about it.</p>
+    <p>Under FINRA Rule 4560, member firms report their short positions <strong>twice a month</strong>, as of the settlement date on or before the 15th and as of the last settlement date of the month. Firms must file by 6 p.m. Eastern on the second business day after the reporting settlement date, and FINRA then compiles the data and provides it <strong>for publication on the seventh business day after the reporting settlement date</strong> (<a href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest" target="_blank" rel="nofollow noopener">FINRA, About Equity Short Interest</a>).</p>
+    <p>Do the arithmetic on that. By the time you read a short interest figure it describes positions held roughly a week and a half earlier, and it will not be updated for another two weeks. In a stock that has moved 40% in the interim, the number is a historical artefact. Anyone presenting it as a live read on positioning is either mistaken or selling something.</p>
+
+    <div class="callout"><b>Read it as a condition, not a callout.</b> A high short interest figure describes an environment in which counter-moves can be violent. That is a reason to size smaller and widen your invalidation, not a reason to be long. <em>Know your next</em> means a trade needs an entry, a target and a defined level before it is a trade &mdash; and &ldquo;a lot of people are short&rdquo; is none of those things. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Days to cover, and what it hides</h2>
+    <p>Days to cover (the short interest ratio) divides shares short by average daily volume, producing a rough estimate of how many sessions of normal trading it would take for shorts to buy back. A ratio of 8 sounds more crowded than a ratio of 1.</p>
+    <p>Two problems. First, it inherits all the staleness of the short interest figure while adding the volatility of the volume denominator &mdash; a volume spike collapses the ratio without a single position changing. Second, it assumes shorts would be the only buyers, when in a genuine unwind they compete with everyone else for the same shares. Use it as a rough gauge of crowding and nothing finer.</p>
+
+    <h2>Short interest above 100% of float</h2>
+    <p>People assume this is a data error. It is not. A share that is borrowed and sold short ends up in a new owner&rsquo;s account, and that owner&rsquo;s broker can lend it out again to another short seller. The same underlying share can support multiple short positions, so the aggregate can exceed the tradeable supply.</p>
+    <p>The best-documented example sits in an SEC staff report. Reviewing the events of early 2021, staff found that GameStop short interest as a percentage of float reached <strong>122.97%</strong> in January 2021, having &ldquo;hovered around 100% as a percentage of public float&rdquo; through most of 2020 &mdash; far above other heavily-shorted names of the period such as Dillard&rsquo;s at 77.3% and Bed Bath &amp; Beyond at 66.02% (<a href="https://www.sec.gov/files/staff-report-equity-options-market-struction-conditions-early-2021.pdf" target="_blank" rel="nofollow noopener">SEC Staff Report on Equity and Options Market Structure Conditions in Early 2021</a>, October 2021).</p>
+    <p>Worth noting: the figure commonly repeated in the press was around 140%. The SEC&rsquo;s own number is 122.97%. That gap is itself a lesson about how much precision to grant these statistics. The same report also dismantles the tidy narrative that usually travels with a number like that. Staff concluded that buying by short sellers covering their positions was &ldquo;a small fraction of overall buy volume,&rdquo; that prices stayed high after the direct effects of covering would have waned, and that &ldquo;a short squeeze did not appear to be the main driver of events.&rdquo; The crowding was real; the mechanism people assumed from it was not.</p>
+
+    <h2>Reading the two numbers together</h2>
+    <div class="kv"><table>
+      <tr><th>Combination</th><th>What it usually means for a trader</th></tr>
+      <tr><td>Small float, low short interest</td><td>Moves fast on ordinary flow. Size down; the range is wider than the chart suggests.</td></tr>
+      <tr><td>Small float, high short interest</td><td>The most violent profile in both directions. Widest stops, smallest size, or skip it.</td></tr>
+      <tr><td>Large float, low short interest</td><td>Orderly. Levels tend to be respected; standard sizing usually applies.</td></tr>
+      <tr><td>Large float, high short interest</td><td>Persistent pressure, but the supply cushion absorbs unwinds. Rarely explosive.</td></tr>
+    </table></div>
+    <p>Every entry in that table is a statement about <em>how much room to give the trade</em>. None of them is a direction. That is deliberate, and it is the honest limit of what these two figures support.</p>
+
+    <h2>Where to find the numbers, and what to distrust</h2>
+    <ul>
+      <li><strong>Short interest:</strong> FINRA publishes it for exchange-listed and OTC equities on the schedule above. Data aggregators repackage it; the schedule and the staleness are the same wherever you read it.</li>
+      <li><strong>Float:</strong> there is no single authoritative source. Providers differ on what counts as restricted, so two sites can quote materially different floats for the same company. Check the figure against the company&rsquo;s own filings before leaning on it.</li>
+      <li><strong>&ldquo;Real-time&rdquo; short interest products:</strong> these are estimates built from borrow-desk data and models, not the FINRA filing. Some are informative. None of them is the reported number, and they should not be quoted as if they were.</li>
+    </ul>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the float of a stock?</h3>
+    <p>The float is the number of shares actually available for the public to trade. It is shares outstanding minus the shares that are effectively locked up, which typically means insider and founder holdings, large strategic stakes and restricted stock. Two companies can have identical share counts and completely different floats, and the float is the number that governs how far price travels for a given amount of buying.</p>
+
+    <h3>How current is short interest data?</h3>
+    <p>It is not current. Under FINRA Rule 4560 member firms report short positions twice a month, as of the settlement date around the 15th and the last settlement date of the month. Firms must file by 6 p.m. Eastern on the second business day after that date, and FINRA compiles the data for publication on the seventh business day after the settlement date. The figure you are reading is a snapshot that is already more than a week old.</p>
+
+    <h3>How can short interest be more than 100% of the float?</h3>
+    <p>Because a borrowed share can be sold to a new buyer, who can then lend it out to be shorted again. The same underlying share supports more than one short position. SEC staff reported that GameStop short interest reached 122.97% of float in January 2021, and had hovered around 100% of public float through most of 2020. It is a real measurement, not an error, and it signals crowding rather than a guaranteed squeeze.</p>
+
+    <h3>Is high short interest a buy signal?</h3>
+    <p>No. High short interest tells you a lot of shares have been sold against a stock, which can mean the position is crowded or simply that many participants have a negative view that turns out to be correct. Stocks with heavy short interest often keep falling. Treat it as a description of risk conditions, such as the potential for violent counter-moves, rather than as a reason to enter a trade.</p>
+
+    <h2>Bottom line</h2>
+    <p>Float tells you how sensitive a stock is to flow. Short interest tells you what positioning looked like a week and a half ago. Used together they tell you how much room a trade needs and how hard it can move against you &mdash; which is a risk input, not an entry. Set your size from that, take your entries from levels and confirmation, and be sceptical of anyone quoting short interest as though it were live. The broader equities context is in <a href="day-trading-stocks.html">day trading stocks: what is different about equities</a>, and the sizing arithmetic is in <a href="position-sizing-from-risk.html">how to size a position from risk</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="day-trading-stocks.html">Day Trading Stocks: What Is Different About Equities</a>
+      <a href="how-to-find-stocks-to-day-trade.html">How to Find Stocks to Day Trade the Night Before</a>
+      <a href="position-sizing-from-risk.html">How to Size a Position From Risk, Not Conviction</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight &amp; Weekend Gap Risk: What Swing Traders Face</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't Just a Guess</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Know the conditions. <span class="g">Then size the trade.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

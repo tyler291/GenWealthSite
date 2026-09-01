@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Reading the Tape: What Time and Sales Really Shows</title>
+<meta name="description" content="Time and sales records executions, not intentions. What reading the tape genuinely tells a day trader, and the four things it cannot tell you, with SEC data." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-the-tape-tells-you.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Reading the Tape: What Time and Sales Really Shows" />
+<meta property="og:description" content="Executions are the hardest evidence on your screen. They also hide the order that caused them. Here is what the tape proves and what it only implies." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-the-tape-tells-you.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Reading the Tape: What Time and Sales Really Shows", "description": "A practical account of what the time and sales tape genuinely proves for a day trader - that a transaction happened, at a price, in a size, at a time - and the four things it cannot tell you, including why an execution size does not reveal the size of the order behind it.", "image": "https://gwhlds.com/assets/logo.png", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/what-the-tape-tells-you.html", "datePublished": "2026-09-01"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Reading the Tape: What Time and Sales Really Shows", "item": "https://gwhlds.com/hub/what-the-tape-tells-you.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does reading the tape actually mean?", "acceptedAnswer": {"@type": "Answer", "text": "Reading the tape means watching the time and sales window, which lists every completed transaction in a security with its price, size and timestamp. Unlike the order book it records what happened rather than what someone was offering to do. Traders read it for the pace of transactions, where prints cluster in price, and whether a level is being transacted through or transacted at."}}, {"@type": "Question", "name": "Does a large print on the tape mean a big buyer is in the stock?", "acceptedAnswer": {"@type": "Answer", "text": "No. A print records that shares changed hands at a price, not the size or intent of the order that caused it. The SEC has noted that execution sizes for on-exchange trades do not necessarily reflect the size of an incoming marketable order nor the original size of any resting order. A single 100-share order can print as a 99-share trade and a 1-share trade simply because of how it interacted with the queue."}}, {"@type": "Question", "name": "Can you tell from the tape whether a trade was a buy or a sell?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. Every trade has a buyer and a seller, and the consolidated tape does not identify which side was the aggressor. Platforms that colour prints green and red are inferring the aggressor by comparing the trade price to the prevailing bid and offer. That inference is usually reasonable and sometimes wrong, particularly for trades executed between the quotes or reported away from an exchange."}}, {"@type": "Question", "name": "Is tape reading still useful in modern markets?", "acceptedAnswer": {"@type": "Answer", "text": "It is useful as a measure of participation and pace rather than as a signal. The tape reliably tells you whether activity is accelerating or dying, and whether transactions are clustering at a level or passing straight through it. It cannot tell you who is trading or why, and treating it as a source of intent is where most tape reading goes wrong."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Reading the Tape</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Stocks &middot; Order Flow</span>
+        <h1>Reading the Tape: What Time and Sales Really Shows</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 1, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">The tape tells you that a transaction happened, at a price, in a size, at a time. That is all it proves &mdash; and it is more than the order book proves, because an execution cannot be cancelled. What the tape cannot tell you is who traded, why, or how big the order behind the print really was.</p>
+
+    <p>Tape reading has an unusual reputation. It is either treated as a lost art that separates real traders from chart-watchers, or dismissed as astrology for people with fast screens. Both readings miss the same thing: the tape is a record with a very specific evidentiary value, and knowing exactly where that value stops is what makes it usable.</p>
+
+    <h2>What the time and sales window is</h2>
+    <p>Time and sales is a running list of completed transactions in a security: price, share count, timestamp, and usually the venue that reported the trade. In United States equities these executions are disseminated through the consolidated tape, which is why traders call it &ldquo;the tape&rdquo; regardless of which platform they read it on.</p>
+    <p>The distinction from depth matters. An order on the ladder is an offer someone can withdraw for nothing. A print on the tape is a completed exchange of shares for money. That asymmetry is the entire reason the tape is worth watching at all, and it is why the two displays are covered separately &mdash; the limits of the order book are set out in <a href="how-to-read-level-2.html">how to read Level 2 without being fooled by it</a>.</p>
+
+    <h2>What the tape genuinely tells you</h2>
+
+    <h3>Pace</h3>
+    <p>The rate at which prints arrive is the cleanest signal on the tape, because it needs no interpretation. A tape that goes from a print every few seconds to a print every few milliseconds is telling you participation has arrived. Pace is also the fastest warning that a move is running out of fuel: price can keep drifting while the tape thins out, and that combination is usually the more honest of the two.</p>
+
+    <h3>Where transactions cluster in price</h3>
+    <p>If thousands of prints happen at a single price and price does not leave, that price is being <em>transacted at</em> rather than <em>transacted through</em>. Both sides are finding each other there. That is a genuine, observable fact about where participants agree on value, and it is the raw material behind the levels described in <a href="support-and-resistance.html">support and resistance</a>.</p>
+
+    <h3>Whether a level is actually being tested</h3>
+    <p>A level that price touches on light volume has not been tested in any meaningful sense. A level that price reaches while the tape floods is being genuinely contested. That distinction &mdash; contested versus merely touched &mdash; is the practical reason to have the window open at all.</p>
+
+    <h2>The four things the tape cannot tell you</h2>
+
+    <h3>1. The size of the order behind the print</h3>
+    <p>This is the misreading that costs people money, and the SEC has stated the mechanic plainly. In its market structure research the Commission notes that &ldquo;execution sizes for on-exchange trades do not necessarily reflect the actual size of an incoming marketable order, nor the original size of any existing resting order,&rdquo; and gives the arithmetic: a marketable order for 100 shares arriving after a 1-share order has consumed part of a resting block can print as a 99-share trade followed by a 1-share trade (<a href="https://www.sec.gov/about/odd-lot-rates-post-transparency-world" target="_blank" rel="nofollow noopener">SEC, Odd Lot Rates in a Post-Transparency World</a>).</p>
+    <p>Read that twice, because it inverts the usual instinct. A cluster of small prints is not evidence of small participants. It can be one large order being chewed through a queue. Equally, a large print is not necessarily a large decision &mdash; it may be the tail of an order that was mostly filled elsewhere.</p>
+
+    <h3>2. Which side was the aggressor</h3>
+    <p>Every trade has a buyer and a seller. The consolidated tape does not label which one crossed the spread to make it happen. When your platform colours a print green or red it is <em>inferring</em> the aggressor by comparing the trade price against the prevailing bid and offer. That inference is reasonable most of the time and unreliable exactly when it matters: for trades priced between the quotes, and for executions reported away from an exchange.</p>
+
+    <h3>3. Everything that happens off-exchange, in real time</h3>
+    <p>A meaningful share of United States equity volume executes away from the lit exchanges and is reported afterwards. Those prints do reach the tape, but they arrive as a record of something already finished, with no indication of the venue&rsquo;s internal book. You are reading history in both cases; some of it is simply older history than the rest.</p>
+
+    <h3>4. Anything about intent</h3>
+    <p>The tape has no field for motive. A large sale can be a fund liquidating a view, an index tracker rebalancing, a market maker offloading inventory, or someone paying for a house. Every story you tell yourself about a print is a story you added.</p>
+
+    <h2>A note on odd lots, and why the tape got more honest</h2>
+    <p>Trades of fewer than 100 shares were not reported to any consolidated public tape at all before <strong>9 December 2013</strong>. They were visible on the exchanges&rsquo; proprietary feeds, which are bought mainly by professional participants, but not on the public record most traders read. The SEC measured how much was missing: in the nine months to 30 June 2013, the daily odd lot rate for corporate stocks ran at roughly <strong>18% to 24% of all trades</strong>, and for the highest-priced decile of stocks it averaged over 30% (same SEC source).</p>
+    <p>That history matters for two reasons. It is a reminder that the tape is a reporting regime rather than a law of nature &mdash; what appears on it is a rule that changes. And with share prices far higher today than in 2013, and fractional and small-lot trading now routine, an even larger portion of prints are small ones. Interpreting print size as participant size was always shaky; it is shakier now.</p>
+
+    <h2>Tape vs order book, side by side</h2>
+    <div class="kv"><table>
+      <tr><th></th><th>Time and sales (the tape)</th><th>Level 2 (the book)</th></tr>
+      <tr><td>What it records</td><td>Completed transactions</td><td>Displayed resting orders</td></tr>
+      <tr><td>Can it be withdrawn?</td><td>No &mdash; the trade happened</td><td>Yes, instantly and for free</td></tr>
+      <tr><td>Tells you direction?</td><td>Only by inference</td><td>No</td></tr>
+      <tr><td>Reveals order size?</td><td>No &mdash; execution size only</td><td>Only the displayed portion</td></tr>
+      <tr><td>Best used for</td><td>Pace, clustering, confirmation</td><td>Spread, depth, slippage estimate</td></tr>
+      <tr><td>Worst used for</td><td>Guessing who is trading</td><td>Guessing what price will do</td></tr>
+    </table></div>
+
+    <div class="callout"><b>The Generational Wealth way.</b> The tape is confirmation evidence, and confirmation is the whole point of <em>break &amp; hold</em>. A level that price pokes through on a thin tape has not broken; a level that price breaks while the tape floods and then holds as the candle closes has. Using time and sales to enter <em>before</em> the close is chasing with extra steps. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>How to actually use it, without inventing stories</h2>
+    <p>The workable version of tape reading is narrow and dull, which is why it works. Three habits cover most of the value:</p>
+    <ol>
+      <li><strong>Watch pace, not individual prints.</strong> Ask whether activity is accelerating or fading at the level you care about. Never ask what one 5,000-share print &ldquo;means&rdquo;.</li>
+      <li><strong>Use it only at your levels.</strong> The tape is close to noise in the middle of a range. Its value concentrates at prices you already marked before the session, which is exactly what <a href="how-to-mark-up-a-chart.html">marking up a chart before the session</a> produces.</li>
+      <li><strong>Let it veto, not initiate.</strong> A thin tape at a level is a good reason to skip a trade you had planned. A busy tape is not a good reason to take one you had not.</li>
+    </ol>
+    <p>Notice that all three treat the tape as a filter on decisions already made. The moment it starts generating decisions, you are trading a feed rather than a plan, and the fix for that is upstream: a written plan with defined levels and invalidation, as laid out in <a href="how-to-build-a-trading-plan.html">how to build a trading plan</a>.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What does reading the tape actually mean?</h3>
+    <p>Reading the tape means watching the time and sales window, which lists every completed transaction in a security with its price, size and timestamp. Unlike the order book it records what happened rather than what someone was offering to do. Traders read it for the pace of transactions, where prints cluster in price, and whether a level is being transacted through or transacted at.</p>
+
+    <h3>Does a large print on the tape mean a big buyer is in the stock?</h3>
+    <p>No. A print records that shares changed hands at a price, not the size or intent of the order that caused it. The SEC has noted that execution sizes for on-exchange trades do not necessarily reflect the size of an incoming marketable order nor the original size of any resting order. A single 100-share order can print as a 99-share trade and a 1-share trade simply because of how it interacted with the queue.</p>
+
+    <h3>Can you tell from the tape whether a trade was a buy or a sell?</h3>
+    <p>Not directly. Every trade has a buyer and a seller, and the consolidated tape does not identify which side was the aggressor. Platforms that colour prints green and red are inferring the aggressor by comparing the trade price to the prevailing bid and offer. That inference is usually reasonable and sometimes wrong, particularly for trades executed between the quotes or reported away from an exchange.</p>
+
+    <h3>Is tape reading still useful in modern markets?</h3>
+    <p>It is useful as a measure of participation and pace rather than as a signal. The tape reliably tells you whether activity is accelerating or dying, and whether transactions are clustering at a level or passing straight through it. It cannot tell you who is trading or why, and treating it as a source of intent is where most tape reading goes wrong.</p>
+
+    <h2>Bottom line</h2>
+    <p>The tape is the hardest evidence on your screen and the easiest to over-read. It proves transactions happened; it proves nothing about who wanted what. Use it for pace and clustering at levels you marked in advance, let it talk you out of weak trades rather than into new ones, and never convert a print size into a participant size &mdash; the SEC has explained precisely why that inference does not hold. For the aggregate version of the same information, see <a href="volume-analysis-trading.html">volume analysis</a>, and for the wider equities picture, <a href="day-trading-stocks.html">day trading stocks: what is different about equities</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-to-read-level-2.html">How to Read Level 2 Without Being Fooled by It</a>
+      <a href="volume-analysis-trading.html">Volume Analysis: What Volume Confirms and What It Doesn't</a>
+      <a href="day-trading-stocks.html">Day Trading Stocks: What Is Different About Equities</a>
+      <a href="break-and-hold-confirmation.html">Break and Hold: Why Confirmation Beats Chasing</a>
+      <a href="what-is-market-structure.html">What Is Market Structure in Trading?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Prints are evidence. <span class="g">Stories are not.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

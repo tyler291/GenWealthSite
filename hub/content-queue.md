@@ -245,10 +245,10 @@ sideways to two siblings.
 
 - [x] Day trading stocks: what is different about equities `[PILLAR]` `(day-trading-stocks)`
 - [x] How to find stocks to day trade the night before `(how-to-find-stocks-to-day-trade)`
-- [ ] What a stock scanner should actually filter for
-- [ ] How to read Level 2 without being fooled by it
-- [ ] What the tape actually tells you (and what it does not)
-- [ ] Float and short interest: why they decide how a stock moves
+- [x] What a stock scanner should actually filter for `(covered by how-to-find-stocks-to-day-trade)`
+- [x] How to read Level 2 without being fooled by it `(how-to-read-level-2)`
+- [x] What the tape actually tells you (and what it does not) `(what-the-tape-tells-you)`
+- [x] Float and short interest: why they decide how a stock moves `(float-and-short-interest)`
 - [ ] Why low-float stocks move the way they do
 - [ ] Trading halts: what happens, and what to do while you wait
 - [ ] Pre-market vs regular hours: the liquidity difference that matters
