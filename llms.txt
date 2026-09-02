@@ -192,6 +192,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [How to Read Level 2 Without Being Fooled by It](https://gwhlds.com/hub/how-to-read-level-2.html): what the order book genuinely shows, the four ways it misleads, and the three readings that survive - spread, depth and rate of change.
 - [Reading the Tape: What Time and Sales Really Shows](https://gwhlds.com/hub/what-the-tape-tells-you.html): what executions prove, why print size is not order size, the aggressor-side problem, and how to use the tape as a veto rather than a trigger.
 - [Float and Short Interest: Why a Stock Moves](https://gwhlds.com/hub/float-and-short-interest.html): what free float measures, how stale FINRA short interest data really is, days to cover, and why short interest can exceed 100% of float.
+- [Low Float Stocks: Why They Move So Violently](https://gwhlds.com/hub/low-float-stocks.html): why a small tradable share supply produces outsized moves, the four costs that only appear in thin names, and how to size for them.
+- [Trading Halts Explained: What to Do While You Wait](https://gwhlds.com/hub/trading-halts-explained.html): limit up-limit down pauses, news halts and market-wide circuit breakers, why a stop cannot fill during one, and how to plan the reopen.
+- [Pre-Market vs Regular Hours: The Liquidity Gap](https://gwhlds.com/hub/pre-market-vs-regular-hours.html): how little volume trades before 9:30, why execution costs several times more, and which market protections switch off outside regular hours.
 
 ## Contact
 
