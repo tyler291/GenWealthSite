@@ -252,9 +252,9 @@ sideways to two siblings.
 - [x] Why low-float stocks move the way they do `(low-float-stocks)`
 - [x] Trading halts: what happens, and what to do while you wait `(trading-halts-explained)`
 - [x] Pre-market vs regular hours: the liquidity difference that matters `(pre-market-vs-regular-hours)`
-- [ ] Earnings gaps: the honest odds on trading them
-- [ ] Power hour explained: why the last hour trades differently
-- [ ] Trading SPY vs trading ES: which suits which account
+- [x] Earnings gaps: the honest odds on trading them `(earnings-gaps)`
+- [x] Power hour explained: why the last hour trades differently `(power-hour-explained)`
+- [x] Trading SPY vs trading ES: which suits which account `(spy-vs-es-futures)`
 - [ ] Short selling basics and the locate problem
 - [ ] Settlement, T+1 and good-faith violations
 

@@ -195,6 +195,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Low Float Stocks: Why They Move So Violently](https://gwhlds.com/hub/low-float-stocks.html): why a small tradable share supply produces outsized moves, the four costs that only appear in thin names, and how to size for them.
 - [Trading Halts Explained: What to Do While You Wait](https://gwhlds.com/hub/trading-halts-explained.html): limit up-limit down pauses, news halts and market-wide circuit breakers, why a stop cannot fill during one, and how to plan the reopen.
 - [Pre-Market vs Regular Hours: The Liquidity Gap](https://gwhlds.com/hub/pre-market-vs-regular-hours.html): how little volume trades before 9:30, why execution costs several times more, and which market protections switch off outside regular hours.
+- [Earnings Gaps: The Honest Odds on Trading Them](https://gwhlds.com/hub/earnings-gaps.html): why results arrive as an untradeable gap, why beating estimates is the base case rather than an edge, and how traders use the aftermath instead.
+- [Power Hour Explained: Why the Last Hour Differs](https://gwhlds.com/hub/power-hour-explained.html): the closing auction order cutoffs, the imbalance feed, and why a strong last ten minutes is mechanical rather than directional.
+- [SPY vs ES Futures: Which Suits Your Account?](https://gwhlds.com/hub/spy-vs-es-futures.html): one share versus one contract, the granularity that decides it, and the cost, hours, margin and tax differences.
 
 ## Contact
 
