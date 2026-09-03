@@ -61,6 +61,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 
 ## The Hub — free trading education
 
+- [Short Selling Basics and the Locate Problem](https://gwhlds.com/hub/short-selling-and-locates.html): how the share borrow works, the Reg SHO locate requirement, borrow fees and recall risk, and the Rule 201 restriction that fires after a 10% decline.
+- [T+1 Settlement and Good-Faith Violations](https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html): what settlement is, what changed on 28 May 2024, and how good-faith violations, free-riding and the 90-day Reg T freeze arise in a cash account.
+- [Prop Firms Explained: How Funded Accounts Work](https://gwhlds.com/hub/prop-firms-explained.html): the evaluation-to-funded pipeline, trailing vs static drawdown, how fees and profit splits flow, and why the retail model uses simulated accounts.
 - [What Is a Lot Size in Trading?](https://gwhlds.com/hub/what-is-a-lot-size.html): standard, mini and micro lots, and why position size is the first risk decision you make.
 - [Lot Size & Position Size Calculator](https://gwhlds.com/hub/lot-size-calculator.html): free calculator — enter account size, risk % and stop distance in pips to get the exact lot size.
 - [Heikin Ashi Candles: How They Work](https://gwhlds.com/hub/heikin-ashi-candles.html): how Heikin Ashi is calculated, how to read trend and exhaustion, and why you must never enter off its printed levels.

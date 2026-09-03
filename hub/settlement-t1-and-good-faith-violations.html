@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>T+1 Settlement and Good-Faith Violations</title>
+<meta name="description" content="US stocks settle T+1 since May 2024. What that means in a cash account, how good-faith violations and free-riding happen, and how the 90-day freeze works." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="T+1 Settlement and Good-Faith Violations" />
+<meta property="og:description" content="Settlement is where cash accounts trip up. The T+1 timeline, the three cash-account violations, and why a margin account changes the problem entirely." />
+<meta property="og:url" content="https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/settlement-t1-and-good-faith-violations.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "T+1 Settlement and Good-Faith Violations", "description": "What settlement actually is, what changed when the US standard cycle shortened to T+1 on 28 May 2024, and how the three cash-account violations arise: good-faith violations, free-riding and cash liquidation violations, including the 90-day restriction under Regulation T.", "image": "https://gwhlds.com/assets/hub/settlement-t1-and-good-faith-violations.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html", "datePublished": "2026-09-03"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "T+1 Settlement and Good-Faith Violations", "item": "https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does T+1 settlement mean?", "acceptedAnswer": {"@type": "Answer", "text": "T+1 means a trade settles one business day after the trade date: that is when the shares legally change owner and the cash legally changes hands. The US standard settlement cycle moved from T+2 to T+1 on 28 May 2024. The trade is binding the moment it executes; settlement is the plumbing that finishes it."}}, {"@type": "Question", "name": "What is a good-faith violation?", "acceptedAnswer": {"@type": "Answer", "text": "A good-faith violation happens in a cash account when you buy a security using proceeds from a sale that has not settled yet, then sell that new security before the original proceeds settle. You have effectively traded on money you did not have. Brokers track these and typically restrict an account to settled cash after a small number of them in a rolling twelve months."}}, {"@type": "Question", "name": "Can you day trade in a cash account?", "acceptedAnswer": {"@type": "Answer", "text": "You can, but only with settled funds, which means your usable buying power resets on a one-day delay rather than instantly. Trade the whole balance on Monday and sell the same day, and those proceeds are not available to buy again until Tuesday. Repeatedly buying and selling before proceeds settle is what produces good-faith violations."}}, {"@type": "Question", "name": "How long does a cash account freeze last?", "acceptedAnswer": {"@type": "Answer", "text": "Free-riding, which means selling a security before you have ever paid for it, is a Regulation T violation and may require your broker to freeze the account for 90 days. During the freeze you can still buy, but you must pay in full on the trade date rather than relying on unsettled proceeds. Broker policy on repeated good-faith violations varies, so check your firm's own rules."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Settlement &amp; Good-Faith Violations</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Stocks &middot; Rules</span>
+        <h1>T+1 Settlement and Good-Faith Violations</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 3, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/settlement-t1-and-good-faith-violations.jpg" alt="An hourglass with its glowing sand nearly run through, standing on a polished ledger surface with a row of calendar squares receding behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Settlement is when cash and shares actually change hands &mdash; one business day after the trade since 28 May 2024. In a cash account you may only buy with settled funds. Selling something you bought with unsettled proceeds is a good-faith violation, and repeat violations get the account restricted to settled cash only.</p>
+
+    <p>Nobody joins a trading room to learn about settlement plumbing. But it is the most common reason a new trader's account gets restricted, and unlike almost everything else in trading it is entirely avoidable once you understand the timeline.</p>
+
+    <h2>What settlement actually is</h2>
+    <p>Execution and settlement are two different events. When your order fills, the trade is binding: price agreed, obligation created, position live on your screen. Settlement is the back-office process that finishes it &mdash; shares move to the buyer's name, cash moves to the seller's, and the transaction becomes final and irrevocable.</p>
+    <p>Between those two moments, your money is real but not yet usable. That gap is the whole subject of this page.</p>
+
+    <h2>What changed on 28 May 2024</h2>
+    <p>The US standard settlement cycle for most broker-dealer securities transactions shortened from two business days to one on <strong>28 May 2024</strong>. As the SEC put it at the time, investors who sell stock on a Monday now get their money on Tuesday (<a href="https://www.sec.gov/newsroom/press-releases/2024-62" target="_blank" rel="nofollow noopener">SEC, Chair Gensler statement on the implementation of T+1</a>). The Commission had voted to adopt the change in February 2023, and it was the second such shortening in recent memory &mdash; the move from T+3 to T+2 happened in 2017.</p>
+    <p>For an active trader, T+1 is a genuine improvement but a small one. It halves the wait, which halves how often a cash account runs out of settled funds. It does not remove the constraint, and it does not change the definition of any violation. The rules are identical; the clock just runs faster.</p>
+
+    <div class="callout"><b>The one-line version of the timeline.</b> Sell on Monday, proceeds settle Tuesday. Buy on Monday, you owe payment by Tuesday. Anything you do in between is either covered by settled cash sitting in the account or it is borrowing &mdash; and in a cash account, borrowing is not permitted.</div>
+
+    <h2>Cash account vs margin account: why this only bites one of them</h2>
+    <p>A <strong>cash account</strong> requires you to pay for purchases in full with settled funds. There is no credit extended. Its buying power is therefore not a single number but a schedule &mdash; how much is available today, and how much becomes available tomorrow.</p>
+    <p>A <strong>margin account</strong> extends credit against your positions, so a purchase does not have to wait for a prior sale to settle. Margin accounts do not produce good-faith violations at all, because there is no unsettled-funds problem to create one. They introduce a different set of constraints instead: interest, maintenance requirements, and the possibility of a <a href="what-is-a-margin-call.html">margin call</a>.</p>
+    <p>This is also where the account-type question intersects with day trading rules. The pattern day trader framework and its $25,000 minimum equity requirement applied to margin accounts, and it was retired in June 2026 &mdash; the current position is set out in <a href="pattern-day-trader-rule.html">the pattern day trader rule and what changed in 2026</a>. Cash accounts were never subject to that rule, which is exactly why many small accounts used them; the trade-off was always settlement, not equity minimums.</p>
+
+    <h2>The three cash-account violations, distinguished</h2>
+    <p>These names get used interchangeably online and they are not the same thing. The distinction matters because the consequences differ.</p>
+    <div class="kv"><table>
+      <tr><th>Violation</th><th>What you did</th><th>Typical consequence</th></tr>
+      <tr><td><strong>Good-faith violation</strong></td><td>Bought with unsettled proceeds, then sold the new security before those proceeds settled</td><td>Logged by the broker; repeat occurrences restrict the account to settled cash</td></tr>
+      <tr><td><strong>Free-riding</strong></td><td>Sold a security before ever paying for it &mdash; the purchase was funded by the sale itself</td><td>A Regulation T violation; the broker may be required to freeze the account for 90 days</td></tr>
+      <tr><td><strong>Cash liquidation violation</strong></td><td>Bought without enough settled cash, then sold something else to cover the purchase after the fact</td><td>Logged by the broker; treated similarly to a good-faith violation</td></tr>
+    </table></div>
+    <p>The common thread is that all three involve paying for a purchase with money you did not have on the trade date. Regulation T permits a cash-account purchase only where you already hold sufficient funds, or where the firm accepts in good faith that you will promptly pay in full (<a href="https://www.finra.org/investors/investing/investment-accounts/brokerage-accounts/cash-accounts" target="_blank" rel="nofollow noopener">FINRA, Cash Accounts</a>).</p>
+
+    <h2>How the 90-day restriction works</h2>
+    <p>Free-riding is the serious one. Under Regulation T it is not permitted, and it may require your broker to freeze the account for <strong>90 days</strong>. A freeze is not a ban on trading. During those 90 days you can still buy securities in the cash account, but you must fully pay for each purchase on the trade date &mdash; no relying on proceeds that have not yet arrived.</p>
+    <p>The way to avoid it is exactly as prosaic as it sounds: pay for the securities by the settlement date with funds that did not come from selling those same securities.</p>
+    <p>Thresholds for the milder violations are broker policy rather than a rule with a fixed number, and firms genuinely differ. Many restrict a cash account to settled funds after a small number of good-faith violations in a rolling twelve months. Read your own firm's disclosure rather than a forum post &mdash; this is one of the questions worth asking upfront, alongside the others in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+
+    <h2>The three ways active traders trip this without noticing</h2>
+    <ul>
+      <li><strong>Trading the full balance every day.</strong> If your entire account is deployed and closed within a session, tomorrow's buying power depends on today's proceeds settling. Trade again before they do, and the second sale creates the violation. This is the trap that catches accounts described in <a href="can-you-day-trade-with-500.html">can you day trade with $500</a>.</li>
+      <li><strong>Rotating between symbols quickly.</strong> Sell A, immediately buy B with the proceeds, then exit B the same day. B was bought with unsettled money and sold before that money settled. Textbook good-faith violation.</li>
+      <li><strong>Depositing to cover a fill.</strong> A wire or ACH transfer is not settled cash the moment your platform displays it. Buying against a deposit that has not cleared, then selling, can produce the same outcome.</li>
+    </ul>
+    <p>None of these require bad intent. They are all natural consequences of trading actively in an account type that assumes you will not.</p>
+
+    <h2>What T+1 changed in practice &mdash; and what it did not</h2>
+    <ul>
+      <li><strong>Changed:</strong> capital recycles a day faster. A cash account can now realistically make a full round trip roughly every other day rather than every third day.</li>
+      <li><strong>Changed:</strong> less time between execution and finality means less counterparty and market risk sitting in the settlement pipeline &mdash; the SEC's stated rationale for the amendment.</li>
+      <li><strong>Did not change:</strong> the definition of any violation, the 90-day free-riding freeze, or the fundamental fact that a cash account cannot borrow.</li>
+      <li><strong>Did not change:</strong> the honest answer to "should I use a cash account to day trade." The constraint is smaller than it was, and it is still a constraint.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> This is an unglamorous version of a principle we apply everywhere: <em>know your next</em>. Before the entry you should already know the target, the invalidation &mdash; and, in a cash account, whether the capital will even be available for the next setup. A trader who has to skip tomorrow's best trade because today's proceeds have not settled did not lose to the market. They lost to their own admin. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What does T+1 settlement mean?</h3>
+    <p>T+1 means a trade settles one business day after the trade date: that is when the shares legally change owner and the cash legally changes hands. The US standard settlement cycle moved from T+2 to T+1 on 28 May 2024. The trade is binding the moment it executes; settlement is the plumbing that finishes it.</p>
+
+    <h3>What is a good-faith violation?</h3>
+    <p>A good-faith violation happens in a cash account when you buy a security using proceeds from a sale that has not settled yet, then sell that new security before the original proceeds settle. You have effectively traded on money you did not have. Brokers track these and typically restrict an account to settled cash after a small number of them in a rolling twelve months.</p>
+
+    <h3>Can you day trade in a cash account?</h3>
+    <p>You can, but only with settled funds, which means your usable buying power resets on a one-day delay rather than instantly. Trade the whole balance on Monday and sell the same day, and those proceeds are not available to buy again until Tuesday. Repeatedly buying and selling before proceeds settle is what produces good-faith violations.</p>
+
+    <h3>How long does a cash account freeze last?</h3>
+    <p>Free-riding, which means selling a security before you have ever paid for it, is a Regulation T violation and may require your broker to freeze the account for 90 days. During the freeze you can still buy, but you must pay in full on the trade date rather than relying on unsettled proceeds. Broker policy on repeated good-faith violations varies, so check your firm's own rules.</p>
+
+    <h2>Bottom line</h2>
+    <p>Settlement is the least interesting rule in trading and one of the easiest to break. Since 28 May 2024 a US stock trade settles the next business day, which halved the wait without changing the principle: in a cash account you buy with money that has arrived, not money that is on its way. Good-faith violations come from ignoring the timeline, free-riding comes from ignoring it entirely and carries a 90-day restriction, and a margin account replaces the problem with a different one. Know which account you are in, know when your proceeds land, and the whole category of problem disappears. For the wider set of equity-specific rules, start with <a href="day-trading-stocks.html">day trading stocks</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="pattern-day-trader-rule.html">The Pattern Day Trader Rule: What Changed in 2026</a>
+      <a href="day-trading-stocks.html">Day Trading Stocks: What Is Different About Equities</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+      <a href="can-you-day-trade-with-500.html">Can You Day Trade With $500?</a>
+      <a href="what-is-a-margin-call.html">What Is a Margin Call?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Know when the cash lands. <span class="g">Then know your next.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

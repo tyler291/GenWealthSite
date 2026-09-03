@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Prop Firms Explained: How Funded Accounts Work</title>
+<meta name="description" content="How funded trading accounts work: the evaluation fee, the drawdown rules that decide the outcome, the profit split, and why the industry is built this way." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/prop-firms-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Prop Firms Explained: How Funded Accounts Work" />
+<meta property="og:description" content="The evaluation pipeline, the rules that define the product, how the money actually flows, and the one question to ask a firm before you pay anything." />
+<meta property="og:url" content="https://gwhlds.com/hub/prop-firms-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/prop-firms-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Prop Firms Explained: How Funded Accounts Work", "description": "A structural explanation of retail proprietary trading firms: what they sell, the evaluation to funded pipeline, why the industry is built around simulated accounts and evaluation fees, the rules that define the product, how fees and profit splits flow, and who a funded account genuinely suits.", "image": "https://gwhlds.com/assets/hub/prop-firms-explained.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/prop-firms-explained.html", "datePublished": "2026-09-03"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Prop Firms Explained: How Funded Accounts Work", "item": "https://gwhlds.com/hub/prop-firms-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a prop firm?", "acceptedAnswer": {"@type": "Answer", "text": "A proprietary trading firm trades its own capital rather than client money. The retail version sells an evaluation: you pay a fee, trade an account to a profit target without breaching its drawdown rules, and on passing you are given a funded account whose profits are split with the firm. You are not a client with a deposit and you are usually not an employee."}}, {"@type": "Question", "name": "Do you actually get real money from a prop firm?", "acceptedAnswer": {"@type": "Answer", "text": "You get real payouts if you meet the terms, but the account you trade may or may not route to a live market. Many retail firms run funded accounts in a simulated environment and pay withdrawals out of company revenue while hedging selectively. That is not automatically wrong, but it is the single most important thing to establish before paying, because it determines who is actually on the other side of your trade."}}, {"@type": "Question", "name": "Why do prop firms use simulated accounts?", "acceptedAnswer": {"@type": "Answer", "text": "Largely because of capital and registration requirements. In the United States, a firm acting as counterparty to retail forex must register as a retail foreign exchange dealer or futures commission merchant and meet a minimum net capital standard of $20 million. Selling access to a simulated environment with a payout agreement avoids that regime entirely, which is why the retail evaluation model is shaped the way it is."}}, {"@type": "Question", "name": "What is the difference between a daily loss limit and a maximum drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "A daily loss limit resets each session and caps how much you can lose in a single day. A maximum drawdown applies to the life of the account. The critical variant is whether that maximum trails your equity high water mark or sits static from the starting balance, because a trailing drawdown tightens every time you make money and is the rule that ends the largest number of accounts."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Prop Firms Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Prop Firms</span>
+        <h1>Prop Firms Explained: How Funded Accounts Work</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 3, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/prop-firms-explained.jpg" alt="A glowing trading terminal sealed inside a clear glass display case, with a single ornate key and a stack of gold coins resting outside it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A retail prop firm sells you an evaluation. You pay a fee, trade an account to a profit target without breaching its drawdown rules, and on passing you receive a funded account whose profits are split with the firm. What varies &mdash; and what matters most &mdash; is whether that funded account reaches a real market.</p>
+
+    <p>This page explains the structure rather than arguing for or against it. Once you can see how the product is assembled, the marketing becomes much easier to read, and so do the terms.</p>
+
+    <h2>What "prop" means, and what it now means</h2>
+    <p>A proprietary trading firm trades its own capital. Classically that meant a desk: the firm hired traders, paid them a salary or a draw, gave them risk limits and firm money, and kept most of the profit. The trader took no financial downside beyond losing the seat.</p>
+    <p>The modern retail version inverts the entry point. Nobody hires you. You buy an evaluation, and passing it is what grants access to firm capital under a profit-sharing agreement. The critical structural consequence: <strong>you are not a client with a deposit, and you are usually not an employee.</strong> You are a counterparty to a commercial contract, and the contract &mdash; not a brokerage regulation &mdash; is what defines your rights.</p>
+    <p>That is why the terms document matters more here than in almost any other trading arrangement. There is no account-protection regime standing behind it, and the comparison in <a href="prop-firm-vs-own-capital.html">prop firm vs trading your own capital</a> works through what that means for who holds the risk.</p>
+
+    <h2>The evaluation to funded pipeline, step by step</h2>
+    <ol>
+      <li><strong>Choose an account size.</strong> Advertised in notional terms &mdash; a "$50k account," a "$100k account" &mdash; which describes the buying power granted, not money you receive.</li>
+      <li><strong>Pay the fee.</strong> One-off or monthly depending on the firm. This is the firm's revenue and it is not your trading capital.</li>
+      <li><strong>Trade the evaluation.</strong> Reach a profit target, usually a fixed percentage, without breaching a daily loss limit or a maximum drawdown. Some firms impose a minimum number of trading days, a time limit, or both.</li>
+      <li><strong>Pass into a funded account.</strong> Some firms add a second, easier verification stage before this. The rules generally persist into the funded phase, sometimes relaxed.</li>
+      <li><strong>Withdraw a share of profits.</strong> On the firm's payout cycle, subject to its consistency and minimum-balance rules.</li>
+      <li><strong>Scale, or start again.</strong> Meet the scaling criteria and buying power increases. Breach a rule and the account closes; continuing means buying another evaluation.</li>
+    </ol>
+    <p>Nothing in that pipeline is hidden. The reason people are surprised by it is that steps 3 and 5 contain most of the actual product, and marketing tends to dwell on steps 1 and 6.</p>
+
+    <h2>Why the industry is built this way &mdash; the $20 million answer</h2>
+    <p>The simulated-account structure is often assumed to be a trick. Mostly it is a regulatory response, and the specific number explains it.</p>
+    <p>In the United States, a firm that acts as counterparty to retail foreign exchange transactions must register with the CFTC as a <strong>retail foreign exchange dealer</strong> or a futures commission merchant, and meet a minimum net capital standard of <strong>$20,000,000</strong>, plus five percent of its total retail forex obligation above $10 million (<a href="https://www.cftc.gov/PressRoom/PressReleases/5883-10" target="_blank" rel="nofollow noopener">CFTC, final rules regarding retail forex transactions, Release 5883-10</a>). Solicitors, pool operators and advisers in that chain carry their own registration obligations.</p>
+    <p>Selling access to a simulated environment under a payout agreement sits outside that framework. That is the mechanical reason the retail prop industry looks the way it does &mdash; low barrier to entry for the firm, an evaluation fee as the primary revenue line, and terms governed by contract rather than by a brokerage rulebook.</p>
+    <p>Draw the accurate conclusion from that, which is not "prop firms are scams." It is that the structure creates specific incentives you should read the terms with in mind. The scale of the fee side of that model, and one prominent enforcement action, are covered in <a href="prop-firm-vs-own-capital.html">prop firm vs your own capital</a>.</p>
+
+    <div class="callout"><b>The distinction that actually matters.</b> Not "is it real money" but <em>who is on the other side of your trade.</em> If your orders reach an exchange, your counterparty is the market. If they stay inside the firm's own environment, your counterparty is the firm, and your profit is its cost. Both models exist, both can be run honestly, and only one of them is what most people picture when they read the word "funded."</div>
+
+    <h2>The rules that define the product</h2>
+    <p>Every firm's marketing leads with the profit split. The rules below are what you are actually buying, and they vary far more than the split does.</p>
+    <div class="kv"><table>
+      <tr><th>Rule</th><th>What it does</th><th>What to check</th></tr>
+      <tr><td>Profit target</td><td>The threshold to pass the evaluation</td><td>Percentage, and whether the funded phase has one too</td></tr>
+      <tr><td>Daily loss limit</td><td>Caps loss in a single session; resets daily</td><td>Whether it measures closed profit and loss or intraday equity, including open positions</td></tr>
+      <tr><td>Maximum drawdown</td><td>Caps loss over the life of the account</td><td><strong>Trailing or static</strong> &mdash; the most consequential term in the document</td></tr>
+      <tr><td>Consistency rule</td><td>Prevents one outsized day carrying the whole result</td><td>The exact percentage, and whether it applies at payout</td></tr>
+      <tr><td>Minimum trading days</td><td>Stops a single lucky session passing the test</td><td>How a day is counted, and whether it also gates payouts</td></tr>
+      <tr><td>News restrictions</td><td>Bars trading around scheduled releases</td><td>The window either side, and which events are listed</td></tr>
+      <tr><td>Payout schedule</td><td>When and how often you can withdraw</td><td>First eligible date, minimum amount, processing time</td></tr>
+      <tr><td>Scaling plan</td><td>How buying power increases</td><td>Whether the drawdown scales with it or stays fixed</td></tr>
+    </table></div>
+    <p><strong>Trailing versus static drawdown is the row to read twice.</strong> A static maximum sits at a fixed level below your starting balance. A trailing maximum follows your equity high water mark upward, so every profitable trade tightens the floor beneath you. The practical effect is that a trader who goes up and then gives some back can breach a trailing limit while still being profitable overall &mdash; the arithmetic is in <a href="drawdown-explained.html">drawdown explained</a>, and the session-level version in <a href="daily-loss-limits.html">daily loss limits</a>.</p>
+
+    <h2>How the money actually flows</h2>
+    <p>Three flows, worth separating clearly:</p>
+    <ul>
+      <li><strong>Fees, from you to the firm.</strong> Charged per evaluation attempt, and again on each retry. This is revenue the firm keeps whatever happens next.</li>
+      <li><strong>Profit split, from the firm to you.</strong> Commonly quoted between 70 and 90 percent of profits in the trader's favour, subject to every rule in the table above.</li>
+      <li><strong>Payouts, on the firm's cycle.</strong> Gated by minimum amounts, eligibility dates, and consistency requirements. A profit that exists on the dashboard is not the same thing as a profit that has cleared.</li>
+    </ul>
+    <p>The split is the number everyone compares and the least useful one to compare, because 90 percent of a profit you are not permitted to withdraw is worth less than 70 percent of one you are. Judge the rules and the payout record, not the headline percentage.</p>
+
+    <h2>Who a funded account genuinely suits &mdash; and who it does not</h2>
+    <ul>
+      <li><strong>It suits</strong> a trader with a tested, documented process who wants larger size than their own capital allows, and who accepts a capped, known cost &mdash; the fee &mdash; in exchange for that access.</li>
+      <li><strong>It suits</strong> traders whose strategy already operates comfortably inside tight drawdown limits, because the rules will not accommodate one that does not.</li>
+      <li><strong>It does not suit</strong> anyone without a process yet. An evaluation is a test, not a teacher. Paying a fee to be tested on something you have not learned is an expensive way to find out you have not learned it.</li>
+      <li><strong>It does not suit</strong> traders who need discretion over risk. The firm's rules replace your own, and a strategy that occasionally requires a wider stop or a larger day will breach limits that have no appeal process.</li>
+      <li><strong>It does not suit</strong> anyone treating the fee as a lottery ticket. The published pass-rate data is not encouraging on that reading &mdash; see <a href="are-prop-firm-challenges-worth-it.html">are prop firm challenges worth it</a>.</li>
+    </ul>
+    <p>We will not tell you whether to buy one. That depends on your circumstances, and nothing on this page is a recommendation. What we will say is that the decision should be made after reading the drawdown clause, not after reading the profit split.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A funded account does not supply a process, and it will not survive the absence of one. Our third principle, <em>trail and protect</em>, happens to be exactly what a trailing drawdown rule demands: as targets print, the stop moves up behind them, so a good trade is not allowed to become a bad one. A trader who already works that way finds prop rules restrictive but survivable. A trader who does not will meet the drawdown clause quickly, whatever the account says on the dashboard. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a prop firm?</h3>
+    <p>A proprietary trading firm trades its own capital rather than client money. The retail version sells an evaluation: you pay a fee, trade an account to a profit target without breaching its drawdown rules, and on passing you are given a funded account whose profits are split with the firm. You are not a client with a deposit and you are usually not an employee.</p>
+
+    <h3>Do you actually get real money from a prop firm?</h3>
+    <p>You get real payouts if you meet the terms, but the account you trade may or may not route to a live market. Many retail firms run funded accounts in a simulated environment and pay withdrawals out of company revenue while hedging selectively. That is not automatically wrong, but it is the single most important thing to establish before paying, because it determines who is actually on the other side of your trade.</p>
+
+    <h3>Why do prop firms use simulated accounts?</h3>
+    <p>Largely because of capital and registration requirements. In the United States, a firm acting as counterparty to retail forex must register as a retail foreign exchange dealer or futures commission merchant and meet a minimum net capital standard of $20 million. Selling access to a simulated environment with a payout agreement avoids that regime entirely, which is why the retail evaluation model is shaped the way it is.</p>
+
+    <h3>What is the difference between a daily loss limit and a maximum drawdown?</h3>
+    <p>A daily loss limit resets each session and caps how much you can lose in a single day. A maximum drawdown applies to the life of the account. The critical variant is whether that maximum trails your equity high water mark or sits static from the starting balance, because a trailing drawdown tightens every time you make money and is the rule that ends the largest number of accounts.</p>
+
+    <h2>Bottom line</h2>
+    <p>A retail funded account is a commercial contract that grants buying power in exchange for a fee and a share of profits, governed by drawdown rules rather than by brokerage regulation. The industry is built around simulated accounts and evaluation fees for a specific and traceable reason: acting as a real counterparty to retail traders in the US requires $20 million in net capital, and selling an evaluation does not. That structure is neither a scandal nor a shortcut. It is a product, and like any product it is worth exactly what its terms say. Read the drawdown clause first, the payout terms second, and the profit split last. The risk discipline that makes any of it survivable is a separate question entirely, and it starts with <a href="risk-management-trading.html">risk management in trading</a> and <a href="position-sizing-from-risk.html">sizing a position from risk</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="are-prop-firm-challenges-worth-it.html">Are Prop Firm Challenges Worth It?</a>
+      <a href="prop-firm-vs-own-capital.html">Prop Firm vs Trading Your Own Capital</a>
+      <a href="drawdown-explained.html">Drawdown Explained: Why the Second Half Is Harder</a>
+      <a href="daily-loss-limits.html">Daily Loss Limits: The Rule That Saves Accounts</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk, Not Conviction</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The account is the easy part. <span class="g">The process is the product.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

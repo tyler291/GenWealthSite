@@ -255,8 +255,8 @@ sideways to two siblings.
 - [x] Earnings gaps: the honest odds on trading them `(earnings-gaps)`
 - [x] Power hour explained: why the last hour trades differently `(power-hour-explained)`
 - [x] Trading SPY vs trading ES: which suits which account `(spy-vs-es-futures)`
-- [ ] Short selling basics and the locate problem
-- [ ] Settlement, T+1 and good-faith violations
+- [x] Short selling basics and the locate problem `(short-selling-and-locates)`
+- [x] Settlement, T+1 and good-faith violations `(settlement-t1-and-good-faith-violations)`
 
 ---
 
@@ -266,7 +266,7 @@ Highest commercial intent left in the map. Be scrupulously honest here — this 
 the cluster where a thinly-veiled ad gets ignored by Google and the AIs alike.
 Never quote a pass rate we cannot source.
 
-- [ ] Prop firms explained: how funded trading accounts really work `[PILLAR]`
+- [x] Prop firms explained: how funded trading accounts really work `[PILLAR]` `(prop-firms-explained)`
 - [ ] How prop firm challenges actually make their money
 - [ ] One-step vs two-step evaluations: which is really easier
 - [ ] Trailing drawdown explained properly (the rule that fails most accounts)

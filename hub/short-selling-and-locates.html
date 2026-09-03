@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Short Selling Basics and the Locate Problem</title>
+<meta name="description" content="Short selling means selling borrowed shares. How the Reg SHO locate requirement works, why hard-to-borrow names cost more, and what fires at minus 10 percent." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/short-selling-and-locates.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Short Selling Basics and the Locate Problem" />
+<meta property="og:description" content="You cannot sell what nobody will lend you. How the locate requirement, the borrow fee, threshold securities and the short-sale restriction shape a short trade." />
+<meta property="og:url" content="https://gwhlds.com/hub/short-selling-and-locates.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/short-selling-and-locates.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Short Selling Basics and the Locate Problem", "description": "How short selling actually works mechanically: the share borrow, the Regulation SHO locate requirement, the borrow fee and recall risk, threshold securities and forced close-outs, the Rule 201 short-sale price test, and what the locate problem means for an intraday plan.", "image": "https://gwhlds.com/assets/hub/short-selling-and-locates.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/short-selling-and-locates.html", "datePublished": "2026-09-03"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Short Selling Basics and the Locate Problem", "item": "https://gwhlds.com/hub/short-selling-and-locates.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a locate in short selling?", "acceptedAnswer": {"@type": "Answer", "text": "A locate is your broker's documented, reasonable belief that the shares you are about to sell short can actually be borrowed and delivered on time. Regulation SHO requires it before the order is effected, not after. If the broker's stock loan desk cannot source the shares, the order is rejected and there is no trade to manage."}}, {"@type": "Question", "name": "Why can I not short some stocks at all?", "acceptedAnswer": {"@type": "Answer", "text": "Because nobody will lend them. Lendable supply comes from margin accounts, institutional holders and other brokers, and small or tightly held companies often have almost none. No borrow means no locate, and no locate means your broker legally cannot let the short sale through. It is a supply problem, not a broker being difficult."}}, {"@type": "Question", "name": "What is the short sale restriction and when does it trigger?", "acceptedAnswer": {"@type": "Answer", "text": "Regulation SHO Rule 201 is a circuit breaker that triggers when a stock declines at least 10 percent from the prior day's closing price. For the rest of that session and all of the next, short sales may generally only be displayed or executed at a price above the national best bid, which means you cannot hit the bid to get short. You have to offer and wait."}}, {"@type": "Question", "name": "Can a short position be closed without my permission?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The lender of the shares can recall them, and if your broker cannot replace the borrow it may buy the shares back in your account to cover. Separately, Rule 204 obliges the clearing participant to close out an unresolved short-sale fail to deliver by the beginning of regular trading hours on the settlement day following the settlement date. Neither event asks your opinion."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Short Selling &amp; Locates</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Stocks &middot; Rules</span>
+        <h1>Short Selling Basics and the Locate Problem</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 3, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/short-selling-and-locates.jpg" alt="A glowing share certificate suspended by a taut chain above an empty vault shelf, with a faint descending candlestick chart behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Short selling is selling shares you do not own, borrowed from someone who does, hoping to buy them back lower. Before your broker can execute it, Regulation SHO requires them to locate those shares &mdash; and on hard-to-borrow names that locate is the constraint that quietly decides whether the trade exists at all.</p>
+
+    <p>Most explanations stop at "you profit when the price falls." That part is easy. The part that actually determines whether a short is tradable &mdash; and what it costs to hold &mdash; happens in the stock loan market, out of sight of your chart.</p>
+
+    <h2>What actually happens when you short a stock</h2>
+    <p>A short sale has four moving parts, and only one of them is visible on your screen:</p>
+    <ol>
+      <li><strong>Your broker borrows the shares.</strong> They come from somewhere real &mdash; typically shares held in other clients' margin accounts, an institutional lender, or another broker.</li>
+      <li><strong>You sell the borrowed shares</strong> into the market. The buyer receives genuine shares and has no idea they were borrowed.</li>
+      <li><strong>You owe shares, not money.</strong> Your obligation is denominated in stock. If the price rises, the cost of returning what you owe rises with it.</li>
+      <li><strong>You buy them back and return them.</strong> Your profit or loss is the difference, less the cost of the borrow.</li>
+    </ol>
+    <p>Because the obligation is in shares rather than dollars, the loss on a short is not bounded the way a long position's is. A stock can only fall to zero, which caps a long loss at what you paid. There is no matching ceiling on the upside, so there is no structural cap on a short loss. That asymmetry is the single most important fact about short selling, and everything else on this page follows from it.</p>
+
+    <div class="callout"><b>The asymmetry is not a technicality.</b> A long position at $20 can lose you $20 a share. A short at $20 in a stock that gaps to $85 on news costs you $65 a share, and it happened while you were asleep. Any short position without a pre-decided exit is an open-ended commitment, and the market is under no obligation to give you a graceful place to close it.</div>
+
+    <h2>The locate requirement, in plain terms</h2>
+    <p>Before a broker-dealer can execute a short sale, Regulation SHO requires it to have <strong>reasonable grounds to believe the security can be borrowed and delivered on time</strong> &mdash; and that belief has to be documented before the order is effected, not afterwards (<a href="https://www.sec.gov/investor/pubs/regsho.htm" target="_blank" rel="nofollow noopener">SEC, Key Points About Regulation SHO</a>).</p>
+    <p>In practice this happens invisibly and fast. You click sell short, your broker's system checks its available borrow inventory, and either the order goes through or it comes back rejected. Retail traders usually experience the locate requirement only as an error message.</p>
+    <p>What matters is <em>why</em> the message appears. Lendable supply is finite and unevenly distributed. Large, widely held, index-member stocks have deep lendable pools and are described as "easy to borrow." Small companies, tightly held companies, recent listings and heavily shorted names may have almost none. <a href="float-and-short-interest.html">Float and short interest</a> are the two numbers that best predict which side of that line a stock sits on, and <a href="low-float-stocks.html">low-float stocks</a> are where the problem bites hardest.</p>
+    <p>The consequence for planning is blunt: <strong>a short setup on a hard-to-borrow name is not a setup.</strong> It is an idea you may or may not be permitted to act on, and you find out at the moment you try to act on it.</p>
+
+    <h2>Why the borrow is a cost, not just a permission</h2>
+    <p>When shares are scarce, lenders charge for them. The fee is quoted as an annualised rate on the value of the borrowed stock and accrues daily for as long as you hold the position. On easy-to-borrow large caps it is negligible. On genuinely scarce names it can run to double-digit annual percentages, and on the most extreme it goes higher still.</p>
+    <p>Three practical implications:</p>
+    <ul>
+      <li><strong>Borrow cost is a holding-period tax.</strong> It is close to irrelevant on an intraday scalp and material on a multi-week swing. The same short idea can be sound on one timeframe and negative-expectancy on another purely because of the fee.</li>
+      <li><strong>The rate can change while you hold.</strong> Borrow rates are not fixed for the life of your trade. Scarcity increases, the rate re-prices, and your cost base moves without any price action at all.</li>
+      <li><strong>The lender can recall.</strong> If the shares are called back and your broker cannot source a replacement, you can be bought in &mdash; your position closed for you, at whatever the market is at that moment. This is the mechanism people are describing, imprecisely, when they say they were squeezed out of a short.</li>
+    </ul>
+
+    <h2>Threshold securities and forced close-outs</h2>
+    <p>The settlement system tracks failures to deliver, and Regulation SHO puts names with persistent failures on a public list. A stock becomes a <strong>threshold security</strong> when its aggregate fail-to-deliver position at a registered clearing agency reaches <strong>10,000 shares or more and at least 0.5 percent of the issuer's total shares outstanding, for five consecutive settlement days</strong>. If the failures persist for <strong>13 consecutive settlement days</strong>, a mandatory close-out requirement activates (<a href="https://www.sec.gov/investor/pubs/regsho.htm" target="_blank" rel="nofollow noopener">SEC, Key Points About Regulation SHO</a>).</p>
+    <p>Separately, Rule 204 requires a participant to close out an unresolved fail to deliver arising from a short sale <strong>no later than the beginning of regular trading hours on the settlement day following the settlement date</strong>, with a longer window for long sales and bona fide market making.</p>
+    <p>You will never file any of this paperwork yourself. It matters because it tells you something the chart does not: a name on the threshold list is a name where the borrow is already strained, and strained borrow is exactly the condition in which forced buying appears out of nowhere.</p>
+
+    <h2>Rule 201: the restriction that fires at minus 10 percent</h2>
+    <p>This is the rule that most often surprises an intraday trader. Regulation SHO Rule 201 is a circuit breaker: when a stock declines <strong>at least 10 percent from the prior day's closing price</strong>, trading centres must prevent the display or execution of a short sale at an impermissible price for the <strong>remainder of that day and the following day</strong>.</p>
+    <p>Once the restriction is active you generally cannot hit the bid to get short. Your short sale order has to be priced above the national best bid and wait to be taken. On a stock in freefall, that is precisely when a passive order does not fill.</p>
+    <p>The behavioural effect is real and worth internalising. The restriction fires at the exact moment a downtrend looks most obvious, and it converts an aggressive entry into a patient one. A trader who has not planned for it will either chase a worse price on the bounce or force a fill they never wanted. That is the same discipline problem described in <a href="fomo-in-trading.html">FOMO in trading</a>, arriving through a regulatory side door.</p>
+
+    <h2>Long versus short: what is genuinely not symmetric</h2>
+    <div class="kv"><table>
+      <tr><th></th><th>Long</th><th>Short</th></tr>
+      <tr><td>What you owe</td><td>Nothing; you own the asset</td><td>Shares, whatever they later cost</td></tr>
+      <tr><td>Maximum loss</td><td>The position, if it goes to zero</td><td>Not bounded by the structure of the trade</td></tr>
+      <tr><td>Permission needed</td><td>None beyond buying power</td><td>A documented locate before execution</td></tr>
+      <tr><td>Availability</td><td>Any listed share</td><td>Only where a borrow exists</td></tr>
+      <tr><td>Holding cost</td><td>Margin interest, if used</td><td>Borrow fee, which can re-price</td></tr>
+      <tr><td>Can be closed for you</td><td>Only on a margin call</td><td>On a recall or a regulatory close-out</td></tr>
+      <tr><td>Price-test rules</td><td>None</td><td>Rule 201 restriction after a 10% decline</td></tr>
+      <tr><td>Dividends</td><td>You receive them</td><td>You owe them to the lender</td></tr>
+    </table></div>
+    <p>Traders moving from long-only to shorting often assume it is the same operation with the sign flipped. Eight rows of that table say otherwise. Futures, by contrast, genuinely are symmetric &mdash; selling is the same operation as buying, with no borrow involved &mdash; which is one reason many intraday traders end up there, as <a href="spy-vs-es-futures.html">SPY vs ES futures</a> sets out.</p>
+
+    <h2>What the locate problem means for your plan</h2>
+    <p>Turn all of the above into a short checklist you run before the trade, not during it:</p>
+    <ul>
+      <li><strong>Confirm borrow availability while you are still planning.</strong> Most platforms show an easy-to-borrow or short-availability flag. Check it the night before, alongside the rest of your <a href="pre-market-routine.html">pre-market routine</a>.</li>
+      <li><strong>Weigh the borrow rate against your intended holding period.</strong> If the fee is meaningful and you plan to hold for days, price it into the target before deciding the trade is worth taking.</li>
+      <li><strong>Assume the Rule 201 restriction is active</strong> on anything already down heavily, and plan a passive entry rather than an aggressive one.</li>
+      <li><strong>Size for a gap, not for a stop.</strong> A stop is an instruction, not a guarantee, and on a short the gap risk runs against you without a ceiling. <a href="overnight-and-weekend-gap-risk.html">Overnight and weekend gap risk</a> covers the arithmetic.</li>
+      <li><strong>Write the invalidation before you enter.</strong> If the level that made the short valid is reclaimed, the reason for the position is gone whatever the unrealised number says.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Shorting punishes exactly the habit our first principle exists to prevent. <em>Break and hold</em> means the level has to break <em>and</em> hold as the candle closes before it counts &mdash; and on a short that discipline is not stylistic but structural, because the trade you are entering has no natural loss ceiling and can be closed against your will. <em>Know your next</em> means the invalidation is written down before the entry, not discovered during it. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a locate in short selling?</h3>
+    <p>A locate is your broker's documented, reasonable belief that the shares you are about to sell short can actually be borrowed and delivered on time. Regulation SHO requires it before the order is effected, not after. If the broker's stock loan desk cannot source the shares, the order is rejected and there is no trade to manage.</p>
+
+    <h3>Why can I not short some stocks at all?</h3>
+    <p>Because nobody will lend them. Lendable supply comes from margin accounts, institutional holders and other brokers, and small or tightly held companies often have almost none. No borrow means no locate, and no locate means your broker legally cannot let the short sale through. It is a supply problem, not a broker being difficult.</p>
+
+    <h3>What is the short sale restriction and when does it trigger?</h3>
+    <p>Regulation SHO Rule 201 is a circuit breaker that triggers when a stock declines at least 10 percent from the prior day's closing price. For the rest of that session and all of the next, short sales may generally only be displayed or executed at a price above the national best bid, which means you cannot hit the bid to get short. You have to offer and wait.</p>
+
+    <h3>Can a short position be closed without my permission?</h3>
+    <p>Yes. The lender of the shares can recall them, and if your broker cannot replace the borrow it may buy the shares back in your account to cover. Separately, Rule 204 obliges the clearing participant to close out an unresolved short-sale fail to deliver by the beginning of regular trading hours on the settlement day following the settlement date. Neither event asks your opinion.</p>
+
+    <h2>Bottom line</h2>
+    <p>Short selling is not a long trade with the sign reversed. It is a borrowing arrangement with a price attached, a permission step your broker performs before you are allowed in, a price-test rule that activates precisely when the move looks most compelling, and a loss profile with no structural ceiling. None of that makes it unsuitable &mdash; professionals short constantly &mdash; but all of it belongs in the plan before the entry. Check the borrow, weigh the fee against your holding period, expect the restriction, and size as though the gap is coming. For where shorting sits in the wider equities picture, start with <a href="day-trading-stocks.html">day trading stocks</a>; if you want to see how invalidation gets stated on live positions, the <a href="../faq.html">FAQ</a> explains what the room actually does.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="day-trading-stocks.html">Day Trading Stocks: What Is Different About Equities</a>
+      <a href="float-and-short-interest.html">Float and Short Interest: Why They Decide How a Stock Moves</a>
+      <a href="low-float-stocks.html">Low Float Stocks: Why They Move So Violently</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight and Weekend Gap Risk</a>
+      <a href="trading-halts-explained.html">Trading Halts: What Happens and What to Do</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Check the borrow. <span class="g">Then check the plan.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
