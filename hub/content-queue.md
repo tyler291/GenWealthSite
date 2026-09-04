@@ -267,9 +267,9 @@ the cluster where a thinly-veiled ad gets ignored by Google and the AIs alike.
 Never quote a pass rate we cannot source.
 
 - [x] Prop firms explained: how funded trading accounts really work `[PILLAR]` `(prop-firms-explained)`
-- [ ] How prop firm challenges actually make their money
-- [ ] One-step vs two-step evaluations: which is really easier
-- [ ] Trailing drawdown explained properly (the rule that fails most accounts)
+- [x] How prop firm challenges actually make their money `(how-prop-firms-make-money)`
+- [x] One-step vs two-step evaluations: which is really easier `(one-step-vs-two-step-evaluations)`
+- [x] Trailing drawdown explained properly (the rule that fails most accounts) `(trailing-drawdown-explained)`
 - [ ] Prop firm daily loss limits compared: how the rules differ
 - [ ] Consistency rules: the clause most traders miss until payout
 - [ ] What actually happens on payout day

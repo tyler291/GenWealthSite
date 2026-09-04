@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How Prop Firms Make Money: The Challenge Model</title>
+<meta name="description" content="How prop firms make money: evaluation fees per attempt, retries, and who takes the other side of a funded trade. Plus the one public breakdown of a firm." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-prop-firms-make-money.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How Prop Firms Make Money: The Challenge Model" />
+<meta property="og:description" content="The fee is the product. Where the revenue comes from, why a low pass rate is structural, and what a court filing revealed about one firm's economics." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-prop-firms-make-money.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-prop-firms-make-money.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "How Prop Firms Make Money: The Challenge Model", "description": "Where a retail prop firm's revenue actually comes from: the evaluation fee charged per attempt, the retry, the funded-stage routing decision, and what a 2023 federal court filing disclosed about one firm's fee income, payouts and net income.", "image": "https://gwhlds.com/assets/hub/how-prop-firms-make-money.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/how-prop-firms-make-money.html", "datePublished": "2026-09-04"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "How Prop Firms Make Money: The Challenge Model", "item": "https://gwhlds.com/hub/how-prop-firms-make-money.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do prop firms want you to fail?", "acceptedAnswer": {"@type": "Answer", "text": "A firm running on evaluation fees does not need you to fail so much as it needs most people to fail, which is a different and more comfortable position. It can market honestly, publish real payouts, and still keep the majority of fee income, because the pass rate does the work. Judge a firm by whether it discloses that clearly rather than by whether it says it wants you to win."}}, {"@type": "Question", "name": "Where does the money for prop firm payouts come from?", "acceptedAnswer": {"@type": "Answer", "text": "In a simulated funded model, payouts come out of the firm's own revenue, which is mostly evaluation fees. In a routed model, profits come from the market via the firm's broker or liquidity provider. Most retail firms sit somewhere between the two, routing a small minority of accounts and internalising the rest, so payouts are largely a cost line funded by fees."}}, {"@type": "Question", "name": "What is the difference between A-book and B-book at a prop firm?", "acceptedAnswer": {"@type": "Answer", "text": "A-book means your order is passed through to an external counterparty, so your profit is somebody else's cost and the firm earns a spread or commission. B-book means the firm takes the other side itself, so your profit is its direct loss and your loss is its direct gain. Neither is automatically improper, but they create opposite incentives and firms rarely say which one applies to you."}}, {"@type": "Question", "name": "Is it a scam if a prop firm uses simulated accounts?", "acceptedAnswer": {"@type": "Answer", "text": "Not by itself. A simulated environment with a contractual payout agreement is a lawful product in most jurisdictions and avoids the capital and registration burden of acting as a real dealer. What turns it into a problem is non-disclosure: a firm that lets you believe your orders reach a live market when they never leave its server has misrepresented the product, whatever the payout record says."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>How Prop Firms Make Money</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Prop Firms</span>
+        <h1>How Prop Firms Make Money: The Challenge Model</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 4, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-prop-firms-make-money.jpg" alt="A vault chamber cross-section with hundreds of glowing coins streaming inward toward a central strongbox and only a thin trickle flowing back out" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A prop firm challenge makes money from evaluation fees, not from your trading. The fee is charged per attempt and kept whether you pass or fail, so a low pass rate is a feature of the revenue model rather than a flaw in it. Where the funded stage routes decides the rest.</p>
+
+    <p>This is not an accusation. It is a description of a business model, and understanding it makes prop firm marketing far easier to read. A firm can run this model honestly, and many do. But you should know what you are buying before you decide the price is fair.</p>
+
+    <h2>Where the money actually comes from</h2>
+    <p>Start by separating two things that sound alike: the account size a firm advertises, and the money that moves. A "$100k account" describes buying power granted inside the firm's platform. The money that actually changes hands is your fee going one way and, later, a share of profits coming back the other.</p>
+    <p>That means the firm's revenue does not depend on markets. It depends on <strong>how many evaluations are sold</strong>. A quiet, choppy month that is miserable for traders is neutral or good for a fee-driven firm, because the fee arrived at signup and the firm's exposure is capped by the drawdown rule that closes the account.</p>
+    <p>This is the single structural fact worth carrying around. Everything else on this page follows from it.</p>
+
+    <h2>The three revenue lines, ranked</h2>
+    <ol>
+      <li><strong>Evaluation fees.</strong> The primary line, by a wide margin at most firms. Charged per attempt, non-refundable in the ordinary case, and entirely independent of what the trader does next.</li>
+      <li><strong>Retries and resets.</strong> The compounding line. A trader who breaches a rule on day nine and buys another attempt has paid twice for one intention. Discounted resets exist precisely because a second sale to an existing customer costs almost nothing to acquire.</li>
+      <li><strong>Trading revenue at the funded stage.</strong> This line only exists if the firm internalises order flow &mdash; that is, takes the other side. If it routes everything out, this is a spread or commission at best, and the firm is purely a fee business.</li>
+    </ol>
+    <p>Notice what is missing from that list: <em>a share of profits from a portfolio of skilled traders.</em> That is the classical prop desk model, and it is not what most retail evaluation firms run on. To them the profit split is a cost line, not a revenue line.</p>
+
+    <div class="callout"><b>Read the incentive, not the intention.</b> A firm funded by evaluation fees does not need to want you to fail. It needs most people to fail, which happens on its own. The gap between "wants you to fail" and "is funded by most people failing" is where honest firms and predatory ones separate &mdash; and it is a question about disclosure, not motive.</div>
+
+    <h2>A-book or B-book: who is on the other side</h2>
+    <p>Once you reach a funded account, one question decides everything about the firm's economics from that point onward.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>A-book (routed out)</th><th>B-book (internalised)</th></tr>
+      <tr><td>Your counterparty</td><td>The market, via a broker or liquidity provider</td><td>The firm itself</td></tr>
+      <tr><td>Your profit is</td><td>Somebody else's cost</td><td>The firm's direct cost</td></tr>
+      <tr><td>Your loss is</td><td>Somebody else's gain</td><td>The firm's direct gain</td></tr>
+      <tr><td>The firm earns from</td><td>Spread, commission, fees</td><td>Fees plus net trader losses</td></tr>
+      <tr><td>The firm's risk</td><td>Effectively none</td><td>Open-ended on a winning trader, unless a drawdown rule caps it</td></tr>
+    </table></div>
+    <p>Neither model is inherently improper. Retail brokers have internalised flow for decades under disclosure rules. The problem arrives when a firm markets the A-book picture &mdash; trading firm capital against real liquidity providers &mdash; while operating the B-book one, because a trader who believes the market is on the other side reads their own results very differently to one who knows the house is.</p>
+    <p>Ask the question directly before you pay: <em>at the funded stage, does my order reach an external counterparty, and if only sometimes, on what criteria?</em> A firm that answers plainly has told you something useful. A firm that will not answer has also told you something useful. The broader structure sits in <a href="prop-firms-explained.html">prop firms explained</a>.</p>
+
+    <h2>The one time a firm's numbers were made public</h2>
+    <p>Retail prop firms are private companies and almost none publish financials. There is one significant exception, and it is worth reading carefully &mdash; including the part where it fell apart.</p>
+    <p>In August 2023 the CFTC filed a complaint in the District of New Jersey against Traders Global Group Inc., trading as My Forex Funds. The filing alleged that from November 2021 the firm <strong>took in approximately $310 million in customer registration fees</strong>, <strong>paid out approximately $137 million</strong> &mdash; mostly to customers as purported trading profits &mdash; and retained <strong>net income of approximately $172 million</strong> (<a href="https://www.cftc.gov/media/9196/enftradersglobalgroupcomplaint082923/download" target="_blank" rel="nofollow noopener">CFTC v. Traders Global Group Inc., complaint, 29 August 2023</a>).</p>
+    <p>Set the fraud allegations aside for a moment and look only at the shape. Roughly <strong>44 percent of fee revenue returned as payouts</strong>, the rest retained. That ratio is the clearest public illustration anyone has of what a fee-driven evaluation business looks like at scale.</p>
+    <p>The same filing alleged something sharper about routing. Of about <strong>24,000 customers with "live" accounts</strong> in that period, it stated that <strong>fewer than 100 ever had a single trade routed out to an external dealer</strong>. If accurate, that describes a B-book operation with a very thin A-book veneer.</p>
+
+    <div class="callout"><b>The essential caveat, stated plainly.</b> Those are allegations, not findings. In May 2025 the court dismissed the case <em>with prejudice</em> and ordered the CFTC to pay over $3 million in fees and costs as a sanction for its conduct in the litigation (<a href="https://www.quinnemanuel.com/the-firm/publications/historic-rule-11-dismissal-and-fee-victory-against-the-commodity-futures-trading-commission-in-hotly-contested-fraud-case/" target="_blank" rel="nofollow noopener">Quinn Emanuel, case summary</a>). Nothing was proven against the firm, and it would be wrong to describe it as having been found liable. What survives is the disclosed shape of a fee-and-payout business &mdash; and a reminder that the regulatory position here is genuinely unsettled.</div>
+
+    <h2>Why the pass rate is doing the work</h2>
+    <p>Run the arithmetic on a simplified firm to see why the fee line dominates. Say an evaluation sells for $500 on a notional $100,000 account, and one trader in ten reaches a funded account and withdraws an average of $2,000 before the account ends.</p>
+    <ul>
+      <li>Ten sales bring in <strong>$5,000</strong>.</li>
+      <li>One payout costs <strong>$2,000</strong>, less whatever the profit split retains.</li>
+      <li>The firm keeps roughly <strong>$3,000</strong> per cohort of ten, before its own costs, without taking a single directional position.</li>
+    </ul>
+    <p>Those inputs are illustrative, not a claim about any particular firm. The point is the sensitivity: the model works comfortably at a one-in-ten pass rate and stops working at one in two. That is why evaluation rules cluster where they do &mdash; a profit target that requires genuine skill, paired with a drawdown limit tight enough that ordinary variance ends a meaningful share of attempts on its own. The published payout data is discussed in <a href="are-prop-firm-challenges-worth-it.html">are prop firm challenges worth it</a>, and the specific rule that ends the most accounts is covered in <a href="trailing-drawdown-explained.html">trailing drawdown explained</a>.</p>
+
+    <h2>What an honest version of this model looks like</h2>
+    <p>None of the above makes the product illegitimate. A fee-for-evaluation business can be a fair deal: you are buying access to size you do not have, at a known and capped cost. Here is what separates a firm you can reason about from one you cannot.</p>
+    <ul>
+      <li><strong>It states the routing model.</strong> Simulated, routed, or hybrid &mdash; in writing, in the terms, not in a support chat.</li>
+      <li><strong>It publishes payout data with a denominator.</strong> "We paid out $40 million" means nothing without the number of accounts sold. A firm that gives you both has told you its pass rate whether it meant to or not.</li>
+      <li><strong>Its drawdown rules are static, or clearly explained.</strong> A trailing rule is not dishonest. A trailing rule buried in clause 14 is.</li>
+      <li><strong>It does not sell urgency.</strong> A permanent discount countdown is a fee-volume tactic, and fee volume is the revenue line.</li>
+      <li><strong>It survives the question above.</strong> Ask who is on the other side, and watch what happens.</li>
+    </ul>
+    <p>What you should not expect from any of them is a process. That is a separate purchase, and the comparison of paths is in <a href="prop-firm-vs-own-capital.html">prop firm vs trading your own capital</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We do not sell evaluations and we have no view on which firm you should use. What we would say is that the pass rate a firm depends on is made of individual traders taking trades they had no plan for. A callout with a defined entry, a target and a written invalidation is not an edge over the firm &mdash; it is the minimum standard that stops variance doing the firm's work for it. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Do prop firms want you to fail?</h3>
+    <p>A firm running on evaluation fees does not need you to fail so much as it needs most people to fail, which is a different and more comfortable position. It can market honestly, publish real payouts, and still keep the majority of fee income, because the pass rate does the work. Judge a firm by whether it discloses that clearly rather than by whether it says it wants you to win.</p>
+
+    <h3>Where does the money for prop firm payouts come from?</h3>
+    <p>In a simulated funded model, payouts come out of the firm's own revenue, which is mostly evaluation fees. In a routed model, profits come from the market via the firm's broker or liquidity provider. Most retail firms sit somewhere between the two, routing a small minority of accounts and internalising the rest, so payouts are largely a cost line funded by fees.</p>
+
+    <h3>What is the difference between A-book and B-book at a prop firm?</h3>
+    <p>A-book means your order is passed through to an external counterparty, so your profit is somebody else's cost and the firm earns a spread or commission. B-book means the firm takes the other side itself, so your profit is its direct loss and your loss is its direct gain. Neither is automatically improper, but they create opposite incentives and firms rarely say which one applies to you.</p>
+
+    <h3>Is it a scam if a prop firm uses simulated accounts?</h3>
+    <p>Not by itself. A simulated environment with a contractual payout agreement is a lawful product in most jurisdictions and avoids the capital and registration burden of acting as a real dealer. What turns it into a problem is non-disclosure: a firm that lets you believe your orders reach a live market when they never leave its server has misrepresented the product, whatever the payout record says.</p>
+
+    <h2>Bottom line</h2>
+    <p>A retail prop firm is, in revenue terms, a company that sells tests. The fee arrives per attempt, the retry compounds it, and the funded stage is either a cost line or a second revenue line depending on whether the firm takes the other side. The one public breakdown of a firm at scale &mdash; a 2023 federal complaint whose allegations were never proven, and whose case was dismissed with sanctions against the regulator in 2025 &mdash; described roughly $310 million in fees against $137 million paid back out. Read that as a shape, not a verdict. Then price the product accordingly: you are buying a capped-cost shot at size, and what decides the outcome is the risk process you bring with you, which starts at <a href="risk-management-trading.html">risk management in trading</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="prop-firms-explained.html">Prop Firms Explained: How Funded Accounts Work</a>
+      <a href="are-prop-firm-challenges-worth-it.html">Are Prop Firm Challenges Worth It?</a>
+      <a href="prop-firm-vs-own-capital.html">Prop Firm vs Trading Your Own Capital</a>
+      <a href="trailing-drawdown-explained.html">Trailing Drawdown Explained</a>
+      <a href="how-to-tell-if-trading-results-are-real.html">How to Tell If Trading Results Are Real</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The fee is the easy part. <span class="g">The process is the product.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

@@ -201,6 +201,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Earnings Gaps: The Honest Odds on Trading Them](https://gwhlds.com/hub/earnings-gaps.html): why results arrive as an untradeable gap, why beating estimates is the base case rather than an edge, and how traders use the aftermath instead.
 - [Power Hour Explained: Why the Last Hour Differs](https://gwhlds.com/hub/power-hour-explained.html): the closing auction order cutoffs, the imbalance feed, and why a strong last ten minutes is mechanical rather than directional.
 - [SPY vs ES Futures: Which Suits Your Account?](https://gwhlds.com/hub/spy-vs-es-futures.html): one share versus one contract, the granularity that decides it, and the cost, hours, margin and tax differences.
+- [How Prop Firms Make Money: The Challenge Model](https://gwhlds.com/hub/how-prop-firms-make-money.html): the evaluation fee as the primary revenue line, why retries compound it, the A-book and B-book question, and the one public court breakdown of a firm's economics.
+- [One-Step vs Two-Step Prop Firm Evaluations](https://gwhlds.com/hub/one-step-vs-two-step-evaluations.html): what each format really asks, targets converted into E-mini index points, why sequential phases multiply rather than add, and which suits which trader.
+- [Trailing Drawdown Explained: The Rule That Ends Accounts](https://gwhlds.com/hub/trailing-drawdown-explained.html): how a floor that follows your equity high shrinks the account as you profit, intraday versus end-of-day trailing, the lock point, and how to size underneath it.
 
 ## Contact
 

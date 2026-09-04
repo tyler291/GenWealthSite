@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Trailing Drawdown Explained: The Rule That Ends Accounts</title>
+<meta name="description" content="Trailing drawdown explained: how a limit that follows your equity high tightens as you profit, intraday vs end-of-day trailing, and how to trade underneath one." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/trailing-drawdown-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Trailing Drawdown Explained: The Rule That Ends Accounts" />
+<meta property="og:description" content="The floor rises with every new equity high and never comes back down. Worked in real contract terms, with the intraday and end-of-day variants separated." />
+<meta property="og:url" content="https://gwhlds.com/hub/trailing-drawdown-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/trailing-drawdown-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Trailing Drawdown Explained: The Rule That Ends Accounts", "description": "A precise explanation of the trailing maximum drawdown used by prop firms: how the floor follows equity highs and never retreats, the difference between intraday and end-of-day trailing, where the rule locks, what it costs in real futures contract terms, and how to trade underneath it.", "image": "https://gwhlds.com/assets/hub/trailing-drawdown-explained.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/trailing-drawdown-explained.html", "datePublished": "2026-09-04"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Trailing Drawdown Explained: The Rule That Ends Accounts", "item": "https://gwhlds.com/hub/trailing-drawdown-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a trailing drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "A trailing drawdown is a maximum loss limit measured from the highest equity your account has ever reached rather than from its starting balance. Each time you set a new equity high the limit moves up with it and stays there. Because it never falls back, the amount of room beneath your starting balance shrinks with every profitable trade."}}, {"@type": "Question", "name": "What is the difference between intraday and end-of-day trailing drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "An intraday trailing drawdown updates on unrealised equity, so a position that goes your way and then gives it back can raise the floor and breach it in the same session without you ever closing a winner. An end-of-day version only updates on the closing balance, so open-trade excursions do not count against you. The end-of-day version is significantly more forgiving and it is worth confirming which one applies."}}, {"@type": "Question", "name": "Can you breach a trailing drawdown while still being profitable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is the single most common way accounts end. Because the floor follows your equity high, a run of profit followed by a partial giveback can take you through the limit while your account is still above its starting balance, or only marginally below it. The rule measures the distance from your best moment, not from where you began."}}, {"@type": "Question", "name": "Does a trailing drawdown ever stop trailing?", "acceptedAnswer": {"@type": "Answer", "text": "Usually, but not always, and where it stops matters enormously. Many firms lock the floor once it reaches the starting balance, so profit beyond that point no longer tightens the rule. Others let it trail indefinitely. Find the lock point in the terms before you trade, because an unlocked trailing drawdown means the account gets more fragile the better you do."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Trailing Drawdown Explained</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Prop Firms</span>
+        <h1>Trailing Drawdown Explained: The Rule That Ends Accounts</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 4, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/trailing-drawdown-explained.jpg" alt="A rising staircase of glowing steps above a metal floor plate that lifts to follow each step, the gap between them narrowing toward the top" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A trailing drawdown is a maximum loss limit that follows your account's equity high upward. Every new peak drags the floor up behind it, so the room beneath you shrinks as you make money. It never moves back down, which is why profitable accounts still breach it.</p>
+
+    <p>Almost every funded-account failure story is really this rule. It is not hidden, but it is counter-intuitive in a specific way: it converts good performance into fragility, and traders discover that at exactly the moment they are congratulating themselves.</p>
+
+    <h2>How the rule works, precisely</h2>
+    <p>Take an account with a starting balance of <strong>$50,000</strong> and a <strong>$2,000 trailing maximum drawdown</strong>. The floor begins at $48,000. From then on:</p>
+    <p><strong>Floor = highest equity ever reached &minus; $2,000.</strong></p>
+    <p>That is the whole rule. What makes it bite is the word <em>ever</em>. The floor ratchets up and never comes back down, no matter what happens next.</p>
+    <div class="kv"><table>
+      <tr><th>Highest equity reached</th><th>Trailing floor</th><th>Room left below the $50,000 start</th></tr>
+      <tr><td>$50,000 (day one)</td><td>$48,000</td><td>$2,000</td></tr>
+      <tr><td>$50,600</td><td>$48,600</td><td>$1,400</td></tr>
+      <tr><td>$51,200</td><td>$49,200</td><td>$800</td></tr>
+      <tr><td>$51,700</td><td>$49,700</td><td>$300</td></tr>
+      <tr><td>$52,000</td><td>$50,000</td><td>Zero</td></tr>
+    </table></div>
+    <p>Read the last row carefully. After a $2,000 run of profit, the account is closed the moment it returns to its <em>starting balance</em>. You have not lost anything and the rule has already ended you. At the fourth row it is worse: an account $1,700 up gets terminated at $49,700, which is $300 down on the month.</p>
+
+    <div class="callout"><b>The sentence to remember.</b> A trailing drawdown does not measure how much you have lost. It measures how far you are from your best moment. Those are completely different quantities, and only the first one feels like risk.</div>
+
+    <h2>What that costs in real contracts</h2>
+    <p>Percentages hide the size of the constraint. Convert it to something you actually trade.</p>
+    <p>The Micro E-mini S&amp;P 500 futures contract is valued at <strong>$5 per index point</strong>, with a minimum price fluctuation of 0.25 index points worth <strong>$1.25 per tick</strong> (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, Micro E-mini S&amp;P 500 contract specifications</a>). On the $2,000 trailing drawdown above, trading a single micro contract:</p>
+    <ul>
+      <li>Day one, the floor is <strong>400 index points</strong> away.</li>
+      <li>After a modest $600 run, it is <strong>280 points</strong> away.</li>
+      <li>After a $1,700 run, it is <strong>60 points</strong> away &mdash; a single ordinary session's range on the S&amp;P 500.</li>
+    </ul>
+    <p>Nothing about your strategy changed across those three lines. Your entire risk budget shrank by 85% because you made money. That is the mechanism, stated in the only units that matter.</p>
+
+    <h2>Intraday trailing vs end-of-day trailing</h2>
+    <p>Two firms can both advertise a "$2,000 trailing drawdown" and be selling meaningfully different products. The difference is what counts as an equity high.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>Intraday trailing</th><th>End-of-day trailing</th><th>Static</th></tr>
+      <tr><td>Floor updates on</td><td>Unrealised equity, tick by tick</td><td>The closing balance only</td><td>Never &mdash; fixed from the start</td></tr>
+      <tr><td>An open trade that runs +$800 then closes flat</td><td>Raises the floor by $800</td><td>Changes nothing</td><td>Changes nothing</td></tr>
+      <tr><td>Effect on partial profit-taking</td><td>Punishes letting a winner breathe</td><td>Neutral</td><td>Neutral</td></tr>
+      <tr><td>Practical difficulty</td><td>Hardest</td><td>Moderate</td><td>Easiest</td></tr>
+    </table></div>
+    <p>Under an intraday rule, a trade that goes 40 points your way before reversing to breakeven has permanently cost you $200 of headroom on a micro contract, without ever appearing in your profit and loss. Traders who cannot work out why their buffer keeps disappearing are usually trading an intraday rule and measuring themselves against a closed-trade record. Establish which variant applies before your first trade, alongside the session-level rule covered in <a href="daily-loss-limits.html">daily loss limits</a>.</p>
+
+    <h2>Where the rule stops trailing &mdash; find the lock</h2>
+    <p>Most firms freeze the floor once it reaches the starting balance, as in the final row of the table above. After that point, profit no longer tightens anything and you are effectively trading a static drawdown at breakeven. That lock is the most important single number in the terms document after the drawdown amount itself.</p>
+    <ul>
+      <li><strong>Locks at the starting balance.</strong> The common design. You have to survive one squeeze, then the rule relaxes permanently.</li>
+      <li><strong>Locks at the starting balance plus a buffer.</strong> More generous, and worth paying more for.</li>
+      <li><strong>Never locks.</strong> The floor trails your equity high forever. Success makes the account progressively more fragile, and no amount of profit ever buys you room.</li>
+    </ul>
+    <p>If a firm's marketing does not state the lock point, the answer is in the terms and it is worth finding before, not after. The wider rule inventory sits in <a href="prop-firms-explained.html">prop firms explained</a>, and the way these rules differ across evaluation formats is in <a href="one-step-vs-two-step-evaluations.html">one-step vs two-step evaluations</a>.</p>
+
+    <h2>Why the design exists at all</h2>
+    <p>The trailing drawdown is not an invention of the retail prop industry. It is a <strong>high-water mark</strong>, the same device institutional funds have used for decades, applied to risk instead of to fees.</p>
+    <p>In hedge fund contracts, a high-water mark conditions the manager's performance fee on exceeding the previously achieved maximum value, so investors do not pay twice for the same gains. Goetzmann, Ingersoll and Ross modelled the cost of that provision in the <em>Journal of Finance</em> and showed it materially limits the value of the performance claim (<a href="https://ideas.repec.org/a/bla/jfinan/v58y2003i4p1685-1718.html" target="_blank" rel="nofollow noopener">"High-Water Marks and Hedge Fund Management Contracts," <em>Journal of Finance</em> 58(4), 2003, pp. 1685&ndash;1718</a>).</p>
+    <p>A prop firm inverts the direction and keeps the mechanic. Where a fund's high-water mark caps what the manager can be paid, a trailing drawdown caps how far the trader can retreat from their peak. In both cases the peak, not the starting point, is the reference &mdash; and in both cases the party subject to it discovers that a good run creates an obligation rather than a cushion.</p>
+    <p>From the firm's side the appeal is obvious: it bounds the firm's exposure at a fixed distance from the account's best moment, whatever that moment turns out to be. Why that bounding matters to a firm's economics is set out in <a href="how-prop-firms-make-money.html">how prop firms make money</a>.</p>
+
+    <h2>How to actually trade underneath one</h2>
+    <p>The rule is survivable. It requires treating the floor, not the balance, as your account.</p>
+    <ol>
+      <li><strong>Trade the distance to the floor, never the balance.</strong> Recalculate it every morning. That number, not $50,000, is your account size.</li>
+      <li><strong>Size from the floor.</strong> If 1% risk is your rule, take 1% of the distance to the floor. As that distance shrinks, so does your position &mdash; automatically, before the rule forces it.</li>
+      <li><strong>Bank the run that creates the squeeze.</strong> The floor rises because equity rose. Taking profit converts the tightened floor into realised money instead of leaving it as a liability. <a href="how-to-take-partial-profits.html">Taking partial profits</a> is not optional under this rule; it is what the rule is asking for.</li>
+      <li><strong>Under an intraday rule, do not let winners round-trip.</strong> A trade that gives back its excursion costs you headroom whether or not it costs you money. Trail the stop behind each target.</li>
+      <li><strong>Get past the lock, then relax.</strong> If the floor locks at the starting balance, the first stretch is the dangerous one. Trade smaller than you think you should until you clear it, then resume normal size.</li>
+      <li><strong>Stop trading the day the floor is within one average loss.</strong> Not one average day &mdash; one average loss. At that distance a single ordinary trade decides the account.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Our third principle is <em>trail and protect</em>: as targets print, the stop moves up behind them. That is not a coincidence of vocabulary &mdash; a trailing drawdown rewards exactly that behaviour and punishes its opposite. A trader who lets a winner become a scratch is handing away headroom under this rule twice: once in the trade, once in the floor. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a trailing drawdown?</h3>
+    <p>A trailing drawdown is a maximum loss limit measured from the highest equity your account has ever reached rather than from its starting balance. Each time you set a new equity high the limit moves up with it and stays there. Because it never falls back, the amount of room beneath your starting balance shrinks with every profitable trade.</p>
+
+    <h3>What is the difference between intraday and end-of-day trailing drawdown?</h3>
+    <p>An intraday trailing drawdown updates on unrealised equity, so a position that goes your way and then gives it back can raise the floor and breach it in the same session without you ever closing a winner. An end-of-day version only updates on the closing balance, so open-trade excursions do not count against you. The end-of-day version is significantly more forgiving and it is worth confirming which one applies.</p>
+
+    <h3>Can you breach a trailing drawdown while still being profitable?</h3>
+    <p>Yes, and it is the single most common way accounts end. Because the floor follows your equity high, a run of profit followed by a partial giveback can take you through the limit while your account is still above its starting balance, or only marginally below it. The rule measures the distance from your best moment, not from where you began.</p>
+
+    <h3>Does a trailing drawdown ever stop trailing?</h3>
+    <p>Usually, but not always, and where it stops matters enormously. Many firms lock the floor once it reaches the starting balance, so profit beyond that point no longer tightens the rule. Others let it trail indefinitely. Find the lock point in the terms before you trade, because an unlocked trailing drawdown means the account gets more fragile the better you do.</p>
+
+    <h2>Bottom line</h2>
+    <p>A trailing drawdown replaces your starting balance with your best moment as the point everything is measured from. On a $50,000 account with a $2,000 trailing limit, a $2,000 run of profit leaves you with zero room above breakeven &mdash; and in Micro E-mini terms, a buffer that began 400 index points wide can be 60 points wide by the time you feel like you are doing well. Find out whether the rule trails on intraday equity or on the closing balance, find the lock point, then size every trade from the distance to the floor rather than from the number on the dashboard. The general version of the same arithmetic, outside prop rules, is in <a href="drawdown-explained.html">drawdown explained</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="prop-firms-explained.html">Prop Firms Explained: How Funded Accounts Work</a>
+      <a href="drawdown-explained.html">Drawdown Explained: How Much Is Normal?</a>
+      <a href="daily-loss-limits.html">Daily Loss Limits: How to Set One</a>
+      <a href="one-step-vs-two-step-evaluations.html">One-Step vs Two-Step Evaluations</a>
+      <a href="what-is-a-trailing-stop.html">What Is a Trailing Stop?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The floor moves. <span class="g">So should your stop.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
