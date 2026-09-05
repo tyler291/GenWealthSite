@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Prop Firm Daily Loss Limits: How the Rules Differ</title>
+<meta name="description" content="Prop firm daily loss limits compared: soft lockout vs hard breach, what balance the limit is measured from, whether open trades count, and when it resets." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/prop-firm-daily-loss-limits.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Prop Firm Daily Loss Limits: How the Rules Differ" />
+<meta property="og:description" content="Two firms can both advertise a daily loss limit and be selling different products. Four variables decide which one you are actually trading under." />
+<meta property="og:url" content="https://gwhlds.com/hub/prop-firm-daily-loss-limits.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/prop-firm-daily-loss-limits.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Prop Firm Daily Loss Limits: How the Rules Differ", "description": "How prop firm daily loss limits actually differ between firms: whether hitting one locks you out or ends the account, whether the limit is measured from the day's opening balance or from the starting capital, whether unrealised profit and loss counts, and when the clock resets.", "image": "https://gwhlds.com/assets/hub/prop-firm-daily-loss-limits.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/prop-firm-daily-loss-limits.html", "datePublished": "2026-09-05"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "Prop Firm Daily Loss Limits: How the Rules Differ", "item": "https://gwhlds.com/hub/prop-firm-daily-loss-limits.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does hitting a prop firm daily loss limit fail the account?", "acceptedAnswer": {"@type": "Answer", "text": "It depends entirely on the firm. Under a soft daily loss limit the platform flattens your positions and locks you out until the next session, and the account survives. Under a hard daily loss limit the same event is a rule breach and the account is closed. The two designs use identical language in marketing, so the answer is only ever in the rulebook."}}, {"@type": "Question", "name": "Is a prop firm daily loss limit measured from the starting balance or from yesterday's close?", "acceptedAnswer": {"@type": "Answer", "text": "Both designs exist. A static daily loss limit is a fixed dollar amount, so a losing day and a winning day both give you the same room tomorrow. A percentage limit recalculated at a fixed cutoff is measured from the balance recorded at that cutoff, so a good day widens tomorrow's allowance and a bad day narrows it. Find which reference point applies before you size a trade."}}, {"@type": "Question", "name": "Do open positions count toward a daily loss limit?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes. Most daily loss limits are measured on equity, meaning realised profit and loss plus the floating profit and loss on anything still open. A trade that is down 40 points but not yet closed can breach the limit before you have decided to take the loss. A small number of firms measure on closed trades only, which is materially more forgiving."}}, {"@type": "Question", "name": "What time does a prop firm daily loss limit reset?", "acceptedAnswer": {"@type": "Answer", "text": "At the firm's defined session boundary, which is rarely midnight in your own time zone. Futures firms commonly reset at the CME session open, 5:00 PM Central Time, and forex firms commonly reset at a fixed European midnight. If you trade an Asian or overnight session, the reset can fall in the middle of your trading day and split one continuous run into two separate limit periods."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Prop Firm Daily Loss Limits</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Prop Firms</span>
+        <h1>Prop Firm Daily Loss Limits: How the Rules Differ</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 5, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/prop-firm-daily-loss-limits.jpg" alt="A heavy circuit breaker switch thrown to the off position above a single glowing red threshold line on a dark control panel" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A prop firm daily loss limit caps how much an account can lose in one session. Firms differ on four things: whether hitting it locks you out or ends the account, whether it is measured from the day's opening balance or from your starting capital, whether open trades count, and what time the day resets.</p>
+
+    <p>Those four variables produce rules that are not remotely equivalent, all sold under the same three words. A trader who moves between firms and assumes the limit works the way it did at the last one is the trader who loses an account to a rule rather than to a trade.</p>
+
+    <h2>Difference 1: soft lockout or hard breach</h2>
+    <p>This is the biggest one, and it is the one most often glossed over in marketing copy.</p>
+    <p>A <strong>soft</strong> daily loss limit is a circuit breaker. You hit it, the platform closes your positions, cancels your working orders, and stops you trading until the next session. The account is still alive. Topstep publishes exactly this design: when net profit and loss reaches the limit, &ldquo;open positions are flattened,&rdquo; pending orders are cancelled, and no new trades are permitted until 5:00 PM Central Time the following session &mdash; and the firm states plainly that this is not a rule violation and the account stays eligible for funding (<a href="https://help.topstep.com/en/articles/10490293-daily-loss-limit-in-the-trading-combine-and-express-funded-account" target="_blank" rel="nofollow noopener">Topstep Help Center, Daily Loss Limit</a>).</p>
+    <p>A <strong>hard</strong> daily loss limit is a termination clause. Reaching it breaches the evaluation and the account is finished, regardless of how the rest of the month was going. This is the more common design in the forex-facing side of the industry.</p>
+    <p>The practical consequence is that an identical bad day either costs you an afternoon or costs you the account and the fee you paid for it. Before you place a first trade, find the sentence in the terms that says which one you are under. If it is not written down anywhere, treat that as an answer in itself &mdash; it is one of the <a href="how-to-find-a-legit-trading-community.html">questions worth asking before you pay anyone</a>.</p>
+
+    <div class="callout"><b>The one-line test.</b> Ask the firm: &ldquo;If I hit the daily loss limit on day three, can I trade on day four?&rdquo; A firm running a soft limit answers immediately. A firm running a hard limit that would rather you not dwell on it does not.</div>
+
+    <h2>Difference 2: what the limit is measured from</h2>
+    <p>The dollar amount is meaningless until you know the reference point it is subtracted from. There are two common designs and they behave differently after a good day.</p>
+    <div class="kv"><table>
+      <tr><th></th><th>Static dollar limit</th><th>Recalculated percentage limit</th></tr>
+      <tr><td>Reference point</td><td>Fixed &mdash; set by account size</td><td>The balance recorded at the daily cutoff</td></tr>
+      <tr><td>After a +$2,000 day</td><td>Tomorrow's room is unchanged</td><td>Tomorrow's floor rises with the balance</td></tr>
+      <tr><td>After a &minus;$800 day</td><td>Tomorrow's room is unchanged</td><td>Tomorrow's floor falls with the balance</td></tr>
+      <tr><td>Easy to calculate at 9:30</td><td>Yes &mdash; it is the same number every day</td><td>Only if you check the dashboard first</td></tr>
+    </table></div>
+    <p>Topstep's futures programme uses the static form: <strong>$1,000</strong> on a $50,000 account, <strong>$2,000</strong> on a $100,000 account and <strong>$3,000</strong> on a $150,000 account. FTMO's forex challenge uses the recalculated form: the Maximum Daily Loss is <strong>3% of initial capital on the one-step challenge and 5% on the two-step</strong>, and the firm recalculates the level every day at 00:00 CE(S)T from the balance recorded at that moment (<a href="https://ftmo.com/en/trading-objectives/" target="_blank" rel="nofollow noopener">FTMO, Trading Objectives</a>).</p>
+    <p>Both examples are one firm's published terms as of September 2026, and terms change. They are here to show the shape of the two designs, not as a recommendation of either firm. Read your own rulebook and re-read it after any programme update.</p>
+
+    <h2>Difference 3: whether open trades count</h2>
+    <p>Most daily loss limits are measured on <strong>equity</strong> rather than on closed trades. Equity is your balance plus the floating profit and loss on everything still open. FTMO defines it explicitly as balance plus open position profit and loss, adjusted for swaps and commissions, which means a position that is deeply underwater breaches the rule while you are still deciding whether to hold it.</p>
+    <p>Topstep's daily limit likewise runs on net profit and loss including unrealised movement, which is why the platform can flatten you mid-trade rather than waiting for you to close.</p>
+    <p>This matters more than it sounds. Under an equity-based rule:</p>
+    <ul>
+      <li>A trade that touches its worst point and then recovers can still end your session at the worst point.</li>
+      <li>Holding through a spike does not postpone the rule &mdash; the rule is watching the spike.</li>
+      <li>Your effective stop is whichever comes first: your own stop, or the distance to the daily limit.</li>
+    </ul>
+    <p>That last line is the whole discipline. If your stop sits further from entry than the remaining daily allowance, you do not have the stop you think you have. Size the trade so your own <a href="how-to-set-a-stop-loss.html">stop-loss placement</a> is the binding constraint, not the firm's.</p>
+
+    <h2>Difference 4: when the day actually resets</h2>
+    <p>Almost nobody's daily loss limit resets at midnight where they live. Futures programmes commonly reset at the CME session open of <strong>5:00 PM Central Time</strong>. Forex programmes commonly reset at a fixed European midnight. Neither is likely to line up with your own sense of when a trading day ends.</p>
+    <p>Two consequences follow, and both catch people out:</p>
+    <ol>
+      <li><strong>An overnight hold spans two limit periods.</strong> A position carried across the reset stops counting against today's allowance and starts counting against tomorrow's, at whatever unrealised level it is sitting at when the clock turns.</li>
+      <li><strong>An afternoon reset can hand you a second chance you should not take.</strong> Under a 5:00 PM CT reset, a trader stopped out at 2:00 PM has fresh room three hours later, on the same day, in the same emotional state. That is a structural invitation to <a href="revenge-trading.html">revenge trade</a> and the rule will not protect you from it.</li>
+    </ol>
+
+    <h2>How to read your own firm's rule in five minutes</h2>
+    <p>Open the terms and answer these in order. Write the answers down; you will need them every morning.</p>
+    <ol>
+      <li><strong>Soft or hard?</strong> Does hitting it lock the platform, or close the account?</li>
+      <li><strong>Measured from what?</strong> A fixed dollar figure, or a percentage of a balance recalculated daily?</li>
+      <li><strong>Equity or closed trades?</strong> Does floating profit and loss count against the limit?</li>
+      <li><strong>Reset at what time, in what time zone?</strong> Convert it to your own clock once and remember it.</li>
+      <li><strong>How does it interact with the overall drawdown?</strong> The daily limit is the session rule; the <a href="trailing-drawdown-explained.html">trailing drawdown</a> is the account rule. Both are live at the same time and the tighter of the two is the one that binds.</li>
+    </ol>
+    <p>That last point is where most accounts actually die. Traders track the daily number because it is on the dashboard, then breach the trailing floor because they were not tracking it. The daily limit is the one you notice; the account limit is the one that ends you.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Our second principle is <em>know your next</em> &mdash; every trade has a defined entry, defined targets, and a written invalidation before it is taken. Under an equity-measured daily loss limit that discipline stops being a preference. If you cannot state where you are wrong before you enter, you cannot know whether your loss fits inside the remaining allowance, and the firm will make the decision for you. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Setting your own limit inside theirs</h2>
+    <p>The firm's number is a ceiling, not a plan. A sensible working limit sits meaningfully below it, so that hitting your own stops trading long before the firm's does anything automatic.</p>
+    <p>A common approach is to set a personal daily stop at roughly half to two-thirds of the firm's limit and to define it in <em>trades</em> rather than dollars &mdash; two full losses, or three, and the day is over. Counting trades is easier to obey under pressure than watching a dollar figure tick down. The full version of that reasoning, outside prop rules entirely, is in <a href="daily-loss-limits.html">daily loss limits: how to set one and respect it</a>.</p>
+    <p>The reason to leave headroom is mechanical rather than psychological. If your personal limit and the firm's limit are the same number, then every rule breach is also an automatic lockout or termination, and you never get the chance to stop yourself. Leaving a gap means your own discipline is what ends the day, every time. That is the difference between trading a funded account and being managed by one.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Does hitting a prop firm daily loss limit fail the account?</h3>
+    <p>It depends entirely on the firm. Under a soft daily loss limit the platform flattens your positions and locks you out until the next session, and the account survives. Under a hard daily loss limit the same event is a rule breach and the account is closed. The two designs use identical language in marketing, so the answer is only ever in the rulebook.</p>
+
+    <h3>Is a prop firm daily loss limit measured from the starting balance or from yesterday's close?</h3>
+    <p>Both designs exist. A static daily loss limit is a fixed dollar amount, so a losing day and a winning day both give you the same room tomorrow. A percentage limit recalculated at a fixed cutoff is measured from the balance recorded at that cutoff, so a good day widens tomorrow's allowance and a bad day narrows it. Find which reference point applies before you size a trade.</p>
+
+    <h3>Do open positions count toward a daily loss limit?</h3>
+    <p>Usually yes. Most daily loss limits are measured on equity, meaning realised profit and loss plus the floating profit and loss on anything still open. A trade that is down 40 points but not yet closed can breach the limit before you have decided to take the loss. A small number of firms measure on closed trades only, which is materially more forgiving.</p>
+
+    <h3>What time does a prop firm daily loss limit reset?</h3>
+    <p>At the firm's defined session boundary, which is rarely midnight in your own time zone. Futures firms commonly reset at the CME session open, 5:00 PM Central Time, and forex firms commonly reset at a fixed European midnight. If you trade an Asian or overnight session, the reset can fall in the middle of your trading day and split one continuous run into two separate limit periods.</p>
+
+    <h2>Bottom line</h2>
+    <p>&ldquo;Daily loss limit&rdquo; describes at least four genuinely different rules. One firm publishes a static $1,000 ceiling on a $50,000 account that locks the platform and leaves the account eligible; another publishes 3% of initial capital, recalculated nightly from the balance at the cutoff, where the same event ends the evaluation. Establish which of the four variables apply to you &mdash; soft or hard, static or recalculated, equity or closed trades, and what time the clock turns &mdash; then set your own limit comfortably inside the firm's so your discipline stops the day rather than their software. The wider rule inventory sits in <a href="prop-firms-explained.html">prop firms explained</a>.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="prop-firms-explained.html">Prop Firms Explained: How Funded Accounts Work</a>
+      <a href="trailing-drawdown-explained.html">Trailing Drawdown Explained: The Rule That Ends Accounts</a>
+      <a href="daily-loss-limits.html">Daily Loss Limits: How to Set One</a>
+      <a href="one-step-vs-two-step-evaluations.html">One-Step vs Two-Step Evaluations</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Their limit is a ceiling. <span class="g">Yours is the plan.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

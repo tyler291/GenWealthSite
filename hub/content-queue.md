@@ -270,9 +270,9 @@ Never quote a pass rate we cannot source.
 - [x] How prop firm challenges actually make their money `(how-prop-firms-make-money)`
 - [x] One-step vs two-step evaluations: which is really easier `(one-step-vs-two-step-evaluations)`
 - [x] Trailing drawdown explained properly (the rule that fails most accounts) `(trailing-drawdown-explained)`
-- [ ] Prop firm daily loss limits compared: how the rules differ
-- [ ] Consistency rules: the clause most traders miss until payout
-- [ ] What actually happens on payout day
+- [x] Prop firm daily loss limits compared: how the rules differ `(prop-firm-daily-loss-limits)`
+- [x] Consistency rules: the clause most traders miss until payout `(prop-firm-consistency-rules)`
+- [x] What actually happens on payout day `(prop-firm-payout-day)`
 - [ ] Prop firm vs broker account: who is holding the risk
 - [ ] Can you fail a challenge and still come out ahead?
 - [ ] Prop firm scaling plans explained
