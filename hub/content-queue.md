@@ -273,10 +273,10 @@ Never quote a pass rate we cannot source.
 - [x] Prop firm daily loss limits compared: how the rules differ `(prop-firm-daily-loss-limits)`
 - [x] Consistency rules: the clause most traders miss until payout `(prop-firm-consistency-rules)`
 - [x] What actually happens on payout day `(prop-firm-payout-day)`
-- [ ] Prop firm vs broker account: who is holding the risk
-- [ ] Can you fail a challenge and still come out ahead?
-- [ ] Prop firm scaling plans explained
-- [ ] Red flags to look for in a prop firm's terms
+- [x] Prop firm vs broker account: who is holding the risk `(covered by prop-firm-vs-own-capital)`
+- [x] Can you fail a challenge and still come out ahead? `(failing-a-prop-firm-challenge)`
+- [x] Prop firm scaling plans explained `(prop-firm-scaling-plans)`
+- [x] Red flags to look for in a prop firm's terms `(prop-firm-terms-red-flags)`
 - [ ] News trading restrictions: why they exist and what they cost you
 - [ ] Prop firms for futures vs prop firms for forex
 - [ ] How to size a $50k evaluation account
@@ -301,6 +301,61 @@ below links up to it.
 - [ ] Trading from a phone: what breaks and what does not
 - [ ] The one-monitor setup that actually works
 - [ ] Trading hotkeys worth learning
+
+---
+
+# PHASE 11 — Strategies & setups · batch 003, cluster 12
+
+New cluster. The pillar goes first; every spoke below links up to it. These are the pages
+that turn "we teach a method" into something a reader can actually check, so the standard
+is a real, tradeable description with the failure cases named — not a definition.
+
+- [ ] Trading strategies explained: how a setup becomes a system `[PILLAR]`
+- [ ] The opening range breakout, defined and traded
+- [ ] The first pullback after a trend day
+- [ ] A range day playbook: how to trade a market going nowhere
+- [ ] A trend day playbook: how to hold when everything says take profit
+- [ ] How to trade a level that has already failed twice
+- [ ] Fading vs following: when each one actually works
+- [ ] How to build a strategy from a single setup
+- [ ] How to backtest a setup by hand in a weekend
+- [ ] Forward testing: what it proves and what it cannot
+- [ ] When to retire a setup that has stopped working
+- [ ] How many setups should one trader run?
+- [ ] The New York open playbook
+- [ ] The Asian session playbook: what actually moves
+
+---
+
+# PHASE 12 — Charts: the timeframe & pattern cross · batch 003, cluster 5
+
+Pillar already live: `technical-analysis-basics.html`. These are the indicator-times-timeframe
+crosses and the individual patterns that the existing roundup pages only summarise. Only write
+the cross where the answer genuinely differs by timeframe — otherwise link to the parent page.
+
+- [ ] RSI on the 5-minute chart: what changes at speed
+- [ ] VWAP on the 1-minute: how scalpers actually use it
+- [ ] Moving averages on the daily chart: the slow signals worth having
+- [ ] Which timeframe should a beginner trade?
+- [ ] The engulfing candle: what it actually signals
+- [ ] The doji: overrated, or genuinely useful?
+- [ ] Inside bars and outside bars, explained
+- [ ] Order blocks explained plainly
+- [ ] Fair value gaps: the honest version
+- [ ] What smart money concepts get right — and wrong
+- [ ] Head and shoulders: how often it actually fails
+- [ ] Double tops and double bottoms
+- [ ] Round numbers and psychological price levels
+- [ ] Previous day high and low: why they keep working
+- [ ] The opening range: how to define it and use it
+- [ ] Gap fill: how often it really happens
+
+**Dropped from batch 003 for cannibalization:** break and hold as a full strategy
+(covered by `break-and-hold-confirmation`) · the retest entry step by step (covered by
+`what-is-a-retest`) · London session playbook (covered by `how-to-trade-the-london-open`) ·
+top-down analysis in three timeframes (covered by `multi-timeframe-analysis`) · triangles
+and bull/bear flags (covered by `chart-patterns-flags-triangles-wedges`) · marking a weekly
+level on the 5m (covered by `how-to-mark-up-a-chart` + `multi-timeframe-analysis`).
 
 ---
 

@@ -339,8 +339,8 @@ Never publish more than **5 per run**. 100 titles ≈ 20 run-days.
 | Batch | Range | Clusters drawn from | Status | Notes |
 |---|---|---|---|---|
 | 001 | Pages 1–100 | 1–8, 13 (Phases 1–7 of the queue) | Done | Phases 1–5 fully published; 19 unchecked remain in Phases 6–7 |
-| 002 | Pages 101–200 | 9 Stocks · 10 Prop firms · 11 Brokers | **In flight** | Pulled 2026-08-24 as queue Phases 8–10: 41 titles promoted, 3 dropped for cannibalization |
-| 003 | Pages 201–300 | 12 Strategies · 5 Charts (timeframe cross) | Mapped | Needs cluster 5 pillar live first |
+| 002 | Pages 101–200 | 9 Stocks · 10 Prop firms · 11 Brokers | Done | Pulled 2026-08-24 as queue Phases 8–10: 41 titles promoted, 3 dropped for cannibalization. 16 titles still unchecked in Phases 9–10 — finish those before Phase 11. |
+| 003 | Pages 201–300 | 12 Strategies · 5 Charts (timeframe cross) | **In flight** | Pulled 2026-09-06 as queue Phases 11–12: 30 titles promoted, 6 dropped for cannibalization. Cluster 5 pillar confirmed live. Note: these two clusters only held ~36 mapped spokes, not 100 — refill the map (see below) before batch 004 to keep the 100-per-batch cadence. |
 | 004 | Pages 301–400 | 14 Business · 15 Mechanics | Mapped | Compliance review each title before queueing |
 | 005 | Pages 401–500 | 16 Crypto · market-modifier crosses | Mapped | Only after 1–8 are deep |
 
