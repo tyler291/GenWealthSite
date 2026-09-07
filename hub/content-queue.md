@@ -277,9 +277,9 @@ Never quote a pass rate we cannot source.
 - [x] Can you fail a challenge and still come out ahead? `(failing-a-prop-firm-challenge)`
 - [x] Prop firm scaling plans explained `(prop-firm-scaling-plans)`
 - [x] Red flags to look for in a prop firm's terms `(prop-firm-terms-red-flags)`
-- [ ] News trading restrictions: why they exist and what they cost you
-- [ ] Prop firms for futures vs prop firms for forex
-- [ ] How to size a $50k evaluation account
+- [x] News trading restrictions: why they exist and what they cost you `(prop-firm-news-trading-rules)`
+- [x] Prop firms for futures vs prop firms for forex `(prop-firms-futures-vs-forex)`
+- [x] How to size a $50k evaluation account `(how-to-size-a-50k-evaluation)`
 
 ---
 

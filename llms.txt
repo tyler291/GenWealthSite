@@ -210,6 +210,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Failing a Prop Firm Challenge: Can You Still Profit?](https://gwhlds.com/hub/failing-a-prop-firm-challenge.html): what a failed evaluation really costs at published fees, which refund clauses apply, the three things a failure can legitimately buy you, and the point where retrying becomes a subscription.
 - [Prop Firm Scaling Plans Explained](https://gwhlds.com/hub/prop-firm-scaling-plans.html): the profit, time and payout milestones that unlock a bigger account, what scales with the balance and what does not, and why five consecutive losses ends the account at any size.
 - [Prop Firm Terms: 9 Red Flags Before You Pay](https://gwhlds.com/hub/prop-firm-terms-red-flags.html): the four sections of a funded-account agreement that decide whether you get paid, nine clauses to check first, and five questions to send support before entering a card number.
+- [Prop Firm News Trading Rules and What They Cost](https://gwhlds.com/hub/prop-firm-news-trading-rules.html): why firms blackout trading around major releases, the typical two-minutes-either-side window, why the rule often changes between evaluation and funded, and what it actually costs each strategy type.
+- [Futures Prop Firms vs Forex Prop Firms Compared](https://gwhlds.com/hub/prop-firms-futures-vs-forex.html): the difference that matters is whether a public exchange or your counterparty prices the fills your rules are measured against, plus risk arithmetic, costs and regulatory backdrop.
+- [How to Size a $50k Evaluation Account](https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html): size against the drawdown limit rather than the balance, why the 1% rule fails on a funded account, the tick arithmetic, and why the firm’s contract cap is not a recommendation.
 
 ## Contact
 

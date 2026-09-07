@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Size a $50k Evaluation Account</title>
+<meta name="description" content="Your risk budget on a $50k prop firm evaluation is the drawdown, not the balance. The contract maths, why 1% of balance fails, and a sizing table that survives." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Size a $50k Evaluation Account" />
+<meta property="og:description" content="The account says $50,000. Your actual risk budget is the drawdown limit, and it is a fraction of that. Here is the arithmetic that keeps an evaluation alive." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-size-a-50k-evaluation.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "How to Size a $50k Evaluation Account", "description": "A worked guide to position sizing on a $50,000 prop firm evaluation: why the drawdown limit rather than the account balance is your true risk budget, how contract caps mislead, the tick arithmetic on Micro E-mini contracts, a survivable sizing table, and how the daily loss limit interacts with it.", "image": "https://gwhlds.com/assets/hub/how-to-size-a-50k-evaluation.jpg", "author": {"@type": "Organization", "name": "Generational Wealth"}, "publisher": {"@type": "Organization", "name": "Generational Wealth", "logo": {"@type": "ImageObject", "url": "https://gwhlds.com/assets/logo.png"}}, "mainEntityOfPage": "https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html", "datePublished": "2026-09-07"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://gwhlds.com/"}, {"@type": "ListItem", "position": 2, "name": "The Hub", "item": "https://gwhlds.com/hub/"}, {"@type": "ListItem", "position": 3, "name": "How to Size a $50k Evaluation Account", "item": "https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should you risk per trade on a $50k evaluation account?", "acceptedAnswer": {"@type": "Answer", "text": "Size against the drawdown limit, not the balance. On a $50,000 account with a $2,000 maximum loss limit, your real risk budget is $2,000. Risking 2% to 5% of that buffer means roughly $40 to $100 per trade, which buys you between twenty and fifty consecutive losers before the account ends. Risking the familiar 1% of the $50,000 balance means $500 a trade, which is 25% of your buffer and ends the evaluation in four losing trades."}}, {"@type": "Question", "name": "How many contracts can you trade on a $50k prop firm account?", "acceptedAnswer": {"@type": "Answer", "text": "The firm's cap and the correct size are different numbers. Topstep, for example, permits a maximum of 5 contracts or 50 micros on its $50K Trading Combine. That is the ceiling the platform enforces, not a recommendation. With a $2,000 drawdown buffer and a 40-tick stop, a single Micro E-mini S&P 500 contract risks $50, so a survivable size is typically one to two micros. Trading the cap on that buffer is a two-trade account."}}, {"@type": "Question", "name": "Why do most people fail a $50k evaluation?", "acceptedAnswer": {"@type": "Answer", "text": "Because they size off the headline balance instead of the drawdown. A $50,000 account with a $2,000 loss limit is functionally a $2,000 account with a large nominal number printed on it. Traders who apply a normal 1% rule to the $50,000 are risking a quarter of their real buffer per trade, and a perfectly ordinary four-trade losing streak ends them. The failure is arithmetic, not psychology, and it happens before the first trade is placed."}}, {"@type": "Question", "name": "Does the daily loss limit change how you size?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it sets your maximum trades per day rather than your size. Divide the daily loss limit by your per-trade risk to get the number of losses the day can absorb, then stop one short of it. If the daily limit is $1,000 and you risk $100 a trade, the day tolerates ten losers, so a hard stop at four or five trades keeps you clear of the limit with margin. The overall drawdown decides size; the daily limit decides frequency."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Sizing a $50k Evaluation</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Prop Firms</span>
+        <h1>How to Size a $50k Evaluation Account</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 7, 2026 &middot; 11 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-size-a-50k-evaluation.jpg" alt="A brass precision caliper on a dark desk measuring a small stack of trading contract chips against a much larger reservoir of chips behind it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Size against the drawdown limit, not the balance. A $50,000 evaluation with a $2,000 maximum loss limit is functionally a $2,000 account with a large number printed on it. Risking 2&ndash;5% of that buffer means roughly $40 to $100 a trade. Risking the familiar 1% of $50,000 is $500 &mdash; a quarter of your budget, gone in four losers.</p>
+
+    <p>That is the whole article in a paragraph, and it is the single most common reason a competent trader fails an evaluation. The rest of this page is the arithmetic, the contract-level translation, and the two rules that interact with it.</p>
+
+    <h2>The number that is actually your account</h2>
+    <p>Every evaluation has two numbers on the marketing page and only one of them is real for sizing purposes. The balance is the nominal figure. The maximum loss limit is the distance between where you start and where the account ends.</p>
+    <p>On Topstep's $50K Trading Combine, that limit is <strong>$2,000</strong> &mdash; a floor that rises with your end-of-day balance but never falls, monitored in real time so that unrealised losses can trigger it intraday (<a href="https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit" target="_blank" rel="nofollow noopener">Topstep Help Center, What is the Maximum Loss Limit</a>). Different firms publish different figures, but the ratio is broadly similar across the sector: the drawdown buffer is typically 4&ndash;6% of the headline balance.</p>
+    <p>So the honest reframe is this. You are not trading a $50,000 account. You are trading a $2,000 account whose upside is calculated as if it were $50,000. Every sizing decision follows from accepting that sentence.</p>
+
+    <h2>Why the 1% rule breaks here</h2>
+    <p>The standard advice &mdash; risk 1% of your account per trade &mdash; is sound on your own capital because the account has no hard floor. Losing 1% ten times in a row leaves you down about 9.6% and still trading. That is <a href="the-1-percent-rule-in-trading.html">why the 1% rule works</a> in its native setting.</p>
+    <p>Transplant it onto an evaluation and the same rule becomes lethal, because the floor is $2,000 below you rather than at zero. Watch what happens to the same discipline:</p>
+
+    <div class="kv"><table>
+      <thead><tr><th>Risk per trade</th><th>As % of the $2,000 buffer</th><th>Consecutive losers to fail</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>$500 (1% of balance)</td><td>25%</td><td>4</td><td>Unsurvivable</td></tr>
+        <tr><td>$250</td><td>12.5%</td><td>8</td><td>Fragile</td></tr>
+        <tr><td>$150</td><td>7.5%</td><td>13</td><td>Aggressive</td></tr>
+        <tr><td>$100</td><td>5%</td><td>20</td><td>Workable</td></tr>
+        <tr><td>$50</td><td>2.5%</td><td>40</td><td>Conservative</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>Now attach a probability to those columns. Take a trader with a 45% win rate &mdash; an entirely reasonable figure for a system that wins more than it loses on size rather than frequency. The chance of four consecutive losses is 0.55&sup4;, which is about <strong>9%</strong>, or roughly one occurrence every eleven sequences. The chance of twenty consecutive losses is 0.55&sup2;&#8304;, about <strong>1 in 156,000</strong>.</p>
+    <p>Those are calculations from an assumed win rate, not measured results &mdash; but the ratio between them is the entire point. Sizing at $500 means an ordinary bad morning ends the evaluation. Sizing at $100 means the account survives anything short of a broken strategy. You have not changed your edge at all. You have changed whether you are still there to use it, which is the subject of <a href="risk-of-ruin.html">risk of ruin</a>.</p>
+
+    <div class="callout"><b>The reframe to write on a sticky note.</b> Divide the drawdown limit by the number of consecutive losses you want to survive. That quotient is your per-trade risk. Everything else &mdash; contracts, ticks, lots &mdash; is translation. If you want to survive twenty in a row on a $2,000 buffer, you risk $100. Decide the survival number first and let the size fall out of it.</div>
+
+    <h2>Translating dollars into contracts</h2>
+    <p>Once you have a dollar figure, futures arithmetic is mercifully simple. The Micro E-mini S&amp;P 500 moves in ticks of 0.25 index points worth <strong>$1.25</strong> each, so a full index point is $5 (<a href="https://www.cmegroup.com/markets/equities/sp/micro-e-mini-sandp-500.contractSpecs.html" target="_blank" rel="nofollow noopener">CME Group, Micro E-mini S&amp;P 500 contract specs</a>).</p>
+    <p>Work it in three steps, in this order:</p>
+    <ol>
+      <li><b>Find the stop first, from the chart.</b> Where does the idea stop being right? Say the level invalidates 10 index points away &mdash; 40 ticks.</li>
+      <li><b>Cost one contract.</b> 40 ticks &times; $1.25 = <strong>$50 per micro contract</strong>.</li>
+      <li><b>Divide your risk budget by that.</b> $100 &divide; $50 = <strong>2 micro contracts</strong>.</li>
+    </ol>
+    <p>The order matters enormously. Traders who decide size first and then place the stop wherever that size allows have inverted the process, and the stop ends up somewhere the chart never nominated. The general method is in <a href="position-sizing-from-risk.html">position sizing from risk</a>; the per-instrument figures are in <a href="futures-tick-value.html">futures tick value explained</a>.</p>
+
+    <h2>The contract cap is not a suggestion</h2>
+    <p>Topstep permits a maximum of <strong>5 contracts or 50 micros</strong> on the $50K Trading Combine (<a href="https://help.topstep.com/en/articles/8284197-trading-combine-parameters" target="_blank" rel="nofollow noopener">Topstep Help Center, Trading Combine Parameters</a>). Put that beside the arithmetic above and the gap is startling.</p>
+    <p>Five full E-mini contracts, at $12.50 a tick, on a 40-tick stop, risks $2,500 &mdash; more than the entire drawdown buffer. The platform will let you place that trade. It ends the account before the stop is reached.</p>
+    <p>The cap exists so the firm can bound its own exposure and so scaled traders have headroom. It is a legal ceiling, not a target, and reading it as guidance is one of the more expensive misreadings in this sector. A survivable size on a $50K evaluation is usually one to three micros &mdash; between 2% and 6% of what you are technically allowed.</p>
+
+    <h2>The daily loss limit decides frequency, not size</h2>
+    <p>Two limits govern an evaluation and they answer different questions. The overall drawdown sets your <em>size</em>. The <a href="prop-firm-daily-loss-limits.html">daily loss limit</a> sets your <em>trade count</em>.</p>
+    <p>The arithmetic is one division. Daily limit &divide; per-trade risk = the number of losers the day can absorb. Then stop at roughly half of it.</p>
+    <ul>
+      <li>Daily limit $1,000, risking $100: the day tolerates ten losers. Hard stop at four or five trades.</li>
+      <li>Daily limit $1,000, risking $250: the day tolerates four. Hard stop at two.</li>
+      <li>Daily limit $1,000, risking $500: the day tolerates two. There is no version of this that is a plan.</li>
+    </ul>
+    <p>Stopping short of the limit rather than at it is the point. A trader who takes their tenth trade of the day with $100 of room left is one slipped fill from a breach, and has spent the whole session trading the rule instead of the market.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Our third principle is <em>trail and protect</em> &mdash; as targets print, the stop trails behind them. On a trailing-drawdown evaluation that principle stops being a preference and becomes structural, because the drawdown floor is itself trailing your balance upward. Every dollar you bank raises the floor beneath you and permanently shrinks the room a future loser has to work with. Giving back an open winner does not just cost the winner. It costs the buffer you had just earned. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Three sizing mistakes specific to evaluations</h2>
+    <p><b>Sizing up after a good day.</b> On a trailing account your floor rose with your balance, so the extra profit does not become extra buffer &mdash; it becomes a higher floor. The room you think you earned is largely illusory until the drawdown locks. Read <a href="trailing-drawdown-explained.html">trailing drawdown explained</a> before you increase size on the back of a green week.</p>
+    <p><b>Sizing up to hit the target faster.</b> Evaluations have no time limit at most firms, and even where they do, the deadline is a poorer reason to double size than almost any other. Doubling size does not halve the time to target; it roughly halves the number of losses you can take on the way there.</p>
+    <p><b>Sizing to satisfy a consistency rule.</b> Some firms cap how much of your total profit may come from a single day. Traders discover this late and start sizing up on quiet days to flatten the distribution. That is the rule dictating your trades rather than the chart, and it is worth reading <a href="prop-firm-consistency-rules.html">prop firm consistency rules</a> before you buy rather than after you are managing around them.</p>
+
+    <h2>The whole method on one line</h2>
+    <p>Drawdown limit &divide; consecutive losses you intend to survive = risk per trade. Risk per trade &divide; (stop in ticks &times; tick value) = contracts. Daily limit &divide; risk per trade &divide; 2 = maximum trades today.</p>
+    <p>On the numbers used throughout this page: $2,000 &divide; 20 = $100. $100 &divide; ($1.25 &times; 40) = 2 micros. $1,000 &divide; $100 &divide; 2 = 5 trades. That is the entire risk plan for a $50k evaluation, and it fits on an index card.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How much should you risk per trade on a $50k evaluation account?</h3>
+    <p>Size against the drawdown limit, not the balance. On a $50,000 account with a $2,000 maximum loss limit, your real risk budget is $2,000. Risking 2% to 5% of that buffer means roughly $40 to $100 per trade, which buys you between twenty and fifty consecutive losers before the account ends. Risking the familiar 1% of the $50,000 balance means $500 a trade, which is 25% of your buffer and ends the evaluation in four losing trades.</p>
+
+    <h3>How many contracts can you trade on a $50k prop firm account?</h3>
+    <p>The firm's cap and the correct size are different numbers. Topstep, for example, permits a maximum of 5 contracts or 50 micros on its $50K Trading Combine. That is the ceiling the platform enforces, not a recommendation. With a $2,000 drawdown buffer and a 40-tick stop, a single Micro E-mini S&amp;P 500 contract risks $50, so a survivable size is typically one to two micros. Trading the cap on that buffer is a two-trade account.</p>
+
+    <h3>Why do most people fail a $50k evaluation?</h3>
+    <p>Because they size off the headline balance instead of the drawdown. A $50,000 account with a $2,000 loss limit is functionally a $2,000 account with a large nominal number printed on it. Traders who apply a normal 1% rule to the $50,000 are risking a quarter of their real buffer per trade, and a perfectly ordinary four-trade losing streak ends them. The failure is arithmetic, not psychology, and it happens before the first trade is placed.</p>
+
+    <h3>Does the daily loss limit change how you size?</h3>
+    <p>Yes, it sets your maximum trades per day rather than your size. Divide the daily loss limit by your per-trade risk to get the number of losses the day can absorb, then stop one short of it. If the daily limit is $1,000 and you risk $100 a trade, the day tolerates ten losers, so a hard stop at four or five trades keeps you clear of the limit with margin. The overall drawdown decides size; the daily limit decides frequency.</p>
+
+    <h2>Bottom line</h2>
+    <p>The $50,000 on the invoice is a scaling factor for your profit split, not a risk budget. The risk budget is the drawdown limit &mdash; $2,000 on a typical $50K Combine &mdash; and every survivable sizing decision comes from dividing that number by how many consecutive losses you intend to outlast. Twenty is a defensible answer, which puts you near $100 a trade and one to two micro contracts on a 40-tick stop, well under the five-contract cap the platform would happily let you use. Most evaluations are lost to that gap rather than to a bad read of the chart. If you are still deciding whether to buy one at all, <a href="are-prop-firm-challenges-worth-it.html">are prop firm challenges worth it</a> is the question to settle first.</p>
+
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="trailing-drawdown-explained.html">Trailing Drawdown Explained</a>
+      <a href="position-sizing-from-risk.html">Position Sizing From Risk</a>
+      <a href="prop-firm-daily-loss-limits.html">Prop Firm Daily Loss Limits Explained</a>
+      <a href="futures-tick-value.html">Futures Tick Value Explained</a>
+      <a href="risk-of-ruin.html">Risk of Ruin: The Math That Ends Accounts</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Size for the drawdown. <span class="g">Trade for the level.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only &mdash; not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">&copy; 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
