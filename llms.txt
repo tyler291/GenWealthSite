@@ -61,6 +61,7 @@ No. No trading community can guarantee results, and Generational Wealth does not
 
 ## The Hub — free trading education
 
+- [Cutting Through the Noise: Building a Disciplined System](https://gwhlds.com/hub/cutting-through-the-noise.html): why eliminating noise is the habit behind durable systems in markets and business, and how to evaluate the tools you actually run.
 - [Short Selling Basics and the Locate Problem](https://gwhlds.com/hub/short-selling-and-locates.html): how the share borrow works, the Reg SHO locate requirement, borrow fees and recall risk, and the Rule 201 restriction that fires after a 10% decline.
 - [T+1 Settlement and Good-Faith Violations](https://gwhlds.com/hub/settlement-t1-and-good-faith-violations.html): what settlement is, what changed on 28 May 2024, and how good-faith violations, free-riding and the 90-day Reg T freeze arise in a cash account.
 - [Prop Firms Explained: How Funded Accounts Work](https://gwhlds.com/hub/prop-firms-explained.html): the evaluation-to-funded pipeline, trailing vs static drawdown, how fees and profit splits flow, and why the retail model uses simulated accounts.
