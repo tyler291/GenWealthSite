@@ -288,9 +288,9 @@ Never quote a pass rate we cannot source.
 Pillar is already live: `how-to-choose-a-broker-for-day-trading.html`. Every spoke
 below links up to it.
 
-- [ ] Market vs limit vs stop orders: when each one is right
-- [ ] Stop-limit orders: the order type that does not fill
-- [ ] OCO and bracket orders explained
+- [x] Market vs limit vs stop orders: when each one is right `(market-vs-limit-vs-stop-orders)`
+- [x] Stop-limit orders: the order type that does not fill `(stop-limit-orders-explained)`
+- [x] OCO and bracket orders explained `(oco-and-bracket-orders)`
 - [ ] How to place a bracket order (TradingView and NinjaTrader)
 - [ ] What slippage actually costs you over a year
 - [ ] Commission vs spread: the true cost of a round turn

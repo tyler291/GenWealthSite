@@ -214,6 +214,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Prop Firm News Trading Rules and What They Cost](https://gwhlds.com/hub/prop-firm-news-trading-rules.html): why firms blackout trading around major releases, the typical two-minutes-either-side window, why the rule often changes between evaluation and funded, and what it actually costs each strategy type.
 - [Futures Prop Firms vs Forex Prop Firms Compared](https://gwhlds.com/hub/prop-firms-futures-vs-forex.html): the difference that matters is whether a public exchange or your counterparty prices the fills your rules are measured against, plus risk arithmetic, costs and regulatory backdrop.
 - [How to Size a $50k Evaluation Account](https://gwhlds.com/hub/how-to-size-a-50k-evaluation.html): size against the drawdown limit rather than the balance, why the 1% rule fails on a funded account, the tick arithmetic, and why the firm’s contract cap is not a recommendation.
+- [Market vs Limit vs Stop Orders: When to Use Each](https://gwhlds.com/hub/market-vs-limit-vs-stop-orders.html): a market order guarantees a fill but not a price, a limit order the reverse, and a stop is only a trigger — which to use for entries, exits and protective stops.
+- [Stop-Limit Orders: The Order That May Not Fill](https://gwhlds.com/hub/stop-limit-orders-explained.html): how the stop and limit prices interact, why a stop-limit can leave you in a losing position, and the halts and price bands that make no-fill risk worse.
+- [OCO and Bracket Orders Explained](https://gwhlds.com/hub/oco-and-bracket-orders.html): how one-cancels-other links a stop to a target, how brackets force you to name the exit first, partial-fill handling, time-in-force, and where the cancel logic actually runs.
 
 ## Contact
 

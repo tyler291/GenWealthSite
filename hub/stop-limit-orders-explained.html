@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Stop-Limit Orders: The Order That May Not Fill</title>
+<meta name="description" content="A stop-limit order caps the price you accept, which means it can leave you in a losing trade. When the extra control is worth it, and when it is a trap." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/stop-limit-orders-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Stop-Limit Orders: The Order That May Not Fill" />
+<meta property="og:description" content="A stop-limit trades the risk of a bad fill for the risk of no fill. On a protective stop, that swap can turn a planned loss into an unbounded one." />
+<meta property="og:url" content="https://gwhlds.com/hub/stop-limit-orders-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/stop-limit-orders-explained.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Stop-Limit Orders: The Order That May Not Fill","description":"A stop-limit order uses two prices: a trigger that wakes the order up and a limit that caps what you will accept. That cap protects you from a terrible fill and simultaneously creates the risk of no fill at all. When a stop-limit is the right tool, when it is dangerous on a protective stop, and how trading halts and price bands make the gap worse.","image":"https://gwhlds.com/assets/hub/stop-limit-orders-explained.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/stop-limit-orders-explained.html","datePublished":"2026-09-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Stop-Limit Orders Explained","item":"https://gwhlds.com/hub/stop-limit-orders-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a stop-limit order?","acceptedAnswer":{"@type":"Answer","text":"A stop-limit order uses two prices. The stop price is the trigger that activates the order, and the limit price is the worst price you are willing to accept once it is active. When price reaches the stop, a limit order is placed rather than a market order, so you are filled at your limit or better, or you are not filled at all."}},{"@type":"Question","name":"Why did my stop-limit order not execute?","acceptedAnswer":{"@type":"Answer","text":"Because price moved past your limit before the order could be filled. The trigger fired and a limit order was placed, but there was no longer anyone willing to trade inside your limit. The SEC makes the same point about limit orders generally: your order may never be executed because the market price may quickly surpass your limit before your order can be filled."}},{"@type":"Question","name":"Should I use a stop-limit for my stop loss?","acceptedAnswer":{"@type":"Answer","text":"Usually not, unless you are watching the position and able to intervene. A protective stop exists to cap your loss at a known number. A stop-limit can decline to fill exactly when the market is running against you, which converts a defined loss into an open-ended one. A plain stop order fills at a worse price; a stop-limit may not get you out at all."}},{"@type":"Question","name":"What is the difference between a stop order and a stop-limit order?","acceptedAnswer":{"@type":"Answer","text":"Both use a stop price as a trigger. A plain stop order becomes a market order when triggered, so it fills but the price is unknown. A stop-limit order becomes a limit order when triggered, so the price is capped but the fill is not guaranteed. You are choosing between an uncertain price and an uncertain exit."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Stop-Limit Orders</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Brokers &amp; Execution</span>
+        <h1>Stop-Limit Orders: The Order That May Not Fill</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 8, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/stop-limit-orders-explained.jpg" alt="A heavy brass door swung open by a released latch but blocked by a narrow steel gate beyond it, leaving a gap of darkness between the two" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A stop-limit order uses two prices: a stop price that triggers it, and a limit price that caps what you will accept. When triggered it places a limit order, not a market order. So you get your price or better — or you get nothing, and stay in the position while price keeps moving against you.</p>
+
+    <p>That last clause is the entire article. A stop-limit is not a safer stop order. It is a different bet: you are trading the risk of a bad fill for the risk of no fill. On some orders that is a smart swap. On a protective stop it is often the opposite of what you think you are buying.</p>
+
+    <h2>How the two prices work</h2>
+    <p>Say you are long a stock at $50 and your invalidation sits at $48. A stop-limit to sell might use a stop price of $48.00 and a limit price of $47.85.</p>
+    <ol>
+      <li>Nothing is on the book. The order is dormant while price is above $48.</li>
+      <li>Price trades at $48.00. The stop is triggered and a sell limit order at $47.85 goes live.</li>
+      <li>If buyers are available at $47.85 or higher, you are filled at $47.85 or better.</li>
+      <li>If price has already dropped to $47.40, no fill. Your sell limit sits at $47.85 while the market trades below it — you are still long, and now you are long into a falling market.</li>
+    </ol>
+    <p>Step four is not an edge case. It is the ordinary behaviour of a limit order, applied at the worst possible moment. The SEC puts it plainly for limit orders generally: your limit order may never be executed because the market price may quickly surpass your limit before your order can be filled (<a href="https://www.sec.gov/about/reports-publications/investorpubsonlinetipshtm" target="_blank" rel="nofollow noopener">SEC, Tips for Online Investing: Trading in Fast-Moving Markets</a>). A stop-limit inherits that property in full.</p>
+
+    <h2>Stop vs stop-limit, side by side</h2>
+    <div class="kv"><table>
+      <tr><th>&nbsp;</th><th>Stop order</th><th>Stop-limit order</th></tr>
+      <tr><td>Prices you set</td><td>One (the trigger)</td><td>Two (trigger and limit)</td></tr>
+      <tr><td>Becomes, when triggered</td><td>A market order</td><td>A limit order</td></tr>
+      <tr><td>Will it fill?</td><td>Effectively always</td><td>Only inside your limit</td></tr>
+      <tr><td>At what price?</td><td>Unknown — possibly far away</td><td>Your limit or better</td></tr>
+      <tr><td>Failure mode</td><td>A worse loss than planned</td><td>No exit at all</td></tr>
+      <tr><td>Sensible use</td><td>Protective stops</td><td>Entries, and exits you are watching</td></tr>
+    </table></div>
+    <p>Read the failure-mode row twice. Both orders fail. They just fail in opposite directions, and only one of those directions is bounded.</p>
+
+    <h2>Why the gap between your two prices matters more than either</h2>
+    <p>The distance between stop and limit is your tolerance for slippage. Set them equal — stop $48.00, limit $48.00 — and you are demanding a fill at exactly the price that just traded, which in a fast market is the one price that is already gone. Set the limit far below the stop and you have almost rebuilt a plain stop order, with extra steps.</p>
+    <p>The useful question is not "how much slippage will I accept" in the abstract, but "how much slippage does this instrument normally produce at this time of day". A liquid index future at 10:30 a.m. and a low-float small cap in the first minute of trading are not the same problem. If you have not measured it, you are guessing — and the same instinct applies to <a href="low-float-stocks.html">low float stocks</a>, where the spread alone can exceed your whole gap.</p>
+
+    <h2>Halts and price bands make the no-fill risk worse</h2>
+    <p>Markets do not simply keep trading while you wait for your limit. US equity markets stop deliberately, and the mechanics work against a resting stop-limit.</p>
+    <p>The Limit Up-Limit Down mechanism prevents trades in individual securities outside a price band set around the stock's average price over the preceding five minutes. Per the SEC, <strong>those bands are 5%, 10%, 20%, or the lesser of $0.15 or 75%, depending on the stock's price and whether it is a Tier 1 or Tier 2 NMS stock</strong> — Tier 1 covering all securities in the S&amp;P 500, the Russell 1000 and select exchange-traded products. If price reaches the band and does not move back within 15 seconds, <strong>trading pauses for five minutes</strong> (<a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-market-circuit-breakers" target="_blank" rel="nofollow noopener">SEC Investor.gov, Stock Market Circuit Breakers</a>).</p>
+    <p>Two consequences for anyone holding a stop-limit. First, during a pause nothing fills — your order simply waits. Second, and more painful, the reopening after a pause is a fresh auction that can print well beyond your limit, at which point your order is stranded on the wrong side of the market. A plain stop order would have been filled somewhere in that auction. Yours was not. The wider context is in <a href="trading-halts-explained.html">trading halts explained</a>.</p>
+
+    <h2>When a stop-limit is genuinely the right choice</h2>
+    <ul>
+      <li><strong>Breakout entries.</strong> You want in above a level, but not at any price. A stop-limit says "buy the break, but not more than X above it" — and if it does not fill, you have simply missed a trade rather than taken a bad one. This is the strongest use case.</li>
+      <li><strong>Thin or wide-spread instruments</strong>, where a triggered market order could fill several percent away and the position is small enough that not exiting is survivable.</li>
+      <li><strong>Adding to a winner</strong> at a defined level, where a poor fill damages an otherwise good trade and skipping the add costs nothing.</li>
+      <li><strong>Exits you are actively watching</strong>, where a failed fill is something you will notice within seconds and can handle manually.</li>
+    </ul>
+    <p>What links all four: <em>not filling is an acceptable outcome</em>. That is the test. Apply it honestly, and the answer for a protective stop on an unattended position is almost always no — which is why <a href="how-to-set-a-stop-loss.html">how to set a stop loss</a> starts from the level, not the order type.</p>
+
+    <div class="callout"><b>A note on protective stops.</b> The purpose of a stop loss is to convert an unknown loss into a known one. An order type that can decline to execute gives that property back. If you use a stop-limit as your protective stop, you are relying on being present to intervene when it fails — so be honest about whether you will be. If the answer is no, use a plain stop, size the position for a worse-than-expected fill, and treat the difference as the cost of certainty.</div>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Break and hold</em> removes most of the reason people reach for a stop-limit on entries in the first place. If you are not chasing the break, you are not trying to cap the price of a chase — you are waiting for the candle to close and the level to hold, then entering on the retest with an ordinary resting limit order. And because every callout carries a written invalidation before the trade is on, the protective stop is a number decided in advance, not an order type chosen in a hurry. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a stop-limit order?</h3>
+    <p>A stop-limit order uses two prices. The stop price is the trigger that activates the order, and the limit price is the worst price you are willing to accept once it is active. When price reaches the stop, a limit order is placed rather than a market order, so you are filled at your limit or better, or you are not filled at all.</p>
+
+    <h3>Why did my stop-limit order not execute?</h3>
+    <p>Because price moved past your limit before the order could be filled. The trigger fired and a limit order was placed, but there was no longer anyone willing to trade inside your limit. The SEC makes the same point about limit orders generally: your order may never be executed because the market price may quickly surpass your limit before your order can be filled.</p>
+
+    <h3>Should I use a stop-limit for my stop loss?</h3>
+    <p>Usually not, unless you are watching the position and able to intervene. A protective stop exists to cap your loss at a known number. A stop-limit can decline to fill exactly when the market is running against you, which converts a defined loss into an open-ended one. A plain stop order fills at a worse price; a stop-limit may not get you out at all.</p>
+
+    <h3>What is the difference between a stop order and a stop-limit order?</h3>
+    <p>Both use a stop price as a trigger. A plain stop order becomes a market order when triggered, so it fills but the price is unknown. A stop-limit order becomes a limit order when triggered, so the price is capped but the fill is not guaranteed. You are choosing between an uncertain price and an uncertain exit.</p>
+
+    <h2>Bottom line</h2>
+    <p>A stop-limit order is a precision tool with one sharp edge: it can refuse. That refusal is a feature when the worst outcome of not trading is a missed opportunity, and a serious problem when the worst outcome is an open losing position with no exit. Use it for breakout entries, for adds, and for exits you are sitting in front of. For the protective stop on a position you will not be watching, accept the worse fill, size the trade so that fill is survivable, and keep the loss bounded. The wider comparison of all three order types is in <a href="market-vs-limit-vs-stop-orders.html">market vs limit vs stop orders</a>, and the automation that pairs a stop with a target is covered in <a href="oco-and-bracket-orders.html">OCO and bracket orders</a>. Whether your platform handles any of it properly is one of the checks in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="market-vs-limit-vs-stop-orders.html">Market vs Limit vs Stop Orders</a>
+      <a href="oco-and-bracket-orders.html">OCO and Bracket Orders Explained</a>
+      <a href="trading-halts-explained.html">Trading Halts Explained</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't a Guess</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight &amp; Weekend Gap Risk</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>An exit that might not happen <span class="g">is not an exit.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

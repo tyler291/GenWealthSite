@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>OCO and Bracket Orders Explained</title>
+<meta name="description" content="How OCO and bracket orders link a stop and a target so one cancels the other, why they enforce discipline, and the outage risk nobody warns you about." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/oco-and-bracket-orders.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="OCO and Bracket Orders Explained" />
+<meta property="og:description" content="A bracket submits your stop and your target together, so the exit is decided before the trade needs managing. What it protects, and what it does not." />
+<meta property="og:url" content="https://gwhlds.com/hub/oco-and-bracket-orders.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/oco-and-bracket-orders.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"OCO and Bracket Orders Explained","description":"An OCO links two orders so that filling one cancels the other. A bracket wraps an entry in an OCO exit pair, submitting the stop and the target together. How both work, why they enforce a risk-first process, and the platform-dependency and halt risks that mean a bracket is not a guarantee.","image":"https://gwhlds.com/assets/hub/oco-and-bracket-orders.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/oco-and-bracket-orders.html","datePublished":"2026-09-08"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"OCO and Bracket Orders Explained","item":"https://gwhlds.com/hub/oco-and-bracket-orders.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an OCO order?","acceptedAnswer":{"@type":"Answer","text":"OCO stands for one-cancels-other. It links two orders so that when one is filled, the other is automatically cancelled. The usual use is a stop below your position and a target above it: whichever is reached first closes the trade, and the linkage removes the other so you cannot be left holding a stray order that opens a new position."}},{"@type":"Question","name":"What is a bracket order?","acceptedAnswer":{"@type":"Answer","text":"A bracket order is an entry order with an OCO exit pair attached. When the entry fills, the platform automatically submits a protective stop and a profit target linked as one-cancels-other. It is called a bracket because the two exits sit on either side of your entry price, bracketing the position."}},{"@type":"Question","name":"Are OCO and bracket orders held at the exchange?","acceptedAnswer":{"@type":"Answer","text":"Usually not. On most platforms the linkage logic lives on the broker's or platform's server, which watches your fills and cancels the opposing order. The individual stop and limit orders may rest at the exchange, but the cancel-the-other step depends on that server being reachable. Ask your broker specifically where the logic runs before relying on it."}},{"@type":"Question","name":"Do bracket orders work overnight or during a halt?","acceptedAnswer":{"@type":"Answer","text":"They rest, but they cannot fill while trading is stopped. A market-wide circuit breaker at the Level 3 threshold of a 20% single-day decline in the S&P 500 halts trading for the remainder of the day, and your bracket simply waits. Time-in-force also matters: a day order expires at the close, so a bracket meant to protect an overnight position must be entered as good-til-cancelled."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>OCO &amp; Bracket Orders</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Brokers &amp; Execution</span>
+        <h1>OCO and Bracket Orders Explained</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 8, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/oco-and-bracket-orders.jpg" alt="A brass ingot suspended by a taut cable between two counterweights above and below it, linked through a pulley so that when one weight drops the opposing cable falls slack" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">An OCO — one-cancels-other — links two orders so that filling one automatically cancels the other. A bracket order is an entry with an OCO exit pair attached: when the entry fills, a protective stop and a profit target go live together, and whichever is reached first closes the trade and removes the other.</p>
+
+    <p>The mechanical description undersells what these orders actually do. A bracket forces you to name your exit before the trade exists. It is the closest thing an order ticket has to a written plan, and for most traders it is the single highest-leverage change available on the execution side of the process.</p>
+
+    <h2>How an OCO works</h2>
+    <p>Two orders, one link. Say you are long 100 shares from $50, your invalidation is $48, and your first target is $54. You submit:</p>
+    <ul>
+      <li>A <strong>sell stop at $48</strong> — the protective exit.</li>
+      <li>A <strong>sell limit at $54</strong> — the target exit.</li>
+      <li>Linked as OCO, so filling either one cancels the other.</li>
+    </ul>
+    <p>The linkage is doing real work. Without it, both orders live independently — and if the target fills at $54, that $48 stop is still sitting there. Should price later fall to $48, it executes against a position you no longer own, which opens a fresh <em>short</em>. Traders discover this the expensive way: an unexplained losing position appearing hours after a winning trade closed. The OCO exists to make that impossible.</p>
+
+    <h2>How a bracket order works</h2>
+    <p>A bracket is one step earlier in the sequence. Instead of entering and then arranging exits, you define all three prices at once:</p>
+    <ol>
+      <li><strong>Entry</strong> — a limit order at your level, or a stop order above a break.</li>
+      <li><strong>Stop</strong> — placed automatically once the entry fills, at your invalidation.</li>
+      <li><strong>Target</strong> — placed at the same moment, linked to the stop as an OCO.</li>
+    </ol>
+    <p>The name is literal: the two exits bracket the entry, one above and one below. The critical property is that <em>the exits are specified before you know whether the trade is working</em>. You cannot widen a stop in a panic that has not happened yet, which is precisely why brackets improve results for traders whose problem is discipline rather than analysis — the failure mode dissected in <a href="revenge-trading.html">revenge trading</a>.</p>
+
+    <div class="kv"><table>
+      <tr><th>&nbsp;</th><th>OCO</th><th>Bracket</th></tr>
+      <tr><td>What it links</td><td>Two exit orders</td><td>An entry plus an OCO exit pair</td></tr>
+      <tr><td>When you submit it</td><td>After you are in a position</td><td>Before the entry fills</td></tr>
+      <tr><td>Prevents</td><td>A stray order flipping your position</td><td>Entering without a defined exit</td></tr>
+      <tr><td>Main benefit</td><td>Clean order management</td><td>Discipline, enforced mechanically</td></tr>
+      <tr><td>Best for</td><td>Positions you built manually</td><td>Any planned setup with a known level</td></tr>
+    </table></div>
+
+    <h2>Partial fills, scaling out, and the OCA group</h2>
+    <p>The simple two-order picture breaks the moment you take partial profits. If your stop covers 100 shares and your first target sells 50, filling that target must reduce the stop to 50 — not cancel it, and not leave it covering a position twice the size that remains.</p>
+    <p>Better platforms handle this with a one-cancels-all or OCA group that resizes the remaining orders proportionally. Weaker ones simply cancel the stop, leaving the rest of your position naked until you notice. <strong>Test this deliberately, with minimum size, before you rely on it.</strong> Enter one bracket, take a partial, and look at what happened to the stop. Two minutes of testing beats discovering the answer with real size on, and it pairs directly with the mechanics in <a href="how-to-take-partial-profits.html">how to take partial profits</a>.</p>
+
+    <h2>Where the linkage actually lives — and why it matters</h2>
+    <p>Here is the part most explanations skip. The individual stop and limit orders may rest at the exchange, but the <em>cancel-the-other</em> logic usually does not. On most retail platforms it runs on the broker's or the platform's server, which watches your fills and issues the cancel. That server is a dependency.</p>
+    <p>If your platform is down, your connection drops, or the broker has an outage, the linkage may not fire even though the individual orders exist. Worse, on some platforms a bracket's exit orders are held locally and are never sent to the exchange at all until triggered — meaning a disconnection leaves the position entirely unprotected. These are not equivalent architectures and they are not always documented clearly.</p>
+    <p>Ask your broker one specific question: <strong>if my platform disconnects right now, which of my orders are resting at the exchange?</strong> A firm that answers precisely is telling you something good. A firm that answers vaguely is telling you something too. That question belongs alongside the reliability checks in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+
+    <h2>Time-in-force: the setting that quietly cancels your protection</h2>
+    <p>Every order carries a time-in-force instruction, and it decides how long your bracket survives. FINRA's summary of the common options is worth knowing (<a href="https://www.finra.org/investors/insights/time-parameters-qualifiers-stock-orders" target="_blank" rel="nofollow noopener">FINRA, Time Parameters and Qualifiers on Stock Orders</a>):</p>
+    <ul>
+      <li><strong>Day</strong> — the firm keeps trying to fill your order throughout the current trading day, then it expires. A day-order bracket on a position you hold overnight leaves you unprotected at the next open.</li>
+      <li><strong>Good 'til canceled (GTC)</strong> — the firm keeps working the order for a set period unless you cancel it. Confirm what your broker's period actually is; it is a firm-level policy, not a market-wide standard.</li>
+      <li><strong>Fill or kill (FOK)</strong> — the entire order executes immediately or not at all.</li>
+      <li><strong>Immediate or cancel (IOC)</strong> — fill as much as possible right away, cancel the rest.</li>
+      <li><strong>All or none (AON)</strong> — no partial fills, but without the immediacy of FOK.</li>
+    </ul>
+    <p>The default on your platform is a setting somebody else chose. Check it once, deliberately, rather than assuming it matches how long you intend to hold. Anyone carrying positions past the close should read that alongside <a href="overnight-and-weekend-gap-risk.html">overnight and weekend gap risk</a>.</p>
+
+    <h2>What a bracket does not protect you from</h2>
+    <p>Three limits worth stating plainly, because brackets are often sold as a safety net they are not:</p>
+    <ul>
+      <li><strong>Gaps.</strong> A stop inside a bracket is still a stop. If price opens below it, you are filled at the open, not at your stop price.</li>
+      <li><strong>Halts.</strong> Nothing fills while trading is stopped. A market-wide circuit breaker triggers at three thresholds — <strong>7% (Level 1), 13% (Level 2) and 20% (Level 3) single-day declines in the S&amp;P 500</strong> — and a Level 3 breach halts market-wide trading for the remainder of the trading day (<a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/stock-market-circuit-breakers" target="_blank" rel="nofollow noopener">SEC Investor.gov, Stock Market Circuit Breakers</a>). Your bracket waits, exposed, for as long as the market is closed.</li>
+      <li><strong>A bad plan.</strong> A bracket executes the stop and target you chose. If the stop is at a level that has nothing to do with where your idea is wrong, the bracket will faithfully take you out at a meaningless price, on schedule.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A bracket order is the Method rendered as an order ticket. <em>Know your next</em> says every callout carries an entry, defined targets and the next level price aims for — a bracket is that written down in a form the platform enforces. <em>Trail and protect</em> is the follow-on: as the first target prints, the stop moves up behind it, which on most platforms means modifying the surviving leg of the OCO rather than cancelling and rebuilding. And <em>break and hold</em> keeps the entry honest, because a bracket built around a level you chased is a disciplined execution of a bad decision. <a href="../index.html#method">See the method →</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is an OCO order?</h3>
+    <p>OCO stands for one-cancels-other. It links two orders so that when one is filled, the other is automatically cancelled. The usual use is a stop below your position and a target above it: whichever is reached first closes the trade, and the linkage removes the other so you cannot be left holding a stray order that opens a new position.</p>
+
+    <h3>What is a bracket order?</h3>
+    <p>A bracket order is an entry order with an OCO exit pair attached. When the entry fills, the platform automatically submits a protective stop and a profit target linked as one-cancels-other. It is called a bracket because the two exits sit on either side of your entry price, bracketing the position.</p>
+
+    <h3>Are OCO and bracket orders held at the exchange?</h3>
+    <p>Usually not. On most platforms the linkage logic lives on the broker's or platform's server, which watches your fills and cancels the opposing order. The individual stop and limit orders may rest at the exchange, but the cancel-the-other step depends on that server being reachable. Ask your broker specifically where the logic runs before relying on it.</p>
+
+    <h3>Do bracket orders work overnight or during a halt?</h3>
+    <p>They rest, but they cannot fill while trading is stopped. A market-wide circuit breaker at the Level 3 threshold of a 20% single-day decline in the S&amp;P 500 halts trading for the remainder of the day, and your bracket simply waits. Time-in-force also matters: a day order expires at the close, so a bracket meant to protect an overnight position must be entered as good-til-cancelled.</p>
+
+    <h2>Bottom line</h2>
+    <p>OCO and bracket orders are the cheapest discipline you can buy. They cost nothing, they take an extra ten seconds, and they move the exit decision from the moment you are least rational to the moment you are most. Use a bracket on every planned setup so the stop and target are submitted with the entry. Test how your platform handles partial fills before you need it to work, set the time-in-force deliberately, and find out where the cancel logic actually runs. Then remember what remains outside the order ticket: gaps, halts, and the quality of the levels themselves. The order types underneath it all are covered in <a href="market-vs-limit-vs-stop-orders.html">market vs limit vs stop orders</a>, and the case for choosing a plain stop over a <a href="stop-limit-orders-explained.html">stop-limit order</a> inside your bracket is worth reading before you set one up.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="market-vs-limit-vs-stop-orders.html">Market vs Limit vs Stop Orders</a>
+      <a href="stop-limit-orders-explained.html">Stop-Limit Orders: The One That May Not Fill</a>
+      <a href="how-to-take-partial-profits.html">How to Take Partial Profits</a>
+      <a href="what-is-a-trailing-stop.html">What Is a Trailing Stop?</a>
+      <a href="what-a-trading-callout-should-contain.html">What a Trading Callout Should Contain</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Name the exit <span class="g">before you need it.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
