@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Place a Bracket Order (TradingView, NinjaTrader)</title>
+<meta name="description" content="How to place a bracket order in TradingView and NinjaTrader step by step, where the stop and target actually live, and how to test one before you trust it." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-place-a-bracket-order.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Place a Bracket Order (TradingView, NinjaTrader)" />
+<meta property="og:description" content="The click path is the easy part. Where the stop actually rests, what happens if your platform disconnects, and how to test a bracket with minimum size first." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-place-a-bracket-order.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-place-a-bracket-order.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Place a Bracket Order (TradingView, NinjaTrader)","description":"A step-by-step guide to placing a bracket order in TradingView and in NinjaTrader, including where the protective stop actually rests, how to check whether the bracket is held locally or at the broker, and a five-minute test to run with minimum size before relying on it.","image":"https://gwhlds.com/assets/hub/how-to-place-a-bracket-order.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-place-a-bracket-order.html","datePublished":"2026-09-09"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How to Place a Bracket Order (TradingView, NinjaTrader)","item":"https://gwhlds.com/hub/how-to-place-a-bracket-order.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I place a bracket order in TradingView?","acceptedAnswer":{"@type":"Answer","text":"Connect a broker or the paper trading account, open the order ticket from the chart or the Trading Panel, then fill in the stop loss and take profit fields alongside your entry before you submit. Most builds let you express those exits in ticks, points, a percentage or a cash amount, and once the position is open you can drag the two lines on the chart to modify them."}},{"@type":"Question","name":"How do I place a bracket order in NinjaTrader?","acceptedAnswer":{"@type":"Answer","text":"NinjaTrader handles brackets through an ATM Strategy. You build an ATM Strategy template that defines the stop loss and profit target in ticks, save it under a name, then select that template in the SuperDOM, Chart Trader or the order entry window before you place the entry. When the entry fills, the platform submits the stop and target for you."}},{"@type":"Question","name":"Is a bracket order held at the exchange or on my computer?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on the platform and the broker connection, and it is the most important thing to find out. Some setups send the stop and target to the broker or exchange as resting orders. Others hold the logic on the platform running on your own machine, which means a crash, a lost connection or a closed laptop can leave the position unprotected. Ask your broker directly which one applies to your account."}},{"@type":"Question","name":"Does a bracket order guarantee I get filled at my stop price?","acceptedAnswer":{"@type":"Answer","text":"No. The SEC states plainly that the stop price is not the guaranteed execution price for a stop order; it is a trigger that turns the order into a market order, and the fill can deviate significantly depending on the liquidity available at that moment. A bracket defines where you intend to exit, not the price you are certain to receive."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Placing a Bracket Order</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Brokers &amp; Execution</span>
+        <h1>How to Place a Bracket Order (TradingView, NinjaTrader)</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 9, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-place-a-bracket-order.jpg" alt="A brass caliper clamped around a single glowing candlestick, with thin laser lines marking a price level above it and below it" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">To place a bracket order, define three prices before you submit anything: the entry, the protective stop, and the target. In TradingView you type the stop and target into the order ticket alongside the entry. In NinjaTrader you build an ATM Strategy template first, then select it before placing the entry.</p>
+
+    <p>That is the whole click path, and it takes about twenty seconds once you have done it twice. The part worth your attention is everything the click path does not tell you: where those two exit orders actually live, what happens to them when your internet drops, and how to find out before the answer costs you money.</p>
+
+    <p>If you want the underlying mechanics — what one-cancels-other linkage is, how partial fills resize the group, why time-in-force matters — that is covered in <a href="oco-and-bracket-orders.html">OCO and bracket orders explained</a>. This page is the practical one.</p>
+
+    <h2>Before you open a platform: write down three numbers</h2>
+    <p>A bracket is a container. It is only as good as what you put in it, and the most common failure is a trader opening the ticket and inventing a stop distance to fill the field. Decide these away from the order window:</p>
+    <ul>
+      <li><strong>Entry</strong> — the price at which your idea becomes valid, not the price it happens to be trading at while you are watching.</li>
+      <li><strong>Stop</strong> — the price at which the idea is wrong. Structural, not a round number of dollars you are comfortable losing. That distinction is the whole of <a href="what-is-invalidation-in-trading.html">invalidation</a>.</li>
+      <li><strong>Target</strong> — the next level price is genuinely aiming for.</li>
+    </ul>
+    <p>Only once those exist does position size follow from them, using the arithmetic in <a href="position-sizing-from-risk.html">position sizing from risk</a>. Sizing first and stopping second is backwards, and a bracket will faithfully execute a backwards plan.</p>
+
+    <h2>How to place a bracket order in TradingView</h2>
+    <p>TradingView is a charting front end. The bracket you build there is executed by whichever broker you have connected, or by the built-in Paper Trading account, and the broker decides how much of it is actually supported. The general sequence:</p>
+    <ol>
+      <li><strong>Connect an account.</strong> Open the Trading Panel beneath the chart and pick your broker, or select Paper Trading to practise. Nothing in this list works until an account is attached.</li>
+      <li><strong>Open the order ticket</strong> — from the Trading Panel buy/sell buttons, or with the buy/sell keyboard shortcut while the chart is focused.</li>
+      <li><strong>Set the entry.</strong> Choose limit or stop rather than market if you are trading a level. A market entry defeats the purpose of having planned a price.</li>
+      <li><strong>Enable the stop loss and take profit fields.</strong> These two turn an ordinary order into a bracket. Most builds let you express them in ticks, points, a percentage or a cash risk amount — pick one unit and use it consistently so you stop translating in your head.</li>
+      <li><strong>Submit, then verify.</strong> Two horizontal lines should appear at your stop and target, and both legs should be listed in the orders tab. If only one appeared, the broker connection did not accept the other and you are half-protected.</li>
+      <li><strong>Modify by dragging.</strong> Once live, the lines can be dragged to trail the stop up behind a printed target. Dragging is fast, which is exactly why it is dangerous — see the mistakes below.</li>
+    </ol>
+    <p>One caveat specific to TradingView: the Paper Trading account simulates fills rather than sending anything to a market. It is excellent for learning the interface and useless for learning what a fill feels like, a gap explored in <a href="paper-trading-vs-live-trading.html">paper trading vs live trading</a>.</p>
+
+    <h2>How to place a bracket order in NinjaTrader</h2>
+    <p>NinjaTrader approaches the same problem from the opposite direction. Instead of typing exits into every ticket, you define them once as a reusable template called an <strong>ATM Strategy</strong> — Advanced Trade Management — and then attach that template to entries.</p>
+    <ol>
+      <li><strong>Open the ATM Strategy selector</strong> in the SuperDOM, Chart Trader or the Order Entry window. It is the dropdown that reads "custom" until you save something.</li>
+      <li><strong>Create a template.</strong> Set the quantity, the stop loss in ticks and the profit target in ticks. If you scale out, add a second target line with its own quantity.</li>
+      <li><strong>Configure the stop behaviour.</strong> This is the part most traders skip. The stop strategy section handles auto-breakeven and trailing: you tell it how far price must travel before the stop moves, and where it moves to.</li>
+      <li><strong>Name and save it.</strong> Name it for what it does — "MES 8t stop, 2 targets" beats "Strategy1". You will be picking it under pressure.</li>
+      <li><strong>Select the template, then place the entry.</strong> The moment the entry fills, NinjaTrader submits the stop and target defined in the template.</li>
+      <li><strong>Work the position from the ATM row.</strong> The live strategy appears as a row you can modify. Closing the position outside that row can leave the strategy orphaned.</li>
+    </ol>
+    <p>Because ATM behaviour and menu locations change between platform versions, check the current wording against NinjaTrader's own documentation (<a href="https://ninjatrader.com/support/helpGuides/nt8/" target="_blank" rel="nofollow noopener">NinjaTrader 8 Help Guide</a>) rather than a screenshot from a video three years old.</p>
+
+    <div class="kv"><table>
+      <tr><th>&nbsp;</th><th>TradingView</th><th>NinjaTrader</th></tr>
+      <tr><td>Where exits are defined</td><td>In the order ticket, per trade</td><td>In a saved ATM Strategy template</td></tr>
+      <tr><td>Units</td><td>Ticks, points, percent or cash</td><td>Ticks</td></tr>
+      <tr><td>Built-in trailing logic</td><td>Manual, by dragging the lines</td><td>Auto-breakeven and trail rules in the template</td></tr>
+      <tr><td>Who executes it</td><td>The connected broker</td><td>NinjaTrader, against your brokerage connection</td></tr>
+      <tr><td>Best suited to</td><td>Discretionary traders across many instruments</td><td>Futures traders repeating the same setup</td></tr>
+    </table></div>
+
+    <h2>The question that matters more than the click path</h2>
+    <p>A bracket order is a promise that something will close your position when you are not looking. Whether that promise holds depends on where the orders physically rest, and platforms differ enormously.</p>
+    <p>Some send the stop and target to the broker or the exchange, where they sit as resting orders that survive your laptop closing. Others hold the logic on the software running on your own machine — the exits exist only as an intention until the platform sees the trigger and sends them. If that machine sleeps, crashes or loses its connection, the intention never becomes an order.</p>
+    <p>Ask your broker one sentence: <strong>if my platform disconnects right now, which of my orders are resting at the exchange?</strong> A precise answer tells you the architecture. A vague answer tells you to assume the worst and never leave a position unattended. It belongs on the same checklist as everything in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+    <p>Even a bracket resting at the exchange is not a price guarantee. The SEC puts it plainly: "The stop price is not the guaranteed execution price for a stop order. The stop price is a trigger that causes the stop order to become a market order," and the execution "can deviate significantly from the stop price due to the prices of available liquidity when the market order executes" (<a href="https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-15" target="_blank" rel="nofollow noopener">SEC Office of Investor Education, Investor Bulletin: Stop, Stop-Limit, and Trailing Stop Orders</a>). The same bulletin flags something almost nobody checks: firms differ on whether a stop is triggered by last-sale prices or by quotation prices. Two accounts, identical stop, different trigger.</p>
+
+    <h2>Test the bracket before you trust it</h2>
+    <p>Five minutes, minimum size, on a quiet instrument. Do this once per platform, and again after any platform update:</p>
+    <ol>
+      <li><strong>Place a bracket and confirm both legs appear</strong> in the working orders list, not just on the chart.</li>
+      <li><strong>Take a partial.</strong> Fill part of the target and look at what happened to the stop. Did it resize to the remaining quantity, or did it cancel? A cancelled stop leaves the rest of the position naked, which is why <a href="how-to-take-partial-profits.html">how to take partial profits</a> is worth reading before you scale out.</li>
+      <li><strong>Close the position manually</strong> and check that the leftover orders were cancelled. A stray stop can open a brand new position in the opposite direction.</li>
+      <li><strong>Disconnect deliberately.</strong> Kill the platform with a bracket live, then log into the broker's web portal and see what is still there. This is the test that answers the architecture question honestly.</li>
+      <li><strong>Check the time-in-force</strong> on both exit legs. A day order expires at the close whether or not you are still holding.</li>
+    </ol>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A bracket order is the Method written in a form your platform enforces. <em>Know your next</em> means every callout carries an entry, defined targets and the next level price is aiming for — the same three numbers the ticket asks you for anyway. <em>Trail and protect</em> is what the ATM stop strategy automates: as the first target prints, the stop follows it up. And <em>break and hold</em> governs the entry itself, because a perfectly constructed bracket around a chased level is just a tidy way to be wrong. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>Five mistakes that break a bracket</h2>
+    <ul>
+      <li><strong>Dragging the stop away from price.</strong> The interface makes widening a stop as easy as trailing one. Every widened stop is a plan being rewritten mid-trade by the least rational version of you.</li>
+      <li><strong>Reusing a template with the wrong size.</strong> An ATM template built for one micro contract, applied to ten, is a ten-fold risk increase with no visible warning.</li>
+      <li><strong>Assuming the bracket cleaned up after a manual exit.</strong> Always check the working orders list after closing anything by hand.</li>
+      <li><strong>Setting the stop by dollar comfort.</strong> A stop placed eight ticks away because eight ticks is affordable, rather than because the level breaks there, produces a stream of small losses at meaningless prices.</li>
+      <li><strong>Carrying a bracket overnight without checking time-in-force.</strong> The default was chosen by somebody else.</li>
+    </ul>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How do I place a bracket order in TradingView?</h3>
+    <p>Connect a broker or the paper trading account, open the order ticket from the chart or the Trading Panel, then fill in the stop loss and take profit fields alongside your entry before you submit. Most builds let you express those exits in ticks, points, a percentage or a cash amount, and once the position is open you can drag the two lines on the chart to modify them.</p>
+
+    <h3>How do I place a bracket order in NinjaTrader?</h3>
+    <p>NinjaTrader handles brackets through an ATM Strategy. You build an ATM Strategy template that defines the stop loss and profit target in ticks, save it under a name, then select that template in the SuperDOM, Chart Trader or the order entry window before you place the entry. When the entry fills, the platform submits the stop and target for you.</p>
+
+    <h3>Is a bracket order held at the exchange or on my computer?</h3>
+    <p>It depends entirely on the platform and the broker connection, and it is the most important thing to find out. Some setups send the stop and target to the broker or exchange as resting orders. Others hold the logic on the platform running on your own machine, which means a crash, a lost connection or a closed laptop can leave the position unprotected. Ask your broker directly which one applies to your account.</p>
+
+    <h3>Does a bracket order guarantee I get filled at my stop price?</h3>
+    <p>No. The SEC states plainly that the stop price is not the guaranteed execution price for a stop order; it is a trigger that turns the order into a market order, and the fill can deviate significantly depending on the liquidity available at that moment. A bracket defines where you intend to exit, not the price you are certain to receive.</p>
+
+    <h2>Bottom line</h2>
+    <p>Placing a bracket order is trivial in both platforms — a pair of fields in TradingView, a saved ATM template in NinjaTrader. The work sits upstream and downstream of the click. Upstream: decide the entry, the invalidation and the target before the ticket is open, and let size fall out of them. Downstream: find out where your exits actually rest, test a partial fill and a disconnect with minimum size, and set the time-in-force on purpose. Do that once and the bracket becomes the cheapest discipline available to you. For the level that belongs at the stop, start with <a href="how-to-set-a-stop-loss.html">how to set a stop loss</a>; for why a plain stop usually beats a stop-limit inside a bracket, see <a href="stop-limit-orders-explained.html">stop-limit orders explained</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="oco-and-bracket-orders.html">OCO and Bracket Orders Explained</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss</a>
+      <a href="stop-limit-orders-explained.html">Stop-Limit Orders: The One That May Not Fill</a>
+      <a href="how-to-take-partial-profits.html">How to Take Partial Profits</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The exit is decided <span class="g">before the entry fills.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

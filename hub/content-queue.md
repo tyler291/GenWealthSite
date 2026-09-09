@@ -291,9 +291,9 @@ below links up to it.
 - [x] Market vs limit vs stop orders: when each one is right `(market-vs-limit-vs-stop-orders)`
 - [x] Stop-limit orders: the order type that does not fill `(stop-limit-orders-explained)`
 - [x] OCO and bracket orders explained `(oco-and-bracket-orders)`
-- [ ] How to place a bracket order (TradingView and NinjaTrader)
-- [ ] What slippage actually costs you over a year
-- [ ] Commission vs spread: the true cost of a round turn
+- [x] How to place a bracket order (TradingView and NinjaTrader) `(how-to-place-a-bracket-order)`
+- [x] What slippage actually costs you over a year `(slippage-in-trading)`
+- [x] Commission vs spread: the true cost of a round turn `(commission-vs-spread)`
 - [ ] How to test a new broker with a small deposit
 - [ ] What "segregated funds" actually means at a regulated broker
 - [ ] Platform latency: how much it matters for scalping vs swing trading

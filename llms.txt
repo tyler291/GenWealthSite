@@ -217,6 +217,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Market vs Limit vs Stop Orders: When to Use Each](https://gwhlds.com/hub/market-vs-limit-vs-stop-orders.html): a market order guarantees a fill but not a price, a limit order the reverse, and a stop is only a trigger — which to use for entries, exits and protective stops.
 - [Stop-Limit Orders: The Order That May Not Fill](https://gwhlds.com/hub/stop-limit-orders-explained.html): how the stop and limit prices interact, why a stop-limit can leave you in a losing position, and the halts and price bands that make no-fill risk worse.
 - [OCO and Bracket Orders Explained](https://gwhlds.com/hub/oco-and-bracket-orders.html): how one-cancels-other links a stop to a target, how brackets force you to name the exit first, partial-fill handling, time-in-force, and where the cancel logic actually runs.
+- [How to Place a Bracket Order (TradingView, NinjaTrader)](https://gwhlds.com/hub/how-to-place-a-bracket-order.html): the step-by-step click path in both platforms, why an ATM Strategy template differs from an order-ticket bracket, and how to test whether your exits rest at the exchange or only on your PC.
+- [Slippage in Trading: What It Really Costs You a Year](https://gwhlds.com/hub/slippage-in-trading.html): how to measure your own slippage in one journal column, why limit up-limit down bands double at the open and close, and seven ways to reduce it.
+- [Commission vs Spread: The True Cost of a Round Turn](https://gwhlds.com/hub/commission-vs-spread.html): how the two charging models compare in stocks, futures and forex, what effective spread means under SEC Rule 605, and how to total your all-in cost per round turn.
 
 ## Contact
 

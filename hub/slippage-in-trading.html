@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Slippage in Trading: What It Really Costs You a Year</title>
+<meta name="description" content="Slippage is the gap between the price you expected and the price you got. Here is how to measure it, what a tick of it costs over a year, and how to cut it." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/slippage-in-trading.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Slippage in Trading: What It Really Costs You a Year" />
+<meta property="og:description" content="A tick of slippage sounds like nothing. Multiply it by every entry and every exit for a year and it is often larger than commission. How to measure and reduce it." />
+<meta property="og:url" content="https://gwhlds.com/hub/slippage-in-trading.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/slippage-in-trading.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Slippage in Trading: What It Really Costs You a Year","description":"Slippage is the difference between the price you expected and the price you were filled at. How to measure your own slippage per trade, annualise it, understand why it is structurally worst at the open and the close, and reduce it without giving up good entries.","image":"https://gwhlds.com/assets/hub/slippage-in-trading.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/slippage-in-trading.html","datePublished":"2026-09-09"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Slippage in Trading: What It Really Costs You a Year","item":"https://gwhlds.com/hub/slippage-in-trading.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is slippage in trading?","acceptedAnswer":{"@type":"Answer","text":"Slippage is the difference between the price you expected when you sent an order and the price you were actually filled at. It happens because a quote is only good for the size displayed at that instant, and by the time your order reaches the market the book may have moved. Slippage can go against you or in your favour, though the two are rarely symmetrical."}},{"@type":"Question","name":"Is slippage always bad?","acceptedAnswer":{"@type":"Answer","text":"No. A fill better than the quoted price is called price improvement, and the SEC gives the example of a broker routing a 500-share sell order quoted at $20 and executing it at $20.05, worth an extra $25. Negative slippage tends to be larger and more frequent for retail market orders in fast conditions, so most traders see a net cost rather than a net gain."}},{"@type":"Question","name":"How do I calculate my slippage?","acceptedAnswer":{"@type":"Answer","text":"For each trade, record the price you intended and the price you were filled at, then take the difference in ticks or cents and multiply by size. Do it for entries and exits separately. Average those over a month, multiply by your annual trade count, and you have a real annual figure to compare against your commissions."}},{"@type":"Question","name":"When is slippage worst?","acceptedAnswer":{"@type":"Answer","text":"At the open, at the close, and around scheduled news. The limit up-limit down mechanism makes this structural in US equities: the permitted price bands are set at 5, 10 or 20 percent depending on the security, and those bands double during the opening and closing periods of the trading day. A wider permitted band means more room for price to move before anything stops it."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">›</span><a href="index.html">The Hub</a><span class="sep">›</span><span>Slippage</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Brokers &amp; Execution</span>
+        <h1>Slippage in Trading: What It Really Costs You a Year</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 9, 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/slippage-in-trading.jpg" alt="Gold coins pouring from a cupped hand into a dark bowl, with a fine dust of coins escaping between the fingers" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Slippage is the difference between the price you expected and the price you were filled at. One tick per side sounds like nothing. At four trades a day it is roughly two thousand slipped ticks a year, and for most active traders that total is larger than the commission bill they spend hours shopping around to reduce.</p>
+
+    <p>Commissions get scrutinised because they appear on a statement with a dollar sign next to them. Slippage never appears anywhere. It is subtracted silently from every entry and every exit, it never gets totalled, and so it goes unmanaged for years.</p>
+
+    <h2>Why slippage happens at all</h2>
+    <p>A quote is not a promise. It is the best bid and offer for a specific quantity, at a specific instant, on a specific venue. The SEC is direct about the mechanics: your order travels to your broker, the broker chooses where to route it, and "by the time your order reaches the market, the price of the stock could be slightly – or very – different" (<a href="https://www.sec.gov/about/reports-publications/investorpubstradexec" target="_blank" rel="nofollow noopener">SEC, Trade Execution: What Every Investor Should Know</a>).</p>
+    <p>Three things create the gap:</p>
+    <ul>
+      <li><strong>Latency.</strong> Time passes between your click and the match. In a fast market that is enough.</li>
+      <li><strong>Depth.</strong> The quote covers the displayed size. Send more than that and the rest fills at worse prices, walking up or down the book.</li>
+      <li><strong>Volatility.</strong> When the book is thin and moving, the price you saw may already be gone.</li>
+    </ul>
+
+    <h2>Slippage is not always against you</h2>
+    <p>A fill better than the quote is called price improvement. The SEC illustrates it with a plain example: a 500-share sell order quoted at $20 gets routed and executed at $20.05, worth an extra $25 to the customer. That is real, and it happens.</p>
+    <p>It is not symmetrical, though. Positive slippage tends to be small and incremental; negative slippage clusters in the moments you least want it — a stop triggering into a fast move, a market order into a news spike. Which is why the honest way to handle slippage is measurement rather than optimism.</p>
+
+    <h2>How to measure your own slippage in one column</h2>
+    <p>Add one column to your <a href="trading-journal.html">trading journal</a>: <strong>intended price</strong>. You already record the fill. The difference is your slippage, and after thirty trades you have a number nobody can argue with.</p>
+    <ol>
+      <li>For each trade, log the price you meant to get and the price you got, for entry and exit separately.</li>
+      <li>Convert each difference to ticks or cents, then to dollars using your instrument's tick value and your size.</li>
+      <li>Average the per-trade total over a month.</li>
+      <li>Multiply by your annual trade count.</li>
+    </ol>
+    <p>Now compare that annual figure with your annual commissions. For a lot of active traders the slippage number is the larger of the two, and unlike commissions it is partly within your control.</p>
+
+    <div class="kv"><table>
+      <tr><th>Slippage per round trip</th><th>4 trades/day</th><th>~1,000 trades/year</th><th>Reduce it by</th></tr>
+      <tr><td>2 ticks</td><td>8 ticks/day</td><td>~2,000 ticks</td><td>—</td></tr>
+      <tr><td>1 tick</td><td>4 ticks/day</td><td>~1,000 ticks</td><td>Half the annual cost</td></tr>
+      <tr><td>0.5 ticks</td><td>2 ticks/day</td><td>~500 ticks</td><td>Three quarters of it</td></tr>
+    </table></div>
+    <p>Convert ticks to dollars with your own instrument's tick value and contract count — that arithmetic is laid out in <a href="futures-tick-value.html">tick value explained</a>. The point of the table is the multiplier, not the currency: the gap between two ticks and half a tick is the difference between a meaningful annual expense and a rounding error.</p>
+
+    <h2>Slippage is structurally worst at the open and the close</h2>
+    <p>This is the part that surprises people. In US equities, the limit up-limit down mechanism sets price bands "at a percentage level above and below the average price of the stock over the immediately preceding five-minute trading period" — 5%, 10% or 20% depending on the security's price and tier — and, critically, <strong>those price bands double during the opening and closing periods of the trading day</strong>. If price does not return inside the band within 15 seconds, a five-minute trading pause is triggered (<a href="https://www.sec.gov/investor/alerts/circuitbreakersbulletin.htm" target="_blank" rel="nofollow noopener">SEC, Investor Bulletin: New Measures to Address Market Volatility</a>).</p>
+    <p>Read that again as a trader rather than as a rule. The market's own guardrail is deliberately loosened at exactly the two moments most day traders are most active. A wider permitted band means more room for price to travel before anything intervenes — which is another way of saying more room for your market order to fill somewhere you did not plan.</p>
+    <p>It does not mean avoid the open. It means the open is the most expensive part of the day to be careless in, a nuance that sits alongside <a href="best-time-of-day-to-trade.html">the best time of day to trade</a> and the discipline of a <a href="pre-market-routine.html">pre-market routine</a>.</p>
+
+    <h2>Seven ways to actually reduce it</h2>
+    <ul>
+      <li><strong>Use limit entries on planned levels.</strong> If you decided the price in advance, there is no reason to accept whatever the market offers. A limit order caps the price; it just does not guarantee a fill.</li>
+      <li><strong>Trade liquid instruments.</strong> Slippage is a liquidity problem before it is a broker problem. The index futures and the largest ETFs slip far less than a thin small cap, a point that also shapes <a href="low-float-stocks.html">how low float stocks behave</a>.</li>
+      <li><strong>Size to the book, not to your account.</strong> If your order is larger than the displayed size, you are guaranteeing yourself slippage on the remainder.</li>
+      <li><strong>Avoid market orders into scheduled events.</strong> Economic releases and earnings widen spreads and empty the book for seconds at a time.</li>
+      <li><strong>Do not chase.</strong> Most severe slippage is self-inflicted: the trader missed the level and sent a market order to catch up. This is the entire reason our first principle is break and hold.</li>
+      <li><strong>Check your broker's routing.</strong> Execution quality is a real, measurable difference between firms — the routing disclosures covered in <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a> exist for this.</li>
+      <li><strong>Exit in pieces on thin instruments.</strong> Two smaller exits often beat one large one when the book is shallow.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Slippage is mostly a discipline cost wearing a technical costume. <em>Break and hold</em> exists precisely because chasing a level you missed is where the worst fills live: the candle has to break the level and close holding it, which means you are placing an order at a price you decided on, not a price you are reacting to. <em>Know your next</em> means the exit is a level too, not a panic. Traders who fix their process usually find their slippage falls without touching their broker. <a href="../index.html#method">See the method →</a></div>
+
+    <h2>Where slippage quietly changes your edge</h2>
+    <p>Slippage does not just reduce profit; it changes which strategies are viable. Add one tick per side to a scalping system taking four ticks of profit and you have removed half its edge. Add the same tick to a swing trade targeting sixty ticks and it is noise. This is the single most underrated factor when a trader is choosing a timeframe, and it belongs in the maths in <a href="trading-expectancy.html">trading expectancy</a> before you conclude a system is broken.</p>
+    <p>The practical consequence: if your backtest assumed perfect fills, your live results will be worse and you should expect it rather than be shaken by it. Build the assumption in, and let the live number tell you whether you were right.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is slippage in trading?</h3>
+    <p>Slippage is the difference between the price you expected when you sent an order and the price you were actually filled at. It happens because a quote is only good for the size displayed at that instant, and by the time your order reaches the market the book may have moved. Slippage can go against you or in your favour, though the two are rarely symmetrical.</p>
+
+    <h3>Is slippage always bad?</h3>
+    <p>No. A fill better than the quoted price is called price improvement, and the SEC gives the example of a broker routing a 500-share sell order quoted at $20 and executing it at $20.05, worth an extra $25. Negative slippage tends to be larger and more frequent for retail market orders in fast conditions, so most traders see a net cost rather than a net gain.</p>
+
+    <h3>How do I calculate my slippage?</h3>
+    <p>For each trade, record the price you intended and the price you were filled at, then take the difference in ticks or cents and multiply by size. Do it for entries and exits separately. Average those over a month, multiply by your annual trade count, and you have a real annual figure to compare against your commissions.</p>
+
+    <h3>When is slippage worst?</h3>
+    <p>At the open, at the close, and around scheduled news. The limit up-limit down mechanism makes this structural in US equities: the permitted price bands are set at 5, 10 or 20 percent depending on the security, and those bands double during the opening and closing periods of the trading day. A wider permitted band means more room for price to move before anything stops it.</p>
+
+    <h2>Bottom line</h2>
+    <p>Slippage is the cost nobody invoices you for, which is exactly why it goes unmanaged. Measure it — one extra column in the journal, thirty trades, one honest annual number. Then attack the causes you control: plan the price so you can use a limit, trade instruments deep enough to absorb your size, treat the open and the close as the expensive hours they structurally are, and stop chasing levels you missed. Most traders discover that half their slippage was never about the broker at all. The related cost worth totalling next is the visible one, in <a href="commission-vs-spread.html">commission vs spread</a>, and the exits themselves are worth setting up properly with <a href="how-to-place-a-bracket-order.html">a bracket order</a>.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon · Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="commission-vs-spread.html">Commission vs Spread: The Cost of a Round Turn</a>
+      <a href="market-vs-limit-vs-stop-orders.html">Market vs Limit vs Stop Orders</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+      <a href="trading-expectancy.html">Trading Expectancy: Your Edge Per Trade</a>
+      <a href="best-time-of-day-to-trade.html">Best Time of Day to Trade</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The cost nobody <span class="g">invoices you for.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
