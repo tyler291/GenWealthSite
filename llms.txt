@@ -220,6 +220,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [How to Place a Bracket Order (TradingView, NinjaTrader)](https://gwhlds.com/hub/how-to-place-a-bracket-order.html): the step-by-step click path in both platforms, why an ATM Strategy template differs from an order-ticket bracket, and how to test whether your exits rest at the exchange or only on your PC.
 - [Slippage in Trading: What It Really Costs You a Year](https://gwhlds.com/hub/slippage-in-trading.html): how to measure your own slippage in one journal column, why limit up-limit down bands double at the open and close, and seven ways to reduce it.
 - [Commission vs Spread: The True Cost of a Round Turn](https://gwhlds.com/hub/commission-vs-spread.html): how the two charging models compare in stocks, futures and forex, what effective spread means under SEC Rule 605, and how to total your all-in cost per round turn.
+- [How to Test a New Broker With a Small Deposit](https://gwhlds.com/hub/how-to-test-a-new-broker.html): verifying registration on BrokerCheck and NFA BASIC, testing the withdrawal before the first trade, and the four weeks of measurement that follow.
+- [Segregated Funds Explained: What It Really Protects](https://gwhlds.com/hub/segregated-funds-explained.html): what Section 4d segregation requires of futures brokers, how securities and retail forex differ, and what the rule never covers.
+- [Platform Latency: Does It Matter for Retail Traders?](https://gwhlds.com/hub/platform-latency-explained.html): why the SEC calls sub-millisecond delays de minimis, where retail milliseconds actually go, and when latency genuinely bites a scalper.
 
 ## Contact
 

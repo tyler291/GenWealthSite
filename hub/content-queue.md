@@ -294,9 +294,9 @@ below links up to it.
 - [x] How to place a bracket order (TradingView and NinjaTrader) `(how-to-place-a-bracket-order)`
 - [x] What slippage actually costs you over a year `(slippage-in-trading)`
 - [x] Commission vs spread: the true cost of a round turn `(commission-vs-spread)`
-- [ ] How to test a new broker with a small deposit
-- [ ] What "segregated funds" actually means at a regulated broker
-- [ ] Platform latency: how much it matters for scalping vs swing trading
+- [x] How to test a new broker with a small deposit `(how-to-test-a-new-broker)`
+- [x] What "segregated funds" actually means at a regulated broker `(segregated-funds-explained)`
+- [x] Platform latency: how much it matters for scalping vs swing trading `(platform-latency-explained)`
 - [ ] Charting on TradingView vs your broker's platform
 - [ ] Trading from a phone: what breaks and what does not
 - [ ] The one-monitor setup that actually works
