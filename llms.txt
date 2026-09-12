@@ -223,6 +223,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [How to Test a New Broker With a Small Deposit](https://gwhlds.com/hub/how-to-test-a-new-broker.html): verifying registration on BrokerCheck and NFA BASIC, testing the withdrawal before the first trade, and the four weeks of measurement that follow.
 - [Segregated Funds Explained: What It Really Protects](https://gwhlds.com/hub/segregated-funds-explained.html): what Section 4d segregation requires of futures brokers, how securities and retail forex differ, and what the rule never covers.
 - [Platform Latency: Does It Matter for Retail Traders?](https://gwhlds.com/hub/platform-latency-explained.html): why the SEC calls sub-millisecond delays de minimis, where retail milliseconds actually go, and when latency genuinely bites a scalper.
+- [TradingView vs Your Broker's Platform: Which to Use](https://gwhlds.com/hub/tradingview-vs-broker-platform.html): what each platform is built for, why the two charts disagree on price, and how to tell whether your stop is resting at the broker or only on your machine.
+- [Trading From a Phone: What Breaks and What Doesn't](https://gwhlds.com/hub/trading-from-a-phone.html): what mobile genuinely handles, why small screens destroy market structure and invite size errors, and the backup route to build before an outage.
+- [The One-Monitor Trading Setup That Actually Works](https://gwhlds.com/hub/one-monitor-trading-setup.html): why extra screens add switching rather than information, the single-screen layout to run, what to cut, and when a second monitor earns its place.
 
 ## Contact
 

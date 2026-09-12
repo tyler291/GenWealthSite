@@ -297,9 +297,9 @@ below links up to it.
 - [x] How to test a new broker with a small deposit `(how-to-test-a-new-broker)`
 - [x] What "segregated funds" actually means at a regulated broker `(segregated-funds-explained)`
 - [x] Platform latency: how much it matters for scalping vs swing trading `(platform-latency-explained)`
-- [ ] Charting on TradingView vs your broker's platform
-- [ ] Trading from a phone: what breaks and what does not
-- [ ] The one-monitor setup that actually works
+- [x] Charting on TradingView vs your broker's platform `(tradingview-vs-broker-platform)`
+- [x] Trading from a phone: what breaks and what does not `(trading-from-a-phone)`
+- [x] The one-monitor setup that actually works `(one-monitor-trading-setup)`
 - [ ] Trading hotkeys worth learning
 
 ---
