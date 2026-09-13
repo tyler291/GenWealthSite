@@ -300,7 +300,7 @@ below links up to it.
 - [x] Charting on TradingView vs your broker's platform `(tradingview-vs-broker-platform)`
 - [x] Trading from a phone: what breaks and what does not `(trading-from-a-phone)`
 - [x] The one-monitor setup that actually works `(one-monitor-trading-setup)`
-- [ ] Trading hotkeys worth learning
+- [x] Trading hotkeys worth learning `(trading-hotkeys)`
 
 ---
 
@@ -310,8 +310,8 @@ New cluster. The pillar goes first; every spoke below links up to it. These are 
 that turn "we teach a method" into something a reader can actually check, so the standard
 is a real, tradeable description with the failure cases named — not a definition.
 
-- [ ] Trading strategies explained: how a setup becomes a system `[PILLAR]`
-- [ ] The opening range breakout, defined and traded
+- [x] Trading strategies explained: how a setup becomes a system `[PILLAR]` `(trading-strategies-explained)`
+- [x] The opening range breakout, defined and traded `(opening-range-breakout)`
 - [ ] The first pullback after a trend day
 - [ ] A range day playbook: how to trade a market going nowhere
 - [ ] A trend day playbook: how to hold when everything says take profit
@@ -347,7 +347,7 @@ the cross where the answer genuinely differs by timeframe — otherwise link to 
 - [ ] Double tops and double bottoms
 - [ ] Round numbers and psychological price levels
 - [ ] Previous day high and low: why they keep working
-- [ ] The opening range: how to define it and use it
+- [x] The opening range: how to define it and use it `(covered by opening-range-breakout)`
 - [ ] Gap fill: how often it really happens
 
 **Dropped from batch 003 for cannibalization:** break and hold as a full strategy

@@ -226,6 +226,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [TradingView vs Your Broker's Platform: Which to Use](https://gwhlds.com/hub/tradingview-vs-broker-platform.html): what each platform is built for, why the two charts disagree on price, and how to tell whether your stop is resting at the broker or only on your machine.
 - [Trading From a Phone: What Breaks and What Doesn't](https://gwhlds.com/hub/trading-from-a-phone.html): what mobile genuinely handles, why small screens destroy market structure and invite size errors, and the backup route to build before an outage.
 - [The One-Monitor Trading Setup That Actually Works](https://gwhlds.com/hub/one-monitor-trading-setup.html): why extra screens add switching rather than information, the single-screen layout to run, what to cut, and when a second monitor earns its place.
+- [Trading Hotkeys Worth Learning (And Which to Skip)](https://gwhlds.com/hub/trading-hotkeys.html): the three keyboard shortcuts that genuinely earn a place, the ones that automate bad habits, and the platform limits to set before binding any of them.
+- [Trading Strategies Explained: Setup to System](https://gwhlds.com/hub/trading-strategies-explained.html): what separates a setup from a strategy, the six components every strategy must specify, how to judge an edge on expectancy, and why edges decay.
+- [The Opening Range Breakout, Defined and Traded](https://gwhlds.com/hub/opening-range-breakout.html): how to define the opening range, why a close beyond it is the trigger and a touch is not, where the stop and first target belong, and the mornings to skip.
 
 ## Contact
 
