@@ -229,6 +229,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [Trading Hotkeys Worth Learning (And Which to Skip)](https://gwhlds.com/hub/trading-hotkeys.html): the three keyboard shortcuts that genuinely earn a place, the ones that automate bad habits, and the platform limits to set before binding any of them.
 - [Trading Strategies Explained: Setup to System](https://gwhlds.com/hub/trading-strategies-explained.html): what separates a setup from a strategy, the six components every strategy must specify, how to judge an edge on expectancy, and why edges decay.
 - [The Opening Range Breakout, Defined and Traded](https://gwhlds.com/hub/opening-range-breakout.html): how to define the opening range, why a close beyond it is the trigger and a touch is not, where the stop and first target belong, and the mornings to skip.
+- [First Pullback After a Trend Day: How to Trade It](https://gwhlds.com/hub/first-pullback-after-a-trend-day.html): why the first pullback into a trend is a different trade from the second and third, how deep it should go, where the trigger and stop belong, and how to tell a pullback from a reversal.
+- [Range Day Playbook: Trading a Market Going Nowhere](https://gwhlds.com/hub/range-day-playbook.html): how to recognise a rotating session before lunchtime, the two trades a range genuinely offers, why costs bite hardest on a narrow day, and the case for standing aside.
+- [Trend Day Playbook: How to Hold a Winning Trade](https://gwhlds.com/hub/trend-day-playbook.html): how to identify a trend day early, why holding a winner is harder than cutting a loser, trailing a stop behind structure rather than a fixed distance, and what actually ends a trend.
 
 ## Contact
 

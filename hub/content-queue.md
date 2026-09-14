@@ -312,9 +312,9 @@ is a real, tradeable description with the failure cases named — not a definiti
 
 - [x] Trading strategies explained: how a setup becomes a system `[PILLAR]` `(trading-strategies-explained)`
 - [x] The opening range breakout, defined and traded `(opening-range-breakout)`
-- [ ] The first pullback after a trend day
-- [ ] A range day playbook: how to trade a market going nowhere
-- [ ] A trend day playbook: how to hold when everything says take profit
+- [x] The first pullback after a trend day `(first-pullback-after-a-trend-day)`
+- [x] A range day playbook: how to trade a market going nowhere `(range-day-playbook)`
+- [x] A trend day playbook: how to hold when everything says take profit `(trend-day-playbook)`
 - [ ] How to trade a level that has already failed twice
 - [ ] Fading vs following: when each one actually works
 - [ ] How to build a strategy from a single setup
