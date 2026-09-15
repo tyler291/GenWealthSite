@@ -232,6 +232,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [First Pullback After a Trend Day: How to Trade It](https://gwhlds.com/hub/first-pullback-after-a-trend-day.html): why the first pullback into a trend is a different trade from the second and third, how deep it should go, where the trigger and stop belong, and how to tell a pullback from a reversal.
 - [Range Day Playbook: Trading a Market Going Nowhere](https://gwhlds.com/hub/range-day-playbook.html): how to recognise a rotating session before lunchtime, the two trades a range genuinely offers, why costs bite hardest on a narrow day, and the case for standing aside.
 - [Trend Day Playbook: How to Hold a Winning Trade](https://gwhlds.com/hub/trend-day-playbook.html): how to identify a trend day early, why holding a winner is harder than cutting a loser, trailing a stop behind structure rather than a fixed distance, and what actually ends a trend.
+- [How to Trade a Level That Has Failed Twice](https://gwhlds.com/hub/trading-a-twice-failed-level.html): why a twice-held level is thinner rather than stronger, how each test consumes resting orders and stacks stops beyond the line, and how to trade the third test either way.
+- [Fading vs Following: When Each One Actually Works](https://gwhlds.com/hub/fading-vs-following.html): exhaustion versus participation, the conditions that favour each approach, why the research finds continuation on one horizon and reversal on another, and how never to switch mid-trade.
+- [How to Backtest a Setup by Hand in a Weekend](https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html): writing a rule a stranger could follow, honest bar replay, the eight fields worth logging, how many trades you need, and the overfitting trap that ruins most manual tests.
 
 ## Contact
 

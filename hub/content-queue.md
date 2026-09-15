@@ -315,10 +315,10 @@ is a real, tradeable description with the failure cases named — not a definiti
 - [x] The first pullback after a trend day `(first-pullback-after-a-trend-day)`
 - [x] A range day playbook: how to trade a market going nowhere `(range-day-playbook)`
 - [x] A trend day playbook: how to hold when everything says take profit `(trend-day-playbook)`
-- [ ] How to trade a level that has already failed twice
-- [ ] Fading vs following: when each one actually works
-- [ ] How to build a strategy from a single setup
-- [ ] How to backtest a setup by hand in a weekend
+- [x] How to trade a level that has already failed twice `(trading-a-twice-failed-level)`
+- [x] Fading vs following: when each one actually works `(fading-vs-following)`
+- [x] How to build a strategy from a single setup `(covered by trading-strategies-explained)`
+- [x] How to backtest a setup by hand in a weekend `(how-to-backtest-a-setup-by-hand)`
 - [ ] Forward testing: what it proves and what it cannot
 - [ ] When to retire a setup that has stopped working
 - [ ] How many setups should one trader run?

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Backtest a Setup by Hand in a Weekend</title>
+<meta name="description" content="A step-by-step manual backtest you can finish in two days: how to define the rules, use bar replay honestly, log 100 trades, and read what the numbers mean." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Backtest a Setup by Hand in a Weekend" />
+<meta property="og:description" content="You do not need code to test a setup. You need a written rule, bar replay, a log sheet and about a hundred trades — plus the discipline not to tune it afterwards." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/how-to-backtest-a-setup-by-hand.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Backtest a Setup by Hand in a Weekend","description":"A practical manual backtesting procedure: writing the setup as a rule a stranger could follow, choosing a sample you have not already studied, using bar replay without peeking ahead, the eight fields worth logging, how many trades you actually need, and why re-tuning the rules after seeing the results destroys the result.","image":"https://gwhlds.com/assets/hub/how-to-backtest-a-setup-by-hand.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html","datePublished":"2026-09-15"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Backtest a Setup by Hand","item":"https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many trades do you need in a manual backtest?","acceptedAnswer":{"@type":"Answer","text":"Around 100 occurrences of the same setup is a workable target for a weekend, and it is enough to see whether the idea is obviously broken. It is not enough to prove an edge. Treat 100 trades as a filter that kills bad ideas cheaply, not as evidence that a surviving idea works, and keep collecting after you go live."}},{"@type":"Question","name":"Is manual backtesting better than automated backtesting?","acceptedAnswer":{"@type":"Answer","text":"It is slower and covers far less data, but it has one real advantage: you see every trade. You notice the context a script would flatten into a row, and you learn what the setup looks like while it is forming. Automated testing covers more ground and removes human inconsistency, so the honest answer is that they do different jobs."}},{"@type":"Question","name":"What is backtest overfitting?","acceptedAnswer":{"@type":"Answer","text":"Overfitting is tuning a strategy until it fits the quirks of the sample you tested on rather than anything that repeats. It is easier to do than most people assume: one published analysis notes that with a model based on five years of data, an analyst can be misled by looking at as few as 45 sample configurations. Every time you adjust a rule after seeing results, you are spending a trial."}},{"@type":"Question","name":"Can you backtest a setup on a free charting platform?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any platform with a bar replay feature will do, and a spreadsheet handles the log. The constraint on a manual backtest is your attention, not your software. What matters far more than the tool is that you cannot see the bars ahead of the one you are deciding on, because a test where you already know the outcome measures nothing."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Backtest a Setup by Hand</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Strategies &amp; Setups</span>
+        <h1>How to Backtest a Setup by Hand in a Weekend</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 15, 2026 &middot; 11 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/how-to-backtest-a-setup-by-hand.jpg" alt="A night desk with a hand-ruled paper ledger, pencil, brass magnifying glass and a stack of printed candlestick chart pages being flipped through" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">To backtest a setup by hand, write the rule so precisely that a stranger could apply it, pick a sample of days you have not already studied, step through them in bar replay without seeing ahead, and log every occurrence &mdash; win or lose. Around 100 trades is a realistic weekend target.</p>
+
+    <p>A manual backtest will not tell you that a strategy works. Nothing you can do in two days will tell you that. What it will do, cheaply and reliably, is tell you when an idea is broken &mdash; and most trading ideas are broken, which makes a filter that costs one weekend rather than six months of live money an extremely good trade in its own right.</p>
+
+    <h2>Step 1 &mdash; Write the rule so a stranger could follow it</h2>
+    <p>This is the step people skip, and skipping it is why most manual backtests are worthless. &ldquo;Buy the pullback in an uptrend&rdquo; is not testable. A rule is testable when two people applying it to the same chart would place the same order at the same price.</p>
+    <p>Every rule needs five things written down before you open a chart:</p>
+    <ul>
+      <li><strong>The condition.</strong> What must be true before you look for an entry &mdash; instrument, session, day type, any filter.</li>
+      <li><strong>The trigger.</strong> The exact event that puts you in. &ldquo;A 5-minute candle closes above the opening range high&rdquo; is a trigger. &ldquo;It breaks out&rdquo; is not.</li>
+      <li><strong>The stop.</strong> A price, derived from structure, decided before entry.</li>
+      <li><strong>The target or exit rule.</strong> Either a defined price or a defined management rule, but not &ldquo;see how it goes&rdquo;.</li>
+      <li><strong>The disqualifiers.</strong> The conditions under which you do not take the trade at all, written now so you cannot invent them later when a trade is losing.</li>
+    </ul>
+    <p>If you cannot write those five, you do not have a setup yet &mdash; you have an impression. Turning an impression into something with rules is the same work described in <a href="trading-strategies-explained.html">trading strategies explained</a>, and doing it properly is most of the value of the whole exercise.</p>
+
+    <h2>Step 2 &mdash; Choose a sample you have not already memorised</h2>
+    <p>Do not test on last week. You already know what last week did, and that knowledge will leak into every decision you make no matter how honest you intend to be.</p>
+    <p>Pick a contiguous block of history, far enough back that you do not remember it, and deliberately include conditions you dislike: a choppy stretch, a low-volatility month, a period around a major event. A sample made only of clean trending days will tell you that your trend-following setup is excellent, which you already believed. Also note the dates of the block before you start, and write them down, so you cannot quietly shorten the sample later when the results disappoint you.</p>
+
+    <h2>Step 3 &mdash; Use bar replay, and do not peek</h2>
+    <p>Any charting platform with a bar replay function works; the tool matters far less than the discipline. The single rule is that when you make a decision, the bars after that decision must not be visible. A test where you can already see the outcome measures your hindsight, not your setup.</p>
+    <p>Practical mechanics that keep it honest:</p>
+    <ol>
+      <li>Advance one bar at a time through the session, in the same timeframe you would actually trade.</li>
+      <li>When the trigger fires, log the trade <em>before</em> advancing &mdash; entry, stop and target all written down first.</li>
+      <li>Advance until the stop or target is hit, then record the result and move on. No second-guessing, no &ldquo;I would have exited earlier&rdquo;.</li>
+      <li>Log the trades you skipped and why. The skips are where you will catch yourself applying a rule that is not actually written down.</li>
+      <li>Assume a realistic cost on every trade. Deduct the spread and commission, and add a little for <a href="slippage-in-trading.html">slippage</a> on stops. A backtest run at perfect fills flatters every strategy, and flatters scalping strategies most.</li>
+    </ol>
+
+    <h2>Step 4 &mdash; The eight fields worth logging</h2>
+    <div class="kv"><table>
+      <tr><th>Field</th><th>Why it earns its place</th></tr>
+      <tr><td>Date &amp; time of entry</td><td>Reveals whether the edge lives in one part of the session</td></tr>
+      <tr><td>Direction</td><td>Many setups only work on one side</td></tr>
+      <tr><td>Entry, stop, target (prices)</td><td>Lets you recompute results later without redoing the test</td></tr>
+      <tr><td>Planned R (reward ÷ risk)</td><td>The comparable unit across instruments and sizes</td></tr>
+      <tr><td>Outcome in R</td><td>Removes position size from the measurement entirely</td></tr>
+      <tr><td>Maximum adverse excursion</td><td>How far it went against you before working &mdash; tells you if the stop is right</td></tr>
+      <tr><td>Day type</td><td>Separates trend days from ranges, which usually explains everything</td></tr>
+      <tr><td>Rule followed? Y/N</td><td>Catches the trades that quietly were not the setup</td></tr>
+    </table></div>
+    <p>Measuring outcomes in R rather than dollars is the detail that makes the whole log useful, because it lets a hundred rows from different weeks be compared directly. It is the same discipline a live <a href="trading-journal.html">trading journal</a> runs on, which is convenient: the backtest log and the journal can use identical columns, and then the live results slot straight in underneath the tested ones.</p>
+
+    <h2>Step 5 &mdash; Read the numbers, carefully</h2>
+    <p>With roughly a hundred rows you can compute the only three numbers that matter: win rate, average win in R, average loss in R. Combine them into <a href="trading-expectancy.html">expectancy</a> &mdash; the average R you make per trade. A positive expectancy before costs and a negative one after is the most common result, and it is a real answer, not a failed test.</p>
+    <p>Then look past the average. Sort the log by outcome and check whether the entire result rests on two or three exceptional trades; if it does, you have a strategy that depends on catching rare events, which is legitimate but demands a completely different tolerance for losing streaks. Check the worst run of consecutive losses, because that number is what you will actually have to sit through, and compare it honestly against your <a href="daily-loss-limits.html">daily loss limits</a>.</p>
+
+    <h2>The trap: tuning the rules after you see the results</h2>
+    <p>Here is where most weekend backtests quietly destroy their own findings. The results come back mediocre, so you try a slightly wider stop. Then a different session filter. Then skipping Mondays. Each change is individually reasonable, and collectively they fit the strategy to the noise in your particular sample.</p>
+    <p>The academic term is backtest overfitting, and the striking part is how few attempts it takes. An analysis published in the <em>Notices of the American Mathematical Society</em> observes that for a model based on five years of data, an analyst can be misled by looking at as few as <strong>45 sample configurations</strong> (<a href="https://scholarworks.wmich.edu/math_pubs/40/" target="_blank" rel="nofollow noopener">Bailey, Borwein, L&oacute;pez de Prado &amp; Zhu, &ldquo;Pseudo-Mathematics and Financial Charlatanism: The Effects of Backtest Overfitting on Out-of-Sample Performance&rdquo;, Notices of the AMS vol.&nbsp;61 no.&nbsp;5, May 2014</a>). Forty-five variations is an afternoon of fiddling with a stop distance.</p>
+    <p>The defences are unglamorous and they work. Decide the rule before you test it. Count your variations and keep the count visible. Hold back a portion of your sample and do not look at it until you have finished tuning &mdash; then run the final rule on that untouched block once. If the result collapses, the edge was in the fitting, not in the market.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A backtest is only worth running on a rule specific enough to be wrong, which is why our three principles are written as mechanics rather than sentiments. <em>Break &amp; hold</em> gives a testable trigger: did the candle close beyond the level, or not. <em>Know your next</em> gives a target you can log rather than a feeling about upside. And <em>trail &amp; protect</em> gives a management rule you can replay identically on every trade. A setup you cannot test by hand is usually a setup you have not finished defining. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>What a weekend backtest cannot tell you</h2>
+    <p>Be clear about the limits, because overclaiming here is how people end up trading size on a hundred rows of spreadsheet.</p>
+    <ul>
+      <li><strong>It cannot prove an edge.</strong> A hundred trades is a small sample. A positive result narrows the odds that the idea is nonsense; it does not establish that it works.</li>
+      <li><strong>It cannot reproduce execution.</strong> Bar replay fills you at the price you chose. Live markets do not always, particularly on fast breaks.</li>
+      <li><strong>It cannot reproduce you.</strong> This is the big one. Clicking through history costs nothing emotionally, so the version of you in the backtest follows every rule perfectly. The gap between that and a live account is the subject of <a href="paper-trading-vs-live-trading.html">paper trading vs live trading</a>, and it is wider than almost anyone expects.</li>
+      <li><strong>It cannot tell you the regime will persist.</strong> A setup tested on a volatile period may not survive a quiet one.</li>
+    </ul>
+    <p>Which is why the backtest is a first gate, not a verdict. A rule that survives it goes into the written plan and then into small live size &mdash; the sequence laid out in <a href="how-to-build-a-trading-plan.html">how to build a trading plan</a> &mdash; where it keeps collecting data under conditions the spreadsheet could never simulate.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How many trades do you need in a manual backtest?</h3>
+    <p>Around 100 occurrences of the same setup is a workable target for a weekend, and it is enough to see whether the idea is obviously broken. It is not enough to prove an edge. Treat 100 trades as a filter that kills bad ideas cheaply, not as evidence that a surviving idea works, and keep collecting after you go live.</p>
+
+    <h3>Is manual backtesting better than automated backtesting?</h3>
+    <p>It is slower and covers far less data, but it has one real advantage: you see every trade. You notice the context a script would flatten into a row, and you learn what the setup looks like while it is forming. Automated testing covers more ground and removes human inconsistency, so the honest answer is that they do different jobs.</p>
+
+    <h3>What is backtest overfitting?</h3>
+    <p>Overfitting is tuning a strategy until it fits the quirks of the sample you tested on rather than anything that repeats. It is easier to do than most people assume: one published analysis notes that with a model based on five years of data, an analyst can be misled by looking at as few as 45 sample configurations. Every time you adjust a rule after seeing results, you are spending a trial.</p>
+
+    <h3>Can you backtest a setup on a free charting platform?</h3>
+    <p>Yes. Any platform with a bar replay feature will do, and a spreadsheet handles the log. The constraint on a manual backtest is your attention, not your software. What matters far more than the tool is that you cannot see the bars ahead of the one you are deciding on, because a test where you already know the outcome measures nothing.</p>
+
+    <h2>Bottom line</h2>
+    <p>A weekend of bar replay will not hand you a proven strategy, and anyone offering you one is describing something else. What it does is force a vague idea into a rule with five defined parts, show you a hundred examples of how that rule behaves when the outcome is genuinely unknown, and produce a small table of numbers you can argue with. Most ideas die at that table, which is the point &mdash; they die for the cost of a weekend instead of a funded account. Guard the result by deciding the rules first, counting your variations, and keeping an untouched block of history to check the final version against once.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="trading-strategies-explained.html">Trading Strategies Explained: Setup to System</a>
+      <a href="how-to-build-a-trading-plan.html">How to Build a Trading Plan</a>
+      <a href="paper-trading-vs-live-trading.html">Paper Trading vs Live Trading</a>
+      <a href="trading-expectancy.html">Trading Expectancy: The Only Number That Matters</a>
+      <a href="trading-journal.html">What Is a Trading Journal?</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Most ideas die at the table. <span class="g">Better there than live.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
