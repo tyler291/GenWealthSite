@@ -359,6 +359,48 @@ level on the 5m (covered by `how-to-mark-up-a-chart` + `multi-timeframe-analysis
 
 ---
 
+# PHASE 13 — Market mechanics · batch 004, cluster 15
+
+New cluster, and the strongest AI-citation surface we have: these are "how does this actually
+work" questions that answer engines get asked constantly and answer badly. The pillar goes
+first; every spoke links up to it. Each page needs a real mechanism, not a definition — if we
+cannot explain *why* the thing happens, we skip the page.
+
+- [ ] How markets actually work: the mechanics behind every price you see `[PILLAR]`
+- [ ] What liquidity actually means to a retail trader
+- [ ] Who is on the other side of your trade?
+- [ ] How market makers make money
+- [ ] Why price gaps: the mechanics of an unfilled move
+- [ ] What causes a spike with no news
+- [ ] How economic releases move markets
+- [ ] What the VIX tells a day trader
+- [ ] Seasonality in trading: signal or noise?
+- [ ] Why volume dies at lunch
+- [ ] Month-end and quarter-end flows: what actually moves
+
+---
+
+# PHASE 14 — The trading business · batch 004, cluster 14
+
+Compliance-sensitive cluster. Every page states plainly that rules vary by jurisdiction and
+that the reader should ask a licensed professional. We explain what the questions are; we
+never answer them for a specific person. Nothing here becomes tax or legal advice.
+
+- [ ] What records a trader should keep
+- [ ] Journaling apps vs a spreadsheet: which one you will actually use
+- [ ] How to review a month of trades
+- [ ] Treating trading like a business: the honest version
+
+**Dropped from batch 004 for cannibalization:** what a trading journal should contain and
+what to track beyond P&L (both covered by `trading-journal`) · how to write a trading plan
+you will follow (covered by `how-to-build-a-trading-plan`) · trading taxes: questions to ask
+an accountant, why "trader status" is jurisdiction-specific, and when trading income is not
+income (all three covered by `day-trading-taxes`) · what a stop hunt really is (covered by
+`liquidity-grab-stop-hunt`) · correlation: why five trades can be one trade (covered by
+`correlation-risk-in-trading`).
+
+---
+
 ## Refilling this queue — pull the next batch from the keyword map
 
 This queue is a **working set of ~100 titles**. The full keyword inventory — head
