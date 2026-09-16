@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>When to Retire a Trading Setup That Stopped Working</title>
+<meta name="description" content="How to tell a normal drawdown from a dead edge: the sample size needed, the three numbers to watch, and how to write the retirement rule before you need it." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/when-to-retire-a-trading-setup.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="When to Retire a Trading Setup That Stopped Working" />
+<meta property="og:description" content="Most traders abandon setups during normal losing streaks and cling to genuinely dead ones. The difference is not a feeling — it is a sample, a number and a reason." />
+<meta property="og:url" content="https://gwhlds.com/hub/when-to-retire-a-trading-setup.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/when-to-retire-a-trading-setup.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"When to Retire a Trading Setup That Stopped Working","description":"How to distinguish a normal losing streak from a genuinely dead edge: why a drawdown alone is never evidence, the sample size a judgement needs, the three numbers that reveal decay before the account does, the structural reasons setups stop working, and how to write a retirement rule in advance so the decision is not made mid-drawdown.","image":"https://gwhlds.com/assets/hub/when-to-retire-a-trading-setup.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/when-to-retire-a-trading-setup.html","datePublished":"2026-09-16"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"When to Retire a Trading Setup","item":"https://gwhlds.com/hub/when-to-retire-a-trading-setup.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many losing trades in a row means a setup has stopped working?","acceptedAnswer":{"@type":"Answer","text":"No number of consecutive losses is evidence on its own. A setup with a 40 percent win rate produces six losses in a row roughly once every twenty-one sequences of six, which means a long streak is an expected feature of a working strategy rather than a symptom. Judge on expectancy across at least thirty to fifty recent occurrences, not on the streak."}},{"@type":"Question","name":"Do trading setups really stop working?","acceptedAnswer":{"@type":"Answer","text":"Some do, and the wider evidence is sobering. Hou, Xue and Zhang re-tested 452 published stock-market anomalies and found that 65 percent could not clear an ordinary significance hurdle once microcaps were handled properly, rising to 82 percent under a stricter multiple-testing threshold. Many apparent edges were never edges. Others are real and decay as conditions change."}},{"@type":"Question","name":"Should you retire a setup or adjust it?","acceptedAnswer":{"@type":"Answer","text":"Adjust only when you can name the structural change that broke it and the adjustment follows from that change rather than from the losses. If the honest answer is that you are searching for a parameter that would have avoided the recent drawdown, you are fitting to noise. Retire it instead, and treat any revision as a new setup that has to be tested from scratch."}},{"@type":"Question","name":"Can a retired trading setup start working again?","acceptedAnswer":{"@type":"Answer","text":"Yes, particularly when it failed because of a market regime rather than a permanent structural change. A volatility-expansion setup that dies in a quiet range often returns when volatility does. Archive the rules and the log rather than deleting them, set a date to re-examine it, and require it to pass a fresh forward test before it trades size again."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>When to Retire a Trading Setup</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Strategies &amp; Setups</span>
+        <h1>When to Retire a Trading Setup That Has Stopped Working</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 16, 2026 &middot; 11 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/when-to-retire-a-trading-setup.jpg" alt="An old brass key and a worn gear being laid into a velvet-lined wooden drawer while a row of candlesticks dims on a screen behind" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Retire a setup when your own logged numbers show the edge has gone, not when it feels cold. That needs three things: a recent sample of at least thirty to fifty occurrences, an expectancy measured across it, and a structural reason the setup should have stopped working. A drawdown by itself is never evidence.</p>
+
+    <p>Traders get this decision wrong in both directions, and they get it wrong at the worst possible moment &mdash; mid-drawdown, when the loss is loud and the analysis is quiet. Most abandon perfectly healthy setups during entirely normal losing streaks. A smaller group clings to a genuinely dead one for a year because it used to work. The only defence against both is deciding what evidence would change your mind before you need it.</p>
+
+    <h2>A drawdown is not a dead setup</h2>
+    <p>Start with the statistic that resolves most of these arguments: long losing streaks are a routine feature of profitable strategies, not a warning sign.</p>
+    <p>A setup that wins 40% of the time loses six in a row with probability 0.6<sup>6</sup> &mdash; about 4.7%, or roughly once in every twenty-one sequences of six trades. Take fifty trades in a quarter and a six-loss streak somewhere inside it is closer to expected than exceptional. Ten in a row at the same win rate happens about 0.6% of the time, which across a career of thousands of trades means it will happen to you, more than once, while nothing whatsoever is wrong.</p>
+    <p>This is why the streak is the wrong instrument. It measures variance, which is loud, rather than expectancy, which is what you actually care about. The arithmetic behind this &mdash; and why a deeper drawdown demands a disproportionately larger recovery &mdash; is set out in <a href="drawdown-explained.html">drawdown explained</a>.</p>
+
+    <h2>The three numbers that actually reveal decay</h2>
+    <p>Pull the last thirty to fifty occurrences of the setup out of your log and compare them against the same setup's earlier record. Three numbers do the work.</p>
+    <div class="kv"><table>
+      <tr><th>What to compare</th><th>What a decline signals</th></tr>
+      <tr><td><strong>Expectancy in R</strong> (avg win &times; win rate &minus; avg loss &times; loss rate)</td><td>The headline. A fall from +0.3R to &minus;0.1R across fifty trades is a real change, not a bad month.</td></tr>
+      <tr><td><strong>Average win size in R</strong></td><td>Falling first, before win rate, is the classic decay pattern: the setup still triggers correctly but the move no longer travels. Usually a volatility or participation change.</td></tr>
+      <tr><td><strong>Frequency</strong> (occurrences per month)</td><td>A setup that stopped appearing has not decayed &mdash; the condition it depends on has left the market. That is a regime question, not a validity one.</td></tr>
+    </table></div>
+    <p>Measuring in R rather than dollars is what makes the comparison legitimate, because it strips out every position-size change you made in between. If your <a href="trading-journal.html">trading journal</a> does not record outcomes in R, this entire diagnosis is unavailable to you, and that is the actual problem to fix first.</p>
+
+    <h2>Why edges decay in the first place</h2>
+    <p>There are only a handful of real reasons, and naming which one applies is most of the decision.</p>
+    <ul>
+      <li><strong>It was never an edge.</strong> The most common case by a distance. The setup was fitted to a sample, looked good, and reverted to nothing when it met fresh data.</li>
+      <li><strong>Crowding.</strong> Enough participants trade the same pattern that the move gets front-run and the follow-through disappears.</li>
+      <li><strong>Regime change.</strong> Volatility compresses, a trending market turns rotational, a correlation breaks. The setup is intact; the conditions it needs are absent.</li>
+      <li><strong>Structural change.</strong> Contract specifications change, a session's participation shifts, an instrument's liquidity profile alters permanently. This is the one that genuinely kills a setup.</li>
+      <li><strong>You changed.</strong> The setup is fine and your execution slipped. Painful, common, and the log usually shows it as a rising count of trades marked &ldquo;rule followed: no&rdquo;.</li>
+    </ul>
+    <p>On how often the first case applies, the academic record is bracing. In the <em>Review of Financial Studies</em>, Kewei Hou, Chen Xue and Lu Zhang re-tested a library of <strong>452 published stock-market anomalies</strong> and found that, once microcap distortions were handled with NYSE breakpoints and value-weighted returns, <strong>65% failed to clear even the ordinary significance hurdle</strong> of a t-value of 1.96 &mdash; a figure that rises to <strong>82%</strong> under a stricter multiple-testing threshold (<a href="https://academic.oup.com/rfs/article-abstract/33/5/2019/5236964" target="_blank" rel="nofollow noopener">Hou, Xue &amp; Zhang, &ldquo;Replicating Anomalies&rdquo;, RFS vol.&nbsp;33 no.&nbsp;5, 2020</a>). These were peer-reviewed findings by professionals with far more data than you have. The base rate for &ldquo;this pattern was real and then stopped&rdquo; is much lower than the base rate for &ldquo;it was never there&rdquo;.</p>
+
+    <h2>Write the retirement rule before you need it</h2>
+    <p>The decision has to be pre-committed, for the same reason a stop does: you will not make it well while it is happening. A workable rule has four parts, and it belongs in the written document described in <a href="how-to-build-a-trading-plan.html">how to build a trading plan</a>.</p>
+    <ol>
+      <li><strong>A review trigger.</strong> Not a retirement trigger &mdash; a trigger that starts the analysis. Something like &ldquo;whenever this setup is net negative over its last thirty occurrences&rdquo;.</li>
+      <li><strong>A size reduction on review.</strong> Cut the setup to half size the moment the review triggers, and keep it there until the review concludes. This is the step that makes the whole process survivable, because it caps the cost of being slow.</li>
+      <li><strong>A defined evidence bar.</strong> Write down now what would make you retire it: for example, negative expectancy across fifty occurrences <em>and</em> a named structural reason.</li>
+      <li><strong>A decision deadline.</strong> A date by which you will either retire it, restore full size, or formally extend the review once. Setups left indefinitely &ldquo;under observation&rdquo; at half size quietly become a permanent drag.</li>
+    </ol>
+    <p>Note the deliberate asymmetry: the review triggers easily and cheaply, while retirement requires real evidence. That ordering is what stops you from killing a good setup on a normal streak while still limiting the damage if the streak turns out to be something worse.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A setup can only be retired on evidence if it was defined precisely enough to measure. <em>Break &amp; hold</em> means every entry was taken on the same objective condition, so a failure rate means something. <em>Know your next</em> means the target was written before the trade, so you can see whether price stopped reaching it &mdash; the single clearest sign of a decaying move. <em>Trail &amp; protect</em> keeps the management identical across the whole sample, so you are comparing like with like. Vague setups cannot be retired honestly, because there is nothing stable to measure. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Retire, or repair?</h2>
+    <p>The tempting middle path is adjustment: widen the stop, add a filter, skip the first hour. Sometimes that is right. Usually it is fitting to the noise that just hurt you.</p>
+    <div class="kv"><table>
+      <tr><th>Repair is defensible when&hellip;</th><th>Retire when&hellip;</th></tr>
+      <tr><td>You can name the structural change first, and the adjustment follows from it</td><td>You are searching for a parameter that would have avoided the recent losses</td></tr>
+      <tr><td>The change is one parameter, decided once, and then re-tested</td><td>You are on your third adjustment this quarter</td></tr>
+      <tr><td>Frequency held up and only the follow-through faded</td><td>The setup no longer appears at all</td></tr>
+      <tr><td>The original logic still describes what the market is doing</td><td>You can no longer explain in one sentence why the setup should work</td></tr>
+    </table></div>
+    <p>The non-negotiable part: any repaired setup is a <em>new</em> setup. It goes back through a fresh <a href="forward-testing-a-strategy.html">forward test</a> at reduced size before it earns full allocation again. Skipping that step is how a working strategy gets slowly tuned into a fitted one over the course of a year.</p>
+
+    <h2>What to do with a retired setup</h2>
+    <p>Do not delete it. Archive the rules, the full log and a short note recording the date, the numbers at retirement and the reason you named. Then set a calendar date &mdash; six months is reasonable &mdash; to look at it again.</p>
+    <p>Setups that died of regime rather than structure genuinely do come back. A volatility-expansion setup that stops working in a quiet range is not broken; it is waiting. When you revisit it, the archived log gives you something most traders never have: a clean before-and-after comparison, with the rules unchanged, across two different market environments. That is worth more than the setup itself.</p>
+    <p>And when you retire one, resist the urge to immediately replace it. The reflex to fill the gap is how traders end up running six half-tested setups at once &mdash; a problem covered in <a href="how-many-setups-should-you-trade.html">how many setups one trader should run</a>. A smaller playbook you can actually measure beats a larger one you cannot.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How many losing trades in a row means a setup has stopped working?</h3>
+    <p>No number of consecutive losses is evidence on its own. A setup with a 40 percent win rate produces six losses in a row roughly once every twenty-one sequences of six, which means a long streak is an expected feature of a working strategy rather than a symptom. Judge on expectancy across at least thirty to fifty recent occurrences, not on the streak.</p>
+
+    <h3>Do trading setups really stop working?</h3>
+    <p>Some do, and the wider evidence is sobering. Hou, Xue and Zhang re-tested 452 published stock-market anomalies and found that 65 percent could not clear an ordinary significance hurdle once microcaps were handled properly, rising to 82 percent under a stricter multiple-testing threshold. Many apparent edges were never edges. Others are real and decay as conditions change.</p>
+
+    <h3>Should you retire a setup or adjust it?</h3>
+    <p>Adjust only when you can name the structural change that broke it and the adjustment follows from that change rather than from the losses. If the honest answer is that you are searching for a parameter that would have avoided the recent drawdown, you are fitting to noise. Retire it instead, and treat any revision as a new setup that has to be tested from scratch.</p>
+
+    <h3>Can a retired trading setup start working again?</h3>
+    <p>Yes, particularly when it failed because of a market regime rather than a permanent structural change. A volatility-expansion setup that dies in a quiet range often returns when volatility does. Archive the rules and the log rather than deleting them, set a date to re-examine it, and require it to pass a fresh forward test before it trades size again.</p>
+
+    <h2>Bottom line</h2>
+    <p>The question is never &ldquo;does this feel like it stopped working&rdquo;, because during a normal losing streak it always does. It is whether expectancy has actually fallen across a sample big enough to mean something, and whether you can name a reason it should have. Write the review trigger, the size cut and the evidence bar into your plan while the setup is performing, so the decision is already made when it is not. Then retire on evidence, archive rather than delete, and require anything you revise to earn its size back the same way it earned it the first time.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Trade these setups live with us.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="trading-strategies-explained.html">Trading Strategies Explained: Setup to System</a>
+      <a href="forward-testing-a-strategy.html">Forward Testing a Strategy: What It Proves</a>
+      <a href="drawdown-explained.html">Drawdown Explained: Depth, Duration, Recovery</a>
+      <a href="trading-expectancy.html">Trading Expectancy: The Only Number That Matters</a>
+      <a href="how-to-survive-a-losing-streak.html">How to Survive a Losing Streak</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Retire on evidence. <span class="g">Not on a bad week.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

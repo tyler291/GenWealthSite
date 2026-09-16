@@ -235,6 +235,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 - [How to Trade a Level That Has Failed Twice](https://gwhlds.com/hub/trading-a-twice-failed-level.html): why a twice-held level is thinner rather than stronger, how each test consumes resting orders and stacks stops beyond the line, and how to trade the third test either way.
 - [Fading vs Following: When Each One Actually Works](https://gwhlds.com/hub/fading-vs-following.html): exhaustion versus participation, the conditions that favour each approach, why the research finds continuation on one horizon and reversal on another, and how never to switch mid-trade.
 - [How to Backtest a Setup by Hand in a Weekend](https://gwhlds.com/hub/how-to-backtest-a-setup-by-hand.html): writing a rule a stranger could follow, honest bar replay, the eight fields worth logging, how many trades you need, and the overfitting trap that ruins most manual tests.
+- [Forward Testing a Strategy: What It Proves](https://gwhlds.com/hub/forward-testing-a-strategy.html): why out-of-sample evidence is the only kind that counts, the four things a forward test proves, the four it never can, how long to run one, and why you must not change the rules mid-test.
+- [When to Retire a Trading Setup That Has Stopped Working](https://gwhlds.com/hub/when-to-retire-a-trading-setup.html): telling a normal losing streak from a dead edge, the three numbers that reveal decay, why most "edges" were never edges, and how to write the retirement rule in advance.
+- [How Many Setups Should One Trader Run?](https://gwhlds.com/hub/how-many-setups-should-you-trade.html): the sample-size arithmetic of a 251-session year, why every added setup divides your evidence and attention, the three tests a second setup must pass, and complementary versus redundant setups.
 
 ## Contact
 

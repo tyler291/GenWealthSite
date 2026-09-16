@@ -319,9 +319,9 @@ is a real, tradeable description with the failure cases named — not a definiti
 - [x] Fading vs following: when each one actually works `(fading-vs-following)`
 - [x] How to build a strategy from a single setup `(covered by trading-strategies-explained)`
 - [x] How to backtest a setup by hand in a weekend `(how-to-backtest-a-setup-by-hand)`
-- [ ] Forward testing: what it proves and what it cannot
-- [ ] When to retire a setup that has stopped working
-- [ ] How many setups should one trader run?
+- [x] Forward testing: what it proves and what it cannot `(forward-testing-a-strategy)`
+- [x] When to retire a setup that has stopped working `(when-to-retire-a-trading-setup)`
+- [x] How many setups should one trader run? `(how-many-setups-should-you-trade)`
 - [ ] The New York open playbook
 - [ ] The Asian session playbook: what actually moves
 
