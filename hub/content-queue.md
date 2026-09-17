@@ -322,8 +322,8 @@ is a real, tradeable description with the failure cases named — not a definiti
 - [x] Forward testing: what it proves and what it cannot `(forward-testing-a-strategy)`
 - [x] When to retire a setup that has stopped working `(when-to-retire-a-trading-setup)`
 - [x] How many setups should one trader run? `(how-many-setups-should-you-trade)`
-- [ ] The New York open playbook
-- [ ] The Asian session playbook: what actually moves
+- [x] The New York open playbook `(new-york-open-playbook)`
+- [x] The Asian session playbook: what actually moves `(asian-session-playbook)`
 
 ---
 
@@ -333,7 +333,7 @@ Pillar already live: `technical-analysis-basics.html`. These are the indicator-t
 crosses and the individual patterns that the existing roundup pages only summarise. Only write
 the cross where the answer genuinely differs by timeframe — otherwise link to the parent page.
 
-- [ ] RSI on the 5-minute chart: what changes at speed
+- [x] RSI on the 5-minute chart: what changes at speed `(rsi-on-the-5-minute-chart)`
 - [ ] VWAP on the 1-minute: how scalpers actually use it
 - [ ] Moving averages on the daily chart: the slow signals worth having
 - [ ] Which timeframe should a beginner trade?

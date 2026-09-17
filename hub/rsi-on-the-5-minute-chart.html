@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>RSI on the 5-Minute Chart: What Changes at Speed</title>
+<meta name="description" content="A 14-period RSI on the 5-minute chart measures just 70 minutes of price. Why overbought stops meaning anything intraday, and what to use in its place." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/rsi-on-the-5-minute-chart.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="RSI on the 5-Minute Chart: What Changes at Speed" />
+<meta property="og:description" content="The formula does not know what timeframe it is on — but you should. What a 14-period RSI actually measures at 5 minutes, and the rules that survive the speed." />
+<meta property="og:url" content="https://gwhlds.com/hub/rsi-on-the-5-minute-chart.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/hub/rsi-on-the-5-minute-chart.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"RSI on the 5-Minute Chart: What Changes at Speed","description":"What actually changes when the relative strength index is applied to a 5-minute chart rather than a daily one: the arithmetic that a 14-period reading spans only 70 minutes, why a 6.5-hour US equity session produces 78 five-minute bars and therefore dozens of overbought readings, why the 70 and 30 thresholds stop discriminating intraday, which alternative bands and period settings help, how divergence degrades at speed, and the multi-timeframe use of RSI that holds up.","image":"https://gwhlds.com/assets/hub/rsi-on-the-5-minute-chart.jpg","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/rsi-on-the-5-minute-chart.html","datePublished":"2026-09-17"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"RSI on the 5-Minute Chart","item":"https://gwhlds.com/hub/rsi-on-the-5-minute-chart.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best RSI setting for a 5-minute chart?","acceptedAnswer":{"@type":"Answer","text":"There is no setting that makes RSI reliable on its own at five minutes. A 14-period RSI is the standard and is a reasonable default; lengthening it to 21 smooths the line and reduces false extremes at the cost of lateness. The larger gain comes from changing the thresholds rather than the period, and from only taking signals that agree with the higher timeframe trend."}},{"@type":"Question","name":"Why does RSI stay overbought on a 5-minute chart?","acceptedAnswer":{"@type":"Answer","text":"Because on a trending intraday move, almost every candle closes up, and RSI is built from the ratio of average gains to average losses. With few down closes in the lookback, the reading pins near the top and stays there for as long as the trend runs. A sustained reading above 70 on a 5-minute chart is evidence of strength, not evidence of exhaustion."}},{"@type":"Question","name":"Is RSI divergence reliable on a 5-minute chart?","acceptedAnswer":{"@type":"Answer","text":"Much less so than on higher timeframes. A 6.5-hour US equity session contains 78 five-minute bars, which produces many apparent divergences per day, most of which resolve as the trend simply continuing. Divergence at five minutes is worth treating as a reason to tighten a stop or take partial profit on a position you already hold, not as a reason to enter a counter-trend trade."}},{"@type":"Question","name":"How much price does a 14-period RSI cover on a 5-minute chart?","acceptedAnswer":{"@type":"Answer","text":"Seventy minutes. Fourteen periods multiplied by five minutes is 70 minutes of trading, so the indicator is summarising a little over one hour of price action. The same 14-period setting on a daily chart summarises 14 sessions, or just under three trading weeks. The formula is identical; what it is measuring is not remotely comparable."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>RSI on the 5-Minute Chart</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts &middot; Indicators</span>
+        <h1>RSI on the 5-Minute Chart: What Changes at Speed</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 17, 2026 &middot; 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"><img src="../assets/hub/rsi-on-the-5-minute-chart.jpg" alt="A large brass pendulum swinging in slow measured arcs beside a tiny frantically vibrating needle, with a glowing oscillating wave traced behind them" /></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Nothing changes in the formula &mdash; RSI does not know what timeframe it is plotted on. What changes is what it summarises. A 14-period RSI on a 5-minute chart measures 70 minutes of price action, so it reaches 70 and 30 several times a session, and &ldquo;overbought&rdquo; stops discriminating between a strong move and an exhausted one.</p>
+
+    <p>That single sentence explains almost every complaint traders have about RSI intraday. The indicator is not less accurate at five minutes. It is answering a much smaller question, and most people are still reading the answer as though it were the big one.</p>
+    <p>If you want the mechanics of the indicator itself &mdash; how the ratio is built, what divergence is, why the line behaves as it does &mdash; start with <a href="what-is-rsi.html">what is RSI and how to use it</a>. This page is only about what the timeframe does to it.</p>
+
+    <h2>What 14 periods actually measures at each speed</h2>
+    <p>J. Welles Wilder Jr. introduced the relative strength index with a default of 14 periods in <em>New Concepts in Technical Trading Systems</em> (1978), working with daily charts. That default has been carried across to every timeframe since, usually without anyone doing the multiplication.</p>
+    <div class="kv"><table>
+      <tr><th>Chart timeframe</th><th>What 14 periods spans</th><th>Readings per US equity session</th></tr>
+      <tr><td>5-minute</td><td>70 minutes</td><td>78</td></tr>
+      <tr><td>15-minute</td><td>3.5 hours</td><td>26</td></tr>
+      <tr><td>1-hour</td><td>14 hours (about two sessions)</td><td>6 or 7</td></tr>
+      <tr><td>Daily</td><td>14 sessions &mdash; just under three trading weeks</td><td>1</td></tr>
+    </table></div>
+    <p>The bar counts come straight from the session length: the <a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="nofollow noopener">New York Stock Exchange regular session</a> runs 9:30&nbsp;a.m. to 4:00&nbsp;p.m. Eastern, which is <strong>6.5 hours, or 78 five-minute bars</strong>. Your 5-minute RSI therefore prints a fresh reading 78 times a day, against the daily chart&rsquo;s one.</p>
+    <p>Read the table again and the practical problem is obvious. A daily RSI at 72 is telling you something about three weeks of accumulation. A 5-minute RSI at 72 is telling you the last hour has been mostly green candles. Those are not the same claim, and only one of them is rare.</p>
+
+    <h2>Why &ldquo;overbought&rdquo; stops meaning anything intraday</h2>
+    <p>RSI is built from the ratio of average gains to average losses over the lookback. During a clean intraday trend almost every candle closes in the same direction, so there are barely any losses in the denominator, and the reading pins near its extreme and stays there.</p>
+    <p>On a trend day that behaviour is not a malfunction. It is the indicator correctly reporting an absence of pullbacks. But it means an overbought reading has no ability to tell you whether the move is about to end &mdash; the strongest moves of the session produce exactly the same reading as the weakest exhausted ones.</p>
+    <p>This is the mechanism behind the most expensive habit in intraday trading: shorting strength because a line went above 70. It is a specific case of the general problem in <a href="why-indicators-lag.html">why indicators lag</a>, sharpened by speed.</p>
+
+    <h2>What to use instead of 70 and 30</h2>
+    <p>Three adjustments, in order of how much they help.</p>
+    <ol>
+      <li><strong>Move the thresholds to match the day&rsquo;s character.</strong> In an uptrending session, treat roughly 40 as the floor RSI keeps bouncing from and stop treating 70 as a ceiling at all. In a downtrending session, treat roughly 60 as the cap. The useful signal is where RSI <em>fails to reach</em>, not where it arrives.</li>
+      <li><strong>Use RSI to filter, not to trigger.</strong> Let price structure &mdash; a level breaking and holding, a range edge rejecting &mdash; decide the trade, and let RSI decide whether you take it. A long at a support retest with RSI holding above 40 is a different proposition from the same retest with RSI at 22 and falling.</li>
+      <li><strong>Lengthen the period rather than shortening it.</strong> Moving from 14 to 21 on a 5-minute chart smooths the line and cuts the number of false extremes. It is later, which is the honest trade-off. Shortening to 7 or 9 does the opposite and is almost always a mistake at this speed.</li>
+    </ol>
+
+    <h2>Divergence at five minutes</h2>
+    <p>Divergence is the most-taught RSI signal and the one that degrades fastest as the timeframe shortens.</p>
+    <p>With 78 bars a session, a 5-minute chart manufactures apparent divergences constantly, and the overwhelming majority of them resolve as the trend simply carrying on. The pattern is real; the base rate is against you. The sane use is defensive rather than directional: <strong>treat 5-minute divergence as a reason to tighten a stop or take partial profit on a position you already hold</strong>, and never as a reason to open a counter-trend one. <a href="how-to-take-partial-profits.html">How to take partial profits</a> covers the mechanics of doing that without capping the trade.</p>
+
+    <h2>The one multi-timeframe use that holds up</h2>
+    <p>If you keep one RSI technique for intraday trading, keep this one.</p>
+    <p>Put RSI on both the 5-minute and the hourly chart. Use the hourly to decide which direction you are allowed to trade, and the 5-minute only to time the entry in that direction. A 5-minute reading of 30 means something quite different when the hourly RSI is at 60 and rising &mdash; that is a pullback inside strength &mdash; than when the hourly is at 35 and falling, where it is a continuation of weakness dressed up as a bargain.</p>
+    <p>This is the same discipline as any other alignment check, and the general framework is in <a href="multi-timeframe-analysis.html">multi-timeframe analysis</a>. The indicator is doing nothing clever here. It is the two timeframes together that carry the information, which is true of nearly everything on <a href="technical-analysis-basics.html">a technical chart</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> We do not take entries from an oscillator, on any timeframe. <em>Break &amp; hold</em> asks a question RSI cannot answer &mdash; did price clear the level and stay there as the candle closed &mdash; and an indicator reading is never a substitute for that. Where RSI earns a place is as a veto: if the higher timeframe reading disagrees with the direction of the call, that is a reason to take a smaller size or stand aside. <em>Know your next</em> keeps the target on the chart where it belongs, not on a line beneath it. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>A workable 5-minute rule set</h2>
+    <p>Not a strategy &mdash; a set of constraints that stops RSI from hurting you at speed.</p>
+    <ul>
+      <li>Never enter on an RSI level alone. Price structure triggers; RSI filters.</li>
+      <li>Do not fade a reading above 70 or below 30 in a trending session. Fade only in a session you have already identified as ranging.</li>
+      <li>Use 40/60 as your working bands on 5-minute charts, and let 70/30 mark strength rather than exhaustion.</li>
+      <li>Require the hourly RSI to agree with the direction before you act on the 5-minute one.</li>
+      <li>Treat 5-minute divergence as a management signal for an open trade, never an entry signal.</li>
+      <li>Set the period once and leave it. Re-optimising it after a losing day is curve fitting, and <a href="how-to-backtest-a-setup-by-hand.html">a hand backtest</a> will tell you more than any amount of dragging the number around.</li>
+    </ul>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is the best RSI setting for a 5-minute chart?</h3>
+    <p>There is no setting that makes RSI reliable on its own at five minutes. A 14-period RSI is the standard and is a reasonable default; lengthening it to 21 smooths the line and reduces false extremes at the cost of lateness. The larger gain comes from changing the thresholds rather than the period, and from only taking signals that agree with the higher timeframe trend.</p>
+
+    <h3>Why does RSI stay overbought on a 5-minute chart?</h3>
+    <p>Because on a trending intraday move, almost every candle closes up, and RSI is built from the ratio of average gains to average losses. With few down closes in the lookback, the reading pins near the top and stays there for as long as the trend runs. A sustained reading above 70 on a 5-minute chart is evidence of strength, not evidence of exhaustion.</p>
+
+    <h3>Is RSI divergence reliable on a 5-minute chart?</h3>
+    <p>Much less so than on higher timeframes. A 6.5-hour US equity session contains 78 five-minute bars, which produces many apparent divergences per day, most of which resolve as the trend simply continuing. Divergence at five minutes is worth treating as a reason to tighten a stop or take partial profit on a position you already hold, not as a reason to enter a counter-trend trade.</p>
+
+    <h3>How much price does a 14-period RSI cover on a 5-minute chart?</h3>
+    <p>Seventy minutes. Fourteen periods multiplied by five minutes is 70 minutes of trading, so the indicator is summarising a little over one hour of price action. The same 14-period setting on a daily chart summarises 14 sessions, or just under three trading weeks. The formula is identical; what it is measuring is not remotely comparable.</p>
+
+    <h2>Bottom line</h2>
+    <p>RSI is not broken on a 5-minute chart. It is simply answering a 70-minute question 78 times a day, and the thresholds most traders use were designed for a three-week one. Move your working bands to 40 and 60, stop reading 70 as a ceiling in a trending session, demand agreement from the hourly before you act, and use divergence to manage trades rather than to start them. Do that and the indicator becomes a useful filter. Treat it as a trigger and it will hand you the wrong side of every good move of the day.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="what-is-rsi.html">What Is RSI, and How to Use It</a>
+      <a href="multi-timeframe-analysis.html">Multi-Timeframe Analysis</a>
+      <a href="why-indicators-lag.html">Why Indicators Lag, and What to Do</a>
+      <a href="what-is-macd.html">What Is MACD, and What It Tells You</a>
+      <a href="technical-analysis-basics.html">Technical Analysis Basics: What Matters</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>A 70-minute question. <span class="g">Asked 78 times a day.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
