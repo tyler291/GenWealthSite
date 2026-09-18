@@ -334,9 +334,9 @@ crosses and the individual patterns that the existing roundup pages only summari
 the cross where the answer genuinely differs by timeframe — otherwise link to the parent page.
 
 - [x] RSI on the 5-minute chart: what changes at speed `(rsi-on-the-5-minute-chart)`
-- [ ] VWAP on the 1-minute: how scalpers actually use it
-- [ ] Moving averages on the daily chart: the slow signals worth having
-- [ ] Which timeframe should a beginner trade?
+- [x] VWAP on the 1-minute: how scalpers actually use it `(vwap-on-the-1-minute-chart)`
+- [x] Moving averages on the daily chart: the slow signals worth having `(moving-averages-on-the-daily-chart)`
+- [x] Which timeframe should a beginner trade? `(which-timeframe-should-a-beginner-trade)`
 - [ ] The engulfing candle: what it actually signals
 - [ ] The doji: overrated, or genuinely useful?
 - [ ] Inside bars and outside bars, explained
