@@ -337,9 +337,9 @@ the cross where the answer genuinely differs by timeframe — otherwise link to 
 - [x] VWAP on the 1-minute: how scalpers actually use it `(vwap-on-the-1-minute-chart)`
 - [x] Moving averages on the daily chart: the slow signals worth having `(moving-averages-on-the-daily-chart)`
 - [x] Which timeframe should a beginner trade? `(which-timeframe-should-a-beginner-trade)`
-- [ ] The engulfing candle: what it actually signals
-- [ ] The doji: overrated, or genuinely useful?
-- [ ] Inside bars and outside bars, explained
+- [x] The engulfing candle: what it actually signals `(engulfing-candle)`
+- [x] The doji: overrated, or genuinely useful? `(doji-candle)`
+- [x] Inside bars and outside bars, explained `(inside-bars-and-outside-bars)`
 - [ ] Order blocks explained plainly
 - [ ] Fair value gaps: the honest version
 - [ ] What smart money concepts get right — and wrong
