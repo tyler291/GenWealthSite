@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Order Blocks Explained: What They Actually Are</title>
+<meta name="description" content="An order block is the last opposing candle before a sharp move. What the idea gets right about institutional size, and why the rectangle is still a guess." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/order-blocks-explained.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Order Blocks Explained: What They Actually Are" />
+<meta property="og:description" content="Large orders genuinely cannot be filled at one price. That does not mean a candlestick chart can show you where they were filled. The honest version." />
+<meta property="og:url" content="https://gwhlds.com/hub/order-blocks-explained.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Order Blocks Explained: What They Actually Are","description":"What an order block is and what it is not: how traders define the last opposing candle before an impulsive move, the part of the idea that is genuinely supported by how large orders are executed, why regulators define a block transaction by share count and expressly contemplate it being broken into smaller non-block pieces, why a privately negotiated block may never appear in the public auction at all, how an order block differs from a supply and demand zone and from plain support and resistance, and how to use the marking without believing it shows you institutional intent.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/order-blocks-explained.html","datePublished":"2026-09-20"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Order Blocks Explained","item":"https://gwhlds.com/hub/order-blocks-explained.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an order block in trading?","acceptedAnswer":{"@type":"Answer","text":"An order block is the last candle that moved against the direction of a sharp move, marked as a rectangle from that candle's open to its close or high to low. The idea is that a large buyer or seller absorbed the other side there. The rectangle is a location a trader chose; it is not a record of who traded."}},{"@type":"Question","name":"Are order blocks real, or just a made-up concept?","acceptedAnswer":{"@type":"Answer","text":"The mechanism behind the name is real. A large order genuinely cannot be filled at a single price, so it is worked across time and price. The part that is invented is the precision. Nothing in a candlestick feed identifies the size, the participant or the intent behind any of the volume inside the box you drew."}},{"@type":"Question","name":"What is the difference between an order block and a supply and demand zone?","acceptedAnswer":{"@type":"Answer","text":"Almost nothing mechanically. Both are rectangles drawn around the origin of a strong move, and both are traded the same way. The difference is the story attached. A supply and demand zone claims unfilled orders remain; an order block claims a specific institution filled there. Neither claim is visible in price data."}},{"@type":"Question","name":"Do order blocks actually work?","acceptedAnswer":{"@type":"Answer","text":"When one works it works for the same reason any marked level works: it is the origin of a move a lot of traders can see, so a lot of traders act there. That is a real and useful effect, and it is entirely independent of whether an institution filled inside the rectangle. Treat it as a level, size it as a level, and it behaves like one."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Order Blocks</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts &middot; Levels</span>
+        <h1>Order Blocks Explained: What They Actually Are</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 20, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">An order block is the last candle that moved against the direction of a sharp move, marked as a rectangle and treated as a level. The idea behind the name is real: large orders genuinely cannot be filled at one price. The precision is not. A candlestick chart records what traded, never who traded or why.</p>
+
+    <p>That gap between a sound mechanism and an unsupportable reading is the whole subject. This page separates the two, because the separation changes how you size the trade and what you expect from it.</p>
+
+    <h2>What traders mean by an order block</h2>
+    <p>The construction is simple and consistent enough to state in one sentence. Find an impulsive move. Walk backwards to the last candle that closed in the opposite direction. Draw a rectangle across that candle — usually open to close, sometimes high to low. That rectangle is the order block, and the trade is to buy or sell when price returns into it.</p>
+    <p>The reasoning attached is that a large institutional buyer must have been absorbing supply inside that final down candle in order for the market to reverse so violently, and that some portion of that order was left unfilled, so the institution will defend the same area on a return.</p>
+    <p>Half of that is defensible. The other half is a story.</p>
+
+    <h2>The part that is genuinely true: size cannot be filled at one price</h2>
+    <p>Large orders really are worked across time and price, and the regulatory rulebooks say so plainly.</p>
+    <p>In US equities, <a href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/5270" target="_blank" rel="nofollow noopener">FINRA Rule 5270 treats a transaction of <strong>10,000 shares or more</strong> as generally a block transaction</a> — and the same rule's supplementary material states that a block "does not lose its identity as such by arranging for partial executions of the full transaction in portions which themselves are not of block size." The regulator's own text assumes the opposite of what the order-block story assumes. Real institutional size is deliberately chopped into pieces that <em>do not look like</em> institutional size.</p>
+    <p>The rule goes further: information about a block is not considered public "until the entire block transaction has been completed and publicly reported." The design intent is that you should not be able to see it happening.</p>
+    <p>Futures go a step further again. <a href="https://www.cmegroup.com/clearing/trading-practices/block-trades.html" target="_blank" rel="nofollow noopener">CME Group's Rule 526 permits a block trade to be privately negotiated and executed entirely apart from the public auction market</a>, at any time, at a fair and reasonable price. A transaction arranged that way never competes with the order book at all. It leaves no wick, no absorption, no candle.</p>
+
+    <div class="callout"><b>The uncomfortable implication.</b> The larger and more deliberate the institutional order, the less likely it is to be visible as a distinctive candle. The rules are written to fragment it, delay its reporting, or move it off the public book entirely. A dramatic, obvious bar is evidence of urgency — not of size being carefully worked.</div>
+
+    <h2>Why the rectangle on your chart is not the block</h2>
+    <p>Suppose a genuine institutional buyer was active during that final down candle. Four things still stand between that fact and your rectangle.</p>
+    <ul>
+      <li><strong>You cannot see participant identity.</strong> A retail feed gives you price, size and time. It does not label anyone. Every attempt to infer intent from the aggregate is a guess about a distribution you cannot observe.</li>
+      <li><strong>You cannot see what was unfilled.</strong> The entire premise is "leftover orders." Resting size that never executed is, by definition, absent from a trade feed. Depth data shows resting size at a moment — not what an absent participant intends to do tomorrow.</li>
+      <li><strong>The boundary is arbitrary.</strong> Open-to-close and high-to-low give two different rectangles. On a 5-minute chart versus a 15-minute chart they give four. All four are called the order block by someone.</li>
+      <li><strong>An institution that got filled has no reason to defend anything.</strong> If the order completed, the buyer is done. The "they will protect their entry" reasoning quietly assumes a partial fill that you have no way to confirm.</li>
+    </ul>
+
+    <h2>Order block vs supply and demand zone vs support and resistance</h2>
+    <p>Three names, one drawing, three stories. Laid side by side the family resemblance is hard to miss.</p>
+    <div class="kv"><table>
+      <tr><th>Name</th><th>How it is drawn</th><th>The claim attached</th></tr>
+      <tr><td>Support / resistance</td><td>A line or narrow band where price turned before</td><td>Traders act here because they acted here before. No claim about who.</td></tr>
+      <tr><td>Supply / demand zone</td><td>A box at the origin of a strong move</td><td>Unfilled orders remain in the box.</td></tr>
+      <tr><td>Order block</td><td>A box on the last opposing candle before the move</td><td>A specific institution filled in the box and will defend it.</td></tr>
+    </table></div>
+    <p>Notice the direction of travel. As you move down the table the drawing gets more specific and the claim gets less verifiable. The first row makes a modest statement that price history supports. The third makes a strong statement about invisible participants. The trade you place is, in practice, identical. For the middle row the distinctions are worked through in <a href="supply-and-demand-zones.html">supply and demand zones vs support and resistance</a>.</p>
+
+    <h2>What makes an order block work when it does work</h2>
+    <p>Order blocks are not useless, and dismissing them entirely is as lazy as believing the mythology.</p>
+    <p>They work for a reason that has nothing to do with institutions: <strong>the origin of a sharp move is a place a lot of traders can identify, using the same rule, on the same chart.</strong> That produces clustered orders — resting bids, resting stops, and a crowd watching the same price. Clustered orders are exactly what makes any level behave like a level, and it is the same mechanism explored in <a href="liquidity-grab-stop-hunt.html">what a liquidity grab actually is</a>.</p>
+    <p>This is a better explanation than the institutional one, for a practical reason: it is testable. You can mark the origin of impulsive moves on a year of charts and record what happened on the return. You cannot test a claim about unobservable participants. If you want the process, it is in <a href="how-to-backtest-a-setup-by-hand.html">how to backtest a setup by hand</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Break &amp; hold</em> settles what a rectangle never can. We do not buy a box because price entered it; we wait for the called level to be broken and <em>held</em> as the candle closes. And <em>know your next</em> means the trade carries an entry, defined targets and the level price is aiming for — written down before anything is taken, not inferred from a shape after the fact. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>How to use one without fooling yourself</h2>
+    <p>Three adjustments turn an order block from a belief into a tool.</p>
+    <ol>
+      <li><strong>Demote it to a level.</strong> Mark it, then treat it exactly as you would any other price you marked in advance — no more weight, no more conviction. The framework is <a href="support-and-resistance.html">support and resistance</a>, and the marking routine is in <a href="how-to-mark-up-a-chart.html">how to mark up a chart</a>.</li>
+      <li><strong>Require the return to prove itself.</strong> Price touching a box is not a signal. Price rejecting the box with a close is a signal, and the difference is the whole of <a href="break-and-hold-confirmation.html">break and hold confirmation</a>.</li>
+      <li><strong>Size from the stop, not from the story.</strong> Your invalidation is the far side of the block. A tall block means a wide stop and a smaller position — that is arithmetic, and it applies regardless of how convinced you are. The mechanics are in <a href="position-sizing-from-risk.html">position sizing from risk</a>.</li>
+    </ol>
+    <p>The broader framework these levels sit inside is covered in <a href="technical-analysis-basics.html">technical analysis basics</a>, and if you want the honest read on the wider vocabulary the term comes from, that is <a href="smart-money-concepts.html">what smart money concepts gets right and wrong</a>.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is an order block in trading?</h3>
+    <p>An order block is the last candle that moved against the direction of a sharp move, marked as a rectangle from that candle's open to its close or high to low. The idea is that a large buyer or seller absorbed the other side there. The rectangle is a location a trader chose; it is not a record of who traded.</p>
+
+    <h3>Are order blocks real, or just a made-up concept?</h3>
+    <p>The mechanism behind the name is real. A large order genuinely cannot be filled at a single price, so it is worked across time and price. The part that is invented is the precision. Nothing in a candlestick feed identifies the size, the participant or the intent behind any of the volume inside the box you drew.</p>
+
+    <h3>What is the difference between an order block and a supply and demand zone?</h3>
+    <p>Almost nothing mechanically. Both are rectangles drawn around the origin of a strong move, and both are traded the same way. The difference is the story attached. A supply and demand zone claims unfilled orders remain; an order block claims a specific institution filled there. Neither claim is visible in price data.</p>
+
+    <h3>Do order blocks actually work?</h3>
+    <p>When one works it works for the same reason any marked level works: it is the origin of a move a lot of traders can see, so a lot of traders act there. That is a real and useful effect, and it is entirely independent of whether an institution filled inside the rectangle. Treat it as a level, size it as a level, and it behaves like one.</p>
+
+    <h2>Bottom line</h2>
+    <p>Order blocks survive the scrutiny as a marking convention and fail it as an explanation. Large orders really are broken up and worked quietly — the rulebooks are written to make sure of it, which is precisely why the resulting execution does not announce itself as one dramatic candle. What the rectangle actually gives you is the origin of a move that a crowd can find with a shared rule, and a crowd at a price is a real, tradeable thing. Use it for that, require the return to hold before you act, and size it off the stop rather than off the story.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="supply-and-demand-zones.html">Supply and Demand Zones vs Support and Resistance</a>
+      <a href="smart-money-concepts.html">Smart Money Concepts: What It Gets Right and Wrong</a>
+      <a href="fair-value-gaps.html">Fair Value Gaps: The Honest Version</a>
+      <a href="liquidity-grab-stop-hunt.html">What Is a Liquidity Grab? Stop Hunts Explained</a>
+      <a href="how-to-mark-up-a-chart.html">How to Mark Up a Chart</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>A rectangle is a guess. <span class="g">A held level is evidence.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

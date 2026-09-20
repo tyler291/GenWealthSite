@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Fair Value Gaps: The Honest Version</title>
+<meta name="description" content="A fair value gap is a three-candle imbalance that only exists on one timeframe. What it really measures, why price does not owe you a fill, and when to use it." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/fair-value-gaps.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fair Value Gaps: The Honest Version" />
+<meta property="og:description" content="Drop one timeframe and most fair value gaps disappear. What that tells you about what an FVG is actually measuring — and how to use it anyway." />
+<meta property="og:url" content="https://gwhlds.com/hub/fair-value-gaps.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Fair Value Gaps: The Honest Version","description":"What a fair value gap actually is: the three-candle construction, why the untouched range is an artefact of the timeframe you happen to be viewing rather than a range where no trading occurred, what the formation genuinely measures, how far a US stock is permitted to displace before the market itself halts it under the Limit Up-Limit Down plan, why the expectation that price must return to fill the gap is a base rate rather than a rule, how a fair value gap differs from a true overnight gap and from a liquidity void, and the narrow conditions under which one is worth marking.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/fair-value-gaps.html","datePublished":"2026-09-20"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Fair Value Gaps","item":"https://gwhlds.com/hub/fair-value-gaps.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a fair value gap?","acceptedAnswer":{"@type":"Answer","text":"A fair value gap is a three-candle formation where the first candle's wick and the third candle's wick do not overlap, leaving a price range that the outer two bars never touched. Traders mark that untouched range as a zone and expect price to return into it. The formation records how fast price moved, not who moved it."}},{"@type":"Question","name":"Do fair value gaps always get filled?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing in market structure obliges price to return to any particular price. Fills feel inevitable because an unfilled gap stays on your chart drawing attention to itself while the ones that filled quietly stop being interesting. If you want a fill rate for your instrument and timeframe, you have to count it yourself; a number quoted without a method is not evidence."}},{"@type":"Question","name":"Why do fair value gaps disappear on a lower timeframe?","acceptedAnswer":{"@type":"Answer","text":"Because trades did occur inside the gap. A 5-minute bar hides everything that happened within its five minutes. Rebuild the same stretch from 15-second bars and the untouched range usually fills with wicks and bodies. The gap was never an absence of trading; it was an absence of detail at the resolution you were viewing."}},{"@type":"Question","name":"Is a fair value gap the same as an overnight gap?","acceptedAnswer":{"@type":"Answer","text":"No. An overnight gap on a stock is a genuine discontinuity: the exchange was closed, so no trading was possible between the close and the open. A fair value gap happens inside a continuously trading session, where price simply moved through the range faster than your chosen bar size can show. One is a real hole, the other is a resolution artefact."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Fair Value Gaps</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts &middot; Patterns</span>
+        <h1>Fair Value Gaps: The Honest Version</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 20, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A fair value gap is a three-candle formation where the first bar's wick and the third bar's wick do not overlap, leaving a price range the outer two never touched. It is marked as a zone and traded on the expectation of a return. What it actually measures is speed — and it only exists on the timeframe you happen to be viewing.</p>
+
+    <p>That second sentence does most of the work on this page, and almost nobody says it out loud. Once you have tested it on your own chart, everything else about the formation falls into place.</p>
+
+    <h2>What a fair value gap is, precisely</h2>
+    <p>The definition is mechanical, which is one genuine virtue of the idea — two traders looking at the same chart will mark the same box.</p>
+    <p>Take any three consecutive candles. For a bullish gap, compare the <strong>high of the first candle</strong> to the <strong>low of the third</strong>. If the third candle's low sits above the first candle's high, the range between them is the gap. For a bearish gap, reverse it: the third candle's high sits below the first candle's low. The middle candle is the large one that did the travelling.</p>
+    <p>You will also see the same formation called an imbalance, a liquidity void, or simply a three-bar gap. The naming is inconsistent across sources; the construction is not.</p>
+
+    <h2>The timeframe problem — and it is the whole story</h2>
+    <p>Here is a five-minute exercise that is worth more than any article, including this one.</p>
+    <p>Find a clean fair value gap on a 5-minute chart. Note the exact price range. Now switch the same instrument and the same fifteen minutes to a 15-second chart and look at that range again.</p>
+    <p>In almost every case, the gap is gone. Wicks and bodies fill it. Trades happened at those prices — many of them — and your 5-minute bars simply had no way to show you, because a candle discards everything that happens between its open and its close.</p>
+    <p>This matters because the trading rationale usually offered is that price "left an area where no trading took place" and must return to do business there. That rationale does not survive the exercise. Trading did take place. You were looking at a summary.</p>
+
+    <div class="callout"><b>What an FVG actually is.</b> Not a hole in the market, and not a footprint. It is a <em>velocity measurement</em>: a statement that price travelled further in one bar-interval than the surrounding bars' ranges could bridge. That is real information — it just says "this moved fast", not "an institution was here."</div>
+
+    <h2>How far price is actually allowed to displace</h2>
+    <p>If an FVG measures speed, it is worth knowing that in US equities the market itself places a hard ceiling on how far price may travel before it is stopped.</p>
+    <p>Under the <a href="https://www.luldplan.com/" target="_blank" rel="nofollow noopener">Limit Up-Limit Down plan — approved by the SEC on a pilot basis in 2012 and made permanent on 11 April 2019</a> — trades in an NMS stock may not occur outside price bands set around a reference price, and that reference price is the <strong>arithmetic mean of eligible trades over the preceding five minutes</strong>. For a Tier 1 security (S&amp;P 500 and Russell 1000 names) priced above $3.00, the band is <strong>5%</strong>. If the best quote reaches the band and the market cannot clear it within <strong>15 seconds</strong>, the listing exchange declares a <strong>five-minute trading pause</strong>.</p>
+    <p>Read that back against the three-candle formation. In regular hours, on a large-cap US stock, the maximum displacement away from a five-minute average is 5% — and the bands are doubled for the last 25 minutes of the day. A fair value gap is therefore an event that occurs inside a band the exchanges defined years before anyone named the pattern. It is a measurement of volatility operating within a published rulebook, which is a far more defensible description than an institutional signature.</p>
+
+    <h2>Does price have to come back and fill it?</h2>
+    <p>No. And the honest answer to "how often does it fill" is: nobody should quote you a number they have not counted for your instrument, your session and your bar size.</p>
+    <p>The reason the fill feels inevitable is a selection effect you can catch yourself making. A gap that filled within the hour stops being interesting and vanishes from memory. A gap that has not filled sits on your chart for weeks, visible every time you open it, quietly accumulating significance. You are not observing a tendency; you are observing which examples survive on your screen.</p>
+    <p>If you want a real fill rate, the method is unglamorous and takes an afternoon: define the gap rule exactly, define the fill rule exactly, define a time limit, and count a few hundred of them by hand. That process is laid out in <a href="how-to-backtest-a-setup-by-hand.html">how to backtest a setup by hand</a>. Whatever number you get will be yours, which makes it worth more than any figure you read.</p>
+
+    <h2>Fair value gap vs true gap vs liquidity void</h2>
+    <div class="kv"><table>
+      <tr><th>Formation</th><th>What created it</th><th>Was there trading in the range?</th></tr>
+      <tr><td>Fair value gap</td><td>Fast movement inside a live session</td><td>Yes — visible on a lower timeframe</td></tr>
+      <tr><td>True overnight gap</td><td>The exchange was closed</td><td>No — trading was impossible</td></tr>
+      <tr><td>Liquidity void</td><td>Thin resting depth, few participants</td><td>Yes, but in very small size</td></tr>
+    </table></div>
+    <p>Only the middle row is a genuine discontinuity, and it is the one with a real mechanism behind the fill tendency — the drivers are covered in <a href="overnight-and-weekend-gap-risk.html">overnight and weekend gap risk</a>. Collapsing all three under one name is where most of the confusion starts.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Break &amp; hold</em> means we never chase: price has to clear the called level and hold it as the candle closes before anything is taken. A fair value gap is, by construction, the fastest and least confirmed part of a move — the moment chasing is most tempting and least defensible. And <em>know your next</em> means the entry, the targets and the next level are written before the bar prints, not reverse-engineered from a box afterwards. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Where an FVG is genuinely worth marking</h2>
+    <p>Two uses hold up, and both demote the gap from a signal to a piece of context.</p>
+    <ol>
+      <li><strong>As a speed reading on a trend day.</strong> Several unfilled gaps stacked in one direction is a clean visual record that the move has been one-sided and unchallenged. That is a real fact about the session, and it is the kind of read explored in <a href="trend-day-playbook.html">the trend day playbook</a>.</li>
+      <li><strong>As a secondary confluence on a level you already marked.</strong> If a gap happens to sit on a level from <a href="how-to-mark-up-a-chart.html">your pre-session markup</a>, the level is the reason and the gap is a detail. Never the other way round — a box with no level behind it has nothing to recommend it.</li>
+    </ol>
+    <p>What does not hold up is entering on the touch. A gap boundary gives you no natural invalidation, for the same reason discussed in <a href="what-is-invalidation-in-trading.html">what invalidation means in trading</a>: the edges are chosen by a drawing convention, not by anything the market defended. Wait for the return to produce a rejection you can see, then size it from that stop.</p>
+    <p>The wider framework sits in <a href="technical-analysis-basics.html">technical analysis basics</a>, the neighbouring formation is covered in <a href="order-blocks-explained.html">order blocks explained</a>, and the vocabulary this one belongs to is assessed in <a href="smart-money-concepts.html">smart money concepts</a>.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What is a fair value gap?</h3>
+    <p>A fair value gap is a three-candle formation where the first candle's wick and the third candle's wick do not overlap, leaving a price range that the outer two bars never touched. Traders mark that untouched range as a zone and expect price to return into it. The formation records how fast price moved, not who moved it.</p>
+
+    <h3>Do fair value gaps always get filled?</h3>
+    <p>No. Nothing in market structure obliges price to return to any particular price. Fills feel inevitable because an unfilled gap stays on your chart drawing attention to itself while the ones that filled quietly stop being interesting. If you want a fill rate for your instrument and timeframe, you have to count it yourself; a number quoted without a method is not evidence.</p>
+
+    <h3>Why do fair value gaps disappear on a lower timeframe?</h3>
+    <p>Because trades did occur inside the gap. A 5-minute bar hides everything that happened within its five minutes. Rebuild the same stretch from 15-second bars and the untouched range usually fills with wicks and bodies. The gap was never an absence of trading; it was an absence of detail at the resolution you were viewing.</p>
+
+    <h3>Is a fair value gap the same as an overnight gap?</h3>
+    <p>No. An overnight gap on a stock is a genuine discontinuity: the exchange was closed, so no trading was possible between the close and the open. A fair value gap happens inside a continuously trading session, where price simply moved through the range faster than your chosen bar size can show. One is a real hole, the other is a resolution artefact.</p>
+
+    <h2>Bottom line</h2>
+    <p>A fair value gap is a tidy, unambiguous way of marking where price moved quickly, and there is nothing wrong with that. What it is not is a region where trading did not happen, a debt the market owes you, or a signature left by anyone in particular — drop one timeframe and the evidence for all three disappears. Keep it as context on a trend day, use it as a detail on a level you had already marked, and make the level supply the reason. A measurement of speed is useful. It is just not a trade.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="order-blocks-explained.html">Order Blocks Explained: What They Actually Are</a>
+      <a href="smart-money-concepts.html">Smart Money Concepts: What It Gets Right and Wrong</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight and Weekend Gap Risk</a>
+      <a href="inside-bars-and-outside-bars.html">Inside Bars and Outside Bars, Explained</a>
+      <a href="multi-timeframe-analysis.html">Multi-Timeframe Analysis</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Speed is a measurement. <span class="g">A level is a reason.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

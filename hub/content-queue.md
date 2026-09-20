@@ -340,9 +340,9 @@ the cross where the answer genuinely differs by timeframe — otherwise link to 
 - [x] The engulfing candle: what it actually signals `(engulfing-candle)`
 - [x] The doji: overrated, or genuinely useful? `(doji-candle)`
 - [x] Inside bars and outside bars, explained `(inside-bars-and-outside-bars)`
-- [ ] Order blocks explained plainly
-- [ ] Fair value gaps: the honest version
-- [ ] What smart money concepts get right — and wrong
+- [x] Order blocks explained plainly `(order-blocks-explained)`
+- [x] Fair value gaps: the honest version `(fair-value-gaps)`
+- [x] What smart money concepts get right — and wrong `(smart-money-concepts)`
 - [ ] Head and shoulders: how often it actually fails
 - [ ] Double tops and double bottoms
 - [ ] Round numbers and psychological price levels
