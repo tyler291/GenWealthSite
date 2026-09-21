@@ -343,9 +343,9 @@ the cross where the answer genuinely differs by timeframe — otherwise link to 
 - [x] Order blocks explained plainly `(order-blocks-explained)`
 - [x] Fair value gaps: the honest version `(fair-value-gaps)`
 - [x] What smart money concepts get right — and wrong `(smart-money-concepts)`
-- [ ] Head and shoulders: how often it actually fails
-- [ ] Double tops and double bottoms
-- [ ] Round numbers and psychological price levels
+- [x] Head and shoulders: how often it actually fails `(head-and-shoulders-pattern)`
+- [x] Double tops and double bottoms `(double-tops-and-double-bottoms)`
+- [x] Round numbers and psychological price levels `(round-numbers-and-price-levels)`
 - [ ] Previous day high and low: why they keep working
 - [x] The opening range: how to define it and use it `(covered by opening-range-breakout)`
 - [ ] Gap fill: how often it really happens

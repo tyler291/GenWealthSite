@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Round Numbers as Support and Resistance</title>
+<meta name="description" content="Round numbers work as levels because real orders cluster there. Fed order-book data shows 8.7% of FX orders sit at rates ending in 00 — and why that matters." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/round-numbers-and-price-levels.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Round Numbers as Support and Resistance" />
+<meta property="og:description" content="One of the few technical ideas with a documented order-flow mechanism behind it. What a Fed study of 9,667 real currency orders found at round numbers." />
+<meta property="og:url" content="https://gwhlds.com/hub/round-numbers-and-price-levels.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Round Numbers as Support and Resistance","description":"Why round numbers behave as support and resistance levels, grounded in a Federal Reserve Bank of New York study of 9,667 real stop-loss and take-profit orders placed at a large foreign exchange dealing bank: how strongly requested execution rates cluster at levels ending in 00 against the roughly one percent a uniform distribution would predict, why take-profit orders cluster at round numbers far more than stop-loss orders and what that asymmetry does to price when a level is reached, why stop-loss buy orders sit disproportionately just above round numbers and why trends therefore tend to accelerate once a round number is crossed, and how a trader should mark and trade these levels in practice.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/round-numbers-and-price-levels.html","datePublished":"2026-09-21"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Round Numbers and Price Levels","item":"https://gwhlds.com/hub/round-numbers-and-price-levels.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do round numbers act as support and resistance?","acceptedAnswer":{"@type":"Answer","text":"Because real orders cluster there. A Federal Reserve Bank of New York study of 9,667 stop-loss and take-profit orders at a large currency dealing bank found that roughly 8.7 percent of requested execution rates sat at levels ending in 00, against the roughly 1 percent a uniform distribution would predict. Price reacts at round numbers because there is genuinely more order flow waiting at them."}},{"@type":"Question","name":"Do round numbers work in stocks and futures too?","acceptedAnswer":{"@type":"Answer","text":"The documented order-book evidence comes from the currency market, so it should not be transferred to other markets as proven fact. The underlying cause is human order placement, which is not unique to foreign exchange, and price clustering has been observed in other markets including gold and grain futures. Treat round numbers in stocks and futures as a reasonable prior to test on your own instrument, not as an established result."}},{"@type":"Question","name":"Why does price often accelerate after breaking a round number?","acceptedAnswer":{"@type":"Answer","text":"Because stop-loss orders cluster just beyond round numbers rather than at them. In the same Fed data, 7.4 percent of stop-loss buy orders sat at rates ending between 90 and 99, while 14.4 percent sat between 01 and 10 — almost twice as many just above the round number. Crossing the level triggers that concentration of buying, which pushes price further in the same direction."}},{"@type":"Question","name":"Should you place your stop exactly at a round number?","acceptedAnswer":{"@type":"Answer","text":"It is the most crowded choice available, and crowded stops are the easiest to reach. If the round number is genuinely your invalidation level, keep the stop but place it beyond the number with room for the reaction, and size the position from that wider distance rather than shrinking the stop to fit a preferred position size."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Round Numbers and Price Levels</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts &middot; Levels</span>
+        <h1>Round Numbers as Support and Resistance</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 21, 2026 &middot; 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Round numbers act as support and resistance because real orders cluster at them. This is one of the few technical ideas with a documented mechanism rather than a folk explanation: when researchers opened a bank's currency order book, they found orders piled up at rates ending in 00 at roughly nine times the rate chance would produce.</p>
+
+    <p>That is worth knowing precisely, because the precise version tells you something the vague version does not — namely why price often bounces at a round number <em>and</em> why it accelerates once it goes through one.</p>
+
+    <h2>The evidence: what is actually sitting at 1.2000</h2>
+    <p>In <a href="https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr125.pdf" target="_blank" rel="nofollow noopener">Federal Reserve Bank of New York Staff Report No. 125</a>, later published in the Journal of Finance, Carol Osler examined <strong>9,667 stop-loss and take-profit orders</strong> placed at a large foreign exchange dealing bank between <strong>1 September 1999 and 11 April 2000</strong>, across dollar-yen, dollar-pound and euro-dollar.</p>
+    <p>If traders chose their order prices without regard to the digits, each two-digit ending would appear about <strong>1% of the time</strong>. They do not. The study found:</p>
+    <ul>
+      <li>Roughly <strong>8.7% of orders</strong> were placed at rates ending in <strong>00</strong> — around nine times the uniform expectation.</li>
+      <li>Smaller clusters appeared at levels ending in <strong>50</strong>, then at other levels ending in <strong>0</strong>, then at levels ending in <strong>5</strong>.</li>
+      <li>There was <strong>no special tendency</strong> to cluster at 25 or 75, which is a nice check that this is about round digits, not fractions.</li>
+      <li>The hypothesis that the distribution was uniform was rejected at better than the <strong>0.01% level</strong> for all three currency pairs.</li>
+    </ul>
+    <p>So the answer to "why does price react at 1.2000" is not psychology in the loose sense. It is that a disproportionate quantity of executable orders is genuinely resting there, waiting.</p>
+
+    <div class="callout"><b>The one-sentence version.</b> A round number is not a magic price. It is a place where a lot of people independently decided to put an order, and the reaction you see is those orders being filled.</div>
+
+    <h2>Why price bounces at round numbers</h2>
+    <p>Here the study gets more interesting, because the two order types cluster differently — and that asymmetry is the mechanism.</p>
+    <p><strong>Take-profit orders cluster at round numbers much more strongly than stop-loss orders do.</strong> In the data, <strong>9.3%</strong> of take-profit orders executed exactly at 00, against only <strong>4.4%</strong> of stop-loss orders.</p>
+    <p>Follow what that means when price rises into a round number. A rising market triggers stop-loss <em>buys</em> and take-profit <em>sells</em>. If take-profit orders are concentrated at 00 and stop-losses are not, the order flow arriving at that price is dominated by selling. For the market to clear it, price has to fall to find buyers. That is a bounce off resistance, produced not by sentiment but by arithmetic on the order book.</p>
+    <p>The paper puts specific numbers on it: on average around <strong>2.8%</strong> of all stop-loss buy orders are triggered at a rate ending in 00, against roughly <strong>10.5%</strong> of take-profit sell orders. With the two order types similar in average size, the imbalance at the round number is substantial.</p>
+
+    <h2>Why price accelerates once it breaks through</h2>
+    <p>This is the part most traders have felt without being able to explain, and it has the same source.</p>
+    <p><strong>Stop-loss orders do not sit at the round number. They sit just beyond it.</strong> In the study, <strong>7.4%</strong> of stop-loss buy orders were placed at rates ending between 90 and 99 — just below a round number — while <strong>14.4%</strong> were placed between 01 and 10, just above it. Almost twice as many stops were waiting on the far side.</p>
+    <p>So a market that pushes through 1.2000 and reaches 1.2010 walks straight into a concentration of stop-loss buying with no matching concentration of take-profit selling. The flow becomes one-sided in the direction of the break, and price runs to find sellers. This is the order-flow explanation for why a clean break of a round number so often keeps going — and it is the same machinery described from the chart side in <a href="liquidity-grab-stop-hunt.html">liquidity grabs and stop hunts</a>.</p>
+    <p>It also quantifies why the break has to be confirmed. Osler's related work found that in actual exchange rates the increase in bounce frequency at round numbers averaged about <strong>4.6 percentage points</strong> across dollar-mark, dollar-yen and dollar-pound. That is a real effect and a modest one. A round number tilts the odds; it does not decide them.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> This is <em>break &amp; hold</em> with a mechanism attached. The reason we never chase into a round number is that the flow at the number is stacked against the move; the reason we act on a level that breaks <em>and holds through the close</em> is that the stops beyond it have been taken and the imbalance has flipped. <em>Know your next</em> matters doubly here — the next round number up or down is the most predictable place for the move to stall. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>What counts as a round number on your instrument</h2>
+    <p>The digit that matters depends on how the instrument is quoted, which is why "round number" needs translating before it is useful.</p>
+    <div class="kv"><table>
+      <tr><th>Instrument</th><th>Major round levels</th><th>Secondary</th></tr>
+      <tr><td>EUR/USD, GBP/USD</td><td>1.1000, 1.1100 (the "00" handles)</td><td>1.1050 and other 50s</td></tr>
+      <tr><td>USD/JPY</td><td>150.00, 151.00</td><td>150.50</td></tr>
+      <tr><td>Index futures (ES)</td><td>Hundreds: 5800, 5900</td><td>Fifties and quarters: 5850, 5825</td></tr>
+      <tr><td>Stocks under $100</td><td>Whole dollars: $50, $51</td><td>Half dollars: $50.50</td></tr>
+      <tr><td>Stocks over $100</td><td>Tens: $250, $260</td><td>Whole dollars</td></tr>
+    </table></div>
+    <p>One honest caveat: the order-book evidence above is from the currency market. Price clustering has been observed elsewhere — the study itself notes prior findings in the London gold market and in corn and soybean futures — but those are different markets with different structures. Treat round numbers in stocks and futures as a well-motivated prior to test on your own instrument, using the method in <a href="how-to-backtest-a-setup-by-hand.html">how to backtest a setup by hand</a>, rather than as a transferred result.</p>
+
+    <h2>How to actually use this</h2>
+    <p>Four practical consequences follow directly from the numbers above.</p>
+    <ol>
+      <li><strong>Mark the round numbers before the session, with the rest of your levels.</strong> They belong on the chart alongside prior highs and lows during <a href="how-to-mark-up-a-chart.html">your pre-session markup</a> — not discovered mid-move.</li>
+      <li><strong>Expect a reaction, not a reversal.</strong> A 4.6 percentage point tilt in bounce frequency is an edge worth respecting and nowhere near a certainty. Treat the round number as a place where something is likely to happen, and let the candle tell you what.</li>
+      <li><strong>Do not put your stop exactly at the round number.</strong> It is the most crowded price available, and the data shows precisely where the crowd sits. If that level is genuinely your invalidation, place the stop beyond it with room for the reaction and size the trade from the wider distance — the logic in <a href="how-to-set-a-stop-loss.html">how to set a stop loss that isn't a guess</a>.</li>
+      <li><strong>Use the next round number as a target, not just an obstacle.</strong> The same clustering that stalls price on the way in makes the next round level a sensible place to take partials.</li>
+    </ol>
+    <p>Round numbers also sit naturally alongside the levels you derive from structure. Where a round number and a prior swing high coincide, you have two independent reasons for the same price, which is the kind of confluence discussed in <a href="support-and-resistance.html">support and resistance</a>. Where they disagree, the structural level usually deserves more weight, because it records something the market actually did rather than something traders find easy to type.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Why do round numbers act as support and resistance?</h3>
+    <p>Because real orders cluster there. A Federal Reserve Bank of New York study of 9,667 stop-loss and take-profit orders at a large currency dealing bank found that roughly 8.7 percent of requested execution rates sat at levels ending in 00, against the roughly 1 percent a uniform distribution would predict. Price reacts at round numbers because there is genuinely more order flow waiting at them.</p>
+
+    <h3>Do round numbers work in stocks and futures too?</h3>
+    <p>The documented order-book evidence comes from the currency market, so it should not be transferred to other markets as proven fact. The underlying cause is human order placement, which is not unique to foreign exchange, and price clustering has been observed in other markets including gold and grain futures. Treat round numbers in stocks and futures as a reasonable prior to test on your own instrument, not as an established result.</p>
+
+    <h3>Why does price often accelerate after breaking a round number?</h3>
+    <p>Because stop-loss orders cluster just beyond round numbers rather than at them. In the same Fed data, 7.4 percent of stop-loss buy orders sat at rates ending between 90 and 99, while 14.4 percent sat between 01 and 10 — almost twice as many just above the round number. Crossing the level triggers that concentration of buying, which pushes price further in the same direction.</p>
+
+    <h3>Should you place your stop exactly at a round number?</h3>
+    <p>It is the most crowded choice available, and crowded stops are the easiest to reach. If the round number is genuinely your invalidation level, keep the stop but place it beyond the number with room for the reaction, and size the position from that wider distance rather than shrinking the stop to fit a preferred position size.</p>
+
+    <h2>Bottom line</h2>
+    <p>Round numbers are the rare technical level with receipts. Opening a real order book showed orders stacked at rates ending in 00 at nine times chance, take-profit orders concentrated at the number and stop-loss orders concentrated just beyond it. That single asymmetry explains both behaviours traders notice: the bounce at the level and the run after it breaks. Mark them in advance, expect a reaction rather than a reversal, keep your stop off the crowded price, and let the close decide which of the two is happening.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders — risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="support-and-resistance.html">Support and Resistance: The Levels That Matter</a>
+      <a href="liquidity-grab-stop-hunt.html">Liquidity Grabs and Stop Hunts</a>
+      <a href="how-to-mark-up-a-chart.html">How to Mark Up a Chart</a>
+      <a href="how-to-set-a-stop-loss.html">How to Set a Stop Loss That Isn't a Guess</a>
+      <a href="what-is-a-breakout.html">What Is a Breakout? Real vs Fake</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Not a magic price. <span class="g">A crowded one.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
