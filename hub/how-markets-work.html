@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How Markets Actually Work: A Trader's Guide</title>
+<meta name="description" content="Where your order really goes, who takes the other side, and what makes price move. A plain-English guide to the market mechanics behind every price you see." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-markets-work.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How Markets Actually Work: A Trader's Guide" />
+<meta property="og:description" content="A price is not a number the market sets — it is the last agreement between two people. Here is the machinery that finds them, and what it means for your fills." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-markets-work.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How Markets Actually Work: A Trader's Guide","description":"The mechanics behind every price a trader sees: why a quoted price is simply the last agreement struck between one buyer and one seller, what the order book is and how limit and market orders interact with it, where a retail order physically goes after it leaves the broker given that the SEC has stated retail brokers route more than ninety percent of individual investors' marketable orders to a small group of off-exchange wholesalers, what payment for order flow and price improvement mean in practice, who is on the other side of a retail trade, why the bid, the ask and the last price are three different numbers, and what all of this changes about order choice, slippage and position sizing.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-markets-work.html","datePublished":"2026-09-22"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How Markets Actually Work","item":"https://gwhlds.com/hub/how-markets-work.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What actually makes a price move?","acceptedAnswer":{"@type":"Answer","text":"A price moves when the best available resting order is consumed and the next agreement happens at a different level. Buying pressure does not push price up by itself; it lifts the offers sitting at the current price until none are left, and the new best offer becomes the new price. Price is a record of the last agreement, not a force."}},{"@type":"Question","name":"Where does my order go after I click buy?","acceptedAnswer":{"@type":"Answer","text":"Not straight to an exchange. Your broker decides where to route it — to an exchange, to an electronic communications network, or to an off-exchange dealer called a wholesaler. The SEC has stated that retail brokers route more than 90 percent of individual investors' marketable orders to a small group of wholesalers, who may pay the broker for that order flow."}},{"@type":"Question","name":"Who is on the other side of my trade?","acceptedAnswer":{"@type":"Answer","text":"Usually a market maker rather than another retail trader. Market makers quote both a bid and an offer continuously and earn the difference between them, taking the opposite side of whatever arrives. They are not betting against your view; they are being paid to provide immediacy and then hedging the resulting position."}},{"@type":"Question","name":"Why is the price I got different from the price I saw?","acceptedAnswer":{"@type":"Answer","text":"Because the price on your screen is the last trade or the current quote, and neither guarantees the next fill. A market order takes whatever is available when it arrives, and the quantity at the best price may be smaller than your order. The difference is slippage, and it widens when liquidity thins or the market is moving quickly."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>How Markets Actually Work</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>How Markets Actually Work: A Trader's Guide</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 22, 2026 &middot; 11 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A market price is not a number a market sets. It is the last price at which one buyer and one seller agreed, recorded and published. Everything else &mdash; exchanges, brokers, market makers, the order book &mdash; exists to find those two people quickly and to make the agreement enforceable. Price moves when the agreeing price changes.</p>
+
+    <p>Almost every persistent confusion a new trader has &mdash; why a stop filled somewhere else, why the chart moved without news, why "buying pressure" is a misleading phrase &mdash; dissolves once that single mechanism is clear. This page is the mechanism, then its consequences.</p>
+
+    <h2>The one mechanism: a matched order</h2>
+    <p>Every market you can trade is a matching engine. Buyers submit the highest price they will pay; sellers submit the lowest they will accept. The engine sorts both lists by price and pairs them off whenever the highest bid meets the lowest offer.</p>
+    <p>That sorted list of unfilled orders is the order book. Two things follow immediately:</p>
+    <ul>
+      <li><strong>A limit order adds to the book.</strong> You are offering to trade at your price and waiting. You supply liquidity, and you may never be filled.</li>
+      <li><strong>A market order removes from the book.</strong> You are accepting whatever prices are already there. You consume liquidity, and you are always filled &mdash; somewhere.</li>
+    </ul>
+    <p>The word "somewhere" is doing the work. A market order for 500 shares when only 200 are offered at the best price takes those 200, then the next 300 at a worse price. The difference between the price you saw and your average fill is <a href="slippage-in-trading.html">slippage</a>, and it is not a broker defect. It is arithmetic on a finite book.</p>
+
+    <div class="callout"><b>The one-sentence version.</b> Price does not rise because there are "more buyers than sellers" &mdash; every trade has exactly one of each. Price rises because buyers keep consuming the offers above them until the cheapest remaining offer is higher.</div>
+
+    <h2>Where your order actually goes</h2>
+    <p>Here is where most retail traders' mental model is wrong, and the SEC says so plainly. In its investor publication on <a href="https://www.sec.gov/about/reports-publications/investorpubstradexec" target="_blank" rel="nofollow noopener">trade execution</a>, the Commission notes that many investors who trade through online accounts assume they have a direct connection to the securities markets &mdash; and that they do not. The order goes to the broker, and the broker decides where to send it.</p>
+    <p>The choices are an exchange, an electronic communications network that matches orders automatically, or an off-exchange dealer known as a wholesaler. The SEC explains that some of these venues "will pay your broker for routing your order to that exchange or market maker &mdash; perhaps a penny or more per share." That is payment for order flow.</p>
+    <p>How lopsided is the routing in practice? When the SEC <a href="https://www.sec.gov/newsroom/press-releases/2022-225" target="_blank" rel="nofollow noopener">proposed its Order Competition Rule in December 2022</a>, it stated the position directly: "Currently, retail brokers route more than <strong>90 percent</strong> of these orders to a small group of off-exchange dealers, known as wholesalers."</p>
+    <p>So the default assumption &mdash; that your buy order walks onto an exchange floor and meets somebody else's sell order &mdash; is wrong nine times out of ten. Far more often a wholesaler takes the other side internally. That is not automatically bad for you: the same SEC material describes price improvement, "the opportunity, but not the guarantee, for an order to be executed at a better price than what is currently quoted publicly," and brokers owe a duty of best execution. But it is a materially different picture, and it explains a lot of what you observe on the tape.</p>
+
+    <h2>Who is on the other side</h2>
+    <p>Three groups, with different motives, and none of them is reacting to you.</p>
+    <div class="kv"><table>
+      <tr><th>Counterparty</th><th>What they want</th><th>What it means for you</th></tr>
+      <tr><td><strong>Market makers / wholesalers</strong></td><td>To earn the spread by quoting both sides continuously, then hedge the inventory they take on</td><td>They are indifferent to your direction. They take the other side of almost anything and manage the risk elsewhere</td></tr>
+      <tr><td><strong>Institutions</strong></td><td>To move a large position without revealing it, often over hours or days</td><td>They split orders into pieces. The "wall" you see may be a fragment of something much bigger, or bait</td></tr>
+      <tr><td><strong>Other retail traders</strong></td><td>The same thing you want, usually on the same chart</td><td>The smallest share of volume, and the group most likely to be crowded into the same levels as you</td></tr>
+    </table></div>
+    <p>The useful takeaway is the first row. A market maker taking the opposite side of your trade is not an opponent with a view; it is a business being paid for immediacy. Nobody is hunting your individual stop. What exists is a dense pocket of orders at an obvious price, and a market that moves toward liquidity &mdash; which is the accurate version of the story told in <a href="liquidity-grab-stop-hunt.html">liquidity grabs and stop hunts</a>.</p>
+
+    <h2>Why "the price" is three different numbers</h2>
+    <p>Your platform shows a bid, an ask and a last price, and traders routinely treat them as one thing.</p>
+    <ul>
+      <li><strong>The bid</strong> is the highest price someone will currently pay. It is the price you receive if you sell immediately.</li>
+      <li><strong>The ask (offer)</strong> is the lowest price someone will currently accept. It is the price you pay if you buy immediately.</li>
+      <li><strong>The last</strong> is history &mdash; a trade that already happened. It is the number your chart draws, and it is the only one of the three that guarantees nothing about your next fill.</li>
+    </ul>
+    <p>The gap between bid and ask is the spread, and it is the real cost of immediacy on every round trip &mdash; often larger than commission, which is the comparison made in <a href="commission-vs-spread.html">commission vs spread</a>. A candlestick chart plots the last price and hides the other two, which is exactly why a chart that looks smooth can be brutally expensive to trade when the book behind it is thin. Watching the two live quotes rather than the drawn line is what <a href="how-to-read-level-2.html">reading Level 2</a> is for, and watching the sequence of actual executions is <a href="what-the-tape-tells-you.html">what the tape tells you</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Knowing the machinery is why we insist on a close rather than a touch. A single print at a level can be one small order against a thin book &mdash; real on the chart, meaningless as evidence. <em>Break &amp; hold</em> asks for a close beyond the level because a close means the book kept clearing there for a sustained period. That is a structural fact about the market, not a preference. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>What this changes about how you trade</h2>
+    <p>Five practical consequences follow directly from the mechanism above.</p>
+    <ol>
+      <li><strong>Choose the order type for the job.</strong> Market orders buy certainty of execution with uncertainty of price; limit orders do the reverse. Neither is better &mdash; the question is which uncertainty you can live with on that particular trade. The trade-offs are laid out in <a href="market-vs-limit-vs-stop-orders.html">market vs limit vs stop orders</a>.</li>
+      <li><strong>Assume your stop is an instruction, not a guarantee.</strong> A stop becomes a market order when triggered, and it fills against whatever the book holds at that moment. In a fast move, that can be well past your level.</li>
+      <li><strong>Treat thin books as a position-sizing input.</strong> The same chart pattern costs more to enter and exit when few orders are resting. Liquidity is a cost, and costs belong in the size calculation.</li>
+      <li><strong>Stop attributing intent to the tape.</strong> Most of what you see is inventory management and order slicing, not signalling. The structure &mdash; the levels and the closes &mdash; carries more information than the individual prints.</li>
+      <li><strong>Judge execution quality, not the marketing.</strong> Where a broker routes and what you actually get filled at matters more than the headline commission. That is the substance of <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</li>
+    </ol>
+    <p>None of this is optional background. A trader who understands that price is a record of agreements stops asking why the market "did that to them" and starts asking which orders were where. If you are still assembling the basics around this, the practical starting sequence is in <a href="../faq.html">our FAQ</a> and the step-by-step version in <a href="how-to-start-day-trading.html">how to start day trading</a>.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>What actually makes a price move?</h3>
+    <p>A price moves when the best available resting order is consumed and the next agreement happens at a different level. Buying pressure does not push price up by itself; it lifts the offers sitting at the current price until none are left, and the new best offer becomes the new price. Price is a record of the last agreement, not a force.</p>
+
+    <h3>Where does my order go after I click buy?</h3>
+    <p>Not straight to an exchange. Your broker decides where to route it &mdash; to an exchange, to an electronic communications network, or to an off-exchange dealer called a wholesaler. The SEC has stated that retail brokers route more than 90 percent of individual investors' marketable orders to a small group of wholesalers, who may pay the broker for that order flow.</p>
+
+    <h3>Who is on the other side of my trade?</h3>
+    <p>Usually a market maker rather than another retail trader. Market makers quote both a bid and an offer continuously and earn the difference between them, taking the opposite side of whatever arrives. They are not betting against your view; they are being paid to provide immediacy and then hedging the resulting position.</p>
+
+    <h3>Why is the price I got different from the price I saw?</h3>
+    <p>Because the price on your screen is the last trade or the current quote, and neither guarantees the next fill. A market order takes whatever is available when it arrives, and the quantity at the best price may be smaller than your order. The difference is slippage, and it widens when liquidity thins or the market is moving quickly.</p>
+
+    <h2>Bottom line</h2>
+    <p>Strip away the terminology and a market is a queue of unfilled orders sorted by price, plus a rule for pairing them. Price is the last pairing. Your order rarely reaches an exchange directly &mdash; by the SEC's own account, more than 90% of retail marketable orders go to a handful of wholesalers who may pay your broker for them. The other side is almost always a market maker managing inventory, not an opponent reading your chart. Once you see the market as a book of resting orders rather than a moving line, order choice, slippage and position sizing stop being separate topics and become one topic: what is actually available at the price you want, and what happens when it runs out.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-to-read-level-2.html">How to Read Level 2</a>
+      <a href="what-the-tape-tells-you.html">What the Tape Tells You</a>
+      <a href="slippage-in-trading.html">Slippage in Trading: Why Your Fill Moved</a>
+      <a href="market-vs-limit-vs-stop-orders.html">Market vs Limit vs Stop Orders</a>
+      <a href="commission-vs-spread.html">Commission vs Spread: The Real Cost</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>A price is <span class="g">an agreement.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

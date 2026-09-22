@@ -346,9 +346,9 @@ the cross where the answer genuinely differs by timeframe — otherwise link to 
 - [x] Head and shoulders: how often it actually fails `(head-and-shoulders-pattern)`
 - [x] Double tops and double bottoms `(double-tops-and-double-bottoms)`
 - [x] Round numbers and psychological price levels `(round-numbers-and-price-levels)`
-- [ ] Previous day high and low: why they keep working
+- [x] Previous day high and low: why they keep working `(previous-day-high-and-low)`
 - [x] The opening range: how to define it and use it `(covered by opening-range-breakout)`
-- [ ] Gap fill: how often it really happens
+- [x] Gap fill: how often it really happens `(gap-fill)`
 
 **Dropped from batch 003 for cannibalization:** break and hold as a full strategy
 (covered by `break-and-hold-confirmation`) · the retest entry step by step (covered by
@@ -366,7 +366,7 @@ work" questions that answer engines get asked constantly and answer badly. The p
 first; every spoke links up to it. Each page needs a real mechanism, not a definition — if we
 cannot explain *why* the thing happens, we skip the page.
 
-- [ ] How markets actually work: the mechanics behind every price you see `[PILLAR]`
+- [x] How markets actually work: the mechanics behind every price you see `[PILLAR]` `(how-markets-work)`
 - [ ] What liquidity actually means to a retail trader
 - [ ] Who is on the other side of your trade?
 - [ ] How market makers make money
@@ -377,6 +377,13 @@ cannot explain *why* the thing happens, we skip the page.
 - [ ] Seasonality in trading: signal or noise?
 - [ ] Why volume dies at lunch
 - [ ] Month-end and quarter-end flows: what actually moves
+- [ ] What the NBBO is, and why it decides your fill
+- [ ] Payment for order flow, explained honestly
+- [ ] Dark pools and off-exchange trading, explained
+- [ ] The opening auction: how the first price of the day is set
+- [ ] The closing auction: why the last five minutes are different
+- [ ] Odd lots: the trades missing from your tape
+- [ ] Why two brokers can show you two different prices
 
 ---
 
@@ -398,6 +405,52 @@ an accountant, why "trader status" is jurisdiction-specific, and when trading in
 income (all three covered by `day-trading-taxes`) · what a stop hunt really is (covered by
 `liquidity-grab-stop-hunt`) · correlation: why five trades can be one trade (covered by
 `correlation-risk-in-trading`).
+
+---
+
+---
+
+# PHASE 15 — Commercial intent, second pass · batch 005, cluster 1
+
+Phase 1 covered the "should I join a trading room at all" queries. This pass covers the
+questions a reader asks *once they are close* — how to use a room, how to compare it against
+the other place their money could go, and when to leave. Same honesty rule as Phase 1: if a
+page reads as an advert it gets ignored by Google and the AIs. Say who we are not for.
+
+- [ ] Trading room vs prop firm: where a small account should start
+- [ ] Your first week in a trading Discord: how to actually use it
+- [ ] How to follow a callout without copy trading
+- [ ] Trading room etiquette: getting value without wasting the room's time
+- [ ] Can a trading community help you pass a prop firm challenge?
+- [ ] What a good trading room does on a bad day
+- [ ] Trading community vs free YouTube: what the money actually buys
+- [ ] How to leave a trading community well — and when you should
+
+---
+
+# PHASE 16 — Risk, second pass · batch 005, cluster 4
+
+The risk pillar is live and deep. These are the four gaps a reader hits *after* they have the
+basics: measuring in risk units, sizing theory they will meet online and should understand
+before using, and the two situations that cause the most unplanned losses.
+
+- [ ] R multiples: measuring trades in risk, not dollars
+- [ ] The Kelly criterion for traders, honestly
+- [ ] Stopped out instantly: what it actually tells you
+- [ ] Adding to a loser vs scaling into a plan
+
+---
+
+# PHASE 17 — Psychology, second pass · batch 005, cluster 6
+
+The psychology cluster covers losses well and wins badly. These four close that gap. Nothing
+here becomes clinical advice; where a page touches genuine distress it says so and points
+outward.
+
+- [ ] Trading after a big win: the overconfidence trap
+- [ ] Why you break your own trading rules
+- [ ] Screen fatigue: when more hours make you worse
+- [ ] Taking a day off without losing your rhythm
 
 ---
 

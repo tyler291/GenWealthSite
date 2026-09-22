@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Gap Fill: How Often Gaps Actually Fill</title>
+<meta name="description" content="Do gaps always fill? Why every gap fill percentage you have read is unusable, what a gap really is, and how to trade back toward the prior close safely." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/gap-fill.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Gap Fill: How Often Gaps Actually Fill" />
+<meta property="og:description" content="The gap-fill statistic everyone quotes has no published methodology behind it. Here is what a gap actually is, and how to treat the prior close as a level." />
+<meta property="og:url" content="https://gwhlds.com/hub/gap-fill.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Gap Fill: How Often Gaps Actually Fill","description":"An honest examination of the gap fill: why no usable public statistic exists for how often gaps fill, the four definitional choices that make any single percentage meaningless, why gaps exist at all given that FINRA Rule 2265 requires firms to warn customers that issuers normally release news outside regular trading hours, evidence from the Federal Reserve Bank of New York that a large share of equity returns since 1994 has accrued in the twenty-four hours before scheduled FOMC announcements rather than during the trading session, what the prior close actually is mechanically, and how to trade toward it as a level rather than betting on a probability.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/gap-fill.html","datePublished":"2026-09-22"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Gap Fill","item":"https://gwhlds.com/hub/gap-fill.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do gaps always fill?","acceptedAnswer":{"@type":"Answer","text":"No. Some gaps never fill, and a market in a strong trend can leave a gap open indefinitely. The reason you will see claims that gaps almost always fill is that most of those figures allow an unlimited window — given enough months or years, price revisits most prices. Over a horizon a day trader can actually hold, no reliable public figure exists."}},{"@type":"Question","name":"What percentage of gaps fill on the same day?","acceptedAnswer":{"@type":"Answer","text":"There is no credible published number, and you should be sceptical of any source that gives one without stating its method. The answer changes completely depending on the minimum gap size counted, the instrument, the sample period and whether a partial fill counts. A figure quoted without those four details is not a statistic, it is a slogan."}},{"@type":"Question","name":"Why do gaps happen in the first place?","acceptedAnswer":{"@type":"Answer","text":"Because information keeps arriving while the market is closed or thinly traded. FINRA Rule 2265 requires firms to tell customers that issuers normally make news announcements after regular trading hours and that important financial information is frequently announced outside those hours. When trading resumes, the first agreed price reflects the news, and no trading happened in between."}},{"@type":"Question","name":"Is the gap fill a real edge or a folk belief?","acceptedAnswer":{"@type":"Answer","text":"Treat it as a level rather than an edge. The prior close is a genuine reference price that attracts resting orders, so price often reacts there, which is what people are noticing when they say gaps fill. That is different from a probability you can size a position against. Trade the reaction at the level with a defined invalidation, not the assumption that price must return."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Gap Fill</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Charts &middot; Gaps</span>
+        <h1>Gap Fill: How Often Gaps Actually Fill</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 22, 2026 &middot; 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Nobody can tell you how often gaps fill, because the answer depends entirely on how you define a gap, over what window, and in which market. The honest version is that a gap is a level, not a probability. Price returning to yesterday's close is common &mdash; but "common" is not a number you can size a trade from.</p>
+
+    <p>That is a less satisfying answer than "gaps fill 70% of the time," which is why the less satisfying answer is the one worth reading. Here is why the percentages are unusable, what a gap actually is, and how to trade the prior close without pretending you know the odds.</p>
+
+    <h2>Why every gap-fill percentage you have seen is unusable</h2>
+    <p>Any gap-fill statistic requires four arbitrary choices, and each one moves the answer by a large amount. A figure quoted without all four disclosed tells you nothing.</p>
+    <div class="kv"><table>
+      <tr><th>Choice</th><th>Why it changes the answer</th></tr>
+      <tr><td><strong>Minimum gap size</strong></td><td>Counting every gap of one tick includes thousands of trivial openings that fill within seconds. Requiring 2% excludes nearly all of them. Same market, opposite conclusions.</td></tr>
+      <tr><td><strong>Fill window</strong></td><td>"Fills by the close" and "fills eventually" are different questions. Given unlimited time, price revisits most prices, so an open-ended window inflates the figure toward certainty.</td></tr>
+      <tr><td><strong>Instrument and period</strong></td><td>A mean-reverting index behaves nothing like a single small-cap stock on earnings. A sample drawn from a range-bound stretch of years will not repeat in a trending one.</td></tr>
+      <tr><td><strong>Full or partial fill</strong></td><td>If touching the prior close counts, the number is high. If trading all the way through it counts, the number is much lower. Most sources never say which they mean.</td></tr>
+    </table></div>
+    <p>Search for a gap-fill statistic and you will find confident percentages on broker blogs and trading-education sites, almost none of which publish their sample, threshold or window. That is not a small omission &mdash; without those four parameters the number cannot be reproduced, and a number that cannot be reproduced is not evidence. We will not quote one here for the same reason we will not quote a win rate: if we cannot show you where it came from, you should not act on it.</p>
+
+    <div class="callout"><b>The one-sentence version.</b> "Gaps usually fill" is not a statistic that survived testing; it is an observation that survived repetition.</div>
+
+    <h2>Why gaps exist at all</h2>
+    <p>A gap is not a mysterious chart event. It is the visible trace of information arriving while you could not trade.</p>
+    <p>This is explicit in US regulation. <a href="https://www.finra.org/rules-guidance/rulebooks/finra-rules/2265" target="_blank" rel="nofollow noopener">FINRA Rule 2265</a> requires firms to warn customers before they trade extended hours, and one of the six mandatory disclosures reads: "Normally, issuers make news announcements that may affect the price of their securities after regular trading hours. Similarly, important financial information is frequently announced outside of regular trading hours." The same rule warns that when those announcements land in a thin session, they "may cause an exaggerated and unsustainable effect on the price of a security."</p>
+    <p>So the regulator's own model of a gap is: news arrives when almost nobody is trading, the first prices are struck on little volume, and the regular session opens somewhere else entirely.</p>
+    <p>How much of the market's actual movement happens in that window is easy to underestimate. In <a href="https://libertystreeteconomics.newyorkfed.org/2012/07/the-puzzling-pre-fomc-announcement-drift/" target="_blank" rel="nofollow noopener">research published by the Federal Reserve Bank of New York</a>, David Lucca and Emanuel Moench documented that from 1994 to 2011 the S&amp;P 500 earned an average excess return of about <strong>49 basis points</strong> in the twenty-four hours before scheduled FOMC announcements, and that <strong>more than 80% of the annual equity premium</strong> over that period accrued in those windows &mdash; which arrive only eight times a year.</p>
+    <p>Sit with that. The large majority of the reward for holding US equities over nearly two decades showed up in a handful of overnight-and-into-the-announcement windows, not in the hours you are watching the chart. Gaps are not noise interrupting the real market. A great deal of the real market happens inside them.</p>
+
+    <h2>What "filling" actually means mechanically</h2>
+    <p>Nothing pulls price back to the prior close. There is no gravity in a price series. What exists is a reference level with unusual properties:</p>
+    <ul>
+      <li>It is the last price at which a large volume of buyers and sellers agreed, so it is where a great many positions were established.</li>
+      <li>It is objective &mdash; every platform reports the same number &mdash; so orders concentrate on it rather than scattering, the same property that makes <a href="previous-day-high-and-low.html">the previous day's high and low</a> behave the way they do.</li>
+      <li>It is the reference price the market itself uses: US market-wide circuit breakers are measured against the prior day's closing price of the S&amp;P 500.</li>
+    </ul>
+    <p>Put those together and the "fill" stops being magic. Anyone who bought near the close and is now underwater at a gapped-down open wants out near breakeven. Anyone short from the close wants to cover there. Anyone who missed the move wants the retracement. Those are three distinct groups placing orders at one objective price, and dense orders at a price produce a reaction at that price. The reaction is what traders are noticing when they say gaps fill.</p>
+    <p>Which also explains the failures. When the gap is caused by genuinely new information &mdash; an earnings surprise, a takeover, a rate decision &mdash; the prior close is no longer a price anyone thinks is fair. The orders that would have defended it are withdrawn, and the level does nothing at all.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> This is <em>break &amp; hold</em> applied to a level that happens to be behind price rather than in front of it. We do not enter because a gap "should" fill. We mark the prior close, wait for price to reach it, and let the candle close tell us whether the level is holding or being traded straight through. <em>Know your next</em> supplies the target before the entry exists: if the close gives way, the next reference is yesterday's low, not a feeling. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>Four kinds of gap, and what each one is telling you</h2>
+    <p>The cause of the gap matters far more than its size, because the cause determines whether the old price is still credible.</p>
+    <ol>
+      <li><strong>News gap.</strong> Earnings, guidance, a regulatory decision, a rate announcement. The prior close reflects a world that no longer exists. Expect the level to be weak. This is the territory covered in detail in <a href="earnings-gaps.html">earnings gaps and the honest odds on trading them</a>.</li>
+      <li><strong>Sympathy or macro gap.</strong> The instrument gapped because the whole market did &mdash; an overnight futures move, a global session repricing everything. No stock-specific information has changed, so the prior close retains more meaning.</li>
+      <li><strong>Thin-session gap.</strong> A small move established on tiny extended-hours volume with no identifiable cause. This is the case FINRA describes as "exaggerated and unsustainable," and the one most likely to unwind quickly.</li>
+      <li><strong>Weekend or holiday gap.</strong> Several days of accumulated news arriving at once. Bigger by nature, harder to attribute, and the main reason <a href="overnight-and-weekend-gap-risk.html">overnight and weekend gap risk</a> is a position-sizing problem rather than a chart problem.</li>
+    </ol>
+    <p>Before you form any view on whether a gap will close, identify which of the four you are looking at. If you cannot, that in itself is information: an unexplained gap is one you have no thesis about.</p>
+
+    <h2>How to trade toward the prior close without betting on the fill</h2>
+    <p>The practical shift is small and it changes everything: stop treating the fill as an outcome you are predicting and start treating the prior close as a level you are observing.</p>
+    <ol>
+      <li><strong>Mark the prior close before the open</strong>, alongside yesterday's high and low. It is one of the three lines that belongs on every chart from the first bar.</li>
+      <li><strong>Let the opening range establish first.</strong> The first minutes after a gap are price discovery, not direction. Trading into that is guessing with extra steps &mdash; the reason the <a href="opening-range-breakout.html">opening range breakout</a> waits.</li>
+      <li><strong>Require the level to do something.</strong> If price reaches the prior close and rejects it on the close of a candle, you have evidence. If it trades cleanly through, the fill thesis is dead and you should not be looking for it any more.</li>
+      <li><strong>Define invalidation before entry.</strong> "A close beyond the prior close by more than X" is a rule. "It should come back" is not.</li>
+      <li><strong>Size for the gap you are not in yet.</strong> If you hold overnight, your stop does not protect you through the next gap. That is a sizing decision made the evening before, covered in <a href="position-sizing-from-risk.html">position sizing from risk</a>.</li>
+    </ol>
+    <p>The broader point belongs to <a href="technical-analysis-basics.html">technical analysis basics</a>: a chart feature is only useful when you can say what mechanism produces it. The gap fill has a real mechanism &mdash; concentrated orders at an objective reference price &mdash; and that mechanism supports treating the prior close as a level worth watching. It does not support a probability, and no honest source will give you one.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Do gaps always fill?</h3>
+    <p>No. Some gaps never fill, and a market in a strong trend can leave a gap open indefinitely. The reason you will see claims that gaps almost always fill is that most of those figures allow an unlimited window &mdash; given enough months or years, price revisits most prices. Over a horizon a day trader can actually hold, no reliable public figure exists.</p>
+
+    <h3>What percentage of gaps fill on the same day?</h3>
+    <p>There is no credible published number, and you should be sceptical of any source that gives one without stating its method. The answer changes completely depending on the minimum gap size counted, the instrument, the sample period and whether a partial fill counts. A figure quoted without those four details is not a statistic, it is a slogan.</p>
+
+    <h3>Why do gaps happen in the first place?</h3>
+    <p>Because information keeps arriving while the market is closed or thinly traded. FINRA Rule 2265 requires firms to tell customers that issuers normally make news announcements after regular trading hours and that important financial information is frequently announced outside those hours. When trading resumes, the first agreed price reflects the news, and no trading happened in between.</p>
+
+    <h3>Is the gap fill a real edge or a folk belief?</h3>
+    <p>Treat it as a level rather than an edge. The prior close is a genuine reference price that attracts resting orders, so price often reacts there, which is what people are noticing when they say gaps fill. That is different from a probability you can size a position against. Trade the reaction at the level with a defined invalidation, not the assumption that price must return.</p>
+
+    <h2>Bottom line</h2>
+    <p>The gap fill is real as a behaviour and unmeasured as a statistic. Gaps happen because news arrives when the market is closed &mdash; something FINRA requires brokers to warn you about in writing &mdash; and a striking share of the market's long-run return has historically accrued in exactly those windows. When price does come back to the prior close, it is because that price is objective, heavily traded and full of resting orders, not because a gap must close. So mark the prior close, work out which of the four gap types you are looking at, wait for the level to prove itself on a candle close, and never size a position against a percentage nobody can show you the working for.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight &amp; Weekend Gap Risk</a>
+      <a href="earnings-gaps.html">Earnings Gaps: The Honest Odds</a>
+      <a href="previous-day-high-and-low.html">Previous Day High and Low: Why They Work</a>
+      <a href="pre-market-vs-regular-hours.html">Pre-Market vs Regular Hours: The Liquidity Gap</a>
+      <a href="futures-cash-open.html">The Futures Cash Open, Explained</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>A level. <span class="g">Not a promise.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

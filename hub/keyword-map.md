@@ -318,6 +318,9 @@ market hours · volatility
 - how economic releases move markets `MAP` · what the VIX tells a day trader `MAP`
 - correlation: why five trades can be one trade `MAP` · seasonality: signal or noise `MAP`
 - why volume dies at lunch `MAP` · month-end and quarter-end flows `MAP`
+- what the NBBO is and why it decides your fill `MAP` · payment for order flow explained `MAP`
+- dark pools and off-exchange trading `MAP` · the opening auction `MAP` · the closing auction `MAP`
+- odd lots and the trades missing from the tape `MAP` · why two brokers show different prices `MAP`
 
 ## 16 · Crypto trading `MAP` *(deliberately last — do not start before cluster 1–8 have depth)*
 **Pillar:** `crypto-day-trading.html` `MAP`
@@ -341,8 +344,9 @@ Never publish more than **5 per run**. 100 titles ≈ 20 run-days.
 | 001 | Pages 1–100 | 1–8, 13 (Phases 1–7 of the queue) | Done | Phases 1–5 fully published; 19 unchecked remain in Phases 6–7 |
 | 002 | Pages 101–200 | 9 Stocks · 10 Prop firms · 11 Brokers | Done | Pulled 2026-08-24 as queue Phases 8–10: 41 titles promoted, 3 dropped for cannibalization. 16 titles still unchecked in Phases 9–10 — finish those before Phase 11. |
 | 003 | Pages 201–300 | 12 Strategies · 5 Charts (timeframe cross) | In flight | Pulled 2026-09-06 as queue Phases 11–12: 30 titles promoted, 6 dropped for cannibalization. Cluster 5 pillar confirmed live. Note: these two clusters only held ~36 mapped spokes, not 100 — refill the map (see below) before batch 004 to keep the 100-per-batch cadence. |
-| 004 | Pages 301–400 | 14 Business · 15 Mechanics | **In flight** | Pulled 2026-09-16 as queue Phases 13–14: 15 titles promoted, 7 dropped for cannibalization. Cluster 15 pillar `how-markets-work.html` still to be written. These two clusters only held 22 mapped spokes, not 100 — the map is now near-empty for everything except cluster 16, so **refill this file (see "When the map itself runs low") before batch 005.** **2026-09-21: the <20-unchecked refill trigger has fired (17 left, ~6 run-days of runway) but batch 005 is blocked** — it needs a map refill whose first two sources (Search Console queries ranking 5–20, then PAA/autocomplete on the head keywords) require data only the site owner can export. Next run should either (a) be handed a Search Console export, or (b) refill from source 4 instead — gaps: clusters with fewer than five live spokes, plus the unwritten cluster 15 pillar `how-markets-work.html`, which is assessable from this repo alone. |
-| 005 | Pages 401–500 | 16 Crypto · market-modifier crosses | Mapped | Only after 1–8 are deep |
+| 004 | Pages 301–400 | 14 Business · 15 Mechanics | Done | Pulled 2026-09-16 as queue Phases 13–14. Cluster 15 pillar `how-markets-work.html` published 2026-09-22, which closed the last blocker on this row. 10 titles remain unchecked in Phase 13 and 4 in Phase 14 — finish those before Phase 15. |
+| 005 | Pages 401–500 | 1 Community (2nd pass) · 4 Risk (2nd pass) · 6 Psychology (2nd pass) · 15 Mechanics (extended) | **In flight** | Pulled 2026-09-22 via **source 4 (gaps)**, not the ledger's original crypto plan — Search Console and PAA data are still unavailable, and clusters 1–8 are now deep enough that a commercial second pass beats opening cluster 16. **23 titles promoted, not 100**: this was a genuine-gap analysis of 194 live pages rather than a map dump, and padding it to 100 would have produced near-duplicates of live pages. Queue went from 14 to 37 unchecked (~12 run-days). Dropped for cannibalization: weekly loss limits (`daily-loss-limits`), circuit breakers as a page (`trading-halts-explained`), data-feed latency (`platform-latency-explained`), night-before watchlist (`pre-market-routine`), risk per trade vs per day (`the-1-percent-rule-in-trading`), trading room free trials (`free-vs-paid-trading-communities`). |
+| 006 | Pages 501–600 | 16 Crypto · market-modifier crosses | Mapped | Only after a real map refill. Sources 1–2 (Search Console exports, PAA) still need the site owner. |
 
 ### How to pull the next batch (the "every 100, another 100" rule)
 
