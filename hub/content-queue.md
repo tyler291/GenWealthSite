@@ -367,9 +367,9 @@ first; every spoke links up to it. Each page needs a real mechanism, not a defin
 cannot explain *why* the thing happens, we skip the page.
 
 - [x] How markets actually work: the mechanics behind every price you see `[PILLAR]` `(how-markets-work)`
-- [ ] What liquidity actually means to a retail trader
-- [ ] Who is on the other side of your trade?
-- [ ] How market makers make money
+- [x] What liquidity actually means to a retail trader `(what-liquidity-means-to-a-retail-trader)`
+- [x] Who is on the other side of your trade? `(who-is-on-the-other-side-of-your-trade)`
+- [x] How market makers make money `(how-market-makers-make-money)`
 - [ ] Why price gaps: the mechanics of an unfilled move
 - [ ] What causes a spike with no news
 - [ ] How economic releases move markets

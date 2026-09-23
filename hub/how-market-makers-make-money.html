@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How Market Makers Actually Make Money</title>
+<meta name="description" content="Spread capture, exchange rebates and payment for order flow: the three revenue lines of a market maker, the inventory risk they carry, and what it costs you." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-market-makers-make-money.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How Market Makers Actually Make Money" />
+<meta property="og:description" content="Three revenue lines, one real risk. Understand the business on the other side of your fill and most conspiracy theories about it stop making sense." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-market-makers-make-money.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How Market Makers Actually Make Money","description":"The market-making business explained for traders: how spread capture works and why it is a volume business rather than a directional one, how exchange access fees and rebates fit in given that Regulation NMS Rule 610 currently caps access fees for protected quotations at 30 cents per 100 shares and that the SEC's adopted reduction to $0.001 per share has had its compliance date postponed to the first business day of November 2027, what payment for order flow is and where it comes from, why inventory risk and adverse selection are the real constraints on the business, what each revenue line costs a retail trader per round turn, and why none of it involves targeting an individual trader's stop.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-market-makers-make-money.html","datePublished":"2026-09-23"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How Market Makers Actually Make Money","item":"https://gwhlds.com/hub/how-market-makers-make-money.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a market maker make money on the spread?","acceptedAnswer":{"@type":"Answer","text":"By quoting a bid below and an offer above at the same time, then buying from sellers at the bid and selling to buyers at the offer. Each round turn captures the difference, which is often a fraction of a cent. The business works because the same tiny margin is repeated across an enormous number of trades."}},{"@type":"Question","name":"What are exchange rebates and how do they fit in?","acceptedAnswer":{"@type":"Answer","text":"Exchanges commonly charge a fee to remove liquidity and pay a rebate to add it, so a firm that rests orders can earn a small per-share credit on top of the spread. Regulation NMS Rule 610 caps what an exchange may charge to access a protected quotation, which in turn limits how large those rebates can be."}},{"@type":"Question","name":"Is payment for order flow bad for retail traders?","acceptedAnswer":{"@type":"Answer","text":"It is a genuine conflict of interest and also a genuine source of price improvement, which is why it remains contested rather than settled. A wholesaler pays your broker for the order and may fill you inside the public quote. Whether you come out ahead depends on execution quality, which brokers must disclose."}},{"@type":"Question","name":"Do market makers trade against my position?","acceptedAnswer":{"@type":"Answer","text":"Not in the sense traders usually mean. A market maker takes the other side of whatever arrives and then hedges the resulting inventory, because holding a directional position is the risk it is trying to avoid rather than the bet it is trying to make. It also cannot see who you are or where your stop sits."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>How Market Makers Make Money</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>How Market Makers Actually Make Money</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 23, 2026 &middot; 10 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A market maker earns the difference between the price it will buy at and the price it will sell at, repeated across enormous numbers of trades. Exchange rebates and payments for retail order flow add to that. Its real risk is inventory: the position it is left holding when price keeps moving against the flow.</p>
+
+    <p>That is the entire business in three sentences. Everything below is the detail, and the detail matters because a trader who understands this business stops attributing their losses to it.</p>
+
+    <h2>Revenue line one: the spread</h2>
+    <p>A market maker posts two prices at once &mdash; a bid it will buy at and an offer it will sell at. If it buys 500 shares at the bid and sells 500 at the offer, it keeps the difference and ends flat. That difference is frequently a single tick, and on a liquid stock it can be a fraction of a cent per share.</p>
+    <p>This is a volume business, not a margin business. Nobody gets rich one penny at a time; they get rich one penny at a time, several million times a day. Two consequences follow for you:</p>
+    <ul>
+      <li><strong>Market makers want flow, not direction.</strong> A firm capturing a spread millions of times does not care which way the next order goes. It cares that orders keep arriving.</li>
+      <li><strong>The spread you pay is their revenue.</strong> Every round turn you take hands someone the bid-offer difference. Across a year of active trading that is usually a larger line item than commission, as the arithmetic in <a href="commission-vs-spread.html">commission vs spread</a> shows.</li>
+    </ul>
+
+    <h2>Revenue line two: exchange rebates</h2>
+    <p>Most US equity exchanges use a maker-taker fee model: they charge a fee to take liquidity off the book and pay a rebate to post liquidity onto it. A firm resting quotes all day is, by definition, a maker. The rebate is a second income stream stacked on top of the spread.</p>
+    <p>The size of that rebate is constrained by regulation, and the specific number is one most articles get wrong. Under Regulation NMS Rule 610, the SEC has capped the fee an exchange may charge to access a protected quotation. In its <a href="https://www.sec.gov/files/rules/final/2024/34-101070.pdf" target="_blank" rel="nofollow noopener">2024 adopting release on tick sizes and access fees</a>, the Commission describes the existing cap for protected quotations priced at $1 or more as "<strong>30 cents per 100 shares</strong>" &mdash; "30 mils" per share, or $0.0030. On 18 September 2024 it adopted amendments reducing that cap to <strong>$0.001 per share</strong>.</p>
+    <p>Here is the part that is easy to get out of date. That reduction has not taken effect. The compliance date was pushed back, and in a <a href="https://www.sec.gov/newsroom/speeches-statements/atkins-statement-minimum-pricing-increments-access-fee-caps-061126" target="_blank" rel="nofollow noopener">June 2026 statement</a> the SEC extended temporary exemptive relief for Rules 610(c) and 612 to the first business day of <strong>November 2027</strong>, while directing staff to review both rules by the end of 2026. So as of September 2026 the 30-mil cap is still the one in force, and the lower cap is adopted but pending. Anyone quoting one figure without the other is describing a different year.</p>
+
+    <div class="callout"><b>Why a trader should care about a fee cap.</b> Because the cap sets the ceiling on rebates, and rebates shape where liquidity chooses to rest. When the economics of posting change, the depth available at the inside quote changes with them &mdash; which lands directly on your fills. See <a href="what-liquidity-means-to-a-retail-trader.html">what liquidity really means to a retail trader</a>.</div>
+
+    <h2>Revenue line three: payment for order flow</h2>
+    <p>Retail orders are, from a market maker's point of view, unusually good business. They are small, they arrive constantly, and on average they carry less information than an institutional order does &mdash; a retail buy rarely signals that somebody knows something. Wholesalers therefore pay retail brokers for the right to fill that flow.</p>
+    <p>The exchange is not free money in both directions. In return the wholesaler frequently offers price improvement &mdash; filling you a shade inside the publicly quoted spread &mdash; and your broker owes you a duty of best execution regardless of who is paying whom. The honest summary is that payment for order flow is simultaneously a real conflict of interest and a real source of better fills, which is exactly why it has stayed contested for two decades instead of being settled. Where those orders go is covered in <a href="how-markets-work.html">how markets actually work</a>.</p>
+
+    <h2>The risk that constrains all three: inventory</h2>
+    <p>Spread capture only works if the firm can get flat. When flow is one-sided &mdash; everyone selling, nobody buying &mdash; the market maker accumulates a position it did not want, at prices that keep getting worse. That is inventory risk, and it is the reason quoted size shrinks and spreads widen precisely when you most want to trade.</p>
+    <p>Alongside it sits <strong>adverse selection</strong>: the orders most likely to be filled against a resting quote are the ones from someone who knows the price is about to move. A market maker's defence is to widen, to quote less size, or to step back entirely. None of those actions is aimed at you. All of them make your fill worse.</p>
+    <p>This is the mechanism behind an experience every trader has had &mdash; the spread blowing out one second before a release, the ladder emptying on a news headline. It is not withdrawal of support. It is a risk manager doing arithmetic.</p>
+
+    <h2>What each revenue line costs you</h2>
+    <div class="kv"><table>
+      <tr><th>Their revenue line</th><th>Your cost</th><th>What you can do about it</th></tr>
+      <tr><td><strong>Spread capture</strong></td><td>Paid on every round turn, twice if you enter and exit with market orders</td><td>Use limit orders where the trade allows it; avoid instruments whose spread is large relative to your target</td></tr>
+      <tr><td><strong>Exchange rebates</strong></td><td>Indirect &mdash; it shapes where liquidity rests, not your ticket</td><td>Nothing directly; understand that depth follows the incentives</td></tr>
+      <tr><td><strong>Payment for order flow</strong></td><td>Ambiguous &mdash; possible price improvement, possible worse routing</td><td>Read your broker's execution-quality disclosures rather than its marketing</td></tr>
+      <tr><td><strong>Inventory defence</strong></td><td>Wider spreads and thinner books exactly when volatility spikes</td><td>Size for the conditions; do not assume the quiet-hours spread applies at the release</td></tr>
+    </table></div>
+    <p>Only the first and the last are worth real attention from a day trader. Both are handled by the same discipline: knowing what the spread costs against your specific target, and reducing size when the book thins. Choosing a broker on execution rather than headline pricing is the other half &mdash; see <a href="how-to-choose-a-broker-for-day-trading.html">how to choose a broker for day trading</a>.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> If the firm on the other side is running a spread business and defending inventory, then the wider spread ahead of a release is information, not an insult &mdash; it is the market pricing its own uncertainty. <em>Trail &amp; protect</em> exists for the same reason: when conditions can change faster than your judgment can, the stop does the deciding. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2>What this rules out</h2>
+    <p>Understanding the revenue lines kills off a whole category of folklore. A firm earning fractions of a cent on millions of trades has no business model in which chasing one retail stop is worth the effort, and it cannot identify that stop anyway &mdash; orders reach the matching engine anonymously, which is the argument made in full in <a href="who-is-on-the-other-side-of-your-trade.html">who is on the other side of your trade</a>.</p>
+    <p>What is true is duller: many traders put stops in the same obvious places, that cluster is a pocket of liquidity, and large orders are naturally filled where liquidity exists. That is the accurate version of <a href="liquidity-grab-stop-hunt.html">the stop hunt story</a>. The remedy is to stop placing your stop where everyone else does, and our <a href="../faq.html">FAQ</a> covers where the rest of the groundwork sits.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How does a market maker make money on the spread?</h3>
+    <p>By quoting a bid below and an offer above at the same time, then buying from sellers at the bid and selling to buyers at the offer. Each round turn captures the difference, which is often a fraction of a cent. The business works because the same tiny margin is repeated across an enormous number of trades.</p>
+
+    <h3>What are exchange rebates and how do they fit in?</h3>
+    <p>Exchanges commonly charge a fee to remove liquidity and pay a rebate to add it, so a firm that rests orders can earn a small per-share credit on top of the spread. Regulation NMS Rule 610 caps what an exchange may charge to access a protected quotation, which in turn limits how large those rebates can be.</p>
+
+    <h3>Is payment for order flow bad for retail traders?</h3>
+    <p>It is a genuine conflict of interest and also a genuine source of price improvement, which is why it remains contested rather than settled. A wholesaler pays your broker for the order and may fill you inside the public quote. Whether you come out ahead depends on execution quality, which brokers must disclose.</p>
+
+    <h3>Do market makers trade against my position?</h3>
+    <p>Not in the sense traders usually mean. A market maker takes the other side of whatever arrives and then hedges the resulting inventory, because holding a directional position is the risk it is trying to avoid rather than the bet it is trying to make. It also cannot see who you are or where your stop sits.</p>
+
+    <h2>Bottom line</h2>
+    <p>Market making is a high-volume, low-margin business with three revenue lines &mdash; the spread, exchange rebates, and payment for retail order flow &mdash; and one dominant risk, which is being left holding inventory when flow turns one-sided. The regulatory detail is live rather than settled: Rule 610 still caps exchange access fees at 30 cents per 100 shares as of September 2026, with the adopted reduction to $0.001 per share now deferred to November 2027. For a trader, the practical residue is small and concrete. The spread is a real cost you pay on every round turn, thin books and wide quotes are risk management by the firms quoting them rather than an attack on you, and the only lever you hold is order choice and size.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-markets-work.html">How Markets Actually Work: A Trader's Guide</a>
+      <a href="who-is-on-the-other-side-of-your-trade.html">Who Is on the Other Side of Your Trade?</a>
+      <a href="commission-vs-spread.html">Commission vs Spread: The Cost of a Round Turn</a>
+      <a href="how-to-read-level-2.html">How to Read Level 2 Without Being Fooled by It</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>A spread is <span class="g">somebody's revenue.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

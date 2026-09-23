@@ -61,6 +61,9 @@ No. No trading community can guarantee results, and Generational Wealth does not
 
 ## The Hub — free trading education
 
+- [What Liquidity Really Means to a Retail Trader](https://gwhlds.com/hub/what-liquidity-means-to-a-retail-trader.html): why liquidity is resting-order depth rather than volume, how the SEC and CFTC define it, and how fast depth drained in the E-Mini and SPY on 6 May 2010.
+- [Who Is on the Other Side of Your Trade?](https://gwhlds.com/hub/who-is-on-the-other-side-of-your-trade.html): why a wholesaler usually fills a retail stock order, what the CFTC Commitments of Traders report reveals about futures open interest, and why nobody can see your stop.
+- [How Market Makers Actually Make Money](https://gwhlds.com/hub/how-market-makers-make-money.html): the three revenue lines — spread capture, exchange rebates and payment for order flow — the current Rule 610 access fee cap, and the inventory risk that constrains all of it.
 - [Previous Day High and Low: Why They Work](https://gwhlds.com/hub/previous-day-high-and-low.html): why the two most objective levels on a chart keep producing reactions, and why US circuit breakers are measured from the prior day's close.
 - [Gap Fill: How Often Gaps Actually Fill](https://gwhlds.com/hub/gap-fill.html): why no usable gap-fill statistic exists, what FINRA says about news arriving outside market hours, and how to trade the prior close as a level.
 - [How Markets Actually Work: A Trader's Guide](https://gwhlds.com/hub/how-markets-work.html): the order book, where a retail order really gets routed, who takes the other side, and why the bid, ask and last are three different numbers.
