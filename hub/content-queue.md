@@ -370,9 +370,9 @@ cannot explain *why* the thing happens, we skip the page.
 - [x] What liquidity actually means to a retail trader `(what-liquidity-means-to-a-retail-trader)`
 - [x] Who is on the other side of your trade? `(who-is-on-the-other-side-of-your-trade)`
 - [x] How market makers make money `(how-market-makers-make-money)`
-- [ ] Why price gaps: the mechanics of an unfilled move
-- [ ] What causes a spike with no news
-- [ ] How economic releases move markets
+- [x] Why price gaps: the mechanics of an unfilled move `(why-price-gaps)`
+- [x] What causes a spike with no news `(price-spike-with-no-news)`
+- [x] How economic releases move markets `(how-economic-releases-move-markets)`
 - [ ] What the VIX tells a day trader
 - [ ] Seasonality in trading: signal or noise?
 - [ ] Why volume dies at lunch

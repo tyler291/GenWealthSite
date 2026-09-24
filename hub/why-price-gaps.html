@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Why Price Gaps: The Mechanics of an Unfilled Move</title>
+<meta name="description" content="Why price gaps: the primary auction is closed roughly 81% of the week, so news reprices the market while no trade can print. The mechanism, cause by cause." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/why-price-gaps.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why Price Gaps: The Mechanics of an Unfilled Move" />
+<meta property="og:description" content="A gap is not a jump in price. It is the record of a repricing that happened while the order book was shut. Here is exactly how that space gets made." />
+<meta property="og:url" content="https://gwhlds.com/hub/why-price-gaps.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Why Price Gaps: The Mechanics of an Unfilled Move","description":"The mechanism behind a price gap explained for traders: why a gap is an absence of trades rather than a movement of price, why the closed hours are where gaps are made given that the NYSE core trading session runs only 9:30 a.m. to 4:00 p.m. ET and therefore covers about 19 percent of the hours in a week, how the opening auction sets the first price of the session, the four categories of event that open a gap, why futures gap far less often than cash equities, and what the edge of a gap is and is not as a level.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/why-price-gaps.html","datePublished":"2026-09-24"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Why Price Gaps","item":"https://gwhlds.com/hub/why-price-gaps.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do stocks gap up or down overnight?","acceptedAnswer":{"@type":"Answer","text":"Because information keeps arriving after the exchange stops matching orders. Earnings, guidance, analyst moves and overseas sessions all land while the primary auction is closed, so nobody can trade the news at the old price. The next auction opens at whatever price balances the orders that built up in the meantime."}},{"@type":"Question","name":"Is a gap the same thing as a jump in price?","acceptedAnswer":{"@type":"Answer","text":"No. A jump means price traded through a range quickly. A gap means price never traded in that range at all, because the book was closed. That distinction matters because a gap contains no volume, no rejection and no participants, so it carries none of the evidence a real level carries."}},{"@type":"Question","name":"Why do futures gap less than stocks?","acceptedAnswer":{"@type":"Answer","text":"Because they are closed for far less of the week. An equity index future trades nearly around the clock from Sunday evening to Friday afternoon, so overnight news usually gets traded rather than stored up. Single stocks sit behind a closed primary auction for most of every weekday and all weekend."}},{"@type":"Question","name":"Does a gap have to fill?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing in market structure requires price to return to an untraded area, and treating a gap as a magnet is one of the more expensive beginner assumptions. Some gaps fill within the hour, some never fill. The honest way to use one is as a reference level, not as a prediction."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Why Price Gaps</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>Why Price Gaps: The Mechanics of an Unfilled Move</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 24, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">A gap is not a jump in price. It is the record of a repricing that happened while the order book was closed. News, orders and opinion accumulate overnight; the first auction of the session clears them at whatever price balances supply and demand. No trade printed in between, so the chart shows empty space.</p>
+
+    <p>Almost every confused thing traders believe about gaps comes from reading them as movement. They are not movement. They are the visible edge of a period in which movement was impossible.</p>
+
+    <h2>A gap is an absence of trades, not a movement of price</h2>
+    <p>Price only exists where a buyer and a seller agreed. Every candle on your chart is a summary of executed trades over an interval. A gap is the one place on the chart where there were none &mdash; the exchange was not matching orders, so no price could be discovered at those levels.</p>
+    <p>That single fact rules out a lot. A gap contains no volume, no rejection, no absorbed selling and no failed breakout. It has none of the evidence that makes a genuine support or resistance level worth trading, because nobody was there. When a chart shows a two-dollar gap, the correct reading is not &ldquo;price moved two dollars fast.&rdquo; It is &ldquo;the market reopened two dollars away from where it closed, and the two dollars in between were never tested by anyone.&rdquo;</p>
+
+    <h2>Why the closed hours are where gaps are made</h2>
+    <p>The arithmetic here is worth doing once, because it explains why gaps are a structural feature of equities rather than an occasional anomaly. The <a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="nofollow noopener">NYSE core trading session</a> runs from <strong>9:30 a.m. to 4:00 p.m. ET</strong> &mdash; six and a half hours a day, five days a week. That is <strong>32.5 hours out of the 168 hours in a week, about 19 percent</strong>. For roughly <strong>81 percent of every week</strong>, the primary auction for US stocks is not running.</p>
+    <p>Information does not observe those hours. Earnings are deliberately released outside them. Guidance revisions, regulatory filings, analyst changes, foreign market sessions, macro releases in other time zones, and everything that happens on a Saturday all land into a market that cannot trade them. The demand to reprice builds with nowhere to go.</p>
+    <p>Extended-hours sessions take some of the edge off, but they are a different market: thinner, wider, and not the primary auction. A price printed at 5 a.m. on a few hundred shares is not the same object as the opening print, which is why a stock can trade up four percent pre-market and still open somewhere else entirely. The gap between those two worlds is covered in <a href="pre-market-vs-regular-hours.html">pre-market vs regular hours</a>.</p>
+
+    <div class="callout"><b>Measure a gap from the close, not from the wick.</b> The reference point is the previous session&rsquo;s closing price against the current session&rsquo;s opening price. Measuring from yesterday&rsquo;s low to today&rsquo;s low describes a different thing entirely and will make you see gaps that are not there. If you want the honest statistics on what happens next, see <a href="gap-fill.html">how often gaps actually fill</a>.</div>
+
+    <h2>What actually sets the opening price</h2>
+    <p>The first trade of a session is not a continuation of the last one. It is the output of an auction. In the minutes before the bell, buy and sell interest is collected and imbalance information is published; the opening price is the single price at which the largest quantity can be matched. That is a genuine, high-volume price discovery event &mdash; often the single largest print of the morning.</p>
+    <p>Which means the open is not arbitrary. It is the market&rsquo;s best collective answer to &ldquo;what is this worth now, given everything that happened since yesterday?&rdquo; A large gap is not a mistake waiting to be corrected. It is a considered repricing by everyone who bothered to submit an order. That reframing is the most useful thing on this page, and it follows directly from <a href="how-markets-work.html">how markets actually work</a>: a price is an agreement, and the opening auction is the largest agreement of the day.</p>
+
+    <h2>The four things that open a gap</h2>
+    <p>Almost every gap belongs to one of four categories, and the category tells you more about what follows than the size does.</p>
+    <div class="kv"><table>
+      <tr><th>Category</th><th>What happened while the book was shut</th><th>What it usually means at the open</th></tr>
+      <tr><td><strong>New information about this company</strong></td><td>Earnings, guidance, an approval, a lawsuit, an acquisition</td><td>A genuine revaluation. The old levels may no longer apply at all &mdash; see <a href="earnings-gaps.html">earnings gaps</a></td></tr>
+      <tr><td><strong>New information about everything</strong></td><td>A macro release, a central bank, a geopolitical event, an overseas selloff</td><td>The whole tape gaps together. Individual stock levels matter less than the index</td></tr>
+      <tr><td><strong>Flow with no news attached</strong></td><td>Index rebalancing, a large fund repositioning, an options expiry effect</td><td>Often the most mean-reverting category, and the hardest to identify in advance</td></tr>
+      <tr><td><strong>Continuation of an existing move</strong></td><td>Nothing new. Yesterday&rsquo;s imbalance simply persisted into this morning&rsquo;s auction</td><td>The trend is intact but the entry got worse. Chasing here is where accounts leak</td></tr>
+    </table></div>
+    <p>The practical takeaway: before you form any view on a gap, spend sixty seconds working out which of those four you are looking at. A company-specific revaluation and a rebalancing flow produce identical-looking candles and behave nothing alike.</p>
+
+    <h2>Why futures gap far less than stocks</h2>
+    <p>An equity index future trades nearly around the clock from Sunday evening to Friday afternoon, pausing only for a short daily maintenance window. It has, in other words, almost no closed hours in which pressure can accumulate. Overnight news gets traded as it arrives instead of being stored up for the morning.</p>
+    <p>That is why the futures tape gives you a running answer to &ldquo;what does the market think right now&rdquo; while the cash market is shut, and why the cash open so often simply catches up to where the future already is. It is also why a futures trader&rsquo;s gap risk is concentrated in the weekend rather than spread across every night &mdash; a distinction covered in <a href="overnight-and-weekend-gap-risk.html">overnight and weekend gap risk</a>.</p>
+
+    <h2>What a gap tells you, and what it does not</h2>
+    <p>The two edges of a gap &mdash; yesterday&rsquo;s close and today&rsquo;s open &mdash; are real prices where real trades happened. They are legitimate reference levels, and they are watched by enough people to become partly self-fulfilling. The territory between them is not a level. It is a vacuum.</p>
+    <ul>
+      <li><strong>Untraded space offers no resistance.</strong> When price re-enters a gap there is nothing in there to slow it down &mdash; no trapped longs, no absorbed supply, no memory. Moves through gaps are frequently fast for exactly this reason, which is the same thin-book mechanic behind <a href="what-liquidity-means-to-a-retail-trader.html">what liquidity really means to a retail trader</a>.</li>
+      <li><strong>The prior close is the level that matters.</strong> It is the last price the two sides agreed on before the information arrived. Reclaiming it, or failing at it, is real evidence.</li>
+      <li><strong>Nothing obliges a gap to fill.</strong> Gap-fill statistics describe tendencies across large samples, not a rule that applies to the chart in front of you.</li>
+      <li><strong>Stops behave differently across a gap.</strong> A stop order sitting inside untraded space does not protect you at your price; it becomes a market order at the open. That is the single most common way a defined risk turns into an undefined one.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A gap edge is an untested level by definition &mdash; nobody defended it, because nobody was there. That is precisely the situation <em>break &amp; hold</em> exists for: we do not act on price touching a level, we act on price breaking it and still being on the other side when the candle closes. An opening print through a gap edge is the least confirmed signal on the chart. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Why do stocks gap up or down overnight?</h3>
+    <p>Because information keeps arriving after the exchange stops matching orders. Earnings, guidance, analyst moves and overseas sessions all land while the primary auction is closed, so nobody can trade the news at the old price. The next auction opens at whatever price balances the orders that built up in the meantime.</p>
+
+    <h3>Is a gap the same thing as a jump in price?</h3>
+    <p>No. A jump means price traded through a range quickly. A gap means price never traded in that range at all, because the book was closed. That distinction matters because a gap contains no volume, no rejection and no participants, so it carries none of the evidence a real level carries.</p>
+
+    <h3>Why do futures gap less than stocks?</h3>
+    <p>Because they are closed for far less of the week. An equity index future trades nearly around the clock from Sunday evening to Friday afternoon, so overnight news usually gets traded rather than stored up. Single stocks sit behind a closed primary auction for most of every weekday and all weekend.</p>
+
+    <h3>Does a gap have to fill?</h3>
+    <p>No. Nothing in market structure requires price to return to an untraded area, and treating a gap as a magnet is one of the more expensive beginner assumptions. Some gaps fill within the hour, some never fill. The honest way to use one is as a reference level, not as a prediction.</p>
+
+    <h2>Bottom line</h2>
+    <p>A gap is the fingerprint of a closed book. Because the NYSE core session runs 9:30 a.m. to 4:00 p.m. ET &mdash; about 19 percent of the hours in a week &mdash; the market that prices US stocks is shut for most of the time information is being produced, and the opening auction is where all of it gets settled at once. Read the gap as a repricing rather than a movement and the useful questions follow: which of the four causes made it, where are the two real prices at its edges, and what does the market do when it comes back to them. Everything else, including the idea that the space must be refilled, is decoration. Our <a href="../faq.html">FAQ</a> covers how we use levels like these day to day.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-markets-work.html">How Markets Actually Work: A Trader&rsquo;s Guide</a>
+      <a href="gap-fill.html">Gap Fill: How Often Gaps Actually Fill</a>
+      <a href="earnings-gaps.html">Earnings Gaps: The Honest Odds on Trading Them</a>
+      <a href="overnight-and-weekend-gap-risk.html">Overnight &amp; Weekend Gap Risk</a>
+      <a href="pre-market-vs-regular-hours.html">Pre-Market vs Regular Hours</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Empty space is not <span class="g">a level.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
