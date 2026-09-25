@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Seasonality in Trading: Signal or Noise?</title>
+<meta name="description" content="Is seasonality in trading real? What the research says about sell in May and calendar effects, why most vanish under testing, and which calendar events matter." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/seasonality-in-trading.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Seasonality in Trading: Signal or Noise?" />
+<meta property="og:description" content="Researchers tested 9,452 calendar rules on a century of Dow data. The best one looked spectacular, until they counted how many rules had been tried." />
+<meta property="og:url" content="https://gwhlds.com/hub/seasonality-in-trading.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Seasonality in Trading: Signal or Noise?","description":"Whether calendar patterns in markets are real and usable: the best evidence for seasonality (Bouman and Jacobsen's Halloween indicator, American Economic Review 2002, found lower May to October returns in 36 of 37 markets), the strongest evidence against it (Sullivan, Timmermann and White tested 9,452 calendar rules on the Dow Jones Industrial Average from 1897 to 1996 and found none significant once the full search was accounted for), why even a real seasonal effect is rarely usable by a day trader, which calendar events have a genuine mechanism, and how to test a seasonal claim.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/seasonality-in-trading.html","datePublished":"2026-09-25"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Seasonality in Trading: Signal or Noise?","item":"https://gwhlds.com/hub/seasonality-in-trading.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does “sell in May and go away” actually work?","acceptedAnswer":{"@type":"Answer","text":"There is published evidence that stock returns have been lower from May to October than from November to April across many markets, but later researchers have disputed how robust it is for US stocks. Even where the pattern exists, it is an average over decades, with many individual years going the other way. It is not a reliable rule for any single year."}},{"@type":"Question","name":"Are some days of the week better to trade than others?","acceptedAnswer":{"@type":"Answer","text":"Day-of-week effects, such as weak Mondays, appear in older data but are among the patterns that stop being significant once researchers account for how many calendar rules were searched. Differences between weekdays in volume and scheduled data releases are real; differences in expected return are not something to build a plan on."}},{"@type":"Question","name":"Why do seasonal patterns stop working after they are published?","acceptedAnswer":{"@type":"Answer","text":"Two reasons. Some were never real in the first place and were found by searching many possible patterns until one looked good. Others may have been real but small, and once enough traders act on them, the trading itself removes the edge."}},{"@type":"Question","name":"Should a day trader use seasonality at all?","acceptedAnswer":{"@type":"Answer","text":"Only the parts with a clear mechanism: the intraday volume curve, scheduled data releases, index rebalances, option expirations and shortened holiday sessions. These change liquidity on known dates. Calendar return patterns are too small and too inconsistent to decide an intraday trade."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Seasonality in Trading</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>Seasonality in Trading: Signal or Noise?</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 25, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Most trading seasonality is noise. Calendar patterns such as &ldquo;sell in May&rdquo; or weak Mondays show up in historical averages, but once you account for how many patterns were searched to find them, most stop being statistically meaningful. The calendar effects worth a day trader&rsquo;s attention are the ones that change liquidity on known dates.</p>
+
+    <p>That distinction, between patterns in <em>returns</em> and patterns in <em>market structure</em>, is the whole answer. The first kind is mostly a statistical illusion. The second kind is scheduled, has an obvious cause, and you can plan around it.</p>
+
+    <h2>What traders mean by seasonality</h2>
+    <p>&ldquo;Seasonality&rdquo; covers two very different claims that usually get mixed together:</p>
+    <ul>
+      <li><strong>Calendar return effects.</strong> The claim that prices tend to go up or down at certain times: the January effect, &ldquo;sell in May and go away&rdquo;, the turn-of-the-month effect, weak Mondays, pre-holiday strength, the Santa Claus rally. These are predictions about <em>direction</em>.</li>
+      <li><strong>Calendar structure.</strong> The fact that some dates and times reliably bring different participants and different volume: the open and close of each session, index rebalance days, option expiration, shortened holiday sessions, scheduled central bank meetings. These say nothing about direction. They describe <em>liquidity</em>.</li>
+    </ul>
+    <p>The first kind generates most of the headlines. The second kind generates most of the practical value.</p>
+
+    <h2>The best evidence that seasonality is real</h2>
+    <p>The strongest published case is Bouman and Jacobsen&rsquo;s <a href="https://ideas.repec.org/a/aea/aecrev/v92y2002i5p1618-1635.html" target="_blank" rel="nofollow noopener">&ldquo;The Halloween Indicator, &lsquo;Sell in May and Go Away&rsquo;: Another Puzzle&rdquo;</a>, published in the <em>American Economic Review</em> in 2002. Examining monthly stock returns across major world markets, they found returns from May to October were lower than returns from November to April in <strong>36 of the 37 markets</strong> they studied. It is a serious paper in a top journal, and later work by Jacobsen and co-authors reported that the pattern continued in the years after publication.</p>
+    <p>It is also contested. Maberly and Pierce, writing in <em>Econ Journal Watch</em> in 2004, re-examined the US evidence and concluded the result was not robust to alternative specifications, with a small number of extreme months doing much of the work. That is the normal state of the seasonality literature: a finding, a rebuttal, and no settled answer.</p>
+
+    <h2>The best evidence that most of it is noise</h2>
+    <p>The deeper problem is not any single pattern but the process that finds them. Sullivan, Timmermann and White tackled it directly in a paper later published in the <em>Journal of Econometrics</em> as <a href="https://ideas.repec.org/a/eee/econom/v105y2001i1p249-286.html" target="_blank" rel="nofollow noopener">&ldquo;Dangers of data mining: The case of calendar effects in stock returns&rdquo;</a>. In the <a href="https://escholarship.org/uc/item/2z02z6d9" target="_blank" rel="nofollow noopener">working paper version</a> they built a universe of <strong>9,452 calendar rules</strong> &mdash; every day-of-week, week-of-month, month-of-year, turn-of-month and holiday variation they could construct &mdash; and ran them against Dow Jones Industrial Average data from 1897 to 1996.</p>
+    <p>The best rule they found, which stayed out of the market on Mondays, produced a mean annualised return of <strong>8.66 percent against 4.63 percent</strong> for simply holding the index, with an individual p-value that looked overwhelming. Then they asked the right question: how likely is it that the best of 9,452 rules looks this good purely by chance? Once evaluated in the context of the full universe of rules searched, their conclusion was that calendar effects no longer remain significant.</p>
+    <div class="callout"><b>The coin-flip problem.</b> Ask 9,452 people to flip a coin ten times and a handful will get nine or ten heads. None of them is skilled at flipping coins. A calendar pattern found by scanning decades of data is the lucky flipper: impressive in isolation, expected in context. That is why &ldquo;it has worked in 17 of the last 20 years&rdquo; is not evidence on its own.</div>
+
+    <h2>Why even a real seasonal effect rarely helps a day trader</h2>
+    <p>Suppose a monthly pattern is real. It still has three problems for anyone trading intraday:</p>
+    <ol>
+      <li><strong>It is tiny relative to one day&rsquo;s noise.</strong> A difference of a few percent spread across six months works out to a few hundredths of a percent per session &mdash; far smaller than the ordinary daily range, and smaller than your trading costs.</li>
+      <li><strong>It has very few observations.</strong> A six-month pattern produces one data point per year. Thirty years of data is thirty observations, which is not enough to separate a real effect from luck with any confidence.</li>
+      <li><strong>It can fail for years at a time.</strong> An average across decades includes long stretches where it did the opposite. A trader relying on it may never live long enough, in account terms, to collect the average.</li>
+    </ol>
+
+    <h2>The calendar effects that do matter, and why</h2>
+    <p>The dates worth marking are the ones where the reason is structural and obvious. They do not tell you which way price goes. They tell you when the market will be different.</p>
+    <div class="kv"><table>
+      <tr><th>Calendar event</th><th>What actually changes</th><th>Why it happens</th></tr>
+      <tr><td><strong>Time of day</strong></td><td>Volume is heavy at the open and close, thin in the middle</td><td>Information arrives before the open; benchmarks are set at the close. See <a href="why-volume-dies-at-lunch.html">why volume dies at lunch</a></td></tr>
+      <tr><td><strong>Scheduled data and central bank days</strong></td><td>Liquidity drains before the release, then the range expands</td><td>Nobody wants to be filled just before a number they cannot see</td></tr>
+      <tr><td><strong>Index rebalance and option expiration days</strong></td><td>Unusually heavy trading into the close</td><td>Index funds must trade at the closing price on set dates</td></tr>
+      <tr><td><strong>Earnings season</strong></td><td>More single-stock gaps and wider ranges</td><td>Company news arrives outside the regular session</td></tr>
+      <tr><td><strong>Holiday and half-day sessions</strong></td><td>Thin books, erratic moves, early closes</td><td>Many participants are simply absent</td></tr>
+    </table></div>
+    <p>Each of these belongs in a pre-market check, and none of them requires believing that a month or weekday has a mood. They are covered in more depth in <a href="how-economic-releases-move-markets.html">how economic releases move markets</a> and <a href="earnings-gaps.html">earnings gaps</a>.</p>
+
+    <h2>How to test a seasonal claim before you believe it</h2>
+    <ul>
+      <li><strong>How many patterns were tried to find this one?</strong> If the answer is &ldquo;we scanned everything&rdquo;, discount it heavily.</li>
+      <li><strong>Is there a mechanism?</strong> &ldquo;Funds rebalance at quarter-end&rdquo; is a mechanism. &ldquo;September is bad&rdquo; is not.</li>
+      <li><strong>Did it work after it was discovered?</strong> Out-of-sample performance is the only kind that counts. Forward-test before you commit money; see <a href="forward-testing-a-strategy.html">forward testing a strategy</a>.</li>
+      <li><strong>Is it bigger than your costs?</strong> An edge smaller than the spread and commission is not an edge.</li>
+      <li><strong>How often did it fail?</strong> Look at the individual years, not the average.</li>
+    </ul>
+
+    <div class="callout"><b>The Generational Wealth way.</b> No calendar date generates a callout. The level decides, and <em>break &amp; hold</em> decides whether the level has actually broken: price must break it and hold as the candle closes. The calendar only changes how we prepare &mdash; smaller into a data release, patient through a holiday session &mdash; never which way we lean. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Does &ldquo;sell in May and go away&rdquo; actually work?</h3>
+    <p>There is published evidence that stock returns have been lower from May to October than from November to April across many markets, but later researchers have disputed how robust it is for US stocks. Even where the pattern exists, it is an average over decades, with many individual years going the other way. It is not a reliable rule for any single year.</p>
+
+    <h3>Are some days of the week better to trade than others?</h3>
+    <p>Day-of-week effects, such as weak Mondays, appear in older data but are among the patterns that stop being significant once researchers account for how many calendar rules were searched. Differences between weekdays in volume and scheduled data releases are real; differences in expected return are not something to build a plan on.</p>
+
+    <h3>Why do seasonal patterns stop working after they are published?</h3>
+    <p>Two reasons. Some were never real in the first place and were found by searching many possible patterns until one looked good. Others may have been real but small, and once enough traders act on them, the trading itself removes the edge.</p>
+
+    <h3>Should a day trader use seasonality at all?</h3>
+    <p>Only the parts with a clear mechanism: the intraday volume curve, scheduled data releases, index rebalances, option expirations and shortened holiday sessions. These change liquidity on known dates. Calendar return patterns are too small and too inconsistent to decide an intraday trade.</p>
+
+    <h2>Bottom line</h2>
+    <p>Seasonality splits into two claims, and only one of them survives scrutiny. Calendar <em>return</em> patterns can be found in any long data set, but when Sullivan, Timmermann and White tested 9,452 of them on a century of Dow data, none remained significant once the size of the search was counted &mdash; and even the best-supported one, the Halloween effect, is still argued over. Calendar <em>structure</em> is different: the open, the close, data releases, rebalances and holidays change who is trading and how deep the book is, for reasons anyone can explain. Plan around the structure and ignore the folklore. For the mechanics underneath all of it, start with <a href="how-markets-work.html">how markets actually work</a>, and see our <a href="../faq.html">FAQ</a> for how the room prepares for scheduled events.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-markets-work.html">How Markets Actually Work: A Trader&rsquo;s Guide</a>
+      <a href="how-to-backtest-a-setup-by-hand.html">How to Backtest a Setup by Hand in a Weekend</a>
+      <a href="forward-testing-a-strategy.html">Forward Testing a Trading Strategy: What It Proves</a>
+      <a href="when-to-retire-a-trading-setup.html">When to Retire a Trading Setup That Stopped Working</a>
+      <a href="how-economic-releases-move-markets.html">How Economic Releases Move Markets</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>The level decides. <span class="g">Not the calendar.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

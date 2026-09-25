@@ -373,9 +373,9 @@ cannot explain *why* the thing happens, we skip the page.
 - [x] Why price gaps: the mechanics of an unfilled move `(why-price-gaps)`
 - [x] What causes a spike with no news `(price-spike-with-no-news)`
 - [x] How economic releases move markets `(how-economic-releases-move-markets)`
-- [ ] What the VIX tells a day trader
-- [ ] Seasonality in trading: signal or noise?
-- [ ] Why volume dies at lunch
+- [x] What the VIX tells a day trader `(what-the-vix-tells-a-day-trader)`
+- [x] Seasonality in trading: signal or noise? `(seasonality-in-trading)`
+- [x] Why volume dies at lunch `(why-volume-dies-at-lunch)`
 - [ ] Month-end and quarter-end flows: what actually moves
 - [ ] What the NBBO is, and why it decides your fill
 - [ ] Payment for order flow, explained honestly
