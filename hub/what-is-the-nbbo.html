@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>What Is the NBBO? Why It Decides Your Fill</title>
+<meta name="description" content="What the NBBO is: how the national best bid and offer is built from every US exchange, the round-lot rules behind it, and why it is the yardstick for fills." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/what-is-the-nbbo.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What Is the NBBO? Why It Decides Your Fill" />
+<meta property="og:description" content="The national best bid and offer is the best price across every US exchange at once. It is the benchmark every stock fill is judged against." />
+<meta property="og:url" content="https://gwhlds.com/hub/what-is-the-nbbo.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What Is the NBBO? Why It Decides Your Fill","description":"What the national best bid and national best offer (NBBO) is under Regulation NMS Rule 600, how it is assembled from protected quotations on every US exchange, how the Order Protection Rule (Rule 611) and its exceptions such as intermarket sweep orders and single-priced auctions use it, the tiered round-lot definition in force since 3 November 2025 (100, 40, 10 or 1 share by average closing price, reassigned semiannually), minimum pricing increments under Rule 612, what the NBBO does not show, and why futures and spot forex have no equivalent.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/what-is-the-nbbo.html","datePublished":"2026-09-26"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"What Is the NBBO? Why It Decides Your Fill","item":"https://gwhlds.com/hub/what-is-the-nbbo.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the NBBO the same as the bid and ask on my screen?","acceptedAnswer":{"@type":"Answer","text":"Usually, but not always exactly. Most retail platforms display the consolidated best bid and offer, which is the NBBO. What you see can lag the live NBBO by a fraction of a second, and some platforms show a single exchange’s quote or their own feed, so in a fast market the number on your screen may already be stale."}},{"@type":"Question","name":"Can my order be filled at a worse price than the NBBO?","acceptedAnswer":{"@type":"Answer","text":"A marketable order that is larger than the size displayed at the NBBO can fill partly at worse prices once that size is used up, and the NBBO can move between the moment you click and the moment the order arrives. Trading centers must have procedures to prevent trading through protected quotes, but that protects the displayed price and size, not a price that has already moved."}},{"@type":"Question","name":"Does the NBBO include odd-lot orders?","acceptedAnswer":{"@type":"Answer","text":"No. The NBBO is built from round-lot quotations. Since 3 November 2025 a round lot is 100 shares for stocks averaging $250 or less, 40 shares from $250.01 to $1,000, 10 shares from $1,000.01 to $10,000, and 1 share above that. Smaller orders can sit at better prices without changing the NBBO."}},{"@type":"Question","name":"Is there an NBBO in futures or forex?","acceptedAnswer":{"@type":"Answer","text":"Not in the same sense. A futures contract such as the E-mini S&P 500 trades on one exchange, so its order book is the whole market and needs no consolidation. Spot forex has no central exchange and no consolidated quote, so each broker or liquidity provider shows its own price."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>What Is the NBBO?</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>What Is the NBBO? Why It Decides Your Fill</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 26, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">The NBBO &mdash; national best bid and offer &mdash; is the highest price anyone is bidding and the lowest price anyone is offering for a US stock across every exchange at once. It is the yardstick for your fill: trading centers must guard against executing worse than it, and &ldquo;price improvement&rdquo; means being filled inside it.</p>
+
+    <p>A US stock does not trade in one place. It trades on more than a dozen exchanges plus off-exchange venues, each with its own order book. The NBBO is the rule-based answer to an obvious question: with that many books, what is <em>the</em> price?</p>
+
+    <h2>How the NBBO is built</h2>
+    <p>Each exchange publishes its own best bid and best offer. The NBBO takes the highest of those bids and the lowest of those offers. Regulation NMS defines it in <a href="https://www.law.cornell.edu/cfr/text/17/242.600" target="_blank" rel="nofollow noopener">17 CFR 242.600</a> as the best bid and best offer for a stock &ldquo;calculated and disseminated on a current and continuing basis&rdquo; by a consolidator. A simple example:</p>
+    <div class="kv"><table>
+      <tr><th>Venue</th><th>Best bid</th><th>Best offer</th></tr>
+      <tr><td>Exchange A</td><td>$50.01</td><td>$50.04</td></tr>
+      <tr><td>Exchange B</td><td>$50.02</td><td>$50.05</td></tr>
+      <tr><td>Exchange C</td><td>$50.00</td><td>$50.03</td></tr>
+      <tr><td><strong>NBBO</strong></td><td><strong>$50.02</strong> (B)</td><td><strong>$50.03</strong> (C)</td></tr>
+    </table></div>
+    <p>No single exchange is showing a two-cent spread, yet the national market is: $50.02 bid, $50.03 offered. That combined quote is what your broker&rsquo;s best-execution obligations are measured against, and it is usually what your platform shows as &ldquo;the&rdquo; bid and ask. How those quotes stack up underneath the top is covered in <a href="how-to-read-level-2.html">how to read Level 2</a>.</p>
+
+    <h2>Why it decides your fill: the Order Protection Rule</h2>
+    <p>The NBBO has teeth because of <a href="https://www.law.cornell.edu/cfr/text/17/242.611" target="_blank" rel="nofollow noopener">Rule 611</a>, the Order Protection Rule. It requires every trading center to maintain written policies and procedures &ldquo;reasonably designed to prevent trade-throughs&rdquo; of protected quotations &mdash; that is, executing your order at a worse price than a better quote displayed elsewhere. A protected quotation is an exchange&rsquo;s automated best bid or offer, which is exactly what the NBBO is made from.</p>
+    <p>In practice that gives you three possible outcomes for a marketable order:</p>
+    <ul>
+      <li><strong>At the NBBO.</strong> You buy at the national best offer or sell at the national best bid.</li>
+      <li><strong>Inside the NBBO.</strong> You are filled at a better price &mdash; buying at $50.028 when the offer is $50.03. That is <em>price improvement</em>, and it is what wholesalers compete on when they buy retail order flow; see <a href="payment-for-order-flow.html">payment for order flow, explained honestly</a>.</li>
+      <li><strong>Through it, for a reason the rule allows.</strong> Rule 611 has exceptions, including intermarket sweep orders (which take out the better quotes elsewhere at the same time), single-priced opening and closing auctions, and a one-second window for quotes that were changing.</li>
+    </ul>
+    <div class="callout"><b>Protected does not mean guaranteed.</b> The rule protects the price <em>and the size displayed</em> at the moment of execution. If you send a market order for 2,000 shares and only 300 are offered at the NBBO, the rest fills at the next prices up. And if the NBBO moves while your order is in flight, you are measured against the new one. That gap is <a href="slippage-in-trading.html">slippage</a>, and it is not a rule violation.</div>
+
+    <h2>Round lots: the size rule that shapes the NBBO</h2>
+    <p>Only round-lot quotations count toward the NBBO. For decades a round lot was 100 shares for almost every stock, which meant that in a $900 stock you needed $90,000 of shares on one price just to register a quote. That changed on <strong>3 November 2025</strong>, when the tiered round-lot definition took effect. According to Nasdaq&rsquo;s <a href="https://www.nasdaqtrader.com/TraderNews.aspx?id=UTP2025-10" target="_blank" rel="nofollow noopener">UTP vendor alert on the change</a>, a round lot is now set by the stock&rsquo;s average closing price:</p>
+    <div class="kv"><table>
+      <tr><th>Average closing price</th><th>Round lot</th></tr>
+      <tr><td>$250.00 or less</td><td>100 shares</td></tr>
+      <tr><td>$250.01 &ndash; $1,000.00</td><td>40 shares</td></tr>
+      <tr><td>$1,000.01 &ndash; $10,000.00</td><td>10 shares</td></tr>
+      <tr><td>$10,000.01 or more</td><td>1 share</td></tr>
+    </table></div>
+    <p>The tiers are reassigned twice a year, using March and September evaluation periods for the May and November assignments. The effect for traders in high-priced stocks is a more honest NBBO: smaller orders at better prices now show up in the national quote instead of sitting invisibly underneath it. Orders below the round-lot size are odd lots, and they still do not set the NBBO.</p>
+
+    <h2>How finely the NBBO can be priced</h2>
+    <p>Under <a href="https://www.law.cornell.edu/cfr/text/17/242.612" target="_blank" rel="nofollow noopener">Rule 612</a>, quotes in stocks priced at $1.00 or more are displayed in whole pennies, and quotes below $1.00 may go to $0.0001. The SEC adopted a half-penny increment for the most tightly quoted stocks in 2024, but its compliance date has been postponed, so the penny remains the live tick for now &mdash; the history is in <a href="how-market-makers-make-money.html">how market makers make money</a>. Fills are a different matter: an off-exchange wholesaler can execute at sub-penny prices inside the NBBO, which is why a fill of $50.0285 is possible when no quote could ever show it.</p>
+
+    <h2>What the NBBO does not tell you</h2>
+    <ul>
+      <li><strong>Depth.</strong> It shows one price and the size there, not how much sits a cent or ten cents away.</li>
+      <li><strong>Hidden and midpoint orders.</strong> Non-displayed liquidity can fill you inside the spread without ever appearing in it.</li>
+      <li><strong>Odd lots.</strong> Better-priced orders below the round-lot size do not change it.</li>
+      <li><strong>The present, exactly.</strong> The consolidated quote you see has travelled from the exchanges to a consolidator to your platform. In a fast market it can be a fraction of a second old; see <a href="platform-latency-explained.html">platform latency explained</a>.</li>
+    </ul>
+
+    <h2>Futures and forex have no NBBO</h2>
+    <p>The NBBO exists because US stocks are fragmented across many venues. Markets that are not fragmented do not need one. An E-mini S&amp;P 500 contract trades on a single exchange, so its order book <em>is</em> the national market and the best bid and offer you see is the only one there is. Spot forex sits at the other extreme: there is no central exchange and no consolidated quote, so each broker or liquidity provider streams its own price. That is one reason a forex fill cannot be checked against a public benchmark the way a stock fill can.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> <em>Know your next</em> means every callout comes with an entry, targets and an invalidation level before anyone clicks. Those are chart levels, and the NBBO is where they meet reality. In a fast or thin stock the gap between the level you planned and the NBBO you actually get is a real cost &mdash; which is why a limit order at the planned price is often the better tool than a market order chasing the quote. <a href="../index.html#method">See the method &rarr;</a></div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Is the NBBO the same as the bid and ask on my screen?</h3>
+    <p>Usually, but not always exactly. Most retail platforms display the consolidated best bid and offer, which is the NBBO. What you see can lag the live NBBO by a fraction of a second, and some platforms show a single exchange&rsquo;s quote or their own feed, so in a fast market the number on your screen may already be stale.</p>
+
+    <h3>Can my order be filled at a worse price than the NBBO?</h3>
+    <p>A marketable order that is larger than the size displayed at the NBBO can fill partly at worse prices once that size is used up, and the NBBO can move between the moment you click and the moment the order arrives. Trading centers must have procedures to prevent trading through protected quotes, but that protects the displayed price and size, not a price that has already moved.</p>
+
+    <h3>Does the NBBO include odd-lot orders?</h3>
+    <p>No. The NBBO is built from round-lot quotations. Since 3 November 2025 a round lot is 100 shares for stocks averaging $250 or less, 40 shares from $250.01 to $1,000, 10 shares from $1,000.01 to $10,000, and 1 share above that. Smaller orders can sit at better prices without changing the NBBO.</p>
+
+    <h3>Is there an NBBO in futures or forex?</h3>
+    <p>Not in the same sense. A futures contract such as the E-mini S&amp;P 500 trades on one exchange, so its order book is the whole market and needs no consolidation. Spot forex has no central exchange and no consolidated quote, so each broker or liquidity provider shows its own price.</p>
+
+    <h2>Bottom line</h2>
+    <p>The NBBO is the best bid and best offer for a US stock across every exchange, stitched into one national quote. Rule 611 makes trading centers guard against executing worse than it, which is why it is the benchmark for every stock fill and why price improvement is measured from it. Since 3 November 2025 it is built from round lots of 100, 40, 10 or 1 share depending on price, so high-priced stocks now show a truer quote. It still does not show depth, hidden orders or odd lots, and it can be a fraction of a second old by the time you see it. For how orders reach the book in the first place, start with <a href="how-markets-work.html">how markets actually work</a>, and see our <a href="../faq.html">FAQ</a> for how the room calls entries.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-markets-work.html">How Markets Actually Work: A Trader&rsquo;s Guide</a>
+      <a href="payment-for-order-flow.html">Payment for Order Flow, Explained Honestly</a>
+      <a href="how-to-read-level-2.html">How to Read Level 2 Without Being Fooled by It</a>
+      <a href="slippage-in-trading.html">Slippage in Trading: Why Your Fill Moved</a>
+      <a href="market-vs-limit-vs-stop-orders.html">Market vs Limit vs Stop Orders</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Plan the level. <span class="g">Respect the quote.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>

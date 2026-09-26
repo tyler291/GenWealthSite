@@ -376,9 +376,9 @@ cannot explain *why* the thing happens, we skip the page.
 - [x] What the VIX tells a day trader `(what-the-vix-tells-a-day-trader)`
 - [x] Seasonality in trading: signal or noise? `(seasonality-in-trading)`
 - [x] Why volume dies at lunch `(why-volume-dies-at-lunch)`
-- [ ] Month-end and quarter-end flows: what actually moves
-- [ ] What the NBBO is, and why it decides your fill
-- [ ] Payment for order flow, explained honestly
+- [x] Month-end and quarter-end flows: what actually moves `(month-end-and-quarter-end-flows)`
+- [x] What the NBBO is, and why it decides your fill `(what-is-the-nbbo)`
+- [x] Payment for order flow, explained honestly `(payment-for-order-flow)`
 - [ ] Dark pools and off-exchange trading, explained
 - [ ] The opening auction: how the first price of the day is set
 - [ ] The closing auction: why the last five minutes are different

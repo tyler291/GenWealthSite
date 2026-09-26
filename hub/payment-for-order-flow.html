@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Payment for Order Flow, Explained Honestly</title>
+<meta name="description" content="Payment for order flow explained: how brokers are paid to route your orders, what research shows it costs in stocks vs options, and where the rules stand now." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/payment-for-order-flow.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Payment for Order Flow, Explained Honestly" />
+<meta property="og:description" content="PFOF is neither a scam nor a free lunch. In stocks the evidence mostly favours retail; in options it does not. Here is how to check your own broker." />
+<meta property="og:url" content="https://gwhlds.com/hub/payment-for-order-flow.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Payment for Order Flow, Explained Honestly","description":"How payment for order flow (PFOF) works, step by step; what Ernst and Spatt (NBER Working Paper 29883, 2022) found from Rule 606 reports: about 20 cents per 100-share equity order against about 40 cents per 100-share options order, $20 to $30 million a month of sub-penny price improvement to retail stock traders from January 2019 to October 2021, and worse prices from options market makers who pay PFOF; the SEC's Order Competition Rule, proposed in December 2022 and withdrawn effective 17 June 2025; the EU prohibition under MiFIR Article 39a, in force EU-wide since the last national exemption ended on 30 June 2026; and how to read your own broker's Rule 606 report.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/payment-for-order-flow.html","datePublished":"2026-09-26"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Payment for Order Flow, Explained Honestly","item":"https://gwhlds.com/hub/payment-for-order-flow.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is payment for order flow legal?","acceptedAnswer":{"@type":"Answer","text":"In the United States, yes, provided the broker discloses it and still meets its duty of best execution. The SEC proposed a rule in 2022 that would have pushed many retail orders into auctions, but withdrew it in June 2025. In the European Union it is prohibited under MiFIR Article 39a, and the last national exemption ended on 30 June 2026."}},{"@type":"Question","name":"How do I find out if my broker takes payment for order flow?","acceptedAnswer":{"@type":"Answer","text":"Read its Rule 606 report. US brokers must publish quarterly reports showing which venues they route orders to and the payments they receive, broken down by order type and by stocks versus options. The reports are usually linked from the broker’s disclosures page and are also published centrally through FINRA."}},{"@type":"Question","name":"Why is payment for order flow bigger in options than in stocks?","acceptedAnswer":{"@type":"Answer","text":"Options have wider spreads, so filling retail option orders is more profitable for market makers and they pay more for it. Research using Rule 606 reports estimated about 40 cents per 100-share options order against about 20 cents for a 100-share stock order, and found retail option traders got worse prices from market makers who paid for their flow."}},{"@type":"Question","name":"Does payment for order flow matter for a small day trader?","acceptedAnswer":{"@type":"Answer","text":"Less than the spread, slippage and your own order choices do. In stocks the measured differences are fractions of a cent per share. It matters more if you trade options, trade very frequently, or use market orders in thin names, where execution quality differences between brokers are larger."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Payment for Order Flow</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>Payment for Order Flow, Explained Honestly</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 26, 2026 &middot; 9 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Payment for order flow (PFOF) is money a market maker pays your broker for the right to fill your orders. It is how most US commission-free brokers earn a living. It is legal and disclosed in the US, prohibited across the EU since 30 June 2026, and its cost shows up in execution quality, not on your statement.</p>
+
+    <p>PFOF attracts two lazy takes: that it is a hidden tax on retail traders, or that it is the harmless engine of free trading. The research supports neither. In stocks, the measured evidence mostly favours the retail trader. In options, it mostly does not. The honest version is more useful than either slogan.</p>
+
+    <h2>How payment for order flow works, step by step</h2>
+    <ol>
+      <li><strong>You send an order.</strong> A marketable buy for 100 shares, placed through a commission-free broker.</li>
+      <li><strong>Your broker chooses where it goes.</strong> Rather than send it to an exchange, it routes the order to a wholesaler &mdash; a large off-exchange market maker.</li>
+      <li><strong>The wholesaler fills it.</strong> Usually at the national best offer or slightly better, a sub-penny improvement on the quote. The benchmark is the <a href="what-is-the-nbbo.html">NBBO, the national best bid and offer</a>.</li>
+      <li><strong>The wholesaler pays your broker.</strong> A fraction of a cent per share, for the right to trade against retail flow, which tends to be small and carry little information about where price is going next.</li>
+      <li><strong>Your broker discloses it.</strong> Quarterly, in a Rule 606 routing report that shows the venues used and the payments received.</li>
+    </ol>
+    <p>The wholesaler profits from the spread it earns across millions of such trades. Why retail flow is worth paying for &mdash; and the inventory risk that limits it &mdash; is covered in <a href="how-market-makers-make-money.html">how market makers make money</a>.</p>
+
+    <h2>How much money is actually involved</h2>
+    <p>The clearest numbers come from Thomas Ernst and Chester Spatt&rsquo;s <a href="https://www.nber.org/papers/w29883" target="_blank" rel="nofollow noopener">&ldquo;Payment for Order Flow and Asset Choice&rdquo;</a>, NBER Working Paper 29883 (2022). Working from brokers&rsquo; Rule 606 reports, they estimated the typical payment for routing a <strong>100-share stock order at around 20 cents</strong>, and for a <strong>100-share options order at around 40 cents</strong>.</p>
+    <p>The gap widens once you account for price. Their illustration: $1,000 put into a $25 stock is a 40-share order worth about 8 cents of PFOF, while $1,000 put into a $5 option is a 200-share order worth about 80 cents &mdash; ten times as much for the same dollars. They also noted that Robinhood, then reporting 18 million users, earned over 80 percent of its revenue from PFOF at the time.</p>
+
+    <h2>The case for it: price improvement in stocks</h2>
+    <p>In equities, the same paper found that retail orders filled off-exchange received meaningful price improvement. Across all US equity trades from January 2019 to October 2021, retail investors received between <strong>$20 million and $30 million a month</strong> in sub-penny price improvement, about half a basis point per trade. That improvement was larger than the PFOF paid to brokers, and over half of it occurred when exchange spreads were already at the one-cent minimum &mdash; which undercuts the claim that PFOF simply works by keeping public spreads artificially wide.</p>
+    <p>Half a basis point is small. On a $10,000 stock trade it is about 50 cents. But it is on the trader&rsquo;s side of the ledger, not against it.</p>
+
+    <h2>The case against it: conflicts, and options</h2>
+    <p>The conflict of interest is structural. Your broker is supposed to route for your best execution, and it is being paid by the firm it routes to. Disclosure and best-execution duties manage that conflict; they do not remove it. And routing is concentrated &mdash; the SEC has said more than 90 percent of marketable retail orders go to a small group of wholesalers, a point covered in <a href="who-is-on-the-other-side-of-your-trade.html">who is on the other side of your trade</a>.</p>
+    <p>Options are where the evidence turns. Ernst and Spatt exploited how options exchanges assign designated market makers and found that retail option traders received <strong>less price improvement and worse prices</strong> from market makers who paid PFOF. They also flagged a second conflict: because options pay brokers so much more than stocks, a zero-commission broker has a financial reason to steer customers toward trading options.</p>
+    <div class="callout"><b>Free is a pricing model, not a price.</b> A broker that charges no commission is paid somewhere. With PFOF, the payment comes from the firm filling your order, so the questions worth asking are how good your fills are and which products the app nudges you toward &mdash; not whether the ticket says $0.</div>
+
+    <h2>Where the rules stand in 2026</h2>
+    <div class="kv"><table>
+      <tr><th>Jurisdiction</th><th>Status</th></tr>
+      <tr><td><strong>United States</strong></td><td>Legal, subject to best execution and Rule 606 disclosure. The SEC&rsquo;s Order Competition Rule, proposed 14 December 2022 to route many retail orders into auctions, was withdrawn effective 17 June 2025, and the Commission said it does not intend to finalize it.</td></tr>
+      <tr><td><strong>European Union</strong></td><td>Prohibited under <a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifir/article-39a-prohibition-receiving-payment" target="_blank" rel="nofollow noopener">MiFIR Article 39a</a> for firms acting for retail clients. Member states could exempt domestic business only until 30 June 2026, so the ban now applies across the EU.</td></tr>
+    </table></div>
+    <p>The US position has swung before and could again; a withdrawn proposal is not a permanent answer. Check the current state before relying on it.</p>
+
+    <h2>How to check your own broker</h2>
+    <ul>
+      <li><strong>Find the Rule 606 report.</strong> It is on the broker&rsquo;s disclosures page and published centrally through <a href="https://www.finra.org/finra-data/about-606" target="_blank" rel="nofollow noopener">FINRA</a>. It breaks routing and payments out by S&amp;P 500 stocks, other stocks and options, and by order type.</li>
+      <li><strong>Compare stocks with options.</strong> If the payment per contract dwarfs the payment per share, you now know which products the broker earns most from.</li>
+      <li><strong>Look at your own fills.</strong> Compare fill prices with the quote at the moment of execution over a few dozen trades. That tells you more than any report. Our guide on <a href="how-to-test-a-new-broker.html">how to test a new broker</a> walks through it.</li>
+      <li><strong>Use limit orders where it matters.</strong> A limit order caps what any routing arrangement can cost you.</li>
+    </ul>
+
+    <h2>Does it matter for a day trader?</h2>
+    <p>For most stock day traders, less than they fear. Measured PFOF effects in equities are fractions of a cent per share, while the spread, <a href="slippage-in-trading.html">slippage</a> and the choice between market and limit orders routinely cost more. It matters more if you trade options, trade dozens of times a day, or fire market orders into thin names, where the differences between brokers are largest. Execution quality is a line in your costs, and it deserves the same attention as commission.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Is payment for order flow legal?</h3>
+    <p>In the United States, yes, provided the broker discloses it and still meets its duty of best execution. The SEC proposed a rule in 2022 that would have pushed many retail orders into auctions, but withdrew it in June 2025. In the European Union it is prohibited under MiFIR Article 39a, and the last national exemption ended on 30 June 2026.</p>
+
+    <h3>How do I find out if my broker takes payment for order flow?</h3>
+    <p>Read its Rule 606 report. US brokers must publish quarterly reports showing which venues they route orders to and the payments they receive, broken down by order type and by stocks versus options. The reports are usually linked from the broker&rsquo;s disclosures page and are also published centrally through FINRA.</p>
+
+    <h3>Why is payment for order flow bigger in options than in stocks?</h3>
+    <p>Options have wider spreads, so filling retail option orders is more profitable for market makers and they pay more for it. Research using Rule 606 reports estimated about 40 cents per 100-share options order against about 20 cents for a 100-share stock order, and found retail option traders got worse prices from market makers who paid for their flow.</p>
+
+    <h3>Does payment for order flow matter for a small day trader?</h3>
+    <p>Less than the spread, slippage and your own order choices do. In stocks the measured differences are fractions of a cent per share. It matters more if you trade options, trade very frequently, or use market orders in thin names, where execution quality differences between brokers are larger.</p>
+
+    <h2>Bottom line</h2>
+    <p>Payment for order flow is a wholesaler paying your broker for the right to fill your orders. In US stocks, the best evidence says retail traders mostly come out ahead on execution &mdash; $20 million to $30 million a month of sub-penny price improvement in the 2019&ndash;2021 sample &mdash; even though the broker&rsquo;s conflict is real. In options, the payments are roughly double per 100 shares and the fills were measurably worse. It remains legal and disclosed in the US after the SEC withdrew its auction proposal in 2025, and it is banned across the EU from 30 June 2026. Read your broker&rsquo;s 606 report, check your own fills, and use limit orders. For where every order goes before it fills, start with <a href="how-markets-work.html">how markets actually work</a>, and see our <a href="../faq.html">FAQ</a> for what the room does and does not cover.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="how-market-makers-make-money.html">How Market Makers Actually Make Money</a>
+      <a href="what-is-the-nbbo.html">What Is the NBBO? Why It Decides Your Fill</a>
+      <a href="who-is-on-the-other-side-of-your-trade.html">Who Is on the Other Side of Your Trade?</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+      <a href="commission-vs-spread.html">Commission vs Spread: The Cost of a Round Turn</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Free trades still <span class="g">cost something.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
