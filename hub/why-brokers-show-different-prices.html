@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>Why Two Brokers Show You Different Prices</title>
+<meta name="description" content="Why two brokers show different prices for one stock, forex pair or future: feeds, bid vs ask, server time and dealer quotes, and which price your stop uses." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/why-brokers-show-different-prices.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Why Two Brokers Show You Different Prices" />
+<meta property="og:description" content="Stocks have one national price and many windows onto it. Forex has no central price at all. Here is why your two screens disagree, and which one your stop obeys." />
+<meta property="og:url" content="https://gwhlds.com/hub/why-brokers-show-different-prices.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Why Two Brokers Show You Different Prices","description":"Why the same instrument can show different prices at two brokers, market by market: in US stocks, different data feeds, delays, last versus bid and ask, and session settings on top of one national best bid and offer, plus execution differences now disclosed under amended SEC Rule 605 (compliance date 1 August 2026, separate reports for brokers with 100,000 or more customer accounts); in spot forex and CFDs, the absence of a central exchange in a market the BIS measured at $9.6 trillion a day in April 2025, dealer quotes and markups, bid-based charts, and server time zones that change daily candles; the NFA Compliance Rule 2-43 limits on price adjustments by US forex dealers; and in futures, contract months and continuous-chart adjustments.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/why-brokers-show-different-prices.html","datePublished":"2026-09-27"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"Why Two Brokers Show You Different Prices","item":"https://gwhlds.com/hub/why-brokers-show-different-prices.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why was my stop hit when the chart never reached it?","acceptedAnswer":{"@type":"Answer","text":"Most often because the chart plots the bid while a buy stop triggers on the ask. When you are short and your stop is a buy order, the ask can touch your level while the bid-based candle stays below it, especially when the spread widens. The other common cause is that the chart and the broker use different price feeds."}},{"@type":"Question","name":"Which broker's price is the right one?","acceptedAnswer":{"@type":"Answer","text":"For your trades, the price at the broker that holds your order is the one that counts, because that is where your stop and target are triggered and filled. In US stocks both brokers should be working from the same national best bid and offer. In forex and CFDs there is no single correct price, only each dealer's quote."}},{"@type":"Question","name":"Why do forex daily candles look different between brokers?","acceptedAnswer":{"@type":"Answer","text":"Because a daily candle starts and ends at the broker's server time. Brokers that close the day at 5 p.m. New York time show five daily candles a week, while a broker on a different time zone can show a small Sunday candle and six candles a week, which shifts every daily high, low and close."}},{"@type":"Question","name":"Is it legal for a forex broker to set its own prices?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spot forex and CFDs trade over the counter, so a retail broker quotes its own prices, usually based on its liquidity providers plus a markup. Regulators limit what it can do afterwards: in the US, NFA Compliance Rule 2-43 restricts forex dealers from adjusting executed prices, except in ways that are favourable to the customer or applied to all orders in the same period regardless of side. Rules vary by jurisdiction."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>Why Brokers Show Different Prices</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Market Mechanics</span>
+        <h1>Why Two Brokers Show You Different Prices</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 27, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">Two brokers show different prices because they are not showing you the same thing. In US stocks there is one national best bid and offer, but feeds, delays and chart settings differ. In spot forex and CFDs there is no central exchange at all: each broker streams its own dealer quotes, so small price differences are normal, not a malfunction.</p>
+
+    <p>The difference matters most at the worst moment &mdash; when your stop is hit at one broker and the chart at another says price never got there. Whether that is a normal feature of the market or a reason to leave the broker depends on which market you trade and which of the causes below is at work.</p>
+
+    <h2>The short answer, market by market</h2>
+    <div class="kv"><table>
+      <tr><th>Market</th><th>One central price?</th><th>Main reasons two screens disagree</th></tr>
+      <tr><td><strong>US stocks</strong></td><td>Yes &mdash; the NBBO</td><td>Different feeds, delayed data, last vs bid/ask, extended-hours settings, different fills</td></tr>
+      <tr><td><strong>Futures</strong></td><td>Yes &mdash; one exchange per contract</td><td>Different contract months, continuous-chart adjustments, session settings</td></tr>
+      <tr><td><strong>Spot forex &amp; CFDs</strong></td><td>No</td><td>Each broker&rsquo;s own liquidity providers and markup, bid-based charts, server time zone</td></tr>
+    </table></div>
+
+    <h2>Stocks: one national price, many windows onto it</h2>
+    <p>Every US-listed stock has a single national best bid and offer built from all the exchanges&rsquo; quotes &mdash; explained in <a href="what-is-the-nbbo.html">what the NBBO is and why it decides your fill</a>. Two brokers disagreeing on a stock price are almost always showing different <em>views</em> of that one price:</p>
+    <ul>
+      <li><strong>Feed coverage.</strong> Some free or low-cost data shows quotes from one venue rather than the full consolidated market, so its bid and ask can sit a cent or more away from the national quote.</li>
+      <li><strong>Delay.</strong> Free tiers for exchange data are commonly delayed, often by 15 minutes. A delayed screen is not wrong; it is late.</li>
+      <li><strong>Last vs bid and ask.</strong> A quote box shows three numbers. One platform headlines the last trade, another the bid. In a fast market they can be several cents apart.</li>
+      <li><strong>Session settings.</strong> Whether a chart includes pre-market and after-hours trades changes the day&rsquo;s open, high, low and close, and therefore every level drawn from them.</li>
+    </ul>
+
+    <h2>Why your fill can still differ</h2>
+    <p>Even with identical quotes, two brokers can fill the same order at different prices, because they route it to different places. One broker may send it to a wholesaler that improves the price by a fraction of a cent; another may send it to an exchange. That arrangement, payment for order flow, has its own guide in the Hub.</p>
+    <p>The comparison has just become easier to make. The SEC&rsquo;s amendments to Rule 605 reached their compliance date on <strong>1 August 2026</strong>, and under the rule any broker-dealer that introduces or carries <strong>100,000 or more customer accounts</strong> must prepare its own execution quality report, according to the <a href="https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/frequently-asked-questions-rule-605-regulation-nms" target="_blank" rel="nofollow noopener">SEC staff&rsquo;s Rule 605 FAQ</a>. Before, those reports were largely the responsibility of the market centres doing the filling, not the brokers customers deal with.</p>
+
+    <h2>Forex and CFDs: there is no single price</h2>
+    <p>Spot currencies trade over the counter, across banks, dealers and electronic platforms, with no central exchange and no consolidated quote. The market is enormous &mdash; the <a href="https://www.bis.org/statistics/rpfx25_fx.htm" target="_blank" rel="nofollow noopener">BIS 2025 Triennial Survey</a> put global FX turnover at <strong>$9.6 trillion a day</strong> in April 2025 &mdash; but it has no single last price.</p>
+    <p>A retail forex or CFD broker builds the price you see from quotes streamed by its own liquidity providers, then adds its spread or markup. Two brokers with different providers and different markups will show different bids and asks, and on a spike their wicks can differ by several pips. Neither is &ldquo;the&rdquo; price. How much of that difference is cost is covered in <a href="what-is-the-spread-in-forex.html">what the spread in forex really is</a>.</p>
+    <p>Two further causes catch traders out:</p>
+    <ul>
+      <li><strong>Charts usually plot the bid.</strong> A sell stop triggers on the bid, but a buy stop &mdash; the stop on a short &mdash; triggers on the ask. If the spread widens, the ask can reach your stop while the bid-based candle never does.</li>
+      <li><strong>Server time sets the candles.</strong> A daily candle runs from the broker&rsquo;s server midnight to midnight. A broker that closes the day at 5 p.m. New York time shows five daily candles a week; one on a different time zone can show a stub Sunday candle and six, and every daily high, low and pivot moves with it.</li>
+    </ul>
+    <p>What a dealer may do after the fact is regulated. In the US, <a href="https://www.nfa.futures.org/rulebook/rules.aspx?RuleID=RULE%202-43&amp;Section=4" target="_blank" rel="nofollow noopener">NFA Compliance Rule 2-43</a> bars forex dealer members from cancelling executed orders or adjusting accounts in a way that changes the price, except in limited cases such as adjustments favourable to the customer or applied to all orders in the same period and pair regardless of side. Rules differ elsewhere, so check what applies to your broker&rsquo;s regulator.</p>
+
+    <h2>Futures: the same contract, different charts</h2>
+    <p>An exchange-traded future has one order book, so two brokers showing the same contract month should agree to the tick. When they do not, the usual cause is the chart, not the market: one screen shows the front month and the other the next, or one uses a back-adjusted continuous contract that shifts historical prices at each roll. Check the contract code before you compare. Rolls are covered in our guide to futures contract rollover.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> A level is a zone, not a single tick, and the invalidation on every callout is judged on the candle close, not on one feed&rsquo;s wick. If a one-pip difference between two brokers decides whether your trade survives, the stop is too tight for the market &mdash; the fix is sizing from the stop distance, not hunting for a friendlier price feed.</div>
+
+    <h2>What to do about it</h2>
+    <ol>
+      <li><strong>Trade off the price that executes you.</strong> Your stop and target live at your broker. Draw levels where you like, but check them against the execution broker&rsquo;s chart.</li>
+      <li><strong>Compare bid and ask, not last.</strong> Put both brokers on bid and ask for the same instrument at the same moment before concluding that one is off.</li>
+      <li><strong>Match the settings.</strong> Same session, same time zone, same contract month. Most &ldquo;price differences&rdquo; disappear here.</li>
+      <li><strong>Leave room for the spread.</strong> On shorts, account for the ask when placing a buy stop, especially around news.</li>
+      <li><strong>Test before you commit.</strong> Our guide on testing a new broker with a small deposit shows how to measure fills against the quote.</li>
+    </ol>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>Why was my stop hit when the chart never reached it?</h3>
+    <p>Most often because the chart plots the bid while a buy stop triggers on the ask. When you are short and your stop is a buy order, the ask can touch your level while the bid-based candle stays below it, especially when the spread widens. The other common cause is that the chart and the broker use different price feeds.</p>
+
+    <h3>Which broker&rsquo;s price is the right one?</h3>
+    <p>For your trades, the price at the broker that holds your order is the one that counts, because that is where your stop and target are triggered and filled. In US stocks both brokers should be working from the same national best bid and offer. In forex and CFDs there is no single correct price, only each dealer&rsquo;s quote.</p>
+
+    <h3>Why do forex daily candles look different between brokers?</h3>
+    <p>Because a daily candle starts and ends at the broker&rsquo;s server time. Brokers that close the day at 5 p.m. New York time show five daily candles a week, while a broker on a different time zone can show a small Sunday candle and six candles a week, which shifts every daily high, low and close.</p>
+
+    <h3>Is it legal for a forex broker to set its own prices?</h3>
+    <p>Yes. Spot forex and CFDs trade over the counter, so a retail broker quotes its own prices, usually based on its liquidity providers plus a markup. Regulators limit what it can do afterwards: in the US, NFA Compliance Rule 2-43 restricts forex dealers from adjusting executed prices, except in ways that are favourable to the customer or applied to all orders in the same period regardless of side. Rules vary by jurisdiction.</p>
+
+    <h2>Bottom line</h2>
+    <p>Two brokers disagree on price for different reasons in different markets. In US stocks they share one national best bid and offer, and the gaps come from feeds, delays, settings and routing &mdash; now easier to compare since amended Rule 605 took effect on 1 August 2026. In futures, check the contract month and chart adjustment. In forex and CFDs, a $9.6-trillion-a-day market with no central exchange, every broker quotes its own price, charts usually plot the bid, and server time reshapes the candles. Trade off the price at the broker that holds your order, and give your stop enough room that a feed difference cannot decide the trade. For the mechanics behind every quote, start with <a href="how-markets-work.html">how markets actually work</a>, and see our <a href="../faq.html">FAQ</a> for what the room does and does not cover.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="tradingview-vs-broker-platform.html">TradingView vs Your Broker's Platform: Which to Use</a>
+      <a href="what-is-the-nbbo.html">What Is the NBBO? Why It Decides Your Fill</a>
+      <a href="what-is-the-spread-in-forex.html">What Is the Spread in Forex? The Cost of Every Trade</a>
+      <a href="how-to-test-a-new-broker.html">How to Test a New Broker With a Small Deposit</a>
+      <a href="how-to-choose-a-broker-for-day-trading.html">How to Choose a Broker for Day Trading</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>Levels are zones, <span class="g">not ticks.</span></h2>
+  <p>The Hub stays free. When you want levels, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
