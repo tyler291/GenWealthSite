@@ -393,9 +393,9 @@ Compliance-sensitive cluster. Every page states plainly that rules vary by juris
 that the reader should ask a licensed professional. We explain what the questions are; we
 never answer them for a specific person. Nothing here becomes tax or legal advice.
 
-- [ ] What records a trader should keep
-- [ ] Journaling apps vs a spreadsheet: which one you will actually use
-- [ ] How to review a month of trades
+- [x] What records a trader should keep `(what-records-a-trader-should-keep)`
+- [x] Journaling apps vs a spreadsheet: which one you will actually use `(trading-journal-app-vs-spreadsheet)`
+- [x] How to review a month of trades `(how-to-review-a-month-of-trades)`
 - [ ] Treating trading like a business: the honest version
 
 **Dropped from batch 004 for cannibalization:** what a trading journal should contain and
@@ -451,6 +451,86 @@ outward.
 - [ ] Why you break your own trading rules
 - [ ] Screen fatigue: when more hours make you worse
 - [ ] Taking a day off without losing your rhythm
+
+---
+
+# PHASE 18 — Comparisons, second pass · batch 006, cluster 2
+
+"X vs Y" pages are the format AI answer engines cite most. Each must name the trade-offs
+honestly and say who each option suits — including when the answer is "not day trading".
+
+- [ ] Position trading vs swing trading: how long you hold changes everything
+- [ ] Investing vs trading: the honest difference in time, risk and skill
+- [ ] Futures vs options for day trading: what each actually costs you
+- [ ] CFDs vs futures: who holds the other side and what that means
+- [ ] Discretionary vs systematic trading (and where automation fits)
+- [ ] Price action vs indicators: what each can and cannot tell you
+- [ ] One market or many: should a new trader specialise?
+
+---
+
+# PHASE 19 — Risk, third pass · batch 006, cluster 4
+
+- [ ] Stop loss vs mental stop: why the order on the server matters
+- [ ] Moving your stop loss: the most expensive habit in trading
+- [ ] Break-even stops: when they help and when they cost you
+- [ ] Risk-adjusted return for retail traders: the Sharpe ratio, plainly
+
+---
+
+# PHASE 20 — Charts, second pass · batch 006, cluster 5
+
+- [ ] Bollinger Bands explained: what the bands measure and where they mislead
+- [ ] Pivot points: how floor-trader levels are calculated and used
+- [ ] Volume profile: reading where the market actually traded
+
+---
+
+# PHASE 21 — Getting started, second pass · batch 006, cluster 3
+
+- [ ] The cheapest honest way to learn to trade
+- [ ] What a beginner should not trade (and why)
+- [ ] Day trading as a student: what is realistic
+- [ ] Day trading in the UK: accounts, rules and the questions to ask
+
+---
+
+# PHASE 22 — Forex & futures, second pass · batch 006, clusters 7–8
+
+- [ ] Why USD/JPY trades differently from the euro pairs
+- [ ] Trading gold: spot XAU/USD vs gold futures
+- [ ] What moves the US dollar index (DXY)
+- [ ] The carry trade explained for retail traders
+- [ ] ECN vs market maker forex brokers: what the label really means
+- [ ] Futures trading hours by product: ES, NQ, CL, GC and currency futures
+- [ ] Crude oil futures for beginners: why CL is a different animal
+
+---
+
+# PHASE 23 — Psychology, third pass · batch 006, cluster 6
+
+Same rule as Phase 17: nothing clinical; where a page touches genuine distress it points outward.
+
+- [ ] Boredom trading: the trades you take because nothing is happening
+- [ ] Trading through a life event: when to step back
+- [ ] Giving back a green day: why it happens and how to stop it
+- [ ] How to stop watching your P&L while a trade is open
+- [ ] Comparing yourself to other traders in a room
+
+**Dropped from batch 006 for cannibalization:** Sunday open gaps (`overnight-and-weekend-gap-risk`) ·
+EUR/USD–GBP/USD correlation (`correlation-risk-in-trading`) · forex leverage and regulation by country
+(`forex-leverage-explained`) · NFP and central bank days (`how-news-moves-forex-pairs`,
+`how-economic-releases-move-markets`) · spread widening (`what-is-the-spread-in-forex`) · minimum forex
+account (`how-much-money-to-start-day-trading`) · MES vs ES, MNQ vs NQ, micros per mini
+(`e-mini-and-micro-e-mini-futures`) · contract codes, cash vs physical settlement, holding to expiry
+(`futures-contract-rollover`) · overnight vs day margin (`futures-margin-explained`) · spot forex vs
+currency futures (`forex-vs-futures-day-trading`) · funded vs personal account (`prop-firm-vs-own-capital`) ·
+first chart setup (`how-to-mark-up-a-chart`) · monitors and hardware (`one-monitor-trading-setup`) ·
+practising without a demo (`paper-trading-vs-live-trading`) · first 100 trades and first increase in size
+(`trading-journal`, `how-to-scale-up-position-size`) · should I quit (`why-new-traders-quit`) · ATR stops
+(`how-to-set-a-stop-loss`) · anchored VWAP (`what-is-vwap`) · drawdown recovery, leverage vs risk, margin
+calls (live pages) · being flat while the market runs (`fomo-in-trading`) · the morning after a max-loss
+day (`how-to-handle-a-big-loss`) · trading tired (Phase 17 screen fatigue).
 
 ---
 

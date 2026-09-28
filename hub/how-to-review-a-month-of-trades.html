@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0T3H78HN5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-W0T3H78HN5");
+</script>
+<meta name="theme-color" content="#070B17" />
+<title>How to Review a Month of Trades, Step by Step</title>
+<meta name="description" content="How to review a month of trades in about an hour: reconcile, measure in R, split by setup and rule-following, check the sample size, and leave with one change." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://gwhlds.com/hub/how-to-review-a-month-of-trades.html" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Review a Month of Trades, Step by Step" />
+<meta property="og:description" content="A monthly review is not a mood check. Seven steps that turn a month of fills into one decision, and the statistics that stop you rewriting a strategy over twenty trades." />
+<meta property="og:url" content="https://gwhlds.com/hub/how-to-review-a-month-of-trades.html" />
+<meta property="og:image" content="https://gwhlds.com/assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hub.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Review a Month of Trades, Step by Step","description":"A seven-step monthly trade review: reconcile the trade log against the broker statement, measure the month in R rather than dollars, split results by setup, time of day and rule compliance, grade process separately from outcome, check whether the sample is large enough using a Wilson confidence interval as described in the NIST/SEMATECH e-Handbook of Statistical Methods (a 60% win rate over 20 trades is consistent with roughly 39% to 78%, over 100 trades roughly 50% to 69%), study the three best and three worst trades, and finish with one written change and a keep list.","image":"https://gwhlds.com/assets/logo.png","author":{"@type":"Organization","name":"Generational Wealth"},"publisher":{"@type":"Organization","name":"Generational Wealth","logo":{"@type":"ImageObject","url":"https://gwhlds.com/assets/logo.png"}},"mainEntityOfPage":"https://gwhlds.com/hub/how-to-review-a-month-of-trades.html","datePublished":"2026-09-28"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gwhlds.com/"},{"@type":"ListItem","position":2,"name":"The Hub","item":"https://gwhlds.com/hub/"},{"@type":"ListItem","position":3,"name":"How to Review a Month of Trades, Step by Step","item":"https://gwhlds.com/hub/how-to-review-a-month-of-trades.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long should a monthly trading review take?","acceptedAnswer":{"@type":"Answer","text":"About an hour for most part-time traders. Reconciling the log takes ten to fifteen minutes, the numbers and splits another twenty, and studying the three best and three worst trades plus writing the change the rest. If it regularly takes much longer, you are probably reviewing every chart instead of the ones that matter."}},{"@type":"Question","name":"What should I do after a losing month?","acceptedAnswer":{"@type":"Answer","text":"Separate process from outcome before changing anything. If most of the losses came from trades that broke your rules, the fix is discipline, not strategy. If you followed the plan and still lost, check the sample size: a month of trades is usually too few to prove a setup has stopped working."}},{"@type":"Question","name":"How many trades do I need before a review means anything?","acceptedAnswer":{"@type":"Answer","text":"For behaviour, such as rule-breaking or trading at bad times of day, even 20 trades can show a clear pattern. For judging whether a setup has an edge, you need far more: a 60% win rate over 20 trades is statistically consistent with anything from about 39% to 78%, so treat monthly results as a hint and judge setups over a longer run."}},{"@type":"Question","name":"Should I change my strategy after a bad month?","acceptedAnswer":{"@type":"Answer","text":"Usually not on the strength of one month alone. Make at most one specific, testable change, keep everything that is working on a written keep list, and judge the setup over enough trades to be meaningful. Changing several rules at once makes it impossible to tell next month which change mattered."}}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html" aria-label="Generational Wealth home">
+      <img src="../assets/logo.png" alt="Generational Wealth shield logo" width="64" height="50" />
+      <span class="wm"><b>Generational</b> <i>Wealth</i></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#method">The Method</a>
+      <a href="index.html" class="active">The Hub</a>
+      <a href="../faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#method">The Method</a>
+  <a href="index.html">The Hub</a>
+  <a href="../faq.html">FAQ</a>
+  <a class="btn btn-primary btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</div>
+
+<section class="art-top">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="index.html">The Hub</a><span class="sep">&rsaquo;</span><span>How to Review a Month of Trades</span></nav>
+    <div class="art-head">
+      <div>
+        <span class="tag">Getting Started &middot; Process</span>
+        <h1>How to Review a Month of Trades, Step by Step</h1>
+        <div class="art-byline">
+          <img src="../assets/logo.png" alt="Generational Wealth" />
+          <div><div class="who">Generational Wealth</div><div class="meta">September 28, 2026 &middot; 8 min read</div></div>
+        </div>
+      </div>
+      <div class="art-hero-img"></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap art-layout">
+  <article class="prose">
+    <p class="lead">To review a month of trades, first reconcile your trade log against the broker statement, then measure the month in R rather than dollars, split results by setup and by whether you followed your rules, check whether the sample is big enough to mean anything, and finish with one written change for next month. Plan on about an hour.</p>
+
+    <p>A monthly review is where a <a href="trading-journal.html">trading journal</a> earns its keep. Logging records what happened; the review decides what, if anything, to do about it. Done badly, it becomes a monthly excuse to rewrite a strategy after a bad run. Done well, it produces one small, testable adjustment and a clear list of what to leave alone.</p>
+
+    <h2>Why review monthly at all?</h2>
+    <p>A day is too little data and a year is too long to wait. A month gives you roughly 21 trading sessions &mdash; enough for patterns in your behaviour to show, and a natural moment to do the admin that otherwise slides: downloading statements, filing receipts, checking fees. Treat it as a fixed appointment, not something you do after a painful week.</p>
+
+    <h2>Step 1: Reconcile before you analyse</h2>
+    <p>Check that your log matches reality. Compare the number of trades, the net result and the total commissions and fees against the broker statement. Missing trades are usually the ones you did not want to log, which makes them the most informative. If the two do not match, fix the log first; every number after this depends on it.</p>
+
+    <h2>Step 2: Measure the month in R, not dollars</h2>
+    <p>R is the amount you planned to risk on a trade. Converting every result into multiples of R strips out position size and account growth, so you are measuring decisions instead of deposits. Record five numbers:</p>
+    <ul>
+      <li><strong>Net R</strong> for the month.</li>
+      <li><strong>Number of trades.</strong></li>
+      <li><strong>Average win and average loss</strong>, in R.</li>
+      <li><strong>Expectancy per trade</strong>, in R: average win times win rate, minus average loss times loss rate.</li>
+      <li><strong>Largest single loss</strong>, in R. Anything worse than &minus;1R means a stop was moved, skipped or slipped badly, and it deserves its own note.</li>
+    </ul>
+
+    <h2>Step 3: Split the month three ways</h2>
+    <p>Totals hide everything useful. Sort the same trades by setup, by time of day, and by whether the trade followed your written rules. The third split is usually the most revealing. An illustrative example:</p>
+    <div class="kv"><table>
+      <tr><th>Group</th><th>Trades</th><th>Net R</th></tr>
+      <tr><td>Followed the plan</td><td>24</td><td>+6.5R</td></tr>
+      <tr><td>Broke a rule</td><td>9</td><td>&minus;7.0R</td></tr>
+      <tr><td><strong>Month</strong></td><td><strong>33</strong></td><td><strong>&minus;0.5R</strong></td></tr>
+    </table></div>
+    <p>That month looks like a strategy problem and is actually a discipline problem. The fix is not a new setup; it is fewer of the nine trades that broke the rules.</p>
+
+    <h2>Step 4: Grade the process separately from the outcome</h2>
+    <p>Every trade falls into one of four boxes: good process and a win, good process and a loss, bad process and a win, bad process and a loss. Good-process losses are the cost of doing business and need no fixing. Bad-process wins are the dangerous ones, because they reward the habit you are trying to break. Count how many of each you had; the aim over time is more of the first two and fewer of the last two, regardless of the P&amp;L.</p>
+
+    <h2>Step 5: Check whether the sample means anything</h2>
+    <p>This is the step most reviews skip, and it is why traders abandon working setups after one bad month. Twenty trades is a small sample, and small samples are noisy.</p>
+    <p>A standard way to measure that noise is a confidence interval for a proportion. Using the Wilson method described in the <a href="https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm" target="_blank" rel="nofollow noopener">NIST/SEMATECH e-Handbook of Statistical Methods</a>, a <strong>60% win rate over 20 trades</strong> is consistent, at 95% confidence, with a true win rate anywhere from about <strong>39% to 78%</strong>. Over 100 trades, the same 60% narrows to roughly <strong>50% to 69%</strong>.</p>
+    <p>In practice: one month rarely proves a setup works, and rarely proves it has stopped working. Judge setups on a rolling run of trades rather than a calendar month, and read the month mainly for behaviour, which does show up quickly. When the evidence against a setup does build up over enough trades, our guide on <a href="when-to-retire-a-trading-setup.html">when to retire a trading setup</a> covers the decision.</p>
+
+    <div class="callout"><b>The Generational Wealth way.</b> Grade the month against the three principles. <em>Break &amp; hold:</em> how many entries came before the candle closed? <em>Know your next:</em> how many trades had a written target and invalidation before entry? <em>Trail &amp; protect:</em> when a target printed, did the stop actually move? Those three counts usually explain more of a month than any indicator setting.</div>
+
+    <h2>Step 6: Study the three best and three worst trades</h2>
+    <p>Pull up the chart for each. For the winners, ask whether they were planned or lucky. For the losers, ask whether the loss was the plan working as designed &mdash; a clean stop at &minus;1R &mdash; or a decision you would not repeat. Write one sentence per trade. Six sentences are enough; reviewing all 30 charts in detail turns into a search for patterns in noise.</p>
+
+    <h2>Step 7: Write one change and a keep list</h2>
+    <p>Finish with a short note of two parts:</p>
+    <ol>
+      <li><strong>One change</strong> for next month, specific enough to test. &ldquo;No entries in the first five minutes&rdquo; can be checked; &ldquo;be more patient&rdquo; cannot.</li>
+      <li><strong>A keep list</strong> of what is working and must not be touched, so a bad week does not talk you out of it.</li>
+    </ol>
+    <p>One change at a time is what makes next month&rsquo;s review readable. Change five things and you cannot tell which one helped. Then file the month&rsquo;s statements and receipts while they are open &mdash; the admin half of the review takes ten minutes.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+    <h3>How long should a monthly trading review take?</h3>
+    <p>About an hour for most part-time traders. Reconciling the log takes ten to fifteen minutes, the numbers and splits another twenty, and studying the three best and three worst trades plus writing the change the rest. If it regularly takes much longer, you are probably reviewing every chart instead of the ones that matter.</p>
+
+    <h3>What should I do after a losing month?</h3>
+    <p>Separate process from outcome before changing anything. If most of the losses came from trades that broke your rules, the fix is discipline, not strategy. If you followed the plan and still lost, check the sample size: a month of trades is usually too few to prove a setup has stopped working.</p>
+
+    <h3>How many trades do I need before a review means anything?</h3>
+    <p>For behaviour, such as rule-breaking or trading at bad times of day, even 20 trades can show a clear pattern. For judging whether a setup has an edge, you need far more: a 60% win rate over 20 trades is statistically consistent with anything from about 39% to 78%, so treat monthly results as a hint and judge setups over a longer run.</p>
+
+    <h3>Should I change my strategy after a bad month?</h3>
+    <p>Usually not on the strength of one month alone. Make at most one specific, testable change, keep everything that is working on a written keep list, and judge the setup over enough trades to be meaningful. Changing several rules at once makes it impossible to tell next month which change mattered.</p>
+
+    <h2>Bottom line</h2>
+    <p>A good monthly review reconciles first, measures in R, splits results by setup, time and rule-following, grades process apart from outcome, and respects the sample size &mdash; a 60% win rate over 20 trades could honestly be anything from 39% to 78%. It ends with one testable change and a keep list, not a new strategy. Built into a routine, it is one of the habits that separates a trader who improves from one who just trades more; it sits with the other foundations in <a href="how-to-start-day-trading.html">how to start day trading</a>, and our <a href="../faq.html">FAQ</a> explains how the room fits alongside your own review.</p>
+  </article>
+
+  <aside class="art-side">
+    <div class="side-cta">
+      <span class="eyebrow">Full Access</span>
+      <h3>Levels first. Indicators second.</h3>
+      <p>Members-only Discord built for serious traders &mdash; risk-first, every single day.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Real-time callouts with levels</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily commentary &amp; breakdowns</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A risk-first system that lasts</li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+      <p class="fine">Billed via Patreon &middot; Cancel anytime</p>
+    </div>
+    <div class="side-related">
+      <h4>Related Reading</h4>
+      <a href="trading-journal.html">What Is a Trading Journal and How to Keep One</a>
+      <a href="why-win-rate-is-overrated.html">Why Win Rate Is the Most Overrated Number in Trading</a>
+      <a href="trading-journal-app-vs-spreadsheet.html">Trading Journal App vs Spreadsheet: Which to Use</a>
+      <a href="how-to-survive-a-losing-streak.html">How to Survive a Losing Streak</a>
+      <a href="what-records-a-trader-should-keep.html">What Records Should a Trader Keep? A Checklist</a>
+    </div>
+  </aside>
+</main>
+
+<section class="cta-band">
+  <h2>One change a month. <span class="g">Keep the rest.</span></h2>
+  <p>The Hub stays free. When you want entries, targets and invalidation called in real time, the room is one click away.</p>
+  <a class="btn btn-gold btn-lg" href="https://www.patreon.com/Generational_Wealth/join" target="_blank" rel="noopener">Join the Room</a>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="../index.html"><img src="../assets/logo.png" alt="Generational Wealth" width="48" height="38" /><span class="wm"><b>Generational</b> <i>Wealth</i></span></a>
+      <nav class="foot-links" aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#method">The Method</a><a href="index.html">The Hub</a><a href="../faq.html">FAQ</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></nav>
+    </div>
+    <p class="disclaimer"><b>Educational content only — not financial advice.</b> Generational Wealth Holdings Corp. is not a registered broker-dealer or investment adviser. Everything in the Hub is for educational purposes only and is not a recommendation to buy, sell or hold any instrument. Trading carries substantial risk of loss; every trade you make is your own. Always do your own research and consult a licensed professional. See our full <a href="../terms.html">Terms &amp; Disclaimer</a>.</p>
+    <p class="foot-copy">© 2026 Generational Wealth. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){var b=document.getElementById('hamburger');if(b){b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});}document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');});});})();
+</script>
+</body>
+</html>
