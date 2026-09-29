@@ -396,7 +396,7 @@ never answer them for a specific person. Nothing here becomes tax or legal advic
 - [x] What records a trader should keep `(what-records-a-trader-should-keep)`
 - [x] Journaling apps vs a spreadsheet: which one you will actually use `(trading-journal-app-vs-spreadsheet)`
 - [x] How to review a month of trades `(how-to-review-a-month-of-trades)`
-- [ ] Treating trading like a business: the honest version
+- [x] Treating trading like a business: the honest version `(treating-trading-like-a-business)`
 
 **Dropped from batch 004 for cannibalization:** what a trading journal should contain and
 what to track beyond P&L (both covered by `trading-journal`) · how to write a trading plan
@@ -417,8 +417,8 @@ questions a reader asks *once they are close* — how to use a room, how to comp
 the other place their money could go, and when to leave. Same honesty rule as Phase 1: if a
 page reads as an advert it gets ignored by Google and the AIs. Say who we are not for.
 
-- [ ] Trading room vs prop firm: where a small account should start
-- [ ] Your first week in a trading Discord: how to actually use it
+- [x] Trading room vs prop firm: where a small account should start `(trading-room-vs-prop-firm)`
+- [x] Your first week in a trading Discord: how to actually use it `(first-week-in-a-trading-discord)`
 - [ ] How to follow a callout without copy trading
 - [ ] Trading room etiquette: getting value without wasting the room's time
 - [ ] Can a trading community help you pass a prop firm challenge?
